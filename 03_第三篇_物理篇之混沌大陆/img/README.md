@@ -195,3 +195,27 @@
 - 实验温度305 K与模型无量纲β分开标注；不把有限ζ函数编码称为完整Hilbert–Pólya实现。
 - 来源：Wei、Zhai、Lu等2026论文，https://www.nature.com/articles/s41467-026-74935-8 ，式(10)及实验部分；图片为独立重算和原创绘图，未截取或改编原论文图。
 
+## 作者研究原图：符号分区与谱重建
+
+以下两图来自 Liang Wang 的研究论文，按 CC BY 4.0 使用。均从 PDF 提取完整嵌入图像，保留全部面板与原始内容；未裁切、改色或添加标记。
+
+### 14_wang_symbolic_partition_fig3.png
+
+二次映射的符号分区。Liang Wang，The Emergence of Prime Distribution from Low-Dimensional Deterministic Chaos，作者存档 v5.0，第11页图3。[论文DOI](https://doi.org/10.1080/27684830.2026.2684334)；[作者存档及文件](https://zenodo.org/records/20565112)。取图版本为该存档，不将存档图号混作出版社排版图号。
+
+许可：[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)。作者署名：Liang Wang。
+
+图：先把轨道变成可以阅读的符号串。二次映射的分岔图以x＝0为界，蓝色区域记作R，红色区域记作L；论文据此探索轨道符号与筛法序列的对应。原图的“合数区／素数区”是模型标签，同构假设及其数值检验从这种编码出发。
+
+SHA-256：`87e9c03895c1a280de53fdc79717a7d802207d120cc0aa915386e9a8d596d24a`。
+
+### 14_wang_spectral_anchoring_fig4.png
+
+锚定方式与谱重建。Liang Wang，Numerical Spectral Correspondence Between a Non-Autonomous Quadratic Map and the Riemann Zeros: An Exploratory Study，Mathematical and Computational Applications 2026, 31(5), 193，正式出版PDF第16页图4。[原文](https://doi.org/10.3390/mca31050193)。保留原始透明度掩膜。
+
+许可：[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)。作者署名：Liang Wang。
+
+图：把“看起来相近”拆成可以比较的曲线与误差。左图展示三种方案与前100个黎曼零点的对应，右图展开相对误差；A固定首个零点，C采用过原点的缩放拟合，D加入共轭相位后拟合。每条曲线来自一次拟合运行，反映锚定选择对重建的影响；这不是正文所述的样本外检验图，不同运行也可能得到不同局部最优。
+
+SHA-256：`d25b31fa8d8eac8cc42b9f8e2e2035ed85d59eb1257390a3b41e6812ac729023`。
+
