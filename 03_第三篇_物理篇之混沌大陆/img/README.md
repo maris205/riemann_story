@@ -219,3 +219,29 @@ SHA-256：`87e9c03895c1a280de53fdc79717a7d802207d120cc0aa915386e9a8d596d24a`。
 
 SHA-256：`d25b31fa8d8eac8cc42b9f8e2e2035ed85d59eb1257390a3b41e6812ac729023`。
 
+
+
+## 作者研究核心证据图更新
+
+第14章现保留符号分区图3，补入归一化间隔图10，以低位零点图2替换正文的锚定比较图4。原图4资产与来源说明保留归档，不再用于当前正文。
+
+### 14_wang_normalized_gaps_fig10.png
+
+归一化间隔的统计比较。
+
+图：把两份间隔清单放到同一把尺子上。横轴是间隔除以各自平均值，蓝线是真实素数，绿线是参数随迭代变化的动力学模型，灰线是固定参数模型，红虚线是指数分布参照。绿、蓝曲线的整体轮廓相近，局部仍有差异。这幅图属于非自治模型的归一化统计比较；原图标题中的“Cramér检验”不代表证明了最大素数间隔猜想。
+
+来源：Liang Wang，The Emergence of Prime Distribution from Low-Dimensional Deterministic Chaos，作者存档v5.0图10，第30页，[论文DOI](https://doi.org/10.1080/27684830.2026.2684334)／[作者存档](https://zenodo.org/records/20565112)，[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)。原图提取，未改动图内内容。
+
+SHA-256：`eb76943a1fcef239eaf66bdf845d1d53892c4b852e9e9ab831ca87a1c461ca72`。
+
+### 14_wang_low_zeros_fig2.png
+
+低位零点与动力学谱的数值对应。
+
+图：把前几个零点放大看。上图将动力学矩阵特征相位换算出的数值与真实零点比较，下图保留误差的正负；绿色区域中的前6个位置贴合较好，往后偏差逐渐显露。首个零点用于确定整体缩放，前6个零点还参与了数值分辨率的选择，因此绿色区域是校准范围内的对应，不能当作完全独立的预测。图内“Quantum Lock-in”是原作者的形象标记，这里展示的是经典动力学的数值计算。
+
+来源：Liang Wang，Numerical Spectral Correspondence Between a Non-Autonomous Quadratic Map and the Riemann Zeros: An Exploratory Study，Math. Comput. Appl. 2026, 31(5), 193，图2，第11页，[论文](https://doi.org/10.3390/mca31050193)，[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)。原图提取，未改动图内内容。
+
+SHA-256：`6489116c3b1edfcc0d0ac777627a48b749c83f1aa0962e15f17cc8e6648080b0`。
+
