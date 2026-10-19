@@ -56,3 +56,142 @@
 
 **替代文本：** 左侧对数间距的八个能级转成热权重及ζ配分和。右侧把β=1的Bost–Connes平衡相变与另一模型的β=1/2临界线参数分开。
 
+
+
+## 新增原创配图与复现说明（2026-10-19）
+
+# 第二批原创数学图：康托尔弦与初值敏感
+
+两图均为本书原创，不复制论文图片。PNG为2880×1440，SVG字体转路径。复现见[源程序](../src/README.md)。
+
+## cantor_string_harmonics
+
+**建议位置：** 第11节“三分之一的弦，为什么带来整数”，在两份清单相乘得到谱ζ函数的解释之后。
+
+**图注：** 康托尔弦收集的是逐层挖出的开区间：一根长1/3，两根长1/9，四根长1/27。选定频率单位后，每根长ℓ的弦提供k/ℓ这一整套泛音。长度清单与整数倍数相乘，产生谱ζ函数的乘积关系。图只展示前三层和不超过30的频率。
+
+**替代文本：** 左侧三行用原位置和真实比例显示中三分之一构造剪下的区间。右侧对应泛音3、6、9等，9、18、27等，以及27；第二、三行标出两重与四重。所有频率轴用相同刻度。
+
+**数学与简化：** 左侧区间坐标按三分规则递归计算，并以有理数独立检查长度和数目。灰色细线只是单位区间参照，不能解释为每层仍保留的完整集合。右侧线高统一，仅表示频率位置，不表示振幅；×2、×4表示不同弦段带来的重数。前三层在频率27处合计有1+2+4=7个模态；更深层首个基频至少81，故本图频率范围内无需绘制。谱ζ公式针对整个无限弦族，先在Re(s)>1绝对收敛区展开。本图没有说素数按康托尔规则分布，也没有说一件乐器能够验证RH。
+
+**数学来源：** [Lapidus–Pomerance，1993年原文](https://www.math.dartmouth.edu/~carlp/fractal.pdf)及本篇参考文献所列Lapidus–van Frankenhuijsen《Fractal Geometry, Complex Dimensions and Zeta Functions》第二版；本篇第11节具体采用的归一化f=k/ℓ。三分构造和泛音清单由定义独立计算。
+
+## logistic_initial_sensitivity
+
+**建议位置：** 第10节“用一只计算器，看见混沌”，在两个初值二十次迭代达到约0.82与0.03的段落之后。
+
+**图注：** 固定同一个确定性规则x(n+1)=4x(n)(1−x(n))，从0.2与0.200001分别开始。20次迭代后约为0.820014与0.031369。两条轨迹由高精度计算得到，展示初值敏感，不是素数混沌的证明。
+
+**替代文本：** 青色与金色轨迹前期重叠，后期分离。横轴为0—20次迭代，纵轴为0—1中的位置；右侧放大列出第20步两个结果。
+
+**计算及核验：** 初值由十进制字符串精确指定，以Decimal 80位精度进行20步迭代；另以mpmath 90位精度计算独立闭式x(n)=sin²(2ⁿarcsin√x(0))，对全部42个状态交叉检查，绝对差小于10⁻⁶⁵。CSV保留17位显示精度。线段仅连接离散状态，不表示连续时间动力学。无随机抽样，未拟合书中目标值。图只展示有限轨迹的分离，不以此有限图像单独证明整个系统的混沌性质。
+
+**来源与概念边界：** [Robert May，Simple mathematical models with very complicated dynamics (1976)](https://www.nature.com/articles/261459a0)提供模型与确定性复杂动力学的原始背景；本篇第10节给定这组初值。GMC提示对应本篇的随机测度讨论，参见[Rhodes–Vargas综述](https://arxiv.org/abs/1305.6221)；GMC、独立随机模型和这里的确定性迭代不视为同一对象。
+
+
+## 论文原图与数值摘录（CC BY 4.0）
+
+以下三幅为直接从原论文PDF页面裁切、以450 dpi渲染的PNG，保留所选图或数值块的完整内容。它们不是本项目原创图；各自沿用原论文的[CC BY 4.0许可](https://creativecommons.org/licenses/by/4.0/)。这里只收录必要的图像摘录，不收录论文全文。
+
+### he2021_fig1_pdfcrop_450dpi.png
+
+- 作者：Ran He、Ming-Zhong Ai、Jin-Ming Cui、Yun-Feng Huang、Yong-Jian Han、Chuan-Feng Li、Guang-Can Guo、G. Sierra、C. E. Creffield。
+- 来源：Riemann zeros from Floquet engineering a trapped-ion qubit，npj Quantum Information 7,109 (2021)，图1；[DOI及原文](https://doi.org/10.1038/s41534-021-00446-7)；[原图页](https://www.nature.com/articles/s41534-021-00446-7/figures/1)。
+- 许可：[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)。原论文许可覆盖此图，未见单独的第三方限制性署名。
+- 修改说明：仅裁切PDF第2页的页面边缘及正文，保留原图全部面板、标注与配色；450 dpi渲染，2969×963像素。
+- 位置与读法：第14节2021年镱离子实验的周期演化说明之后。面板a是装置／控制示意，不是照片；面板b展示布洛赫球演化协议，不能把所有曲线与标记都称为实测数据。
+- SHA-256：`0c0d3ee5dc36e003859586ae00d29f2f81eb6337ab653e04fefd3909cfc83581`
+
+### he2021_fig2_pdfcrop_450dpi.png
+
+- 作者：Ran He、Ming-Zhong Ai、Jin-Ming Cui、Yun-Feng Huang、Yong-Jian Han、Chuan-Feng Li、Guang-Can Guo、G. Sierra、C. E. Creffield。
+- 来源：Riemann zeros from Floquet engineering a trapped-ion qubit，npj Quantum Information 7,109 (2021)，图2；[DOI及原文](https://doi.org/10.1038/s41534-021-00446-7)；[原图页](https://www.nature.com/articles/s41534-021-00446-7/figures/2)。
+- 许可：[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)。原论文许可覆盖此图，未见单独的第三方限制性署名。
+- 修改说明：仅裁切PDF第3页的页面正文，保留原图a–h全部面板与原标注；450 dpi渲染，2707×1413像素。建议整栏展示，可打开原图放大阅读。
+- 位置与读法：第14节2021年实验的零信号判别之后、2026年核自旋实验之前。（a）至（f）的黑线为理论Re[g(E)]，g(E)=−ζ(1/2+iE)/(1/2+iE)；彩色点为实验读数S，由六种驱动周期数的读数汇集；灰色竖线为已知ζ零点。实部的额外过零不必是ζ零点。（g）、（h）为提取零点减精确零点的误差，不是新的零点分布；部分灰线旁红点缺失表示误差超出绘图范围。
+- SHA-256：`a9cd13f288c24e671b62621bb2f51e5bd60632a58376dba158d0804f22a27345`
+
+### connes2026_p25_errorblock_450dpi.png
+
+- 作者：Alain Connes。
+- 来源：The Riemann Hypothesis: Past, Present and a Letter Through Time，arXiv:2602.04022v1，第25页未编号数值清单；[版本记录](https://arxiv.org/abs/2602.04022v1)；[原文PDF](https://arxiv.org/pdf/2602.04022v1)。v1提交于2026年2月3日，PDF署期2026年2月5日。
+- 许可：[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)，依据arXiv原文记录的权利声明；未见此数值块的第三方限制。
+- 修改说明：仅截取第25页完整数值块，原数字及标题未改动；450 dpi渲染，2732×1276像素。此块未编号，不是原论文图2。
+- 位置与读法：第12节开篇有限素数近似的段落之后。只用不超过13的素数，给出前50个零点近似的误差上界；第一项为2.60179×10⁻⁵⁵，末项为0.00212727，另有一项为0.0209081。精度差异大且误差不单调，不能说全部50个零点都有55位精度。原文第25页与第6.6节仍说明无限极限的收敛与相关证明步骤尚待完成。
+- SHA-256：`46727373f3fc842258a03c8db04d1bb9023cc9ffa374ce2143e37fb35c41c531`
+
+---
+
+# 原创补充图：来源、图注与边界
+
+本批7张均为项目原创，无第三方图像复制。PNG与SVG同名配对。核验日期：2026-10-19。
+
+## 第09章：conformal_extremum_background
+建议位置：谈及Connes书信与研究地图之后，可加一句过渡：“共形映射与极值思想，是这封信借用的历史视角；下面的小模型只帮助辨认这两种动作。”
+图注：左图把上半平面网格经Cayley映射送进单位圆盘；右图在固定边界值的一族函数中比较Dirichlet能量。它们是背景教学模型，不是Connes的Weil二次型计算，不是黎曼手稿的重建，也不能推出RH。
+核验：w=(z−i)/(z+i)，Im z>0。单位正方形上u_a=x+a sin(πx)sin(πy)，边界均为u=x；E=∫|∇u|²=1+π²a²/2，交叉项积分为0。图只声称该族中a=0最小。
+来源与语境：Connes, The Riemann Hypothesis: Past, Present and a Letter Through Time, §§5–6，https://arxiv.org/html/2602.04022v1 ，其书信明确借用共形映射和二次型极值思想。我们的具体圆盘及正方形公式独立选取，不来自其算子。
+史料弃用原因：Clay扫描涉及来源与复制条件，且其说明更正著名稿本为Clebsch誊清本，不能笼统称“黎曼亲笔”；https://www.claymath.org/collections/riemanns-1859-manuscript/notes-on-the-1859-manuscript/ 。
+
+## 第11章：cantor_dimension_poles
+建议位置：“维数约为0.63”段后。
+图注：康托尔集每层保留两份缩小为三分之一的副本，因此维数D=log2/log3。康托尔弦的几何ζ函数延拓为1/(3^s−2)，极点在实部D的等间距竖线上。这些是几何复维数，不是黎曼ζ函数的非平凡零点。
+核验：被挖出的弦长3^(−n)、重数2^(n−1)，n≥1；求和区间Re(s)>D。极点D+2πik/log3。左图是保留的康托尔集合近似，不把它与被挖出的弦段混同。
+来源：Lapidus–Lu, The Geometry of p-Adic Fractal Strings: A Comparative Survey（包含普通实康托尔弦说明），https://arxiv.org/abs/1105.2966 ；作者PDF https://math.ucr.edu/~lapidus/papers/lapidus-lu.pdf 。
+
+
+## 七幅原创物理解释图（2026-10-19）
+
+本批七图由本项目独立绘制，不复制或改编论文图片。PNG为2560×1440，SVG字形转路径。数学文献是依据，不是图像复制来源。源程序及复现说明见[源程序目录](../src/README.md)；未为这些原创图片或程序另行新增开放许可证。
+
+### 09_three_routes_letter.png / .svg
+
+- 第09章，在“首先需要一张地图”相关段落后，或“从一排数字走到另一片大陆”末尾。
+- 图注：从1859年的原始论文到2026年的回望，分析、谱与几何提供三种彼此交叉的提问方式。图中是研究视角的地图，不是完成证明的流程图。
+- 依据：本篇第09章与Connes 2026综述 https://arxiv.org/html/2602.04022v1 。
+
+### 09_weighted_prime_zero_dictionary.png / .svg
+
+- 第09章“素数为何像一条条回到原地的路”之后。
+- 图注：素数幂与重复周期轨道共享一种组织方式。显式公式通过测试函数、权重、重数及背景项联系素数与零点；图中的两列绝不是不带权重的相等清单。
+- 左侧按log(p^k)的位置排点；右侧列出前五个正虚部的近似值，垂直位置仅作排版。Λ(p^k)=log p，对所有正整数k成立。
+- 依据：本篇显式公式讨论；Bogomolny, Riemann zeta function and quantum chaos, https://arxiv.org/abs/0708.4223 。
+
+### 10_spacing_repulsion_models.png / .svg
+
+- 第10章“一座不会变化的城市，也有统计规律”后，如需要补一句承接：“统计规律还可以问相邻事件怎样挤在一起；零点间距便提供了一个鲜明例子。”也可移至第13章“琴键之间，藏着什么消息”后（主题更直接）。
+- 图注：平均间距归一化以后，Poisson模型允许很多很近的邻居，GUE的Wigner近似呈现二次能级排斥。曲线比较的是理论模型，不是素数间距数据，也不是黎曼猜想的证明。
+- 数学：P_P(s)=exp(-s)，P_W(s)=32 s² exp(-4s²/π)/π²，s≥0。后者是2×2 GUE给出的Wigner surmise，用来近似大矩阵相邻间距；不是大矩阵极限的精确密度。
+- 独立数值检查：0至12上积分的归一化和均值均为1.0。
+- 依据：本篇Montgomery/Odlyzko及随机矩阵参考；Bogomolny同上。
+
+### 10_primes_vs_independent_draws.png / .svg
+
+- 第10章“给每个整数一枚硬币”末尾。
+- 图注：真实素数、独立抽样和最初的整除筛选，排在同一张整数表上。抽样可能挑中合数；真实素数则共同服从模2、模3等限制。通过前两道筛也不能保证为素数，例如25和49。
+- 数据：2至61逐个试除确定素数；NumPy default_rng，固定种子20261019，独立入选概率min(1,1/log n)。min保证n=2的概率合法。此小样本只说明机制区别，不能检验渐近密度。
+- 依据：Tao关于素数概率模型的讲义，https://terrytao.wordpress.com/2015/01/04/254a-supplement-4-probabilistic-models-and-heuristics-for-the-primes-optional/ 。
+
+### 13_xp_hyperbola_phase_area.png / .svg
+
+- 第13章“最简单的候选，只有位置乘动量”内，半经典计数与对数密度段落之后。
+- 图注：H=xp的轨道是双曲线，位置指数增长、动量指数衰减。教学性截断下的面积积分给出E log E−E+1，展示平均计数中对数项的来源；如何定义边界和完整量子谱，仍须另行处理。
+- 数学：Hamilton方程xdot=x、pdot=−p，解为x=x0 exp(t)、p=p0 exp(−t)。采用x≥1、p≥1、xp≤E的教学区域（E≥1），A(E)=∫[1,E](E/x−1)dx=E log E−E+1。半经典计数的首项约A/(2πℏ)。采用无量纲单位；图示不是实际Berry–Keating全部边界条件，也未精确复现黎曼零点计数的常数与振荡项。
+- 独立校验：E=8时解析面积9.6355323334，数值积分9.6355323367；误差约3.2×10^-9。
+- 依据：Berry–Keating, The Riemann zeros and eigenvalue asymptotics，书稿已有作者全文 https://michaelberryphysics.wordpress.com/wp-content/uploads/2013/06/berry307.pdf 。
+
+### 11_inverse_spectral_cancellation.png / .svg
+
+- 插入第11章“一段几何信息，可能在乘法中消失”，说明极点抵消的段落后。
+- 图注：在归一化频率约定下，谱ζ函数是几何ζ函数与黎曼ζ函数的乘积。局部简单极点与同处简单零点可以抵消，让对应的几何尺度振荡不再作为谱极点显现。逆谱定理要求对固定维数的所有合格弦成立，而非检查一个例子。
+- 条件：图中使用有可亚纯延拓的局部简单极点/零点例子，不断言全部ζ零点都是简单零点。精确定理涉及稳定、非零谱第二项及Minkowski可测性等假设；固定0<D<1的普遍逆谱结论等价于Re(s)=D上无ζ零点。
+- 来源：本篇第11章；Lapidus–Maier 1995 https://doi.org/10.1112/jlms/52.1.15 。
+
+### 14_sixteen_state_phase_encoding.png / .svg
+
+- 插入第14章“五个核自旋，换一种读法”，有限项与复响应介绍之后。
+- 图注：四个工作比特容纳16个基态。热权重、交替符号与随时间积累的相位，合成一个归一化复信号。图中前两栏由有限和实际计算，右栏四箭头仅解释抵消；在首个ζ零点高度，16项响应仍有残差。
+- 数值：β=0.5、t=14.134725141734693、N=16，w_n=n^(-β)/Σm^(-β)；L=Σ(-1)^(n+1)w_n exp(-it log n)。归一化权重之和为1。有限项的模约0.0203，未伪造精确零点。红点是向量和的终点。
+- 实验温度305 K与模型无量纲β分开标注；不把有限ζ函数编码称为完整Hilbert–Pólya实现。
+- 来源：Wei、Zhai、Lu等2026论文，https://www.nature.com/articles/s41467-026-74935-8 ，式(10)及实验部分；图片为独立重算和原创绘图，未截取或改编原论文图。
+
