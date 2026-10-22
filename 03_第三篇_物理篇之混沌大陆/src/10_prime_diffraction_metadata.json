@@ -1,0 +1,29 @@
+{
+  "M": 10000000001,
+  "L": 120120,
+  "prime_count": 5221,
+  "interval": "[M,M+L)",
+  "formula": "S(k)=abs(sum_p exp(-i*k*(p-M)))**2/N",
+  "grid": "k=2*pi*j/L, j=0,...,L/2",
+  "plot": "1+S on logarithmic y axis",
+  "zoom": [
+    0.25,
+    0.4
+  ],
+  "direct_sum_checks": [
+    {
+      "k_over_pi": 0.3333333333333333,
+      "S": 1305.4914767285961
+    },
+    {
+      "k_over_pi": 0.6666666666666666,
+      "S": 1305.4914767285961
+    },
+    {
+      "k_over_pi": 1.0,
+      "S": 5221.0
+    }
+  ],
+  "reference": "https://arxiv.org/abs/1804.06279v2",
+  "status": "finite numerical experiment, not proof of chaos or RH"
+}

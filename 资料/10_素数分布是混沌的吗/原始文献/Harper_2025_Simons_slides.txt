@@ -1,0 +1,426 @@
+
+--- PDF page 1 ---
+The square of the Riemann zeta function gives
+rise to critical multiplicative chaos
+Adam J Harper
+University of Warwick
+September 2025
+
+
+--- PDF page 2 ---
+Goals of the talk:
+▶To (roughly) explain what multiplicative chaos is
+▶Will end up focusing on the case of critical multiplicative
+chaos
+▶To (roughly) state a conjecture of Saksman and Webb that
+relates powers of |ζ(s)| to multiplicative chaos
+▶To say a little about work of H.–Saksman–Webb, proving the
+critical case of their conjecture
+
+
+--- PDF page 3 ---
+What is multiplicative chaos?
+Multiplicative chaos is a class of probabilistic objects first studied
+by Kahane in 1985.
+Idea: form a random measure (i.e. a random weighting) by
+integrating test functions against the exponential of some
+collection of random variables (X(h))h∈H.
+For g a test function, we can look at
+Z
+g(h)eγX(h)dh,
+where γ > 0 is a real parameter.
+
+
+--- PDF page 4 ---
+One needs to make assumptions on X(h) in order for the random
+measure to be interesting. It turns out one gets something very
+interesting if the X(h) are:
+▶Gaussian random variables;
+▶with mean zero EX(h) = 0, and the same (or similar) finite
+non-zero variance EX(h)2 for all h;
+(This condition implies that the average mass
+EeγX(h) = e(γ2/2)EX(h)2 assigned to each point h is roughly
+the same.)
+▶and the covariance EX(h)X(h′) (i.e. the dependence between
+X(h) and X(h′)) decays logarithmically as |h −h′| increases.
+
+
+--- PDF page 5 ---
+Note in particular that the X(h) will not be independent here.
+
+
+--- PDF page 6 ---
+Connection with number theory
+Somewhat surprisingly, it turns out that multiplicative chaos is
+closely connected to number theory, especially the value
+distribution of L-functions and of sums of multiplicative functions
+(e.g. Dirichlet characters).
+Key Example (in this talk!): shifts of the Riemann zeta
+function
+We study the behaviour of
+Z 1/2
+−1/2
+g(h)|ζ(1/2 + it + ih)|γdh,
+as T ≤t ≤2T varies.
+Here g(h) will be a suitably nice, fixed test function (e.g. a
+continuous function, or a step function). The case where g(h) ≡1
+already captures the key ideas.
+
+
+--- PDF page 7 ---
+▶By the Selberg central limit theorem, log |ζ(1/2 + it)| has a
+roughly Gaussian distribution as t varies.
+▶As briefly hinted yesterday (branching random walk), the
+values log |ζ(1/2 + it1)|, log |ζ(1/2 + it2)| will be correlated
+(i.e. not statistically independent) when |t1 −t2| ≤1, say.
+▶So looking at
+R 1/2
+−1/2 g(h)|ζ(1/2 + it + ih)|γdh for varying t
+might be related to multiplicative chaos.
+
+
+--- PDF page 8 ---
+Goal
+Our goal is a statement of the shape: there is a normalising
+factor N = N(T, γ) such that, for any nice test function g(h), the
+quantity
+1
+N
+Z 1/2
+−1/2
+g(h)|ζ(1/2+it+ih)|γdh,
+T ≤t ≤2T uniformly random
+converges in distribution to some (interesting) limiting random
+variable C(g) as T →∞.
+
+
+--- PDF page 9 ---
+Some issues to ponder, I
+Compare with the Selberg central limit theorem for
+log |ζ(1/2 + it)|, with T ≤t ≤2T uniformly random:
+▶R 1/2
+−1/2 g(h)|ζ(1/2 + it + ih)|γdh involves “many” different
+values of zeta at the same time (in fact about ≍log T
+“genuinely different” values).
+▶Here log |ζ(1/2 + it + ih)| appears in the exponent, so we
+couldn’t even allow additive errors of size O(1) when
+approximating it, if we want to prove convergence in
+distribution.
+
+
+--- PDF page 10 ---
+Some issues to ponder, II
+What should the normalising factor N = N(T, γ) be?
+If we average over t, we see
+1
+T
+Z 2T
+T
+Z 1/2
+−1/2
+g(h)|ζ(1/2 + it + ih)|γdhdt
+=
+Z 1/2
+−1/2
+g(h)
+ 
+1
+T
+Z 2T
+T
+|ζ(1/2 + it + ih)|γdt
+!
+dh,
+where we expect/know that the moment on the inside grows like
+logγ2/4 T as T →∞.
+Does this mean we should take N(T, γ) = logγ2/4 T?
+
+
+--- PDF page 11 ---
+Key properties of multiplicative chaos
+▶As γ increases, EeγX(h) = e(γ2/2)EX(h)2 increases, and
+R
+g(h)eγX(h)dh is dominated more and more by very large
+values of X(h).
+▶There is a critical value γc of γ at which, with very high
+probability, one no longer finds any values of h for which X(h)
+is large enough to overcome EeγX(h).
+▶When γ < γc, one see non-trivial behaviour after rescaling
+R
+g(h)eγX(h)dh by e(γ2/2)EX(h)2.
+▶When γ = γc, one sees non-trivial behaviour after rescaling by
+e(γ2/2)EX(h)2
+p
+EX(h)2 .
+
+
+--- PDF page 12 ---
+▶In the shifted zeta example, it turns out that the critical
+exponent γc = 2, and
+p
+EX(h)2 ≍√log log T.
+
+
+--- PDF page 13 ---
+The bad side: Critical multiplicative chaos is delicate to work
+with and analyse.
+The good side: The exponent 2 gives us squares, so at least we
+can expand out in some of the calculations!
+And we get interesting and unexpected results, saving something
+like a factor √log log T more than naively expected.
+
+
+--- PDF page 14 ---
+(Approximately) Saksman and Webb’s conjecture, 2016
+For any fixed γ ≤2, and any (say) step function g(h), the quantity
+1
+N
+Z 1/2
+−1/2
+g(h)|ζ(1/2+it+ih)|γdh,
+T ≤t ≤2T uniformly random
+will converge in distribution as T →∞, if we take
+▶N = N(T, γ) = logγ2/4 T for γ < 2;
+▶N = N(T, γ) =
+log T
+√log log T for γ = 2.
+The limiting distribution C(g) is given by the integral of g(h)
+against (a smooth perturbation of) a “well understood” Gaussian
+multiplicative chaos measure.
+
+
+--- PDF page 15 ---
+Theorem 1 (H.–Saksman–Webb, in preparation)
+Saksman and Webb’s conjecture is true in the critical case γ = 2.
+We find in particular that
+√log log T
+log T
+Z 1/2
+−1/2
+|ζ(1/2+it+ih)|2dh,
+T ≤t ≤2T uniformly random
+converges in distribution (to a limit distribution arising from the
+total mass of critical chaos) as T →∞.
+
+
+--- PDF page 16 ---
+Ideas from the proof
+How can we prove convergence in distribution?
+A possible approach is the method of moments:
+▶if (Xn)∞
+n=1 is a sequence of random variables;
+▶if the target distribution X is “nice enough”;
+▶and if we can show that EX r
+n →EX r as n →∞, for each
+fixed r ∈N;
+then it follows that Xn converges in distribution to X.
+For example, this is how the Selberg central limit theorem for
+log |ζ(1/2 + it)| is proved.
+
+
+--- PDF page 17 ---
+But there are significant problems with applying this to
+√log log T
+log T
+R 1/2
+−1/2 |ζ(1/2 + it + ih)|2dh.
+▶The target limit distribution is not “nice enough”, in fact all
+of its moments (with r ≥1) are infinite!
+▶Computing arbitrarily high moments of
+√log log T
+log T
+R 1/2
+−1/2 |ζ(1/2 + it + ih)|2dh would require computing
+arbitrarily high moments of zeta, which we cannot do
+(achieving asymptotics) even assuming the Riemann
+Hypothesis.
+
+
+--- PDF page 18 ---
+Strategy (the number theory part):
+To proceed, we will show that for most T ≤t ≤2T (and up to
+scaling factors):
+1. we can replace
+R 1/2
+−1/2 |ζ(1/2 + it + ih)|2dh by
+R 1/2
+−1/2 |D(1/2 + it + ih)|2dh, where D(s) is a “nice” Dirichlet
+polynomial with length T 1/2−o(1);
+2. we can replace D(s) by a Dirichlet polynomial P(s),
+supported only on smooth numbers, and with length T o(1).
+Notice that (2) gives us hope of ultimately being able to compute
+high moments of the integral.
+
+
+--- PDF page 19 ---
+Strategy (the probabilistic part):
+We show:
+3. we can replace our integral by
+R 1/2
+−1/2 B(t + h)|P(1/2 + it + ih)|2dh, where B(·) is a suitable
+(smooth approximation to a) barrier that restricts the growth
+of P and its subsums;
+4. the moments of
+R 1/2
+−1/2 B(t + h)|P(1/2 + it + ih)|2dh don’t
+grow too fast, and closely match the random model where the
+(p−it)p prime are replaced by independent Steinhaus random
+variables f (p);
+5. the random model converges in distribution to the desired
+limit.
+(5) relies on work of Saksman and Webb from 2016, together with
+the fact that P(s) behaves a lot like an Euler product.
+
+
+--- PDF page 20 ---
+Replacing zeta by D(s)
+By the approximate functional equation, we know
+Z 1/2
+−1/2
+|ζ(1/2 + it + ih)|2dh
+≈
+Z 1/2
+−1/2
+|
+X
+n≤
+q
+T
+2π
+1
+n1/2+it+ih + χ(1/2 + it + ih)
+X
+n≤
+q
+T
+2π
+1
+n1/2−it−ih |2dh
+=
+2
+Z 1/2
+−1/2
+|
+X
+n≤
+q
+T
+2π
+1
+n1/2+it+ih |2dh + cross terms involving χ.
+We want to show that for most T ≤t ≤2T:
+▶the cross terms are negligible (compared with
+log T
+√log log T );
+▶we can replace P
+n≤
+q
+T
+2π
+1
+n1/2+it+ih by a “nice” Dirichlet
+polynomial D(1/2 + it + ih), again up to an error that is
+o(
+log T
+√log log T ).
+
+
+--- PDF page 21 ---
+We can show the cross terms are usually negligible by shifting our
+integral to the left in the complex plane (e.g. to the ℜ(s) = 1/4
+line), and then integrating over T ≤t ≤2T and applying the
+classical mean value theorem for Dirichlet polynomials.
+It is crucial that we have an integral over h that we can shift.
+
+
+--- PDF page 22 ---
+It turns out that we can usually replace P
+n≤
+q
+T
+2π
+1
+n1/2+it+ih by
+D(1/2 + it + ih), where we take
+D(s) := P(s) · R(s),
+P(s) :=
+X
+n≤X,n is P smooth
+1
+ns ,
+R(s) :=
+X
+n≤T 1/2−o(1),n is P rough
+1
+ns ,
+for suitable parameters P and X (both T o(1)).
+Why? Use the mean value theorem for Dirichlet polynomials. We
+only need to beat
+log T
+√log log T , and “most” n involved in
+P
+n≤
+q
+T
+2π
+1
+n1/2+it+ih appear in P(s) · R(s).
+Notice D(s) has total length X · T 1/2−o(1) = T 1/2−o(1).
+
+
+--- PDF page 23 ---
+Replacing D(s) by P(s)
+Next we want to show that provided P isn’t too small, for most
+T ≤t ≤2T we will have
+Z 1/2
+−1/2
+|D(1/2+it +ih)|2dh ≈log(
+√
+T)
+log P
+Z 1/2
+−1/2
+|P(1/2+it +ih)|2dh.
+In other words, the contribution from the rough part
+R(1/2 + it + ih) is usually just a constant multiplier log(
+√
+T)
+log P .
+Why should this be so?
+R(1/2 + it + ih) depends only on the p−it−ih for large primes
+p > P. These terms will rotate quite rapidly as h varies, so we
+might expect/hope that their contribution to the h integral will
+usually average out to some constant.
+
+
+--- PDF page 24 ---
+Rough idea for how to prove this: Compute the “variance”
+1
+T
+Z 2T
+T
+|
+Z
+1
+2
+−1
+2
+|D(1/2+it+ih)|2dh−log(
+√
+T)
+log P
+Z
+1
+2
+−1
+2
+|P(1/2+it+ih)|2dh|2dt,
+and prove it is rather smaller than (
+log T
+√log log T )2.
+This computation has similar complexity to a fourth moment
+calculation, which we can hope to perform since D(s) has length
+T 1/2−o(1).
+Actually this won’t work, the variance will not be small. But it will
+be if one first inserts a suitable barrier into the inner integrals (to
+control “blow-up on the diagonal”).

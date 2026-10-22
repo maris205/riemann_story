@@ -39,3 +39,12 @@ python "render_spectral_figures.py"
 依赖Python 3、NumPy、Matplotlib及Noto Sans CJK字体，默认字体路径在render_physics_depth.py顶部FONT常量。无需网络。PNG为2560×1440，SVG字形转路径，运行覆盖各自同名图片。独立抽样使用固定种子20261019。额外脚本会在本篇目录生成quantum_validation.json数值核验文件；该运行产物不属于书稿资产，不纳入仓库。
 
 第14章图按β=0.5、t=14.134725141734693、N=16实际计算，权重归一化，有限响应模约0.020280；并未人为设成精确零点。第13章图展示无量纲教学截断的面积积分，不声称完整实现Berry–Keating边界条件。详细图注、依据及适用范围见[图片说明](../img/README.md)。
+## 第10节：洛伦兹蝴蝶图（2026-10-22）
+
+[render_lorenz.py](render_lorenz.py)按经典三方程积分，输出[PNG](../img/10_lorenz_butterfly.png)、[NPZ轨迹](10_lorenz_trajectory.npz)及[JSON参数与核验](10_lorenz_metadata.json)。依赖NumPy、Matplotlib，Windows微软雅黑。初值(1,1,1)、RK4步长0.002、总时长100，绘图丢弃前5单位时间。
+
+图展示x–z等比例投影，颜色按x编码，叠加描边只改变显示效果。步长减半仅在短时间t＝1交叉检查，长时混沌轨迹不以逐点重合作为要求。它是数值科普图，不是素数实验或混沌性质的严格证明。详见[图像底稿](../../资料/10_素数分布是混沌的吗/04_图片与视频素材.md)。
+
+## 第10节：真实素数散射图
+
+[render_prime_diffraction.py](render_prime_diffraction.py)以分段筛取一百亿附近5221颗素数，再按Torquato等论文定义计算散射强度。输出[配图](../img/10_prime_diffraction.png)、[数据](10_prime_diffraction_data.npz)与[核验记录](10_prime_diffraction_metadata.json)。依赖NumPy、Matplotlib；中文字体为微软雅黑。

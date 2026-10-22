@@ -1,0 +1,2370 @@
+
+--- PDF page 1 ---
+arXiv:1804.06279v2  [math.NT]  16 Jun 2018
+HIDDEN MULTISCALE ORDER IN THE PRIMES
+SALVATORE TORQUATO, GE ZHANG, AND MATTHEW DE COURCY-IRELAND
+Abstract. We study the pair correlations between prime numbers in an in-
+terval M ≤p ≤M + L with M →∞, L/M →β > 0. By analyzing the
+structure factor, we prove, conditionally on the Hardy-Littlewood conjecture
+on prime pairs, that the primes are characterized by unanticipated multiscale
+order. Speciﬁcally, their limiting structure factor is that of a union of an in-
+ﬁnite number of periodic systems and is characterized by dense set of Dirac
+delta functions.
+Primes in dyadic intervals are the ﬁrst examples of what
+we call eﬀectively limit-periodic point conﬁgurations.
+This behavior implies
+anomalously suppressed density ﬂuctuations compared to uncorrelated (Pois-
+son) systems at large length scales, which is now known as hyperuniformity.
+Using a scalar order metric τ calculated from the structure factor, we iden-
+tify a transition between the order exhibited when L is comparable to M and
+the uncorrelated behavior when L is only logarithmic in M. Our analysis for
+the structure factor leads to an algorithm to reconstruct primes in a dyadic
+interval with high accuracy.
+1. Introduction
+While prime numbers are deterministic, by some probabilistic descriptors, they
+can be regarded as pseudo-random in nature. Indeed, the primes can be diﬃcult
+to distinguish from a random conﬁguration of the same density.
+For example,
+assuming a plausible conjecture, Gallagher proved that the gaps between primes
+follow a Poisson distribution [13]. Thus the number of M ≤X such that there are
+exactly N primes in the interval M < p < M + L of length L ∼λ ln X is given
+asymptotically by
+# {M ≤X such that π(M + L) −π(M) = N} ∼X e−λλN
+N!
+.
+Note that Gallagher’s interest was in short intervals whereas we analyze those in
+which the length L is comparable to the lower endpoint M. Our primary observation
+is that for these longer intervals, the primes are highly correlated and ordered on
+multiple length scales and hence are drastically diﬀerent from a Poisson distribution.
+This is demonstrated by the identiﬁcation of sharp peaks in the structure factor of
+the primes and by large values of the order parameter τ, both of which we deﬁne
+in Section 2. In particular, we use the structure factor to detect a large-scale order
+known as hyperuniformity [48], very diﬀerent from the uncorrelated behavior one
+sees in short intervals.
+To study diﬀerent ranges of primes, it is important to take account of the fact that
+primes become increasingly sparse in longer intervals. Let π(x) denote the prime
+counting function, which gives the number of primes less than x. According to the
+prime number theorem [19], the prime counting function in the large-x asymptotic
+1
+
+
+--- PDF page 2 ---
+2
+SALVATORE TORQUATO, GE ZHANG, AND MATTHEW DE COURCY-IRELAND
+limit is given by
+(1.1)
+π(x) ∼
+x
+ln(x)
+(x →∞).
+The prime number theorem means that for suﬃciently large x, the probability that a
+randomly selected integer not greater than x is prime is very close to 1/ ln(x), which
+can be viewed as a position-dependent number density ρ(x) (number of primes up
+to x divided by the interval x). This implies that the primes become sparser as x
+increases and hence constitute a statistically inhomogeneous set of points that are
+located on a subset of the odd integers. This simple observation requires that one
+carefully choose the interval over which the primes are sampled and characterized
+in order to obtain meaningful results that in general will depend on the chosen
+interval. If L is much larger than M, the density 1/ ln(n) drops oﬀappreciably as
+n ranges from M to M + L, and then the system is the very opposite of hyper-
+uniform. On the other hand, ln(M + L) = ln(M) + ln(1 + L/M) is asymptotic to
+ln(M) as long as L/M is bounded above. In this case, one can treat the primes as
+homogeneous with constant density 1/ ln(M). For this paper, we take L ∼βM of
+the same order as M or sometimes smaller to compare with Gallagher’s regime.
+The plausible conjecture Gallagher assumed is a version of the Hardy-Littlewood
+m-tuples conjecture (Theorem X1, p. 61 of [20]). If H = (h1, . . . , hm) is a m-tuple
+of integers, then the conjecture gives the number of n ≤X such that all of the
+shifts n + h1, . . . , n + hm are prime as
+(1.2)
+# {n ≤X such that n + hj all prime} ∼S(H)
+X
+(ln X)m ,
+where
+(1.3)
+S(H) =
+Y
+p
+
+1 −1
+p
+−m 
+1 −νH(p)
+p
+
+(1.4)
+νH(p) = # {distinct hj mod p} .
+When m = 1, say H = {h1}, (1.2) simply counts primes less than X (or, strictly,
+less than X −h1). In (1.3), since every ν(p) is 1, one has S(H) = 1. Thus the case
+m = 1 is the prime number theorem, and it is the only one so far to be proved.
+Gallagher used all values of m in order to compare the empirical moments of primes
+in short intervals with the moments of the Poisson distribution.
+Our study of the structure factor ultimately leads to an equivalent formulation
+of the case m = 2. The Hardy-Littlewood constant S(H) can be understood as
+a correction to the prediction one would make by imagining that all of the shifts
+n + hj are prime independently with probability 1/ ln(X); see [6] and, for this and
+other senses in which the random model fails, [38]. To summarize the interpretation,
+note that, for each p, (1 −1/p)m is the naive chance that each of the shifts would
+be indivisible by p. However, these constraints are not independent, and νH(p) is
+exactly the number of residue classes modulo p which n must avoid or else one of
+the numbers n+hj would have p as a factor. Thus S(H) cancels the incorrect guess
+(1 −1/p)m and replaces it with the correct (p −ν(H))/p. The argument advanced
+by Hardy-Littlewood, which we outline in Appendix A, is however of an altogether
+diﬀerent nature.
+
+
+--- PDF page 3 ---
+HIDDEN MULTISCALE ORDER IN THE PRIMES
+3
+Probabilistic methods to treat the primes have yielded fruitful insights about
+them [15]. Furthermore, there are computationally quick stochastic ways to ﬁnd
+large primes [33, 40, 39, 3, 1]. On the other hand, it is known that primes contain
+unusual patterns, and hence their distribution is not purely random. Chebyshev
+observed (circa 1853) that primes congruent to 3 modulo 4 seem to predominate
+over those congruent to 1. Assuming a generalized Riemann hypothesis, Rubinstein
+and Sarnak [41] exactly characterized this phenomenon and more general related
+results. A computational study on the Goldbach conjecture demonstrates a con-
+nection based on a modulo 3 geometry between the set of even integers and the
+set of primes [29]. In 1934, Vinogradov proved that every suﬃciently large odd
+integer is the sum of three primes [52]. This method has been extended to cover
+many other types of patterns [17, 18, 16, 44]. Recently it has been shown that
+there are inﬁnitely many pairs of primes with some ﬁnite gap [57] and that primes
+with decimal expansion ending in 1 are less likely to be followed by another prime
+ending in 1 [36]. There is numerical evidence for patterns in the distribution of
+gaps between primes when these are divided into congruence families [31, 7, 53].
+The present paper is motivated by certain remarkable properties of the Riemann
+zeta function ζ(s), which is a function of a complex variable s that is intimately
+related to the primes. The zeta function has many diﬀerent representations, one of
+which is the well-known series formula
+(1.5)
+ζ(s) =
+∞
+X
+n=1
+1
+ns ,
+which converges for Re(s) > 1. However, ζ(s) has a unique analytic continuation
+to the entire complex plane, excluding the simple pole at s = 1. According to the
+Riemann hypothesis, the nontrivial zeros of the zeta function lie along the critical
+line s = 1/2+it with t ∈R in the complex plane and hence form a one-dimensional
+point process. The nontrivial zeros tend to get denser the higher on the critical
+line. When the spacings of the zeros are appropriately normalized so that they
+can be treated as a homogeneous point process at unity density, the resulting pair
+correlation function g2(r) takes on the simple form 1 −sin2(πr)/(πr)2 [34]. This
+has consequences for the distribution of the primes in short intervals [35]. The
+corresponding structure factor S(k) [essentially the Fourier transform of g2(r)] s
+given by
+S(k) =
+
+
+
+k
+2π ,
+0 ≤k ≤2π
+1,
+k > 2π.
+(1.6)
+Remarkably, this exactly matches the structure factor of the eigenvalues of a ran-
+dom matrix in the Gaussian unitary ensemble [11, 32, 42]; see Fig. 1.1. We see
+that structure factor goes to zero linearly in k as wavenumber goes to zero and is
+equal to unity for k > 2π. This implies that the normalized Riemann zeros possess
+an unusual type of correlated disorder at large length scales known as hyperuni-
+formity [48, 47]. A hyperuniform point conﬁguration is one in which S(k) tends
+to zero as the wavenumber k tends to zero [48]. In such systems, density ﬂuctua-
+tions are anomalously suppressed at very large length scales, a “hidden” order that
+imposes strong global structural constraints. All structurally perfect crystals and
+quasicrystals are hyperuniform, but typical disordered many-particle systems, in-
+cluding gases, liquids, and glasses, are not. Disordered hyperuniform many-particle
+
+
+--- PDF page 4 ---
+4
+SALVATORE TORQUATO, GE ZHANG, AND MATTHEW DE COURCY-IRELAND
+systems are exotic states of amorphous matter that have attracted considerable
+recent attention [10, 47, 4, 55, 12, 54, 24, 23, 50, 30, 27, 14, 21, 46].
+0
+2
+4
+6
+8
+10
+k
+0
+0.2
+0.4
+0.6
+0.8
+1
+S(k)
+Figure 1.1. Structure factor of the normalized nontrivial zeros
+of the Riemann zeta function as a function of the wavenumber [cf.
+(1.6)]. This is a special case of a hyperuniform point conﬁgura-
+tion [48, 47].
+Because information about the primes can in principle be deduced from informa-
+tion about the nontrivial zeros of the zeta function via explicit formulas [8, 45, 22],
+one might expect the primes to encode hyperuniform correlations seen in the Rie-
+mann zeros. For example, von Mangoldt’s explicit formula for a weighted counting
+function ψ(x) = P
+pn<x ln(p) is given by
+(1.7)
+ψ(x) = x −
+X
+s
+x1/2+iγ
+1
+2 + iγ −1
+2 ln(1 −x−2) −ln(2π),
+for x > 1 and x not a prime or prime power (where ψ(x) would have a jump
+discontinuity).
+Here, 1/2 + iγ denotes a nontrivial zero of ζ(s), meaning that
+it lies in the critical strip 0 < Re(s) < 1.
+Assuming the Riemann Hypothesis,
+γ is real and the zeros thus form a one-dimensional point process. In any case,
+allowing for complex γ, the explicit formula applies unconditionally. The trivial
+zeros −2, −4, −6, . . . contribute ln(1 −x−2). The explicit formula may be thought
+of as a Mellin transform of the prime numbers. The structure factor S(k), which
+is the basis of our investigation, is also a Fourier-type transform of the primes
+(without any weights) but in a more direct sense:
+(1.8)
+S(k) = 1
+N
+
+X
+p
+eikp
+
+2
+where p runs over the primes in the interval [M, M + L], the number of which we
+denote by N. A weighted version of the inner sum, which weights each prime p
+and also its higher powers pl by ln p, has been much studied in connection with the
+circle method (see section 25 of [8], for example). The behavior of S(k) for small
+values of k reﬂects the large-scale correlations between primes.
+
+
+--- PDF page 5 ---
+HIDDEN MULTISCALE ORDER IN THE PRIMES
+5
+1
+2
+3
+k
+1000
+2000
+3000
+4000
+S(k)
+Primes
+Uncorrelated
+Figure 1.2. The structure factor S(k) of the prime numbers for
+M = 1010 + 1 and L = 105 obtained in a separate numerical
+study [56]. It is seen that it contains many well-deﬁned Dirac-delta-
+function like (Bragg-like) peaks of various intensities characterized
+by a type of self-similarity. Included in the ﬁgure is the correspond-
+ing structure factor for the uncorrelated lattice (Poisson) gas on
+the integer lattice, whose intensities are barely perceptible on the
+scale of this ﬁgure.
+In a very recent numerical study [56], we and Martelli examined the pair statistics
+of the primes, especially the structure factor S(k), in an interval M ≤p ≤M + L
+with M and L large such that L/M is a positive constant smaller than unity. The
+simulations strongly suggest that the structure factor exhibits many well-deﬁned
+Dirac-delta-function (Bragg-like) peaks along with a small “diﬀuse” contribution;
+see Fig. 1.2. This means that the primes are characterized by a substantial amount
+of order on many length scales, especially relative to the uncorrelated lattice gas
+(i.e., Poisson distribution of points on the integer lattice) that does not have any
+such peaks; see Sec. 2 for a precise deﬁnition. Motivated by this numerical study, we
+employ analytic number theory to understand rigorously the nature of the primes
+as a point process by quantifying the pair correlation function, structure factor,
+local number variance and a certain scalar order metric. While some of the major
+results were announced in a letter [49], few mathematical details and derivations
+were presented there. Here such details are provided and we also report results that
+are not contained in Ref. [49].
+In Sec. 2, we provide relevant deﬁnitions. In Sec. 3, we analyze the period-
+doubling chain, a simple example of a point process with dense Bragg peaks (Dirac
+delta function) that illustrates the phenomenon of limit-periodicity, which we will
+see applies in a modiﬁed form to the primes. In Sec. 4, we show that the structure
+factor deﬁned in (1.8) is characterized by sharp peaks at certain rational multiples π,
+
+
+--- PDF page 6 ---
+6
+SALVATORE TORQUATO, GE ZHANG, AND MATTHEW DE COURCY-IRELAND
+which become progressively denser as M increases, and negligibly small elsewhere.
+The major result is stated in Proposition 1 and a corresponding corollary. Assuming
+the Hardy-Littlewood conjecture, this gives what we call an eﬀective limit-periodic
+form for the structure factor. In Sec. 5, we show that, in the inﬁnite-size limit, the
+primes in a dyadic interval form a hyperuniform point process of class II (see Propo-
+sition 2). This involves the aforementioned structure factor as well as a cumulative
+version of it, deﬁned by (2.15), and the number variance σ2(R) associated with
+a “window” of length 2R. In Sec. 6, we employ a scalar order metric τ, derived
+from the structure factor, to determine how τ scales with the system size L (see
+Proposition 3) and to identify a transition between large values of τ, when L is
+comparable to M, and small τ in Gallagher’s uncorrelated regime, where L is only
+logarithmic in M. In Sec. 7, we summarize the classiﬁcation of the primes as a
+certain limit-periodic, hyperuniform point process. In Sec. 8, we describe further
+numerical investigations into the size of the structure factor S(k). In Sec. 9, we
+discuss the possibility of reconstructing the primes from the limit-periodic form of
+the inner sum in Eq. (1.8).
+2. Definitions
+A stochastic point process in a set X is a collection of points with conﬁgurational
+positions x1, x2, x3 . . . whose distribution is described by a probability measure on
+the set of all possible collections. Each conﬁguration in X satisﬁes two regularity
+conditions: (i) there are no multiple points (xi̸ = xj if i̸ = j) and (ii) each bounded
+subset of X must contain only a ﬁnite number of points. Here we restrict ourselves
+to one-dimensional point processes. The set X can be one-dimensional Euclidean
+space R (continuum systems), discrete systems (e.g., the integer lattice Z), the
+one-dimensional torus T, or discrete systems on T. The latter two cases constitute
+periodic point processes. A particular conﬁguration (realization) of a point process
+in X can formally be characterized by the random variable
+(2.1)
+η(r) =
+X
+i=1
+δ(r −xi)
+called the “local” density at position r, where δ(r) is a d-dimensional Dirac delta
+function. Two particularly important averages are the one-particle and two-particle
+correlation functions, ρ1(r1) and ρ2(r1, r2), respectively. When X is Rd (continuous
+systems), they are deﬁned as follows:
+(2.2)
+ρ1(r1) = ⟨η(r1)⟩,
+(2.3)
+ρ2(r1, r2) = ⟨η(r1)η(r2)⟩−ρ1(r1)δ(r1 −r2),
+where the angular brackets denote an average with respect to the probability mea-
+sure. The random setting when X is R is perfectly general and includes lattices and
+periodic point processes as special cases. A lattice in R is a subgroup consisting
+of the integer linear combinations of vectors that constitute a basis for R. In a
+lattice in R, the space can be geometrically divided into identical regions called
+fundamental cells, each of which contains just one point. In one dimension, there
+is only one lattice, namely, the integer lattice Z. The dual of the integer lattice
+with fundamental-cell spacing a is an integer lattice with spacing 2π/a, which we
+denote by Z∗. A one-dimensional periodic point process (crystal) in R (points in
+
+
+--- PDF page 7 ---
+HIDDEN MULTISCALE ORDER IN THE PRIMES
+7
+T) is obtained by placing a ﬁxed conﬁguration of N points (where N ≥1) within
+a fundamental cell F of the integer lattice, which is then periodically replicated.
+In the special case of statistically homogeneous point processes in R, all of the
+correlation functions are translationally invariant, the ﬁrst two of which are then
+simply given by
+(2.4)
+ρ1(r1) = ρ,
+(2.5)
+ρ2(r1, r2) = ρ2g2(r2 −r1).
+Here the constant ρ is the number density (number of points per unit volume) and
+g2(r) is the pair correlation function. It is useful to introduce the total correlation
+function h(r), which is related to the pair correlation function via
+h(r) ≡g2(r) −1
+(2.6)
+and decays to zero for large |r| in the absence of long-range order.
+Note that
+h(r) = 0 for all r for the translationally invariant Poisson point process.
+The structure factor S(k) is deﬁned as follows:
+(2.7)
+S(k) = 1 + ρ˜h(k),
+where
+(2.8)
+˜h(k) =
+Z
+Rd h(r) exp [−i(k · r)] dr
+is the Fourier transform of h(r) so that
+(2.9)
+h(r) =
+1
+(2π)d
+Z
+Rd
+˜h(k) exp [i(k · r)] dk.
+While S(k) is a nontrivial function for spatially correlated point processes, it is
+identically equal to 1 for all k for a translationally invariant Poisson point process.
+In general, the structure factor of a statistically homogeneous point process can
+be uniquely be decomposed into three contributions [2]:
+(2.10)
+S(k) = S(k)pp + S(k)sc + S(k)ac,
+where S(k)pp is the “pure point” (Dirac-delta masses) part, S(k)sc is the singular-
+continuous part, and S(k)ac is the absolutely-continuous part. In the case of the
+integer lattice, S(k) only consists of the pure-point part. The same is true for a one-
+dimensional quasicrystal, such as the Fibonacci chain that is characterized by the
+golden ratio, except here the Dirac-delta functions are dense [26]. The Fibonacci
+chain is a special case of one-dimensional patterns constructed from substitution
+rules involving algebraic numbers, and limit-periodic chains are closely related pat-
+terns but are characterized by rational numbers [2]. One-dimensional point sets
+generated from substitution rules involving non-Pisot numbers will consist only of
+singular-continuous contributions [5]. In the case of a Poisson point process, the
+only contribution to the structure factor is the absolutely continuous part. In stark
+contrast, we will show that the primes in certain intervals are dominated by a set
+of dense Bragg peaks.
+A hyperuniform statistically homogeneous point process in d-dimensional Eu-
+clidean space Rd is one in which the structure factor S(k) tends to zero as the
+wavenumber k ≡|k| tends to zero, i.e.,
+(2.11)
+lim
+|k|→0 S(k) = 0,
+
+
+--- PDF page 8 ---
+8
+SALVATORE TORQUATO, GE ZHANG, AND MATTHEW DE COURCY-IRELAND
+implying that single scattering of incident radiation at inﬁnite wavelengths is com-
+pletely suppressed. This class of point conﬁgurations includes perfect crystals, a
+large class of perfect quasicrystals [55, 37] and special disordered many-particle sys-
+tems. Observe that the structure-factor deﬁnition (2.7) and the hyperuniformity
+requirement (2.11) dictate that the volume integral of ρh(r) over all space is exactly
+equal to −1, i.e.,
+(2.12)
+ρ
+Z
+Rd h(r)dr = −1,
+which is a direct-space sum rule that a hyperuniform point process must obey. The
+hyperuniformity property can be stated in terms of the the local number variance
+σ2(R) associated within an interval (window) of length 2R for a one-dimensional
+homogeneous point process [48]:
+σ2(R)
+=
+ρ2R
+h
+1 + ρ
+Z
+R
+h(r)α2(r; R)dr
+i
+=
+ρR
+π
+Z
+R
+S(k)˜α2(k; R)dk,
+(2.13)
+where α(r; R) = 1 −r/(2R) for r ≤2R and zero otherwise, and ˜α(k; R) =
+2 sin2(kR)/(kR). A hyperuniform point process is one in which σ2(R) grows more
+slowly than R in the large-R limit. Three classes of hyperuniformity are to be dis-
+tinguished: class I, where σ2(R) is bounded; class II, where σ2(R) is logarithmic in
+R; and class III, where σ2(R) scales as a power R1−α with 0 < α < 1 (or d −α for
+a d-dimensional system) [46]. After integrating by parts, the second line of (2.13)
+leads to an alternative representation of the number variance [37]:
+(2.14)
+σ2(R) = −ρR
+(π)
+Z ∞
+0
+Z(k)∂˜α2(k; R)
+∂k
+dk,
+where
+(2.15)
+Z(K) = 2
+Z K
+0
+S(k)dk
+is the integrated or cumulative intensity function within a “sphere” of radius K of
+the origin in reciprocal space. The quantity Z(k) has advantages over S(k) in the
+characterization of quasicrystals and other point processes with dense Bragg peaks
+[37]. If S(k) tends to 0 as a power kα, then its integral Z(K) will tend to 0 as a
+power one higher, Z(K) ∼Kα+1. Any positive power α > 0 yields hyperuniformity
+and distinguishes the system from a random conﬁguration of Poisson points with
+the same density.
+When X is discrete, such as the integer lattice, it sometimes convenient to use
+the same notation as Eqs. (2.1)-(2.5) such that δ(r −xi) is interpreted to be the
+Kronecker delta δr,xi, which means that η(r) takes either the value 0 or 1, depending
+on whether the site r ∈X is unoccupied (empty) or occupied. In the special case
+of statistically homogeneous point processes, while the deﬁnition (2.6) remains the
+same, relations (2.4) and (2.5) are modiﬁed as follows:
+(2.16)
+ρ1(r1) = f,
+(2.17)
+ρ2(r1, r2) = f 2g2(r2 −r1),
+
+
+--- PDF page 9 ---
+HIDDEN MULTISCALE ORDER IN THE PRIMES
+9
+where f is the occupation fraction (fraction of occupied sites). Similarly, equation
+(2.7) for the structure factor becomes in the discrete setting
+(2.18)
+S(k) = 1 −f + f˜h(k),
+where ˜h(k) is the discrete Fourier transform
+(2.19)
+˜h(k) =
+X
+r̸=0,r∈X
+h(r) exp [−i(k · r)] ,
+where h(r) = g2(r) −1. Note that 1 −f is the structure factor of the uncorrelated
+lattice gas, which is a stochastic point process in X in which the occupation of
+each site is a constant probability f, independent of any other other site. While
+the Fourier-space hyperuniformity condition for discrete X is still given by relation
+(2.11), the corresponding direct-space condition
+(2.20)
+X
+r̸=0,r∈X
+h(r) = f −1
+f
+.
+The relation between the local number variance σ2(R) and the structure factor
+S(k) is unchanged from Eq. (2.13). It is noteworthy that the sum rule (2.20) is
+a condition for hyperuniformity in the grand-canonical (open-system) ensemble in
+which the number of particles ﬂuctuates around some average value; see Refs. [48]
+and [46] for details in the continuous-space setting.
+For a system in which the
+number of particles is ﬁxed, the sum rule still applies but it is satisﬁed whether the
+system is hyperuniform or not.
+For a single periodic point conﬁguration of N points within F, speciﬁed by its
+local density η(r) [cf. (2.1)], it is useful to introduce the complex collective density
+variable ˜η(k), which is simply the Fourier transform of η(r), i.e.,
+(2.21)
+˜η(k) =
+N
+X
+j=1
+exp(−ik · rj).
+This quantity is directly linked to the scattering intensity S(k) deﬁned as
+(2.22)
+S(k) = |˜η(k)|2
+N
+,
+which is a nonnegative real function with inversion-symmetry, i.e.,
+(2.23)
+S(k) = S(−k)
+that obeys the bounds
+(2.24)
+0 ≤S(k) ≤N
+(k̸ = 0)
+with S(0) = N. For a single periodic conﬁguration with a ﬁnite number of N
+points within a fundamental cell F, the scattering intensity S(k) is identical to the
+structure factor S(k) [cf. (2.7)], except the latter excludes k = 0 (forward scatter-
+ing). In general, whether they remain equal in the inﬁnite-system limit depends
+on the ergodicity of the process, but this issue does not aﬀect our analysis of the
+primes, and so we will simply take Eq.(1.8) to be the deﬁnition of the structure fac-
+tor. Importantly, the deﬁnition of hyperuniformity excludes the forward scattering
+contribution, which is implicit in (2.11).
+
+
+--- PDF page 10 ---
+10
+SALVATORE TORQUATO, GE ZHANG, AND MATTHEW DE COURCY-IRELAND
+A useful scalar positive order metric that is capable of capturing the degree of
+translational order across length scales is the τ order metric [50]. For a statistically
+homogeneous point process in Rd at number density ρ, it is deﬁned by
+τ
+≡
+1
+Dd
+Z
+Rd[g2(r) −1]2dr
+(2.25)
+=
+1
+(2π)dDd
+Z
+Rd[S(k) −1]2dk,
+(2.26)
+where D is some characteristic length scale. A convenient choice is D = ρ−1/d.
+For a Poisson point process in Rd, τ = 0 because g2(r) −1 is zero for all r. Thus,
+a deviation of τ from zero measures translational order with respect to the fully
+uncorrelated case. For example, for the Riemann zeta zeros, τ = 2/3, assuming
+Montgomery’s pair correlation conjecture or, equivalently, the corresponding struc-
+ture factor (1.6), which reﬂects the disordered hyperuniformity of the point process.
+For any periodic point process in which there are a ﬁnite number of points within
+the fundamental cell F, τ is unbounded because the integrals are carried out over
+all space. For this reason, one can employ a modiﬁed version of τ by carrying out
+the integral in direct space or reciprocal space over appropriate subsets of Rd, in
+which case the equality in Eq. (2.26) no longer applies.
+The discrete-setting counterpart of the order metric τ deﬁned in (2.26) in which
+X is a subset of Z on the torus T in which the fundamental cell has length L is
+given by
+τ
+≡
+Ns−1
+X
+j=1
+f 2[g2(2j) −1]2
+(2.27)
+=
+1
+Ns
+Ns−1
+X
+j=1
+
+S
+ jπ
+Ns
+
+−(1 −f)
+2
+,
+(2.28)
+where Ns is the number of lattice sites within the fundamental cell and N is the
+number of occupied sites.
+Strictly speaking, the quantities g2(r) and S(k) are
+ensemble averages. In the case of an uncorrelated lattice gas, S = 1 −f in the
+inﬁnite-system-size limit so that τ = 0. The corresponding expression in the discrete
+setting for a single conﬁguration in any space dimension was presented and applied
+in Ref.
+[9].
+Here g2(r) and S(k) should be interpreted to come from a single
+conﬁguration. Analysis of the primes in some ﬁxed interval requires the use of this
+single-conﬁguration variant of τ, which we will employ. Note that τ for a single
+conﬁguration of an uncorrelated lattice gas is given by (1 −f)2 (not zero) in the
+inﬁnite-system-size limit.
+3. An Illustrative Example: The Period-Doubling Chain
+The spatial distribution of the primes shares some features with limit-periodic
+point sets, so we discuss a model example in detail. Consider two types of intervals
+(“tiles” or “letters”): a and b. The period-doubling chain is deﬁned by the following
+iterative substitution rule: a →ab and b →aa [2]. In the inﬁnite-size limit, this
+constitutes a point process on Z in which a subset of sites are occupied by a’s and
+the remaining sites are occupied by b’s. The locations of the b’s are given by a
+superposition of arithmetic progressions 2 + 4j, 8 + 16j, 32 + 64j, with a factor of
+4 from one to the next. Thus the inﬁnite-size limit is a union of periodic systems,
+
+
+--- PDF page 11 ---
+HIDDEN MULTISCALE ORDER IN THE PRIMES
+11
+which is termed limit-periodic. The limiting densities of a and b sites are 2/3 and
+1/3, respectively. The structure factor associated with the a’s is given by
+(3.1)
+S(k) = 4π
+3
+ ∞
+X
+m=1
+δ(k −2πm) +
+∞
+X
+n=1
+∞
+X
+m=1
+2−2nδ
+
+k −(2m −1)π
+2n−1
+!
+assuming unit lattice spacing. This is obtained by squaring Eq. (12) in Ref. [2],
+multiplying it by 2π/f, and then rescaling the function by 2π.
+The factor 2π
+accounts for diﬀerences in the deﬁnition of the Fourier transform. Thus, we have a
+dense set of Dirac-delta-function peaks, one for each dyadic rational (2m−1)/2n−1;
+see Fig. 3.1. These peaks at certain rational numbers arbitrarily close to 0 are
+a feature shared by this example and the prime numbers. Figure 3.1 depicts the
+structure factor of the period-doubling chain.
+0
+1
+2
+3
+k
+1000
+2000
+3000
+4000
+S(k)
+Figure 3.1. Structure factor of the period-doubling chain as ob-
+tained from formula (3.1) with n = 20. Note the self-similarity in
+the intensities and locations of the peaks. The height of the peak
+at k = π is larger than shown on the scale of this ﬁgure.
+Substitution of this expression (3.1) for the structure factor into relation (2.13)
+yields the local number variance for the period-doubling chain:
+(3.2)
+σ2(R) =
+8
+9π2
+ ∞
+X
+m=1
+sin2(2mπR)
+m2
++
+∞
+X
+n=1
+∞
+X
+m=1
+sin2((2m −1)πR/2n−1)
+(2m −1)2
+!
+.
+The ﬁrst term in (3.2) is a periodic function R(1 −2R)/9 with period 1/2 and the
+second term is a superposition of periodized “triangle” functions with heights 1/9
+and bases 1, 2, 4, · · · .. Together this results in a number variance that grows loga-
+rithmically in R; see Fig. 3.2. Therefore, the period-doubling chain is hyperuniform
+of class II.
+Having established that the period-doubling chain is hyperuniform, we now want
+to determine how the structure factor S(k) behaves in the vicinity of the origin. The
+structure factor S(k) is not a continuous function because there are dense Bragg
+peaks arbitrarily close to 0, so we do not have S(k) →0 as k →0 in the usual
+sense. We follow the practice of Ref. [37] in such instances and pass to a cumulative
+version of the structure factor, Z(K), deﬁned by (2.15). This integral simply adds
+
+
+--- PDF page 12 ---
+12
+SALVATORE TORQUATO, GE ZHANG, AND MATTHEW DE COURCY-IRELAND
+1
+1000
+1e+06
+1e+09
+R
+0
+0.5
+1
+1.5
+2
+2.5
+3
+σ
+2(R)
+Figure 3.2. Local number variance of the period-doubling chain
+as computed from the explicit formula (3.2) with n = 20.
+the weights of the δ peaks up to position K. In order to have a peak (2m−1)π/2n−1
+within the range of integration, n must be relatively large:
+(3.3) ∃m 2m −1
+2n−1 π < K ⇐⇒2n−1 > π/K ⇐⇒n > log2(π/K) + 1 = log2(2π/K),
+or else there are no integers m in the necessary interval. We have an explicit formula
+for the tail of a geometric series:
+(3.4)
+X
+n>C
+bn = b⌈C⌉
+1
+1 −b
+where ⌈C⌉denotes the least integer greater than C (and, in particular, C + 1 in
+case C is already an integer). Using this to sum the series in Z(K) leads to an
+explicit formula
+Z(K) = 2
+Z K
+0
+S(k)dk = 8π
+3
+X
+n>log2(2π/K)
+2−2n
+1
+2 + 2n−2 K
+π
+
+(3.5)
+= 8π
+3
+X
+n>log2(2π/K)
+2−2n
+1
+2 + 2n−2 K
+π +
+1
+2 + 2n−2 K
+π
+
+= 8π
+3
+
+4
+32−2⌈log2(2π/K)⌉+ 1
+2
+K
+π 2−⌈log2(2π/K)⌉+
+X
+n>log2(2π/K)
+2−2n
+1
+2 + 2n−2 K
+π
+
+
+where the braces {·} denote fractional part. Taking into account the jump discon-
+tinuities when K/π crosses a dyadic rational shows that
+(3.6)
+1
+6π K2 ≤Z(K) ≤1
+2π K2.
+Figure 3.3 shows the function Z(k) and the aforementioned upper and lower bounds.
+Thus Z(K) is bounded between two multiples of K2, with a self-similar staircase-
+like behaviour in between.
+Using these bounds and relation (2.14), we get the
+
+
+--- PDF page 13 ---
+HIDDEN MULTISCALE ORDER IN THE PRIMES
+13
+following corresponding asymptotic bounds on the number variance σ2(R) in the
+limit R →∞:
+(3.7)
+4
+9π2 ln(R) ≤σ2(R) ≤
+4
+3π2 ln(R).
+This implies that the period-doubling chain falls within class II of hyperuniform
+systems with a structure factor that eﬀectively behaves as S(k) ∼k as k →0
+[46]. These asymptotic bounds closely match the upper and lower envelopes of the
+ﬂuctuating number variance function plotted in Fig. 3.2.
+2
+4
+6
+k
+2
+4
+6
+Z(k)
+Z(k)
+k
+2/2π
+k
+2/6π
+Figure 3.3. The cumulative intensity function Z(k) of the period-
+doubling chain as obtained from formula (3.5) with n = 20. The
+upper and lower bounds given in (3.6) are also indicated in the
+ﬁgure.
+4. Primes in Progressions and Peaks in the Structure Factor
+Here we provide the theoretical basis for the numerical results reported in Ref.
+[56] that shows that the dominant contribution to the structure factor S(k) in an
+interval [M, M + L] (with M and L large, and L/M smaller than unity) consists
+of many well-deﬁned Dirac-delta-function peaks.
+We show that in the inﬁnite-
+system-size limit (M →∞, L/M →β > 0) and after scaling by the density ρ, the
+peaks in the structure factor of the primes will become Dirac delta functions at
+rational numbers with odd, square-free denominators, and hence the small diﬀuse
+part observed numerically in Ref. [56], vanishes in this limit. This major result is
+summarized in the following proposition:
+Proposition 1: The structure factor of the prime numbers, scaled by the the density
+ρ, in an interval M ≤p ≤M + L in the limit such that M →∞, L/M →β > 0 is
+given by
+(4.1)
+lim
+M→∞
+S(k)
+2πρ =
+X
+n
+♭X
+m
+×
+1
+φ(n)2 δ
+
+k −mπ
+n
+
+.
+Here, φ(n) is Euler’s totient, which counts the numbers up to n with no factor in
+common with n [45], the symbol ♭indicates that the sum over n only involves odd,
+
+
+--- PDF page 14 ---
+14
+SALVATORE TORQUATO, GE ZHANG, AND MATTHEW DE COURCY-IRELAND
+square-free values of n and the symbol × indicates that m and n have no common
+factor.
+Remark 1: Since L/M = β is ﬁxed, and in particular M + L is within a constant
+multiple of M, the prime number theorem implies that the density ρ is eﬀectively
+1/ ln(M) throughout the interval. We see that this normalized structure factor of
+the primes (4.1) exhibits dense Bragg peaks at certain rational values of k/π, and
+hence is similar to the structure factor (3.1) of the limit-periodic period-doubling
+chain discussed in Sec. 3. However, there is a fundamental diﬀerence between these
+two systems, to be elaborated on in Sec. 7.
+Remark 2: The interpretation of (4.1) is that S(k)/(2πρ) converges to the sum
+of peaks P
+n
+P
+m φ(n)−2δ(k −πm/n) in the sense that their integrals against test
+functions f(k) are close:
+(4.2)
+1
+2πρ
+Z π
+0
+f(k)S(k)dk ≈
+X
+n
+♭X
+m
+×
+1
+φ(n)2 f(πm/n)
+In particular, consider f(k) = e−irk. For r̸ = 0, this gives a count of how often p
+and p + r are both prime.
+In what follows, we give a derivation of (4.1). Our approach is somewhat diﬀerent
+than the original approach of Hardy and Littlewood, which is outlined in Appendix
+A.
+4.1. Derivation of Proposition 1. Our ﬁrst step is to replace S(k) by another
+sum involving the more convenient weights Λ(n) given by ln(p) when n is a power of
+the prime p, and 0 otherwise. One uses summation by parts to convert the weights,
+and then includes higher powers at essentially no cost. Indeed, if pt < Y with t ≥2,
+then p < Y 1/2. A sum over so few terms introduces an error of order no worse than
+L1/2. The result for the complex density variable ˜η(k) (cf. 2.21) is
+(4.3)
+˜η(k) =
+X
+M<p≤M+L
+eikp =
+1
+ln(M)
+M+L
+X
+n=M+1
+Λ(n)eiαn + O
+
+L
+ln(M)2
+
+.
+Let us take the absolute square and, to bound the error, resort to the trivial bound
+P Λ(n)eiαn ≲L. We divide by ρN and note that ρ ∼1/ ln(M) and N ∼ρL, to
+arrive at
+1
+2πρS(k) =
+1
+2πL
+
+M+L
+X
+n=M+1
+Λ(n)eikn
+
+2
++ O
+ L/ ln(M)2
+.
+We split the integral into arcs M(q, a) = {|α −a/q| < ε} near fractions a/q with
+small denominator q (major arcs), and write m for the rest of the interval (minor
+arcs). The denominator is restricted to q ≤qmax and we choose qmax = ln(L)B,
+with a constant B as large as one pleases. The length ε of each major arc is chosen
+to be ε = ln(L)B/L, and in principle diﬀerent lengths could be adapted to the test
+function f. Let us ﬁrst calculate the contribution from the arcs M(q, a), returning
+later to the discussion of the minor arcs.
+
+
+--- PDF page 15 ---
+HIDDEN MULTISCALE ORDER IN THE PRIMES
+15
+On the major arc M(q, a), even without the Riemann hypothesis, we still have
+the approximation
+(4.4)
+M+L
+X
+n=M+1
+Λ(n)eikn = µ(q)
+φ(q)
+M+L
+X
+n=M+1
+ei(k−2πa/q)n + O
+ Le−c
+√
+L
+This plays the role of Hardy-Littlewood’s approximation to f(x) in Lemma 9 of
+[20]. It follows from p. 147 in [8] or, what is the same, Lemma 3.1 in [51] (p.30).
+They take M = 1 but one can of course subtract. We summarize the argument
+from [8] for the reader’s beneﬁt in order to emphasize the role played by primes in
+arithmetic progression.
+The basic idea is to decompose with respect to Dirichlet characters modulo
+q. These are functions χ(n) deﬁned for integer values of n and characterized by
+the properties of periodicity and multiplicativity, namely χ(n + q) = χ(n) and
+χ(ab) = χ(a)χ(b).
+They are the natural harmonics to use in a situation with
+period q that preserves multiplicative structure, such as remainders after division
+by q. One character χ0 is distinguished, given by χ0(n) = 1 for gcd(n, q) = 1 and
+χ0(n) = 0 in case gcd(n, q) > 1. As a rule of thumb, χ0 provides the main term
+and we must endeavor to show that the contributions from other characters χ are
+negligible. The phase e(an/q) can be expanded as a sum over Dirichlet characters
+χ modulo q. Assuming gcd(an, q) = 1, we have
+(4.5)
+e(an/q) =
+1
+φ(q)
+X
+χ
+G(χ)χ(ap).
+The sum is over all Dirichlet characters modulo q. If gcd(an, q) > 1, then the sum
+is 0. We recommend [8] for the theory of Dirichlet characters as well as the Gauss
+sum G(χ). By deﬁnition,
+(4.6)
+G(χ) =
+q
+X
+m=1
+χ(m)e2πim/q,
+and it is important to note that |G(χ)| ≤q1/2 while G(χ0) = µ(q) is the M¨obius
+function. Since n is a prime power and a has no factor in common with q, gcd(an, q) =
+1 does hold unless n is a power of a prime dividing q. Factoring q as q = p1p2 · · · pw ≥
+2w shows that there are at most ln(q) primes dividing q. For each such p, a prime
+power n = pl will be less than M + L for l ≲ln(M). In our range, with a value
+of qmax much less than M, we thus have gcd(an, q) = 1 except for at most ln(M)2
+terms n. With an error no worse than a power of ln(M), we may thus ignore these
+exceptions, proceeding as if (4.5) held for all n. Write α = k/π = a/q + t and
+e(z) = e2πiz for convenience. Summing over n gives
+(4.7)
+M+L
+X
+n=M+1
+e(αn)Λ(n) =
+1
+φ(q)
+X
+χ
+τ(χ)χ(a)
+M+L
+X
+n=M+1
+e(nt)χ(n)Λ(n).
+Summing by parts, we have
+(4.8)
+X
+n≤Y
+e(nt)χ(n)Λ(n) = e(Y t)ψ(Y, χ) −2πit
+Z Y
+1
+e(ut)ψ(u, χ)du,
+
+
+--- PDF page 16 ---
+16
+SALVATORE TORQUATO, GE ZHANG, AND MATTHEW DE COURCY-IRELAND
+where, for an upper limit u and a character χ to modulus q,
+(4.9)
+ψ(u, χ) =
+X
+n<u
+Λ(n)χ(n).
+By the prime number theorem in progressions (p.
+125, 132 of [8]), there is a
+positive c > 0 such that for all characters to moduli q ≤ln(L)B, ψ(u, χ0) =
+u + O
+ exp(−c
+p
+ln(u)
+
+while for nontrivial χ, ψ(u, χ) = O
+ exp(−c
+p
+ln(u))
+
+. This
+leads to the error term stated in (4.4) (and the Riemann hypothesis would imply
+an estimate for an even larger range of q).
+Summing the geometric series, we have
+(4.10)
+
+M+L
+X
+n=M+1
+e(nt)
+
+2
+= 1 −cos(2πtL)
+1 −cos(2πt) =
+sin(πLt)
+sin(πt)
+2
+.
+Note that ec√
+ln(L) is much larger than ln(L)b = eb ln ln L for any positive values of a
+and b. Thus the errors from using the prime number theorem are smaller than the
+error L/ ln(M)2 that we have already exposed ourselves to through summation by
+parts. Therefore, the structure factor in the vicinity of a particular peak location
+k for some a and q and suﬃciently small t is given by
+(4.11)
+1
+2πρS(k) = µ(q)2
+φ(q)2
+1
+2πL
+sin(πLt)
+sin(πt)
+2
++ O
+ L/ ln(M)2
+.
+In the limit that t tends to zero faster than L goes to inﬁnity, and M →∞such
+that L/M remains ﬁnite, this formula with q = 2n and a = m yields the limiting
+form (4.1) of Proposition 1 with dense Bragg peaks.
+Corollary: For ﬁnite but large N, the structure factor at a rational value of k/π is
+given by
+(4.12)
+S(πm/n) ∼
+N
+φ(2n)2 µ(2n)2.
+This formula follows immediately from (4.11). The M¨obius function µ(n) [45] ap-
+pears here because µ2(2n) is one whenever 2n is square-free and zero otherwise.
+Also, φ(n) = φ(2n) if n is odd. We will show below that this formula is in excellent
+agreement with the numerical results reported in Ref. [56].
+Now we provide strong arguments to demonstrate that the structure factor is
+negligibly small at the irrationals in the inﬁnite-system-size limit. We recall Fej´er’s
+theorem that for a continous, periodic function f, we have uniform convergence
+(4.13)
+1
+2π
+Z π
+−π
+f(x −t) 1
+L
+sin(Lt/2)
+sin(t/2)
+2
+dt →f(x)
+as L →∞.
+Assuming ε is not too small, the bulk of the integral comes from |t| < ε. Indeed,
+Z 1−ε
+ε
+f(a/q+t) 1
+L
+sin(πLt)
+sin(πt)
+2
+dt ≤2∥f∥∞
+L
+Z 1/2
+ε
+dt
+sin(πt)2 = 2∥f∥∞
+Lπ
+cot(πε) ≲∥f∥∞
+Lε
+This implies that the integral over M(q, a) converges to f(a/q) as L →∞, provided
+Lε →∞. This is the case, for example, with our choice ε = log(L)B/L for any
+
+
+--- PDF page 17 ---
+HIDDEN MULTISCALE ORDER IN THE PRIMES
+17
+power B. Note that
+1
+L
+Z 1
+0
+sin(πLt)
+sin(πt)
+2
+dt = 1.
+This allows us to write
+Z 1
+0
+f(a/q + t) 1
+L
+sin(πLt)
+sin(πt)
+2
+dt = f(a/q) +
+Z 1
+0
+ f(a/q + t) −f(a/q)
+ sin(πLt)
+sin(πt)
+2 1
+Ldt
+= f(a/q) +
+Z ε
+−ε
+ f(a/q + t) −f(a/q)
+ sin(πLt)
+sin(πt)
+2 1
+Ldt + O
+∥f∥∞
+Lε
+
+Suppose that f has modulus of continuity ω, meaning that |f(x) −f(y)| ≤ω(ε)
+whenever |x −y| ≤ε. For example, if f has continuous derivatives of order up to
+m, then ω(ε) = ∥f∥Cmεm is a valid modulus of continuity for f. Using once more
+the fact that the integral of the Fej´er kernel is 1, we have
+Z 1
+0
+f(a/q + t) 1
+L
+sin(πLt)
+sin(πt)
+2
+dt = f(a/q) + O
+
+ω(ε) + ∥f∥∞
+Lε
+
+Dividing the interval [0, 1] into the major arcs M(a, q) for q ≤qmax together with
+the remaining minor arcs m, and summing the error made in Fej´er’s theorem over
+q ≤qmax, we get
+Z 1
+0
+f(α) 1
+L
+
+X
+X<n<Y
+e(nα)Λ(n)
+
+2
+dα =
+X
+q
+X
+a
+× µ(q)2
+φ(q)2 f
+ a
+q
+
++ O
+ ωf(ε) + ∥f∥∞
+Lε
+
+ln(qmax)
+
++ 1
+L
+Z
+m
+f(α)
+
+X
+X<n<Y
+e(nα)Λ(n)
+
+2
+dα
+Note that µ(q)2 is simply 1 or 0 according to whether q is squarefree, so the sum is
+restricted to squarefree q. This agrees with the sum of δ functions in our limiting
+form (4.1). We assume that f is smooth enough to have ωf(ε) ln(qmax) →0, where
+ǫ = ln(L)B/L = qmax/L. For example, this is the case if f is C1 or even just H¨older
+continuous with any exponent α, since εα ln(qmax) →0. In particular, one may
+take f(k) = eikr for the application to prime pairs. Likewise, ln(qmax)/Lε →0.
+Therefore, assuming the integral over m is negligible, we expect that
+(4.14)
+Z 1
+0
+f(α) 1
+L
+
+M+L
+X
+n=M+1
+e(nα)Λ(n)
+
+2
+dα ≈
+X
+q
+X
+a
+µ(q)2
+φ(q)2 f(a/q).
+Let us reiterate that proving that the minor arcs contribute less than the major arcs
+is a signiﬁcant challenge, which we have not solved. Nevertheless, the analysis is
+very suggestive, and the limiting form (4.1) is also supported by numerical results,
+as we now illustrate.
+Figure 4.1 compares the prediction of formula (4.12) for the structure factor
+of the primes for M = 1010 + 1, L = 2.23 × 108 and nmax = 100 ln(M) to the
+corresponding numerical results reported in Ref.
+[56].
+Agreement between the
+analytical and numerical results is excellent. The structure factor contains many
+well-deﬁned Bragg-like peaks of various intensities characterized by a type of self-
+similarity. This is explained by the fact that φ(n1n2) = φ(n1)φ(n2) for relatively
+prime n1 and n2, so that rescaling preserves the relative heights of the peaks given
+by Eq. (4.1).
+
+
+--- PDF page 18 ---
+18
+SALVATORE TORQUATO, GE ZHANG, AND MATTHEW DE COURCY-IRELAND
+0
+1
+2
+3
+k
+2x10
+6
+1x10
+6
+3x10
+6
+S(k)
+Analytical
+Numerical
+Figure 4.1. Structure factor for the primes as a function of k (in
+units of the integer lattice spacing) in the interval [M, M + L), as
+predicted from formula (4.12) for M = 1010 + 1, L = 2.23 × 108
+and nmax = 100 ln(M). This shows many peaks with a type of
+self-similarity described in the main body of the text and is seen
+to be in excellent agreement with the corresponding numerically
+computed structure factor obtained in Ref. [56].
+4.2. Pair Correlation Function. We now obtain the pair correlation function
+g2(r) of the primes via the limiting form of the structure factor (4.1) by performing
+the inverse Fourier transform of S(k) −1 ≡ρ˜h(k) using (2.9), where ˜h(k) is the
+Fourier transform of h(r) ≡g2(r) −1 for r̸ = 0:
+(4.15)
+g2(r) = 1 +
+X
+n
+♭
+1
+φ2(n)
+X
+m
+×
+exp(rmπi/n).
+Recall that the pair correlation function is deﬁned such that fg2(r) gives the con-
+ditional probability that, assuming p is prime, so is p + r. Because the density of
+the primes is 1/ ln(M), the occupation fraction is f = 2/ ln(M), and the density of
+prime pairs with separation r [cf. (2.5)] is
+ρ(r) = #{p ∈[M, M + L] ; p, p + r prime}
+L
+= f 2g2(r)
+2
+=
+2
+(ln M)2
+"
+1 +
+X
+n
+♭
+1
+φ2(n)
+X
+m
+×
+exp(rmπi/n)
+#
+.
+(4.16)
+From (1.2) and (4.16), we see that expression (4.15) for g2(r) for distinct values of
+r = 2, 4, 6, . . . is simply a diﬀerent representation of the Hardy-Littlewood constant
+S(H), given by (1.3), for the case m = 2 so that H = {0, r}. Thus, (4.1) implies
+
+
+--- PDF page 19 ---
+HIDDEN MULTISCALE ORDER IN THE PRIMES
+19
+the Hardy-Littlewood conjecture on prime pairs by taking the test function f(k)
+of (4.2) to be eikr. Conversely, if the Hardy-Littlewood conjecture holds for every
+r, then one knows (4.1) for exponential functions eirk and one can deduce it for
+other functions f(k) by Fourier expansion. The limiting form for S(k) is thus an
+equivalent formulation of the Hardy-Littlewood conjecture. As such, we certainly
+do not have a proof of it to oﬀer here.
+5. Hyperuniformity
+Proposition 2: The primes in the inﬁnite-system-size limit such that M →∞,
+L/M →β > 0 form a hyperuniform point process of class II.
+Proof: As in the period-doubling chain, to determine whether the primes are hyper-
+uniform, we ﬁrst determine the cumulative intensity Z(K) deﬁned by (2.15). Using
+this relation and (4.1), we ﬁnd that this quantity
+(5.1)
+lim
+M→∞
+Z(K)
+2πρ
+= 2
+X
+n
+♭X
+πm
+n <K
+×
+1
+φ(n)2 .
+Given a cutoﬀso that only values cN count as peaks in the ﬁnite-system structure
+factor, the denominator n does not exceed
+p
+1/c. On the other hand, n must be
+large enough for there to be a peak mπ/n less than K:
+(5.2)
+π
+K ≤n ≤
+r
+1
+c = nmax.
+In particular, the lowest allowable K is π/nmax.
+For the sum over m, note that
+X
+m<cn
+×
+1 = cφ(n) + Oǫ(nǫ),
+Thus the number of m coprime to n is growing regularly: Summing only up to
+cn yields a fraction c of the total φ(n). To see this, we use the M¨obius inversion
+property, namely
+(5.3)
+X
+d|t
+µ(d) =
+(
+1 if t = 1
+0 if t > 1
+to detect the condition gcd(m, n) = 1. This implies that for any c (it will be K/π
+for us, no longer the same as the peak cutoﬀc above)
+X
+m<cn
+×1 =
+X
+m<cn
+X
+d| gcd(m,n)
+µ(d) =
+X
+d|n
+X
+b<cn/d
+µ(d) =
+X
+d|n
+µ(d)⌊cn/d⌋.
+Now we write ⌊cn/d⌋= cn/d −{cn/d} in terms of integer part and fractional part:
+X
+d|n
+µ(d)⌊cn/d⌋= c
+X
+d|n
+µ(d)n
+d −
+X
+d|n
+µ(d){cn/d}.
+The main term cφ(n) thus comes from the identity
+φ(n) =
+X
+d|n
+µ(d)n
+d .
+The rest is negligible because |µ(d){cn/d}| ≤1 and the number of divisors of n is
+Oǫ(nǫ).
+
+
+--- PDF page 20 ---
+20
+SALVATORE TORQUATO, GE ZHANG, AND MATTHEW DE COURCY-IRELAND
+The consequence is that the cumulative structure factor (5.1) becomes
+(5.4)
+lim
+M→∞
+Z(K)
+2πρ
+= 2
+X
+n
+♭
+1
+φ(n)2
+K
+π φ(n) + Oǫ(nǫ)
+
+To a good approximation for suﬃciently large M, this yields
+Z(K) ≈
+4 K
+ln(M)
+X
+π
+K <n<nmax
+♭
+1
+φ(n) + Oǫ
+ X
+n
+nǫ
+φ(n)2
+!
+(5.5)
+≈
+K
+ln(M)
+
+ln nmax −ln π
+K
+
+(5.6)
+Recall that there is a lower bound on K: K ≥π/nmax. Expanding the function
+Z(K) in (5.6) around this value, taking nmax to be of order ln M, and then taking
+the limit M →∞does lead to hyperuniformity such that Z(K) ∼K2 as K →0.
+Remark: The result Z(K) ∼K2 as K →0 implies that the primes fall within class
+II of hyperuniform systems with a structure factor S(k) that eﬀectively is linear in
+k as k →0 [46], so that the number variance σ2(R) scales logarithmically with R
+in the large-R limit. Figure 5.1 depicts Z(K) for the primes as determined from
+the ﬁrst line of relation (5.6) in which nmax = 10 ln(M).
+0
+0.1
+0.2
+0.3
+k
+0
+0.02
+0.04
+Z(k)
+M=10
+15, L=10
+14, nmax=10ln(M)
+Figure 5.1. The cumulative intensity function Z(k) of the primes
+as obtained from (5.4).
+6. τ Order Metric
+We now study the order metric τ in the discrete setting [c.f. (2.28)] as a function
+of the system size L for the primes and the integer lattice.
+Proposition 3: The order metric τ of the primes as a function of the system size
+L in the considered interval [M, M + L] (when divided by ρ2) obeys the following
+scaling relation:
+(6.1)
+τ/ρ2 ∼cL,
+where c is some constant.
+
+
+--- PDF page 21 ---
+HIDDEN MULTISCALE ORDER IN THE PRIMES
+21
+This dependence of τ on L can be understood in terms of the peaks in the
+structure factor via the deﬁnition (2.28). We have
+(6.2)
+τ = 1
+Ns
+Ns−1
+X
+j=1
+(S(jπ/Ns) −1 + f)2 .
+We have seen how to estimate S(πm/n) at a rational number in lowest terms: If
+the denominator is square-free, there will be a peak of height N/φ(n)2 while, if not,
+the structure factor will be very small. There could be a common factor between j
+and Ns, so let
+(6.3)
+n =
+Ns
+gcd(j, Ns).
+This makes j/Ns = m/n in lowest terms with numerator m = j/ gcd(j, Ns). As-
+sume for simplicity that Ns is square-free so that all of the resulting denominators
+n will be square-free. Then we have
+τ ∼1
+Ns
+X
+n|Ns
+
+N
+φ(n)2 −1
+2
+#{j s.t. Ns/ gcd(j, Ns) = n}
+∼N 2
+Ns
+X
+n|Ns
+1
+φ(n)4 φ(n)
+∼ρ2L
+X
+n|Ns
+1
+φ(n)3 .
+The fact that the last sum is convergent proves the proposition. Alternatively, one
+could use the expression (2.28) for τ and substitute the value predicted by Hardy-
+Littlewood for g2(2j).
+In the case of the integer lattice, τ can be calculated directly from its deﬁnition
+(2.28). Since of the Ns −1 terms in the sum in (2.28), 1/f −1 terms involve S(k)
+at Bragg peak locations, while the remaining terms involved S(k) values away from
+Bragg peaks, we have
+(6.4)
+τ = 1
+Ns
+ 1
+f −1
+
+(N −1 + f)2 +
+
+Ns −1
+f
+
+(0 −1 + f)2
+
+.
+For suﬃciently large systems, the contribution from the second term is negligible,
+and N is much larger than 1 −f, yielding
+(6.5)
+τ ≈1
+Ns
+ 1
+f −1
+
+N 2.
+Plugging in Ns = L/2, f = 2ρ, and N = ρL, one gets
+τ ≈2
+L
+ 1
+2ρ −1
+
+(ρL)2
+= Lρ(1 −2ρ),
+which is consistent with Eq. (6.1) for the primes when the density is ﬁxed.
+We have numerically computed τ for the primes and integer lattice by generating
+such conﬁgurations, sampling for their structure factors, and then computing their
+corresponding values of τ using relation (2.28).
+For the primes, we take M ≈
+108, and therefore f = 2ρ ≈2/ ln(M) ≈0.11. For the integer lattice, we take
+
+
+--- PDF page 22 ---
+22
+SALVATORE TORQUATO, GE ZHANG, AND MATTHEW DE COURCY-IRELAND
+f = 0.1. The constant c is 18.00 for the integer lattice and 0.1674 for the primes.
+These results are plotted in Fig.
+6.1.
+Notice that for a single conﬁguration of
+an uncorrelated lattice-gas, τ does not grow with L and converges in probability
+to a constant of order unity [see discussion under Eq. (2.28)]. This means that
+the primes in these prescribed intervals are substantially more ordered than the
+uncorrelated lattice gas and appreciably less ordered than an integer lattice.
+0
+5×10
+4
+10
+5
+1.5×10
+5
+2×10
+5
+L
+0
+10
+5
+2×10
+5
+3×10
+5
+τ/ρ
+2
+Crystal at f=0.1
+Primes
+Figure 6.1.
+The order metric τ, deﬁned in Eq. (2.28), in the
+discrete setting as a function of the system size L for the primes
+and integer lattice with ﬁlling fraction f = 0.1 obtained by direct
+simulations from Eqs. (2.28) and (6.1).
+Now we study the τ order metric of prime-number conﬁgurations with diﬀerent
+M and L, obtained by computing their structure factors and evaluating (2.28). As
+Fig. 6.2 shows, the constant-τ level curves have the form L ∼ln2(M), i.e., level
+curves appear as quadratic curves in the log plot depicted in Fig. 6.2. This follows
+from the fact that τ is proportional to ρ2L, the density ρ being given by the prime
+number theorem as 1/ ln(M). Thus, L ∼ln2(M) is the boundary between regions
+where primes can be considered to be uncorrelated versus those where they exhibit
+correlations.
+The regime L ∼ln(M)2 marks another important dividing line. Consider the
+Cram´er model where one replaces the number of primes from M to M + L by a
+sum of random variables taking the values 0 and 1 with probabilities chosen to
+match the prime number theorem. A sum of L such random variables will have
+ﬂuctuations on the order of L1/2, by the Central Limit Theorem or by an elementary
+calculation, while the main term is L/ ln(M). Thus, at least for the random model,
+L ∼ln(M)2 is a turning point between short intervals, where L/ ln(M)2 →0 and
+the ﬂuctuations overwhelm the prime number theorem, and longer intervals, where
+L ln(M)2 →∞and the ﬂuctuations can be neglected. Selberg [43], assuming the
+Riemann hypothesis, proved that for L/ ln(M)2 →∞, the number of primes from
+M to M +L is L/ ln(M) as predicted by the prime number theorem, except possibly
+for a sparse sequence of exceptional values of M. One might guess that this holds
+without exception, but Maier proved that there are inﬁnitely many such M [28].
+
+
+--- PDF page 23 ---
+HIDDEN MULTISCALE ORDER IN THE PRIMES
+23
+For any power c > 1, and setting L = ln(M)c, Maier proves
+(6.6)
+lim sup
+M→∞
+N
+L/ ln(M) > 1 > lim inf
+M→∞
+N
+ln(M).
+The behaviour of primes in intervals of this length is thus a signiﬁcant departure
+from the random model. For the uncorrelated regime in which Gallagher’s results
+apply, L ∼ln(M), and τ will diminish as M increases. As L increases, prime-
+number conﬁgurations move from the uncorrelated regime (τ ∼1, L ≤ln2(M)) to
+the eﬀective limit-periodic regime we studied in this paper (τ ∼L, L ∝M), and
+then to the inhomogeneous regime where the density gradient is no longer negligible
+(e.g., if L ∼M 1+ǫ and ǫ > 0.) In this last phase, the number variance σ2(R) grows
+faster than the window volume (i.e., faster than R), which is the diametric opposite
+of hyperuniformity.
+Figure 6.2. Natural logarithm of the order metric τ, deﬁned in
+Eq. (2.28), of prime numbers for 10 < M < 2 × 1010 and 8 < L <
+2 × 104 obtained from numerical simulations.
+7. Classification of the Primes
+Using Eq. (4.1), we have shown that the primes are like a limit-periodic point
+process, i.e., they are characterized by a structure factor S(k) with dense Bragg
+peaks at certain rational values of k/π derived from an inﬁnite union of periodic
+systems in the limit as M →∞with L ∼βM. This is similar to the structure
+
+
+--- PDF page 24 ---
+24
+SALVATORE TORQUATO, GE ZHANG, AND MATTHEW DE COURCY-IRELAND
+factor of the limit-periodic systems; see Sec. 3. However, the primes show an erratic
+pattern of occupied and unoccupied sites, very diﬀerent from the predictable and
+orderly patterns of standard limit–periodic systems. Hence, the primes represent
+the ﬁrst example of a point process that is eﬀectively limit-periodic.
+We have also demonstrated that the primes are hyperuniform of class II. Inter-
+estingly, this is precisely the same hyperuniformity class to which the (normalized)
+zeros of the Riemann zeta function belong. However, the primes are substantially
+more ordered, having dense Bragg peaks instead of a continuous structure factor.
+As a result, one can only claim that S(k) →0 in a cumulative sense, unlike the
+case of the zeros. While the Riemann zeros are disordered and hyperuniform, the
+primes are eﬀectively limit-periodic and hence are characterized by order on all
+length scales. In terms of τ, the primes are substantially more ordered than the
+uncorrelated lattice gas and appreciably less ordered than an integer lattice, but
+similar in order to the period-doubling chain.
+It should not go unnoticed that
+the lack of multiscale order in the Riemann zeros is reﬂected in the fact that τ is
+bounded in the large-L limit. Indeed, assuming Montgomery’s pair correlation con-
+jecture, it converges to the constant 2/3 (which in the continuous setting should be
+compared to τ = 0 for the Poisson point process; see discussion under Eq. (2.26)].
+This value 2/3 is what one ﬁnds by substituting the conjectured form for the struc-
+ture factor (see Fig. 1.1) in the deﬁnition (2.26) of τ in the continuous setting and
+integrating (k/(2π) −1)2 over 0 < k < 2π. In a system with multiscale order, such
+as the primes in dyadic intervals, τ diverges with L.
+The condition that L ∼M, under which we have shown heretofore unanticipated
+order in the primes, is to be contrasted with the regime L ∼ln(M), in which the
+primes follow Gallagher’s uncorrelated behavior. We have also shown that when L
+grows faster than M, the primes enter the inhomogeneous regime where the density
+gradient is no longer negligible and hence where the limit-periodicity breaks down.
+8. Value Distribution of S(k)
+In this section, we study how frequently the structure factor S(k) exceeds a given
+threshold t. Here, we write S(k) for the structure factor of a ﬁnite system of N
+primes M < p < M + L, namely
+(8.1)
+S(k) = 1
+N
+
+X
+p
+eikp
+
+2
+.
+Let
+(8.2)
+λ(t) = 1
+π |{0 ≤k ≤π ; S(k) > t}|
+be the measure of the set where S(k) > t, relative to the total length of the interval
+0 < k < π. We think of λ(t) as a cumulative distribution function (CDF). The
+quantity λ(t) depends on M, not only t, but we suppress this dependence in the
+notation. There is also a related quantity which measures how often S(k) > t while
+excluding forward scattering:
+(8.3)
+λ−(t) =
+
+2π
+L < k < π −2π
+L ; S(k) > t
+ .
+We have
+(8.4)
+λ−(t) ≤λ(t) ≤λ−(t) + 2π/L,
+
+
+--- PDF page 25 ---
+HIDDEN MULTISCALE ORDER IN THE PRIMES
+25
+so the diﬀerence between λ(t) and λ−(t) is negligible in the limit of large L. By
+orthogonality of the exponentials eikp, we have
+(8.5)
+Z π
+0
+S(k)dk = π.
+Since S(k) ≥0, it follows that
+(8.6)
+π =
+Z π
+0
+S(k)dk ≥
+Z
+{S(k)>t}
+S(k)dk ≥tπλ(t).
+Thus we have an upper bound
+(8.7)
+λ(t) ≤1
+t .
+For t > 1, this is an improvement over the trivial bound λ(t) ≤1. For small t, Fig.
+8.1 suggests that λ(t) is close to e−ct for some c > 0. If one imagines S(k) as a
+small, noisy contribution on top of the peaks in its limiting form, this suggests that
+the noise follows an exponential distribution. On the other hand, Fig. 8.2 suggests
+that the upper bound (8.7) is the correct order of magnitude of λ(t) for large t. For
+t on the order of N, the only way to have S(k) > t is for k to be close to a peak.
+This leads to the “heavy-tailed” power-law behavior illustrated in Fig. 8.2.
+0
+1
+2
+3
+t
+0
+0.2
+0.4
+0.6
+0.8
+1
+λ(t)
+M=10
+3
+M=10
+5
+M=10
+10
+Figure 8.1. The measure λ(t) for relatively small range of values
+of the threshold t for several values of M. In all cases, L = 0.1M.
+The curves for diﬀerent values of M converges to an exponential
+curve well before the largest value of M = 1010 is attained. The
+latter case is well described by the exponential exp(−1.77989t).
+
+
+--- PDF page 26 ---
+26
+SALVATORE TORQUATO, GE ZHANG, AND MATTHEW DE COURCY-IRELAND
+0
+200
+400
+600
+800
+1000
+t
+1e-05
+0.0001
+0.001
+0.01
+0.1
+1
+λ(t)
+M=10
+5
+M=10
+8
+M=10
+10
+Figure 8.2. The measure λ(t) for relatively large range of values
+of the threshold t for several values of M. In all cases, L = 0.1M.
+Instead of the exponential curve found in the case shown in Fig.
+8.1, here λ(t) obeys an inverse power law. The curve for M = 1010
+is well ﬁt by the function 0.02174/t, which we see satisﬁes the upper
+bound (8.7).
+9. Reconstruction of the Primes
+It is noteworthy that we not only have an analytical formula for the structure
+factor S(k), which is related to the modulus of the complex density variable ˜η(k),
+deﬁned by (2.21), but also for the phase of ˜η(k). The analytical expression for ˜η(k)
+of the primes enables us to reconstruct, in principle, a prime-number conﬁguration
+within an arbitrary interval [M, M + L] by obtaining the inverse Fourier transform
+of ˜η(k). In this section, we will describe our procedure to reconstruct prime-number
+conﬁgurations and report its accuracy.
+We reconstruct a prime-number conﬁguration in an interval [M, M + L] by the
+following steps:
+(1) Calculate N = (M + L)/ ln(M + L) −M/ ln(M). By the Prime Number
+Theorem, N is the approximate number of primes in this interval.
+(2) Initialize ˜η(k) at all k̸ = 0 to be zero. Set ˜η(0) = N.
+(3) Find all odd square-free numbers n ≤nmax.
+(4) For each n, ﬁnd all integers m such that 0 < m < n and m is co-prime with
+n.
+(5) For each n and m, we need to reconstruct a peak at k = mπ/n. For the
+purpose of reconstructing this peak, the prime-number conﬁguration can
+be treated as a periodic system of period 2n. We then ﬁnd whether each
+number in the ﬁrst period is prime, and calculate
+(9.1)
+C1 = N
+Ns
+n
+φ(n)
+X
+j
+× exp(ik2j),
+
+
+--- PDF page 27 ---
+HIDDEN MULTISCALE ORDER IN THE PRIMES
+27
+which is the contribution to ˜η from the ﬁrst n sites. The index j runs over
+numbers up to N such that gcd(j, N) = 1.
+(6) If L is divisible by n, then the peak at k = mπ/n should have inﬁnitesimal
+width. We therefore increase ˜η(mπ/n) by (L/n)C1, which is the predicted
+value of ˜ρ(mπ/n).
+(7) If L is not divisible by n, then the peak at k = mπ/n should have a ﬁnite
+width. We therefore have to increase ˜η(k) of all k points adjacent to mπ/n
+by
+(9.2)
+˜η(k) = C1
+1 −f ⌊L/2n⌋
+1 −f
+
+,
+where f = exp(−ik2n) is the phase change between the contribution to ˜η
+from the ﬁrst n sites and that from the second n sites. Here, the criteria for
+an “adjacent” k point is that the absolute value of the result from Eq. (9.2)
+is larger than
+√
+N.
+(8) Perform an inverse Fourier transform of ˜η(k) to ﬁnd η(r).
+If we had a completely accurate prediction of ˜η(k), the resulting local density η(r)
+would be exactly one for each prime number and exactly zero for each composite
+number. The predicted ˜η(k) is not completely accurate. A major reason for the
+inaccuracy is that there should be inﬁnitely many peaks, but we only consider a
+ﬁnite number of peaks for which n < nmax. Therefore, the resulting η(r) is not
+exactly zero or one. We ﬁnd N numbers with the highest predicted η(r) and predict
+those numbers to be prime. Thus another source of error is that we always predict
+N primes, whereas the true number of primes may be more or less than the estimate
+from the Prime Number Theorem.
+0
+500
+1000
+1500
+2000
+nmax
+1
+10
+100
+t1 or t2
+M=10
+6, t1
+M=10
+7, t1
+M=10
+8, t1
+M=10
+9, t1
+M=10
+6, t2
+M=10
+7, t2
+M=10
+8, t2
+M=10
+9, t2
+Figure 9.1. Two measures of the accuracy of the predicted prime
+numbers, t1 and t2, deﬁned by (9.3) and (9.4), respectively, versus
+nmax.
+We have performed such reconstructions for L = 510510 and several diﬀerent
+M’s and nmax’s. Let Nc be the number of correctly predicted primes, Ni be the
+number of incorrect predictions, and Nu be the number of un-predicted primes in
+
+
+--- PDF page 28 ---
+28
+SALVATORE TORQUATO, GE ZHANG, AND MATTHEW DE COURCY-IRELAND
+this interval. We deﬁne the following ratios involving these quantities to measure
+the accuracy of the reconstruction procedure:
+(9.3)
+t1 = Nc
+Ni
+,
+(9.4)
+t2 = Nc
+Nu
+.
+These two ratios versus nmax are plotted in Fig. 9.1.
+We see that for smaller
+M’s and larger nmax’s, this reconstruction procedure is highly accurate. When
+M = 106 and nmax = 2000, more than 99% of the predicted prime numbers turn
+out to be correct. Unfortunately, as M increases, the accuracy declines. For any
+M, increasing nmax improves the accuracy, but with additional computational cost.
+We emphasize that an nmax of order ln M already yields nontrivial result. To ﬁnd
+primes between M and 2M naively by trial division, one would need to know the
+primes up to
+√
+M, much larger than our logarithmic nmax. The fact that the ﬁrst
+ln M primes are enough to predict primes in the long and distant interval from
+M to 2M, even imperfectly, is an interesting form of long-range order. Bertrand
+famously postulated that there is always a prime number between M and 2M,
+for any value of M.
+This was proved by Chebyshev using his explicit bounds
+towards the prime number theorem, but it remains a diﬃcult algorithmic problem
+to ﬁnd primes between M and 2M quickly when M is large. Our reconstruction
+procedure does give an algorithm to do so. However, this is not a polynomial-time
+algorithm. The reason is that the Fast Fourier Transform scales linearithmically in
+the number of sites L, whereas the goal would be complexity polynomial in ln(L).
+Step (3) involves testing whether each number up to nmax is square-free, which
+up to logarithmic factors takes O(n3/2
+max) steps (unless we had a faster way to test
+square-free than using trial division up to √n to factor n). Step (4) takes O(n2
+max)
+steps, again up to logarithmic factors, using the Euclidean algorithm to ﬁnd greatest
+common divisors quickly. Step (5) entails checking the primality of n numbers, for
+n up to nmax and computing a sum of length N to ﬁnd C1. The primality testing
+can be done quickly and there is some overlap in the numbers that must be checked
+as n varies. This step takes O(n2
+max + N) operations. In step (7), we have to check
+whether each k = mπ/n with n ≤nmax is “adjacent”, which involves O(n2
+max) cases.
+If nmax is negligible compared to N, then the slowest step is (8), where we perform
+the inverse Fourier transform of ˜η(k). This step scales as O(L ln L). Thus, at a
+computational cost of L ln L operations, we reconstruct the primes with imperfect
+accuracy. One could reconstruct with perfect accuracy by simply testing whether
+each of the L numbers in the interval is prime. Each primality test takes at most on
+the order of ln(M)6 operations for AKS as adapted by Lenstra and Pomerance [25],
+or ln(M)4 assuming the Riemann Hypothesis to run a deterministic Miller-Rabin
+test [33], [40]. Thus our method sacriﬁces accuracy in exchange for a running time
+faster by ln(L)3.
+It is interesting to note that when our reconstruction algorithm incorrectly pre-
+dicts a composite number as prime, the composite number is usually “almost prime”
+in the sense that all of its prime factors are large. For example, our algorithm in-
+correctly predicted 1000733 = 809 × 1237 and 1001423 = 887 × 1129 as primes.
+
+
+--- PDF page 29 ---
+HIDDEN MULTISCALE ORDER IN THE PRIMES
+29
+10. Conclusions and Discussion
+The prime numbers display a range of behaviors depending on the interval under
+consideration. For dyadic intervals [M, M + L] with L comparable to M, we have
+found order across length scales, very diﬀerent from the seeming randomness on
+display for smaller L. However, if L were much larger than M, then one would
+reach the opposite conclusion of a non-hyperuniform system, purely because of the
+density gradient without reference to further properties speciﬁc to the primes. The
+substantial order is reﬂected by the existence of dense Bragg peaks, a consequence
+of the eﬀective limit-periodicity. The order metric τ gives a quantitative sense in
+which the primes are substantially more ordered than the uncorrelated lattice gas
+but less ordered than an integer lattice. When L decreases, τ for the primes in this
+shorter interval becomes closer to that of an uncorrelated system with a transition
+visible at L ∼ln(M)2. But the primes in dyadic intervals are hyperuniform, a fact
+which would seem almost unbelievable without the eﬀective limit-periodic form for
+the structure factor; see Eq. (4.1). Indeed, the primes fall within the same broad
+hyperuniformity class as the Riemann zeta zeros (see Fig. 1.1), but are substan-
+tially more ordered, having dense Bragg peaks instead of a continuous structure
+factor so that, unlike the Riemann zeros, the order metric τ grows with L. These
+peaks are located at rational wavenumbers πm/n with odd, square-free denomina-
+tor n, and were discovered numerically in [56]. They are explained in terms of the
+approximately equal distribution of prime numbers across residue classes modulo
+2n. Assuming the Hardy-Littlewood conjecture on prime pairs, the small “diﬀuse
+part” observed numerically in Ref. [56] is negligible in the inﬁnite-system limit.
+The dense peaks exhibited by the primes are a feature shared with some recently
+studied quasicrystals, some also in class II and others with even smaller density
+ﬂuctuations, but these other examples have peaks located at irrational wavenum-
+bers [37]. The primes are distinctive in being a superposition of periodic systems
+subject to irregularities in the distribution of occupied sites, which we call eﬀective
+limit-periodicity.
+The eﬀective limit-periodic form of the structure factor allows one to predict
+the Hardy-Littlewood constants for the frequency with which p and p + r are both
+prime. Of course, it remains an open problem to prove a lower bound establishing
+that there are inﬁnitely many twin primes. As a more tractable open problem, we
+ask what further patterns can be found by considering three-particle and higher
+statistics, beyond what we could discern from the two-particle statistics S(k) and
+τ. This is related to the full Hardy-Littlewood k-tuples conjecture, going beyond
+the case of k = 2 considered here.
+Since our analytical formula for the complex density variable ˜η(k), deﬁned by
+(2.21), contains phase information, one can employ it to reconstruct a prime-number
+conﬁguration within an interval [M, M + L] with L ∝M by obtaining the inverse
+Fourier transform of ˜η(k). This leads to an algorithm that enables the reconstruc-
+tion of the primes in such intervals with high accuracy provided that nmax is suﬃ-
+ciently large and M is not too large.
+We are grateful to Peter Sarnak, Henry Cohn and Joshua Socolar for valuable
+discussions. This work was supported in part by the National Science Foundation
+under Award No.
+DMR-1714722 and by the Natural Sciences and Engineering
+Research Council of Canada.
+
+
+--- PDF page 30 ---
+30
+SALVATORE TORQUATO, GE ZHANG, AND MATTHEW DE COURCY-IRELAND
+Appendix A. The Circle Method of Hardy-Littlewood
+For purposes of comparing our approach described in Sec. 4 with the original
+approach of Hardy-Littlewood, we review the latter procedure. Their ﬁrst objective
+is Goldbach’s problem of writing a given r as a sum of primes p1+. . .+pl rather than
+as a diﬀerence. Substantially the same analysis applies to the equations p1 +p2 = n
+and p2 −p1 = r. These form an example of what Hardy-Littlewood call conjugate
+problems. Instead of a trigonometric polynomial, their generating function is
+(A.1)
+f(x) =
+X
+p
+ln(p)xp
+where the sum is over all primes, not just those in a ﬁnite interval. For the sum to
+converge, we must have |x| < 1. It is f(x)2 that features in Goldbach’s problem,
+versus |f(x)|2 for prime pairs. The main theorem of [20] is that, assuming a strong
+hypothesis on zeros of Dirichlet L-functions, every suﬃciently large odd number is
+a sum of three primes. One can fairly take this hypothesis to be that all zeros of
+all Dirichlet L-functions lie on the critical line, namely the generalized Riemann
+hypothesis, but Hardy-Littlewood in fact work under the weaker hypothesis of a
+certain zero-free strip. The role of the generalized Riemann hypothesis is to ensure
+that primes are evenly distributed in arithmetic progressions to such large moduli
+as q = √n, which occur in the Farey dissection used by Hardy-Littlewood. In
+the unconditional work of Vinogradov, the denominators grow only as powers of
+ln(n) instead of √n. With or without the Riemann hypothesis, the method fails for
+l = 2, and this is why we do not have a proof of (4.1). The main term obtained by
+Hardy-Littlewood amounts to nl−1, with errors no greater than nl/2+1/4+ǫ in order
+of magnitude. Thus the estimate succeeds if l −1 > l/2 + 1/4, and so for all larger
+l ≥3 but not l = 2.
+The circle method, aptly named, begins with an integral over a circle |x| = R in
+the complex plane:
+1
+2π
+Z 2π
+0
+f(Re−iψ)f(Re−iψ)eirψdψ = Rr X
+p
+apR2p
+where ap = ln(p) ln(p+r) if both p and pr are prime, and ap = 0 otherwise. As R →
+1, this gives a count of the number of prime pairs. Note that f(Reiψ)f(Re−iψ) =
+|f(x)|2. To estimate the integral, Hardy and Littlewood divide the circle into Farey
+arcs. The arc ξa,q consists of those x = Reiψ whose argument lies in a particular
+interval
+2πa
+q
+−θ′
+a,q < ψ < 2πa
+q
++ θa,q.
+The values of θa,q and θ′
+a,q are such that these arcs cover the circle without overlap,
+and the length of ξa,q is of order (qN)−1, N being the last stage to which one carries
+out the Farey dissection. This N is what we call qmax. Writing the radius R in the
+form R = e−1/n, Hardy and Littlewood choose N = ⌊√n⌋. On the arc ξa,q, f(x) is
+approximated by
+(A.2)
+f(x) ≈µ(q)
+φ(q)
+1
+1/n −i(ψ −2πa/q)
+with an estimate on the error given by their Lemma 9 p. 19 [20]. The error is
+essentially the square root of the main term, provided q ≤√n and assuming the
+
+
+--- PDF page 31 ---
+HIDDEN MULTISCALE ORDER IN THE PRIMES
+31
+Riemann hypothesis. Changing variables to u = ψ −2πa/q leads to the simple
+expression
+|f(x)|2 ≈µ(q)2
+φ(q)2
+1
+1/n2 + u2 .
+Integrating over ξa,q then gives
+Z
+ξa,q
+f(Reiψ)f(Re−iψ)eirψdψ ≈µ(q)2
+φ(q)2 e2πiar/q
+Z θa,q
+−θ′a,q
+eiru
+u2 + 1/n2 du
+For large n, we may allow the further approximation that
+Z θ
+θ′
+eiru
+u2 + 1/n2 du = n
+Z nθ
+−nθ′
+eiv(r/n)
+v2 + 1 dv ∼πn.
+The factor π is obtained by replacing the integral with
+R ∞
+−∞(v2 +1)−1dv. Note that
+θ and θ′ are of order (qN)−1 ∼q−1n−1/2, so that nθ ≍q−1√n →∞, while the
+exponential eivr/n is close to 1 for n large,
+Combining all of the arcs ξa,q such that q ≤√n and a ≤q, with no common
+factor between a and q, we ﬁnd that
+Rr X
+p
+apR2p ∼1
+2π
+X
+q
+X
+a
+µ(q)2
+φ(q)2 e2πiar/qπn = n
+2 S2
+To write this in terms of R = e−1/n, note that 1−R2 = 1−e−2/n ∼2/n. Therefore
+X
+p
+apR2p ∼
+1
+1 −R2 S2.
+Hardy and Littlewood employ a Tauberian argument to deduce from this behaviour
+as R →1 that
+X
+p<n
+ap ∼nS2.
+The ability to skip this step is one of the technical advantages of working with a
+ﬁnite generating function such as S(k) instead of |f(x)|2. Finally, removing the
+logarithmic weights in ap, Hardy and Littlewood formulate their Conjecture B: As
+n →∞, the number of prime pairs p, p + r less than n is asymptotic to
+n
+ln(n)2 2C2
+Y
+p|r
+p −1
+p −2
+
+where C2 is their twin primes constant:
+C2 =
+Y
+p>2
+(1 −1/(p −1)2).
+Hardy and Littlewood rewrite S2 as a product over primes using their Lemma 12
+“Summation of the singular series” (p. 27 of [20]):
+∞
+X
+q=1
+µ(q)
+φ(q)
+l
+cq(−r) = 2
+∞
+Y̟
+=3
+
+1 −
+(−1)l
+(̟
+−1)l
+ Y
+p|r
+(p −1)l + (−1)l(p −1)
+(p −1)l −(−1)l
+
+assuming r and l are of the same parity, whereas the sum is 0 if r and l have
+opposite parity. In this notation, p refers to an odd prime divisor of r while̟
+is
+
+
+--- PDF page 32 ---
+32
+SALVATORE TORQUATO, GE ZHANG, AND MATTHEW DE COURCY-IRELAND
+any odd prime, and cq(−r) is Ramanujan’s sum P
+a e−2πiar/q over a modulo q with
+no factor in common with q. When l = 2, the product over primes becomes
+2
+∞
+Y̟
+=3
+
+1 −
+1
+(̟
+−1)2
+ Y
+p|r
+(p −1)2 + (p −1)
+(p −1)2 −1
+
+= 2C2
+Y
+p|r
+p −1
+p −2
+
+hence the value in Conjecture B. To see why this inﬁnite product agrees with the
+sum, imagine multiplying together several terms from the product. Note that all
+primes p and̟
+in this formula are odd, the factor 2 having already accounted for
+p = 2, which divides r. Each p dividing r introduces a factor (1 + 1/(p −1)), since
+we must incorporate the factor in C2 from̟
+= p. For p not dividing r, the factor
+is (1−1/(p−1)2). The result is a sum over all n = p1 · · · pt, namely odd square-free
+numbers.
+References
+1. A. O. L. Atkin and F. Morain, Elliptic curves and primality proving, Math. Computation 61
+(1993), no. 203, 29–68.
+2. M. Baake and U. Grimm, Diﬀraction of limit periodic point sets, Phil. Mag. 91 (2011), 2661–
+2670.
+3. R. Baillie and S. S. Wagstaﬀ, Lucas pseudoprimes, Math. Computation 35 (1980), no. 152,
+1391–1417.
+4. R. D. Batten, F. H. Stillinger, and S. Torquato, Classical disordered ground states: Super-ideal
+gases, and stealth and equi-luminous materials, J. Appl. Phys. 104 (2008), 033504.
+5. E. Bombieri and J. E. Taylor, Which distributions of matter diﬀract? An initial investigation,
+J. de Phys. Coll. 47 (1986), C3–19.
+6. Lord Cherwell, On the distribution of the intervals between prime numbers, Quart. J. Math.
+17 (1946), 46–62.
+7. S. R. Dahmen, S. D. Prado, and T. Stuermer-Daitx, Similarity in the statistics of prime
+numbers, Physica A 296 (2001), 523–528.
+8. H. Davenport, Multiplicative number theory, vol. 74, Springer, New York, 1980.
+9. R. A. DiStasio, G. Zhang, F. H. Stillinger, and S. Torquato, Rational design of stealthy
+hyperuniform patterns with tunable order, Phys. Rev. E 97 (2018), 023311.
+10. A. Donev, F. H. Stillinger, and S. Torquato, Unexpected density ﬂuctuations in disordered
+jammed hard-sphere packings, Phys. Rev. Lett. 95 (2005), 090604.
+11. F. J. Dyson, Statistical theory of the energy levels of complex systems. I, J. Math. Phys. 3
+(1962), 140–156.
+12. M. Florescu, S. Torquato, and P. J. Steinhardt, Designer disordered materials with large
+complete photonic band gaps, Proc. Nat. Acad. Sci. 106 (2009), 20658–20663.
+13. P. X. Gallagher, On the distribution of primes in short intervals, Mathematika 23 (1976),
+4–9.
+14. T. Goldfriend, H. Diamant, and T. A. Witten, Screening, hyperuniformity, and instability in
+the sedimentation of irregular objects, Phys. Rev. Lett. 118 (2017), 158005.
+15. A. Granville, Harald Cram´er and the distribution of prime numbers, Scand. Actuarial J. 1995
+(1995), 12–28.
+16. B. Green and T. Tao, The mobius function is asymptotically orthogonal to nilsequences,
+arXiv:0807.1736 [math.NT] (2008).
+17.
+, The primes contain arbitrarily long arithmetic progressions, Annals of Math. 167
+(2008).
+18. B. Green and T. Tao, Linear equations in primes, Annals Math. (2010), 1753–1850.
+19. J. Hadamard,
+Sur la distribution des z´eros de la fonction ζ(s) et ses cons´equences
+arithm´etiques, Bulletin de la Societ´e mathematique de France 24 (1896), 199–220.
+20. G. H. Hardy and J. E. Littlewood, Some problems of partitio numerorum; III: On the expres-
+sion of a number as a sum of primes, Acta Mathematica 44 (1923), 1–70.
+21. D. Hexner, P. M. Chaikin, and D. Levine, Enhanced hyperuniformity from random reorgani-
+zation, Proc. Nat. Acad. Sci. 114 (2017), 4294–4299.
+
+
+--- PDF page 33 ---
+HIDDEN MULTISCALE ORDER IN THE PRIMES
+33
+22. H. Iwaniec and E. Kowalski, Analytic number theory, vol. 53, American Mathematical Society,
+2004.
+23. R. L. Jack, I. R. Thompson, and P. Sollich, Hyperuniformity and phase separation in biased
+ensembles of trajectories for diﬀusive systems, Phys. Rev. Lett. 114 (2015), 060601.
+24. Y. Jiao, T. Lau, H. Hatzikirou, M. Meyer-Hermann, J. C. Corbo, and S. Torquato, Avian
+photoreceptor patterns represent a disordered hyperuniform solution to a multiscale packing
+problem, Phys. Rev. E 89 (2014), 022721.
+25. Hendrik W Lenstra Jr and Carl Pomerance, Primality testing with gaussian periods, Founda-
+tions of Software Technology and Theoretical Computer Science, 2002, p. 1.
+26. D. Levine and P. J Steinhardt, Quasicrystals. I. Deﬁnition and structure, Phys. Rev. B 34
+(1986), 596.
+27. T. Ma, H. Guerboukha, M. Girard, A. D. Squires, R. A. Lewis, and M. Skorobogatiy, 3d
+printed hollow-core terahertz optical waveguides with hyperuniform disordered dielectric re-
+ﬂectors, Adv. Optical Mater. 4 (2016), 2085–2094.
+28. H. Maier, Primes in short intervals, Michigan Math. J. 32 (1985), 221–225.
+29. F. Martelli, Dealing with primes i.: On the goldbach conjecture, arXiv:1309.5895 [math.NT]
+(2013).
+30. A. Mayer, V. Balasubramanian, T. Mora, and A. M. Walczak, How a well-adapted immune
+system is organized, Proc. Nat. Acad. Sci. 112 (2015), 5950–5955.
+31. J. Maynard, Small gaps between primes, Annals of Math. 181 (2015), 383–413.
+32. M. L. Mehta, Random matrices, Academic Press, New York, 1991.
+33. G. Miller, Riemann’s hypothesis and tests for primality, Journal of Computer and System
+Sciences 13 (1976), 300–317.
+34. H. L. Montgomery, The pair correlation of zeros of the zeta function, Amer. Math. Soc. (1973),
+181–193.
+35. H. L. Montgomery and K. Soundararajan, Primes in short intervals, Comm. Math. Phys. 252
+(2004), 589–617.
+36. R. J. Lemke Oliver and K. Soundararajan, Unexpected biases in the distribution of consecutive
+primes, arXiv:1603.03720 [math.NT] (2016).
+37. E. C. O˘guz, J. E. S. Socolar, P. J. Steinhardt, and S. Torquato, Hyperuniformity of Qua-
+sicrystals, Phys. Rev. B 95 (2017), 054119.
+38. J. Pintz, Cram´er vs. Cram´er. On Cram´er’s probabilistic model for primes, Functiones et
+Approximatio (2007), 361–376.
+39. C. Pomerance, J. L. Selfridge, and S. S. Wagstaﬀ, The pseudoprimes to 25 10?, Math. Com-
+putation 35 (1980), no. 151, 1003–1026.
+40. M. Rabin, Probabilistic algorithm for testing primality, Journal of Number Theory 12 (1980),
+128–138.
+41. M. Rubinstein and P. Sarnak, Chebyshevs bias, Experiment. Math. 3 (1994), 173–197.
+42. Z. Rudnick and P. Sarnak, Zeros of principal L-functions and random matrix theory, Duke
+Math. J. 81 (1996), 269–322.
+43. A. Selberg, On the normal density of primes in small intervals, and the diﬀerence between
+consecutive primes, Archiv for Mathematik og Naturvidenskab B. 47, No. 6 (1943), 87–105.
+44. T. Tao and T. Ziegler, The inverse conjecture for the gowers norm over ﬁnite ﬁelds in low
+characteristic, Annals of Combinatorics 16 (2012), no. 1, 121–188.
+45. G. Tenenbaum, Introduction to analytic and probabilistic number theory, vol. 46, Cambridge
+University Press, Cambridge, 1995.
+46. S. Torquato, Hyperuniform states of matter, Physics Reports, arXiv:1801.06924 (2018).
+47. S. Torquato, A. Scardicchio, and C. E. Zachary, Point processes in arbitrary dimension from
+Fermionic gases, random matrix theory, and number theory, J. Stat. Mech.: Theory Exp.
+(2008), P11019.
+48. S. Torquato and F. H. Stillinger, Local density ﬂuctuations, hyperuniform systems, and order
+metrics, Phys. Rev. E 68 (2003), 041113.
+49. S. Torquato, G. Zhang, and M. de Courcy-Ireland, Uncovering multiscale order in the prime
+numbers via scattering, (2018).
+50. S. Torquato, G. Zhang, and F. H. Stillinger, Ensemble Theory for Stealthy Hyperuniform
+Disordered Ground States, Phys. Rev. X 5 (2015), 021020.
+51. R. C. Vaughan, The Hardy-Littlewood method, vol. 125, Cambridge University Press, Cam-
+bridge, 1997.
+
+
+--- PDF page 34 ---
+34
+SALVATORE TORQUATO, GE ZHANG, AND MATTHEW DE COURCY-IRELAND
+52. I. M. Vinogradov, The method of trigonometrical sums in the theory of numbers (russian),
+Trav. Inst. Math. Steklo 10 (1937).
+53. M. Wolﬂf, Unexpected regularities in the distribution of prime numbers, Proc. of the 8th Joint
+EPS - APS Int. Conf. Physics Computing (1996).
+54. C. E. Zachary, Y. Jiao, and S. Torquato, Hyperuniform long-range correlations are a signature
+of disordered jammed hard-particle packings, Phys. Rev. Lett. 106 (2011), 178001.
+55. C. E. Zachary and S. Torquato, Hyperuniformity in point patterns and two-phase heteroge-
+neous media, J. Stat. Mech.: Theory & Exp. (2009), P12015.
+56. G. Zhang, F. Martelli, and S. Torquato, Structure factor of the primes, J. Phys. A: Math. &
+Gen. 51 (2018), 115001.
+57. Y. Zhang, Bounded gaps between primes, Annals of Math. 3 (2014), 1121–1174.
+Department of Chemistry, Department of Physics, Princeton Institute for the Sci-
+ence and Technology of Materials, and Program in Applied and Computational Math-
+ematics, Princeton University, Princeton NJ 08544
+Department of Chemistry, Princeton University, Princeton NJ 08544
+Department of Mathematics, Princeton University, Princeton NJ 08544

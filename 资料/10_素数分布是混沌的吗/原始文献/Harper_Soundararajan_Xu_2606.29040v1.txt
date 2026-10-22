@@ -1,0 +1,5491 @@
+
+--- PDF page 1 ---
+DISTRIBUTION OF RANDOM MULTIPLICATIVE FUNCTIONS IN
+SHORT INTERVALS, WITH PROPER NORMALIZATION
+ADAM J HARPER, KANNAN SOUNDARARAJAN, AND MAX WENQIANG XU
+Abstract. We determine the limiting distribution of partial sums of a Steinhaus random
+multiplicative function P
+x≤n≤x+y f(n) over short intervals [x, x + y], where y →∞but
+y = o(x). We show that with appropriate normalization, the limiting distribution is Gaussian
+for all such y. A key new feature of our result is that the normalization factor is different
+from the standard deviation √y when y is very close to x. In contrast, when y ≍x there is
+no normalization for which the limiting distribution is a non-degenerate Gaussian.
+1. Introduction
+The study of random multiplicative functions has been very active in recent years, motivated
+by various connections and applications in number theory, probability, and analysis. Define a
+Steinhaus random multiplicative function f : N →C, by taking (f(p))p prime to be independent
+random variables distributed uniformly on the complex unit circle, and setting f(n) :=
+Q
+pa∥n f(p)a for all natural numbers n (where pa∥n means that pa is the highest power of
+the prime p that divides n). These are often considered to be models for number-theoretic
+functions like Dirichlet characters χ(n). A Rademacher random multiplicative function is
+defined by letting (f(p))p prime be independent, taking values ±1 with probability 1
+2 each,
+and setting f(n) := Q
+p|n f(p) for all squarefree n, and f(n) = 0 when n is not squarefree.
+A fundamental question in the area is to study the statistical properties of partial sums
+P
+1≤n≤x f(n), and more generally, weighted partial sums P
+1≤n≤x a(n)f(n).
+One striking result is Harper’s resolution [14] of Helson’s conjecture [16]. Harper proved
+(in both the Steinhaus and Rademacher settings) that for all large x
+(1.1)
+E
+h
+X
+1≤n≤x
+f(n)
+
+i
+≍
+√x
+(log log x)
+1
+4 ,
+so that partial sums of random multiplicative functions exhibit “better than square-root
+cancellation.” This implies that the normalized partial sum, with the natural normalization
+
+E
+h
+X
+1≤n≤x
+f(n)
+
+2i−1
+2 ≍
+1
+√x,
+has a trivial limiting distribution. In earlier work [12], it had been proved (in the Rademacher
+case) that
+
+E
+h
+X
+1≤n≤x
+f(n)
+
+2i−1
+2 X
+n≤x
+f(n)
+1
+arXiv:2606.29040v1  [math.NT]  27 Jun 2026
+
+
+--- PDF page 2 ---
+2
+ADAM J HARPER, KANNAN SOUNDARARAJAN, AND MAX WENQIANG XU
+could not converge in distribution to a standard Gaussian N(0, 1) (though this did not exclude
+the more subtle possibility that it might converge to some Gaussian with variance different
+from 1).
+A central limit theorem may emerge in cases with general weights a(n) that somewhat
+disrupt the multiplicative structure. One particular example that has attracted considerable
+attention is when a(n) is an indicator function of a short interval, namely we study the
+limiting distribution of P
+x≤n≤x+y f(n) where y →∞, but y = o(x). It was first proved by
+Chatterjee and Soundararajan in [3] (for Rademacher f(n)) that the limiting distribution,
+with usual normalization 1/√y, is Gaussian as long as Cx1/5 log x ≤y = o(x/ log x). Note
+that the lower bound condition on y is, in a sense, much less interesting here; it was imposed
+so that one knows unconditionally that all intervals [x, x + y] contain roughly the expected
+quantity of squarefree numbers. This result was improved by Soundararajan and Xu in [21]
+to the wider range Cx1/5 log x ≤y ≤x/(log x)log 4−1+ϵ, and also extended to allow Steinhaus
+f(n) whenever y →∞and y ≤x/(log x)log 4−1+ϵ. On the other hand, by using the triangle
+inequality and Harper’s theorem (1.1), one can see that when y is sufficiently close to x,
+1
+√y
+P
+x≤n≤x+y f(n) has a trivial limiting distribution. In a recent work of Caich [1], it is
+proved that such trivial limiting distribution holds as long as y ≥
+x
+exp((log log x)1/2−ϵ). It has
+been an intriguing question to properly understand all these transitions in behavior. In
+particular, one would like to know whether
+1
+√y
+P
+x≤n≤x+y f(n) actually has Gaussian behavior
+for y larger than x/(log x)log 4−1+ϵ, and what can be said about the distribution for those very
+large y where the limit becomes trivial.
+Perhaps surprisingly, we prove a Gaussian limit theorem for partial sums P
+x≤n≤x+y f(n) of
+a Steinhaus random multiplicative function whenever y →∞with y = o(x). This completely
+determines the distribution over all short intervals, thereby completing the previous results
+in [1,3,21].
+Theorem 1.1. Let f(n) be a Steinhaus random multiplicative function. There exists a
+deterministic scaling factor V (x, y) such that the quantity
+1
+p
+V (x, y)
+X
+x≤n≤x+y
+f(n)
+converges in distribution to a standard complex Gaussian random variable with mean 0 and
+variance 1, as y →∞with y = o(x). The scaling factor satisfies
+(1.2)
+V (x, y) ∼
+y
+√
+2π
+Z κ
+−κ
+e−u2/2du,
+with
+κ =
+log(x/y)
+√2 log log x,
+with the asymptotic holding as x/y →∞. In particular
+(1.3)
+V (x, y) ≍y · min
+n
+1, log(x/y)
+√log log x
+o
+,
+and V (x, y) ∼y as
+log(x/y)
+√log log x →+∞.
+The value of V (x, y) that emerges naturally from our arguments is expressed in terms of a
+quantity µ(x, y), which is (up to scaling) a certain random walk probability. See Proposition
+
+
+--- PDF page 3 ---
+DISTRIBUTION OF RANDOM MULTIPLICATIVE FUNCTIONS IN SHORT INTERVALS
+3
+3.5 and (4.3) below, and the discussion in sections 1.1 and 1.2. However, we are free to
+replace V (x, y) in Theorem 1.1 by any quantity to which it is asymptotic (as y →∞with
+y = o(x)), and our estimation of µ(x, y) (again see Proposition 3.5) shows that (1.2) is such
+a choice.
+This is the first time that partial sums of random multiplicative functions with non-obvious
+normalization have been found to have a Gaussian limiting distribution. There are a few
+other number-theoretic situations where somewhat similar (and very interesting) phenomena
+arise. For example, Montgomery and Soundararajan [20] show, assuming various strong but
+plausible hypotheses, that the distribution of the von Mangoldt function in short intervals
+P
+x≤n≤x+y Λ(n) as x ≤N varies and with y in the range N δ ≤y ≤N 1−δ, should be
+roughly Gaussian, but with variance differing from the obvious guess by a constant factor.
+Gorodetsky, Mangerel and Rodgers [4] recently gave a beautiful proof that the analogous count
+of squarefree numbers in short intervals, where x ≤N varies and y →∞with y = N o(1), is
+roughly Gaussian with variance differing from the obvious guess by a power. In the squarefree
+case, the variance drop reflects the highly structured nature of the sequence of squarefree
+numbers. For the von Mangoldt function (equivalently primes) the situation is closer to
+our case here, but again the variance drop reflects a structural property of the sequence,
+namely its connection with the zeros of the Riemann zeta function. We are not aware of a
+similar phenomenon having been observed before in any random or deterministic context
+quite analogous to the present one (e.g. involving character sums). We also note that in both
+the primes and the squarefree examples, one sees the variance drop simply by computing
+the variance of the sequence itself (and the results on limiting distributions are obtained
+by a moment method). In contrast, the variance of our random sums has the obvious size
+one would expect (from orthogonality), it is only in the limiting distribution that one sees a
+change of scaling.
+Theorem 1.1 contrasts significantly with the distributional behaviour of the long sums
+P
+n≤x f(n), or P
+x≤n≤x+y f(n) where y ≍x. In view of (1.1) and Theorem 1.1, one might
+initially suppose that if one rescaled these sums by something like
+√x
+(log log x)1/4, then a Gauss-
+ian limiting distribution should appear. However, the ideas in the proofs, and specifically
+the connection with so-called multiplicative chaos (on which we elaborate below), sug-
+gest otherwise. Harper [14] proposed, in both the Steinhaus and Rademacher cases, that
+(log log x)1/4
+√x
+P
+n≤x f(n) should have limiting distributions related to the total mass of critical
+multiplicative chaos. Later, Gorodetsky and Wong made an explicit conjecture of the limiting
+distribution in [5, Conjecture 1.6]. In particular, this would imply that the tail probabilities
+P
+
+| P
+n≤x f(n)| ≥λ
+√x
+(log log x)1/4
+
+should be of size ≍1/λ2 for fixed large λ, much heavier than
+a Gaussian. Recent breakthrough work of Gorodetsky and Wong [6] determines, in the
+Steinhaus case (although not yet the Rademacher case), that the limiting distribution is
+indeed of this form. Their arguments also apply to P
+x≤n≤x+y f(n) when y ≍x.
+Exploiting the known blow-up of the low moments ((log log x)1/4
+√x
+)2qE[| P
+n≤x f(n)|2q] as q
+approaches 1, we establish the following heavy tail bound.
+
+
+--- PDF page 4 ---
+4
+ADAM J HARPER, KANNAN SOUNDARARAJAN, AND MAX WENQIANG XU
+Proposition 1.2. Let f(n) be a Steinhaus or Rademacher random multiplicative function.
+There exists a constant A such that, for all large λ and x sufficiently large in terms of λ, we
+have
+P
+
+|
+X
+n≤x
+f(n)| ≥λ
+√x
+(log log x)1/4
+
+≥1
+λA.
+Moreover, for any small δ > 0 there exists A(δ) such that
+P
+
+|
+X
+x≤n≤(1+δ)x
+f(n)| ≥λ
+√
+δx
+(log log x)1/4
+
+≥
+1
+λA(δ)
+whenever λ is large enough in terms of δ, and x is sufficiently large in terms of λ.
+Proposition 1.2 will be quickly proved in Section 5, essentially independently of the rest
+of the proofs in this paper. As we describe explicitly there, this implies that there is no
+choice of normalizing factor V (x) for which
+1
+√
+V (x)
+P
+n≤x f(n) can converge in distribution to
+a non-degenerate Gaussian.
+We shall comment more on the work of Gorodetsky and Wong [6] (and also S. Hardy [11])
+on the full-sum limiting distribution in Section 1.4. Here the limiting distribution is non-
+Gaussian, or more precisely it may be thought of as a Gaussian whose variance is itself a
+genuine, heavy-tailed random variable. Perhaps it is then surprising that in our short interval
+case, there exists a deterministic normalization which makes the random sum behave like a
+Gaussian. This new feature is due to a concentration phenomenon of the conditional variance,
+which we will try to explain below (see Section 1.2).
+1.1. Outline proof strategy for Theorem 1.1. The usual framework for proving a limiting
+distribution for partial sums of random multiplicative functions (originating in Harper’s
+work [12] on sums with few prime factors) is by applying a suitable version of the martingale
+central limit theorem. This is the same framework we will use but with several new additional
+features, both conceptual and technical.
+Essentially, we require a fusion of martingale
+technique with some quite delicate barrier arguments, developing the previous work of e.g.
+Caich [1], Harper [14,15] and Xu [23].
+We apply a version of McLeish’s central limit theorem [19] developed in [21]. A direct
+application would require showing that the fourth moment of the random sum P
+x≤n≤x+y f(n)
+(after a suitable pruning of the terms) is dominated by the diagonal contribution. However,
+in fact the fourth moment blows up once y is large enough. This forces the applicable range
+of y to be ≪x/(log x)c for certain c > 0, exactly the limitation of the results in [3] and [21].
+To overcome the limitation, our strategy is to apply the martingale central limit theorem
+only after conditioning on small primes f(p) for p ≤z (for a parameter z that needs to be
+carefully chosen), instead of applying it to the full sum from the beginning. For our choice of
+z, the set of integers in [x, x + y] with all prime factors below z has negligible size, and may
+be ignored. By using the multiplicative property of f, the sum over the remaining integers
+
+
+--- PDF page 5 ---
+DISTRIBUTION OF RANDOM MULTIPLICATIVE FUNCTIONS IN SHORT INTERVALS
+5
+may be decomposed as
+X
+x≤n≤x+y
+P(n)>z
+f(n) =
+X
+1<m≤x+y
+p|m =⇒p>z
+f(m)
+X
+x/m≤n≤(x+y)/m
+p|n =⇒p≤z
+f(n),
+where henceforth we write P(n) for the largest prime factor of n. After the conditioning, the
+inner sum is fixed and can be viewed as a constant coefficient a(m) indexed by m. Then
+one can apply the version of the martingale central limit theorem [21] for general sums
+P
+m a(m)f(m) aiming to get a conditional central limit theorem. As noted, to make this work
+we need to choose z carefully. Suppose such a choice of z exists and the theorem in [21] can be
+successfully applied. Then this implies that given a fixed choice of f(p) for p ≤z, the random
+sum is approximately Gaussian, but with a conditional variance Vf(x, y) = P
+m |a(m)|2 which
+depends on the values of f(p) for p ≤z.
+In order to get a limiting distribution for the original random sum, we need to “reveal”
+the conditioned choices of f(p) with p ≤z and understand the behavior of the conditional
+random variance Vf(x, y). It is not clear a priori whether Vf(x, y) has genuinely nontrivial
+distribution (as the analogous object does for the long sum P
+n≤x f(n)) or typically behaves
+like a deterministic quantity, i.e., for asymptotically almost all realizations of f(p) with p ≤z,
+it is asymptotic to some deterministic quantity V (x, y) (which doesn’t depend on f, only on
+x, y). One important feature of our proof is a concentration phenomenon which happens with
+the choice z = x
+1
+log log log x (say): namely, for a deterministic quantity V (x, y), one has typically
+Vf(x, y) ∼V (x, y). Moreover, at the same time, this choice of z is eligible for passing through
+the conditions of the martingale central limit theorem in [21].
+In the next couple of subsections, we will try to explain a little more of what is involved
+in the conditioned application of the martingale central limit theorem (which amounts to
+needing to understand something like the “off-diagonal” contribution to a conditional fourth
+moment), and in showing the crucial concentration of the conditional variance.
+In the process of proving the concentration result, we see the phase transition in V (x, y)
+when y gets close to x. As found in previous work [3,21],
+1
+√y
+P
+x≤n≤x+y f(n) has the expected
+Gaussian limiting distribution when y ≪x/(log x)c for suitable c, so our choice of V (x, y)
+should satisfy V (x, y) ∼y (the obvious value, namely the variance of P
+x≤n≤x+y f(n)) for
+such y. However, as y approaches x, a “better than square-root cancellation” phenomenon
+shows up, produced by multiplicative chaos effects. Indeed, the transition point of y is closely
+connected to a ballot-type problem in the theory of random walks. The work of Caich [1] gives
+that y ≈x/ exp((log log x)1/2) is a transition point for “better than square-root cancellation”
+(working at the level of order of magnitude of low moments), which is also the transition point
+for the shape of V (x, y) changing from y to ≍y ·
+log(x/y)
+√log log x. We also refer readers to [2,23]
+for related proofs exploring such transitions (again at the order of magnitude level) in other
+settings.
+At a very high level, one might have in mind that a standard way of proving a central limit
+theorem (although generally not easy to apply to random multiplicative function problems)
+is the method of moments, computing all moments of the random variables of interest and
+showing they converge to Gaussian moments. More sophisticated methods, such as martingale
+
+
+--- PDF page 6 ---
+6
+ADAM J HARPER, KANNAN SOUNDARARAJAN, AND MAX WENQIANG XU
+techniques, can essentially reduce from needing to compute all moments to just the fourth
+moment. Chatterjee and Soundararajan’s work [3] on short interval sums, using Stein’s
+method, operates on this level. To obtain their improvement in the range of y, Soundararajan
+and Xu [21] continue to work on the fourth moment level (now using martingales), but first
+remove a sparse subset of integers from the short interval sum so that the fourth moment
+behaves well on a wider range. In proving Theorem 1.1 on the full range of y, we work in a
+regime where not only the fourth moment, but even the second moment, does not behave well
+and reflect the genuine distributional behaviour. As we shall try to explain, to address this
+we make use of “barriers” editing our random variables (after conditioning) on the “Fourier
+side” of random Euler products, rather than removing terms from the original sums. The
+argument thus becomes somewhat indirect, but ultimately explains clearly the cause of the
+transition in V (x, y), and the difference between short interval sums (where y = o(x)) and
+long sums. We are not aware of any way to understand this transition operating simply with
+P
+x≤n≤x+y f(n) in “physical space”.
+1.2. Concentration of conditional variance. As a first step, one can see that the definition
+P
+m |a(m)|2 of Vf(x, y) is a discrete mean square of certain random sums (see (2.1), below).
+As usual in this area, we apply Parseval’s identity to transform the sum to its Fourier
+side, i.e. to some continuous second moment
+R
+|Fz(s)|2 ds of the random Euler product
+Fz(s) := Q
+p≤z(1 −f(p)
+ps )−1.
+This step is standard but more demanding than in many
+previous works (compare with e.g. Caich’s paper [1]), since here we need an exact asymptotic
+expression for Vf(x, y). Even the loss of a multiplicative constant factor would break the
+proof of concentration and of a limiting distribution. This generates some technical issues,
+but these are manageable and we find (with high probability over the (f(p))p≤z) that
+Vf(x, y) ∼e−γ
+4π
+y
+log z
+1
+T
+Z T(log T)100
+−T(log T)100 |Fz(1
+2 + it)|2|KT(t)|2dt,
+where KT(t) is a certain real-valued kernel which decays rapidly for large t and thus allows
+the integral to be truncated at |t| ≈T with T ≈2x/y. Notice that going from an interval
+[x, x + y] in physical space, to an integral of effective length ≍x/y on the Fourier side, is
+consistent with the usual numerology in multiplicative number theory, in particular shorter
+intervals require more frequencies t on the Fourier side. This reformulating of Vf(x, y) forms
+the bulk of Section 2.
+We must proceed to analyze Vf(x, y) further, needing to understand this not just in (typical)
+order of magnitude, but seeking a more delicate concentration result. One might hope that
+an estimate like
+(1.4)
+E[|Vf(x, y) −V (x, y)|2] = o(V (x, y)2)
+holds for our candidate V (x, y), which if true would establish that typically Vf(x, y) ∼V (x, y).
+However, when y is large this second moment type computation (which, since Vf(x, y) is itself
+a mean square, is really like a fourth moment) is dominated by certain relatively rare events,
+and (as expected given the failure of a direct application of McLeish’s theorem) we cannot
+achieve such concentration directly. To overcome this, the crucial idea is to impose barrier
+
+
+--- PDF page 7 ---
+DISTRIBUTION OF RANDOM MULTIPLICATIVE FUNCTIONS IN SHORT INTERVALS
+7
+events G(t) on the growth of the partial Euler products Fz(1
+2 + it) at all different “scales”.
+We hope that G(t) holds, simultaneously at all relevant points t, with high probability, and
+then it would suffice to show that (1.4) holds with the restriction G(t) inside our integral
+approximation to Vf(x, y). The purpose of G(t) is to suppress any blow-up of (1.4) created
+by rare extreme events. Setting barrier events is a well developed tool in the probabilistic
+study of so-called multiplicative chaos, and it first shows up in [14] for the study of random
+multiplicative functions.
+However, here it turns out that inserting a high probability event G(t) is still not enough to
+establish the concentration estimate. We solve this by inserting a further refined constraint
+H(t) and show that E[1G(t)1H(t) fails|Fz(1
+2 + it)|2] is very small.
+We emphasize that the
+combination of G(t) with H(t), and of analyzing what happens in high probability along
+with what happens in mean square, is crucial here. We cannot show that the stronger
+barrier event H(t) holds at all points t with high probability, and neither is it true that
+E[1H(t) fails|Fz(1/2 + it)|2] (without the initial barrier 1G(t)) is small when y is large (in fact
+it would be ∼E[|Fz(1
+2 + it)|2]). The combination of the two barriers allows us further to
+assume H(t) holds, and then we aim for a concentration result like
+E
+h
+Z T(log T)100
+−T(log T)100 |Fz(1/2 + it)|2KT(t)21H(t)dt −Main Term
+
+2i
+= o((Main Term)2).
+This is accomplished in Section 3. Here the Main Term is simply
+E
+h Z T(log T)100
+−T(log T)100 |Fz(1/2 + it)|2KT(t)21H(t)dt
+i
+,
+and thus we take V (x, y) to be a scaled version of this. The transition (1.3) in V (x, y), as y
+varies with x, precisely reflects the effect of 1H(t) (which translates into multiplication by a
+certain random walk probability) inside this expectation.
+This is the point in the argument where we see the conceptual origin of V (x, y), and we
+shall try to expand on what is happening. It turns out that the Euler products Fz(1
+2 + it)
+behave more or less independently on points t that are at least 1 apart, say. Thus our integral,
+which is (recalling that KT(t) basically serves to truncate things at |t| ≈T)
+≈
+X
+|n|≤T(log T)100
+Z n+ 1
+2
+n−1
+2
+|Fz(1
+2 + it)|2KT(t)21H(t)dt ≈
+X
+|n|≤T
+Z n+ 1
+2
+n−1
+2
+|Fz(1
+2 + it)|21H(t)dt,
+has the shape of a sum of ≈T roughly independent terms. Provided that T →∞(which
+exactly means y = o(x)), results like the Law of Large Numbers lead one to expect this
+to concentrate around its mean.
+We find this is indeed the case, but since each piece
+R n+ 1
+2
+n−1
+2 |Fz(1
+2 + it)|21H(t)dt is heavy-tailed it is a delicate matter to establish this.
+In fact, when we expand the square we need to deal with the expectation of a product
+of two factors E[|Fz(1
+2 + it1)|21H(t1)|Fz(1
+2 + it2)|21H(t2)]. When |t1 −t2| →∞we can show
+almost perfect decorrelation; this requires a slightly different analysis than in previous works
+(see Lemma 3.2, and its application inside the proof of Proposition 3.7 below). We can
+also prove a decorrelation result when |t1 −t2| is smaller (see Lemma 3.8), approximating
+the expectation by the product of two expectations (each with the corresponding barrier
+
+
+--- PDF page 8 ---
+8
+ADAM J HARPER, KANNAN SOUNDARARAJAN, AND MAX WENQIANG XU
+events involved), but now this can only be done for the parts of the Euler products involving
+sufficiently large primes in terms of |t1 −t2|. The barrier conditions H(t1), H(t2) are invoked
+to control the small prime contributions. More precisely, to succeed we need the barriers to
+restrict the small prime contribution to be (up to some normalization) a bit less than
+√
+T, so
+when squared inside |Fz(1/2 + it1)|2 we get a factor a bit smaller than the total integral length
+T. The high probability barrier G(t1) can only impose a restriction a bit larger than
+√
+T, but
+the refined barrier H(t1) enables us to go a bit below this, and so complete the concentration
+argument. The factor min{1, log(x/y)
+√log log x} ∼min{1,
+log T
+√log log x} that arises in V (x, y) reflects this
+size ≈
+√
+T, on taking a logarithm we get a restriction ≈1
+2 log T (up to some recentering)
+on the logarithms of the partial Euler products (which are random sums over primes), the
+denominator √log log x reflects the “number of scales” in the sums.
+In summary, one should think there is a sort of competition between the effect of the
+heavy-tailedness of each piece
+R n+ 1
+2
+n−1
+2 |Fz(1
+2 + it)|21H(t)dt (kept somewhat under control by the
+barrier H(t)), and the concentration effect of summing ≈T pieces. Provided T →∞, the
+concentration effect wins out, but with the “rate” of concentration (i.e. the exceptional prob-
+ability that Vf(x, y) is not close to V (x, y)) becoming worse when T grows more slowly. Once
+y ≍x, and so T ≍1, the heavy-tailedness dominates and one no longer gets concentration.
+1.3. Asymptotic of the fourth moment. In the application of the (conditioned) martingale
+central limit theorem, the main issue is a certain conditional fourth moment computation.
+We need to demonstrate that all “off-diagonal” contributions are negligible. To illustrate the
+problem, one major task is to show that, with high probability over the (f(p))p≤z and as
+x →∞,
+
+X
+m1,m2,m3,m4∈A
+m1m2=m3m4
+m1̸=m3,m2̸=m4
+P(m1)=P(m3)
+P(m2)=P(m4)
+X
+n1,n2,n3,n4
+x
+mj ≤nj≤x+y
+mj
+P(nj)≤z
+f(n1)f(n2)f(n3)f(n4)
+ = o(Vf(x, y)2),
+where A is the set of integers in (1, x + y] with all their prime factors > z. Our approach is
+to write each inner sum over nj as an integral involving Fz(s) by a suitable smoothed Perron
+formula:
+X
+n∈[ x
+m, x+y
+m ]
+P(n)≤z
+f(n) = 1
+2π
+Z ∞
+∞
+Fz(1
+2 + it)
+ x
+m
+ 1
+2 +it
+W(t)dt,
+where the smooth weight W(t) effectively restricts the integral to |t| ≤(log x)100. Then the
+quantity we need to estimate is a quadruple integral involving the product of four copies of
+random Euler products Fz(1
+2 + itj) (1 ≤j ≤4), and importantly a sort of harmonic sum that
+comes from the 1/ms factors, namely
+G(t1, t2, t3, t4) :=
+X
+m1,m2,m3,m4>1
+p|mj =⇒p∈(z,x+y]
+m1m2=m3m4
+m1̸=m3,m2̸=m4
+P(m1)=P(m3)
+P(m2)=P(m4)
+1
+m
+1
+2 +it1
+1
+m
+1
+2 +it2
+2
+·
+1
+m
+1
+2 −it3
+3
+m
+1
+2 −it4
+4
+.
+
+
+--- PDF page 9 ---
+DISTRIBUTION OF RANDOM MULTIPLICATIVE FUNCTIONS IN SHORT INTERVALS
+9
+One can show (with some technical work, see Lemmas 4.4 and 4.5 below) that the G(t1, t2, t3, t4)
+factor provides a good saving unless t1, t2, t3, t4 are all very close to each other. Thus we
+may restrict our attention to the case that all four tj are close, and the resulting quadruple
+product would behave like the product of two squares |Fz(1/2 + it1)|2 and |Fz(1/2 + it2)|2
+with t1 and t2 close. Indeed, we are left to deal with a quantity like (with a suitable weight
+W)
+Z
+t1≈t2
+|t1|,|t2|≤(log x)100
+|Fz(1/2 + it1)|2|Fz(1/2 + it2)|2|W(t1)|2|W(t2)|2dt1dt2.
+It would suffice to show that the expectation of this integral is “small” (essentially compared
+with V (x, y)2, up to some scaling factors that we have suppressed). But as with (1.4), or a
+direct computation of the fourth moment, the expectation would in fact blow up. Instead, we
+use the method of barrier events again, and just like before, we need to put some barriers G∗(t)
+and H∗(t) on the growth of the Euler products. With G∗(t) and H∗(t) set appropriately, this
+final analysis becomes relatively straightforward, see Propositions 4.6, 4.7 and the surrounding
+calculations below. We note, however, that this is a point in the proof where the choice of z
+is crucial. We lose factors of the shape (log x
+log z)O(1) and need the saving coming from H∗(t),
+which is very limited, to (more than) compensate for this. Thus although z cannot be too
+close to x (in order for earlier steps of the argument to work), it also cannot be too far from
+x.
+One small difference between the barrier events here and the previous G(t) and H(t), is
+that our integral here has long length (log x)100. Thus our barrier events must take the size
+of t into account, in fact when |t| ≥T we need the barrier to increase a bit with t (becoming
+weaker) so that the exceptional probability of exceeding the barrier decreases proportional to
+|t|, otherwise a union bound on the exceptional probabilities would blow up. But the decay
+factors involving W(t1) and W(t2) compensate for this weakening.
+1.4. Further remarks. We already mentioned that, for the appropriately normalized long
+sum (log log x)
+1
+4
+√x
+P
+n≤x f(n) of a Steinhaus random multiplicative function, a recent breakthrough
+of Gorodetsky and Wong [6] establishes convergence in distribution to a non-Gaussian, heavy
+tailed limit. A little earlier, S. Hardy [11] established the analogous result for the sub-
+sum (log log x)
+1
+4
+√x
+P
+n≤x,P(n)>√x f(n) over integers having a large prime factor. The simplifying
+condition P(n) > √x means that Hardy does not require any martingale techniques (after
+conditioning on (f(p))p≤√x, he has a classical weighted sum of independent random variables
+to work with). The bulk of his task is understanding the conditional variance, which he
+finds to converge to a heavy-tailed distribution closely related to the total mass of critical
+multiplicative chaos (unlike the concentration that we find in the short interval setting here).
+Hardy’s proof of convergence ultimately relies on some existing results from the theory of
+multiplicative chaos, but to make these applicable he must bring the conditional variance
+into an appropriate form. This uses a barrier-weighted mean square argument, sharing some
+features with our Proposition 3.7 below.
+Gorodetsky and Wong [6], handling the full sum, require martingale theory. A major task
+for them is the analysis of the arising “bracket process”, which is the same type of object
+
+
+--- PDF page 10 ---
+10
+ADAM J HARPER, KANNAN SOUNDARARAJAN, AND MAX WENQIANG XU
+as the conditional variance investigated by Hardy [11] and by us. Gorodetsky and Wong’s
+beautiful proof has many features in common, and also many differences from, the work
+of Hardy [11] and our work here, and we only mention a few points. Firstly, to bring the
+conditional variance into a nice form we work mostly on the “Fourier analytic” side, and
+Hardy does likewise. Gorodetsky and Wong’s bracket process has a bit more complicated
+structure, and they require a non-trivial “truncation” procedure on the physical side to
+produce an object they can work with. Secondly, Gorodetsky and Wong eschew the use of
+barriers, which are crucial to our work and which Hardy also makes some use of. Instead, they
+develop and use a new penalized second moment method, see their paper [6] for a detailed
+discussion of this. (Although behind this lie some of the same tools, like an approximate
+Girsanov theorem, that lie behind our barrier calculations.) Thirdly, note that about a third
+of our work here (almost all of section 4) is the analysis of a conditional fourth moment
+contribution, to make the martingale central limit theorem applicable. Because of the form
+of martingale central limit theorem that they use, Gorodetsky and Wong do not require this
+type of calculation, but instead they require (and establish) demanding information about
+the nature of the convergence of their bracket process.
+Inspecting our proofs (see Theorem 3.1 below), the reader will see that we show Vf(x, y) ∼
+V (x, y) holds with probability 1 −O((log T)−1
+5). Recall that T ≈2x/y. On first glance
+this rate estimate may look weak, but in fact it probably is not far from the truth, apart
+from the precise exponent of log T. For examining our integral expression for Vf(x, y), we
+see that if any of the integrals
+R n+ 1
+2
+n−1
+2 |Fz(1
+2 + it)|2dt, for |n| ≤T, exceeds a large multiple
+of T log T
+log z
+√log log z then Vf(x, y) will be significantly larger than V (x, y). If T isn’t too big
+compared with z (i.e. if y is reasonably close to x), the probability of this for any given n
+should be ≈
+1
+T log T , see e.g. the discussion of tail probabilities in the introduction of Harper’s
+paper [14]. And since these integrals should behave more or less independently for different
+n, the probability of it happening for some |n| ≤T will be ≈
+T
+T log T =
+1
+log T . This further
+suggests that our arguments, although involved, are capturing the true behavior of our objects
+of study.
+Theorem 1.1 solves the short interval story completely for Steinhaus random multiplicative
+functions, but not the Rademacher case. Most steps in our proof should transfer to the
+Rademacher case, either immediately or with quite obvious modifications, and we certainly
+expect the analogous theorem to hold (now with a real Gaussian limit, and ignoring any
+issues with counting square-free numbers when y is very small). However, there is at least
+one place where some less trivial work would be needed. In the proof of Proposition 3.7, after
+applying a decorrelation estimate to the “large” prime contributions, we factor these out
+exploiting the fact that the distribution of 1H(t)
+Q
+ze−τ <p≤z |1 −
+f(p)
+p
+1
+2 +it|−2 is exactly the same
+for all t ∈R (because the joint distribution of the sequence (f(p)p−it)p is exactly the same
+for all shifts t ∈R). This “translation invariance in law” does not hold in the Rademacher
+case. It should be possible to address this (e.g. although translation invariance in law does
+not hold, it should “almost” hold provided t isn’t too small); we hope that an interested
+reader will take up this task.
+
+
+--- PDF page 11 ---
+DISTRIBUTION OF RANDOM MULTIPLICATIVE FUNCTIONS IN SHORT INTERVALS
+11
+1.5. Organization and notations. It will suffice to prove Theorem 1.1 in the range
+x
+√log x ≤y = o(x), since smaller y are already handled by the work of Soundararajan and
+Xu [21]. Although not essential, restricting to this range for y will streamline the writing of
+several of our arguments.
+We write the conditional variance in a more useful asymptotic form, in terms of the random
+Euler product Fz(s), in the fairly short Section 2. The concentration of conditional variance is
+established in Section 3 and the fourth moment computation together with other verifications
+of conditions in the martingale central limit theorem is done in Section 4. Thus, Theorem 1.1
+is proved by combining results in Section 2, Section 3 and Section 4. Finally, we prove
+Proposition 1.2 in Section 5.
+We use standard notations of analytic number theory. Write f(x) ≪g(x) and f(x) =
+O(g(x)) to denote that there exists a constant C > 0 such that |f(x)| ≤Cg(x) for all x.
+Lastly f(x) ≍g(x) means that g(x) ≪f(x) ≪g(x).
+Acknowledgements. A.J.H. was supported in part by the Engineering and Physical Sciences
+Research Council of the United Kingdom [grant EP/V055755/1]. Some of the research for
+this paper was conducted when A.J.H. visited K.S. and M.W.X. in April 2023, and he would
+like to thank Stanford University for their hospitality during this visit. Some of the final
+writing up was done with support from the Simons Foundation and the Centre de Recherches
+Math´ematiques, Montr´eal, while A.J.H. was in residence as Aisenstadt Chair during the
+2026 Universal Statistics in Number Theory thematic semester. K.S. is partially supported
+through a grant from the National Science Foundation; some of this work was also done while
+he was supported by a Simons Investigator grant from the Simons Foundation. M.W.X. was
+supported by a Simons Junior Fellowship from the Simons Foundation. He appreciates the
+hospitality of Warwick Mathematics Institute, and he thanks Ye Tian for hosting him at the
+Morningside Center of Mathematics, where some of the writing up was done.
+We would like to thank Ofir Gorodetsky, Seth Hardy, Youness Lamzouri and Mo Dick Wong
+for their helpful comments on a draft of this paper. We especially thank Andrew Granville,
+whose comments and questions led us to determine an explicit form for the normalization
+factor V (x, y).
+For the purpose of open access, the authors have applied a Creative Commons Attribution
+(CC-BY) licence to any Author Accepted Manuscript version arising from this submission.
+2. Conditional variance
+Recall that z = x
+1
+log log log x, and that we say a number n is z-smooth if its largest prime
+factor P(n) is ≤z. As is usual, we write Ψ(x, z) to mean the count of z-smooth numbers
+≤x (although we will not need this notation very much).
+Since the f(n) are orthogonal,
+E
+
+X
+x≤n≤x+y
+P(n)≤z
+f(n)
+
+2
+=
+X
+x≤n≤x+y
+P(n)≤z
+1 = Ψ(x + y, z) −Ψ(x, z) + O(1) ≪
+y
+(log log x)100,
+where the last inequality follows upon using the sub-additivity Ψ(x + y, z) −Ψ(x, z) ≤Ψ(y, z)
+proved in [17] (for x, y ≥z) and a classical estimate on Ψ(y, z), see for example [8, (1.12)].
+
+
+--- PDF page 12 ---
+12
+ADAM J HARPER, KANNAN SOUNDARARAJAN, AND MAX WENQIANG XU
+Since this is negligible compared with V (x, y) in Theorem 1.1, we see that we may discard the
+sub-sum over z-smooth numbers, and it will suffice to prove the theorem for P
+x≤n≤x+y
+P(n)>z
+f(n).
+Using the multiplicativity of f, this sum may be rewritten as
+X
+x≤n≤x+y
+P(n)>z
+f(n) =
+X
+1<m≤x+y
+p|m =⇒p>z
+f(m)
+X
+x/m≤n≤(x+y)/m
+p|n =⇒p≤z
+f(n),
+which we shall analyze by first conditioning on the behavior of (f(p))p≤z.
+In this section, we establish an asymptotic expression for the conditional variance Vf(x, y),
+which holds with asymptotic probability 1 (over realizations of the (f(p))p≤z). By orthogo-
+nality, note that the conditional variance satisfies
+(2.1)
+Vf(x, y) =
+X
+1<m≤x+y
+p|m =⇒p>z
+
+X
+x/m≤n≤(x+y)/m
+p|n =⇒p≤z
+f(n)
+
+2
+.
+Proposition 2.1. Let y ≥x/(log x)1/2 and T = 2/ log(1 + y/x) be large, and put eT =
+T(log T)100 . With probability 1 −O((log T)−10), we have
+(2.2)
+Vf(x, y) = e−γ
+4π
+y
+log z
+1
+T
+Z
+eT
+−eT
+Fz(1
+2 + it)
+
+2
+KT(t)2dt + O
+
+y
+√log log x(log T)50
+
+,
+where γ is Euler’s constant, and
+(2.3)
+Fz(s) :=
+X
+n≥1
+p|n =⇒p≤z
+f(n)
+ns
+=
+Y
+p≤z
+
+1 −f(p)
+ps
+−1
+,
+KT(t) := T ·
+e
+1/2+it
+T
+−e−1/2+it
+T
+1/2 + it
+.
+The specific value T = 2/ log(1+y/x) simply arises from a change of variables in the course
+of the proof; note that T = 2x/y + O(1). In section 3, we will prove that with probability
+1 −O((log T)−1
+5),
+Vf(x, y) ≫
+y
+√log log x,
+so that the remainder term in (2.2) is negligible with high probability.
+Proof of Proposition 2.1. We first show that the contributions from small m in (2.1) are
+negligible, analogously to our initial discarding of the z-smooth sub-sum (which would
+correspond to m = 1). By small we mean terms with 1 < m < (x + y)/x0.1, and the expected
+contribution of such terms to Vf(x, y) is
+E
+h
+X
+1<m<(x+y)/x0.1
+p|m =⇒p>z
+
+X
+x/m≤n≤(x+y)/m
+p|n =⇒p≤z
+f(n)
+
+2i
+=
+X
+1<m<(x+y)/x0.1
+p|m =⇒p>z
+X
+x/m≤n≤(x+y)/m
+p|n =⇒p≤z
+1
+≪
+X
+1<m<(x+y)/x0.1
+p|m =⇒p>z
+y
+m(log log x)100 ≪y log log log x
+(log log x)100 .
+
+
+--- PDF page 13 ---
+DISTRIBUTION OF RANDOM MULTIPLICATIVE FUNCTIONS IN SHORT INTERVALS
+13
+By Markov’s inequality it follows that with probability at least 1 −O((log log x)−10), the
+contribution from m < (x + y)/x0.1 is at most O(y/(log log x)60).
+We next focus on those m ≥(x + y)/x0.1, and we group these terms in the ranges
+(x + y)/(r + 1) < m ≤(x + y)/r where r is an integer in the range 1 ≤r ≤x0.1. Thus the
+contribution of m ≥(x + y)/x0.1 to Vf(x, y) is
+X
+1≤r≤x0.1
+X
+x+y
+r+1 <m≤x+y
+r
+p|m =⇒p>z
+
+X
+x/m≤n≤(x+y)/m
+p|n =⇒p≤z
+f(n)
+
+2
+.
+Given r, for all (x + y)/(r + 1) < m ≤(x + y)/r the inner sum over n above varies by at
+most O(1). Therefore the above equals
+(2.4)
+X
+1≤r≤x0.1
+X
+x+y
+r+1 <m≤x+y
+r
+p|m =⇒p>z
+
+X
+x
+x+y ·r≤n≤r
+p|n =⇒p≤z
+f(n)
+
+2
++ O
+
+1 +
+
+X
+x
+x+y ·r≤n≤r
+p|n =⇒p≤z
+f(n)
+
+
+.
+This style of argument also arises in (for example) the proof of Proposition 1 of Harper [15],
+and Lemma 1.2 of Gorodetsky and Wong [7].
+The inner sum is now independent of m, so we can use the following standard sieve result
+to get rid of the z-roughness condition in the sum over m.
+Lemma 2.2 (See Theorem 3 of Iwaniec [18]). Let M be a set of M integers such that for
+any positive integer d, the number of multiples of d in M lies between M
+d −1 and M
+d + 1. Let
+s := log M
+log z , and suppose s <
+log M
+(log log 3M)6. Then
+#{n ∈M : p|n =⇒p > z} = M
+Y
+p≤z
+
+1 −1
+p
+
+1 + O
+
+e
+s log s
+s
+.
+Apply the lemma to M := { x+y
+r+1 < m ≤x+y
+r }, so that M ≍x/r2 ≫x0.8 and s ≍log x
+log z ≍
+log log log x, and the error term gives a saving factor of order O((log log x)−100), say. Thus
+the quantity in (2.4) is
+X
+1≤r≤x0.1
+ Z
+x+y
+r
+x+y
+r+1
+dw
+
+X
+x
+x+y ·r≤n≤r
+p|n =⇒p≤z
+f(n)
+
+2
++ O
+
+1 +
+
+X
+x
+x+y ·r≤n≤r
+p|n =⇒p≤z
+f(n)
+
+
+×
+Y
+p≤z
+
+1 −1
+p
+
+1 + O((log log x)−100)
+
+,
+which equals, upon using Mertens’s theorem,
+(2.5)
+Z x+y
+(x+y)/x0.1
+
+X
+x
+w ≤n≤x+y
+w
+p|n =⇒p≤z
+f(n)
+
+2
++ O
+
+1 +
+
+X
+x
+w ≤n≤x+y
+w
+p|n =⇒p≤z
+f(n)
+
+ e−γ
+log z
+
+1 + O((log log x)−100)
+
+dw.
+
+
+--- PDF page 14 ---
+14
+ADAM J HARPER, KANNAN SOUNDARARAJAN, AND MAX WENQIANG XU
+The contribution of all the error terms above is
+≪(log z)−1
+Z x+y
+(x+y)/x0.1
+
+1 +
+
+X
+x
+w ≤n≤x+y
+w
+p|n =⇒p≤z
+f(n)
+ +
+
+X
+x
+w ≤n≤x+y
+w
+p|n =⇒p≤z
+f(n)
+
+2
+(log log x)−100
+dw.
+Take the expectation of this quantity, which is (using Cauchy–Schwarz)
+≪(log z)−1
+Z x+y
+(x+y)/x0.1
+
+1 +
+
+E
+h
+X
+x
+w ≤n≤x+y
+w
+p|n =⇒p≤z
+f(n)
+
+2i 1
+2 +
+ y
+w + 1
+
+(log log x)−100
+dw
+≪
+x
+log z + y log x
+log z (log log x)−100 +
+√yx
+log z ≪
+y
+(log log x)99.
+Here we used our assumption that y ≥x/(log x)
+1
+2 to simplify the contribution. By Markov’s
+inequality, we conclude that with probability at least 1 −O((log log x)−10), the contribution
+of these error terms is O(y/(log log x)60).
+Our work so far shows that with probability 1 −O((log log x)−10),
+Vf(x, y) = e−γ
+log z
+Z x+y
+(x+y)/x0.1
+
+X
+x
+w ≤n≤x+y
+w
+p|n =⇒p≤z
+f(n)
+
+2
+dw + O
+
+y
+(log log x)60
+
+.
+Writing δ = y/x, and with the change of variables u = x/w, the relation above becomes
+(2.6)
+Vf(x, y) = e−γx
+log z
+Z
+x1.1
+x+y
+x
+x+y
+
+X
+u≤n≤(1+δ)u
+p|n =⇒p≤z
+f(n)
+
+2du
+u2 + O
+
+y
+(log log x)60
+
+.
+We wish to extend the integral in (2.6) to infinity. The expected error induced in doing so
+is
+≪
+x
+log z
+Z ∞
+x1.1
+x+y
+E
+h
+X
+u≤n≤(1+δ)u
+p|n =⇒p≤z
+f(n)
+
+2idu
+u2 =
+x
+log z
+Z ∞
+x1.1
+x+y
+X
+u≤n≤(1+δ)u
+p|n =⇒p≤z
+1du
+u2 ≪
+x
+log z
+X
+n> x1.1
+x+y
+p|n =⇒p≤z
+δ
+n.
+Using Mertens’s theorems (and here crucially exploiting the z-smoothness condition) it follows
+that
+X
+n> x1.1
+x+y
+p|n =⇒p≤z
+1
+n ≪(x0.1)−1000/ log z
+X
+n≥1
+p|n =⇒p≤z
+1
+n1−1000/ log z ≤(log log x)−100 Y
+p≤z
+
+1 −
+1
+p1−1000/ log z
+−1
+≪(log log x)−100 log z.
+By Markov’s inequality, we conclude that with probability at least 1 −O((log log x)−10) the
+error induced by extending the integral in (2.6) to infinity is ≪y/(log log x)60. Thus with
+
+
+--- PDF page 15 ---
+DISTRIBUTION OF RANDOM MULTIPLICATIVE FUNCTIONS IN SHORT INTERVALS
+15
+probability at least 1 −O((log log x)−10) we have
+(2.7)
+Vf(x, y) = e−γx
+log z
+Z +∞
+1
+1+δ
+
+X
+u≤n≤(1+δ)u
+p|n =⇒p≤z
+f(n)
+
+2du
+u2 + O
+
+y
+(log log x)60
+
+.
+Recall that δ = y/x so that T = 2/ log(1 + δ), and make the change of variables u = ev−1/T
+so that u(1 + δ) = ev+1/T. Then the integral in (2.7) becomes
+e−γx
+log z · e1/T
+Z +∞
+−∞
+|h(v)|2dv,
+where h(v) :=
+X
+ev−1/T ≤n≤ev+1/T
+p|n =⇒p≤z
+f(n)e−v/2.
+The Fourier transform of h(v) is (it is convenient to omit the 2π in the normalization here)
+ˆh(t) =
+Z +∞
+−∞
+h(v)e−ivtdv =
+X
+n≥1
+p|n =⇒p≤z
+f(n)
+Z log n+ 1
+T
+log n−1
+T
+e−ivt−v/2dv
+=
+X
+n≥1
+p|n =⇒p≤z
+f(n)
+n
+1
+2 +it
+e
+1/2+it
+T
+−e−1/2+it
+T
+1/2 + it
+
+.
+By the Plancherel formula the integral in (2.7) becomes
+e−γx
+log z
+e1/T
+2πT 2
+Z +∞
+−∞
+|Fz(1
+2 + it)|2KT(t)2dt,
+with Fz(s) and KT(t) as in (2.3). Since e1/T/T = δ/2+O(1/T 2) and KT(t)2 ≪min(1, T 2/(1+
+t2)), we may write the above as
+(2.8)
+e−γy
+log z
+1
+4πT
+Z
+eT
+−eT
+|Fz(1
+2 + it)|2KT(t)2dt + O
+
+y
+log zE
+
+,
+where
+(2.9)
+E = 1
+T 2
+Z
+|t|≤eT
+|Fz(1
+2 + it)|2dt + T
+Z
+|t|> eT
+|Fz(1
+2 + it)|2dt
+t2 .
+We now estimate the expected value of Eq for a suitable 0 < q < 1, which will enable us to
+show that with high probability E is suitably small. Divide the integrals in E into intervals
+of length 1, from n to n + 1 for n ∈Z. For non-negative real numbers an and 0 < q < 1, note
+that (P
+n an)q ≤P
+n aq
+n. Thus we find that E[Eq] is
+≪
+1
+T 2q
+X
+|n|≤eT+1
+E
+h Z n+1
+n
+|Fz(1
+2 + it)|2dt
+qi
++
+X
+|n|> eT
+T q
+|n|2q E
+h Z n+1
+n
+|Fz(1
+2 + it)|2dt
+qi
+.
+Now using the translation invariance in law of the random Euler product Fz(1
+2 + it), and a
+result of Harper [14, Section 4], we find that uniformly for 0 < q < 1
+E
+h Z n+1
+n
+|Fz(1
+2 + it)|2dt
+qi
+= E
+h Z 1
+0
+|Fz(1
+2 + it)|2dt
+qi
+≪
+
+log z
+1 + (1 −q)√log log z
+q
+.
+
+
+--- PDF page 16 ---
+16
+ADAM J HARPER, KANNAN SOUNDARARAJAN, AND MAX WENQIANG XU
+Taking q = 1 −1/ log T, and noting eT = T(log T)100, it follows that
+E[E1−1/ log T] ≪
+(log T)100
+T
++
+1
+(log T)100
+log z log T
+√log log z
+1−1/ log T
+≪
+1
+(log T)99
+
+log z
+√log log z
+1−1/ log T
+.
+Notice it is crucial here to take q close to 1 (to capture the decay of dt/t2), but strictly less than
+1 (to pick up the better than square-root cancellation factor √log log z in the denominator).
+Markov’s inequality now implies that with probability at least 1 −O((log T)−49) one has
+E ≪(log T)−50(log z)/√log log z.
+Putting everything together, with probability at least 1 −O((log T)−10), say (over all
+realizations of the (f(p))p≤z) we have
+(2.10)
+Vf(x, y) = e−γ
+4π
+y
+log z
+1
+T
+Z
+eT
+−eT
+Fz(1
+2 + it)
+
+2
+|KT(t)|2dt + O
+ y
+√log log x(log T)50
+
+.
+This completes the proof of Proposition 2.1.
+□
+3. Concentration of the conditional variance
+In this section, we prove that with asymptotic probability 1 over realizations of the (f(p))p≤z,
+the conditional variance Vf(x, y) is concentrated around a deterministic quantity V (x, y) with
+the properties claimed in (1.3) and (1.2). In the next section, this will allow us to establish
+an unconditional central limit theorem for P
+x≤n≤x+y
+P(n)>z
+f(n) (and thus for P
+x≤n≤x+y f(n)).
+Theorem 3.1 (Concentration of conditional variance). Let x be large, and let y be in the
+range x/(log x)
+1
+2 ≤y ≤x. Put z := x
+1
+log log log x and T = 2/ log(1 + y/x). Let f be a Steinhaus
+random multiplicative function and let Vf(x, y) be the conditional variance defined as in
+(2.1). Then there exists a deterministic quantity µ = µ(x, y) such that with probability
+1 −O((log T)−1
+5), we have
+Vf(x, y) = e−γ
+y
+log zµ
+
+1 + O
+
+1
+(log T)
+1
+5
+
+,
+where the quantity µ satisfies
+µ ≍log z · min
+n
+1,
+log T
+√log log x
+o
+.
+Further, as T →∞we have the asymptotic
+µ ∼(eγ log z)
+1
+√
+2π
+Z κ
+−κ
+e−u2/2du,
+where
+κ = κ(x, y) :=
+log T
+√2 log log z.
+In view of Proposition 2.1, to prove Theorem 3.1 it will suffice to show that with probability
+1 −O((log T)−1
+5) we have (with eT = T(log T)100 as before)
+1
+4πT
+Z
+eT
+−eT
+|Fz(1
+2 + it)|2KT(t)2dt = µ
+
+1 + O
+
+1
+(log T)
+1
+5
+
+,
+
+
+--- PDF page 17 ---
+DISTRIBUTION OF RANDOM MULTIPLICATIVE FUNCTIONS IN SHORT INTERVALS
+17
+where µ has the properties claimed in the theorem. The integral only depends on x and y
+via z = x
+1
+log log log x and T = 2/ log(1 + y/x) = 2x/y + O(1). Likewise, µ will only depend on x,
+y via z and T, see Proposition 3.5 below.
+Overall strategy for establishing Theorem 3.1. Our proof will proceed in three steps:
+(1) We set up an initial barrier event G(t) holding with high probability for all |t| ≤eT,
+such that with high probability
+Z
+eT
+−eT
+|Fz(1
+2 + it)|2KT(t)2dt =
+Z
+eT
+−eT
+|Fz(1
+2 + it)|2KT(t)21G(t)dt.
+(2) With high probability, we replace G(t) by a stronger (more restrictive) barrier event
+H(t) with little loss. That is, with high probability one has
+Z
+eT
+−eT
+|Fz(1
+2 + it)|2KT(t)21G(t)dt ≈
+Z
+eT
+−eT
+|Fz(1
+2 + it)|2KT(t)21H(t)dt.
+Unlike the event G(t) which holds with high probability for all |t| ≤T(log T)100, the
+event H(t) is not required to hold for all t with high probability. Instead, the total
+contribution from points t where it fails (but G(t) holds) is adequately small with
+high probability.
+(3) We establish the desired concentration estimate (in fact a much stronger one) for
+R eT
+−eT |Fz(1
+2+it)|2KT(t)21H(t)dt, via a variance calculation heavily relying on the presence
+of 1H(t).
+Before carrying out this strategy, we first prove a much simpler concentration result (a
+variance type calculation without any barriers) that performs well when only rather small
+primes (compared with T) are involved.
+Lemma 3.2. Let f be a Steinhaus random multiplicative function. Let T be large and KT(t)
+be defined as in (2.3). Then for all H ≥T and w ≥2,
+E
+h
+Z H
+−H
+|Fw(1
+2 + it)|2KT(t)2dt −
+X
+n≥1
+p|n =⇒p≤w
+1
+n
+Z H
+−H
+KT(t)2dt
+
+2i
+≪T(log w)4,
+where Fw(s) := Q
+p≤w(1 −f(p)p−s)−1.
+Note that
+X
+n≥1
+p|n =⇒p≤w
+1
+n
+Z H
+−H
+KT(t)2dt =
+Y
+p≤w
+
+1 −1
+p
+−1 Z H
+−H
+KT(t)2dt ≍T log w,
+so the lemma provides genuine concentration if the right hand side is smaller than (T log w)2;
+that is, if log w is smaller than
+√
+T. This lemma will be useful in the proof of Proposition 3.7,
+for an appropriate w chosen in terms of T, to handle the contribution from the small primes
+while a different argument takes care of larger primes.
+
+
+--- PDF page 18 ---
+18
+ADAM J HARPER, KANNAN SOUNDARARAJAN, AND MAX WENQIANG XU
+Proof of Lemma 3.2. Let S(w) denote the set of natural numbers all of whose prime factors
+are below w. The left side of the lemma is
+E
+h
+Z H
+−H
+X
+n,m∈S(w)
+n̸=m
+f(n)f(m)
+n
+1
+2 +itm
+1
+2 −itKT(t)2dt
+
+2i
+.
+Expanding the square and using the orthogonality of the f(n), this equals
+Z H
+−H
+Z H
+−H
+X
+n1,n2,m1,m2∈S(w)
+n1n2=m1m2
+n1̸=m1
+1
+n
+1
+2 +it1
+1
+m
+1
+2 −it1
+1
+1
+n
+1
+2 +it2
+2
+m
+1
+2 −it2
+2
+KT(t1)2KT(t2)2dt1dt2
+=
+X
+n1,n2,m1,m2∈S(w)
+n1n2=m1m2
+n1̸=m1
+1
+m1m2
+Z H
+−H
+Z H
+−H
+ n1
+m1
+i(t2−t1)
+KT(t1)2KT(t2)2dt1dt2.
+The solutions to n1n2 = m1m2 may be parametrized by writing g = (n1, m1) and setting
+n1 = gr, m1 = gs where r and s are coprime, with rs > 1. It then follows that n2 = sh and
+m2 = rh for some integer h. Thus our desired sum equals
+(3.1)
+X
+g,h∈S(w)
+X
+r,s∈S(w)
+(r,s)=1
+rs>1
+1
+ghrs
+
+Z H
+−H
+r
+s
+it
+KT(t)2dt
+
+2
+≪(log w)2
+X
+r,s∈S(w)
+(r,s)=1
+rs>1
+1
+rs
+
+Z H
+−H
+r
+s
+it
+KT(t)2dt
+
+2
+.
+We now claim that for any ξ̸ = 0
+Z H
+−H
+eitξKT(t)2dt ≪min
+
+T, 1
+|ξ|
+
+.
+(3.2)
+Recall the definition of KT(t) given in (2.3), from which it follows that KT(t)2 ≪
+min(1, T 2/(1 + t2)).
+This estimate readily implies the bound of T given in (3.2).
+To
+obtain the other bound, we integrate by parts to see that the integral is
+eitξ
+iξ KT(t)2
+H
+−H −1
+iξ
+Z H
+−H
+eiξt d
+dtKT(t)2dt ≪1
+|ξ| + 1
+|ξ|
+Z H
+−H
+ d
+dtKT(t)2dt.
+A small calculation using the definition of KT(t) shows that the derivative of KT(t)2 is
+bounded in magnitude by ≪(1 + |t|)/T 2 for |t| ≤T and by ≪T/t2 for |t| > T. The second
+bound claimed in (3.2) follows.
+Using the bound (3.2) in (3.1) we see that our desired variance is
+≪(log w)2
+X
+r,s∈S(w)
+(r,s)=1
+rs>1
+1
+rs
+T
+| log(r/s)| ≪T(log w)2 X
+r∈S(w)
+X
+s<r
+1
+rs
+1
+log(r/s),
+where in the last step we assumed by symmetry that r is larger than s, and dropped the
+coprimality condition as well as the requirement that s is w-smooth. Using log(1/t) ≥(1 −t)
+
+
+--- PDF page 19 ---
+DISTRIBUTION OF RANDOM MULTIPLICATIVE FUNCTIONS IN SHORT INTERVALS
+19
+for 1
+2 < t < 1, we find
+X
+s<r
+1
+s log(r/s) ≪
+X
+s≤r/2
+1
+s +
+X
+r/2<s<r
+1
+(r −s) ≪log r.
+Thus our variance is
+≪T(log w)2 X
+r∈S(w)
+log r
+r
+= T(log w)2 X
+r∈S(w)
+1
+r
+X
+ℓ|r
+Λ(ℓ) = T(log w)2 X
+ℓ∈S(w)
+Λ(ℓ)
+ℓ
+Y
+p≤w
+
+1 −1
+p
+−1
+,
+which is ≪T(log w)4, proving the proposition.
+□
+We now begin work on executing the proof strategy described earlier. Let τ denote the
+smallest natural number such that
+ze−τ ≤exp(exp((log T)1/200)),
+so that (by our choice of z and as T ≪√log x)
+τ = log log z −(log T)
+1
+200 + O(1) ∼log log z ∼log log x.
+Let B be a fixed large constant, chosen sufficiently large to ensure that the probabilistic
+results invoked below hold.
+For each integer 0 ≤j ≤τ, it will be convenient to define the partial random Euler product
+(3.3)
+Fj(s) =
+Y
+ze−τ <p≤ze−j
+
+1 −f(p)
+ps
+−1
+;
+note that the final Euler product Fτ is empty (and thus equals 1). Note that for any t ∈R
+(and large T)
+(3.4)
+E[|Fj(1/2 + it)|2] =
+Y
+ze−τ <p≤ze−j
+
+1 −1
+p
+−1
+∼eτ−j.
+For each t ∈R, let G(t) denote the event that for all 0 ≤j ≤τ
+(3.5)
+(
+√
+Teτ−j)−B ≤|Fj(1
+2 + it)| ≤
+√
+Teτ−j exp((log T)
+1
+100)(log log z −j).
+The stronger barrier event H(t) demands that the above holds and in addition (for all
+0 ≤j ≤τ),
+(3.6)
+|Fj(1
+2 + it)| ≤
+√
+Teτ−j exp(−(log T)
+1
+100)
+(log log z −j)5 .
+Note that when j = τ the Euler product Fj is empty, and the conditions (3.5) and (3.6) hold
+automatically.
+The lower bound in the definition of G(t) is purely technical, the upper bound constraint
+is the important part. Then H(t) will give us a small, but crucial, extra saving in terms of
+both T and (log log z −j) (which, as the reader may check, cannot be incorporated directly
+into our proof that G(t) holds with high probability).
+More specifically, the factor (log log z −j)−5 ultimately leads to the uniform boundedness
+of an integral appearing in the proof of Proposition 3.7, below. The factor exp(−(log T)
+1
+100)
+
+
+--- PDF page 20 ---
+20
+ADAM J HARPER, KANNAN SOUNDARARAJAN, AND MAX WENQIANG XU
+is needed both to overcome losses because our barrier conditions only start at ze−τ, and in
+producing the final saving in Proposition 3.7 (we note in passing that we could afford to save
+much less there and would still obtain Theorem 3.1, the bounds flowing from Proposition 3.6
+below are anyway weaker). There is quite a lot of flexibility in the choice of the factor
+exp(−(log T)
+1
+100) and of the start point ze−τ, but this must grow with T at a certain rate so
+that the probabilistic results we shall invoke are valid (this ultimately corresponds to having
+good enough error terms for prime number sums of length ze−τ).
+We now establish our first step, showing that the barrier event G(t) holds for all |t| ≤eT
+with high probability. The proof combines second moment calculations together with the
+union bound and a discretization modeled after Harper [14] and (especially) Soundararajan
+and Zaman [22].
+Proposition 3.3. Recalling that eT = T(log T)100, we have
+(3.7)
+P
+
+G(t) holds for all |t| ≤eT
+
+≥1 −exp(−(log T)
+1
+100).
+Proof. Given 0 ≤j ≤τ −1 we shall show that the probability that (3.5) fails for some |t| ≤eT
+is
+≪exp(−(log T)
+1
+100)(log log z −j)−2.
+Summing this over all the possibilities for j yields the proposition.
+Consider a mesh of points Tj = {bt = ejn/ log z :
+n ∈Z, |bt| ≤eT}. The mesh Tj contains
+≪eTe−j log z points, and for each t with |t| ≤eT we may find bt ∈Tj with |t −bt| ≤ej/ log z.
+It will turn out that this places bt sufficiently close to t (relative to the length of the Euler
+product Fj) that the behaviour of Fj(1
+2 + it) is essentially controlled by that of Fj(1
+2 + ibt).
+Indeed, if (3.5) fails at t, then with bt denoting the nearest point to t in Tj we must have
+one of the following four possibilities:
+(3.8)
+|Fj(1
+2 + ibt)| ≥1
+2
+√
+Teτ−j exp((log T)
+1
+100)(log log z −j),
+or
+(3.9)
+|Fj(1
+2 + ibt)|−1 ≥1
+2(
+√
+Teτ−j)B,
+or
+(3.10)
+Z ej/ log z
+−ej/ log z
+|F′
+j(1
+2+ibt+ih)|dh ≥|Fj(1
+2+it)−Fj(1
+2+ibt)| ≥1
+2
+√
+Teτ−j exp((log T)
+1
+100)(log log z−j),
+or
+(3.11)
+Z ej/ log z
+−ej/ log z
+|(Fj(1
+2 + ibt + ih)−1)′|dh ≥|Fj(1
+2 + it)−1 −Fj(1
+2 + ibt)−1| > 1
+2(
+√
+Teτ−j)B.
+
+
+--- PDF page 21 ---
+DISTRIBUTION OF RANDOM MULTIPLICATIVE FUNCTIONS IN SHORT INTERVALS
+21
+Given bt, using Markov’s inequality with (3.4), we see that the probability that (3.8) holds
+is
+≪eτ−j(1
+2
+√
+Teτ−j exp((log T)
+1
+100)(log log z −j))−2
+≪T −1ej−τ exp(−2(log T)
+1
+100)(log log z −j)−2.
+(3.12)
+Since
+E[|Fj(1
+2 + ibt)|−2] =
+Y
+ze−τ <p≤ze−j
+
+1 + 1
+p
+
+∼eτ−j,
+an even stronger bound applies for the probability that (3.9) holds. Next, note that
+E[|F′
+j(1
+2 + ibt + ih)|2] = E
+h
+X
+n=1
+p|n =⇒ze−τ <p≤ze−j
+f(n) log n
+n
+1
+2 +ibt+ih
+
+2i
+=
+X
+n=1
+p|n =⇒ze−τ <p≤ze−j
+(log n)2
+n
+,
+and using (log n)/nα ≤1/(eα) for all α > 0 and n ≥1 we may bound this by
+≪
+log z
+ej
+2
+X
+n=1
+p|n =⇒ze−τ <p≤ze−j
+1
+n1−2ej/ log z
+≤
+log z
+ej
+2
+Y
+ze−τ <p≤ze−j
+
+1 −
+1
+p1−2ej/ log z
+−1
+≪
+log z
+ej
+2
+eτ−j.
+Using these estimates and Cauchy–Schwarz we conclude that
+E
+h
+Z ej/ log z
+−ej/ log z
+|F′
+j(1
+2 + ibt + ih)|dh
+
+2i
+≪
+ej
+log z
+Z ej/ log z
+−ej/ log z
+E[|F′
+j(1
+2 + ibt + ih)|2]dh ≪eτ−j.
+Therefore by Markov’s inequality, the probability that (3.10) holds is also bounded by the
+quantity in (3.12). An entirely analogous argument shows that the same estimate also holds
+for the probability with which (3.11) holds.
+Since there are ≪eTe−j log z possible points bt in Tj, we conclude that the probability that
+one of the four possibilities in (3.8), (3.9), (3.10), or (3.11) holds for some bt ∈Tj is
+≪( eTe−j log z)T −1ej−τ exp(−2(log T)
+1
+100)(log log z −j)−2
+≪(log T)100(e−τ log z) exp(−2(log T)
+1
+100)(log log z −j)−2
+≪exp(−(log T)
+1
+100)(log log z −j)−2,
+upon recalling the definition of τ. This bounds the probability that (3.5) fails for this
+particular j and some |t| ≤eT, and completes our proof.
+□
+Our next proposition will compute the expectation of |Fz(1
+2 + it)|2 restricted to the barrier
+event H(t). Here we see the appearance and properties of the quantity µ, which is related
+to the value to which our variance will concentrate. In order to obtain sufficiently strong
+information about µ to deduce (1.2), we will need the following Gaussian random walk
+lemma, which (although not hard to prove) is more precise than usually required in random
+multiplicative function problems.
+
+
+--- PDF page 22 ---
+22
+ADAM J HARPER, KANNAN SOUNDARARAJAN, AND MAX WENQIANG XU
+Lemma 3.4. Let G1, ..., Gn be independent Gaussian random variables, each having mean
+zero and variance 0 < E[G2
+m] ≤20 (say). Set N := Pn
+m=1 E[G2
+m], and assume this is large.
+Then, for a larger than a suitable absolute constant,
+P
+
+j
+X
+m=1
+Gm ≤a for all 1 ≤j ≤n
+
+=
+
+1 + O
+log a
+a
+
+1
+√
+2π
+Z
+a
+√
+N
+−
+a
+√
+N
+e−u2/2du.
+Proof. Consider a standard Brownian motion Wt. If Wt stays below a for all continuous
+times 0 ≤t ≤N, then it certainly does so at the discrete time points tj := Pj
+m=1 E[G2
+m]
+corresponding to Pj
+m=1 Gm. Thus the probability desired in the lemma is bounded below by
+P(Wt ≤a for all 0 ≤t ≤N) =
+1
+√
+2π
+Z
+a
+√
+N
+−
+a
+√
+N
+e−u2/2du,
+upon using the known exact formula for this Brownian motion probability (see e.g. section
+13.4 of Grimmett and Stirzaker [9]).
+Let ϵ > 0 be a small parameter that will be fixed shortly. The desired probability can be
+upper bounded by
+P(Wt ≤(1 + ϵ)a for all 0 ≤t ≤N) + P( sup
+0≤t≤N
+Wt ≥(1 + ϵ)a, but Wtj ≤a for all 1 ≤j ≤n).
+As before, the first term above has an exact formula:
+1
+√
+2π
+Z (1+ϵ)
+a
+√
+N
+−(1+ϵ)
+a
+√
+N
+e−u2/2du =
+1
+√
+2π
+Z
+a
+√
+N
+−
+a
+√
+N
+e−u2/2du + O
+
+ϵ min
+n a
+√
+N
+, 1
+o
+= (1 + O(ϵ))
+1
+√
+2π
+Z
+a
+√
+N
+−
+a
+√
+N
+e−u2/2du.
+We shall proceed to bound the second probability. Let ˜t denote the infimum of all 0 ≤t ≤N
+for which Wt = (1 + ϵ)a. If sup0≤t≤N Wt ≥(1 + ϵ)a then the (random) point ˜t is well defined,
+and we shall divide into cases according to whether 0 ≤˜t ≤N/2 or N/2 < ˜t ≤N. Also let
+t∗be the (random) smallest point, of the form tj, which is ≥˜t, and let j∗be the index for
+which tj∗= t∗.
+Note that
+P(N/2 < ˜t ≤N, but Wtj ≤a for all 1 ≤j ≤n)
+≤
+P(Wt∗−W˜t ≤−ϵa, and N/2 < ˜t ≤N).
+Now Wt∗−W˜t is independent of (Wt)t≤˜t, and is a mean zero Gaussian with variance ≤20
+(by definition of t∗and our hypothesis about the variances of the Gj). Therefore the above
+probability is
+≪e−(ϵa)2/40P(N/2 < ˜t ≤N) ≤e−(ϵa)2/40P(Wt ≤(1 + ϵ)a
+for all 0 ≤t ≤N/2)
+≪e−(ϵa)2/40 min
+n
+1,
+a
+√
+N
+o
+.
+
+
+--- PDF page 23 ---
+DISTRIBUTION OF RANDOM MULTIPLICATIVE FUNCTIONS IN SHORT INTERVALS
+23
+One can bound P(˜t ≤N/2, but Wtj ≤a for all 1 ≤j ≤n) in a similar way (and achieving
+the same bound). Let us split this probability further based on the size of Wt∗, as
+∞
+X
+k=0
+P(˜t ≤N/2, −ka ≤Wt∗≤(1 −k)a, but Wtj ≤a for all 1 ≤j ≤n).
+When the k-th event here occurs, we must in particular have Wt∗−W˜t ≤−(ϵ + k)a, and
+Wtj −Wt∗≤a −Wt∗≤(k + 1)a for all j∗< j ≤n. Using these conditions, noting that
+(Wtj −Wt∗)j∗<j≤n is independent of (Wt)t≤t∗, and that P
+j∗<m≤n E[G2
+m] ≍N when ˜t ≤N/2
+(given our assumptions that E[G2
+m] ≤20 and that N is large), we find the sum is indeed
+≪
+∞
+X
+k=0
+e−((ϵ+k)a)2/40 min
+n
+1, (k + 1)a
+√
+N
+o
+≪e−(ϵa)2/40 min
+n
+1,
+a
+√
+N
+o
+.
+(Here the upper bound for the random walk probability that Wtj −Wt∗≤(k + 1)a for all
+j∗< j ≤n, which turns out to be the same as the corresponding upper bound if this were
+Brownian motion on the full interval, follows from e.g. Probability Result 1 of Harper [14].)
+Taking ϵ = (log a)/a, say, then yields the claimed result.
+□
+Proposition 3.5. Let f(n) be a Steinhaus random multiplicative function and Fz(s) be the
+partial random Euler product over primes up to z. Let T ≤(log z)10 be large. Let H(t) be
+defined as in (3.6) above. Set µ = µz,T := E[|Fz(1
+2 + it)|21H(t)], which is independent of t.
+Then
+(3.13)
+µ ≍(log z) · min
+
+1,
+log T
+√log log z
+
+.
+More precisely, as T →∞we have
+µ ∼
+Y
+p≤z
+
+1 −1
+p
+−1
+·
+1
+√
+2π
+Z κ
+−κ
+e−u2/2du,
+with
+κ =
+log T
+√2 log log z.
+Proof. The fact that the value of µ is independent of t follows from translation invariance
+in law of the random Euler product (i.e. the fact that the law of the sequence f(p)p−it for
+primes p is the same for all t ∈R). For simplicity of writing, in what follows we shall take
+t = 0.
+The statement (3.13) can be readily deduced from an approximate Girsanov type result
+of Harper [14, Lemma 4], followed by a suitable probabilistic estimate. First note that
+E[|Fz(1
+2)|2] = Q
+p≤z(1 −1
+p)−1 ≍log z. Then we apply [14, Lemma 4], with tj ≡0 and σ = 0,
+to deduce that
+E[|Fz( 1
+2 )|21H(0)]
+E[|Fz( 1
+2 )|2]
+≍
+(3.14) P
+
+−B
+2 log T −(B +1)j −O(1) ≤
+j
+X
+m=1
+Gm ≤log T
+2
+−(log T)
+1
+100 +h(j), for all j ≤τ
+
+,
+where h(j) = −5 log((log T)
+1
+200 + j) + O(1) and (we recall) τ ≍log log z, and Gm are
+independent Gaussians with mean zero and variance 1
+2 + o(1) (as T →∞). Note that the
+applicability of [14, Lemma 4] relies upon the fact that log(ze−τ) is large enough compared
+
+
+--- PDF page 24 ---
+24
+ADAM J HARPER, KANNAN SOUNDARARAJAN, AND MAX WENQIANG XU
+with log T.
+The Probability Results 1, 2 in [14] show that the probability in (3.14) is
+≍min(1, log T
+√τ ) ≍min(1,
+log T
+√log log z).
+We next prove the final part of the proposition. Since the smallest primes involved in the
+definition of H(0) are of size ze−τ, which tends to infinity with T, the proof of [14, Lemma
+4] actually implies that
+E[|Fz( 1
+2 )|21H(0)]
+E[|Fz( 1
+2 )|2]
+is asymptotic to the probability of the ballot event in
+(3.14). We estimate the probability. Again, since T →∞, the same calculations leading to
+Probability Results 1, 2 in [14] (see the Appendix there) show not just that the lower bound
+−B
+2 log T −(B + 1)j −O(1) and the terms −(log T)
+1
+100 + h(j) in the upper bound do not alter
+the order of magnitude of the probability (3.14), but in fact that as T →∞it is asymptotic
+to
+P
+
+j
+X
+m=1
+Gm ≤log T
+2
+, for all j ≤τ
+
+.
+Here we can apply Lemma 3.4, with a = 1
+2 log T and N = (1
+2 + o(1))τ = (1
+2 + o(1)) log log z,
+so that a/
+√
+N = (1 + o(1))(log T)/√2 log log z. This concludes the proof.
+□
+We next show that the expected contribution of |Fz(1
+2 + it)|2 when G(t) holds but H(t)
+fails is small when compared with µ. In combination with Markov’s inequality, this will later
+allow us to replace G(t) with H(t), as per Step 2 of the strategy outlined above. Note that
+since H(t) imposes stronger restrictions than G(t), the expression 1G(t) −1H(t) is the indicator
+function of the event that G(t) holds but H(t) fails.
+Proposition 3.6. Let the situation be the same as in Proposition 3.5. Then
+E[(1G(t) −1H(t))|Fz(1
+2 + it)|2] ≪
+log z
+√log log z(log T)
+1
+25.
+Proof. The argument will broadly follow the proof of Multiplicative Chaos Result 2 of
+Harper [15], but with various changes to reflect the different sizes of barrier (involving T) that
+we are working with here, and the simplification that we have no need to insert a “middle”
+barrier event D∗(t) (because our initial barrier G(t) already holds exactly at the point t,
+rather than at an approximating point).
+Suppose G(t) holds but H(t) fails. Then there must exist some 0 ≤J ≤τ −1 such that
+(3.15)
+(
+√
+Teτ−j)−B ≤|Fj(1
+2 + it)| ≤
+√
+Teτ−j exp(−(log T)
+1
+100)
+(log log z −j)5
+for all J + 1 ≤j ≤τ −1, and
+√
+Teτ−J exp(−(log T)
+1
+100)
+(log log z −J)5 < |FJ(1
+2 + it)| ≤
+√
+Teτ−J exp((log T)
+1
+100)(log log z −J).
+(3.16)
+We use AJ(t) to denote that all the inequalities (3.15) and (3.16) hold.
+Combining (3.16) with the definition of G(t) gives that for all 0 ≤j ≤J −1, we have
+√
+Teτ−j−B−1exp(−(log T)
+1
+100)
+log log z −J
+≤
+Y
+ze−J <p≤ze−j
+1 −f(p)
+p
+1
+2 +it
+
+−1
+≤exp(J −j + 2(log T)
+1
+100)(log log z −j)6.
+(3.17)
+
+
+--- PDF page 25 ---
+DISTRIBUTION OF RANDOM MULTIPLICATIVE FUNCTIONS IN SHORT INTERVALS
+25
+Let BJ(t) denote the event that all inequalities (3.17) hold. Note that AJ(t) only depends
+on f(p) for primes p ≤ze−J while BJ(t) only involves f(p) for primes ze−J < p ≤z, so that
+AJ(t) and BJ(t) are independent. This leads to
+E[(1G(t) −1H(t))|Fz(1
+2 + it)|2] ≤
+τ−1
+X
+J=0
+E[1AJ(t)1BJ(t)|Fz(1
+2 + it)|2]
+=
+τ−1
+X
+J=0
+E
+h
+1AJ(t)
+Y
+p≤ze−J
+1 −f(p)
+p
+1
+2 +it
+
+−2i
+E
+h
+1BJ(t)
+Y
+ze−J <p≤z
+1 −f(p)
+p
+1
+2 +it
+
+−2i
+.
+We next use the probability results in [14]. In particular, we use [14, Lemma 4] to derive that
+E[1BJ(t)
+Q
+ze−J <p≤z |1 −
+f(p)
+p
+1
+2 +it|−2]
+E[Q
+ze−J <p≤z |1 −
+f(p)
+p
+1
+2 +it|−2]
+≪P
+
+j
+X
+m=1
+Gm ≤2(log T)
+1
+100 + h(j),
+∀1 ≤j ≤J
+
+,
+where h(j) = 6 log(log log z −J + j) + O(1) ≤6 log(log log z −J) + 6 log j + O(1) and Gm are
+independent Gaussian random variables with mean zero and variance 1
+2 + o(1) (as T →∞).
+We invoke [14, Probability Result 1] and see that this probability is
+(3.18)
+≪(log T)
+1
+100 + log(log log z −J)
+1 +
+√
+J
+≪(log T)
+1
+100 + log(τ −J)
+1 +
+√
+J
+,
+where in the last step we used that log log z −J = τ −J + (log T)
+1
+200 + O(1).
+In the same way, we may bound
+E[1AJ(t)
+Q
+p≤ze−J |1 −
+f(p)
+p
+1
+2 +it|−2]
+E[Q
+p≤ze−J |1 −
+f(p)
+p
+1
+2 +it|−2]
+by the probability that the following two events hold (with Gm independent Gaussians with
+mean zero and variance 1
+2 + o(1) as above)
+max
+j≤τ−J
+j
+X
+m=1
+Gm ≤1
+2 log T + (log T)
+1
+100 + log(log log z −J) + O(1),
+and
+τ−J
+X
+m=1
+Gm ≥1
+2 log T −(log T)
+1
+100 −5 log(log log z −J) −O(1).
+Applying the Ballot Theorem (see e.g. Probability Result 1 of Harper [13] for a suitable
+version), this probability is
+≪min
+n
+1, log T + log(log log z −J)
+√
+τ −J
+o
+· ((log T)
+1
+100 + log(log log z −J))2
+τ −J
+≪min
+n
+1, log T + log(τ −J)
+√
+τ −J
+o
+· ((log T)
+1
+100 + log(τ −J))2
+τ −J
+.
+(3.19)
+
+
+--- PDF page 26 ---
+26
+ADAM J HARPER, KANNAN SOUNDARARAJAN, AND MAX WENQIANG XU
+Combining (3.18) and (3.19) together, it follows that
+E[(1G(t)−1H(t))|Fz( 1
+2 +it)|2]
+E[|Fz( 1
+2 +it)|2]
+is
+≪
+τ−1
+X
+J=0
+min
+n
+1, log T + log(τ −J)
+√
+τ −J
+o
+· ((log T)
+1
+100 + log(τ −J))2
+τ −J
+· (log T)
+1
+100 + log(τ −J)
+1 +
+√
+J
+.
+The sum over J can be bounded straightforwardly. For those J with τ −J ≤(log T)10, we
+upper bound the first factor by 1 and get a contribution that is
+≪(log T)
+3
+100
+X
+τ−(log T)10≤J≤τ−1
+1
+(τ −J)(1 +
+√
+J)
+≪(log T)
+3
+100 log log T
+√log log z ≪(log T)
+1
+25
+√log log z,
+upon distinguishing whether J ≤τ/2 or not. For those J with τ −J > (log T)10 (this can
+only occur if log T ≤τ 1/10 ≤(log log z)1/10), we can bound the contribution crudely by
+(log T)1+
+3
+100
+X
+J≤τ−(log T)10
+(log(τ −J))4
+(τ −J)3/2
+1
+1 +
+√
+J
+≪(log T)1+
+3
+100(log log T)4
+√τ(log T)5
+≪
+1
+√log log z.
+Recalling that E[|Fz(1
+2 + it)|2] ≍log z, we conclude that E[(1G(t) −1H(t))|Fz(1
+2 + it)|2] satisfies
+the claimed bound.
+□
+The final (vital) ingredient in proving Theorem 3.1 will be the following “barrier-modified”
+variance estimate, crucially exploiting the presence of H(t) (to control the near diagonal
+contribution when everything is expanded out), whose proof we postpone for a moment.
+Proposition 3.7. Let f be a Steinhaus random multiplicative function. Let Fz(s) be the
+random Euler product of f over primes up to z. Let T ≤(log z)10 be large and KT(t), H(t)
+and µ be as before. Then, with eT = T(log T)100 as before,
+E
+h
+Z
+eT
+−eT
+|Fz(1/2 + it)|2KT(t)21H(t)dt −µ
+Z
+eT
+−eT
+KT(t)2dt
+
+2i
+≪(µT)2 exp(−(log T)
+1
+100).
+(3.20)
+From the definition of KT(t) (see (2.3)) note that
+KT(t)2 = T 2(e1/T + e−1/T −2)
+1/4 + t2
++ 4T 2(sin(t/T))2
+1/4 + t2
+,
+from which it follows that
+Z
+eT
+−eT
+KT(t)2dt =
+Z ∞
+−∞
+KT(t)2dt + O
+ Z ∞
+eT
+T 2
+t2 dt
+
+=
+Z ∞
+−∞
+4T 2(sin(t/T))2
+1/4 + t2
+dt + O
+
+T
+(log T)100
+
+= T
+Z ∞
+−∞
+4(sin u)2
+1/(4T 2) + u2du + O
+
+T
+(log T)100
+
+= 4πT + O
+
+T
+(log T)100
+
+.
+(3.21)
+Thus the bound in Proposition 3.7 shows that the variance computed there is indeed small,
+compared with (µ
+R eT
+−eT KT(t)2dt)2. We postpone the proof of this proposition, showing first
+how Theorem 3.1 may be derived from it.
+
+
+--- PDF page 27 ---
+DISTRIBUTION OF RANDOM MULTIPLICATIVE FUNCTIONS IN SHORT INTERVALS
+27
+Proof of Theorem 3.1, assuming Proposition 3.7. Proposition 3.3 shows that with probability
+at least 1 −exp(−(log T)
+1
+100),
+Z
+eT
+−eT
+|Fz(1
+2 + it)|2KT(t)2dt =
+Z
+eT
+−eT
+|Fz(1
+2 + it)|2KT(t)21G(t)dt.
+Now we use Proposition 3.6 together with Markov’s inequality to get that with probability
+1 −O((log T)−1
+5), the right hand side is
+Z
+eT
+−eT
+|Fz(1
+2 + it)|2KT(t)21H(t)dt + O
+ Z
+eT
+−eT
+log z · (log T)
+1
+5 + 1
+25
+√log log z KT(t)2dt
+
+.
+The lower bound part of the estimate (3.13) for µ shows that the error term above may be
+bounded by (distinguish the cases log T < √log log z and log log z ≫log T ≥√log log z)
+≪
+1
+(log T)
+1
+5
+Z
+eT
+−eT
+µ · KT(t)2dt ≪
+Tµ
+(log T)
+1
+5 .
+The proof is completed by assuming Proposition 3.7, which together with (3.21) implies that
+with probability at least 1 −exp(−1
+3(log T)
+1
+100) we have
+Z
+eT
+−eT
+|Fz(1/2 + it)|2KT(t)21H(t)dt = µ
+Z
+eT
+−eT
+KT(t)2dt + O
+
+Tµ exp(−1
+3(log T)
+1
+100)
+
+= 4πµT + O
+
+Tµ
+(log T)100
+
+.
+□
+We now begin the proof of Proposition 3.7, which will take up the rest of this section.
+Proof of Proposition 3.7. Expanding out the square and using the definition of µ (recall
+Proposition 3.5), the left hand side of (3.20) equals
+(3.22)
+Z
+eT
+−eT
+Z
+eT
+−eT
+E[|Fz(1
+2+it)|2|Fz(1
+2+iu)|21H(t)1H(u)]KT(t)2KT(u)2dtdu−
+
+µ
+Z
+eT
+−eT
+KT(t)2dt
+2
+.
+We factor the expectation above as
+E[|Fz(1
+2 + it)|2|Fz(1
+2 + iu)|21H(t)1H(u)] = P1(t, u) · P2(t, u),
+where
+(3.23)
+P1(t, u) := E[|Fze−τ (1
+2 + it)|2|Fze−τ (1
+2 + iu)|2],
+and (since H(t), H(u) only depend on the f(p) with p > ze−τ)
+P2(t, u) := E[1H(t)|F0(1
+2 + it)|21H(u)|F0(1
+2 + iu)|2].
+Note that
+µ = E[|Fze−τ (1
+2 + it)|2]E[1H(t)|F0(1
+2 + it)|2],
+and so if it were the case that P1(t, u) and P2(t, u) each simply factored into the piece
+corresponding to t and the piece corresponding to u, then (3.20) would be identically zero.
+The next lemma takes a step towards such a de-correlation when |t −u| is large.
+
+
+--- PDF page 28 ---
+28
+ADAM J HARPER, KANNAN SOUNDARARAJAN, AND MAX WENQIANG XU
+Lemma 3.8. Suppose that C exp(−1
+2(log T)
+1
+200) ≤|t −u| ≤2 eT, for a suitable large constant
+C. Then
+(3.24)
+P2(t, u) =
+
+1 + O
+exp(−1
+2(log T)
+1
+200)
+|t −u|
+
+E[1H(t)|F0(1
+2 + it)|2]E[1H(u)|F0(1
+2 + iu)|2].
+A similar but cruder decorrelation estimate for P1(t, u) is that
+(3.25)
+P1(t, u) ≪
+
+(log(2 + |t −u|))4 +
+1
+|t −u|2
+
+E[|Fze−τ (1
+2 + it)|2]E[|Fze−τ (1
+2 + iu)|2].
+Sketch proof of Lemma 3.8. The proof of the first statement follows from the second part
+of [14, Lemma 7], and a slicing argument. We sketch the small modifications and changes
+needed, and verify that the conditions required there hold. In the notation of [14, Lemma
+7], we take there σ = 0, and t there is our t −u (using translation invariance in law). The
+parameters xj there correspond to ze−τ+j, and the condition ze−τ+1 ≥eC/|t−u|2 (needed at
+the end of the proof, to ensure that |t −u|
+p
+log(ze−τ) is large) is indeed satisfied under our
+hypotheses on |t −u|. In [14, Lemma 7] there is a condition |t| ≤1, which in our case says
+that we need |t −u| ≤1. But this assumption is only needed for the cancellation in certain
+prime number sums (see [14, the end of page 62, published version]); namely,
+(3.26)
+X
+x1/e
+j
+<p≤xj
+cos(|t −u| log p)
+p
+≪
+1
+|t −u| log xj
+,
+while in our case, since we are working with primes p > ze−τ = exp(exp((log T)
+1
+200 + O(1)))
+and |t −u| ≤2T(log T)100, the relevant prime number sum estimate still holds by using a
+strong form of the prime number theorem (see e.g. [15, Number Theory Result 2]). The
+multiplier in the asymptotic formula of [14, Lemma 7] is stated as 1 + O(1/
+√
+C), but in
+fact this is 1 + O(1/(|t|√log x1)), which in our case is 1 + O(exp(−1
+2(log T)
+1
+200)/|t −u|).
+Finally, we remark that at the end of the proof there, the same calculations that replace the
+covariance by 0 also allow the means of N 1
+j , N 2
+j to be replaced by P
+x1/e
+j
+<p≤xj
+1
+p (rather than
+P
+x1/e
+j
+<p≤xj
+1+cos(|t−u| log p)
+p
+), completely decoupling them and removing all dependence on t, u.
+For the second part, we apply e.g. [14, display (6)] and conclude that
+P1(t, u) ≪exp
+ X
+p≤ze−τ
+2 cos((t −u) log p)
+p
+
+E[|Fze−τ (1/2 + it)|2]E[|Fze−τ (1/2 + iu)|2].
+The prime number sum above is estimated by splitting into small primes and big primes.
+Let us call the threshold p0. In the case that |t −u| ≤1, choose p0 = e1/|t−u|. When
+p < p0, we bound cos((t −u) log p) trivially by 1 and use Mertens’ estimate to get the bound
+P
+p≤e1/|t−u|
+2 cos((t−u) log p)
+p
+≤2 log
+1
+|t−u| +O(1). When p > p0, we use the prime number theorem
+(to get a bound like (3.26)) and conclude that the contribution is ≪1. For the case that
+|t −u| > 1, we choose p0 = eA(log |t−u|)2 for a suitable large constant A. When p ≤p0, we
+again bound cos((t −u) log p) trivially by 1 which leads to the bound 4 log log |t −u| + O(1)
+for the prime number sum. When p > p0, we apply the prime number theorem with classical
+
+
+--- PDF page 29 ---
+DISTRIBUTION OF RANDOM MULTIPLICATIVE FUNCTIONS IN SHORT INTERVALS
+29
+error term x exp(−d√log x) (for some d > 0) and derive that the contribution in this case is
+≪1 (again see [15, Number Theory Result 2] for details). This concludes the proof.
+□
+Split the double integral in (3.22) as I1 + I2, where I1 is the integral over pairs t, u with
+|t −u| ≥C exp(−1
+2(log T)
+1
+200) (which is the typical case), and I2 is the integral over nearby
+points t, u with |t −u| ≤C exp(−1
+2(log T)
+1
+200). We now use the decorrelation estimate from
+Lemma 3.8 to evaluate I1, showing that it cancels out the term (µ
+R eT
+−eT KT(t)2dt)2 appearing
+in (3.22) up to a negligible error term. Following that, we shall show that the contribution of
+I2 is negligible, completing the proof of Proposition 3.7.
+We begin by using (3.24), and first consider the effect of the error term there. Using the
+crude bounds KT(t)2, KT(u)2 ≪1 together with (3.25), and writing h = |t −u| we see that
+this contribution to I1 is
+≪µ2 eT exp(−1
+2(log T)
+1
+200)
+Z 2 eT
+C exp(−1
+2 (log T)
+1
+200 )
+(log(2 + h))4
+h
++ 1
+h3
+
+dh
+≪µ2T(log T)100 exp(1
+2(log T)
+1
+200).
+Now consider the main term for P2(t, u) from (3.24), which is (importantly using translation
+invariance, as noted in the Introduction)
+E[1H(t)|F0(1
+2 + it)|2]E[1H(u)|F0(1
+2 + iu)|2] =
+
+E[1H(0)|F0(1
+2)|2]
+2
+.
+Its contribution to I1 is
+
+E[1H(0)|F0(1
+2)|2]
+2 Z
+|t|,|u|≤eT
+|t−u|≥C exp(−1
+2 (log T)
+1
+200 )
+P1(t, u)KT(t)2KT(u)2dtdu.
+We now show that the condition on |t −u| above may be dropped with negligible error. First
+note that by a simple fourth moment computation (see e.g. [15, Euler Product Result 1],
+with k = 1 and α1 = 2 and σ = 0):
+(3.27)
+P1(t, u) ≤E[|Fze−τ (1/2)|4] ≍(log ze−τ)4 ≍exp(4(log T)
+1
+200).
+Therefore, recalling the definition of µ and using KT(u)2 ≪1, the error induced by dropping
+the condition on |t −u| is
+≪µ2 exp(4(log T)
+1
+200)
+Z
+eT
+−eT
+KT(t)2dt ≪µ2T exp(4(log T)
+1
+200).
+Thus the contribution of I1 is
+(3.28)
+
+E[1H(0)|F0(1
+2)|2]
+2 Z
+eT
+−eT
+Z
+eT
+−eT
+P1(t, u)KT(t)2KT(u)2dtdu + O(µ2T exp(4(log T)
+1
+200)).
+At this stage we invoke Lemma 3.2; taking there w = ze−τ and H = eT, we obtain
+E
+h
+Z
+eT
+−eT
+|Fze−τ (1/2 + it)|2KT(t)2dt −
+Z
+eT
+−eT
+X
+n≥1
+p|n =⇒p≤ze−τ
+KT(t)2
+n
+dt
+
+2i
+≪T exp(4(log T)
+1
+200).
+
+
+--- PDF page 30 ---
+30
+ADAM J HARPER, KANNAN SOUNDARARAJAN, AND MAX WENQIANG XU
+Expanding out the left side (which is a variance) and rearranging, it follows that
+Z
+eT
+−eT
+Z
+eT
+−eT
+P1(t, u)KT(t)2KT(u)2dtdu=
+ Z
+eT
+−eT
+E[|Fze−τ (1
+2)|2]KT(t)2dt
+2
++O(T exp(4(log T)
+1
+200)).
+Combining this with (3.28), we conclude that
+(3.29)
+I1 =
+
+µ
+Z
+eT
+−eT
+KT(t)2dt
+2
++ O(µ2T exp(4(log T)
+1
+200)).
+We now turn to the problem of estimating I2, where t and u are close together, and it is
+here that the barrier events H(t) and H(u) play a crucial role. Our task is to bound
+Z Z
+|t|,|u|≤eT
+|t−u|≤C exp(−1
+2 (log T)
+1
+200 )
+E[1H(t)|Fz(1
+2 + it)|21H(u)|Fz(1
+2 + iu)|2]KT(t)2dtKT(u)2du.
+Write h = t −u, and use translation invariance to bound the above by
+Z
+|h|≤C exp(−1
+2 (log T)
+1
+200 )
+E[1H(0)|Fz(1
+2)|21H(h)|Fz(1
+2 + ih)|2]dh
+Z
+eT
+−eT
+KT(u)2KT(u + h)2du
+≪T
+Z
+|h|≤C exp(−1
+2 (log T)
+1
+200 )
+E[1H(0)|Fz(1
+2)|21H(h)|Fz(1
+2 + ih)|2]dh.
+Using the fourth moment estimate (3.27) to handle the small primes p ≤ze−τ, we obtain the
+further reduction
+(3.30)
+I2 ≪T exp(4(log T)
+1
+200)
+Z
+|h|≤C exp(−1
+2 (log T)
+1
+200 )
+E[1H(0)|F0(1
+2)|21H(h)|F0(1
+2 + ih)|2]dh.
+We now focus on bounding the expectation in (3.30) for a given value of h. Define J to
+be the smallest non-negative integer with ze−J ≤exp((C/|h|)2), so that J ≤τ in our range
+for h. Define J0 to be the smallest non-negative integer at most τ with ze−J0 ≤exp(C/|h|),
+setting J0 = τ if no such integer exists. Thus 0 ≤J ≤J0 ≤τ. We factor the Euler product
+F0(1
+2 + it) into three pieces depending on whether ze−τ < p ≤ze−J0, or ze−J0 < p ≤ze−J, or
+ze−J < p ≤z, and call the three corresponding Euler products P1(1
+2 + it), P2(1
+2 + it), and
+P3(1
+2 + it).
+Next we examine the conditions H(0) and H(h), extracting from them constraints on the
+primes in these three ranges. Recall that the conditions H(0) and H(h) are given by the
+upper barrier constraints in (3.6), together with the lower barrier constraint in (3.5). The
+idea is that the primes ze−J0 < p are large enough that their contributions to the products
+at 0 and at h behave quite independently. So we will invoke H(0) to bound P1(1
+2), then all
+our remaining Euler product factors at 0 and at h will be essentially uncorrelated. When
+ze−J < p is even larger, we will also be able to show that the barrier conditions at 0 and at h
+provide quite independent constraints, giving some further saving.
+
+
+--- PDF page 31 ---
+DISTRIBUTION OF RANDOM MULTIPLICATIVE FUNCTIONS IN SHORT INTERVALS
+31
+More precisely, on the lower range ze−τ < p ≤ze−J0 we keep only the condition (arising
+from (3.6) with j = J0 and t = 0)
+(3.31)
+|FJ0(1
+2)| = |P1(1
+2)| ≤
+√
+Teτ−J0 exp(−(log T)
+1
+100)
+(log log z −J0)5 .
+In the upper range ze−J < p ≤z, using the upper bound in (3.6) together with the lower
+bound in (3.5), we find that for all 0 ≤j ≤J −1 and with t being 0 or h
+(3.32) (
+√
+Teτ−j)−(B+1) ≤
+Y
+ze−J <p≤ze−j
+1 −f(p)
+p
+1
+2 +it
+
+−1
+≤T (B+1)/2 exp((B + 1)(τ −J) + (J −j)).
+In the middle range ze−J0 < p ≤ze−J we ignore the constraints imposed by H(0) and H(h).
+We now bound the expected value of |F0(1
+2)F0(1
+2 + ih)|2 keeping only the constraints given
+by (3.31) and (3.32). Since these constraints are independent over the three ranges for primes,
+we may factor the expectation correspondingly into three parts. For the contribution of
+|P1(1
+2)P1(1
+2 + ih)|2, we use (3.31) to obtain that this expectation is
+≪Te2(τ−J0)exp(−2(log T)
+1
+100)
+(log log z −J0)10 E[|P1(1
+2 + ih)|2]
+= Te2(τ−J0)exp(−2(log T)
+1
+100)
+(log log z −J0)10
+Y
+ze−τ <p≤ze−J0
+
+1 −1
+p
+−1
+≪Te3(τ−J0)exp(−2(log T)
+1
+100)
+(log log z −J0)10 .
+(3.33)
+We see that a multiplier T has emerged here, but (thanks to our strengthened barrier H(0))
+accompanied by the saving factor exp(−2(log T)
+1
+100 )
+(log log z−J0)10 .
+For the middle range, using Lemma 6 from [14] we find
+(3.34)
+E[|P2(1
+2)P2(1
+2 + ih)|2] ≪exp
+
+X
+ze−J0 <p≤ze−J
+2 + 2 cos(h log p)
+p
+
+≪exp(2(J0 −J)),
+upon applying the prime number theorem. Finally for the large primes the expected value of
+|P3(1
+2)P3(1
+2 + ih)|2 subject to the constraints in (3.32) is (upon using Proposition 7 from [14])
+(3.35)
+≪
+Y
+ze−J <p≤z
+
+1 −1
+p
+−2(log T + (τ −J))
+1 +
+√
+J
+2
+≪e2J(log T + (τ −J))2
+1 + J
+
+.
+Putting (3.33), (3.34) and (3.35) together we conclude that
+(3.36) E[1H(0)1H(h)|F0(1
+2)F0(1
+2 + ih)|2] ≪Te3τ−J0 exp(−2(log T)
+1
+100)
+(log log z −J0)10
+(log T + (τ −J))2
+1 + J
+
+.
+We simplify the bound in (3.36) by distinguishing the cases when |h| ≤(log z)−1
+4 and when
+(log z)−1
+4 ≤|h| ≤C exp(−1
+2(log T)
+1
+200). In the first case note that log log z −J0 ≫log log z,
+
+
+--- PDF page 32 ---
+32
+ADAM J HARPER, KANNAN SOUNDARARAJAN, AND MAX WENQIANG XU
+and we may replace the bound in (3.36) by
+≪T(log z)3e−J0 exp(−2(log T)
+1
+100)
+(log log z)10
+(log T)2(log log z)2
+≪T(log z)3exp(−3
+2(log T)
+1
+100)
+(log log z)8
+min
+
+1,
+1
+|h| log z
+
+.
+In the second case, note that log log z −J0 and log log z −J are both ≍log(1/|h|), and
+J ≫log log z. This enables us to simplify the bound in (3.36) to
+≪T(log z)3e−J0 exp(−2(log T)
+1
+100)
+(log(1/|h|))10
+(log T)2(log 1/|h|)2
+log log z
+≪T
+(log z)2
+|h| log log z
+exp(−3
+2(log T)
+1
+100)
+(log 1/|h|)8
+.
+To see the last estimate above, split into the cases J0 < τ where e−J0 ≍1/(|h| log z) and the
+case J0 = τ where |h| ≥C exp(−(log T)
+1
+200). Using these two bounds in (3.30), we conclude
+that
+I2 ≪T 2 exp(−(log T)
+1
+100)
+
+(log z)3
+(log log z)8
+Z
+|h|≤(log z)−1
+4
+min
+
+1,
+1
+|h| log z
+
+dh
++ (log z)2
+log log z
+Z
+(log z)−1
+4 <|h|≤C exp(−1
+2 (log T)
+1
+200 )
+1
+|h|(log(1/|h|))8dh
+
+≪T 2 (log z)2
+log log z exp(−(log T)
+1
+100) ≪T 2µ2 exp(−(log T)
+1
+100).
+Combining this with (3.29), we have completed the proof of Proposition 3.7.
+□
+4. Conditional Gaussian limiting distribution
+In this section, we show a conditional central limit theorem (conditioning on all the values
+(f(p))p≤z) for the sum P
+x≤n≤x+y
+P(n)>z
+f(n). More precisely, we will show that with high probability
+over all realizations of the (f(p))p≤z, the conditional characteristic function (and therefore
+the conditional distribution) of P
+x≤n≤x+y
+P(n)>z
+f(n) is close to complex Gaussian.
+Recall the decomposition
+X
+x≤n≤x+y
+P(n)>z
+f(n) =
+X
+1<m≤x+y
+p|m =⇒p>z
+f(m)
+X
+x
+m≤n≤x+y
+m
+P(n)≤z
+f(n).
+By using the orthogonality of f(n), the conditional variance is
+Vf(x, y) =
+X
+1<m≤x+y
+p|m =⇒p>z
+
+X
+x
+m≤n≤x+y
+m
+P(n)≤z
+f(n)
+
+2
+.
+The goal of this section is to show the following.
+Theorem 4.1 (Conditional CLT). Let f(n) be a Steinhaus random multiplicative function.
+Let x be large and x/(log x)1/2 ≤y = o(x), and z = x1/ log log log x. Let Vf(x, y) be defined as
+
+
+--- PDF page 33 ---
+DISTRIBUTION OF RANDOM MULTIPLICATIVE FUNCTIONS IN SHORT INTERVALS
+33
+above. Let eP denote the conditional probability, conditioning on all the values (f(p))p≤z. Then
+for asymptotically almost all realizations of (f(p))p≤z, we have as x →+∞,
+eP
+
+1
+p
+Vf(x, y)
+X
+x≤n≤x+y
+P(n)>z
+f(n) ∈R
+
+→P(Z ∈R),
+where Z is a standard complex Gaussian random variable with mean 0 and variance 1 and R
+is any nice region in the complex plane.
+We state this a little loosely (e.g. we do not bother to specify what constitutes a “nice
+region”), as noted above we will actually prove a quantitative statement about the proximity
+of probabilistic characteristic functions, which would imply a quantitative version of Theorem
+4.1. To establish this, we shall apply the following complex-valued version of the martingale
+central limit theorem [19], established in [21].
+Theorem 4.2 (Special case of Theorem 3.1 of Soundararajan–Xu [21]). Let f denote a
+Steinhaus random multiplicative function, and let am denote a sequence of complex numbers.
+Put
+V =
+X
+1<m≤M
+|am|2,
+and define the complex valued random variable
+Z :=
+1
+√
+V
+X
+1<m≤M
+amf(m).
+Suppose that for some 1 ≥ϵ > 0 the following two conditions hold:
+(1). We have
+
+X
+1<m1,m2,m3,m4≤M
+m1m2=m3m4
+m1̸=m3,m2̸=m4
+P(m1)=P(m3)
+P(m2)=P(m4)
+am1am2am3am4
+ ≤ϵ2V 2.
+(2). We have
+
+X
+1<m1,m2,m3,m4≤M
+m1m2=m3m4
+P(m1)=P(m2)=P(m3)=P(m4)
+am1am2am3am4
+ ≤ϵ4V 2.
+Then for any real numbers t1 and t2 we have, with t2 = (t2
+1 + t2
+2)/2,
+E[eit1Re(Z)+it2Im(Z)] = e−t2/2 + O(et2ϵ).
+Let A := {1 < m ≤x + y : p|m =⇒p > z}. We apply the above criteria to our setting
+with the following:
+M = x + y,
+am = 1A(m) ·
+X
+x
+m≤n≤x+y
+m
+P(n)≤z
+f(n),
+V = Vf(x, y).
+Note that once we condition on the (f(p))p≤z, the am and V become fixed complex numbers.
+
+
+--- PDF page 34 ---
+34
+ADAM J HARPER, KANNAN SOUNDARARAJAN, AND MAX WENQIANG XU
+The goal is to show that with probability 1 −O((log T)−1
+5) −O((log log z)−1
+10) over realiza-
+tions of (f(p))p≤z, the following conditions hold:
+(4.1)
+
+X
+m1,m2,m3,m4∈A
+m1m2=m3m4
+m1̸=m3,m2̸=m4
+P(m1)=P(m3)
+P(m2)=P(m4)
+X
+n1,n2,n3,n4
+x
+mj ≤nj≤x+y
+mj
+P(nj)≤z
+f(n1)f(n2)f(n3)f(n4)
+ ≪
+Vf(x, y)2
+(log log z)
+1
+5 ,
+and
+(4.2)
+
+X
+m1,m2,m3,m4∈A
+m1m2=m3m4
+P(m1)=P(m2)=P(m3)=P(m4)
+X
+n1,n2,n3,n4
+x
+mj ≤nj≤x+y
+mj
+P(nj)≤z
+f(n1)f(n2)f(n3)f(n4)
+ ≪Vf(x, y)2
+√z
+.
+Verifying these conditions, especially the difficult (4.1), will occupy most of this section.
+Before establishing them, we first show how (4.1) and (4.2) may be used with Theorem 4.2
+to obtain our main result Theorem 1.1.
+Proof of Theorem 1.1, assuming (4.1) and (4.2). Invoking Theorem 3.1, with probability 1−
+O((log T)−1
+5) over realizations of (f(p))p≤z we have
+(4.3)
+Vf(x, y) =
+
+1 + O
+
+1
+(log T)
+1
+5
+
+V (x, y) ≍y min
+
+1, log(x/y)
+√log log x
+
+,
+where we set V (x, y) = e−γ
+y
+log z · µ(x, y). Note that V (x, y) obeys the estimates claimed in
+Theorem 1.1.
+Let us temporarily write ˜E to denote expectation conditional on the values (f(p))p≤z.
+Further, write temporarily
+Z =
+1
+p
+Vf(x, y)
+X
+x≤n≤x+y
+P(n)>z
+f(n), and eZ =
+1
+p
+V (x, y)
+X
+x≤n≤x+y
+P(n)>z
+f(n).
+Then using (4.1), (4.2) and Theorem 4.2 with ϵ = O((log log z)−1
+10), we see that with
+probability 1 −O((log T)−1
+5) −O((log log z)−1
+10) over (f(p))p≤z we get
+˜E
+h
+exp(it1ReZ + it2ImZ)
+i
+= e−t2/2 + O
+
+et2
+(log log z)
+1
+10
+
+.
+With the same high probability, we may also assume that (4.3) holds. Note that (4.3) gives,
+˜E[|Z −˜Z|] =
+
+1
+p
+V (x, y)
+−
+1
+p
+Vf(x, y)
+˜E
+h
+X
+x≤n≤x+y
+P(n)>z
+f(n)
+
+i
+≪
+1
+(log T)
+1
+5
+1
+p
+Vf(x, y)
+
+˜E
+h
+X
+x≤n≤x+y
+P(n)>z
+f(n)
+
+2i 1
+2 ≪
+1
+(log T)
+1
+5 ,
+
+
+--- PDF page 35 ---
+DISTRIBUTION OF RANDOM MULTIPLICATIVE FUNCTIONS IN SHORT INTERVALS
+35
+where the last steps follow by Cauchy’s inequality and recalling that Vf(x, y) is the conditional
+variance. Therefore
+˜E[| exp(it1ReZ + it2ImZ) −exp(it1Re ˜Z + it2Im ˜Z)|] ≪˜E[(|t1| + |t2|)|Z −˜Z|] ≪|t1| + |t2|
+(log T)
+1
+5 ,
+and we conclude that with probability 1 −O((log T)−1
+5) −O((log log z)−1
+10) over (f(p))p≤z
+there holds
+˜E
+h
+exp(it1Re ˜Z + it2Im ˜Z)
+i
+= e−t2/2 + O
+
+et2
+(log log z)
+1
+10 + |t1| + |t2|
+(log T)
+1
+5
+
+.
+Finally, averaging over (f(p))p≤z as well (using the Tower Property of conditional expecta-
+tion, and the fact that the conditional characteristic function is always bounded by 1) we
+find the characteristic function of
+1
+√
+V (x,y)
+P
+x≤n≤x+y
+P(n)>z
+f(n) (without any conditioning) is
+= e−t2/2 + O
+
+et2
+(log log z)
+1
+10 + 1 + |t1| + |t2|
+log1/5 T
+
+.
+As T ≍x/y →∞, this is = e−t2/2 + o(1) (i.e. converging to the characteristic function e−t2/2
+of the standard complex Gaussian), implying convergence in distribution.
+□
+Thus it remains only to establish the estimates in (4.1) and (4.2) with suitably high
+probability. We begin with a lemma which will quickly lead to a proof of (4.2).
+Lemma 4.3. Suppose w ≥1 and I is a set of integers in [1, w]. Then, for any complex
+numbers a(n) with |a(n)| ≤1,
+E
+h
+X
+n∈I
+a(n)f(n)
+
+4i
+≪w|I|(log 2w)3.
+Proof. Expanding out the fourth moment and using orthogonality, the desired quantity is
+X
+n1,n2,n3,n4∈I
+n1n2=n3n4
+a(n1)a(n2)a(n3)a(n4) ≤
+X
+n1,n2∈I
+d(n1n2) ≤
+ X
+n∈I
+d(n)
+2
+,
+where d(n) denotes the usual divisor function, and the last estimate follows since d(n1n2) ≤
+d(n1)d(n2). Now Cauchy–Schwarz shows that the above is
+≤|I|
+X
+n≤w
+d(n)2 ≪w|I|(log 2w)3,
+completing our proof.
+□
+Proof of (4.2). Using the triangle inequality, the left side of (4.2) may be bounded by
+X
+m1,m2,m3,m4∈A
+m1m2=m3m4
+P(m1)=P(m2)=P(m3)=P(m4)
+
+X
+n1,n2,n3,n4
+x
+mj ≤nj≤x+y
+mj
+P(nj)≤z
+f(n1)f(n2)f(n3)f(n4)
+.
+
+
+--- PDF page 36 ---
+36
+ADAM J HARPER, KANNAN SOUNDARARAJAN, AND MAX WENQIANG XU
+Take the expectation of this quantity over all (f(p))p≤z. Using H¨older’s inequality followed
+by Lemma 4.3, we may bound this expectation by
+≤
+X
+m1,m2,m3,m4∈A
+m1m2=m3m4
+P(m1)=P(m2)=P(m3)=P(m4)
+4
+Y
+j=1
+
+E
+h
+X
+x
+mj ≤nj≤x+y
+mj
+P(nj)≤z
+f(n)
+
+4i 1
+4
+≪
+X
+m1,m2,m3,m4∈A
+m1m2=m3m4
+P(m1)=P(m2)=P(m3)=P(m4)
+4
+Y
+j=1
+(x + y)
+mj
+ y
+mj
++ 1
+
+(log(2(x + y)))3 1
+4
+≪x2(log x)3
+X
+m1,m2,m3,m4∈A
+m1m2=m3m4
+P(m1)=P(m2)=P(m3)=P(m4)
+1
+m1m2
+≪x2(log x)3
+X
+m1,m2∈A
+P(m1)=P(m2)
+d(m1m2)
+m1m2
+.
+If we write p = P(m1) = P(m2), so that p > z, then using d(m1m2) ≤d(m1)d(m2) we may
+bound the above by
+≪x2(log x)3 X
+p>z
+
+X
+m≤(x+y)/p
+d(mp)
+mp
+2
+≪x2(log x)3 X
+p>z
+1
+p2(log x)4 ≪x2(log x)7
+z
+.
+Since y ≥x/(log x)1/2 by assumption, our bound is ≪y2(log x)8/z. Markov’s inequality
+allows us to deduce that, with probability at least 1 −O(z−1
+4) (over realizations of the
+(f(p))p≤z), the left side of (4.2) is ≪y2(log x)8/z3/4. In view of (4.3), which holds with
+suitably high probability, we conclude that (4.2) holds with the desired high probability.
+□
+It remains to verify the more demanding condition (4.1). The argument is a bit lengthy,
+but breaks into a few distinct phases. We shall bound the left hand side of (4.1) by a
+(smoothed) quadruple integral of our random Euler products. We will then show that (with
+high probability) the ranges of integration may be significantly truncated to a very near
+diagonal portion. Finally, a barrier analysis (similar as in section 3, but less delicate) will
+give an acceptable bound for this portion of the quadruple integral.
+Phase One: Pass to contour integrals. Put
+(4.4)
+δ = log(1 + y/x) ≍y/x,
+and
+δ1 = (log x)−40.
+For positive real numbers u, v define two functions a(u; v) and b(u; v) by setting them both
+to be 0 if u < ve−δ1 or if u > veδ. In the range ve−δ1 ≤u ≤veδ define
+(4.5)
+a(u; v) =
+
+
+
+
+
+δ−1
+1 log(ueδ1/v)
+if ve−δ1 ≤u ≤v
+1
+if v ≤u ≤veδ−δ1
+δ−1
+1 log(eδv/u)
+if veδ−δ1 ≤u ≤veδ.
+The function b(u; v) is defined by setting
+(4.6)
+b(u; v) =
+(
+1 −a(u; v)
+if v ≤u ≤eδv
+−a(u; v)
+if ve−δ1 ≤u ≤v.
+
+
+--- PDF page 37 ---
+DISTRIBUTION OF RANDOM MULTIPLICATIVE FUNCTIONS IN SHORT INTERVALS
+37
+Thus a(u; v)+b(u; v) is the indicator function of the condition u ∈[v, veδ]; the function a(u; v)
+is a smoothed approximation to this indicator function, and b(u; v) is the error incurred in
+the smoothing.
+Examining the left side of (4.1), we use the above notation to write the inner sum over n1
+as
+X
+P(n1)≤z
+a(n1; x/m1)f(n1) +
+X
+P(n1)≤z
+b(n1; x/m1)f(n1).
+Similar expressions hold for the sums over n2, n3, n4, taking care to replace f by its conjugate
+in the cases of n3 and n4. Thus the left side of (4.1) may be bounded in terms of 16 sums,
+depending on which combination of a(nj; x/mj) or b(nj; x/mj) arises. Of these 16 terms, we
+now show that only the term with a(nj; x/mj) appearing for all 1 ≤j ≤4 is significant, and
+the remaining 15 terms may be bounded easily.
+Consider one of the 15 terms where b(nj; x/mj) appears at least once. Suppose b(n1; x/m1)
+appears, and for j = 2, 3, 4 we are indifferent to whether a(nj; x/mj) or b(nj; x/mj) occurs,
+and denote by c(nj; x/mj) either of these possibilities. We now bound the expected value of
+the contribution of such terms to (4.1): namely,
+X
+m1,m2,m3,m4∈A
+m1m2=m3m4
+m1̸=m3,m2̸=m4
+P(m1)=P(m3)
+P(m2)=P(m4)
+E
+h
+X
+n1,n2,n3,n4
+P(nj)≤z
+b(n1; x/m1)f(n1)c(n2; x/m2)f(n2)
+4
+Y
+j=3
+c(nj; x/mj)f(nj)
+
+i
+.
+By applications of H¨older’s inequality followed by Lemma 4.3 we may bound the inner
+expectation by
+
+E
+h
+X
+P(n1)≤z
+b(n1; x/m1)f(n1)
+
+4i 1
+4
+4
+Y
+j=2
+
+E
+h
+X
+P(nj)≤z
+c(nj; x/mj)f(nj)
+
+4i 1
+4
+≪
+
+E
+h
+X
+P(n1)≤z
+b(n1; x/m1)f(n1)
+
+4i 1
+4
+4
+Y
+j=2
+ x2
+m2
+j
+(log x)3 1
+4
+We sum this over m1, m2, m3, m4, keeping only the constraints that these variables are
+≤x + y and satisfy m1m2 = m3m4. Given m1, m2, there are at most d(m1m2) ≤d(m1)d(m2)
+choices for m3 and m4. Thus the total contribution to (4.1) from this case is
+≪
+X
+m1,m2≤x+y
+
+E
+h
+X
+P(n1)≤z
+b(n1; x/m1)f(n1)
+
+4i 1
+4x
+3
+2(log x)
+9
+4 d(m1)d(m2)
+√m1m2
+≪x
+3
+2(log x)
+17
+4
+X
+m1≤x+y
+d(m1)
+√m1
+
+E
+h
+X
+P(n1)≤z
+b(n1; x/m1)f(n1)
+
+4i 1
+4.
+To estimate this sum, we distinguish two cases: (i) when m1 ≤x/(log x)40 and (ii) when
+x/(log x)40 < m1 ≤x+y. In the first case, note that (when b(n1; x/m1) is non-zero) n1 lies in
+two intervals near x/m1 and (x + y)/m1 of length ≍δ1(x/m1) = (log x)−40(x/m1). Therefore
+
+
+--- PDF page 38 ---
+38
+ADAM J HARPER, KANNAN SOUNDARARAJAN, AND MAX WENQIANG XU
+using Lemma 4.3
+E
+h
+X
+P(n1)≤z
+b(n1; x/m1)f(n1)
+
+4i
+≪x
+m1
+x
+m1(log x)40(log x)3 ≪
+x2
+m2
+1(log x)37.
+Thus the contribution of this range of m1 to the expectation is
+≪x2(log x)−5
+X
+m1≤x/(log x)40
+d(m1)
+m1
+≪x2(log x)−3.
+In the second case, note that the sum over n1 again runs over integers in two intervals around
+x/m1 and (x + y)/m1 of length ≍δ1x/m1, and now there are at most a bounded number of
+integers in these intervals. Thus the expectation of the sum over n1 is bounded. Moreover,
+usually there are no integers n1 so close to x/m1 or (x + y)/m1, and the sum is non-zero only
+if for some integer k ≤2(log x)40 one has m1 lying in an interval of length O(x(log x)−40/k)
+around x/k or (x + y)/k. Thus the contribution from the second case is
+≪x
+3
+2(log x)
+17
+4
+X
+k≤2(log x)40
+
+X
+|m1−x/k|≪x(log x)−40/k
+d(m1)
+√m1
++
+X
+|m1−(x+y)/k|≪x(log x)−40/k
+d(m1)
+√m1
+
+≪x
+3
+2(log x)
+17
+4
+X
+k≤2(log x)40
+√x
+√
+k
+(log x)−39 ≪
+x2
+(log x)10.
+We conclude that the expected value of the contribution of the 15 remainder terms to (4.1) is
+≪x2/(log x)3 ≪y2/(log x)2, since y ≥x/(log x)
+1
+2. By Markov’s inequality we conclude that
+with probability 1 −O((log x)−1) the contribution of these terms to (4.1) is ≪y2/(log x),
+which is more than satisfactory.
+Thus our goal now is to understand
+(4.7) X
+m1,m2,m3,m4∈A
+m1m2=m3m4
+m1̸=m3,m2̸=m4
+P(m1)=P(m3)
+P(m2)=P(m4)
+X
+n1,n2,n3,n4
+P(nj)≤z
+a(n1; x/m1)f(n1)a(n2; x/m2)f(n2)a(n3; x/m3)f(n3)a(n4; x/m4)f(n4).
+The function a(u; v) may be expressed as a contour integral
+a(u; v) =
+1
+2πi
+Z
+(c)
+v
+u
+seδs −1
+s
+1 −e−δ1s
+δ1s
+
+ds,
+where the integral is taken over the line Re(s) = c > 0. We take the line of integration to be
+c = 1
+2, and writing s = 1
+2 + it express the above as
+a(u; v) = 1
+2π
+Z ∞
+−∞
+v
+u
+ 1
+2 +it
+W(t)dt,
+where the kernel W(t) = W(t; δ, δ1) is defined by
+(4.8)
+W(t) =
+eδ( 1
+2 +it) −1
+1
+2 + it
+1 −e−δ1( 1
+2 +it)
+δ1(1
+2 + it)
+
+.
+
+
+--- PDF page 39 ---
+DISTRIBUTION OF RANDOM MULTIPLICATIVE FUNCTIONS IN SHORT INTERVALS
+39
+We may readily check that W(t) satisfies the bound
+(4.9)
+W(t) ≪min
+
+δ,
+1
+1 + |t|
+
+min
+
+1,
+1
+δ1(1 + |t|)
+
+= min
+
+δ,
+1
+1 + |t|,
+1
+δ1(1 + |t|)2
+
+.
+With this notation, it follows that
+X
+P(n1)≤z
+a(n1; x/m1)f(n1) = 1
+2π
+Z ∞
+−∞
+Fz(1
+2 + it1)
+ x
+m1
+ 1
+2 +it1W(t1)dt1.
+An identical expression holds for the sum over n2, while for n3 and n4 we have closely
+analogous expressions after taking into account complex conjugation: for instance,
+X
+P(n3)≤z
+a(n3; x/m3)f(n3) = 1
+2π
+Z ∞
+−∞
+Fz(1
+2 + it3)
+ x
+m3
+ 1
+2 −it3W(t3)dt3.
+We use these expressions for the sums over nj in (4.7), and then bring in the outer sums
+over the mj, replacing the condition mj ∈A by just requiring mj > 1 and having prime
+factors in the range (z, x + y] (since the terms with mj > x + y have a(nj; x/mj) = 0). For
+ease of notation, define
+(4.10)
+G(t1, t2, t3, t4) =
+X⋆
+m1,m2,m3,m4>1
+1
+m
+1
+2 +it1
+1
+1
+m
+1
+2 +it2
+2
+1
+m
+1
+2 −it3
+3
+1
+m
+1
+2 −it4
+4
+,
+where the ⋆expresses the constraints
+p|mj =⇒p ∈(z, x + y]; m1m2 = m3m4;
+m1̸ = m3, m2̸ = m4;
+P(m1) = P(m3), P(m2) = P(m4).
+(4.11)
+Gathering our argument so far, we conclude that the desired quantity in (4.7) may be bounded
+by
+(4.12)
+≪x2
+Z
+t1,t2,t3,t4∈R
+4
+Y
+j=1
+|Fz(1
+2 + itj)W(tj)||G(t1, t2, t3, t4)|dt1dt2dt3dt4.
+Phase Two: Truncate the integrals. Our next step is to show that in (4.12) we may
+restrict attention to the range when all |tj| are at most (log x)100. To see this, we first record a
+simple bound on G(t1, t2, t3, t4). Using the triangle inequality, and keeping only the conditions
+that m1m2 = m3m4 (so that given m1, m2 there are at most d(m1m2) ≤d(m1)d(m2) choices
+for m3 and m4) and that all prime factors of mj are in (z, x + y], we see that
+|G(t1, t3, t3, t4)| ≤
+X
+m1,m2
+p|mj =⇒p∈(z,x+y]
+d(m1m2)
+m1m2
+≤
+
+X
+p|m1 =⇒p∈(z,x+y]
+d(m)
+m
+2
+=
+Y
+z<p≤x+y
+
+1 −1
+p
+−4
+≪
+log x
+log z
+4
+.
+
+
+--- PDF page 40 ---
+40
+ADAM J HARPER, KANNAN SOUNDARARAJAN, AND MAX WENQIANG XU
+Further, note that
+E
+h
+4
+Y
+j=1
+|Fz(1
+2 + itj)|
+i
+≤1
+4
+4
+X
+j=1
+E[|Fz(1
+2 + itj)|4] = E[|Fz(1
+2)|4] ≪(log z)4,
+where the third estimate follows by translation invariance, and the fourth moment bound
+follows by a straightforward calculation (or see [15, Euler Product Result 1]). Thus the
+expected value of the terms where one of the |tj| exceeds (log x)100 is
+≪x2log x
+log z
+4
+(log z)4 Z
+|t|≥(log x)100 |W(t)|dt
+ Z ∞
+−∞
+|W(t)|dt
+3
+≪
+x2
+(log x)50,
+upon using (4.9).
+Thus by Markov’s inequality, with probability 1 −O((log x)−1) the
+contribution of terms to (4.12) with one of the variables |tj| > (log x)100 is ≤y2/(log x)40
+which is satisfactory.
+Henceforth we restrict attention to the case where all |tj| are below (log x)100. Here a key
+feature will be that |G(t1, t2, t3, t4)| provides a saving unless the variables tj are all close
+to each other. For prime number theoretic reasons, we will need such a restriction on the
+maximum size of the tj to show the bound we want for |G(t1, t2, t3, t4)|. Indeed, it follows
+easily from the prime number theorem and partial summation (or consult [15, Number Theory
+Result 2]) that for any z ≤u ≤x + y, and |t| ≤2(log x)100 one has
+(4.13)
+
+X
+z<p≤u
+1
+p1+it
+ ≤min
+
+log log u
+log z + O(1), O
+
+1
+|t| log z
+
+.
+With this estimate in hand, we proceed to bounding |G(t1, t2, t3, t4)|.
+Lemma 4.4. For t ∈R define (interpreting γ(0) as 1)
+(4.14)
+γ(t) := min
+
+1,
+1
+|t| log x
+
+.
+In the range |tj| ≤(log x)100 for all 1 ≤j ≤4, we have
+(4.15)
+G(t1, t2, t3, t4) ≪
+log x
+log z
+4
+min{γ(t1 −t3)γ(t2 −t4), γ(t1 −t4) + γ(t2 −t3)}.
+As discussed earlier, the key feature of the above bound is that unless all four points
+t1, t2, t3, t4 are close to each other (on a scale of ≈1/ log x), we must have a saving. When
+we apply the bound, it will be very important that the extra factor (log x/ log z)4 is not too
+large (a very small power of log log x at most), and here it is crucial that z was chosen fairly
+close to x (on a logarithmic scale).
+Proof of Lemma 4.4. We parametrize the solutions to m1m2 = m3m4 by setting g = (m1, m3)
+and h = (m2, m4). Then writing m1 = ga and m3 = gb, we find that m2 = hb and m4 = ha.
+With this parametrization, we may write
+G(t1, t2, t3, t4) =
+X⋆
+a,b,g,h
+1
+g1+i(t1−t3)
+1
+h1+i(t2−t4)
+1
+a1+i(t1−t4)
+1
+b1+i(t2−t3),
+
+
+--- PDF page 41 ---
+DISTRIBUTION OF RANDOM MULTIPLICATIVE FUNCTIONS IN SHORT INTERVALS
+41
+where the ⋆indicates the conditions (obtained by rewriting the conditions in (4.11))
+p|(ghab) =⇒z < p ≤x + y;
+(a, b) = 1;
+ab > 1;
+g, h > 1;
+P(ab) ≤min(P(g), P(h)).
+One way to bound G is by keeping a and b on the outside, and exploiting cancellation in
+the g and h sums. Thus
+G(t1, t2, t3, t4) ≪
+X
+(a,b)=1
+ab>1
+p|ab =⇒z<p≤x+y
+1
+ab
+
+X
+g>1
+p|g =⇒p∈(z,x+y]
+P(ab)≤P(g)
+1
+g1+i(t1−t3)
+
+
+X
+h>1
+p|h =⇒p∈(z,x+y]
+P(ab)≤P(h)
+1
+h1+i(t2−t4)
+.
+Now the sum over g may be rewritten as
+X
+g>1
+p|g =⇒p∈(z,x+y]
+1
+g1+i(t1−t3) −
+X
+g>1
+p|g =⇒p∈(z,P(ab)]
+1
+g1+i(t1−t3),
+where we have
+
+X
+g>1
+p|g =⇒p∈(z,x+y]
+1
+g1+i(t1−t3)
+ =
+ exp
+
+X
+z<p≤x+y
+
+1
+p1+i(t1−t3) +O
+ 1
+p2
+
+−1
+ ≪
+log x
+log z
+
+γ(t1−t3),
+and the same bound for the sum over g with all prime factors on the range (z, P(ab)]. (To
+see the estimate above, note that if |t1 −t3| ≥1/ log z then (4.13) implies the prime sum is
+≪
+1
+|t1−t3| log z, and use the fact that ew −1 = O(w) when w = O(1). If |t1 −t3| ≤1/ log x,
+then (4.13) implies the prime sum has absolute value ≤log log x
+log z + O(1), and this gives an
+acceptable bound. Finally, if 1/ log x < |t1 −t3| < 1/ log z then splitting the prime sum at
+e1/|t1−t3| shows it has absolute value ≤log
+1
+|t1−t3| log z + O(1), and this also gives an acceptable
+bound.) A similar bound holds for the sum over h and we conclude that
+G(t1, t2, t3, t4) ≪
+log x
+log z
+2
+γ(t1−t3)γ(t2−t4)
+Y
+z<p≤x+y
+
+1−1
+p
+−2
+≪
+log x
+log z
+4
+γ(t1−t3)γ(t2−t4).
+This establishes one of the bounds claimed in the lemma.
+To establish the other bound, we keep the sums over g and h on the outside and look for
+cancellation in the sums over a and b. Thus
+G(t1, t2, t3, t4) ≪
+X
+g,h>1
+p|gh =⇒z<p≤x+y
+1
+gh
+
+X
+ab>1
+(a,b)=1
+p|ab =⇒z<p≤x+y
+P(ab)≤min(P(g),P(h))
+1
+a1+i(t1−t4)b1+i(t2−t3)
+.
+Now the sum over a, b equals
+Y
+z<p≤min(P(g),P(h))
+
+1 +
+∞
+X
+k=1
+1
+pk(1+i(t1−t4)) +
+∞
+X
+ℓ=1
+1
+pℓ(1+i(t2−t3))
+
+−1
+= exp
+
+X
+z<p≤min(P(g),P(h))
+
+1
+p1+i(t1−t4) +
+1
+p1+i(t2−t3) + O
+ 1
+p2
+
+−1
+
+
+--- PDF page 42 ---
+42
+ADAM J HARPER, KANNAN SOUNDARARAJAN, AND MAX WENQIANG XU
+and using (4.13) as above we see that this is ≪(log x
+log z)2(γ(t1 −t4) + γ(t2 −t3)). Thus
+G(t1, t2, t3, t4) ≪
+log x
+log z
+2
+(γ(t1 −t4) + γ(t2 −t3))
+Y
+z<p≤x+y
+
+1 −1
+p
+−2
+≪
+log x
+log z
+4
+(γ(t1 −t4) + γ(t2 −t3)),
+as desired.
+□
+We return to the problem of estimating (4.12) with the tj restricted to |tj| ≤(log x)100.
+Lemma 4.4 will allow us to make a further important truncation, to the situation where the
+four variables tj are all very nearly equal. Define
+R :=
+n
+(t1, t2, t3, t4) : |tj| ≤(log x)100; |t1−t3|, |t2−t4| ≤(log log z)3
+log z
+; |t1−t4| ≤(log log z)9
+log z
+o
+,
+and let Rc denote the complement of R in [−(log x)100, (log x)100]4.
+Lemma 4.5. Keep notations as above. With probability 1 −O((log log z)−1
+10), we have
+(4.16)
+x2
+Z
+Rc
+4
+Y
+j=1
+|Fz(1
+2 + itj)W(tj)||G(t1, t2, t3, t4)|dt1...dt4 ≪
+V (x, y)2
+(log log z)
+1
+5 .
+Proof. If (t1, t2, t3, t4) ∈Rc then we must have either (i) |t1−t3| or |t2−t4| ≥(log log z)3/ log z,
+or (ii) |t1 −t3| and |t2 −t4| are ≤(log log z)3/ log z but |t1 −t4| exceeds (log log z)9/ log z.
+We begin with case (i), supposing that |t1 −t3| ≥(log log z)3/ log z with an identical
+argument applying when |t2 −t4| is large. Here we use the bound of |G(t1, t2, t3, t4)| by
+(log x/ log z)4γ(t1 −t3)γ(t2 −t4) furnished by Lemma 4.4, together with the bound (4.9) for
+the weights W(tj). Thus we seek a bound for
+x2log x
+log z
+4 Z
+|t1|,|t3|≤(log x)100
+|t1−t3|>(log log z)3/ log z
+γ(t1 −t3)
+Y
+j=1,3
+|Fz(1
+2 + itj)| min
+n
+δ,
+1
+1 + |tj|
+o
+dt1dt3
+
+·
+ Z
+|t2|,|t4|≤(log x)100 γ(t2 −t4)
+Y
+j=2,4
+|Fz(1
+2 + itj)| min
+n
+δ,
+1
+1 + |tj|
+o
+dt2dt4
+
+.
+(4.17)
+Consider the expectation of the double integral over t1 and t3 above. Using [15, Euler
+product result 1], we obtain
+E[|Fz(1
+2 + it1)Fz(1
+2 + it3)|] ≪(log z)
+1
+2
+
+1
+|t1 −t3| + (log(2 + |t1 −t3|))2 1
+2
+≪(log z)
+1
+2
+
+1
+|t1 −t3|
+1
+2 + log log x
+
+.
+Since γ(t1 −t3) = (|t1 −t3| log x)−1 in this range, the expectation of this double integral is
+≪
+1
+(log x)
+1
+2
+Z
+|t1|,|t3|≤(log x)100
+|t1−t3|>(log log z)3/ log z
+1
+|t1 −t3|
+
+1
+|t1 −t3|
+1
+2 + log log x
+ Y
+j=1,3
+min
+
+δ,
+1
+1 + |tj|
+
+dt1dt3.
+
+
+--- PDF page 43 ---
+DISTRIBUTION OF RANDOM MULTIPLICATIVE FUNCTIONS IN SHORT INTERVALS
+43
+Bounding min(δ, 1/(1+|t1|)) min(δ, 1/(1+|t3|)) by min(δ2, 1/(1+|t1|2))+min(δ2, 1/(1+|t3|2)),
+and using the symmetry of t1 and t3 we may bound the above by
+≪
+1
+(log x)
+1
+2
+Z
+|t1|≤(log x)100 min
+
+δ2,
+1
+1 + |t1|2
+
+(log z)
+1
+2
+(log log z)
+3
+2 dt1 ≪
+δ
+(log log z)
+3
+2 .
+By Markov’s inequality, we conclude that the double integral over t1 and t3 is at most
+δ(log log z)−7
+5 with probability 1 −O((log log z)−1
+10).
+The double integral over t2, t4 may be handled exactly similarly, except now we need
+to include the contribution from points where |t2 −t4| ≤(log log z)3/ log z. Using that
+E[|Fz(1
+2 + it2)Fz(1
+2 + it4)|] ≪log z, the expected value of this extra portion is
+≪log z
+Z
+|t2|,|t4|≤(log x)100
+|t2−t4|≤(log log z)3/ log z
+min
+
+δ,
+1
+1 + |t2|
+
+min
+
+δ,
+1
+1 + |t4|
+
+min
+
+1,
+1
+|t2 −t4| log x
+
+dt2dt4,
+which by a small calculation is ≪δ. Once again by Markov’s inequality, with probability
+1 −O((log log z)−1
+10) the double integral over t2 and t4 in (4.17) is bounded by δ(log log z)
+1
+10.
+Combining these two observations, and recalling that δ ≍y/x, we deduce that with
+probability 1 −O((log log z)−1
+10) the quantity in (4.17) is
+≪x2log x
+log z
+4
+δ
+(log log z)
+7
+5 δ(log log z)
+1
+10 ≪
+y2
+(log log z)
+6
+5 ≪
+V (x, y)2
+(log log z)
+1
+5 .
+This takes care of case (i), and we turn now to the second case when |t1 −t3| and |t2 −t4|
+are ≤(log log z)3/ log z but |t1 −t4| exceeds (log log z)9/ log z. Note that |t2 −t3| is forced to
+be ≫(log log z)9/ log z, so that |G(t1, t2, t3, t4)| ≪(log x/ log z)4(γ(t1 −t4) + γ(t2 −t3)) ≪
+(log log z)−8. Therefore the contribution of this case to (4.16) is
+(4.18)
+≪
+x2
+(log log x)8
+ Z
+|t1|,|t3|≤(log x)100
+|t1−t3|≤(log log z)3/ log z
+Y
+j=1,3
+|Fz(1
+2 + itj)| min
+
+δ2,
+1
+1 + |t1|2
+
+dt1dt3
+2
+,
+where we used that the integral over t2, t4 here is identical to the one over t1, t3. Using
+E[|Fz(1
+2 + it1)Fz(1
+2 + it3)|] ≪log z, the expected value of the double integral above is
+≪log z
+Z
+|t1|,|t3|≤(log x)100
+|t1−t3|≤(log log z)3/ log z
+min
+
+δ2,
+1
+1 + |t1|2
+
+dt1dt3 ≪δ(log log z)3.
+Thus with probability at least 1 −O((log log z)−1
+10) the double integral in (4.18) is
+≤δ(log log z)3+ 1
+10, so (again recalling that δ ≍y/x) the quantity in (4.18) is ≪y2(log log z)−9
+5.
+This is stronger than the stated bound and completes the proof of the lemma.
+□
+Phase Three: Handle the near diagonal. In view of Lemma 4.5, it remains now to
+estimate the integral in (4.12) when restricted to the region R, where in particular all four
+variables t1, t2, t3, t4 are near each other (precisely, within 2(log log z)9/ log z of each other).
+We use the bound |G(t1, t2, t3, t4)| ≪(log x/ log z)4γ(t1 −t3)γ(t2 −t4) and note that
+4
+Y
+j=1
+|Fz(1
+2 + itj)| ≤|Fz(1
+2 + it1)Fz(1
+2 + it2)|2 + |Fz(1
+2 + it3)Fz(1
+2 + it4)|2.
+
+
+--- PDF page 44 ---
+44
+ADAM J HARPER, KANNAN SOUNDARARAJAN, AND MAX WENQIANG XU
+Thus the integral over the region R in (4.12) may be bounded by
+≪x2log x
+log z
+4 Z
+|t1|,|t2|≤(log x)100
+|t1−t2|≤2(log log z)9/ log z
+|Fz(1
+2 + it1)Fz(1
+2 + it2)|2|W(t1)W(t2)|
+×
+Z
+|t1−t3|≤2(log log z)9/ log z
+γ(t1 −t3)|W(t3)|dt3
+Z
+|t2−t4|≤2(log log z)9/ log z
+γ(t2 −t4)|W(t4)|dt4dt1dt2.
+Here we have omitted the term corresponding to |Fz(1
+2 + it3)Fz(1
+2 + it4)|2, which makes an
+identical contribution.
+Now
+Z
+|t1−t3|≤2(log log z)9/ log z
+γ(t1 −t3)|W(t3)|dt3 ≪min
+
+δ,
+1
+1 + |t1|
+log log log x
+log x
+≪
+1
+log z min
+
+δ,
+1
+1 + |t1|
+
+,
+and a similar bound holds for the integral over t4. Thus we are left with the task of bounding
+(4.19)
+x2
+(log z)2
+log x
+log z
+4 Z
+|t1|,|t2|≤(log x)100
+|t1−t2|≤2(log log z)9/ log z
+2
+Y
+j=1
+|Fz(1
+2 + itj)|2 min
+
+δ2,
+1
+1 + |tj|2
+
+dt1dt2.
+We use the barrier events method again to analyze the above double integral. The situation
+is similar to our work in section 3; while what we require now is less delicate than our work in
+that section, there is one further complication that the range of the tj here can be quite large
+compared with T. Thus let τ ∗be the smallest natural number for which ze−τ∗
+≤e(log log z)3,
+and B be a suitably large fixed number. For |t| ≤(log x)100, let G∗(t) be the event that for
+all 0 ≤j ≤τ ∗−1
+(4.20) (
+p
+T + |t|eτ ∗−j log log z)−B ≤
+Y
+ze−τ∗<p≤ze−j
+1 −f(p)
+p
+1
+2 +it
+
+−1
+≤
+p
+T + |t|eτ ∗−j(log log z)5.
+Let H∗(t) denote the event that G∗(t) holds and in addition
+(4.21)
+Y
+ze−τ∗<p≤z
+1 −f(p)
+p
+1
+2 +it
+
+−1
+≤
+p
+T + |t|
+eτ ∗
+(log log z)50.
+Note that the barriers here weaken when |t| ≥T, which is needed to show that G∗(t) holds
+for all |t| ≤(log x)100 with high probability. This weakening will be compensated by the
+decay of |W(t)| for large t. Another feature is that, compared to H(t) where there is an extra
+restriction at all scales j, the event H∗is simpler and only imposes an extra restriction on
+the full Euler product up to z. The very close proximity of t1 and t2 in (4.19) means that
+we will only use the barrier H∗(t) to factor out and bound a copy of the full Euler product.
+The extra saving (log log z)50 in (4.21), showing that (when H∗(t) holds) the Euler products
+cannot be too large, will then lead to an acceptable bound for (4.19).
+We first modify the argument of Proposition 3.3 to show that the event G∗(t) holds for all
+|t| ≤(log x)100 with high probability.
+
+
+--- PDF page 45 ---
+DISTRIBUTION OF RANDOM MULTIPLICATIVE FUNCTIONS IN SHORT INTERVALS
+45
+Proposition 4.6. With notations as above
+P
+ G∗(t) holds for all |t| ≤(log x)100
+≥1 −O((log log x)−5).
+Proof. The argument follows closely the pattern of Proposition 3.3. For each 0 ≤j ≤τ ∗−1
+we consider the probability that (4.20) fails for some t with |t| ≤(log x)100, and study this
+quantity by considering the mesh of points Tj = {ˆt = ejn/ log z :
+n ∈Z, |ˆt| ≤(log x)100}.
+Since
+E
+h
+Y
+ze−τ∗<p≤ze−j
+1 −f(p)
+p1/2+it
+
+−2i
+=
+Y
+ze−τ∗<p≤ze−j
+
+1 −1
+p
+−1
+∼eτ ∗−j,
+the probability that the Euler product in (4.20) gets as large as half the right side there is
+≪(T + |t|)−1ej−τ ∗(log log z)−10. Thus the probability that this happens for some point in
+the mesh Tj is
+≪
+X
+|n|≤e−j(log z)(log x)100
+(T + ej|n|/ log z)−1ej−τ ∗(log log z)−10 ≪e−τ ∗(log z)
+(log log z)9 ≪(log log z)−6.
+Summing this over the ≪log log z possibilities for j, gives a bound of O((log log z)−5) for
+the probability with which (4.20) can fail (in terms of the upper bound imposed there) for a
+point in our discretized sets. This is the dominant contribution, and the other possibilities
+that arise (as in Proposition 3.3) may be treated similarly.
+□
+Proposition 4.7. With notations as above, for all |t| ≤(log x)100, we have
+E[1G∗(t)|Fz(1
+2 + it)|2] ≍log z · min
+n
+1, log(T + |t|) + log log log z
+√log log z
+o
+and, noting that (1G∗(t) −1H∗(t)) is the indicator function of the event that G∗(t) holds but
+H∗(t) fails,
+E[(1G∗(t) −1H∗(t))|Fz(1
+2 + it)|2] ≪log z · min
+n
+1, log(T + |t|)
+√log log z
+o
+· (log log log z)3
+log log z
+.
+Proof. The proof of the first estimate is identical to the proof of Proposition 3.5. By comparing
+the definition of G∗(t) here and H(t) in Proposition 3.5, we see the relevant random walk
+event is now
+−B
+2 log(T + |t|) −(B + 1)j −B log log log z −O(1) ≤
+j
+X
+m=1
+Gm
+≤log(T + |t|)
+2
++ 5 log log log z + O(1),
+for all j ≤τ ∗. Since T ≪x/y ≤(log x)
+1
+2 and |t| ≤(log x)100, we see log(T +|t|)+log log log z
+is small compared with
+p
+log(ze−τ∗) ≍(log log z)
+3
+2, so that [14, Lemma 4] applies. The
+Probability Results 1, 2 in [14] yield a probability estimate for the random walk
+≍min
+
+1, log(T + |t|) + log log log z
+√
+τ ∗
+
+≍min
+
+1, log(T + |t|) + log log log z
+√log log z
+
+,
+which proves the first estimate.
+
+
+--- PDF page 46 ---
+46
+ADAM J HARPER, KANNAN SOUNDARARAJAN, AND MAX WENQIANG XU
+The second statement follows similarly to the proof of Proposition 3.6 and is indeed simpler
+since in the definition of H∗, we only further constrain the Euler product for ze−τ∗
+< p ≤ze−j
+for j = 0 (in addition to the G∗constraints). Modifying our earlier proof, we need only set
+J = 0 and consider the analogue (with the barriers now corresponding to G∗, H∗) of the event
+A0(t). An application of the ballot theorem gives (analogously to (3.19)) that
+E[(1G∗(t) −1H∗(t))|Fz(1
+2 + it)|2]
+≪E[|Fz(1
+2 + it)|2] min
+n
+1, log(T + |t|) + log log log z
+√
+τ ∗
+o(log log log z)2
+τ ∗
+.
+Since τ ∗≍log log z, we obtain the second stated result.
+□
+We are now ready to resume the task of bounding (4.19). In view of Proposition 4.6, with
+high probability we may assume that in (4.19) both G∗(t1) and G∗(t2) hold: thus, we seek
+now to bound
+(4.22)
+x2
+(log z)2
+log x
+log z
+4 Z
+|t1|,|t2|≤(log x)100
+|t1−t2|≤2(log log z)9/ log z
+2
+Y
+j=1
+1G∗(tj)|Fz(1
+2 + itj)|2 min
+
+δ2,
+1
+1 + |tj|2
+
+dt1dt2.
+To bound (4.22) we first show that, up to acceptable errors, one can replace 1G∗(t2) by the
+stronger condition 1H∗(t2). Define
+(4.23)
+I1 :=
+1
+log z
+Z
+|t|≤(log x)100 |Fz(1
+2 + it)|21G∗(t) min
+
+δ2,
+1
+1 + t2
+
+dt,
+and
+(4.24)
+I2 :=
+1
+log z
+Z
+|t|≤(log x)100 |Fz(1
+2 + it)|2(1G∗(t) −1H∗(t)) min
+
+δ2,
+1
+1 + t2
+
+dt.
+The first part of Proposition 4.7 shows (recalling δ ≍y/x ≍1/T) that
+E[I1] ≪
+Z
+|t|≤(log x)100 min
+
+1, log(T + |t|) + log log log z
+√log log z
+
+min
+
+δ2,
+1
+1 + t2
+
+dt
+≪δ min
+
+1, log T + log log log z
+√log log z
+
+.
+By Markov’s inequality, it follows that with probability at least 1−O((log log z)−1
+10), we have
+(4.25)
+I1 ≪(log log z)
+1
+9δ min
+
+1,
+log T
+√log log z
+
+.
+The second part of Proposition 4.7 shows that
+E[I2] ≪
+Z
+|t|≤(log x)100 min
+
+1, log(T + |t|)
+√log log z
+(log log log z)3
+log log z
+min
+
+δ2,
+1
+1 + t2
+
+dt
+≪δ min
+
+1,
+log T
+√log log z
+(log log log z)3
+log log z
+,
+
+
+--- PDF page 47 ---
+DISTRIBUTION OF RANDOM MULTIPLICATIVE FUNCTIONS IN SHORT INTERVALS
+47
+so that with probability 1 −O((log log z)−1
+10) we have
+(4.26)
+I2 ≪δ min
+
+1,
+log T
+√log log z
+
+(log log z)−8
+9.
+Thus with probability 1 −O((log log z)−1
+10) both (4.25) and (4.26) hold, and the contribution
+to (4.22) from the portion of the integral where H∗(t2) fails is at most (temporarily dropping
+the condition that t1 and t2 are to be close)
+≪x2log x
+log z
+4
+I1 · I2 ≪
+y2
+(log log z)
+3
+4 min
+
+1, (log T)2
+log log z
+
+≪
+V (x, y)2
+(log log z)
+3
+4 ,
+which is satisfactory. We remark that the small size of (log x)/ log z is very important at this
+step.
+It remains lastly to consider the contribution to (4.22) where H∗(t2) holds. Note that
+(using (4.21) at t2 and dropping the condition G∗(t1))
+E
+h
+1G∗(t1)|Fz(1
+2 + it1)|21H∗(t2)|Fz(1
+2 + it2)|2]
+≪e2τ ∗(T + |t2|)
+(log log z)100 E
+h
+|Fz(1
+2 + it1)|2
+Y
+p≤ze−τ∗
+1 −f(p)
+p
+1
+2 +it2
+
+−2i
+.
+Using the independence of f on distinct primes, and Euler Product Result 1 in [15], we obtain
+E
+h
+|Fz(1
+2 + it1)|2
+Y
+p≤ze−τ∗
+1 −f(p)
+p
+1
+2 +it2
+
+−2i
+= E
+h
+Y
+p≤ze−τ∗
+|1 −f(p)
+p
+1
+2 +it1 |−2
+Y
+p≤ze−τ∗
+1 −f(p)
+p
+1
+2 +it2
+
+−2i
+Y
+ze−τ∗<p≤z
+
+1 −1
+p
+−1
+≪(e−τ ∗log z)4eτ ∗.
+Thus the expected contribution to (4.22) from the terms where H∗(t2) holds is (recall that
+e−τ ∗log z is about (log log z)3 by definition)
+≪x2 e−τ ∗(log z)2
+(log log z)100
+log x
+log z
+4 Z
+|t1|,|t2|≤(log x)100
+|t1−t2|≤2(log log z)9/ log z
+(T + |t2|) min
+
+δ2,
+1
+1 + t2
+2
+2
+dt1dt2
+≪
+x2
+(log log z)87
+Z
+|t2|≤(log x)100(T + |t2|) min
+
+δ2,
+1
+1 + t2
+2
+2
+dt2 ≪
+y2
+(log log z)87.
+At this step, we crucially retained and used the restriction that |t1 −t2| ≤2(log log z)9/ log z.
+By Markov’s inequality it follows that with probability 1 −O((log log x)−1) this contribution
+to (4.22) is ≪y2(log log z)−86, which is better than needed.
+Tracking back through all our reductions, and keeping in mind (4.3), at last we conclude
+that (4.1) holds with the desired high probability.
+□
+
+
+--- PDF page 48 ---
+48
+ADAM J HARPER, KANNAN SOUNDARARAJAN, AND MAX WENQIANG XU
+5. Long sums
+5.1. Proof of Proposition 1.2. The main theorems of Harper [14] imply the existence of
+absolute constants c, C with 0 < c ≤C, such that uniformly for all large x and 0 ≤q ≤1 we
+have
+(5.1)
+c
+
+x
+1 + (1 −q)√log log x
+q
+≤E[|
+X
+n≤x
+f(n)|2q] ≤C
+
+x
+1 + (1 −q)√log log x
+q
+.
+For ease of notation put temporarily g = (log log x)
+1
+4x−1
+2 P
+n≤x f(n), so that uniformly in
+q ≤1 −1/√log log x we find from (5.1)
+(5.2)
+c
+3(1 −q) ≤E[|g|2q] ≤
+C
+(1 −q).
+Here we used that (2(1−q))−q ≥1/(3(1−q)) and that (1−q)−q ≤(1−q)−1 for all 0 ≤q < 1.
+Let λ be large, and take
+p = 1 −
+1
+log λ,
+q = 1 −
+c
+50C log λ,
+r = 1 −
+c
+100C log λ,
+so that 0 < p < q < r ≤1 −1/√log log x for x sufficiently large (in terms of λ). We will
+apply (5.2) to analyze the 2p, 2q and 2r-th moments of g. The increased size of the 2q-th
+moment compared with the 2p-th moment will allow us to conclude that a large portion of
+the 2q-th moment must be produced by values |g| > λ. On the other hand, the fact that the
+2r-th moment isn’t too much bigger than the 2q-th will imply that this size isn’t all produced
+by values much larger than λ, and so |g| must exceed λ with reasonable probability.
+Note that
+E[|g|2q1|g|>λ] = E[|g|2q] −E[|g|2q1|g|≤λ] ≥E[|g|2q] −λ2(q−p)E[|g|2p]
+≥
+c
+3(1 −q) −e2
+C
+(1 −p) ≥8C log λ.
+On the other hand, by H¨older’s inequality
+E[|g|2q1|g|>λ] ≤(P[|g| > λ])1−q
+r (E[|g|2r])
+q
+r ≤(P[|g| > λ])1−q
+r (100C2c−1 log λ)
+q
+r
+≤(P[|g| > λ])1−q
+r (100C2c−1 log λ).
+We conclude that
+P[|g| > λ] ≥
+ 2c
+25C
+r/(r−q)
+≥
+ 2c
+25C
+1/(r−q)
+= λ−A
+with A = 100(C/c) log(25C/2c), which proves the desired bound.
+Similarly for P
+x≤n≤(1+δ)x f(n), there exist constants 0 < c(δ) ≤C(δ) such that
+(5.3)
+c(δ)
+
+δx
+1 + (1 −q)√log log x
+q
+≤E[
+
+X
+x≤n≤(1+δ)x
+f(n)
+
+2q
+] ≤C(δ)
+
+δx
+1 + (1 −q)√log log x
+q
+for all large enough x (depending on δ) and 0 ≤q ≤1. The existence of C(δ) follows
+immediately from (5.1) and the triangle inequality, or from Theorem 1.1 of Caich [1] (which
+
+
+--- PDF page 49 ---
+DISTRIBUTION OF RANDOM MULTIPLICATIVE FUNCTIONS IN SHORT INTERVALS
+49
+would yield a much better dependence on δ, in fact with C(δ) uniformly bounded if q is
+close enough to 1 depending on δ). The existence of c(δ) follows by slightly adapting the
+arguments of Harper [14] along the lines of section 2 here. For example one could show that
+(omitting smaller order terms below)
+E[
+
+X
+x≤n≤(1+δ)x
+f(n)
+
+2q
+]
+≫
+(δx)qE
+h
+δ
+log x
+Z 1/(100δ)
+−1/(100δ)
+Fx3/4(1
+2 + B log(1/δ)
+log x
++ it)
+
+2
+dt
+qi
+≥
+(δx)qE
+h
+δ
+log x
+Z 1/2
+−1/2
+Fx3/4(1
+2 + B log(1/δ)
+log x
++ it)
+
+2
+dt
+qi
+for a suitable large constant B, and then the results in section 5 of Harper [14] show this is
+indeed ≥c(δ)
+
+δx
+1+(1−q)√log log x
+q
+. The claimed lower bound in Proposition 1.2 can then be
+obtained by exactly the same argument as for P
+n≤x f(n).
+□
+5.2. Long sums cannot converge to a non-degenerate Gaussian. As mentioned in the
+Introduction, a particular consequence of Proposition 1.2 (and other known results) is that
+there is no normalizing factor V (x) for which
+1
+√
+V (x)
+P
+n≤x f(n) can converge in distribution
+to a non-degenerate Gaussian. Indeed (1.1) gives
+1
+p
+V (x)
+E
+h
+X
+n≤x
+f(n)
+
+i
+≪
+1
+p
+V (x)
+√x
+(log log x)
+1
+4 ,
+so that V (x) must necessarily be bounded by Lx/(log log x)
+1
+2 for some constant L. But in
+this case, Proposition 1.2 yields that
+P
+
+1
+p
+V (x)
+
+X
+n≤x
+f(n)
+ ≥λ
+
+≥P
+
+X
+n≤x
+f(n)
+ ≥λ
+√
+L
+√x
+(log log x)1/4
+
+≥
+1
+LA/2λA.
+For sufficiently large fixed λ, this greatly exceeds the Gaussian tail, preventing convergence
+in distribution.
+In fact, there is an even softer argument for showing that (log log x)1/4
+√x
+P
+n≤x f(n) cannot
+converge in distribution to a Gaussian (although the probability lower bound in Proposi-
+tion 1.2 seems of independent interest). For any fixed q0 < 1, the moment bounds (5.1)
+imply that ((log log x)1/4
+√x
+)2q0E[| P
+n≤x f(n)|2q0] is uniformly bounded as x →∞. By general
+probability theory (see e.g. Theorem 4.2 of Gut [10]), this means that for any fixed q < q0
+(so for any fixed q < 1), the sequence of random variables ((log log x)1/4
+√x
+)2q| P
+n≤x f(n)|2q
+is uniformly integrable. Again by general theory (see e.g. Theorem 5.9 of Gut [10]), if
+(log log x)1/4
+√x
+P
+n≤x f(n) were converging to a Gaussian, we would then get that all of the moments
+((log log x)1/4
+√x
+)2qE[| P
+n≤x f(n)|2q] with q < 1 would converge to the moments of that Gaussian
+limit. But the 2q-th moments of any fixed Gaussian are uniformly bounded for all q ≤1,
+whereas the lower bound part of (5.1) shows the moments ((log log x)1/4
+√x
+)2qE[| P
+n≤x f(n)|2q] can
+be made arbitrarily large by taking q close enough to 1.
+For any fixed small δ > 0, exactly the same considerations apply to P
+x≤n≤(1+δ)x f(n).
+
+
+--- PDF page 50 ---
+50
+ADAM J HARPER, KANNAN SOUNDARARAJAN, AND MAX WENQIANG XU
+References
+[1] R. Caich. Random multiplicative functions and typical size of character in short intervals. 2024. Preprint
+available at arxiv.org/abs/2402.06426.
+[2] Christine Chang. Hybrid statistics of a random model of zeta over intervals of varying length. 2024.
+Preprint available at arxiv.org/abs/2404.08575.
+[3] Sourav Chatterjee and Kannan Soundararajan. Random multiplicative functions in short intervals. Int.
+Math. Res. Not. IMRN, 3:479–492, 2012.
+[4] Ofir Gorodetsky, Alexander P Mangerel, and Brad Rodgers. Squarefrees are Gaussian in short intervals.
+Journal f¨ur die reine und angewandte Mathematik, 795:1–44, 2023.
+[5] Ofir Gorodetsky and Mo Dick Wong. Martingale central limit theorem for random multiplicative functions.
+2024. Preprint available at arxiv.org/abs/2405.20311.
+[6] Ofir Gorodetsky and Mo Dick Wong. On the limiting distribution of sums of random multiplicative
+functions, 2025. Preprint available at arxiv.org/abs/2508.12956.
+[7] Ofir Gorodetsky and Mo Dick Wong. A short proof of Helson’s conjecture. Bulletin of the London
+Mathematical Society, 57(4):1065–1076, February 2025.
+[8] Andrew Granville. Smooth numbers: computational number theory and beyond. In Algorithmic number
+theory: lattices, number fields, curves and cryptography, volume 44 of Math. Sci. Res. Inst. Publ., pages
+267–323. Cambridge Univ. Press, Cambridge, 2008.
+[9] G. R. Grimmett and D. R. Stirzaker. Probability and Random Processes. Oxford University Press, 3rd
+edition, 2001.
+[10] Allan Gut. Probability: a graduate course. Springer Texts in Statistics. Springer, New York, second
+edition, 2013.
+[11] Seth Hardy. The distribution of partial sums of random multiplicative functions with a large prime
+factor, 2025. Preprint available at arxiv.org/abs/2503.06256.
+[12] Adam J. Harper. On the limit distributions of some sums of a random multiplicative function. J. Reine
+Angew. Math., 678:95–124, 2013.
+[13] Adam J. Harper. On the partition function of the Riemann zeta function, and the Fyodorov–Hiary–
+Keating conjecture, 2019. Preprint available at arxiv.org/abs/1906.05783.
+[14] Adam J. Harper. Moments of random multiplicative functions, I: Low moments, better than squareroot
+cancellation, and critical multiplicative chaos. Forum Math. Pi, 8:e1, 95, 2020.
+[15] Adam J. Harper. Almost Sure Large Fluctuations of Random Multiplicative Functions. International
+Mathematics Research Notices, 2023(3):2095–2138, 2023. rnab299.
+[16] Henry Helson. Hankel forms. Studia Math., 198(1):79–84, 2010.
+[17] Adolf Hildebrand. Integers free of large prime divisors in short intervals. Quart. J. Math. Oxford Ser.
+(2), 36(141):57–69, 1985.
+[18] H. Iwaniec. On the error term in the linear sieve. Acta Arith., 19:1–30, 1971.
+[19] D. L. McLeish. Dependent central limit theorems and invariance principles. Ann. Probability, 2:620–628,
+1974.
+[20] Hugh L. Montgomery and K. Soundararajan. Primes in short intervals. Communications in Mathematical
+Physics, 252(1-3):589–617, 2004.
+[21] Kannan Soundararajan and Max Wenqiang Xu. Central limit theorems for random multiplicative
+functions. J. Anal. Math., 151(1):343–374, 2023.
+[22] Kannan Soundararajan and Asif Zaman. A model problem for multiplicative chaos in number theory.
+Enseign. Math., 68(3-4):307–340, 2022.
+[23] Max Wenqiang Xu. Better than square-root cancellation for random multiplicative functions. Trans.
+Amer. Math. Soc. Ser. B, 11:482–507, 2024.
+
+
+--- PDF page 51 ---
+DISTRIBUTION OF RANDOM MULTIPLICATIVE FUNCTIONS IN SHORT INTERVALS
+51
+Mathematics Institute, Zeeman Building, University of Warwick, Coventry CV4 7AL,
+England
+Email address: A.Harper@warwick.ac.uk
+Department of Mathematics, Stanford University, Stanford, CA, USA
+Email address: ksound@stanford.edu
+Yau Mathematical Sciences Center, Tsinghua University, Beijing, China
+Email address: maxxu1729@gmail.com

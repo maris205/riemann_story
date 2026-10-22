@@ -1,0 +1,1088 @@
+
+--- PDF page 1 ---
+Lord Robert May of Oxford 1936–2020*
+Lord (John) KrebsA,D, Michael HassellB and Sir Charles GodfrayA,C
+ADepartment of Zoology University of Oxford, Zoology Research and Administration Building 11a Mansfield
+Rd, Oxford OX1 3SZ, UK.
+BImperial College London, Exhibition Road, South Kensington, London SW7 2BX, UK and Barnside,
+Buckland Brewer, Bideford, Devon EX39 5NF, UK.
+COxford Martin School, University of Oxford, 34 Broad St, Oxford OX1 3BD, UK.
+DCorresponding author. Email: john.krebs@zoo.ox.ac.uk
+Robert May was the leading theoretical ecologist of his generation. He started his career as a theoretical physicist and began the 
+transition to ecology soon after completing a post-doctoral fellowship at Harvard. His mathematical analysis of the stability of 
+ecological communities challenged orthodox views and spawned a new research agenda. He demonstrated that many different 
+patterns of population fluctuations, including chaotic behaviour, could arise from simple mathematical models. Together with 
+R. M. Anderson he transformed the mathematical modelling of infectious diseases. All of his work was characterised by his 
+remarkable ability to reduce complex problems to their essential simplicities. His achievements were recognised by the award of 
+numerous major international prizes. May also served as government chief scientific advisor (UK) between 1995 and 2000, and as 
+president of the Royal Society between 2000 and 2005.
+Published online 11 January 2022
+Early years
+Robert (‘Bob’) McCredie May (Fig. 1) was born on 8 January 1936 in
+Sydney, New South Wales, Australia. His paternal grandfather, who
+ranapharmaceuticalwholesalebusinessnearCarrickfergus,Northern
+Ireland, had left abruptly as a consequence of death threats from the
+Irish Republican Army (IRA), when May’s father was about fourteen
+yearsold.Bob’smaternalgreat-grandfatherhadmovedfromStranraer
+to work in Northern Ireland as a stonemason on the Lanyon Building
+at Queen’s University, Belfast. The family subsequently moved to
+Australia and became prosperous builders and quarry owners,
+although by the time May was born the money had largely dissipated.
+May’s parents met through a local Presbyterian church in
+Sydney. His father started out as a successful barrister, but quite
+early in his career became an alcoholic, as a result of which he was
+divorced by May’s mother when May was seven years old. May
+subsequently hardly ever met his father and was aged just seventeen
+when he last saw him. This left a permanent mark on May’s outlook:
+he was a teetotaller and to the end of his life was ambivalent about
+his father, on the one hand never forgiving him for being an
+alcoholic, on the other, admiring his talent as a lawyer and often
+recounting that he had been one of the smartest of his generation.
+May’s only sibling, his surviving younger brother Ron (Fig. 2), a
+talented athlete, worked as a senior economist at the Reserve Bank
+of Australia. Having been posted to Port Moresby in Papua New
+Guinea (PNG), where the bank had an office, in his spare time he
+assembled a substantial collection of cultural artefacts. He soon
+switched jobs to head the Australian National University Field
+Station and became an academic expert on the history, culture and
+politics of PNG and other Pacific countries.
+May’s mother was both a strict disciplinarian and protective
+towards her sons. Bob suffered from asthma, and as a result missed a
+lot of school as a young boy, and was not allowed to join others in
+Fig. 1.
+The portrait photograph was taken in 1985 for the Royal
+Society and is  Godfrey Argent Studio.
+* This memoir was commissioned by Biographical Memoirs of the Royal Society and is published here with minor amendments. It was published by the Royal
+Society online on 23 June 2021 and is available at https:doi.org/10.1098/rsbm.2021.0007.
+CSIRO PUBLISHING
+Historical Records of Australian Science
+https://doi.org/10.1071/HRv33n1_BM
+Journal compilation  Australian Academy of Science 2022
+www.publish.csiro.au/journals/hras
+
+
+--- PDF page 2 ---
+certain activities such as swimming. He was, by his own account a
+rather solitary child, a voracious reader, and ‘inhabited the world of
+imagination’.1 During the early years of World War 2, he was taught
+by his mother and two great aunts, who had been missionaries in
+India and lived in the Blue Mountains west of Sydney, before he
+moved back to the city to complete his primary and secondary
+school education.
+The family was Scottish Presbyterian and, although by the age of
+about twelve May had decided he was not a believer, his social life
+revolved around the church and he led the local Presbyterian youth
+fellowship, taught bible classes and even preached a couple of
+sermons as well as becoming the table tennis champion of the youth
+fellowship.
+Young May began to show his exceptional intellectual, and in
+particular his mathematical, prowess at Sydney Boys High School, a
+selective state school. He remained very proud of the school, saying
+it ‘had wonderful teachers’ and that he had a ‘wonderful time’ there.
+His performance in his high school mock graduation exams showed
+how far ahead of his peers he stood: he scored ,784 out of 800,
+,100 marks clear of the next boy. May said that he found exams
+very easy and his stellar performance was a kind of ‘party trick’.
+Student at the University of Sydney
+The person who influenced May most at Sydney Boys High was
+his chemistry teacher, Lenny Basser. May reported that seven of
+Basser’s pupils went on to be elected Fellow of the Royal Society
+Fig. 2.
+Bob and Ron (photograph courtesy of Mrs Judith May).
+1 The ‘account’ is the interview with May conducted by Robin Williams, from which quotations and other information in this memoir are drawn. Williams
+(2008).
+B
+Lord Robert May of Oxford 1936–2020
+
+
+--- PDF page 3 ---
+(FRS), three to the United States National Academy of Sciences and
+one won a Nobel Prize. It was at Basser’s suggestion that May
+decided to study chemical engineering at the University of Sydney
+(Fig. 3). He greatly enjoyed student life, found a congenial set of
+friends, and played a lot of chess and snooker, though he found the
+practical side of chemistry and the long hours in the laboratory
+rather time-consuming.
+First year chemical engineering involved classes in mathemat-
+ics, chemistry and physics, and while May did the honours courses
+in the first two he only signed up for pass degree level physics. But
+when the exams came, on a whim he also took the honours physics
+exam (he claimed it was the last test and he had to hang around for
+his friends to finish before they all went to a party) and came top,
+winning a prize in chemistry and physics. But to claim the lucrative
+prize he had to do second-year physics, and this led to him coming to
+the attention of the head of physics, Harry Messel (1922–2015).2
+Messel had been hired by the university to strengthen Sydney’s
+physics department and he recruited a talented group of young
+physicists including Stuart Butler, John Blatt and Robert ‘Robbie’
+Schafroth. Messel spotted May’s potential as a theoretical physicist
+and persuaded him to switch from engineering to science. May
+recalled making this decision knowing that he was giving up a safe
+vocational degree for the riskier career choice of academic science.
+The fact, obvious to May, that the Sydney physicists under Messel’s
+inspirational leadership were having intellectual fun seems to have
+strongly influenced him. He described pure research as ‘playing
+games with Nature in which the rules of the game are to try to work
+out what the rules are’. In his third year, May had to choose to major
+in pure mathematics, applied mathematics or physics, but against
+advice majored in all three, and came top in all three.
+May remained at Sydney to do graduate work on superconduc-
+tivity with Schafroth who had been a student and then assistant of
+Wolfgang Pauli. At the time, May said, there was a ‘wonderful
+arrogance’ among theoretical physicists and ‘people felt that it
+would be possible to start a whole new area of solid state physics on
+a wet weekend’. Explaining superconductivity was then the out-
+standing problem in solid state physics and had been worked on by
+many of the greats of early twentieth-century physics including
+Albert Einstein. It was generally agreed that the solution would
+involve spin-1/2 electrons (fermions) pairing up in a way that would
+cause them to behave like spin-1 bosons. Critical to this realisation
+had been Schafroth’s demonstration that a charged gas of bosons
+could be a superconductor, and May set to work on the theory of
+superconducting gases. But in his second year Bardeen, Cooper and
+Schrieffer produced a convincing microscopic theory of supercon-
+ductivity based on the condensation at low temperature of ‘Cooper-
+pairs’ of electrons,3 work for which they would later receive the
+1972 Nobel Prize in Physics. There was still much to do in
+superconductivity, but the key problem had been solved.
+Robbie Schafroth, whom May later described as ‘a wonderful
+human being’, accepted a chair in physics at Geneva and Bob
+planned to move with him to Switzerland in the fourth year of his
+PhD. But tragedy intervened; taking the opportunity to see the
+Australian interior before he left for Europe, Schafroth and his wife
+were killed in a light plane accident in May 1959. Bob was
+devastated, and over fifty years later still spoke of the shock of
+hearing the news: ‘I just decided that I wanted to get out of Sydney
+as soon as I could after that’.
+Postdoctoral studies at Harvard and transition to ecology
+After completing his PhD thesis, which he described as ‘mainly
+about why it didn’t work’, (‘it’ being calculations to underpin the
+Sydney idea for creating Cooper pairs), May arrived in October
+1959 at Harvard as a postdoctoral fellow. He records that he did not
+write any papers, but worked with interesting people and, most
+importantly, met his future wife Judith, an undergraduate at Bran-
+deis University, on a blind date. Although he was offered tenure-
+track positions in physics at Harvard, Chicago and Duke, May
+wanted to return to Australia and he accepted a senior lectureship in
+the physics department at the University of Sydney. Judith joined
+him after six months and they married in August 1962.
+Back in Sydney, May, in his own words ‘was doing ok but not
+particularly outstandingly’ in physics, when, in 1968, he met the
+Fig. 3.
+Graduating from the University of Sydney (photograph cour-
+tesy of Mrs Judith May).
+2 https://sydney.edu.au/science/schools/school-of-physics/harry-messel.html, viewed July 2021.
+3 Bardeen and others (1957a). Bardeen and others (1957b).
+Historical Records of Australian Science
+C
+
+
+--- PDF page 4 ---
+ecologist Charles Birch through an organisation for social respon-
+sibility in science.4 May had used some ecological examples to
+illustrate a course in mathematics for physicists, and Birch,
+although sceptical about the value of mathematics in ecology,
+arranged for May to contact ecologists in the United Kingdom
+(UK) and United States of America (USA), who were more
+sympathetic to mathematical modelling, in particular John Maynard
+Smith at the University of Sussex, Sir Richard Southwood at
+Imperial College, London and Robert MacArthur at Princeton
+University.
+Shortly after, in 1970–1, May took an eighteen-month sabbati-
+cal, the first half of which he spent at Culham (at that time the UK
+Atomic Energy Authority Laboratory) from where he visited South-
+wood at the Imperial College Field Station, Silwood Park, and also
+met Michael Hassell and Sir Gordon Conway. This was the start of
+an enduring link with the Silwood group. He spent the second half of
+his sabbatical at the Institute for Advanced Study in Princeton, and
+used the opportunity to meet Robert MacArthur, the leading US
+theoretical ecologist at the time. The story goes that MacArthur
+arranged for the meeting to be curtailed after fifteen minutes by a
+colleague knocking on the door to call him away to an urgent phone
+call. The conversation with MacArthur apparently went very well,
+lasted much longer than fifteen minutes, and took an unexpected
+turn. MacArthur revealed that he had been diagnosed with terminal
+cancer, had less than a year to live, and was hoping to have a role in
+identifying his successor. He asked May whether or not he was
+interested. May replied that he was returning to Sydney, and
+MacArthur asked him to think over the offer.
+During the first six months after returning to Australia, May
+wrote his first major contribution to theoretical ecology, a book
+entitled Stability and Complexity in Model Ecosystems5 (see section
+below) and soon after started to explore the chaotic behaviour of
+non-linear difference equations that were used by ecologists in
+modelling population dynamics (see below). May summarised the
+situation like this: ‘At the end of six months it was clear there were
+more and more problems because I had blundered into ecology at
+just the time when the subject, which had been purely descriptive,
+was making the transition to acquiring a conceptual base’.
+In 1973, May moved to Princeton University to become
+MacArthur’s successor as Class of 1877 Professor of Zoology,
+and he spent the next sixteen years of his career there, including
+eleven years as vice president for research. Throughout this period,
+he made regular summer visits to Southwood’s group at Imperial
+College where he met new colleagues, including Sir Roy Anderson,
+and Sir John Lawton and Sir John Beddington (both then at the
+University of York), with whom he developed long-term scientific
+and social relationships.6
+In 1979, Southwood moved from Imperial to become the head of
+the Department of Zoology at Oxford. The department had a very
+distinguished history at that time, with many Fellows of the Royal
+Society and a recentNobel Prize winner, Niko Tinbergen,but mostof
+these individuals had either retired or died, and Southwood set about
+building a new generation of scientific leaders. By the late 1980s,
+when he persuaded May to move to Oxford (in a post shared with
+Imperial) as a Royal Society Research Professor, the department was
+host to one quarter of all the holders of these prestigious posts.
+Population ecology
+Ecologists seek to explain the distribution and abundance of living
+organisms. May made major theoretical contributions to two areas
+of ecology: population biology and community ecology. In the
+former, he created novel insights into the central question of why
+populations of many species fluctuate from year to year and in the
+latter, he challenged conventional wisdom about the causes of
+natural variation in the stability and resilience of ecological com-
+munities such as coral reefs, arctic tundra or tropical forests.
+By the mid-1960s, long-term studies of populations of insects,
+birds and mammals, together with mathematical models that
+represented the underlying ecological processes, had revealed
+several key principles. First, populations are rarely completely
+stable in numbers from year to year, second, some populations,
+such as arctic small mammals, show more or less regular periodic
+oscillations with periodicities of several years7, and third, yet other
+species appear to fluctuate wildly in numbers, leading, for instance,
+to unpredictable outbreaks of insect pests on agricultural crops or
+epidemics of disease in human populations.
+These various patterns were explained by ecologists as being a
+result of the interaction between density-dependent and density-
+independent factors that influence numbers. Density-dependent
+factors, such as competition for food, tend to damp fluctuations
+because their severity in suppressing reproduction or increasing
+mortality, increases with population density. Density-independent
+factors, such as extreme weather, may cause random population
+crashes or booms independent of the number of individuals in the
+population. Regular oscillations were explained as a consequence of
+delayed density-dependence, in which there is a lag between an
+increase in population size and an increase in the mortality effect.
+An oft-cited example is where a predator species responds to an
+increase in the density of its prey by reproducing more successfully
+and eventually driving its prey population down, followed by a
+lagging decline in predator numbers.
+In the 1950s and 1960s there was a major debate about the
+relative importance of density-dependent and density-independent
+limitation of populations, with the Australian ecologists Andre-
+wartha and Birch championing the ‘density-independent’ school,8
+while British ecologists such as Varley and Lack emphasised
+density-dependence.9
+May’s seminal contribution to the theoretical debate about
+population fluctuations was to show that even the simplest, non-
+4 Shine (2008).
+5 May (1973).
+6 The history of the Silwood group led by Southwood, and its extraordinary influence in UK science and science policy, as well as its international pre-
+eminence, has been well-documented in The Silwood Circle (Gay (2013)).
+7 Elton (1942).
+8 Andrewartha and Birch (1954).
+9 Varley (1963). Lack (1954).
+D
+Lord Robert May of Oxford 1936–2020
+
+
+--- PDF page 5 ---
+linear, deterministic population models for organisms with discrete
+generations (first order difference equations) could produce a wide
+range of behaviours, from complete stability, to damped or
+undamped oscillations and chaotic (apparently random, but in fact
+deterministic) fluctuations, depending on the strength of delayed
+density dependence.10 More complex models also showed similar
+properties provided they included sufficiently strong delayed den-
+sity dependence.
+For example, a very simple model of population dynamics with
+discrete generations is:
+Ntþ1 ¼ Nt exp rð1  Nt=KÞ
+½
+
+Where N ¼ population size
+r ¼ intrinsic growth rate of the population
+K ¼ ‘carrying capacity’—the environmental limit on the population
+due to factors such as food supply or breeding sites
+t ¼ generation
+This model can produce a very wide range of population
+trajectories, depending on the value of r as shown in Fig. 4.
+As May put it: ‘most existing work [by population ecologists] is
+based y on the assumption that if density-dependent ‘signals’
+could be dissociated from the confounding environmental noise, the
+population would be regulated to a steady, constant value’.11 In
+other words, May’s findings re-oriented the task of population
+ecologists from debating the relative importance of deterministic
+density- and stochastic density-independent factors to understand-
+ing the range of dynamics that could arise from density-dependence
+on its own (Fig. 4). It is now generally accepted that both density-
+dependent and density-independent factors influence populations,
+although it has proven difficult in natural populations to distinguish
+between
+deterministic chaos
+arising from delayed density-
+dependence, and random fluctuations caused by environmental
+noise.
+Epidemiology
+In the 1970s, May spent his summers in the UK, interacting with
+ecologists many of whom studied consumer-resource dynamics,
+including the interactions between predators and their prey, as well
+as pathogens and their hosts. The original mathematical model of
+predator–prey interactions, developed in the early twentieth century
+by Lotka and Volterra,12 involving a pair of coupled first-order
+differential equations, was neutrally stable and became unstable
+with the addition of most biological details. Predators tended to
+overexploit their prey leading to a population crash, followed by
+prey numbers recovering in the absence of their enemies, the result
+being cycles of ever-increasing amplitude until one species went
+extinct. This raised the question of how real resource-consumer
+interactions persist. May first engaged with this problem in work
+with M. P. Hassell in the 1970s. They studied parasitoids—small
+insects (typically flies or wasps) whose larvae develop by feeding
+on or in the bodies of other insects which they eventually kill. Only
+one host is required for development and hence parasitoids are
+intermediate between predators and parasites/pathogens. Many pest
+species are hosts to parasitoids that have been used extensively in
+biological control. Understanding how these interactions persist
+was thus of practical as well as fundamental interest. In a series of
+papers, Hassell and May dissected the factors that might promote
+coexistence, concentrating on the physical and statistical refuges
+that allow some hosts to survive periods of high parasitoid density,13
+and latterly exploring the role of explicitly spatial processes.14
+Interactions between pathogens and their hosts, including
+human hosts, are also examples of resource-consumer interactions.
+But the science of epidemiology had developed from a more
+statistical background with the role of dynamics being less appre-
+ciated (with notable exceptions such as the work of Macdonald on
+malaria).15 In the mid-1970s, R. M. Anderson began to take a much
+more ecological approach to disease dynamics. He quickly started
+collaborating with May, and over the next fifteen years together
+they revolutionised epidemiological modelling. We write in the
+middle of the Covid-19 pandemic when R numbers and epidemio-
+logical models are discussed nightly on the news: the models used
+10
+5
+0
+3
+2
+1
+0
+3
+2
+1
+0
+2
+1
+1
+1
+0
+0
+0
+10
+20
+30
+Time, t
+r = 1.8
+(a)
+(b)
+(c)
+(d)
+(f)
+(e)
+r = 2.3
+r = 2.6
+r = 3.3 A
+r = 3.3 B
+r = 5.0
+2
+N–K
+Fig. 4.
+From May (1974). The two cases of r ¼ 3.3 refer to different
+values of N/K. Reprinted with permission from the American Associa-
+tion for the Advancement of Science.
+10 May (1974). May (1976). May (1977).
+11 May (1974).
+12 Lotka (1925). Volterra (1926).
+13 Hassell and May (1973). Hassell and May (1974).
+14 Hassell and others (1991).
+15 Macdonald (1957).
+Historical Records of Australian Science
+E
+
+
+--- PDF page 6 ---
+are the direct descendants of those developed by Anderson and
+May.16
+Anderson and May set out a new framework for host-pathogen
+dynamics.17 They distinguished between microparasites where
+individuals need just to be categorised as susceptible or infected
+(other categories such as exposed and recovered can be added) and
+macroparasites, where a tally needs to be kept of the burden of
+infection. If you have influenza (a microparasite) the number of viral
+particles in your body is of less interest epidemiologically than if you
+have tapeworms. Anderson and May developed the rich mathemat-
+ics underlying the dynamics and showed the value of concepts such
+as the now-famous R-number, as well as the threshold host popula-
+tion density below which a disease cannot spread. Understanding
+these processes gave insight into the average age of infection, the
+role of individual and herd immunity, and how optimally to deploy
+vaccines. The advent of the HIV epidemic highlighted the impor-
+tance of sexually transmitted diseases that have very different
+transmission dynamics to those of diseases caused by pathogens
+such as influenza and tapeworms that are contracted in the environ-
+ment. Their pioneering HIV models highlighted the critical impor-
+tance of the transmission matrix (incorporating information on the
+distribution of partner numbers in both sexes and who has sex with
+whom), although the then UK prime minister resisted advice to try to
+measure it (fortunately the Wellcome Trust stepped in). Further
+work examined within-host disease dynamics where the interaction
+between the pathogen and elements of the immune system can be
+studied by what are essentially predator–prey models. A character-
+istic of the Anderson-May approach was a close link between theory
+and data, capitalising on the large amount of information available
+for human diseases.
+It is often asserted that disease-causing agents, including viruses
+and bacteria, evolve over time to become less virulent, and thereby
+avoid entirely killing off their host population. This idea was first
+articulated in the nineteenth century by Theobald Smith as the ‘law
+of declining virulence’. A straightforward argument from natural
+selection suggests this is implausible, because mutations that favour
+short-term gain, even if it involves killing the host, will out-compete
+genotypes that conserve resources for the future. But nevertheless,
+there are documented examples of disease agents, including the
+myxomatosis virus in Australia, evolving reduced pathogenicity.
+May and Anderson showed that in theory, whether or not this is a
+plausible pathway depends on the interaction between transmissi-
+bility and virulence of the parasite or pathogen.
+May’s and Anderson’s work on human disease was summarised
+in their 1991 monograph.18 Much of this 800-page book was written
+in a three-week period while the authors were guests of the Rock-
+efeller Foundation at their Bellagio villa on Lake Como; time spent
+between intensive periods of writing in the morning and evenings
+punctuated by discussion over strenuous mountain hikes in the
+afternoon.
+Community ecology
+May made a major contribution to community ecology, the study of
+large assemblages of interacting species. His influence was both
+direct and indirect: he derived new theoretical results that have set a
+research agenda that continues today, and he continued and rein-
+forced a transformation of the subject from organized natural his-
+tory to a quantitative science.
+May’s most notable work in this area is on complexity and
+stability, and his formulation of what is sometimes called ‘May’s
+Paradox’.19 Natural communities of plants and animals clearly
+persist over considerable periods of time, despite the fact that
+simple mathematical models of interactions between predators
+and prey, or other resource-consumer relationships, are often
+dynamically unstable. By the 1960s, ecologists had concluded that
+more complex communities are more stable, a belief never explic-
+itly justified but based on the intuition that the many feedback loops
+present in large communities are likely to buffer external perturba-
+tions. In 1972, May’s theoretical analysis showed that more
+complex, random, communities were, in fact, not more stable,
+and initiated a research programme for the subsequent decades
+aimed at understanding which aspects of real communities might
+promote stability.20
+May’s approach to the complexity-stability issue illustrates well
+how he tackled many questions in community ecology.21 He first
+simplified the problem so that it was amenable to mathematical
+analysis. In this case he assumed the dynamics of a system with S
+species could be modelled by a set of S differential equations, and
+that an equilibrium existed that might or might not be stable.
+Linearising the system about the equilibrium, he obtained an
+S  S matrix, the ‘community matrix’, where each element
+represents the effect of a small change in the abundance of one
+species on that of another in the community. Local stability of the
+community is guaranteed if the real parts of all the eigenvalues of
+the community matrix are less than zero. May then abstracted the
+system further and explored the stability of randomly constructed
+community matrices where the non-diagonal elements of the
+community matrix were either zero (with probability 1-C) or picked
+at random from a statistical distribution with variance s2 (diagonal
+elements were assumed to be negative, reflecting intra-specific
+density-dependence). He then turned to cutting-edge mathematics
+to study the distribution of eigenvalues. In the mid-1970s, the theory
+of random matrices was relatively poorly developed and May used a
+mixture of formal maths and heuristic insight to conclude that
+stability requires s
+ﬃﬃﬃﬃﬃﬃ
+SC
+p
+, 1. An increase in species number (S),
+connectivity (C) or variance in interaction strength (s2) all make
+stability less likely—a result that surprised everyone, hence May’s
+Paradox.22
+As May was well aware, real communities do not have random
+community matrices and in his ground-breaking monograph he
+explored various constraints on the community matrix and the
+16 Anderson and May (1985).
+17 Anderson and May (1979). May and Anderson (1979). May and Anderson (1983). May and Anderson (1987). Anderson and May (1991).
+18 Anderson and May (1991).
+19 May (1973).
+20 May (1972).
+21 May (1972). May (1973).
+22 For a modern rederivation and extension of May’s results using maths developed in the last 15 years see Allesina and Tang (2015).
+F
+Lord Robert May of Oxford 1936–2020
+
+
+--- PDF page 7 ---
+possibility that communities may be compartmentalised into
+weakly connected modules.23 Later ecologists have explored many
+other possibilities. A limitation of May’s approach is that it assumes
+a community has a potentially stable equilibrium, and that it does
+not say whether the consequence of instability is the loss of one
+species or cascading extinctions and a much more substantial
+collapse. Again, recent work has illuminated these questions,
+though extending May’s work to the general non-equilibrium case
+is an outstanding challenge.
+Much research in community ecology has focussed on under-
+standing the mechanisms in natural communities that result in
+greater complexity leading to greater stability. Foremost among
+the experimental work in this field is that of Tilman and his students
+on grassland communities.24 This work has shown how, in more
+complex communities, resources are partitioned among species and
+how this leads to greater resilience in the face of environmental
+change.
+May made other important contributions to community ecology.
+Some of his earliest work, in part with Robert MacArthur, concerned
+limiting similarity.25 Suppose you have a spectrum of seeds of
+different size; how many species of bird might coexist along this
+‘niche axis’, specialising on a certain seed size interval? May derived
+theoretical limits to how similar species might be and hence the
+number that can coexist. However, his hope that these rules might be
+generalisable to arbitrary resource distributions was not borne out.
+Other ecologists, often using approaches he pioneered, showed that
+limiting similarity and the number of species that can coexist on a
+resource is very sensitive to the specific biology of the system.
+Conservation and taxonomy
+It often amazes non-ecologists how poor an estimate we have of the
+number of species on earth, even relatively large species such as
+insects, let alone microorganisms. It certainly amazed May, who
+wrote several papers on this topic in the 1980s and 1990s.26 In 2011,
+he wrote: ‘It is a remarkable testament to humanity’s narcissism that
+we know the number of books in the US Library of Congress on 1
+February 2011 was 22,194,656 but cannot tell you—to within an
+order-of-magnitude—how many distinct species of plants and
+animals we share our world with’.27 May’s work in this area differs
+from his other work on community ecology in that it did not involve
+sophisticated modelling but a razor-sharp summary and analysis of
+the available evidence, as well as a clear statement of where further
+study may be most productive and a heartfelt lamentation about the
+number of species that will go extinct before their enumeration.
+Together with several co-authors, he estimated that current rates of
+extinction of species is several orders-of-magnitude higher than the
+average for the fossil record.28 He also wrote anelegant summary and
+extension of how conservationists might best balance competing
+demands when deciding which taxa to prioritise in decisions about
+conservation. Is rarity more important, or is taxonomic distinc-
+tiveness?29 And if the latter, how is it to be characterised, at the level
+of species, family, order and so on? More recently, these ideas have
+been encapsulated in the Zoological Society of London’s EDGE of
+Existence programme, a conservation initiative that focusses on
+‘evolutionarily distinct and globally endangered species’.
+Dispersal
+Together with Hugh Comins and William D. Hamilton, May ana-
+lysed the conditions under which dispersal is favoured by natural
+selection.30 Most organisms disperse from their birthplace, in spite
+of the fact that this incurs the disadvantage of leaving a known
+favourable habitat for the unknown and thus facing the risk of
+mortality during dispersal. In their modelling, they identify the
+factors that favour dispersal, including the probabilities of colo-
+nising empty sites, of sites becoming extinct, and the frequency of
+genes for dispersal.
+The banking system
+May’s work on complex networks in ecology and epidemiology
+gave him a unique perspective on the fragility of the global banking
+system during and after the 2008 financial crisis. He developed a
+series of what he called ‘toy models’ of the banking system where
+banks were viewed as nodes in a network, each with certain assets
+and liabilities. A fraction of assets were loans to other banks and a
+fraction of liabilities borrowings from other banks, and the collapse
+of one bank might cause cascading collapses through this network
+of mutual obligations.
+In an influential 2011 ‘Perspective’, May teamed up with Andy
+Haldane, the chief economist at the Bank of England, to draw
+lessons from this approach for prudential regulation.31 Tradition-
+ally, mandating capital and liquid asset requirements has been the
+main tool of regulators, but their levels had been set to avoid the risk
+of individual bank failure, and these may be different to those
+required to avoid system failure. May and Haldane drew a parallel
+between highly connected large banks (those ‘too big to fail’) and
+‘superspreaders’ in epidemiology, and suggested these may need
+greater asset reserves or other attention from regulators.
+The conclusions that diversity and modularity in ecological
+networks are stabilising suggest interventions that might stabilise
+financial networks, including the segregation of retail and ‘casino’
+banking that the industry so resists.32 Finally, May and Haldane
+explored how the centralising of trading in financial derivatives on
+exchanges or equivalents might change the structure of a network
+from a cat’s cradle to a hub-and-spoke configuration, so increasing
+23 May (1973).
+24 Tilman (1982).
+25 May and MacArthur (1972).
+26 May (1988).
+27 May (2011).
+28 Smith and others (1993). Tilman and others (1994).
+29 May (1990).
+30 Hamilton and May (1977). Comins and others (1980).
+31 Haldane and May (2011).
+32 May and others (2008).
+Historical Records of Australian Science
+G
+
+
+--- PDF page 8 ---
+system stability. This remarkable example of discipline hopping has
+helped the development of the new approach of macro-prudential
+policy making.
+Government Chief Scientific Advisor
+In 1995, Bob May was approached, as he himself said, ‘gobs-
+mackingly out of the blue’ by the head-hunting firm Saxton Bam-
+fylde about the job of Government Chief Scientific Advisor
+(GCSA). At the time, May had little experience of the science-
+policy interface or of the UK civil service. Nevertheless, he had
+three qualities that made him singularly suited to the role: his for-
+midable intellect and ability to resolve any complex problem into its
+essential simplicities, his deft turn of phrase and facility expressing
+ideas in comprehensible ways to non-experts, and his willingness to
+speak truth to power without fear or hesitation, sometimes using his
+Australian background as a reason for choosing blunt terms that
+might be more difficult for a native British person to use. He also
+said that he drew on his experience as a schoolboy competitive
+debater, when he would be given the topic ten minutes before the
+debate and a flip of a coin determined whether he was speaking for
+or against the motion.
+May’s appointment as GCSA coincided with a major change in
+the job. The role had existed since the 1960s with Sir Zolly (later
+Lord) Zuckerman, who had advised the government during World
+War 2, as the first holder. Zuckerman’s successors were generally
+not well-known public figures, following Churchill’s dictum that
+‘scientists should be on tap but not on top’, and the GCSA was
+supported by a small staff.
+May’s immediate predecessor, Sir William Stewart, had been
+much involved in the preparation of the white paper ‘Realising our
+potential’ that heralded the reorganisation of the research councils
+and the creation of the Office for Science and Technology (OST).
+The OST was relatively well staffed and May was its first head. The
+advisory board to the research councils (ABRC) that had recom-
+mended budget allocations to the individual research councils, was
+abolished and replaced by a new role within OST, Director General
+of Research Councils, with Sir John Cadogan as its first holder.
+Together, he and May made a formidable pair as advocates for
+science in Whitehall.
+It is not an exaggeration to say that May transformed the role of
+the GCSA from a back-room boy (all previous GCSAs had been
+male) to a high-profile public figure, appearing frequently in the
+media and commenting on current science-policy matters. For
+instance, when the Royal Society for the Protection of Birds
+(RSPB) publicised an inaccurate and potentially alarming interpreta-
+tion of field trials of genetically modified (GM) crops, May decided
+to cancel a planned walking holiday in the Cinque Terra, Italy, due to
+start the following day, in order to be on the BBC’s Today Pro-
+gramme to refute the RSPB comments. He never forgave the RSPB!
+In a note for Prime Minister Tony Blair, May summarised the
+heated, and usually confused, debate about GM crops during the late
+1990s as the ‘three worries’—the worry about food safety, the worry
+about environmental safety, and the worry about the intensification
+of agriculture and the role of big business. His conclusion on each of
+these worries was characteristically incisive. GM food and environ-
+mental safety should be assessed on a case by case basis. No-one had
+identified any food safety risks; environmental safety was a
+potentially a more serious worry, but was carefully regulated; and
+intensification of agriculture was about hard choices, irrespective of
+whether it involves GM. You could not feed today’s world popula-
+tion with yesterday’s agriculture, but the more we take from the
+land, the less there is for the rest of nature.
+During May’s time as GCSA, he frequently commented publicly
+in the broadcast and print media on other high profile and urgent
+issues, such as Bovine Spongiform Encephalopathy (BSE, or ‘mad
+cow disease’), climate change, and the Human Genome Project. In
+the last of these, during the race to the finishing line between Craig
+Venter and publicly funded groups along with the Sanger Centre, he
+played a part in negotiating the agreement with the US government
+to ensure that the human genome would remain public intellectual
+property. May recounted later that Craig Venter had said that as a
+result of May’s success in this initiative, he, Venter, had lost a
+fortune: when US President Clinton announced that the human
+genome could not be patented, shares in Venter’s company, Celera,
+plummeted.
+Less well known, but equally critical for the affected people, was
+May’s advice on the response to the eruption of Soufriere Hills
+volcano on Montserrat, a British Overseas Territory in the Leeward
+Islands. When, in summer 1995, the volcano became active, May
+was asked to advise on whether or not the whole population of the
+island should be evacuated. He sought advice from the top academic
+vulcanologists, and concluded that the capital, Plymouth, should be
+evacuated, but that the northern part of the island was safe for people
+to stay. This advice was followed and the southern exclusion zone
+still remains in place, Plymouth having been destroyed in a
+pyroclastic flow.
+In addition to his recasting of the role of GCSA as a public figure,
+May left two further important legacies: the Chief Scientific
+Advisor’s Guidelines for Scientific Advice and Policy Making,
+and his comparative analysis of the competitiveness of UK science.
+The guidelines, described by May as ‘the most important thing I did’
+set out three principles for providing scientific advice to Govern-
+ment: fully acknowledge uncertainties (sometimes the answer is
+‘we don’t know’); seek a wide range of views (it is rare that the
+scientific and other communities totally agree on the evidence); be
+totally transparent about the process and outcome of advice. These
+principles are simple, but as salient today as when they were first
+published. May lamented the fact that in successive revisions of the
+guidelines they became progressively more complex and bureau-
+cratic, losing the directness and simplicity of his version.
+The analysis of ‘bangs per buck’ of UK science in comparison
+with other countries was typical of May’s analytical mind and clarity
+of thought. The work he commissioned looked at outputs such as
+refereed papers, citations and major prizes, expressed in relation to
+investment in scientific research. This became a powerful tool for
+influencing government ministers both in showing the extraordinary
+value for money of investment in UK science and in arguing for
+increased investment. Successive science ministers in the subsequent
+decades have the quoted numbers as a stock part of their speeches:
+with 2% of the world’s population and 5% of the world’s scientists,
+the UK publishes over 10% of the most highly cited papers, even
+though the UK’sinvestment inresearchanddevelopment lagsbehind
+other major scientific nations. No other medium-sized or large
+country achieves as many bangs per buck. May also considered
+why the UK does so well. He pointed to one possible factor, namely
+H
+Lord Robert May of Oxford 1936–2020
+
+
+--- PDF page 9 ---
+that much research is done in universities, where students ferment
+new ideas, rather than in separate research institutes.
+May was also characteristically direct in his assessment of the
+civil service, describing it as a suitable subject for anthropological
+study. One of his frustrations was that civil servants often acciden-
+tally or deliberately conflated process and outcome and were able to
+craft beautifully prepared documents and reports on the former as a
+substitute for achieving the latter.
+In commenting on scientific advice as input to policy, he
+distinguished between what he called routine advice on well-
+researched problems, that could be provided by ‘reagent grade
+scientists’, and advice on really hard, novel, as yet unstudied,
+scientific problems, such as BSE, or AIDS in Africa, which he
+described as ‘the clean rock’. Advice on the clean rock problems
+required leadership and innovation in the relevant field that could
+not be delivered by standard, reagent grade, scientists. May himself
+was, of course, a clean rock scientist in mathematical epidemiology
+and ecology.
+Twenty years on, one can see that the change in the character of
+the job of GCSA has lasted: all four of his successors (each, like
+May, a Fellow of the Royal Society) has been the public faces of
+scientific advice and all have been prominent in presenting the
+science that supports their policy advice during crises: Sir David
+King during the Foot and Mouth crisis of 2001; Sir John Beddington
+during the Icelandic Volcano (Eyjafjallajo¨kull) eruption of 2010
+and the Fukushima Nuclear Accident in 2011; Sir Mark Walport
+during the winter floods of 2015; and Sir Patrick Vallance in the
+Covid-19 pandemic.
+President of the Royal Society
+When May was elected president of the Royal Society in 2000
+(Fig. 5) he was unique among twentieth-century presidents in
+having held a major public office in addition to being a scientist of
+remarkable distinction. Since 1915, all presidents had been Nobel
+Laureates with the exception of mathematician Sir Michael Atiyah,
+who was a Fields Medallist, the mathematics equivalent of the
+Nobel (Fig. 6). May, too, worked in fields for which there is no
+Nobel Prize, but he had been awarded two other prizes of compa-
+rable distinction, the Crafoord and the Balzan.33 A full list of May’s
+Fig. 5.
+Sir Timothy Berners-Lee (L) shakes hands with Lord Robert May of Oxford (R) across a table upon which rests the
+Royal Society’s mace. Photographed at the Royal Society, on the occasion of Berners-Lee’s admission as a Fellow in 2001.
+Photograph by Prudence Cuming Associates  The Royal Society.
+33 The Crafoord Prize, established by Swedish industrialist Holger Crafoord and his wife Anne-Greta is awarded in partnership with the Royal Swedish
+Academy, year by year successively in the fields of astronomy and mathematics; geosciences; bioscience with particular emphasis on ecology; and
+polyarthritis. Four Balzan Prizes are awarded each year, drawing on funds invested by Eugenio Balzan and administered by a committee of prominent
+European scientists.
+Historical Records of Australian Science
+I
+
+
+--- PDF page 10 ---
+honours and memberships is contained in the Supplementary
+Material accompanying this memoir.
+May said that when he was elected president he did not have a list
+of goals in mind. However, he did bring about change, and by his
+own assessment he was more hands-on than his predecessors. His
+achievements as president can be grouped under three headings:
+fellowship, policy, and international.
+In order to try to broaden the base from which fellows are
+elected, he started writing to vice chancellors to seek suggestions for
+potential candidates for the fellowship who might be lurking in less
+familiar universities. He aimed to rebalance the election of foreign
+members away from ‘people’s elderly American friends’. He also
+championed the election of women scientists, without sacrificing
+merit, and greater geographical diversity, outside the golden trian-
+gle. Shortly before May became president, the society’s biological
+secretary, Sir Patrick Bateson, had proposed that the number of
+signatures needed to support a candidate for election should be
+reduced from six to two. May thought that this was ‘a really bad
+idea’ but he concluded that the proposal was too far down the track
+for him, as incoming president, to stop it, in spite of the fact that he
+thought it would tip the scales too far towards cronyism and cliques.
+He successfully engaged the society in supplying independent
+advice and comment to government on science and policy matters.
+Prior to May’s presidency, the Royal Society had seen itself as a
+scientist’s club and it thought of the scientific community as its
+primary audience. As May himself put it ‘it was mainly an
+organisation for electing people and writing their obituaries’.
+Shortly before May became president, the Royal Society began
+to dip its toe into the science and policy world, by publishing an
+independent assessment of the paper published by Arpad Pusztai
+that falsely claimed to show GM potatoes poison rats. However, this
+was at the request of Science Minister (Lord) David Sainsbury
+rather than a spontaneous initiative of the Royal Society, and,
+according to May, was ‘more or less against the instincts of Aaron
+[then-president Klug]’. The first draft of the report was, as May put
+it ‘so obscurantist and equivocal and convoluted that it’s impossible
+for the lay reader to decide whether you’re saying the work is sound
+or unsound’. May urged a re-write, and the final version said that
+Pusztai’s study was so flawed in design, execution and analysis that
+no conclusions could be drawn from it. This was a formative
+experience for the Royal Society in engaging in a public contro-
+versy about a high-profile scientific issue.
+May was more proactive in engaging with government policy
+than his predecessors, without sacrificing the society’s indepen-
+dence. An important product of this was the Follett Report into the
+handling of the 2001 Foot and Mouth Disease epidemic. Unlike the
+Phillips Enquiry into BSE, the Follett report was produced quickly
+and at modest cost. Nevertheless, its recommendations on how to
+handle a future epidemic, especially in relation to vaccination, were
+accepted by the government. Importantly, Follett discussed his
+Fig. 6.
+Presidents of the Royal Society—from left to right, Sir Robert May, Sir Aaron Klug, Sir Michael Atiyah, Sir George Porter and
+Sir Andrew Huxley. Photograph  The Royal Society.
+J
+Lord Robert May of Oxford 1936–2020
+
+
+--- PDF page 11 ---
+emerging conclusions with the European Commission (EU), as the
+rules on international trade and vaccination were determined by the
+EU. May, along with others including Sir John Beddington, Lord
+Stern and Baroness Blackstone, also successfully challenged the
+policy of Clare Short, Secretary of State for International Develop-
+ment, when she proposed to cut the budget for tertiary education and
+research in developing countries, and channel it instead into primary
+education.
+The Royal Society has always had a strong international pro-
+gramme, and during May’s presidency, he supported the creation of
+a new body, the European Academies Science Advisory Council
+(EASAC) to act as a voice for national academies across Europe. It
+was also during May’s presidency, in 2005, that the Group of Eight
+(G-8) statement on climate change, supported by the national
+academies of the intergovernmental (G-8) was produced, although
+May said that he was not directly involved in drafting the statement.
+House of Lords
+In 2001, May was appointed to the House of Lords (as Lord Robert
+May of Oxford), the second chamber of the UK parliament, as an
+independent
+‘cross-bencher’
+(that
+is,
+not
+a
+party-political
+appointment) under a new initiative of the Blair government to
+create so-called ‘people’s peers’. During his time in the Lords, he
+served on two select committees, the Science and Technology and
+Economic Affairs. One of us (JK) chaired the Science and Tech-
+nology Select Committee while May served as a member, and was
+able to observe at first hand his forensic and sharp interrogation of
+witnesses, including government ministers. Although May was a
+fluent and skilful debater, he was occasionally frustrated by the
+formal and stilted style of debate in the Lords and sometimes he
+made his most important contributions in meetings with ministers
+outside the chamber, and in this way was able to help to improve
+legislation.
+Social and sporting life
+May loved the social side of his academic life, and this was often
+focussed on sporting competitions and other physical activities. At
+Princeton in 1974, May overheard two graduate students in the
+Ecology and Evolutionary Biology Group talking about running to
+keep fit. He challenged the students to a mile run in the Princeton
+University stadium. May won the race in six minutes twelve
+seconds. The race, that came to be known as the Eno Mile (named
+after the building in which the group worked), became an annual
+event, and May regularly finished in under six minutes. After
+moving to Oxford in 1988, he ran regularly with John Krebs, cov-
+ering more than 15,000 km over a twenty-five-year period. May was
+a keen table tennis player and even had a table tennis table in his
+dining room at Princeton instead of a dining table. As with all games
+(he played five-a-side football, tennis and croquet—and even
+decided the order of authorship of one of his papers by a croquet
+contest), May was always fiercely competitive, very focussed on
+doing his best and, if possible, winning. It was said of May that when
+he came home in the evening and played with his dog (a much-loved
+poodle named Perri), he played to win.
+May was a loyal colleague and friend. For forty-one years
+between 1974 and 2016, he organised an annual summer walk with
+colleagues. In the early years, the walks were in Britain, but in later
+decades they were in the Austrian, French Italian, Swiss and
+Slovenian Alps, Pyrenees and the Picos de Europas (Fig. 7). In
+addition to the core group of participants (including the three
+authors of this memoir) colleagues who had worked with May
+and/or were deemed to be suitable walking companions joined the
+group with varying frequencies. These walks, combining physical
+and intellectual exercise with natural history and gossip, produced
+many memorable stories, retold many times in hotel bars before and
+after supper. His wife Judith was a regular participant in the summer
+walks and helped to keep a meticulous record of each year’s trip. In
+some of the early years, Bob’s and Judith’s daughter Nome, a
+talented jewellery-maker now living in Oregon, USA, also came on
+the walks.
+Appraisal
+May was without doubt one of the most brilliant, versatile and
+energetic scientific minds of his generation. Although not known
+for a single discovery (he said he had a short attention span), in each
+of the scientific areas that he touched, he was able to reduce com-
+plex problems to their essential simplicities. A complete bibliog-
+raphy of his published work may be found in the Supplementary
+Material accompanying this memoir. His theoretical work caused
+ecologists to reconsider some of their basic assumptions and
+spawned several new research agendas, in particular among popu-
+lation and community ecologists. In his work on infection disease
+Fig. 7.
+For forty-one years between 1974 and 2016, Bob organised an annual summer walk with his
+colleagues. Left: Judith, Bob, John Krebs and Charles Godfray. Right: Bob, Charles Godfray and Mike
+Hassell. (Photographs courtesy of the authors.)
+Historical Records of Australian Science
+K
+
+
+--- PDF page 12 ---
+epidemiology with Anderson, he reduced a complex problem to few
+key variables, notably the R-number or basic reproduction number,
+that entered the public lexicon during the coronavirus pandemic.
+His immense intellectual contribution was recognised by many
+major awards and prizes. Had there been a Nobel Prize for ecology,
+May would undoubtedly have won it.
+May was unique among scientists in the UK of his generation in
+combining two careers in one life: the outstanding researcher in his
+chosen field of ecology and a major figure in the public sphere as
+government chief scientific advisor and trenchant commentator in
+broadcast as well as print media. He also played a full role as a
+citizen of the scientific community on numerous trustee boards,
+committees and so on. On top of this he served with distinction as
+president of the Royal Society.
+Conflicts of interest
+The authors declare no conflict of interest, that no funding support
+was available for preparation of this memoir, and that no data other
+thanthosereferredtointhe memoirwereusedinits composition.The
+authors were friends and colleagues of the subject of the memoir.
+Acknowledgements
+We thank Judith May for commenting on earlier drafts and the
+following individuals for providing input of various kinds: John
+Beddington, Lynne Bradley, Andy Dobson, Leonard Fisher, Her-
+bert Huppert FRS, Nim Pathy, Ernest Williams, Robyn Williams.
+We also incorporated material from the Desert Island Discs pro-
+gramme on BBC Radio 4, and from the transcript of an interview
+between May and Dr Peter Collins at the Royal Society on 15 July
+2009, held in the Royal Society’s archives. The childhood photo-
+graphs (Figs 1 and 2) were kindly provided by Judith May.
+References
+Allesina, S., and Tang, S. (2015) The stability-complexity relationship at age
+40: a random matrix perspective, Population Ecology, 57, 63–75.
+doi:10.1007/S10144-014-0471-0
+Anderson, R. M., and May, R. M. (1979) Population biology of infectious
+diseases: Part I, Nature, 280, 361–367. doi:10.1038/280361A0
+Anderson, R. M., and May, R. M. (1985) Vaccination and herd immunity to
+infectious diseases, Nature, 318, 323–329. doi:10.1038/318323A0
+Anderson, R. M., and May, R. M. (1991) Infectious Diseases of Humans:
+Dynamics and Control, Oxford.
+Andrewartha, H. G., and Birch, L. C. (1954) The Distribution and Abun-
+dance of Animals. Chicago, IL.
+Bardeen, J., Cooper, L. N., and Schrieffer, J. R. (1957a) Microscopic theory
+of superconductivity, Physical Review, 106(1), 162–164. doi:10.1103/
+PHYSREV.106.162
+Bardeen, J., Cooper, L. N., and Schrieffer, J. R. (1957b) Theory of
+superconductivity, Physical Review, 108, 1175–1204. doi:10.1103/
+PHYSREV.108.1175
+Comins, H. N., Hamilton, W. D., and May, R. M. (1980) Evolutionarily
+stable dispersal strategies, Journal of Theoretical Biology, 82(2),
+205–230. doi:10.1016/0022-5193(80)90099-5
+Elton, C. S. (1942) Voles, Mice and Lemmings: Problems in Population
+Dynamics, New York.
+Gay, H. (2013) The Silwood Circle: a History of Ecology and the Making of
+Scientific Careers in Late Twentieth-century Britain, London.
+Haldane, A. G., and May, R. M. (2011) Systemic risk in banking ecosystems,
+Nature, 469, 351–355.
+Hamilton, W. D., and May, R. M. (1977) Dispersal in stable habitats, Nature,
+269, 578–581. doi:10.1038/269578A0
+Hassell, M. P., and May, R. M. (1973) Stability in insect host-parasite
+models, Journal of Animal Ecology, 42, 693–726. doi:10.2307/3133
+Hassell, M. P., and May, R. M. (1974) Aggregation of predators and
+insect parasites and its effect on stability, Journal of Animal Ecology,
+43, 567–594. doi:10.2307/3384
+Hassell, M. P., Comins, H. N., and May, R. M. (1991) Spatial structure and
+chaos in insect population dynamics, Nature, 353, 255–258. doi:10.1038/
+353255A0
+Lack, D. (1954) The Natural Regulation of Animal Numbers, Oxford.
+Lotka, A. J. (1925) Elements of Physical Biology, Baltimore, MD.
+Macdonald, G. (1957) The Epidemiology and Control of Malaria, London.
+May, R. M. (1972) Will a large complex system be stable?, Nature, 238,
+413–414. doi:10.1038/238413A0
+May,R.M.(1973)StabilityandComplexityinModelEcosystems,Princeton,NJ.
+May, R. M. (1974) Biological populations with nonoverlapping generations:
+stable points, stable cycles, and chaos, Science, 186, 645–647.
+doi:10.1126/SCIENCE.186.4164.645
+May, R. M. (1976) Simple mathematical models with very complicated
+dynamics, Nature, 261, 459–467. doi:10.1038/261459A0
+May, R. M. (1977) Thresholds and breakpoints in ecosystems with a
+multiplicity of stable states, Nature, 269, 471–477. doi:10.1038/
+269471A0
+May, R. M. (1988) How many species are there on earth?, Science, 241,
+1441–1449. doi:10.1126/SCIENCE.241.4872.1441
+May, R. M. (1990) Taxonomy as destiny, Nature, 347, 129–130.
+doi:10.1038/347129A0
+May, R. M. (2011) Why worry about how many species and their loss?, PLoS
+Biology, 9, e1001130. doi:10.1371/JOURNAL.PBIO.1001130
+May, R. M., and Anderson, R. M. (1979) Population biology of infectious
+diseases: part II, Nature, 280, 455–461. doi:10.1038/280455A0
+May, R. M., and Anderson, R. M. (1983) Epidemiology and genetics in the
+coevolution of parasites and hosts, Proceedings of the Royal Society of
+London, Biological Sciences, 219, 281–313.
+May, R. M., and Anderson, R. M. (1987) Transmission dynamics of HIV
+infection, Nature, 326, 137–142. doi:10.1038/326137A0
+May, R. M., and MacArthur, R. H. (1972) Niche overlap as a function of
+environmental variability, Proceedings of the National Academy of
+Sciences
+of
+the
+United
+States
+of
+America,
+69(5),
+1109–1113.
+doi:10.1073/PNAS.69.5.1109
+May, R. M., Levin, S. A., and Sugihara, G. (2008) Complex systems:
+ecology for bankers, Nature, 451, 893–894. doi:10.1038/451893A
+Shine, R. (2008)Charles Birch (1918–2009), ecologist. https://science.org.au/
+learning/general-audience/history/interviews-australian-scientists/profes-
+sor-charles-birch-1918-2009, viewed July 2021.
+Smith, F. D. M., May, R. M., Pellew, R., Johnson, T. H., and Walter, K. S.
+(1993) Estimating extinction rates, Nature, 364, 494–496. doi:10.1038/
+364494B0
+Tilman, D. (1982) Resource Competition and Community Structure, Prin-
+ceton, NJ.
+Tilman, D., May, R. M., Lehman, C. L., and Nowak, M. A. (1994) Habitat
+destruction and the extinction debt, Nature, 371, 65–66. doi:10.1038/
+371065A0
+Varley, G. C. (1963) The interpretation of change and stability in insect
+populations, Proceedings of the Royal Entomological Society of London,
+27, 52–57.
+Volterra, V. (1926) Variazioni e fluttuazioni del numero d’individui in
+specie animali conviventi, Memorie della Accademia Nazionale dei
+Lincei Roma, 2, 31–113.
+Williams, R. (2008) Lord Robert May, physicist and ecologist, https://www.
+science.org.au/learning/general-audience/history/interviews-australian-
+scientists/lord-robert-may-ohysicist-and, viewed October 2020.
+www.publish.csiro.au/journals/hras
+L
+Lord Robert May of Oxford 1936–2020

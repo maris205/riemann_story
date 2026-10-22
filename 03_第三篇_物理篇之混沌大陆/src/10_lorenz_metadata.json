@@ -1,0 +1,19 @@
+{
+  "model": "Lorenz 1963",
+  "sigma": 10,
+  "rho": 28,
+  "beta": 2.6666666666666665,
+  "initial": [
+    1,
+    1,
+    1
+  ],
+  "integrator": "classical RK4",
+  "dt": 0.002,
+  "duration": 100,
+  "discard_first": 5,
+  "projection": "x-z",
+  "color": "x coordinate, decorative encoding",
+  "step_halving_difference_at_t1": 7.11614724395917e-08,
+  "purpose": "finite numerical illustration; not prime data"
+}

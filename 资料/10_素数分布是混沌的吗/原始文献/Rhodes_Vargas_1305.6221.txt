@@ -1,0 +1,4627 @@
+
+--- PDF page 1 ---
+Gaussian multiplicative chaos and applications: a review
+November 27, 2024
+R´emi Rhodes
+Universit´e Paris-Dauphine, Ceremade, F-75016 Paris, France
+e-mail: rhodes@ceremade.dauphine.fr
+Vincent Vargas
+CNRS, UMR 7534, F-75016 Paris, France
+Universit´e Paris-Dauphine, Ceremade, F-75016 Paris, France
+e-mail: vargas@ceremade.dauphine.fr
+Abstract
+In this article, we review the theory of Gaussian multiplicative chaos initially in-
+troduced by Kahane’s seminal work in 1985. Though this beautiful paper faded from
+memory until recently, it already contains ideas and results that are nowadays under
+active investigation, like the construction of the Liouville measure in 2d-Liouville quan-
+tum gravity or thick points of the Gaussian Free Field. Also, we mention important
+extensions and generalizations of this theory that have emerged ever since and discuss a
+whole family of applications, ranging from ﬁnance, through the Kolmogorov-Obukhov
+model of turbulence to 2d-Liouville quantum gravity. This review also includes new
+results like the convergence of discretized Liouville measures on isoradial graphs (thus
+including the triangle and square lattices) towards the continuous Liouville measures
+(in the subcritical and critical case) or multifractal analysis of the measures in all
+dimensions.
+Key words or phrases: Random measures, Gaussian processes, Multifractal processes.
+MSC 2000 subject classiﬁcations: 60G57, 60G15, 60G25, 28A80
+Contents
+1
+Introduction
+2
+1.1
+A word on Quantum ﬁeld theory and the Hoeg-Krohn model
+. . . . . . . .
+6
+1.2
+Notations . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+6
+2
+State of the art since Kahane
+6
+2.1
+The seminal work of Kahane in 1985 . . . . . . . . . . . . . . . . . . . . . .
+6
+2.2
+Examples of kernels of σ-positive type . . . . . . . . . . . . . . . . . . . . .
+12
+Exact kernels . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+13
+1
+arXiv:1305.6221v1  [math.PR]  27 May 2013
+
+
+--- PDF page 2 ---
+Star scale invariant kernels
+. . . . . . . . . . . . . . . . . . . . . . . . . . .
+13
+Green functions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+13
+2.3
+Diﬀerent notions of stochastic scale invariance . . . . . . . . . . . . . . . . .
+13
+3
+Extensions of the theory
+19
+3.1
+Limitations of Kahane’s theory . . . . . . . . . . . . . . . . . . . . . . . . .
+19
+3.2
+Generalized Gaussian multiplicative chaos . . . . . . . . . . . . . . . . . . .
+19
+Extension to open domains and non-stationary smooth ﬁelds
+. . . . . . . .
+20
+3.3
+Duplantier-Sheﬃeld’s approach in dimension 2
+. . . . . . . . . . . . . . . .
+22
+4
+Multifractal analysis of the measures
+23
+4.1
+The Peyri`ere probability measure and the thick points . . . . . . . . . . . .
+23
+4.2
+General multifractal formalism: a heuristic introduction
+. . . . . . . . . . .
+25
+5
+Applications of Gaussian multiplicative chaos
+26
+5.1
+Volatility of a ﬁnancial asset or boundary Liouville measure . . . . . . . . .
+26
+MRM with inﬁnite correlation length or boundary Liouville measure . . . .
+28
+5.2
+Liouville Quantum Gravity and KPZ . . . . . . . . . . . . . . . . . . . . . .
+28
+5.3
+Convergence of discrete Liouville measures on isoradial graphs . . . . . . . .
+40
+5.4
+Kolmogorov-Obhukov model in turbulence . . . . . . . . . . . . . . . . . . .
+41
+5.5
+Decaying Burgers turbulence
+. . . . . . . . . . . . . . . . . . . . . . . . . .
+42
+6
+Generalizations of the theory
+42
+6.1
+Gaussian multiplicative chaos at criticality . . . . . . . . . . . . . . . . . . .
+42
+6.2
+Atomic Gaussian multiplicative chaos
+. . . . . . . . . . . . . . . . . . . . .
+44
+6.3
+Conjectures in connection with lognormal star scale invariance
+. . . . . . .
+52
+6.4
+About the maximum of log-correlated Gaussian ﬁelds and discrete GFF . .
+52
+6.5
+Matrix-valued Gaussian multiplicative chaos . . . . . . . . . . . . . . . . . .
+54
+6.6
+Beyond Gaussianity
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+55
+A Proof of lemma 5.4
+56
+B Proof of convergence of Theorem 5.12
+57
+C Multifractal formalism
+61
+C.1
+Proof of Theorem 4.1 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+62
+1
+Introduction
+Log-normal multiplicative martingales were introduced by Mandelbrot [111] in order to
+build random measures describing energy dissipation and contribute explaining intermit-
+tency eﬀects in Kolmogorov’s theory of fully developed turbulence (see [34, 133, 137, 35, 65]
+and references therein). However, his model was diﬃcult to deﬁne mathematically and this
+is why he proposed in [112] the simpler model of random multiplicative cascades whose de-
+tailed study started with Kahane’s and Peyri`ere’s notes [86, 122], improved and gathered
+in their joint paper [87].
+2
+
+
+--- PDF page 3 ---
+From that moment on, multiplicative cascades have been widely used as reference
+or toy models in many applications as they feature beautiful stochastic scaling relations,
+modeling a phenomenon that is commonly called intermittency. Let us roughly explain this
+point. Consider a multiplicative cascade M constructed on a dyadic tree. It is a random
+measure over the interval [0, 1]. If you look at the measure at a dyadic scale 2−n, you
+observe the same object as M up to an independent stochastic factor:
+M[ k
+2n , k + 1
+2n ] law
+= eΩnM[0, 1],
+where Ωn is a random variable independent of M, the law of which depends on the scale
+2−n. However, multiplicative cascades are constructed on a dyadic (or p-adic) tree and
+therefore possess many drawbacks: they do not possess stationary ﬂuctuations and present
+discrete (p-adic) scaling relations.
+Gaussian multiplicative chaos, introduced by Kahane [85] in 1985, is born from the
+need of making rigorous Mandelbrot’s initial model of energy dissipation [111], the so-called
+Kolmogorov-Obukhov model. It is about constructing a continuous parameter theory of
+suitable multifractal random measures. Kahane’s eﬀorts were followed by several authors
+[5, 12, 21, 63, 126, 127, 132, 133] coming up with various generalizations at diﬀerent scales.
+These measures have found many applications in various ﬁelds of science, especially in
+mathematical ﬁnance (or equivalently boundary Liouville quantum gravity), 2d-Liouville
+quantum gravity and 3d-turbulence.
+In dimension d, a standard Gaussian multiplicative chaos is a random measure on a
+given domain D of Rd that can be formally written, for any Borelian set A as:
+Mγ(A) =
+Z
+A
+eγX(x)−γ2
+2 E[X2(x)] σ(dx)
+(1.1)
+where X is a centered Gaussian ”ﬁeld” and σ is a Radon measure on D. In the situations
+of interest, X is rather badly behaved and cannot be deﬁned as a random function: it is
+a random distribution (in the sense of Schwartz), like the Gaussian Free Field (GFF for
+short, see [134] for an overview about the GFF) for instance. In his seminal work, Kahane
+focused on the case where X possesses a covariance kernel of the form:
+E[X(x)X(y)] = ln+
+1
+|x −y| + g(x, y),
+(1.2)
+with ln+(u) = max(ln u, 0) and g a continuous bounded function over D×D. Surprisingly,
+it turns out that this is the only situation of interest since this family of kernels can be
+thought of as a transition, separating the family of kernels for which (1.1) is trivially
+converging from the family of kernels for which (1.1) is trivially vanishing. The covariance
+kernel thus possesses a singularity and it is now clear that giving sense to (1.1) is not
+straightforward (how do you deﬁne the exponential of a distribution?). The standard
+approach consists in applying a ”cut-oﬀ” to the distribution X, that is in regularizing the
+ﬁeld X in order to get rid of the singularity of the covariance kernel and get a nicer ﬁeld.
+The regularization usually depends on a small parameter that stands for the extent to
+which the ﬁeld has been regularized. The measure (1.1) is naturally understood as the
+limit that you get when the regularization parameter goes to 0. Kahane’s paper [85] is
+about making this sketch of construction rigorous. When σ is the Lebesgue measure for
+3
+
+
+--- PDF page 4 ---
+instance, it turns out that it produces non trivial limiting objects when the parameter γ
+is less than some critical value γc =
+√
+2d. These are the foundations of Kahane’s theory.
+Several questions are then raised like:
+- Does the limiting measure Mγ depend on the chosen cut-oﬀprocedure?
+- What are the geometrical and statistical properties of the measure Mγ?
+- What are the regularity properties of the measure Mγ?
+- How can we characterize the measure Mγ?
+- What happens at γc? and what about γ > γc?
+In this review, we will discuss the above questions as well as possible generalizations
+and applications of the theory of Gaussian multiplicative chaos in the light of recent
+progresses. Among the main points that we will address are the convolution techniques
+used to produce a Gaussian multiplicative chaos. The situation may be summarized as
+follows: given a Gaussian distribution X with covariance kernel of the type (1.2), what
+if we regularize X by convolution with a smoothing family of functions (θϵ)ϵ, converging
+towards the Dirac mass at 0 when ϵ →0? If we formally deﬁne:
+Xϵ(x) =
+Z
+X(y)θϵ(x −y) dy,
+it turns out that, under weak conditions, the family of random measures:
+Mϵ,γ(A) =
+Z
+A
+eγXϵ(x)−γ2
+2 E[X2
+ϵ (x)] dx
+(1.3)
+weakly converges in law towards the same measure as that produced by Kahane’s theory.
+Convolution techniques were ﬁrst introduced in [131, 132], where convergence in law is
+established. In the particular case when X is a Gaussian Free Field (GFF), a particular
+convolution technique was also studied in [56], i.e. convolution of the ﬁeld by a circle,
+where almost sure convergence along subsequences is established (see section 3).
+We will also discuss multifractality of Gaussian multiplicative chaos and related scaling
+relations. Roughly speaking, multifractal analysis is the study of objects, like measures
+or functions, possessing several levels of local regularity: for instance, the local H¨older
+exponent may vary spatially. In particular, we will explain why the (nowadays called) thick
+points of the GFF are very closely related to a general theory called multifractal analysis,
+which at least goes back to Kahane’s paper when applied to Gaussian multiplicative chaos
+(see subsection 2.3). Nowadays, there is a huge amount of literature on multifractal analysis
+and it is far beyond the scope of this review to cite or discuss all the related mathematical
+achievements (in the case of Mandelbrot’s multiplicative cascades see [14, 15, 22] and
+references therein).
+The applications that we will mention range from mathematical ﬁnance to fully de-
+veloped turbulence through 2d-Liouville quantum gravity or decaying Burgers turbulence.
+On the one hand, some of them are rather well established so that we will just recall the
+basic framework and give references. On the other hand, we feel important to devote a
+considerable part of the paper to 2d-Liouville quantum gravity. Roughly, it can be seen
+as an attempt to construct a canonical ”Riemannian” random metric on the sphere. Since
+Polyakov’s original work [125], physicists have understood that such a metric takes on the
+form of the exponential of a GFF [47, 125]. Interestingly, they have also understood that
+such metrics can be discretized by randomly triangulated surfaces (see [6] for instance), a
+4
+
+
+--- PDF page 5 ---
+recent ﬁeld of mathematical research that culminated with the construction of the so-called
+Brownian map (see [105, 106, 107, 114]) in the special case of pure gravity. While con-
+structing properly a metric is presently out of reach, Gaussian multiplicative chaos theory
+gives straightforwardly a way of deﬁning the associated volume form, called the Liouville
+measure. Non specialists of Gaussian multiplicative chaos will ﬁnd in subsection 5.2 the
+diﬀerent constructions suggested in the literature, i.e. white noise decomposition/circle
+average/H1-expansion of the GFF, as well as a proof that they all produce the same
+measure in law. Let us mention here the remarkable works of Duplantier-Sheﬃeld [56]
+and Sheﬃeld [135] where the authors state an impressive series of conjectures, which can
+be seen as a starting point to understand the physicist picture (see also the nice review
+for mathematicians [70]). In particular, this ambitious program could give a rigorous geo-
+metrical framework to the Knizhnik-Polyakov-Zamolodchikov formula (KPZ for short, see
+[94]). For instance, such a KPZ formula has already been used by physicists [54] to predict
+the exact values of the Brownian intersection exponents and has been rigorously checked
+to hold in some special cases (see [26]). We will explain the geometrical KPZ formulae
+rigorously proved in [56, 128] (see also [27, 17]).
+Furthermore, as pointed out in [128], the theory of Gaussian multiplicative chaos allows
+us to deal with much more general situations concerning constructions of measures or the
+KPZ formula. We stress here that the theory of Gaussian multiplicative chaos in [85] and
+the KPZ relation proved in [128] (or [17]) is valid in any dimension when applied to log-
+correlated Gaussian ﬁelds. In particular, boundary Liouville measures are discussed since
+they are nothing but Gaussian multiplicative chaos along 1d Riemannian manifolds. Also,
+in dimension d one can consider situations where the ﬁeld X has correlations given by the
+kernel (m2 −∆)−d/2 (with possibly m = 0) since such correlations are logarithmic (see
+[59]). We do not detail this situation here, ﬁrst because we cannot explain in great details
+all the situations where the theory of Gaussian multiplicative chaos applies and second,
+because it could be instructive for the reader to check that the framework drawn in [85]
+for the construction of measures or in [128, 17] for the KPZ formula applies (the reader
+may also consult [38] on this topic). Finally, as a new result, we explain how to combine
+the results in [37, 132] to prove that the discrete Liouville measures on isoradial graphs
+converge towards the Liouville measure as the mesh of the graph converges to 0.
+The last part of this review (section 6) will be devoted to possible generalizations
+of Kahane’s theory. We will discuss how to renormalize the vanishing measure (1.1) for
+γ2 ⩾2d (when σ is the Lebesgue measure). This yields new qualitative behaviours of the
+limiting measure that may be classiﬁed in two categories: Critical Gaussian Multiplica-
+tive Chaos or Atomic Gaussian Multiplicative Chaos. We discuss the associated relations
+with duality in 2d-Liouville quantum gravity, the frozen phase of logarithmically corre-
+lated Gaussian potentials or the maximum of log-correlated Gaussian ﬁelds (including in
+particular the maximum of the GFF). Other possible generalizations are mentioned, like
+taking complex-valued ﬁelds X or matrix-valued ﬁelds X in (1.1).
+Finally, we mention that a preceeding review on multiplicative chaos has already ap-
+peared [62]. The reader may ﬁnd in [62] some further ﬁelds of applications including
+Dvoretzy covering, percolation on trees, random cascades and Riesz products that we do
+not review here for the sake of non-overlapping. Concerning multiplicative cascades, the
+reader may consult the recent review [16].
+5
+
+
+--- PDF page 6 ---
+1.1
+A word on Quantum ﬁeld theory and the Hoeg-Krohn model
+To our knowledge, the ﬁrst mathematical occurence of measures of the form (1.1) appeared
+in Hoeg-Krohn’s work [81]. In the context of Quantum ﬁeld theory, Hoeg-Krohn focused
+on the case where X is the two dimensional massive free ﬁeld and σ the Lebesgue measure
+(to be precise, their point of view is not exactly that of random measures). He showed
+that the measure Mγ is non trivial for γ2 < 2, thus working below the L2-threshold;
+under the assumption γ2 < 2, one can perform L2-computations which considerably sim-
+pliﬁes the study of Gaussian multiplicative chaos measures (see subsection 2.1). This work
+led to other works [2, 3] in dimension 2 which generalized some of the initial results of
+[81]. Nonetheless, it seems that none of these works focused on building a general theory
+applicable to a wide range of random measures in all dimensions.
+1.2
+Notations
+The truncated logarithm ln+ is the function ln+(x) = max(0, ln x). The relation f ≍g
+means that there exists a positive constant c > 0 such that c−1f(x) ⩽g(x) ⩽cf(x) for
+all x under consideration.
+We denote by (D, ρ) a metric space D equipped with its metric ρ. This metric space
+is endowed with its Borelian sigma algebra B(D).
+Given a domain D of Rd, we denote by H1
+0(D) the classical Sobolev space deﬁned as
+the Hilbert space closure with respect to the Dirichlet inner product of the set of smooth
+compactly supported functions on D. Finally, γ will denote the intermittency parameter.
+We will suppose that γ ⩾0.
+Acknowledgements
+We would like to thank M. Bauer, F. David, B. Eynard, J.F. Le Gall for interesting dis-
+cussions on these topics. Special thanks are addressed to all those who read and suggested
+improvements of a prior draft of this manuscript: J. Barral, N. Curien and C. Garban.
+2
+State of the art since Kahane
+2.1
+The seminal work of Kahane in 1985
+The theory of multiplicative chaos was ﬁrst deﬁned rigorously by Kahane in 1985 in the
+article [85] to which the reader is referred for further details or deﬁnitions. More speciﬁcally,
+Kahane built a theory relying on the notion of σ-positive type kernel. Consider a locally
+compact metric space (D, ρ). A function K : D × D →R+ ∪{∞} is of σ-positive type
+if there exists a sequence (Kk)k of continuous nonnegative and positive deﬁnite kernels
+Kk : D × D →R+ such that:
+∀x, y ∈D,
+K(x, y) =
+X
+k ⩾1
+Kk(x, y).
+(2.1)
+It is worth pointing out here that Kahane’s theory uses nonnegativeness of the kernels
+(Kk)k for the only sake of an easy formulation of a uniqueness criterion (see Theorem 2.3
+below). If the reader is not interested in the uniqueness part of Gaussian multiplicative
+6
+
+
+--- PDF page 7 ---
+chaos theory, he may skip this assumption of nonnegativeness as we will discuss in section
+3 a more elaborate uniqueness criterion. If K is a kernel of σ-positive type with decom-
+position (2.1), one can consider a sequence of independent centered Gaussian processes
+(Yk)k ⩾1 with covariance kernels (Kk)k. Then the Gaussian process
+Xn =
+n
+X
+k=1
+Yk
+has covariance kernel Pn
+k=1 Kk. Given a Radon measure σ on D, it is proved in [85] that
+the sequence of random measures (Mn)n given by:
+∀A ∈B(D),
+Mn,γ(A) =
+Z
+A
+eγXn(x)−γ2
+2 E[Xn(x)2]σ(dx)
+(2.2)
+converges almost surely in the space of Radon measures (equipped with the topology of
+weak convergence) towards a random measure M, which is called Gaussian multiplicative
+chaos1 with kernel K acting on σ. Basically, this convergence relies on the fact that for
+each compact set A, the sequence (Mn,γ(A))n is a nonnegative martingale. This martingale
+structure ensuring the almost sure convergence of (2.2) at low cost is the main motivation
+for considering kernels of σ-positive type.
+Then Kahane established a whole set of properties of this chaos that he derived from
+the following comparison principle:
+Theorem 2.1. Convexity inequalities. [Kahane, 1985]. Let (Ai)1 ⩽i ⩽n and (Bi)1 ⩽i ⩽n
+be two centered Gaussian vectors such that:
+∀i, j,
+E[AiAj] ⩽E[BiBj].
+Then for all combinations of nonnegative weights (pi)1 ⩽i ⩽n and all convex (resp. concave)
+functions F : R+ →R with at most polynomial growth at inﬁnity
+E
+h
+F
+ n
+X
+i=1
+pieAi−1
+2 E[A2
+i ]i
+⩽(resp. ⩾) E
+h
+F
+ n
+X
+i=1
+pieBi−1
+2 E[B2
+i ]i
+.
+(2.3)
+Remark 2.2. Note that theorem 2.1 is very general and can be useful for instance in the
+study of random Gibbs measures where the Hamiltonian is a Gaussian variable. This is for
+instance the case in the Sherrington-Kirkpatrick (SK) model of statistical physics. In an
+important work, the authors of [80] rederived (2.3) with F(x) = ln x in the context of the
+SK model and used this inequality to compare the model of size N with two independent
+subsystems of size N1 and N2 with N = N1 + N2. As a consequence, they noticed that the
+expected ﬁnite size free energy was subadditive with respect to its size hence obtaining the
+existence of the limiting free energy as the size of the system goes to inﬁnity.
+1Private communication with J.. Kahane: The terminology multiplicative chaos was adopted since this
+theory may be seen as a multiplicative counterpart of the additive Wiener chaos theory. Actually, this is
+Paul L´evy himself who suggested to J.P. Kahane in the seventies to construct a multiplicative theory of
+random variables, arguing that this should be as fundamental as the additive theory of random variables.
+It took almost ten years to Kahane to build his theory of Gaussian multiplicative chaos.
+7
+
+
+--- PDF page 8 ---
+This ingenious inequality sheds some light on the mechanism of Gaussian multiplicative
+chaos. For instance, let us stress that a kernel K of σ-positive type admits inﬁnitely many
+decompositions of the form (2.1): you can obtain other decompositions by changing the
+order of the kernels Kk, by gathering them, etc... so there are possibly quite diﬀerent
+kernels (K′
+k)k whose sum is K. The important question thus is: does the law of the limiting
+measure M depend on the choice of the decomposition (Kk)k in (2.1)?
+Theorem 2.3. Uniqueness. [Kahane, 1985]. The law of the limiting measure Mγ does
+not depend on the sequence of nonnegative and positive deﬁnite kernels (Kk)k ⩾1 used in
+the decomposition (2.1) of K.
+Thus, the theory enables to give a unique and mathematically rigorous deﬁnition to a
+random measure M in D deﬁned formally by:
+∀A ∈B(D),
+Mγ(A) =
+Z
+A
+eγX(x)−γ2
+2 E[X(x)2] σ(dx).
+(2.4)
+where (X(x))x∈D is a centered ”Gaussian ﬁeld” whose covariance K is a σ-positive type
+kernel. To show the usefulness of Theorem 2.1, it is worth giving a few words about the
+proof of Theorem 2.3. It works roughly as follows. Assume that you have two decompo-
+sitions (Kk)k ⩾1 and (K′
+k)k ⩾1 of K with associated Gaussian process sequences (Xn)n
+and (X′
+n)n and associated measures (Mn)n and (M′
+n)n. Both sequences (Pn
+k=1 Kk)n and
+(Pn
+k=1 K′
+k)n converge pointwise towards K in a nondecreasing way. Therefore, if we choose
+a compact set T ⊂D then, for each ﬁxed p ⩾1 and ϵ > 0, the Dini theorem entails that
+p
+X
+k=1
+Kk ⩽ϵ +
+q
+X
+k=1
+K′
+k
+for q large enough on T × T. Since Pq
+k=1 K′
+k (resp. Pp
+k=1 Kk) is the covariance kernel of
+X′
+q (resp. Xp), we can apply Kahane’s convexity inequalities and get, for each bounded
+convex function F : R+ →R:
+E[F(Mp(A))] ⩽E[F(e
+√ϵγZ−ϵγ2
+2 M′
+q(A))],
+where Z is a standard Gaussian random variable independent of M′. By taking the limit
+as q tends to ∞, and then p →∞, we obtain
+E[F(M(A))] ⩽E[F(e
+√ϵγZ−ϵγ2
+2 M′(A))].
+Since ϵ > 0 can be chosen arbitrarily small, we deduce
+E[F(M(A))] ⩽E[F(M′(A))].
+The converse inequality is proved in the same way, showing E[F(M(A))] = E[F(M′(A))]
+for each bounded convex function F. By choosing F(x) = e−λx for λ > 0, we deduce that
+the measures M and M′ have the same law.
+However, the simplicity of the convergence does not solve the question of non-degeneracy
+of the limiting measure M: it is possible that M identically vanishes. A 0−1 law argument
+8
+
+
+--- PDF page 9 ---
+straightforwardly shows that the event ”M is identically null” has probability 0 or 1. It
+seems diﬃcult to state a general decision rule to decide whether M is degenerate or not.
+It depends in an intricate way on the covariance structure, i.e. the kernel K, and on the
+measure σ. So Kahane focused on the situation when the kernel K and the measure σ
+are intertwined via the metric structure of D. More precisely, he assumed that K can be
+written as
+∀x, y ∈D,
+K(x, y) = ln+
+T
+ρ(x, y) + g(x, y)
+(2.5)
+where T > 0, g : D × D →R is a bounded continuous function and σ is in the class R+
+α
+(denoted Mα+ in Kahane’s paper):
+Deﬁnition 2.4. For α > 0, a Borel measure σ is said to be in the class R+
+α if for all ϵ > 0
+there is δ > 0, C < ∞and a compact set Aϵ ⊂D such that σ(D \ Aϵ) ⩽ϵ and:
+∀O open set,
+σ(O ∩Aϵ) ⩽Cϵdiamρ(O)α+δ,
+(2.6)
+where diamρ(O) is the diameter of O with respect to ρ.
+For instance, the Lebesgue measure of Rd, restricted to any bounded domain of Rd
+equipped with the Euclidean distance ρ, is in the class R+
+α for all α < d.
+The above deﬁnition looks like a H¨older condition for measures. It is intimately related
+to the notion of measure with ﬁnite β-energy: a Borel measure σ is said to be of ﬁnite
+β-energy if
+Iβ(σ) =
+Z Z
+1
+ρ(x, y)β σ(dx)σ(dy) < +∞.
+(2.7)
+Indeed, if σ has a ﬁnite β-energy then σ ∈R+
+α for all α < β. Conversely, if σ is in the class
+R+
+α , then the measure σAϵ(dx) = 1Aϵ(x)σ(dx) has ﬁnite β-energy for all β < α + ϵ.
+To have a ﬂavor of the forthcoming results, let us treat the following simple situation,
+which we call the ”below L2-threshold” case. It is about formulating a criterion ensur-
+ing that the martingale (Mn(A))n is bounded in L2 for some given bounded set A, and
+therefore uniformly integrable. A straightforward computation shows that:
+E[Mn,γ(A)2] =
+Z
+A
+Z
+A
+E[eγXn(x)−γ2
+2 E[Xn(x)2]eγXn(y)−γ2
+2 E[Xn(y)2]] σ(dx)σ(dy)
+⩽
+Z
+A
+Z
+A
+eγ2K(x,y) σ(dx)σ(dy)
+⩽C
+Z
+A
+Z
+A
+1
+ρ(x, y)γ2 σ(dx)σ(dy).
+Therefore, if the measure 1A(x)σ(dx) has ﬁnite γ2-energy, the martingale (Mn(A))n is
+bounded in L2 and therefore converges towards a non trivial limit. In the case when σ
+is the Lebesgue measure of Rd and ρ the Euclidean distance, this condition simply reads
+γ2 < d.
+Kahane proved the following highly deeper result:
+Theorem 2.5. Non-degeneracy. [Kahane, 1985]. Assume that the kernel K takes on
+the form (2.5) and that the measure σ is in the class R+
+α for some α > 0. Then, for each
+compact set A, the sequence (Mn,γ(A))n is a uniformly integrable martingale. Hence
+γ2 < 2α ⇒Mγ is non degenerate.
+9
+
+
+--- PDF page 10 ---
+As a by-product of his proof, Kahane also shows the following result concerning the
+dimension of the carrier of the measure Mγ:
+Theorem 2.6. Structure of the carrier. [Kahane, 1985]. Assume that the kernel K
+takes on the form (2.5) and that the measure σ is in the class R+
+α for some α > 0. If
+γ2 < 2α, the measure Mγ is non degenerate and is almost surely in the class R+
+α−γ2
+2
+.
+Note that Theorem 2.6 implies that the measure M cannot give positive mass to a set
+of Hausdorﬀdimension less or equal than α−γ2
+2 . Therefore the measure M cannot possess
+atoms if σ is in some class R+
+α . We will see in subsection 4.1 that the Hausdorﬀdimension
+of the carrier is exactly d −γ2
+2 when σ is the Lebesgue measure on a domain of Rd.
+Remark 2.7. Stronger versions of Theorem 2.5 and Theorem 2.6 were proved recently in
+[129].
+Remark 2.8. If σ is the Lebesgue measure on some domain D ⊂Rd equipped with the
+Euclidean metric, then σ is in the class R+
+d−ϵ for all ϵ > 0 hence, if γ2 < 2d, the measure
+Mγ is non degenerate and in the class R+
+d−γ2
+2 −ϵ for all ϵ > 0.
+Partial converses of Theorem 2.5 are more intricate. Kahane ﬁrst gave a general nec-
+essary condition:
+Theorem 2.9. Necessary condition of non-degeneracy. [Kahane, 1985]. Assume
+(D, ρ) is a locally compact metric space and:
+-the function (t, s) 7→ρ(t, s)2 is of negative type,
+-σ has the doubling property, namely that there exists a constant C such that
+∀x ∈T, ∀r > 0,
+σ(B(x, 2r)) ⩽Cσ(B(x, r)),
+-the kernel K takes on the form (2.5).
+Denote by dim(D) the Hausdorﬀdimension of D. If γ2 > 2dim(D) then Mγ is degenerate.
+As pointed out by Kahane, for a squared distance of negative type, the assumptions
+of the above theorem are satisﬁed when the triple (D, ρ, σ) admits a Lipschitz immersion
+into a ﬁnite-dimensional space. Let us also stress that the critical situation γ2 = 2dim(D)
+is not settled by this theorem. Nevertheless, he reinforced his assumptions to prove:
+Theorem 2.10. Necessary and suﬃcient condition of non-degeneracy. [Kahane,
+1985]. Assume (D, ρ) is a d-dimensional manifold of class C1 and let σ be its volume
+form (or any Radon measure absolutely continuous w.r.t the volume form with a bounded
+density). Assume that the kernel K takes on the form (2.5). Then
+Mγ is non degenerate ⇒γ2 < 2d.
+More results in the Euclidean space
+When the metric space (D, ρ) is an open subset of Rd for some d ⩾1 equipped with the
+Euclidian distance and σ is the Lebesgue measure, the previous results can be strength-
+ened. We ﬁrst point out that Theorem 2.10 applies and the non-degeneracy necessary and
+suﬃcient condition reads γ2 < 2d.
+Kahane’s convexity inequalities (Theorem 2.1) allow us to give a complete description
+of the moments of Mγ:
+10
+
+
+--- PDF page 11 ---
+(a) γ = 0.2
+(b) γ = 1
+(c) γ = 1.8
+Figure 1: Inﬂuence of the intermittency parameter γ: we plot the ”density proﬁle” of a
+2-dimensional multiplicative chaos illustrating the ”clustering” of the activity of the chaos
+when γ grows.
+Theorem 2.11. Positive Moments. [Kahane, 1985]. If the measure Mγ is non de-
+generate, that is γ2 < 2d, the measure Mγ admits ﬁnite positive moments of order p
+for all p ∈]0, 2d
+γ2 [. More precisely, for all compact set A ⊂D and p ∈]0, 2d
+γ2 [, we have
+E[Mγ(A)p] < +∞.
+Basically, it suﬃces to prove the ﬁniteness of the moments for your favorite kernel K
+of the type (2.5) and deduce that the conclusions remain valid for all the kernels of the
+type (2.5) via Theorem 2.1.
+We know turn to the existence of negative moments which was not investigated by
+Kahane. We have:
+Theorem 2.12. Negative Moments. If the measure Mγ is non degenerate, that is
+γ2 < 2d, the measure Mγ admits ﬁnite negative moments of order p for all p ∈] −∞, 0[.
+More precisely, for any compact nonempty Euclidean ball A ⊂D and p ∈]−∞, 0[, we have
+E[Mγ(A)p] < +∞.
+11
+
+
+--- PDF page 12 ---
+The ﬁniteness of moments of negative order is proved in [115] in the case of discrete
+cascades. By adapting the argument of [115] and using the convexity inequalities 2.3,
+theorem 2.12 is proved in [132].
+Let us also point out an important result in [18] where the authors compute the tail
+distributions of the measure Mγ in dimension 1 with the kernel K(x, y) = ln+
+1
+|x−y| (which
+is of σ-positive type, see Proposition 2.15 below):
+Theorem 2.13. Distribution tails. [Barral, Jin, 2012].
+If A is some nonempty
+segment of R then there exists a constant c > 0 such that
+lim
+x→+∞x
+2
+γ2 P(Mγ(A) > x) = c.
+We conclude this theoretical background by pointing out some further interesting prop-
+erties that can be exhibited when the integrating measure σ in (2.4) is the Lebesgue mea-
+sure. The ﬁrst observation that can be made is that the measure Mγ is stationary in space
+as soon as we consider a stationary Gaussian distribution X. This is due to the translation
+invariance of the Lebesgue measure and the stationarity of X. Furthermore, when M is
+non-degenerate, it can be shown that the support of Mγ is almost surely the whole of Rd.
+This results from the 0 −1 law of Kolmogorov: if you consider a ball B, the 0 −1 law tells
+you that the event {Mγ(B) > 0} has probability 0 or 1. Indeed, we have
+inf
+x∈B eγXn(x)−γ2
+2 E[X2
+n(x)]Mγ,n(B) ⩽Mγ(B) ⩽sup
+x∈B
+eγXn(x)−γ2
+2 E[X2
+n(x)]Mγ,n(B),
+(2.8)
+where Mγ,n(B) is the Gaussian multiplicative chaos
+Mγ,n(dx) = lim
+k→∞eγ(Xk−Xn)(x)−γ2
+2 E[(Xk−Xn)2(x)] dx.
+Since for k > n:
+Xk −Xn =
+k
+X
+p=n+1
+Yp,
+we may say that we have just removed the dependency on the ﬁrst n ﬁelds Y1, . . . , Yn.
+Therefore (2.8) entails that for any n ⩾0
+{Mγ(B) > 0} = {Mγ,n(B) > 0}.
+Since the event {Mγ,n(B) > 0} is independent of the ﬁelds Y1, . . . , Yn, we deduce that the
+event {Mγ(B) > 0} belongs to the asymptotic sigma-algebra generated by the ﬁelds (Yn)n
+in such a way that it has probability 0 or 1. When Mγ is non-degenerate, it has clearly
+probability 1. This argument can be reproduced for every ball chosen among a countable
+family of balls (Bn)n generating the open sets of Rd. Therefore, the event T
+n{Mγ(Bn) > 0}
+has probability 1, proving that almost surely the support of Mγ is the whole of Rd.
+2.2
+Examples of kernels of σ-positive type
+In this section, we give a few important examples of σ-positive kernels.
+12
+
+
+--- PDF page 13 ---
+Exact kernels
+We consider for T > 0 the kernel
+∀x, y ∈Rd,
+K(x, y) = ln+
+T
+|x −y|.
+(2.9)
+It is of σ-positive type in dimension d = 1, 2 and is involved in exact scaling relations as
+explained in subsection 2.3.
+Star scale invariant kernels
+A simple way of constructing σ-positive kernels on Rd is to consider
+∀x, y ∈Rd,
+K(x, y) =
+Z ∞
+1
+k
+ (x −y)u
+
+u
+du,
+(2.10)
+where k is a continuous function of positive type with k(0) = 1. Such kernels are related to
+the notion of ⋆-scale invariance (see subsection 2.3). Whole plane massive Green functions
+are ⋆-scale invariant.
+Green functions
+If we consider a bounded domain D of R2, the Green function G of the Laplacian with
+0-boundary condition is of σ-positive type. The corresponding Gaussian distribution X
+with covariance G is the Gaussian Free Field (GFF for short). The associated Gaussian
+multiplicative chaos is called the Liouville measure. More details about these claims are
+given in subsection 5.2.
+2.3
+Diﬀerent notions of stochastic scale invariance
+In this subsection, we consider the Euclidian framework. More precisely, we consider an
+open set D of Rd and Gaussian multiplicative chaos of the type
+∀A ∈B(D),
+Mγ(A) =
+Z
+A
+eγX(x)−γ2
+2 E[X(x)2] dx
+(2.11)
+where the Gaussian distribution X has covariance kernel of the form:
+K(x, y) = ln+
+T
+|x −y| + g(x, y)
+(2.12)
+for some continuous and bounded function g over D2. Then the power-law spectrum of
+such Gaussian multiplicative chaos presents some interesting features, such as non-linearity
+(in the parameter q in the following theorem):
+Theorem 2.14. Assume that the kernel K takes on the form (2.5) with γ2 < 2d. Choose
+a point x ∈D. For each q ∈[0, 2d
+γ2 [ we have
+E
+
+Mγ(B(x, r))q
+≍rξ(q)
+as r →0
+where ξ is the structure exponent of the measure M:
+∀q ∈[0, 2d
+γ2 [,
+ξ(q) =
+ d + γ2
+2
+
+q −γ2
+2 q2.
+13
+
+
+--- PDF page 14 ---
+Heuristic proof. For simplicity, assume that T = 1 in (2.12). By making a change of
+variables, we get:
+Mγ(B(x, r)) =
+Z
+B(x,r)
+eγX(y)−γ2
+2 E[X(y)2] dy
+=rd
+Z
+B(0,1)
+eγX(x+ry)−γ2
+2 E[X(x+ry)2] dy.
+Then we observe that the ﬁeld (X(x + ry))y has a covariance structure approximatively
+given for r ⩽1 by:
+E[X(x + ry)X(x + rz)] ≃ln+
+1
+r|y −z|
+= ln 1
+r + ln+
+1
+|y −z|
+≃ln 1
+r + E[X(x + y)X(x + z)].
+The above relation gives us the following (good) approximation in law
+(X(x + ry))y∈B(0,1) ≃Ωr + (X(x + y))y∈B(0,1)
+where Ωr is a centered Gaussian random variable independent of the ﬁeld (X(x+y))y∈B(0,1)
+and with variance ln 1
+r. Therefore
+Mγ(B(x, r)) =rd
+Z
+B(0,1)
+eγX(x+ry)−γ2
+2 E[X(x+ry)2] dy
+≃rdeγΩr−γ2
+2 E[Ω2
+r]
+Z
+B(0,1)
+eγX(x+y)−γ2
+2 E[X(x+y)2] dy
+=rdeγΩr−γ2
+2 E[Ω2
+r]Mγ(B(x, 1)).
+By taking the q-th power and integrating, we get as r →0
+E
+
+Mγ(B(x, r))q
+≃rξ(q)E[Mγ(B(x, 1)q],
+thus explaining the theorem. Actually, the rigorous proof of this result is very close to the
+heuristic developed here.
+Notice that the quadratic structure of the structure exponent is intimately related to
+the Gaussian nature of the random distribution X. Random measures with a non-linear
+power-law spectrum are often called multifractal. That is why Gaussian multiplicative
+chaos (and other possible extensions) are sometimes called Multifractal Random Measures
+(MRM for short) in the literature. It is also natural to wonder if some speciﬁc choice of the
+covariance kernel K may lead to replacing the symbol ≍in Theorem 2.14 by the symbol
+=. It turns out that this question is related to some speciﬁc scaling relation, which we
+describe below.
+14
+
+
+--- PDF page 15 ---
+Exact stochastic scale invariance
+The notion of ”exact stochastic scale invariance” relies on the additive properties of the
+logarithm function. Roughly speaking, in order to produce kernels with exact scaling
+relations, kernels K of the type (2.5) with g = 0 (and ρ the Euclidian distance) must be
+considered. So we ﬁrst focus on the σ-positive type of such kernels:
+Proposition 2.15. For d ⩽2 and T > 0, the function
+x ∈Rd 7→λ2 ln+
+T
+|x|
+(2.13)
+is of σ-positive type.
+Proof. A straightforward computation yields:
+ln+
+T
+|x| =
+Z +∞
+0
+(t −|x|)+νT (dt)
+where νT is the measure (δT is the Dirac mass at T):
+νT (dt) = 1[0,T](t)dt
+t2 + 1
+T δT (dt).
+Hence for any µ > 0, we have:
+ln+
+T
+|x| = 1
+µ ln+
+T µ
+|x|µ =
+Z +∞
+0
+(t −|x|µ)+νT µ(dt).
+By using a Chasles relation in the integral of the right-hand side, proving that this kernel
+is of σ-positive type thus boils down to considering the possible values of µ > 0 such that
+the function (1−|x|µ)+ is of positive type: this is the Kuttner-Golubov problem (see [77]).
+For d = 1, it is straightforward to see that (1 −|x|)+ is of positive type (compute the
+inverse Fourier transform). In dimension 2, Pasenchenko [121] proved that the function
+(1 −|x|1/2)+ is of positive type on R2. We can thus write
+ln+
+T
+|x| =
+X
+n ⩾1
+Kn(x)
+with
+Kn(x) =
+Z
+1
+n−1
+1
+n
+(t −|x|µ)+νT µ(dt)
+with µ = 1 in dimension 1 and µ = 1/2 in dimension 2.
+Theorem 2.16. Exact stochastic scale invariance. [Bacry, Muzy 2003]. Let K
+be the covariance kernel given by (2.13) in dimension d = 1 or d = 2. The associated
+Gaussian multiplicative chaos Mγ is exactly stochastic scale invariant:
+∀λ ∈]0, 1],
+(M(λA))A⊂B(0,T/2)
+law
+= λdeΩλ−1
+2 E[Ω2
+λ](M(A))A⊂B(0,T/2),
+(2.14)
+where Ωλ is a Gaussian random variable, independent of the measure (M(A))A⊂B(0,T/2),
+with mean 0 and variance γ2 ln 1
+λ .
+15
+
+
+--- PDF page 16 ---
+We stress that the above equality in law is to be understood in the sense
+ M(λA1), . . . , M(λAp)
+ law
+=
+ λdeΩλ−1
+2 E[Ω2
+λ]M(A1), . . . , λdeΩλ−1
+2 E[Ω2
+λ]M(Ap)
+
+for all possible choice A1, . . . , Ap of Borelian subsets of the ball B(0, T/2).
+Notice that such a scaling property makes obvious several computations related to the
+measure Mγ. The reader may, for instance, observe that the heuristic proof of Theorem
+2.14 becomes rigorous for such a measure. It is also not diﬃcult to see that this scaling
+relation is bound to be valid only locally (over a ball) and cannot hold on the whole
+space: the logarithm is not of positive type over the whole of Rd. Exact scaling relations
+were introduced in [12] in dimension 1 together with further generalizations in the case of
+log-inﬁnitely divisible random measures.
+It is natural to wonder how to construct such measures in dimension higher than 3.
+The procedure is somewhat complicated by the following observations: for d = 3, it is an
+open question to know whether the kernel (2.13) is of σ-positive type and for d ⩾4, it is
+even not of positive type.
+Another approach has therefore been suggested in [127]. The main ideas are the fol-
+lowing: what only matters to construct exactly stochastic scale invariant measures is that
+the covariance kernel must be the logarithm function over a ball centered at 0. The way of
+”truncating” the logarithm does not matter in order to obtain the scaling relation (2.14)
+but may be sensitive to the dimension when regarding positive deﬁniteness: truncating the
+logarithm with the function ln+ does not resist increasing the dimension. In [127], another
+truncation is suggested: we can ﬁnd an isotropic function g : Rd →R that is constant on
+a neighborhood of 0 and such that the kernel
+K(x) = ln+
+T
+|x| + g(x)
+(2.15)
+is of σ-positive type. Brieﬂy, the construction is the following: let us denote by S the
+sphere of Rd and by σ the unique uniform measure on the sphere such that σ(S) = 1. This
+(probability) measure is invariant under rotations. Let us deﬁne the function
+K(x) =
+Z
+S
+ln+
+T
+|⟨x, s⟩|σ(ds),
+(2.16)
+where ⟨·, ·⟩stands for the canonical inner product of Rd. Since σ is invariant under rota-
+tions, the function K is isotropic. Fix x ∈Rd such that |x| ⩽T and write x = |x|e where
+e ∈S. Then we have
+K(x) =
+Z
+S
+ln
+T
+|x||⟨e, s⟩|σ(ds) = γ2 ln T
+|x| + γ2
+Z
+S
+ln
+1
+|⟨e, s⟩|σ(ds).
+By invariance under rotations of σ, the second term in the right-hand side does not depend
+on x and turns out to be ﬁnite: this can be seen by noticing that, under σ, the random
+variable ⟨e, s⟩has the law of the ﬁrst entry of a Haar vector. K thus coincides with the
+logarithm over a neighborhood of 0, up to an additive constant. Gaussian multiplicative
+chaos with associated kernel (2.16) are exactly stochastic scale invariant in the sense of
+(2.14). It remains an open question to know to which extent the notion of exact stochastic
+scale invariance uniquely determines the covariance structure of the associated kernel K.
+16
+
+
+--- PDF page 17 ---
+Star scale invariance
+As explained above, the notion of exact stochastic scale invariance is a local notion (valid
+only over a ball). We now present a global notion of stochastic scale invariance, called star
+scale invariance in [5] in reference of earlier works by Mandelbrot in the case of multiplica-
+tive cascades on trees. It stems from the need of characterizing Gaussian multiplicative
+chaos with functional equations. Indeed, tractable functional equations may provide eﬃ-
+cient tools in identifying Gaussian multiplicative chaos as, for instance, scaling limits of
+discrete models.
+Deﬁnition 2.17. Log-normal ⋆-scale invariance. A random Radon measure M on Rd
+is said lognormal ⋆-scale invariant if for all 0 < ε ⩽1, M obeys the cascading rule
+ M(A)
+
+A∈B(Rd)
+law
+=
+  Z
+A
+eωε(x)Mε(dx)
+
+A∈B(Rd)
+(2.17)
+where ωε is a Gaussian process, which is assumed to be stationary and continuous in prob-
+ability, and Mε is a random measure independent from Xε satisfying the scaling relation
+ Mε(A)
+
+A∈B(Rd)
+law
+=
+ M(A
+ε )
+
+A∈B(Rd).
+(2.18)
+Notice that the process ωε is unknown. Roughly speaking, we look for random mea-
+sures that scale with an independent lognormal factor on the whole space. This property
+is shared by a large class of Gaussian multiplicative chaos. And for those Gaussian multi-
+plicative chaos that do not share this property, they are very close to satisfying it. If the
+reader is familiar with branching random walks (BRW), here is an explanation that may
+help intuition. If we consider a BRW the reproduction law of which does not change with
+time (i.e. is the same at each generation), the law of the branching random walk will be
+characterized by a discrete version of the above ⋆-scale invariance called ”ﬁxed point of
+the smoothing transform” (in the lognormal case of course, see [60, 29, 108]). If the re-
+production law evolves in time, then we have to change things a bit to adapt to this time
+evolution. The same argument holds for the log-normal ⋆-scale invariance: it characterizes
+these Gaussian multiplicative chaos that do not vary along scales.
+It is proved in [5] that E[eωε(r)] = εd as soon as the measure M possesses a moment
+of order 1 + δ for some δ > 0. Furthermore, up to weak regularity conditions on the
+covariance kernel of the process ωε summarized in the deﬁnition below, all the log-normal
+⋆-scale invariant random measures with enough moments can be identiﬁed.
+Deﬁnition 2.18. We will say that a stationary random measure M satisﬁes the good
+lognormal ⋆-scale invariance if M is lognormal ⋆-scale invariant and for each ϵ < 1, the
+covariance kernel Kϵ of the process ωϵ involved in (2.17) is continuous and satisﬁes:
+|kϵ(r)| →0
+as
+|r| →+∞,
+(2.19)
+∀r, r′ ∈Rd \ {0},
+|kϵ(r) −kϵ(r′)| ⩽Cϵθ
+ min(|r|, |r′|)
+
+|r −r′|
+(2.20)
+for some positive constant Cϵ and some decreasing function θ :]0, +∞[→R+ such that
+Z +∞
+1
+θ(u) ln(u) du < +∞.
+(2.21)
+17
+
+
+--- PDF page 18 ---
+Lognormal ⋆-scale invariant random measures are then characterized as:
+Theorem 2.19. [Allez, Rhodes, Vargas, 2011] Let M be a good lognormal ⋆-scale
+invariant stationary random measure. Assume that
+E[M([0, 1]d)1+δ] < +∞
+for some δ > 0. Then M is the product of a nonnegative random variable Y ∈L1+δ and
+an independent Gaussian multiplicative chaos:
+∀A ⊂B(Rd),
+M(A) = Y
+Z
+A
+eγX(x)−γ2
+2 E[X(x)2] dx
+(2.22)
+with associated covariance kernel given by the improper integral
+∀x ∈Rd \ {0},
+K(x) =
+Z +∞
+1
+k(xu)
+u
+du
+(2.23)
+for some continuous covariance function k such that k(0) = 1 and γ2 ⩽
+2d
+1+δ.
+Conversely, given some datas k and Y as above, the relation (2.22) deﬁnes a lognormal
+⋆-scale invariant random measure M with ﬁnite moments of order 1+β for every β ∈[0, δ).
+It is plain to see that the covariance structure (2.23) can be rewritten as
+∀x ∈Rd \ {0},
+K(x) = ln+
+1
+|x| + g(x)
+(2.24)
+for some continuous bounded function g, thus making the connection with Kahane’s theory
+presented in subsection 2.1.
+The ﬁrst star-scale invariant kernel appearing in the literature goes back to Kahane’s
+original paper [85] in order to approximate the kernel ln+
+T
+|x−y| in dimension 3 but he did
+not study the related scaling relations. Kahane chose the kernel
+K(x) =
+Z +∞
+1
+e−u|x|
+u
+du.
+Another example was exhibited in [21]. It corresponds to the choice
+K(x) =
+Z +∞
+1
+k(ux)
+u
+du
+with
+k(x) = (1 −|x|
+T )1[0,T](|x|)
+and is based on a one dimensional geometric construction. Also, the authors in [21] made
+the connection with star scale invariance.
+To sum up, the solutions of the star-equation are now well identiﬁed in what is called
+the subcritical regime, which can be characterized by the fact that associated solutions
+possess enough moments (larger than 1). It remains to investigate the characterization of
+solutions with only few moments (smaller than 1): we will see in section 6 that new types
+of solutions are then involved, giving rise to quite new structures of the chaos.
+18
+
+
+--- PDF page 19 ---
+3
+Extensions of the theory
+3.1
+Limitations of Kahane’s theory
+In view of natural applications, Kahane’s theory appears unsuﬃcient. Here are a few points
+that the theory does not address:
+• A kernel K of σ-positive type is nonnegative and positive deﬁnite. Is the reciprocal
+true?
+• What happens if one works with convolutions of K instead of nondecreasing approx-
+imating series?
+• Kahane’s theory is a theory which ensures equality in distribution. Can one build a
+theory that ensures almost sure equality?
+The ﬁrst point raised above is still an open question. The two following points have been
+addressed recently as we will now describe in the next two subsections.
+3.2
+Generalized Gaussian multiplicative chaos
+Kahane’s theory of Gaussian multiplicative chaos relies on the notion of kernels of σ-
+positive type. However, on the one hand it is not always straightforward to check such a
+criterion and on the other hand it seems natural to think that the theory should remain
+valid for kernels of positive type. A way of getting rid of σ-positive typeness has been
+developed in [131, 132]. The idea is to make a convolution product of the covariance
+kernel with a sequence of continuous functions approximating the Dirac delta function in
+order to smooth down the singularity of the kernel.
+More precisely, consider a positive deﬁnite function K in Rd (or a bounded domain of
+Rd) such that
+K(x) = ln+ T
+|x| + g(x)
+(3.1)
+and g(x) is a bounded continuous function. Let θ : Rd →R be some continuous function
+with the following properties:
+1. θ is positive deﬁnite,
+2. θ has compact support and is α-H¨older for some α > 0,
+3.
+R
+Rd θ(x)dx = 1.
+Here is the main theorem of [132]:
+Theorem 3.1. [Robert, Vargas, 2008] Let γ2 < 2d. For all ϵ > 0, we consider the
+centered Gaussian ﬁeld (Xϵ(x))x∈Rd deﬁned by the convolution:
+E[Xϵ(x)Xϵ(y)] = (θϵ ∗K)(y −x),
+where θϵ = 1
+ϵd θ( .
+ϵ). Then the associated random measure
+∀A ∈B(Rd),
+Mϵ,γ(A) =
+Z
+A
+eγXϵ(x)−γ2
+2 E[Xϵ(x)2]dx
+19
+
+
+--- PDF page 20 ---
+converges in law in the space of Radon measures (equipped with the topology of weak con-
+vergence) as ϵ goes to 0 towards a random measure Mγ, independent of the choice of the
+regularizing function θ with the properties 1., 2., 3. above.
+This theorem is useful to deﬁne a Gaussian multiplicative chaos associated to the kernel
+K(x) = ln+ T
+|x| in dimension 3 and hence give a rigorous meaning to the Kolmogorov-
+Obukhov model. Indeed, remind that this kernel is of σ-positive type in dimension 1 and
+2. In dimension d = 3, the function ln+ T
+|x| is positive deﬁnite (see [132]) but it is an open
+question whether it is of σ-positive type. Therefore, we are bound to apply Theorem 3.1
+instead of Kahane’s theory to deﬁne the associated chaos in dimension 3. In dimension
+greater than 4, the kernel ln+ T
+|x| is no more positive deﬁnite. Let us also mention that it
+is proved in [132] that in dimension 1, 2, 3 the random variable Mγ(B(0, r)) (for r < T)
+possesses a C∞density with respect to the Lebesgue measure.
+Remark 3.2. Starting with a Gaussian ﬁeld (X(x))x∈Rd whose covariance is given by
+(3.1), one could also state theorem 3.1 in an equivalent way in terms of the ﬁelds Xϵ =
+θϵ ∗X where θ is a function of average 1 (but not necessarily of positive type) and which
+satisﬁes a decreasing condition at inﬁnity.
+Extension to open domains and non-stationary smooth ﬁelds
+In what follows, we explain why the generalized Gaussian multiplicative chaos theory
+straightforwardly extends to the situation of bounded domains and possibly non stationary
+covariance kernels. Let D be an open set of Rd. For all δ > 0, we set:
+D(δ) = {x ∈D; dist(x, ∂D) ⩾δ}
+By convention, if D = Rd, we set D(δ) equal to the Euclidean ball of center 0 and radius
+1
+δ. We consider a positive deﬁnite kernel K (non necessarily stationary) satisfying:
+∀x, y ∈D,
+K(x, y) = ln+
+T
+|x −y| + g(x, y)
+(3.2)
+where γ2 < 2d and g is a bounded continuous function over D(δ) for all δ > 0. Let X be a
+random centered Gaussian distribution with covariance given by (3.2). We introduce the
+following notion of smooth approximation which will play a central role in the rest of the
+review:
+Deﬁnition 3.3. Smooth Gaussian approximations. We say a that a sequence of
+centered Gaussian ﬁelds (Xϵ)ϵ>0 is a smooth Gaussian approximation of K if:
+• for all x, y ∈D, E[Xϵ(x)Xϵ(y)] converges to K(x, y) as ϵ goes to 0.
+• for all δ > 0, there exists some constant C > 0 and α > 0 such that for all ϵ > 0:
+∀x, y ∈D(δ), E[(Xϵ(x) −Xϵ(y))2] ⩽C|x −y|αϵ−α.
+Remark 3.4. In the above deﬁnition, the second point is a technical assumption. By
+standard results on Gaussian processes (see [104] for example), this assumption implies
+20
+
+
+--- PDF page 21 ---
+the following useful property: for all δ > 0 and A > 0, there exists C > 0 such that for all
+x ∈D(δ):
+P(
+sup
+y; |y−x| ⩽Aϵ
+|Xϵ(y) −Xϵ(x)| ⩾t) ⩽Ce−C t2
+2 , t ⩾0
+It is in fact this property implied by the second point which is crucial in the proofs of the
+results where smooth Gaussian approximations appear.
+For example, the convolution constructions of the previous section are smooth Gaus-
+sian approximations. It is not very diﬃcult to see that convolutions of X with circles,
+balls or smooth bounded domains are smooth Gaussian approximations of K. In fact, the
+techniques of [132] can be straightforwardly adapted to give:
+Theorem 3.5. Assume that we are given two smooth Gaussian approximations (Xϵ)ϵ>0
+and ( ¯Xϵ)ϵ>0 of K such that:
+1) for some γ2 < 2d, the random measure Mϵ,γ(dx) := eγXϵ(x)−γ2
+2 E[Xϵ(x)2]dx converges
+almost surely (possibly along some subsequence) to some random Radon measure Mγ in
+the sense of weak convergence of measures.
+2) for all δ > 0 and A > 0,
+sup
+x,y∈D(δ),
+|x−y| ⩽Aϵ
+E[Xϵ(x)Xϵ(y)] −E[ ¯Xϵ(x) ¯Xϵ(y)]
+ ⩽¯CA.
+where ¯CA > 0 is some constant independent from ϵ.
+3) for all δ > 0,
+CA = lim
+ϵ→0
+sup
+x,y∈D(δ),
+|x−y| ⩾Aϵ
+E[Xϵ(x)Xϵ(y)] −E[ ¯Xϵ(x) ¯Xϵ(y)]
+
+goes to 0 as A goes to inﬁnity.
+Under the above assumptions, the random measure
+¯
+Mϵ,γ(dx) = eγ ¯
+Xϵ(x)−γ2
+2 E[ ¯
+Xϵ(x)2]dx
+converges in law as ϵ goes to 0 in the space of Radon measures on D (equipped with the
+topology of weak convergence) towards the random measure Mγ.
+Let us mention here a simple and straightforward consequence of this theorem. Let X
+be a random centered Gaussian distribution with covariance given by (3.2). We consider
+a function θ of class C1 such that
+Z
+Rd θ(x)dx = 1
+(3.3)
+and compactly supported in the ball B(0, 1). Then we deﬁne the ϵ-approximation of X
+by:
+¯Xϵ(x) =
+Z
+X(x) ∗θϵ(x −y) dy.
+21
+
+
+--- PDF page 22 ---
+Of course, the ﬁeld ¯Xϵ only makes sense for x ∈D(ϵ). Then the law of the limiting measure
+Mγ = lim
+ϵ→0 eγXϵ(x)−1
+2 E[Xϵ(x)2]dx
+does not depend on the choice of the regularizing function θ.
+We will see in subsection 5.2 another application of this theorem in the case of the
+so-called Liouville measure.
+3.3
+Duplantier-Sheﬃeld’s approach in dimension 2
+After the two aforementioned theories (Gaussian multiplicative chaos [85] and its general-
+ized version [131, 132]), the authors of [56] came up with another contribution to Gaussian
+multiplicative chaos theory in the special case when the Gaussian distribution X in (2.4) is
+the GFF in a bounded domain and σ the Lebesgue measure. The situation can be roughly
+summarized as follows. Assume for instance that you are given a two-dimensional GFF X
+on a bounded domain D and you want to deﬁne the approximations (Xn)n in (2.2) almost
+surely as measurable functions of the whole distribution X. For instance, you may deﬁne
+Xn as the projections of X along the ﬁrst n vectors of an orthonormal basis of the Sobolev
+space H1
+0(D) and obtain a ﬁrst way of deﬁning almost surely the associated multiplicative
+chaos, called Liouville measure, as a measurable function of the whole GFF distribution.
+This falls under the scope of Kahane’s theory since you are adding independent Gaussian
+ﬁelds. To be precise, the vectors of the basis are not necessarily nonnegative so that the
+construction of the measure works but you do not get the uniqueness property of Theorem
+2.3 (except in some special cases: for instance, the Haar basis is composed of nonnegative
+functions and therefore in this case you are strictly within Kahane’s framework).
+A second way of deﬁning cutoﬀapproximations of X that are measurable functions of
+the whole GFF distribution is to use convolution techniques: you may also deﬁne Xϵ(x) as
+the average value of X over the circle of radius ϵ centered at x (or any other regularizing
+function) and plug this quantity in place of Xn in (2.2). The approximating measures
+Mϵ,γ(dx) = eγXϵ(x)−γ2
+2 E[Xϵ(x)2]dx
+are then measurable functions of the GFF. Though convergence in law follows from the
+techniques of the generalized Gaussian multiplicative chaos theory [131, 132], it is impor-
+tant to focus on almost sure convergence of these measures.
+Theorem 3.6. [Duplantier, Sheﬃeld, 2008].
+The approximating measures (Mϵ,γ)ϵ
+almost surely converge as ϵ →0 for the topology of weak convergence of measures along
+suitable deterministic subsequences.
+Another important point is the following. We have now at our disposal two ways to
+produce the Liouville measure as the almost sure limit of suitable approximations: H1
+0(D)
+expansions or circle average. In this formulation, it is implicitly assumed that these two
+approximations yield the same limiting object. Is it really the case? Let us ﬁrst stress that
+the two above constructions have the same law, and they also have the same law as the
+Liouville measure based on a white noise decomposition of the GFF introduced in [128]
+(see Theorem 5.5 below). There is another important contribution in [56] to the theory of
+Gaussian multiplicative chaos
+22
+
+
+--- PDF page 23 ---
+Theorem 3.7. [Duplantier, Sheﬃeld, 2008]. The Liouville measures constructed via
+an expansion along an orthonormal basis of H1
+0(D) or circle average approximations are
+almost surely the same measures.
+Though carried out in the case of GFF, this uniqueness result makes sense in a more
+general context: to which extent can we prove that Gaussian multiplicative chaos con-
+structed with diﬀerent approximations almost surely deﬁned as measurable functions of
+the whole Gaussian distribution coincide almost surely?
+4
+Multifractal analysis of the measures
+The purpose of this section is to give a brief insight into multifractal analysis. More
+precisely, Kahane proved that the carrier of a Gaussian multiplicative chaos has Hausdorﬀ
+dimension greater or equal to d −γ2
+2 . It is natural to wonder whether further pieces of
+information can be given about the structure of this carrier. We will relate this question
+to the Parisi-Frisch formalism [120]. Consider a smooth cutoﬀapproximation (Xϵ)ϵ of
+the ﬁeld X with covariance K given by (3.2) on a domain D and such that Xϵ′ −Xϵ is
+independent from σ{Xu; u ⩾ϵ} for all ϵ′ < ϵ. We suppose that there exists a constant
+C > 0 such that ln 1
+ϵ −C ⩽E[Xϵ(x)2] ⩽ln 1
+ϵ + C for all x ∈D. In this context, Kahane
+introduced the set of points
+
+x ∈D; lim
+ϵ
+Xϵ(x)
+−ln ϵ = γ
+	
+and showed that it gives full measure to the chaos Mγ, thus showing that it has Hausdorﬀ
+dimension greater or equal to d −γ2
+2 . This set of points has been called thick points of
+the GFF in [82] when the ﬁeld X is the GFF and Xϵ corresponds to circle averages
+(hence, we are not exactly in the framework of Kahane as circle averages of the GFF do
+not correspond to adding independent ﬁelds; nonetheless, the two frameworks are very
+similar). We stick to this terminology as we feel that it is well-sounding. The Hausdorﬀ
+dimension of thick points is derived in [82] in the context of circle averages of the GFF.
+Let us further mention that exact equality of Hausdorﬀdimension is well known in the
+closely related context of Mandelbrot’s multiplicative cascades, see [14] and references
+therein. In the next subsection, we will generalize the results in [82, 85] to a large class of
+log-correlated Gaussian ﬁelds in all dimensions. After we will discuss general multifractal
+analysis.
+4.1
+The Peyri`ere probability measure and the thick points
+Let us ﬁrst set the framework of this subsection. Consider a bounded domain D ⊂Rd and
+a positive deﬁnite kernel K (non necessarily stationary) satisfying:
+∀x, y ∈D,
+K(x, y) = ln+
+T
+|x −y| + g(x, y)
+(4.1)
+where g is a bounded continuous function over D. We work on a ﬁxed probability space
+(Ω, F, P). On this space, we consider a centered Gaussian ﬁeld (Xϵ(x))ϵ>0,x∈D such that:
+23
+
+
+--- PDF page 24 ---
+1. (ϵ, x) →Xϵ(x) is almost surely continuous on ]0, ∞[×D,
+2. (Xϵ)ϵ>0 is a smooth Gaussian approximation of K (in the sense of Deﬁnition 3.3),
+3. for each ﬁxed x ∈D, ϵ →Xϵ(x) has independent increments,
+4. There exists a constant C > 0 such that for all η < ϵ:
+ln+
+1
+|x −y| + ϵ −C ⩽E[Xϵ(x)Xη(y)] ⩽ln+
+1
+|x −y| + ϵ + C, x, y ∈D.
+(4.2)
+5. for all γ2 < 2d, there exists a random Radon measure Mγ such that
+Mϵ,γ(dx) = eγXϵ(x)−1
+2 E[Xϵ(x)2]dx
+converges almost surely (possibly along some subsequence) to Mγ on D.
+For γ2 < 2d and q ∈]0,
+√
+2d
+γ [, we set:
+Kγ,q =
+
+x ∈D; lim
+ϵ→0
+ln Mγ(B(x, ϵ))
+ln ϵ
+= d + (1
+2 −q)γ2
+2
+
+∩
+
+x ∈D; lim
+ϵ→0
+Xϵ(x)
+−ln ϵ = γq
+
+.
+We can now state the following theorems (see appendix):
+Theorem 4.1. For all γ2 < 2d, almost surely, the set Kγ,q gives full mass to the measure
+Mqγ, i.e. Mqγ(cKγ,q) = 0.
+Theorem 4.2. For all γ2 < 2d, almost surely, the set Kγ,1 has Hausdorﬀdimension
+d −γ2
+2 .
+A quite simple and concise proof of the above theorem is gathered in the appendix and,
+to our knowledge, is new in such generality (though much more is known in dimension 1:
+see [14, 24]). In dimension 2 and in the context of circle average approximations of the
+GFF, another paper [82] focused on the thick points of the GFF, improving Kahane’s
+result by giving the upper bound for the Hausdorﬀdimension. Let us also stress here that
+the place of the ”almost sure” is important in Theorem 4.1 and Corollary 4.2. In the case
+of multiplicative cascades, a stronger statement is proved in [15], where the ”almost sure”
+is valid simultaneously for all γ2 < 2d.
+In case the reader wishes to skip the whole proof of Theorem 4.1, we sketch here
+Kahane’s argument about the lower bound for the Hausdorﬀdimension of the thick points
+of X. We focus on the case where q = 1 and D has Lebesgue measure 1. The key point
+is to introduce the so-called Peyri`ere probability measure (also called rooted measure in
+[56, 57, 58]):
+Q(F(ω, x)) := E[
+Z
+D
+F(ω, x)Mγ(dx)].
+(4.3)
+This measure was introduced by Peyri`ere in the context of discrete cascades (see [87]) and
+was used by Kahane in his work on Gaussian multiplicative chaos. It is obvious that under
+24
+
+
+--- PDF page 25 ---
+this measure the process (x, t) →Xe−t(x) is a Brownian motion with drift γ, hence we
+have Mγ(c eKγ)) = 0 where:
+eKγ =
+
+x ∈D; lim
+ϵ→0
+Xϵ(x)
+−ln ϵ = γ
+
+.
+(4.4)
+In particular, it is straightforward from Theorem 2.6 that eKγ has Hausdorﬀdimension at
+least d −γ2
+2 . Let us further stress that similar ideas are used in [82].
+4.2
+General multifractal formalism: a heuristic introduction
+In this section, we discuss a bit of general multifractal formalism for the measures Mγ.
+This discussion is essentialy based on heuristics though it should not be very
+diﬃcult to make it rigorous mathematically. Let us mention that the study of
+multifractal formalism represents a very wide domain of mathematics and physics (in
+particular turbulence); therefore, being exhaustive in this ﬁeld is way beyond the scope of
+this review where we only mention the case of measures of the form eX(x)dx for some log
+correlated gaussian ﬁeld X.
+Multifractal analysis is based on the calculation of the Lq-spectrum of the measure
+Mγ, deﬁned as
+q ∈R 7→τM(q) = lim inf
+r→0+
+log sup
+n P
+i Mγ(B(xi, r))qo
+log(r)
+,
+where the supremum is taken over all the centered packing of [0, 1]d by closed balls of
+radius r. This study is achieved in [14, 24] in dimension 1 and, with a bit of eﬀort, it
+should not be diﬃcult to generalize this result to higher dimensions:
+τMγ(q) =
+
+
+
+
+
+
+
+(
+√
+d +
+γ
+√
+2)2q
+if q ≤−
+√
+2d
+γ ,
+ξ(q) −d
+if q ∈[−
+√
+2d
+γ ,
+√
+2d
+γ ],
+(
+√
+d −
+γ
+√
+2)2q
+if q ≥
+√
+2d
+γ .
+The so-called multifractal formalism holds for Mγ: we can relate the Lq-spectrum of Mγ
+to the local regularity of Mγ. More precisely, deﬁne
+Eδ =
+
+x ∈[0, 1]d; lim inf
+r→0+
+ln Mγ(B(x, r))
+ln(r)
+= δ
+	
+(δ ≥0).
+The singularity spectrum of Mγ, i.e. the mapping δ ≥0 7→dim Eδ (dim meaning Hausdorﬀ
+dimension), is given by the celebrated Parisi-Frisch formula (see [120]):
+δ ≥0 7→τ ∗
+Mγ(δ) = inf{δq −τMγ(q) : q ∈R} ∧0.
+(4.5)
+Note that the above formula is a Legendre transform since the formula comes in fact
+from a large deviation argument (which can be made rigorous in terms of box counting
+dimensions by using the Gartner-Ellis theorem). Multifractal analysis is essentially focused
+on studying the valididity of (4.5) in the broad context of all (random or deterministic)
+25
+
+
+--- PDF page 26 ---
+measures. From this and the explicit expression on τMγ, one can deduce the following
+dimension result:
+dim Eδ =
+(
+d −1
+2( d
+γ + γ
+2 −δ
+γ )2,
+if δ ∈[(
+√
+d −
+γ
+√
+2)2, (
+√
+d +
+γ
+√
+2)2].
+0
+elsewhere.
+(4.6)
+In essence, multifractal formalism and computing the dimension of thick points is the
+same thing (and hence we get the same associated dimensions) if we admit the following
+commonly used heuristic:
+Mγ(B(x, r)) ∼
+r→0 C(x)rdeγXr(x)−γ2
+2 ln 1
+r
+(4.7)
+where C(x) is some random constant of order 1 (nearly independent of r but very de-
+pendent on x). Note that the notion of star scale invariance is nothing but a rigorous
+formulation of the heuristic (4.7). Swithching from multifractal formalism to thick point
+formalism rigorously implies handling the C(x) term which is of order 1 but ﬂuctuates
+wildely as a function of x. As an example of application of heuristic (4.7), let us recover
+formula (4.6) from corollary 4.2. By using (4.7), we get the following equivalence:
+Mγ(B(x, r)) ∼
+r→0 rδ ⇔Xr(x) ∼
+r→0 (d
+γ + γ
+2 −δ
+γ ) ln 1
+r,
+hence leading to formula (4.6) thanks to corollary 4.2.
+5
+Applications of Gaussian multiplicative chaos
+In this section, we review some applications in direct relation with Kahane’s theory: some
+of them are well known, some of them are new. Some further applications, rather related
+to recent generalizations of the theory, will be given in Section 6.
+5.1
+Volatility of a ﬁnancial asset or boundary Liouville measure
+The main application of the theory is to give a meaning to the ”limit-lognormal” model
+introduced by Mandelbrot in [111]. The ”limit-lognormal” model corresponds to the choice
+of a stationary kernel K on R × R given by:
+K(x, y) = ln+
+T
+|x −y| + g(x, y)
+(5.1)
+where T is a positive parameters, g is a bounded continuous function and σ is chosen to be
+the Lebesgue measure on R. This model has many applications: part of them are discussed
+below.
+If (X(t))t ⩾0 is the logarithm of the price of a ﬁnancial asset, the volatility Mγ of the
+asset on the interval [0, t] is by deﬁnition equal to the quadratic variation of X:
+Mγ[0, t] = lim
+n→∞
+n
+X
+k=1
+(X(tk/n) −X(t(k −1)/n))2
+26
+
+
+--- PDF page 27 ---
+The volatility M can be viewed as a random measure on R. The choice for Mγ of multiplica-
+tive chaos associated to the kernel K(x, y) = ln+
+T
+|x−y| satisﬁes many empirical properties
+measured on ﬁnancial markets: lognormality of the volatility, long range correlations (see
+[41] for a study of the SP500 index and components and [42] for a general review). With
+this kernel, the measure is called the lognormal multifractal random measure (MRM) and
+is a particular case of the log-inﬁnitely divisble multifractal random measures (see [21, 133]
+for the log-poisson case and [12] for the general case). Note that K is indeed of σ-positive
+type so Mγ is well deﬁned. In the context of ﬁnance, γ2 is called the intermittency pa-
+rameter in analogy with turbulence and T is the correlation length. Volatility modeling
+and forecasting is an important ﬁeld of ﬁnance since it is related to option pricing and
+risk forecasting: we refer to [49] for the problem of forecasting volatility with this choice
+of Mγ.
+Given the volatility Mγ, the most natural way to construct a model for the (log) price
+X is to set:
+X(t) = BMγ[0,t]
+(5.2)
+where (Bt)t ⩾0 is a Brownian motion independent of Mγ. Formula (5.2) deﬁnes the Mul-
+tifractal Random Walk (MRW) ﬁrst introduced in [10] (see [11] for a recent review of
+ﬁnancial applications of the MRW model).
+(a) SP500 returns 2001-2009
+(b) Returns simulated with Black-Scholes
+(c) Returns simulated with MRW
+(d) Returns simulated with MRW
+Figure 2: Intermittency in ﬁnancial markets
+27
+
+
+--- PDF page 28 ---
+In Figure 2, observe the burst of activity (intermittency) for the SP500 index or the
+MRW model. This reﬂects the Parisi-Frisch formalism (or multifractal formalism): the
+(strong) variations of regularity are related to the non-linearity of the power law spectrum.
+MRM with inﬁnite correlation length or boundary Liouville measure
+Motivated by ﬁnancial applications where the correlation length T is too big to be mea-
+sured on markets, the authors of [49] adressed the issue of forecasting volatility Mγ in the
+limit T →∞. More precisely, they start by forecasting the log volatility, the 1/f noise
+which lives in the quotient space of distributions deﬁned up to some additive constant. In
+this context, taking the exponential, the associated random measure Mγ is then deﬁned
+up to a multiplicative constant and is the boundary Liouville measure in the upper half
+plane considered in [56].
+5.2
+Liouville Quantum Gravity and KPZ
+Let us ﬁrst roughly explain the original motivations coming from the physics literature.
+We want to deﬁne a random distribution (g, X), the partition function of which formally
+writes
+Z =
+Z
+DgDX e−SM(X,g)−λVg(Σ)
+(5.3)
+where SM is some conformally invariant action for matter ﬁelds coupled to a compact
+simply connected two dimensional surface Σ with metric g, λ is a constant (we do not
+discuss its value), Vg is the volume form of g and X is an embedding from Σ into a c-
+dimensional spacetime. Here we adopt standard path integral notations: the above integral
+just means that we sum over all possible embeddings and metrics.
+Example 5.1. For the free bosonic string, we consider the Polyakov action
+SM = 1
+8π
+Z
+∂gX · ∂gX dVg
+where X speciﬁes the embedding of Σ into ﬂat D-dimensional space-time.
+Example 5.2. For the massive Ising model, we consider
+SM =
+Z
+¯X
+ ∂gX + m ¯XX
+
+dVg.
+Notice that every metric g on Σ can be decomposed as f∗g = eϕg0, where g0 is a ﬁxed
+metric on Σ, f is a g0-diﬀeomorphism and f∗g is the pullback metric of g along f. So we
+may perform the path integral by gauge-ﬁxing: we choose a gauge deﬁning an equivalence
+class over all the metrics and perform the above integral over a slice that cuts through once
+each gauge equivalence class. In view of the above factorization property, a natural choice
+of the gauge is the conformal gauge. We choose a family (ˆg) of representatives of each
+equivalence class of conformally equivalent metrics and we perform a sum over (ˆg) and
+over the equivalence class of ˆg for all ˆg. The Jacobian of such a ”change of variables” is the
+so-called Faddeev-Popov determinant △FP (ˆg). We do not detail this here but the reader
+is referred to [125, 124, 47] for further details and references. Let us just say that once this
+28
+
+
+--- PDF page 29 ---
+determinant has been computed, it remains to make sure that the quantity resulting from
+these computations does not depend on the choice of the family of representatives (ˆg): in
+physics language, we have to compute the Weyl anomaly. Performing these computations
+lead to considering the Liouville action (Rg is the Ricci tensor of the metric g)
+SL(ϕ, g) =
+1
+2πγ2
+Z
+(∂gϕ · ∂gϕ + QRgϕ + µeϕ)dVg
+and the matter action SM(X, ˆg) in such a way that
+Z
+DXDg e−S(X,g) =
+Z
+DXDfDϕ △FP (ˆg) e−SM(X,ˆg)−SL(ϕ,ˆg).
+For c ∈] −∞, 1], the value of γ ∈[0, 2] is related to the central charge of the matter by
+γ =
+√25 −c −√1 −c
+√
+6
+.
+When the cosmological constant µ is set to 0, the Liouville action reduces to that of a
+free massless boson. Mathematically speaking the corresponding ﬁeld ϕ is a Gaussian Free
+Field. In critical Liouville quantum gravity, we are therefore led to considering random
+metrics of the form eγϕˆg and an area measure eγϕdVˆg, where ϕ is a Free Field in the
+background metric ˆg. Therefore, the world sheet Σ may be equipped with two metrics: the
+background metric ˆg and the quantum metric eγϕˆg.
+Furthermore, conditionally on a ﬁxed background metric ˆg (just discarding ˆg from the
+randomness), the metric eγϕˆg and the matter ﬁeld are independent as may be seen from the
+resulting partition function. Knizhnik, Polyakov and Zamolodchikov have derived in [94] a
+relation between the scaling exponents of the background metric and the quantum metric
+eγϕˆg, the so-called KPZ formula. This is a very rough description of Liouville quantum
+gravity and the reader may consult [125, 94, 124, 47] for further details.
+Let us now explain why this KPZ formula may be of interest in the study of models of
+statistical physics at their critical point. Physicists understood a long time ago (see [6, 7, 94,
+47, 48] and certainly many others) that this continuum model of quantum gravity admits a
+discretized counterpart via random triangulations (or other p-angulations) of surfaces. The
+prototype of such p-angulations is the Brownian map studied in (see [105, 106, 107, 114])
+and corresponds to the pure gravity case c = 0. But we may also couple a model of
+statistical physics (for instance random walks, percolation, Ising model, Potts model,...)
+to discrete quantum gravity, i.e. by considering a model of statistical physics on the p-
+angulation in such a way that, as in the continuum case, the partition function involves
+both the p-angulation and that of the model of statistical physics. The point is that, at
+their critical point, these models in two dimensions should behave as a conformal ﬁeld
+theory and may be thought of as the matter ﬁeld described above. By taking the limit as
+the discretization step goes to 0, these models of discrete quantum gravity should converge
+towards Liouville quantum gravity. Interestingly, the independence of the Liouville ﬁeld
+and the matter ﬁeld (conditionally on the background metric) suggests that the same
+phenomena should occur when taking the limit in the discrete model. Therefore the KPZ
+formula may be applied to this ”discrete matter ﬁeld”, which are roughly independent of
+the ﬂuctuating quantum metric: it becomes particularly useful when the scaling exponents
+29
+
+
+--- PDF page 30 ---
+of a particular model can be more easily computed in its quantum gravity form than its
+background one, or vice-versa. For instance, Duplantier [51] have used these techniques
+to conjecture the exact values of the Brownian intersection exponents, which were ﬁnally
+rigorously derived in [101, 102, 103] via Schramm-Loewner-Evolution (SLE) techniques.
+The reader may consult [45, 46, 66] for ”pure string models” with c = 0 or c = −2, and
+[30, 53, 89, 90] for critical systems on random p-angulations like Q-Potts model, percolation
+or tree like polymers.
+Understanding Liouville quantum gravity from a mathematical rigorous angle is a wide
+task, which mathematicians have tackled only recently and may take on various aspects,
+some of them have obviously connections with Gaussian multiplicative chaos theory. As
+explained above, the mathematical formulation of the problem of constructing (critical)
+2d-Liouville quantum gravity could be roughly summarized as follows: construct a random
+metric on a two dimensional Riemannian manifold D, say a domain of R2 (or the sphere)
+equipped with the Euclidean metric dz2, which takes on the form
+eγX(z)dz2
+(5.4)
+where X is a Gaussian Free Field (or possibly other Free Fields) on the manifold D and
+γ ∈[0, 2) is a coupling constant.
+Figure 3: Simulation of a GFF on the unit torus.
+The issue of constructing the distance associated to the metric remains unsolved.
+Yet recent progress are made in [71, 72, 130] concerning the Brownian motion, Laplace-
+Beltrami operator or heat kernel of 2d-Liouville quantum gravity. Nevertheless, we focus
+below on the volume form, which obviously falls under the scope of Gaussian multiplicative
+30
+
+
+--- PDF page 31 ---
+chaos theory. This theory allows us to construct a random measure of the type:
+Mγ(dx) = eγX(x)−γ2
+2 E[X(x)2] dx,
+(5.5)
+which will be called Liouville measure. The points that we will address below are the
+following. In order to apply Gaussian multiplicative chaos theory and deﬁne the above
+measure, we have to choose a cutoﬀapproximation of the GFF and there are several
+possible choices, which we will discuss. Furthermore we will explain why these cutoﬀ
+approximations lead to the same limiting measure Mγ.
+Recall that the GFF over a bounded simply connected domain D with for instance
+Dirichlet boundary condition is a centered Gaussian distribution with covariance kernel
+given by the Green function G of the Laplacian, i.e. △G(x·) = −2πδx, with Dirichlet
+boundary condition. Actually, other types of boundary conditions may be imposed but it
+suﬃces to detail the Dirichlet boundary conditions to draw a clear picture of the techniques
+involved.
+Decomposition of the GFF via eigenfunctions of the Laplacian
+Let us consider the eigenfunctions (en)n ⩾1 of the Laplacian with Dirichlet boundary
+conditions. They form an orthonormal basis of L2(D) with negative associated eigenvalues
+(λn)n ⩾1. A natural choice of decomposition of the GFF is to write (formally):
+X(x) =
+X
+n ⩾1
+Yn(x)
+where Yn is a smooth Gaussian ﬁeld deﬁned by
+Yn(x) =
+βn
+√−λn
+en(x).
+Here (βn)n ⩾1 is a sequence of i.i.d standard Gaussian random variables. Observe that
+the sequence (βn)n ⩾1 can be chosen to be measurable with respect to the whole GFF
+distribution: it suﬃces to choose
+βn = (−λn)
+1
+2
+Z
+D
+X(x)en(x) dx.
+The covariance kernel of Yn matches
+kn(x, y) = (−λn)−1en(x)en(y).
+It is well known that the eigenfunctions are smooth so that Yn is a smooth Gaussian ﬁeld.
+The important point here is that the approximating sequence
+∀n ⩾1,
+Xn(x) =
+n
+X
+k=1
+Yk(x)
+is almost surely deﬁned as a function of the whole GFF distribution X. Furthermore,
+the sequence (Yn)n are independent Gaussian processes. Though elegant and simple, this
+decomposition also possesses drawbacks because the covariance kernel of each Yn is not
+nonnegative and, generally speaking, it is hard to get a tractable expression of kn (or
+rather their partial sums), excepted maybe in terms of lattice approximations (discrete
+GFF, see [134]).
+31
+
+
+--- PDF page 32 ---
+Remark 5.3. Actually, any orthonormal basis of H1
+0(D) produces a decomposition of the
+GFF function `a la Kahane, i.e. a sum of independent Gaussian processes with continuous
+covariance kernels. Another very important decomposition relying on an H1
+0(D)-basis is
+the projection of the GFF onto the Haar basis. In that case, the corresponding kernels kn
+are continuous and positive.
+White noise decomposition of the GFF
+Another possible decomposition of the Green function is based on the formula:
+GD(x, y) = π
+Z ∞
+0
+pD(t, x, y)dt.
+where pD is the (sub-Markovian) semi-group of a Brownian motion B killed upon touching
+the boundary of D, namely
+pD(t, x, y) = P x(Bt ∈dy, TD > t)
+with TD = inf{t ⩾0, Bt̸ ∈D}. Note that the π term ensures that:
+GD(x, y)
+∼
+|x−y|→0 ln
+1
+|x −y|.
+Hence we can write:
+G(x, y) =
+X
+n ⩾0
+Kn(x, y)
+with
+Kn(x, y) = π
+Z
+1
+2n−1
+1
+2n
+pD(t, x, y)dt, n ⩾1
+(5.6)
+and K0(x, y) = π
+R ∞
+1 pD(t, x, y)dt. The continuity of pD implies that Kn is continuous.
+The symmetry of pD implies that Kn is positive deﬁnite. Indeed, for each smooth function
+ϕ with compact support in D, we have for n ⩾1:
+Z
+D
+Z
+D
+ϕ(x)Kn(x, y)ϕ(y) dx dy = 2π
+Z
+D
+Z
+D
+Z
+1
+2n−1
+1
+2n
+ϕ(x)pD(t, x, y)ϕ(y) dt dx dy
+= π
+Z
+D
+Z
+D
+Z
+D
+Z
+1
+2n−1
+1
+2n
+ϕ(x)pD(t/2, x, z)pD(t/2, z, y)ϕ(y) dt dz dx dy
+= π
+Z
+1
+2n−1
+1
+2n
+Z
+D
+ Z
+D
+ϕ(x)pD(t/2, x, z) dx
+2
+dt dz
+⩾0.
+Since Kn is obviously positive, we can apply Kahane’s theory of Gaussian multiplicative
+chaos to deﬁne the Liouville measure (5.5). We further stress that this argument implies
+a white noise decomposition of the underlying GFF: the most direct way to construct a
+GFF is then to consider a white noise W distributed on D × R+ and deﬁne
+X(x) = √π
+Z
+D×R+
+pD(s
+2, x, z)W(dz, ds).
+32
+
+
+--- PDF page 33 ---
+One can check that E[X(x)X(y)] = π
+R ∞
+0 pD(s, x, y) ds = GD(x, x′). One can even work
+with a continous parameter ϵ and deﬁne the Liouville measure as the almost sure limit as
+ϵ →0 of Mϵ(dx) = eγXϵ(x)−γ2
+2 E[Xϵ(x)2] dx where the corresponding cut-oﬀapproximations
+Xϵ are given by:
+Xϵ(x) = √π
+Z
+D×[ϵ2,∞[
+pD(s
+2, x, z)W(dz, ds).
+Indeed, within this framework introduced in [128], the sequence (Mϵ(A))ϵ>0 is a positive
+martingale for all compact set A. Note the following expression for the covariance of Xϵ:
+E[Xϵ(x)Xϵ(y)] = π
+Z ∞
+ϵ2 pD(s, x, y) ds
+Once we deﬁne the Liouville measure with this white noise construction, it is not hard to
+see that we fall in fact under the scope of theorem 3.5 (see our theorem 5.5 below). In
+particular, we claim:
+Lemma 5.4. The sequence Xϵ is a smooth Gaussian approximation of GD.
+We will sketch a proof of this point in the appendix.
+Circle average
+As explained in subsection 3.3, the authors in [56] have suggested a slightly diﬀerent
+approach: instead of using the σ-positivity of the covariance kernel of the GFF to construct
+an approximating sequence (2.2) that is a martingale, they regularize the GFF along circles
+to construct their approximating sequence. More precisely, consider a GFF X and deﬁne
+Xϵ(z) as the mean value of X along the circle centered at z with radius ϵ, formally
+understood as:
+Xϵ(x) = 1
+2π
+Z 2π
+0
+X(x + ϵeiθ) dθ.
+The covariance kernel is given by
+Gϵ(z, z′) =
+Z Z
+GD(x, y) µx
+ϵ (du)µy
+ϵ(dv)
+where µx
+ϵ (du) stands for the uniform probability measure on the circle centered at x
+with radius ϵ. This expression can be given a rigorous sense [56]. The main advantage of
+this construction is that it is well ﬁtted to play with the spatial Markov property of the
+GFF. Nevertheless, the increments (Xϵ −Xϵ′)ϵ<ϵ′ are not independent, getting trickier the
+proof of the almost sure convergence of the chaos. On the other hand, this circle average
+construction falls under the scope of the regularization procedures developed in [132] in
+order to get convergence and uniqueness in law.
+Equivalence of the constructions
+The ﬁrst question that you must have in mind is: ”To which extent do the above cut-oﬀ
+approximations yield the same limiting multiplicative chaos?”. We claim:
+33
+
+
+--- PDF page 34 ---
+Theorem 5.5. The law of the limiting chaos does not depend on the cutoﬀapproxima-
+tions listed above, namely white noise decomposition, eigenvalues of the Laplacian, H1
+0(D)
+expansions or circle average (or more generally convolution by C1 functions or averages
+on smooth domains, like ball-averages...).
+Before proving this theorem, let us make some further comments. In dimension 2, the
+Lebesgue measure is obviously in the class R+
+2−ϵ for all ϵ > 0 and the Green function can
+be rewritten as
+GD(x, y) = ln+
+1
+|x −y| + g(x, y)
+(5.7)
+for some bounded continuous function g. Therefore, all the Kahane machinery applies. In
+particular, Theorem 2.5 ensures that the Liouville measure is non trivial if and only if
+γ2 < 4, whatever the choice of the cut-oﬀapproximation.
+Proof of Theorem 5.5.
+Almost sure equivalence between a given H1
+0(D) expansion and circle average is already
+proved in [56], and therefore equivalence in law holds.
+First proof:
+Therefore, it suﬃces to prove equivalence in law between the white noise decomposition
+and the circle average construction to get theorem 5.5. In view of theorem 3.5, one could
+for instance establish:
+• For all δ > 0 and A > 0,
+sup
+x,y∈D(δ),
+|x−y| ⩽Aϵ
+|
+Z Z
+GD(x, y) µx
+ϵ (du)µy
+ϵ(dv) −π
+Z ∞
+ϵ2 pD(s, x, y) ds| ⩽¯CA.
+where ¯CA > 0 is some constant independent from ϵ.
+• For all δ > 0,
+CA = lim
+ϵ→0
+sup
+x,y∈D(δ),
+|x−y| ⩾Aϵ
+|
+Z Z
+GD(x, y) µx
+ϵ (du)µy
+ϵ(dv) −π
+Z ∞
+ϵ2 pD(s, x, y) ds|
+goes to 0 as A goes to inﬁnity.
+in order to prove equivalence between circle average and white noise decomposition. These
+two estimates are not very diﬃcult to obtain but we will not detail this point since a
+second very direct proof is possible.
+Second proof: Therefore, it suﬃces to prove equivalence in law between the white noise
+decomposition and one H1
+0(D) expansion. Just notice that the white noise decomposition
+and the expansion along the Haar basis correspond to two σ-ﬁnite decompositions (2.1) of
+the Green function. Hence, by theorem 2.3, the two constructions are equivalent in law.
+34
+
+
+--- PDF page 35 ---
+KPZ formula: almost sure Hausdorﬀversion
+As explained above, the KPZ formula has been introduced in Liouville quantum gravity
+and can be thought of as a bridge between the values of the scaling exponents computed
+with the quantum metric eγX(z) dz2 and the scaling exponents computed with the stan-
+dard Euclidian metric. Dealing with metrics is convenient to have a direct deﬁnition of
+the scaling exponents but, as previously explained, a rigorous construction of the quan-
+tum metric has not been achieved yet. Nevertheless, a deﬁnition of scaling exponents via
+measures instead of metrics is also possible, and this is what we discuss below.
+We consider the Liouville measure over a bounded domain D ⊂R2:
+M(dx) =
+Z
+eγX(x)−γ2
+2 E[X(x)2] dx
+(5.8)
+where γ2 < 4 and X is a GFF on D, say with Dirichlet boundary conditions. If M were
+a random metric, we could associate a notion of (random) Hausdorﬀdimension to this
+metric. Since M is only a measure, the associated notion of Hausdorﬀdimension is not
+straightforward, excepted maybe in dimension 1 [27, 128]. We can nevertheless associate
+to the measure M a notion of Hausdorﬀdimension: this just consists in replacing carefully
+quantities related to distances in the standard deﬁnition of Hausdorﬀdimension with
+similar quantities deﬁned in terms of measures. This yields: given a Radon measure µ on
+Rd and s ∈[0, 1], we deﬁne for a Borelian set A of Rd:
+Hs,δ
+µ (A) = inf
+ X
+k
+µ(Bk)s	
+where the inﬁmum runs over all the covering (Bk)k of A with open Euclidean balls with
+radius rk ⩽δ. Since the mapping δ > 0 7→Hs,δ
+µ (A) is decreasing, we can deﬁne the
+s-dimensional µ-Hausdorﬀmetric outer measure:
+Hs
+µ(A) = lim
+δ→0 Hs,δ
+µ (A).
+The limit exists but may be inﬁnite. Since Hs,δ
+µ
+is metric, all the Borelian sets are Hs
+µ-
+measurable. The µ-Hausdorﬀdimension of the set A is then deﬁned as the value
+dimµ(A) = inf{s ⩾0; Hs
+µ(A) = 0}.
+(5.9)
+Notice that dimµ(A) ∈[0, 1]. When µ is diﬀuse (without atoms), the µ-Hausdorﬀdimension
+of a set A can also be expressed as:
+dimµ(A) = sup{s ⩾0; Hs
+µ(A) = +∞}.
+(5.10)
+Therefore, when µ is diﬀuse, the above relations allow us to characterize the µ-Hausdorﬀ
+dimension of the set A as the critical value at which the mapping s 7→Hs
+µ(A) jumps from
++∞to 0.
+For a given compact set K of D (or a random compact set independent of M), the
+KPZ formula establishes a relation between the Hausdorﬀdimension of K computed with
+µ = M, call it dimM(K), and the Hausdorﬀdimension of K computed with µ equal to the
+Lebesgue measure, call it dimLeb(K). We claim (see [128] for a proof of this statement, or
+also [17]):
+35
+
+
+--- PDF page 36 ---
+Theorem 5.6. KPZ formula [Rhodes, Vargas, 2008] Let K be a compact set of D.
+Almost surely, we have the relation:
+dimLeb(K) = (1 + γ2
+4 )dimM(K) −γ2
+4 dimM(K)2.
+We develop below a heuristic to understand what is behind the KPZ formula, mainly
+the power law spectrum of the measure as explained in Theorem 2.14. To begin with, we
+recall the deﬁnition of the s-dimensional M-Hausdorﬀmetric outer measure
+Hs
+M(K) = lim
+δ→0 inf
+n X
+n
+M(B(xn, rn))s;
+K ⊂
+[
+n
+B(xn, rn), rn ⩽δ
+o
+.
+Take the expectation and perform an outrageous inversion of limits:
+E[Hs
+M(K)] = lim
+δ→0 inf
+n X
+n
+E[M(B(xn, rn))s];
+K ⊂
+[
+n
+B(xn, rn), rn ⩽δ
+o
+.
+Now compute the expectations via Theorem 2.14 to get:
+E[Hs
+M(K)] ≍Cs lim
+δ→0 inf
+n X
+n
+rξ(s)/2
+n
+;
+K ⊂
+[
+n
+B(xn, rn), rn ⩽δ
+o
+=CsHξ(s)/2
+Leb
+(K).
+Because
+ξ(s)/2 =
+ 1 + γ2
+4
+
+s −γ2
+4 s2,
+we recover at least heuristically the KPZ formula. Nevertheless, we draw attention to the
+fact that we do not claim that the relation
+E[Hs
+M(K)] ≍Hξ(s)/2
+Leb
+(K)
+is true. There are possibly logarithmic corrections in the choice of the gauge function
+involved in the deﬁnition of the s-dimensional Hausdorﬀmeasures for such a relation to
+be true.
+KPZ formula: expected box counting version
+In this subsection, we summarize the KPZ statements proved in [56]. The KPZ theorem
+of [56] relies on the notion of expected box counting dimension as a deﬁnition of scaling
+exponents. To state the theorem, one must introduce the following deﬁnition:
+Deﬁnition 5.7. isothermal quantum ball. For any ﬁxed measure µ on D, let Bδ(z)
+be the Euclidean ball centered at z with radius given by µ(Bδ(z)) = δ. If there does not
+exist a unique δ with this property, take the radius to be sup{ε : µ(Bε(z)) ⩽δ}.
+When µ is the measure M of (5.8), the ball Bδ(z) is called the isothermal quantum
+ball of area δ centered at z. When µ is the Lebesgue measure then Bδ(z) is nothing but the
+Euclidean ball centered at z and radius ϵ where δ = πϵ2, denoted by Bϵ(z).
+36
+
+
+--- PDF page 37 ---
+Given a subset K ⊂D, the ϵ-neighborhood of K is deﬁned by:
+Bϵ(K) = {z : Bε(z) ∩K̸ = ∅}.
+The isothermal quantum δ-neighborhood of K is deﬁned by:
+Bδ(K) = {z : Bδ(z) ∩K̸ = ∅}.
+Finally, the authors of [56] introduce the notion of scaling exponent. Fix γ ∈[0, 2) and
+let λ denote Lebesgue measure on D. A fractal subset K of D has Euclidean expectation
+dimension 2 −2x and Euclidean scaling exponent x if the expected area of Bϵ(K) decays
+like ϵ2x = (ϵ2)x, i.e.,
+lim
+ε→0
+log Eλ(Bε(X))
+log ε2
+= x.
+The set K has quantum scaling exponent ∆if we have
+lim
+δ→0
+log EM(Bδ(X))
+log δ
+= ∆.
+Theorem 5.8. [Duplantier, Sheﬃeld, 2008] Fix γ ∈[0, 2) and a compact subset K of
+D. If K has Euclidean scaling exponent x ⩾0 then it has quantum scaling exponent ∆,
+where ∆is the non-negative solution to
+x = γ2
+4 ∆2 +
+
+1 −γ2
+4
+
+∆.
+(5.11)
+This theorem also extends to the case where K is a random compact set independent
+of M.
+In the physics litterature, the KPZ relation is usually stated under this form (5.11)
+in which case x and ∆are the weights of conformal operators. To get a formulation
+in terms of dimensions, one must make the correspondence 2 −2x ↔dimLeb(K) and
+2 −2∆↔dimM(K).
+Let us ﬁnally mention that in [56] is also proved a one dimensional boundary version
+of KPZ. This corresponds to proving the theorem with the lognormal MRM measure of
+section 5.1.
+Remark 5.9. Further comments and references on KPZ. The KPZ formula has
+been proved in [27] in the case of multiplicative cascades in dimension 1 (see also [13] for
+a multidimensional version), in [56] in the case where X is a 2-dimensional GFF, and
+in [128] (see also [17]) in the case where X is a log-correlated inﬁnitely divisible ﬁeld in
+any dimension. Roughly speaking, inﬁnitely divisible ﬁelds are to the family of random
+distributions what L´evy processes are to the family of stochastic processes. Log-correlated
+Gaussian ﬁelds, like two dimensional Free Fields, are a subclass of log-correlated inﬁnitely
+divisible ﬁelds. Therefore, the main point here is to draw attention to the fact that the KPZ
+formula is a property speciﬁc to log-correlated ﬁelds: it is neither speciﬁc to the dimension,
+nor to the conformal invariance of the 2d-GFF, nor to the Gaussian nature: the only point
+that makes 2d-Liouville quantum gravity (i.e. Gaussian multiplicative chaos with respect
+to the 2d-GFF) satisfy a KPZ relation is the fact that the Green function of the Laplacian
+in dimension 2 (and in dimension 2 only) has a logarithmic singularity. Also, it may be
+interesting to know if a ”Liouville quantum gravity” picture can be drawn for log-correlated
+inﬁnitely divisible ﬁelds instead of Gaussian Free Fields.
+37
+
+
+--- PDF page 38 ---
+Liouville quantum gravity and KPZ on Riemannian surfaces
+One may wonder what becomes Liouville quantum gravity and the KPZ formula on a n-
+dimensional Riemannian manifold (S, g) where g is the Riemannian tensor of the manifold.
+By Liouville quantum gravity, we mean here a Gaussian multiplicative chaos with respect
+to a Gaussian distribution X deﬁned on the manifold. As long as the random Gaussian
+distribution X possesses a kernel of σ-positive type, Kahane’s theory allows to deﬁne a
+Gaussian multiplicative chaos associated to this Gaussian distribution. If the covariance
+kernel of the Gaussian distribution is of the type (2.5) (where ρ is the distance associated
+to the Riemannian metric) and the measure σ in (2.4) is the volume form on S, then the
+non-degeneracy conditions of the chaos is γ2 < 2n (Theorem 2.5). Since a n-dimensional
+Riemann surface is locally isometric to the unit ball of Rn, we deduce from [128] (or [17])
+that the KPZ formula holds for the Gaussian multiplicative chaos M on this Riemann
+surface: it reads
+Theorem 5.10. KPZ formula on Riemann manifolds [[128], 2008] Let K be a
+compact set of S. Almost surely, we have the relation:
+dimσ(K) = (1 + γ2
+2n)dimM(K) −γ2
+2ndimM(K)2.
+In particular, we see that the curvature of the surface does not aﬀect the KPZ rela-
+tion. For instance, we can consider a 2-dimensional Riemann surface, like a sphere or an
+hyperbolic half-plane, and the GFF on a domain of this surface with appropriate bound-
+ary conditions in order to deﬁne the associated Liouville measure. As explained above,
+in dimensions diﬀerent from 2, the GFF does not possess logarithmic correlations so that
+it does not make sense to look for KPZ relations based on the GFF. Nevertheless, in
+dimensions diﬀerent from 2, it is plain to construct other log-correlated Gaussian distri-
+butions X: various examples of log-correlated Gaussian ﬁelds are described in the present
+manuscript but also in [59]).
+Another situation of interest is to consider massive or generalized Free Fields. On a
+domain D ⊂R2, the Massive Free Field (MFF) with Dirichlet boundary conditions is
+deﬁned as a standard Gaussian in the Hilbert space deﬁned as the closure of Schwartz
+functions over D with respect to the inner product
+(f, g)h = m2(f, g)L2(D) −(f, △g)L2(D).
+The real m > 0 is called the mass. Its action on L2(D) can be seen as a Gaussian distri-
+bution with covariance kernel given by the Green function GD
+m of the operator m2 −△,
+i.e.:
+(m2 −△)GD
+m(x, ·) = 2πδx
+with Dirichlet boundary conditions. When D is the whole plane, the massive Green kernel
+is a star-scale invariant kernel in the sense of [5]. We may also consider Generalized Free
+Fields as deﬁned in [75].
+Deﬁnition 5.11. A Generalized Free Field with Dirichlet boundary conditions over a
+domain D ⊂R2 is deﬁned as a random centered Gaussian distribution (say on the space
+of Schwartz functions on D) the covariance kernel of which is given by
+GD
+ϱ (x, y) =
+Z +∞
+0
+GD
+m(x, y) ϱ(dm).
+38
+
+
+--- PDF page 39 ---
+where GD
+m is the massive Green function on D with mass m and ϱ is a Radon measure on
+R+, called the K¨allen-Lehmann weight, satisfying
+Z 1
+0
+−ln m ϱ(dm) < +∞
+and
+∀k ∈N,
+Z +∞
+0
+mk ϱ(dm) < +∞.
+The construction of such a ﬁeld can be straightforwardly adapted from the previous
+white noise decomposition of the free ﬁeld. Denote by pD(t, x, y) the transition densi-
+ties of a Brownian motion killed upon touching the boundary of D. Consider a Gaus-
+sian noise, white in space and time and ϱ-colored in mass, i.e. a Gaussian random mea-
+sure W(dx, ds, dm) distributed on D × R+ × R+ such that for all Borel sets A, A′ ⊂D,
+B, B′, C, C′ ⊂R+
+E[W(A, B, C)W(A′, B′, C′)] = |A ∩A′| |B ∩B′| ϱ(C ∩C′),
+where |A| stands for the Lebesgue measure of A. The generalized free ﬁeld can then be
+deﬁned
+X(x) = √π
+Z
+D×R+×R+
+e−m2
+4 spD(s
+2, x, y) W(dy, ds, dm),
+and cutoﬀapproximations:
+∀ϵ ⩾0,
+Xϵ(x) = √π
+Z
+D×[ϵ,+∞[×R+
+e−m2
+4 spD(s
+2, x, y) W(dy, ds, dm).
+For all these ﬁelds, theory of Gaussian multiplicative chaos and Theorem 5.10 apply. Let
+us just stress that the result of the KPZ formula remains unchanged for Massive Free
+Fields whereas γ2 must be replaced with γ2ϱ(R+) for Generalized Free Fields.
+A last example of interest is the boundary Liouville measure introduced in [56]. The
+authors suggests to consider a smooth domain D of R2 together with a GFF X on D with
+free boundary conditions and to deﬁne the boundary Liouville measure on ∂D as
+ν(dx) = lim
+ϵ→0
+Z
+·
+e
+γ
+2 Xϵ(x)−γ2
+4 ln 1
+ϵ dx
+where dx stands for the length measure on ∂D and Xϵ(x) is the mean value of X over
+∂B(x, ϵ) ∩D. Actually, the boundary Liouville measure is nothing but a Gaussian mul-
+tiplicative chaos over a 1-dimensional Riemannian manifold (in fact C1 is enough). By
+noticing that the correlations are given by
+E[γ
+2Xϵ(x)γ
+2Xϵ(y)] = γ2
+2 ln+
+1
+|x −y| + g(x, y)
+(5.12)
+for some continuous bounded function g, Theorem 2.5 ensures that the boundary Liouville
+measure is non-degenerate provided that γ2 < 4. Furthermore, the boundary KPZ holds:
+just take care of replacing γ2 in Theorem 5.10 by γ2/2 because of the unusual normalization
+in 5.12 (the term in front of the log is γ2
+2 , averaging along semi-circles yields an extra factor
+2). The expected box counting KPZ formula for the boundary Liouville measure is proved
+in [56] whereas the Hausdorﬀdimension version of the KPZ formula for boundary Liouville
+measure is proved in [128].
+39
+
+
+--- PDF page 40 ---
+5.3
+Convergence of discrete Liouville measures on isoradial graphs
+Here we consider a planar (isoradial) graphs. We weight the vertices of this graph by the
+exponential of the Discrete Gaussian Free Field (DGFF for short) to obtain a discrete
+Liouville measure: the measure having as density exponential of the DGFF with respect
+to the discrete canonical volume measure on the graph. We will prove that this measure
+weakly converges in law towards the Liouvile measure as the mesh size of the graph
+converges to 0.
+Before stating a clear theorem, we need to explain the framework in further details.
+The reader may ﬁnd in [37] all the basic tools (and much more) about isoradial graphs
+described below. We stick to the notations used in [37]. A planar graph Γ embedded in
+C is called isoradial iﬀeach face is inscribed into a circle of common radius ϵ. If all circle
+centers are inside the corresponding faces, then one can naturally embed the dual graph
+Γ∗in C isoradially with the same ϵ, taking the circle centers as vertices of Γ∗. The name
+rhombic lattice is sometimes used for these graphs because all the quadrilateral faces of
+the corresponding bipartite graph Λ (having vertices Γ ∪Γ∗) are rhombi with sides of
+length ϵ. We will make the following assumption (see [37])
+the rhombi half-angles are uniformly bounded away from 0 and π
+2 .
+(5.13)
+Roughly speaking, Λ does not possess too ﬂat rhombi. This entails that the Euclidean
+distance between the vertices of Γ is comparable to the graph distance. For such graphs,
+the canonical volume measure µΓ(A) of a subset A ⊂Γ is given by
+µΓ(A) =
+X
+z∈A
+Wz
+where the weight Wz of z ∈Γ is the Lebesgue measure of the face of the dual graph
+containing z.
+We consider a sequence (Γn)n of isoradial graphs as indicated above with radius (ϵn)n.
+For all the quantities deﬁned above, the subscript n means that it is related to the graph
+Γn. For instance, µn stands for the volume measure of the graph Γn. We also assume that
+the radius ϵn of Γn goes to 0 as n →∞.
+Let us now consider a bounded simply connected domain D of C. Let us denote by Dn
+the graph D ∩Γn, i.e. we keep the vertices and edges that entirely lie in D. We consider a
+DGFF Xn on the vertices of D ∩Γn. Recall that the DGFF is a collection (Xn(z))z∈Dn of
+centered Gaussian random variables with covariance kernel given by 2πGDn, where GDn
+denotes the Green function on Dn with 0-boundary condition (see [37, Deﬁnition 2.6]).
+Then, for γ ∈[0, 2[, we deﬁne the discrete Liouville measure on Dn:
+Mn,γ(dz) = eγXn(z)−γ2
+2 E[Xn(z)2] µn(dz).
+(5.14)
+Theorem 5.12. Let D be a bounded simply connected open domain in C. For γ ∈[0, 2[,
+the discrete Liouville measures (Mn,γ(dz))n on Dn weakly converge in law towards the
+Liouville measure on D (see subsection 5.2), that is the Gaussian multiplicative chaos:
+Mγ(dx) = eγX(x)−γ2
+2 E[X(x)2] dx
+where X is a GFF on D with 0-boundary condition.
+40
+
+
+--- PDF page 41 ---
+The proof can be found in Appendix B. In fact, we will prove the result for the discrete
+GFF on the square lattice with mesh ϵ going to 0. It turns out that the proof of Theorem
+5.12 also works at criticality (see subsection 6.1 for further details and references), yielding
+the following:
+Theorem 5.13. For γ = 2, the discrete critical Liouville measures (
+q
+ln 1
+ϵn Mn,2(dz))n on
+Dn weakly converge in law towards the critical Liouville measure on D (see [57, 58] or
+subsection 6.1 below), that is the Gaussian multiplicative chaos:
+M′(dx) =
+r
+2
+π(2E[X(x)2] −X(x))e2X(x)−2E[X(x)2] dx
+where X is the GFF on D with Dirichlet boundary condition.
+5.4
+Kolmogorov-Obhukov model in turbulence
+We refer to [65] for an introduction to the statistical theory of 3 dimensional turbulence.
+Consider a stationary ﬂow at high Reynolds number, that is when the velocity of the
+ﬂuid is large in comparison with the viscosity forces. It is believed that at small scales
+the velocity ﬁeld of the ﬂow is homogeneous and isotropic in space . By small scales we
+mean scales much smaller than the integral scale R characteristic of the time stationary
+force driving the ﬂow. In the works [96] and [118], Kolmogorov and Obukhov proposed to
+model the mean energy dissipation per unit mass in a ball B(x, l) of center x and radius
+l << R by a random variable ϵl such that ln(ϵl) is normal with variance σ2
+l given by:
+σ2
+l = λ2 ln(R
+l ) + A
+where A is a constant and λ2 is the intermittency parameter. As noted by Mandelbrot
+([111]), the only way to deﬁne such a model is to construct a random measure ϵ by a limit
+procedure. Then, one can deﬁne ϵl by the formula:
+ϵl = 3 < ϵ >
+4πl3
+ϵ(B(x, l))
+where < ϵ > is the average mean energy disspation per unit mass. Formally, one is looking
+for a random measure ϵ such that:
+∀A ∈B(Rd),
+ϵ(A) =
+Z
+A
+eγX(x)−γ2
+2 E[X(x)2]dx
+(5.15)
+where (X(x))x∈Rd is a ”Gaussian ﬁeld” whose covariance kernel K is given by (2.12).
+Therefore, one can give a rigorous meaning to energy dissipation (5.15) by using Gaussian
+multiplicative chaos theory. Let us mention here that the objective of describing a stochas-
+tic representation of the velocity ﬁeld is a much more ambitious task (see subsection 6.13
+for more comments and perspectives on this topic).
+41
+
+
+--- PDF page 42 ---
+5.5
+Decaying Burgers turbulence
+Consider the Burgers equation
+∂tv + v∇v = ν∇v + f(x, t)
+with initial condition v(x, 0) = v0(x).
+(5.16)
+ν is the viscosity parameter. When f̸ = 0, this equation is called (randomly) forced Burgers
+equation. When f = 0 and v0(x)̸ = 0, this equation is called decaying Burgers turbulence.
+We consider here the case f = 0 with random initial data v0. The solution of decaying
+Burgers turbulence, via Hopf-Cole transform, is given by v(t, x) = ∇(−2ν ln Z(t, x)), where
+Z(t, x) =
+Z
+R
+e−1
+2ν
+|y−x|2
+2t
+−1
+2ν V (y)
+dy
+√
+4πνt.
+(5.17)
+where v0 = ∇V . If we choose V as a log-correlated Gaussian random potential, i.e. with
+covariance kernel of the type (2.12) then Z appears as a Gaussian multiplicative chaos of
+the type (2.4) and integrating measure σ given by the standard heat kernel on R. This
+situation corresponds to a power law correlated random proﬁle of Gaussian distributed
+initial velocities:
+E[v0(x)v0(y)] ∼|x −y|−2.
+Gaussian distributed initial velocities with power law correlations is a subject of interest
+in Burgers turbulence. The reader may consult [69] for an account of physical motivations,
+further references and a study of the present situation.
+It is shown in [69] that this equation exhibits a phase transition at a critical viscosity
+parameter νc, which is related to the phase transition of Gaussian multiplicative chaos
+(see Theorem 2.5). For ν < νc, freezing phenomena occur, highlighting a glassy phase
+conjecturally as that explained in subsection 6.2 (frozen phase).
+6
+Generalizations of the theory
+In this section, we review some generalizations of Kahane’s theory while making connec-
+tions with possible applications.
+6.1
+Gaussian multiplicative chaos at criticality
+Kahane’s construction of Gaussian multiplicative chaos makes sense when the factor γ
+appearing in (2.11) satisﬁes γ2 < 2d. This gives rise to the issue of constructing random
+measures in the same spirit for γ2 ⩾2d. Necessarily these measures will present a diﬀerent
+structure. The case γ2 = 2d is of special interest since it corresponds to a phase transition.
+We call this situation the critical case. Kahane’s theory ensures that the associated mar-
+tingale (Mn)n appearing in (2.2) almost surely converges towards 0. Several approaches are
+possible in order to make sense of a suitable random measure corresponding to criticality
+γ2 = 2d. It turns out that all these approaches are conjecturally the same.
+The ﬁrst approach is based on the convergence of a fundamental object that is called
+derivative martingale. Such an object has been intensively studied in the case of multiplica-
+tive cascades, branching random walks [28, 98] or branching Brownian motions [116]. The
+convergence is achieved in [57] in the context of Gaussian multiplicative chaos associated
+42
+
+
+--- PDF page 43 ---
+to star scale invariant kernels (2.23) and may be achieved for other type kernels provided
+that one can use a white-noise decomposition cutoﬀ(see [58]), for instance including the
+GFF in a bounded domain (see previous subsection White noise decomposition of the
+GFF). The limiting measure can formally be written as
+M′(A) =
+Z
+A
+ γ E[X2(x)] −X(x)
+
+eγX(x)−γ2
+2 E[X2(x)] dx
+with γ =
+√
+2d.
+(6.1)
+The reader may object that this construction should be possible for every value γ2 ⩽2d
+and therefore argue that the interest for the only value γ2 = 2d is not natural. It turns
+out that there is an abrupt change in the behaviour of this object at the critical value:
+the exponential term penalizes those points x where the ”value” of the process X(x) lies
+above the expectation term γE[X(x)2] with a strength that depends on γ: for γ2 < 2d
+the measure may be well deﬁned but the penalization term is not strong enough so that
+the sign of the term
+ γ E[X2(x)] −X(x)
+
+alternates. For γ2 = 2d, the exponential term is
+strongly penalizing, forcing the measure M′ to be nonnegative, which is not straightforward
+at ﬁrst sight. Furthermore, in the situation when the random distribution X possesses a
+star scale invariant kernel, the limit of the derivative martingale M′ yields a solution to
+the star equation for the only value γ2 = 2d. Indeed, when trying to derive this scaling
+relation for M′, you are left with an unusual extra term proportional to the standard chaos
+M. For γ2 < 2d, this term does not vanish whereas for γ2 = 2d Kahane’s theory ensures
+that this extra term disappear, making the measure M′ star scale invariant. It is also
+proved in [57] that the random measure M′ has almost surely full support and no atom.
+Further improvements are made in [20]: the authors determine the exact asymptotics of
+the right tail of the distribution of the total mass of the measure, and an almost sure
+upper bound for the modulus of continuity of the cumulative distribution function of the
+measure. A lower bound for the increments of the measure is also investigated, showing
+that the measure is supported on a set of Hausdorﬀdimension 0.
+Another possible approach is to ﬁnd a suitable renormalization of (2.2) in order to
+get a non trivial limit. This approach is carried out in [58], based on the works [99] for
+branching Brownian motions or [1, 83] for branching random walks. The renormalization
+turns out to be the square root of the variance of the Gaussian ﬁeld Xn, the convergence
+holds in probability and the limit measure is the derivative measure M′, up to a perfectly
+explicit multiplicative factor.
+This approach is very convenient in order to use Kahane’s convexity inequalities with
+the measure M′, which is not obvious at ﬁrst sight when looking at the expression (6.1).
+In particular, a complete description of the moments of M′ is achieved in [57, 58] as well
+as the computation of the power-law spectrum of M′.
+Let us point out that another approach of criticality via a KPP equation has been
+investigated in the case of multiplicative cascades [19] or branching Brownian motion
+[99]. No Gaussian multiplicative chaos counterpart has ever been derived rigorously. The
+main reason is the structure of correlations, which are more intricate than in the discrete
+framework. But this is clearly a perspective of interest.
+In Liouville quantum gravity, the Liouville measure at criticality γ = 2 corresponds to
+a central charge c = 1. It is expected, for instance, to be the scaling limit of the O(n = 2)
+loop model or the Q = 4- Potts model (see [117] for a description of these models). Let
+us mention that, in the standard physics literature about c = 1 Liouville ﬁeld theory
+43
+
+
+--- PDF page 44 ---
+Figure 4: Height landscape of the derivative martingale measure plotted with a logarithmic
+scale color-bar, showing that the measure is very “peaked” (for t = 12, a multiplicative
+factor of about 108 stands between extreme values, i.e., between warm and cold colors).
+[32, 73, 74, 79, 88, 92, 119, 123], the Tachyon ﬁeld ϕe2ϕ presents an unusual dependence
+on the Liouville ﬁeld (or GFF) ϕ (compare with the usual form eγϕ for c < 1). This is
+clearly in relation with the mathematical formulation (6.1). The KPZ formula (Theorem
+5.6) has been proved in [58] at criticality, i.e. for γ = 2.
+6.2
+Atomic Gaussian multiplicative chaos
+We know review some recent progress motivated by the super-critical regime γ2 > 2d.
+They have been mainly inspired by the seminal paper [60] in the context of multiplicative
+cascades. Typically, a new class of multiplicative chaos emerges, called atomic multiplica-
+tive chaos, which can be split in two parts.
+Dual phase
+Before coming to mathematical considerations, let us ﬁrst brieﬂy outline the physics moti-
+vations for considering the dual phase. The name dual phase comes from physics literature
+44
+
+
+--- PDF page 45 ---
+about Liouville quantum gravity. Remind that the coupling constant γ appearing in (5.4)
+or (5.5) is determined by the underlying model coupled to gravity. It is related to the
+so-called central charge of the model by the relation [94]
+c = 1 −6
+4
+
+γ −4
+γ
+2
+.
+The central charge belongs to ] −∞, 1]. The special case c = 1 (and γ = 2) corresponds to
+criticality. Otherwise, the central charge belongs to ] −∞, 1[ yielding two possible γ > 0.
+The ﬁrst solution γ belongs to ]0, 2[ and is given
+γ =
+√25 −c −√1 −c
+√
+6
+.
+(6.2)
+It corresponds to the standard branches of Liouville gravity detailed in subsection 5.2. The
+second solution, call it ¯γ, belongs to ]2, +∞[:
+γ =
+√25 −c + √1 −c
+√
+6
+.
+(6.3)
+Observe that γγ = 4.
+In a series of papers [9, 44, 52, 91, 92, 93, 97], physicists have investigated what
+they called the other/non-standard/unconventional/dual branches of gravity initially via
+modiﬁed random matrix models generating random surfaces in order to interpret these
+other possible values of the coupling constant γ ∈]2, +∞[. They have noticed several
+intriguing relations between the standard and dual branches of the Liouville action, laying
+the foundations of what they called Duality of Liouville quantum gravity. More recently,
+duality of Liouville quantum gravity has been digged up in [55, 50] at an heuristic yet
+interesting level.
+The purpose of what follows is to present mathematical results and conjectures on the
+mechanisms involved in this dual phase, which turns out to be a very rich area from the
+mathematical or physics angles. To understand mathematically how to handle the dual
+phase, let us continue this pedagogical introduction in the context of Liouville quantum
+gravity. So we consider a bounded domain D of R2 and a GFF X on D with Dirichlet
+boundary conditions. The ﬁrst observation is that Theorem 2.10 tells us that the standard
+chaos
+M¯γ(dx) = e¯γX(x)−¯γ2
+2 E[X(x)2] dx
+reduces to 0 because ¯γ2 > 4. Therefore another construction has to be found. To under-
+stand which construction is involved, let us assume for a while that the chaos M¯γ does
+not reduce to 0 (though it does). Then, as explained in Theorem 2.14 (and in its proof),
+the chaos M¯γ would then satisfy the scaling relation
+M¯γ(B(x, r)) = r2e¯γΩr−¯γ2
+2 E[Ω2
+r]M¯γ(B(x, 1))
+(6.4)
+for some Gaussian random variable Ωr independent of M¯γ and variance ln 1
+r. A straight-
+forward computation shows that this relation may be rewritten as:
+M¯γ(B(x, r)) =
+
+r2eγΩr−γ2
+2 E[Ω2
+r]1/α
+M¯γ(B(x, 1))
+(6.5)
+45
+
+
+--- PDF page 46 ---
+where α =
+4
+¯γ2 (recall that γ¯γ = 4). This relation suggests that if M¯γ were non degenerate,
+it should scale for small r like
+M¯γ(B(x, r)) ≃
+
+Mγ(B(x, r))
+1/α
+.
+(6.6)
+The convenient fact of the above relation is that the Gaussian multiplicative chaos Mγ in
+the right-hand side is non trivial since γ2 < 4. Therefore, we are heuristically looking for
+a measure that may be interpreted as the 1
+α-th root of the standard chaos Mγ. From the
+mathematical angle, this 1
+α-th root perfectly makes sense in terms of independently scat-
+tered random measures with prescribed control measure: roughly speaking, this consists
+in throwing a stable point process over a landscape described by the standard Gaussian
+multiplicative chaos Mγ. More precisely, the law of this measure can be generated as
+follows:
+• sample the standard Gaussian multiplicative chaos
+Mγ(dx) = eγX(x)−γ2
+2 E[X(x)2] dx.
+• sample a random measure M¯γ whose law, conditionally to Mγ, is that of an inde-
+pendently scattered random measure characterized by
+∀q ⩾0,
+E[e−qM¯γ(A)|Mγ] = e−qαMγ(A).
+This construction is called subordination procedure. Interestingly, it is a purely atomic
+random measure as suggested in physics literature.
+Until now, we have identiﬁed, at least in law, what kind of object we are looking for
+to model the dual branch of Liouville quantum gravity. Let us also mention here that
+we recover the suggestion made in [50] concerning the dual measure. It seems that the
+arguments used in [50] to guess the exact form of the dual Liouville measure are based on
+the knowledge of the scaling exponents involved in the dual branch of gravity.
+From the theoretical angle, this is the beginning of interesting questions. First, we
+mention that the scaling relation (6.6) has an exact equivalent in the context of branching
+random walks [60, 29, 108], the solutions of which are called ”the ﬁxed points of the
+smoothing transform”. Interestingly, it is proved that the corresponding scaling relation
+has a unique solution in law, which is the exact equivalent for branching random walks
+of the measure M¯γ described above. This is a strong argument to validate the law of
+the above measure. The question of uniqueness in the context of Gaussian multiplicative
+chaos theory can be formulated in terms of star scale invariance and will be discussed
+in subsection 6.4. Second, the above construction of M¯γ is not quite satisfactory. Indeed,
+the measure M¯γ is not a measurable function of the only ﬁeld X: the measure M¯γ also
+depends on the randomness originating from the sampling of the point process. It is not
+a measure intrinsically generated by the only ﬁeld X. Third, the construction of M¯γ by
+subordination does not appear as an almost sure limit of a suitably renormalized sequence
+in the spirit of (2.2) for instance. We will see that this does not allow us to understand
+the mechanisms involved in duality and that this is also related to the latter objection.
+Finally, a KPZ formula for the dual measure has to be proved rigorously.
+46
+
+
+--- PDF page 47 ---
+A diﬀerent way of constructing the measure M¯γ has been carried out in [17]. It is
+important to understand here that the main diﬀerences with the subordination procedure
+take place at the level of almost sure properties of the measure M¯γ. Basically, the construc-
+tion consists in replacing the dx measure in (2.11) by an independently scattered inﬁnitely
+divisible random measure, call it nα for some α ∈]0, 1[, whose law is characterized by
+∀q ⩾0,
+E[e−qnα(A)] = e−qα|A|
+for all Borelian set A of D. The random measure nα is assumed to be independent of the
+free ﬁeld X. For ¯γ2 > 4, it then makes sense to deﬁne an approximating sequence in the
+spirit of (2.2) (with the same notations):
+Mn,¯γ(dx) = e¯γXn(x)−α¯γ2
+2 E[Xn(x)2] nα(dx).
+(6.7)
+Theorem 6.1. Convergence of the atomic Gaussian multiplicative chaos [[17],
+2012] Almost surely in nα, the sequence of random measures (Mn,¯γ)n converges in PX-
+probability towards a non trivial limiting measure
+M¯γ(dx) = e¯γX(x)−α¯γ2
+2 E[X(x)2] nα(dx),
+called atomic Gaussian multiplicative chaos, which is purely atomic.
+We point out that the above construction is not a Gaussian multiplicative chaos in
+the usual sense. Indeed the lognormal weight is not normalized to have expectation 1.
+The expectation blows up, giving rise to a situation that qualitatively deeply diﬀers from
+standard Gaussian multiplicative chaos theory. Therefore, the simplicity of Kahane’s con-
+struction is lost in this construction:
+1) we do not deal with martingales because the weights are not normalized,
+2) these measures are not integrable because the measure nα is not.
+Surprisingly, the atomic Gaussian multiplicative chaos is independent of the measure
+nα used in the construction:
+Theorem 6.2. The random measure M¯γ obtained as the limit in probability of the se-
+quence (Mn,¯γ)n deﬁned by (6.7) is independent of the stable measure nα. It is therefore a
+measurable function of the only ﬁeld X.
+Proof. It is standard that the stable measure nα can be decomposed as
+nα(A) =
+Z
+A
+Z
+R+
+z mα(dx, dz)
+where mα is a Poisson random measure on Rd × R+ with intensity given by dx dz
+z1+α . Let
+us ﬁrst prove that
+R
+B
+R +∞
+c
+e
+γ
+αX(x)−γ2
+2αE[X(x)2]z mα(dx, dz) = 0 for all c > 0 and all balls B.
+To this purpose, observe that this term is the limit in probability as n →∞of
+Z
+B
+Z +∞
+c
+e
+γ
+αXn(x)−γ2
+2αE[Xn(x)2]z mα(dx, dz),
+47
+
+
+--- PDF page 48 ---
+Figure 5: Chaos and dual chaos for the value γ2 = 0, 25 (and then α = 0.051). Left:
+“density” of the standard chaos. Middle: position and weights of the atoms of the dual
+measure. Right: position and weights of the atoms of the dual measure with a logarithmic
+ordinate scale.
+which is nothing but a ﬁnite sum of terms like
+Zie
+γ
+αXn(xi)−γ2
+2αE[Xn(xi)2],
+where Zi are random variables independent of the ﬁeld X. By the strong law of large
+numbers, for all x ∈R, almost surely in X, we have
+lim
+n→∞
+γ
+αXn(x) −γ2
+2αE[Xn(x)2] = −∞.
+Our claim follows. The Kolmogorov 0 −1 law then proves the result.
+Furthermore, the measure M¯γ may be seen as the volume form associated to a Rie-
+mannian tensor of the form
+e¯γX(x)−α¯γ2
+2 E[X(x)2] (nα(dx))2
+This can be seen by regularizing the measure nα with a sequence of molliﬁers (ρn)n: M¯γ
+appears as the limit as n →∞of the volume forms associated to the smooth metric tensors
+obtained by mollifying the measure nα with the sequence (ρn)n. For instance, consider the
+setup drawn in subsection 5.3. Instead of considering the canonical volume form µn on
+Dn, meaning each vertice z of Dn has a weight corresponding to the Lebesgue measure of
+the face of the dual graph containing z, we assign to each vertic z of Dn the weight W α
+z
+of the nα-measure of the dual face of Dn containing z. We deﬁne the measure
+µn,α(A) =
+X
+z∈A
+W α
+z .
+This is some kind of Bouchaud trap model on isoradial graphs. We now consider this kind
+of ”Bouchaud trap model” in the gravitational dressing, i.e. we consider the discrete GFF
+48
+
+
+--- PDF page 49 ---
+Xn on Dn and deﬁne the discrete dual Liouville measure for ¯γ ∈]2, +∞[
+Mn,¯γ(dz) = e¯γXn(z)−α¯γ2
+2 E[Xn(z)2] µn,α(dz).
+It is straightforward to see that the sequence of measures (Mn,¯γ)n converges in law towards
+the measure M¯γ. The same conclusion holds if, instead of assigning a stable law on each
+face of the dual graph, we assign a Random Energy Model at low temperature on the
+collection of faces of the dual graph of Dn.
+(a) γ2 = 0.01
+(b) γ2 = 1
+(c) γ2 = 3.6
+Figure 6: Inﬂuence of γ on the spatial localization of the atoms of the dual measure.
+Let us further mention that the construction of atomic Gaussian multiplicative chaos
+carried out in [17] is more general than the situation explained here: it is valid in any
+dimension d for log-correlated Gaussian ﬁelds X, and also for all possible values of α ∈]0, 1[
+and ¯γ2 > 2d, meaning that we do not impose α = 2d
+¯γ2 (=
+4
+¯γ2 in dimension d = 2). Also, a
+rigorous proof of the KPZ formula for dual measures appears in [17]. Special care must be
+taken here to handle purely atomic measures.
+In Figure 6, we simulate for diﬀerent value of γ a few atoms of the dual measure (the
+biggest ones). The colored background stands for the height proﬁle of the associated sub-
+critical measure M plotted with a logarithmic intensity scale: red for areas with large mass
+49
+
+
+--- PDF page 50 ---
+and blue for areas with small mass. Localization of atoms is plotted in black. The larger
+γ is, the more localized on areas with large potential the atoms are.
+Frozen phase
+The second part of the super-critical regime consists in throwing a stable point process
+over a landscape described by the critical measure M′ of subsection 6.1:
+1. sample the critical measure M′
+M′(dx) =
+Z
+A
+ γ E[X2(x)] −X(x)
+
+eγX(x)−γ2
+2 E[X2(x)] dx
+with γ =
+√
+2d,
+2. sample a point process N′
+α whose law, conditionally to M′, is that of an independently
+scattered random measure characterized by
+∀q ⩾0,
+E[e−qN′
+α(A)|M] = e−qαM′(A).
+This phase is called frozen due to a linearization of the free energy involved in models con-
+verging towards these measures. Nevertheless, the term frozen may also be understood by
+the fact that the landscape on which points are thrown is ”frozen” and matches the critical
+measure M′: only the height of the atoms varies with the parameter α. Furthermore, these
+family of measures is conjectured to be involved in the glassy phase and freezing phenom-
+ena observed in log-correlated random potentials. The reader may consult [33, 67, 68] for
+an account of physics motivations and results, [19, 23, 109, 138] for rigorous results in
+the case of discrete models and [17, 57] for precise conjectures in the context of Gaussian
+multiplicative chaos theory. More precisely, the glassy phase of log-correlated Gaussian
+potentials is concerned with the renormalization of measures beyond the critical value
+γ2 > 2d. For γ2 > 2d, consider the measure:
+Mn,γ(dx) = eγXn(x)−γ2
+2 E[Xn(x)2] dx,
+where (Xn)n is your favorite cutoﬀapproximation of the Gaussian distribution X with
+covariance kernel of the type (1.2). The limiting measure, as n →∞, vanishes as shown
+by Theorem 2.10. Therefore, it is natural to wonder how to renormalize the sequence of
+measures (Mn,γ)n in order to get a non trivial limiting measure. As pointed out in [57],
+the sequence
+ c
+3γ
+2
+√
+2d
+n
+ecn
+ γ
+√
+2 −
+√
+d
+2
+Mn,γ(dx)
+
+t ⩾0
+is tight and every converging subsequence is non trivial, where cn = Var(Xn). This argu-
+ment is based on the results in [109, 138]. Let us stress that the deﬁnition of cn is clear
+when Xn is stationary. If Xn is not stationary, there is usually a clear candidate for the
+deﬁnition of cn, since the behaviour of the variance usually does not depend too much on
+the spatial localization, like in the case of the GFF. Of course, if one chooses the cutoﬀ
+approximations in a very bad way, it may happen that the renormalization constant cn
+does not straightforwardly make sense. We do not discuss here in further details these
+technical considerations. Based on heuristics on star scale invariance, it is conjectured in
+[17, 57] that this renormalized sequence actually admits only one possible limit:
+50
+
+
+--- PDF page 51 ---
+Conjecture 6.3. Prove that:
+c
+3γ
+2
+√
+2d
+n
+ecn
+ γ
+√
+2 −
+√
+d
+2
+Mn,γ(dx) law
+→dγNα(dx),
+as t →∞
+(6.8)
+where dγ is a positive constant depending on γ and the law of the random measure Nα is
+that described above with α =
+√
+2d
+γ .
+In particular, physicists are interested in the behaviour of the Gibbs measure associated
+to Mn,γ(dx) on a ball B. It is the measure renormalized by its total mass:
+Gγ
+n(dx) = Mn,γ(dx)
+Mn,γ(B) .
+From (6.8), we deduce
+Gγ
+t (dx) law
+→Nα(dx)
+Nα(B) ,
+as n →∞.
+(6.9)
+The size reordered atoms of the latter object form a Poisson-Dirichlet process as con-
+jectured by physicists [33]. This Poisson-Dirichlet approach has recently made important
+progress [8], which is presently the more accurate mathematical result to describe the
+glassy phase of log-correlated random potentials. A further step is to prove Conjecture
+6.3 as it oﬀers a more complete picture of the underlying phenomena than the Poisson-
+Dirichlet approach. The main reason is that it makes precise the spatial localization of the
+atoms together with their heights whereas the Poisson-Dirichlet approach only focuses on
+the heights of the atoms. We stress that this conjecture has been proved in the context
+of lognormal Mandelbrot’s cascades in [19, 138] and in the context of branching random
+walks in [23], based on results appearing in [109].
+(a) α = 0.2
+(b) α = 0.5
+Figure 7: Localization of atoms in the frozen phase for diﬀerent values of α.
+We further stress that the same remarks as in the dual phase remain valid here con-
+cerning an almost sure construction of the frozen phase: though the techniques developed
+in [17] should apply, this remains to be done rigorously.
+In Figure 7, we simulate for diﬀerent value of γ a few atoms of the frozen measure N′
+α
+(the biggest ones). The colored background stands for the height proﬁle of the derivative
+51
+
+
+--- PDF page 52 ---
+measure M′ plotted with a logarithmic intensity scale: red for areas with large mass and
+blue for areas with small mass. Localization of atoms is plotted in black. The reader may
+observe the strong clustering appearing here in comparison with Figure 6.
+6.3
+Conjectures in connection with lognormal star scale invariance
+Several questions remain open about star scale invariance as mentioned in [17, 57], inspired
+by the discrete multiplicative cascades case [60]. It is conjectured that all the non-trivial
+ergodic lognormal star scale invariant random measures (actually, we need to impose a
+stronger dependence decay than ergodicity) belong to one of the families listed below,
+up to a constant multiplicative factor. At least, we ask for ergodicity to get rid of the
+irrelevant random factor Y of Theorem 2.19. First there must be an α ∈]0, 1] such that
+E[eαωε(r)] = εd.
+Assuming this, it is proved in (see [5, 126]) that the Gaussian process αωe−t can be
+rewritten as
+ωe−t(x) −E[ωe−t(x)] = γ
+αXt(x)
+where γ2 ⩽2d and Xt is a centered stationary Gaussian ﬁeld with covariance structure
+given by:
+Cov
+ Xt(0), Xt(x)
+
+=
+Z et
+1
+k(ux)
+u
+du
+(6.10)
+for some continuous covariance kernel k with k(0) = 1. Four situations may then occur,
+each attached with structurally diﬀerent types of solutions (situations 2,3,4 are conjec-
+tures):
+Conjecture 6.4. Solutions to the ⋆-equation
+1. If α = 1 and γ2 < 2d then the law of the solution M is the standard Gaussian
+multiplicative chaos, as stated in Theorem 2.19.
+2. If α = 1 and γ2 = 2d, then the law of the solution M is that of the derivative
+martingale M′ described in section 6.1.
+3. If α < 1 and γ2 < 2d, then M is an atomic Gaussian multiplicative chaos of the
+dual phase as described in subsection 6.2.
+4. If α < 1 and γ2 = 2d, then M is an atomic Gaussian multiplicative chaos of the
+frozen phase.
+6.4
+About the maximum of log-correlated Gaussian ﬁelds and discrete
+GFF
+Another active ﬁeld of research concerning log-correlated Gaussian ﬁelds is the study
+of their maximum, say over a unit square. More precisely, given a cutoﬀapproximation
+(Xn)n of a centered Gaussian distribution X with logarithmic covariance kernel of the
+form (2.12), the question is to know how to renormalize the quantity
+sup
+x∈[0,1]d Xn(x)
+(6.11)
+52
+
+
+--- PDF page 53 ---
+in order to get a non trivial limit. Let us set
+cn = Var(Xn)
+with the same discussion about the deﬁnition of cn as in the ”frozen part” of section 6.2.
+It is readily seen that the quantity (6.11) goes to 0 as n goes to ∞, and actually, Kahane’s
+result about the criticality of the value γ2 = 2d for Gaussian multiplicative chaos already
+tells you the ﬁrst order term of this quantity, i.e.
+sup
+x∈[0,1]d Xn(x) −
+√
+2dcn = o(cn),
+as n →∞.
+Technically much more involved, you may even ﬁnd the second term in the asymptotic
+expansion of this quantity: more precisely, the family
+ sup
+x∈[0,1]d Xn(x) −
+√
+2dcn +
+3
+2
+√
+2d
+ln cn
+
+n ⩾0
+converges in law as n →∞and the limiting law in non trivial. This is proved in [31] (to be
+precise, the case of the discrete GFF is treated in dimension d = 2 in [31] but this result is
+very likely to hold in generality). By analogy with the branching random walk case ([4]),
+it is conjectured in [57] :
+Conjecture 6.5.
+sup
+x∈[0,1]d Xn(x) −
+√
+2dcn +
+3
+2
+√
+2d
+ln cn →Gd,
+in law as t →∞
+where the distribution of Gd is given in terms of the distribution of the derivative chaos
+M′([0, 1]d) of subsection 6.1. More precisely, there exists some constant c > 0 such that:
+E[e−qGd] = 1
+cq Γ(1 +
+q
+√
+2d
+)E
+ M′([0, 1]d)
+−
+q
+√
+2d 
+(6.12)
+where Γ is the standard Γ-function.
+The discussion leading to this conjecture in [57] is related to star scale invariance as
+the limiting law Gd can be related to the limit at zero temperature of the frozen phase.
+It is natural to wonder if similar results should hold for the discrete GFF in a domain
+D on the vertices of a graph with mesh size going to 0, thus giving a precise candidate
+for the limiting law appearing in [31]. In fact, in view of the convergence of the discrete
+Liouville measure at criticality on isoradial graphs (see subsection 5.3), it is clear that the
+limiting distribution in [31] can be nothing but that described in conjecture 6.5, where the
+derivative chaos M′ is that related to the (continuous) GFF in D constructed in [57, 58].
+Of course, we do not take into account issues that may arise due to boundary ﬂuctuations:
+meaning that we assume that the unit square is located far from the boundary of the
+domain under consideration.
+53
+
+
+--- PDF page 54 ---
+6.5
+Matrix-valued Gaussian multiplicative chaos
+The main motivation of the Kolmogorov K41 theory ([95])in fully developed turbulence
+and it’s extensions ([96]) is to deﬁne a realistic statistical theory of an incompressible,
+homogeneous, isotropic and fully developed turbulent ﬂow (see for example [64, 65]). This
+ambitious program consists in deﬁning a probabilistic model for the velocity ﬁeld which
+satisﬁes the main statistical signatures observed experimentally, such as the mean energy
+transfer towards the small scales and the intermittency (or multifractal) phenomenon
+([95]). Ideally, one looks for a ﬁeld as close as possible to an invariant measure of the
+equations of motion. In [40], the authors propose a probabilistic construction of such a
+velocity ﬁeld. Their construction, which requires a limiting procedure, is mathematically
+non rigorous and is based on the short time dynamics of the Euler ﬂow, as well as further
+multifractal considerations. One of the key step of this construction is the introduction
+of the exponential of an isotropic trace-free matrix whose entries are Gaussian variables
+with logarithmic correlations. So, this gives rise to the issue of constructing a theory of
+multiplicative chaos for Gaussian symmetric isotropic matrices, which has been studied in
+[39].
+The setup is the following. Consider a log-correlated ﬁeld (Xx)x of centered Gaussian
+symmetric matrices and apply a cut-oﬀto the correlation kernel to regularize the loga-
+rithmic singularity (in the spirit of (2.2)) to obtain a ﬁeld (Xn
+x )x of centered Gaussian
+symmetric matrices. The main purpose is to deﬁne a matrix-valued measure of the type
+M(dx) = lim
+n→∞
+Z
+eXn
+x −cn dx
+(6.13)
+where cn is a suitable renormalization sequence. This procedure is in essence similar to the
+scalar case. Nevertheless, the context is highly non-commutative so that ﬁnding a proper
+renormalizing sequence cn is, in general, fairly tricky, to put it mildly. Of course, things
+can be much simpliﬁed by assuming that the ﬁeld Xn takes values in a commutative sub-
+algebra of matrices but there is a big loss of generality in that case and furthermore, this
+does not ﬁt to the ﬁelds observed in 3d-turbulence: there are some experimental evidences
+that the ﬁeld must be symmetric and isotropic. Isotropy turns out to be a crucial advantage
+from the theoretical angle. Indeed, isotropic Gaussian matrices are invariant under the
+action of the orthogonal group so that the expectation of the matrix exponential eXn
+x
+must be proportional to the identity matrix, making expression (6.13) tractable: the exact
+computation of cn is possible thanks to well established formula for eigenvalues of isotropic
+Gaussian matrices.
+The convergence of the matrix-valued integrals
+R
+eXn
+x −cn dx is not straightforward since
+the martingale property is lost as soon as the ﬁeld is not scalar. So L2 computations are
+used in [39] to prove the convergence. It results that the method is not optimal: it does
+not give necessary and suﬃcient condition for convergence. Interestingly, the computations
+made in [39] suggest a logarithmic correction to the power-law spectrum, which does not
+appear in the scalar case. This seems to be related to non-commutativity. To sum up,
+there are several intriguing novelties appearing with matrix-valued multiplicative chaos,
+which deserved to be explored. This research ﬁeld is widely open.
+54
+
+
+--- PDF page 55 ---
+6.6
+Beyond Gaussianity
+The question of ⋆-scale invariance may be raised in quite a more general framework than
+the lognormal one:
+Deﬁnition 6.6. A stationary random measure M on Rd is said to be ⋆-scale invariant if
+for all 0 < ϵ ⩽1, M obeys the cascading rule
+ M(A)
+
+A∈B(Rd)
+law
+=
+  Z
+A
+eωϵ(r)Mϵ(dr)
+
+A∈B(Rd)
+(6.14)
+where ωϵ is a stochastically continuous stationary process and Mϵ is a random measure
+independent from ωϵ satisfying the relation
+ Mϵ(A)
+
+A∈B(Rd)
+law
+=
+ M(A
+ϵ )
+
+A∈B(Rd).
+This is a quite general statement since nothing is required about the nature of the ran-
+domness of the process ωϵ. In [126], it is proved that such a scaling relation entails inﬁnite
+divisibility of the process ωϵ provided that it possesses enough exponential moments. This
+suggests the connection with random measures deﬁned as
+Q(dx) =
+Z
+eXx dx
+(6.15)
+where X is an inﬁnitely divisible process, suitably normalized, with ”logarithmic depen-
+dence”. One is therefore led to considering multiplicative chaos with respect to inﬁnitely
+divisible random processes. There has been several works in this direction [12, 21, 63, 127],
+each of which focuses on a speciﬁc situation that is of interest for some given property.
+Multifractal random measures, not necessarily lognormal, were ﬁrst mathematically in-
+troduced in [21]: the construction is geometric and produces a speciﬁc example of star
+scale invariant random measure in the sense of (6.14). Many tools that can be used to
+study measures of the type (6.15) are also developed. In [12], the authors adapt Barral
+and Mandelbrot’s construction [21] in order to construct 1-dimensional exact stochastic
+scale invariant random measures (non necessarily lognormal). This construction is gener-
+alized in [127] to overcome the problem of dimension and to construct exact stochastic
+scale invariant random measures in any dimension. The case where X is a stable inﬁnitely
+divisible random ﬁeld is investigated in [63]. In [126], the authors construct a uniﬁed
+theory containing all the possible solutions to (6.14). Based on a general decomposition
+for stochastically continuous inﬁnitely divisible processes [113], they deﬁne a generalized
+multiplicative chaos that gives sense to random measures of the form (6.15) where X is
+a general inﬁnitely divisible process with ”logarithmic dependence”. Their main purpose
+is to characterize all the solutions to (6.14) possessing a moment of order 1 + δ for some
+δ > 0. Once again, the continuous nature of the problem imposes strong constraints on
+the structure of the ﬁeld X in the spirit of the lognormal case (2.23).
+The inﬁnitely divisible case oﬀers several perspectives too: as soon as a critical point
+exists (the existence depends on the nature of the process ωϵ) the same picture as Con-
+jecture 6.4 can be drawn, giving rise to corresponding notions/issues of duality, freezing,
+statistics of extreme values... But the situation is technically much more involved and most
+of the picture remains conjectural.
+55
+
+
+--- PDF page 56 ---
+A
+Proof of lemma 5.4
+Fix δ > 0 and A > 0. We have the following for x, y ∈D(δ):
+E[(Xϵ(x) −Xϵ(y))2]
+= π
+Z ∞
+ϵ2 pD(t, x, x) dt + π
+Z ∞
+ϵ2 pD(t, y, y) dt −2π
+Z ∞
+ϵ2 pD(t, x, y) dt
+= π
+Z ∞
+ϵ2 pD(t, x, x) −pD(t, x, y) dt + π
+Z ∞
+ϵ2 pD(t, y, y) −pD(t, x, y) dt
+⩽π
+Z 1
+ϵ2 pD(t, x, x) −pD(t, x, y) dt + π
+Z 1
+ϵ2 pD(t, y, y) −pD(t, x, y) dt + C|y −x|
+where C is some absolute constant (depending on δ) . Recall the following expression for
+pD: if (Bs)s ⩾0 is a Brownian motion starting from 0, we get:
+pD(t, x, y) = P(∀s ⩽t, Bs −s
+t Bt + x + s
+t (y −x) ∈D)e−|y−x|2
+2t
+2πt
+For the sake of simplicity, we will take D = B(0, 1) the Euclidean ball of radius 1 and
+x = 0. For |y| ⩽Aϵ, we get:
+π
+Z 1
+ϵ2 pD(t, x, x) −pD(t, x, y) dt
+⩽π
+Z 1
+ϵ2
+1
+2πt
+
+P(sup
+s ⩽t
+|Bs −s
+t Bt| ⩽1) −P(sup
+s ⩽t
+|Bs −s
+t Bt + s
+t y| ⩽1)
+
+dt
++ π
+Z 1
+ϵ2 P(sup
+s ⩽t
+|Bs −s
+t Bt + s
+t y| ⩽1)| 1
+2πt −e−|y|2
+2t
+2πt | dt
+⩽π
+Z 1
+ϵ2
+1
+2πt
+
+P(sup
+s ⩽t
+|Bs −s
+t Bt| ⩽1) −P(sup
+s ⩽t
+|Bs −s
+t Bt| ⩽1 −|y|)
+
+dt
++ π
+Z 1
+ϵ2 | 1
+2πt −e−|y|2
+2t
+2πt | dt
+Now we have
+R 1
+ϵ2 | 1
+2πt −e−|y|2
+2t
+2πt | dt ⩽C |y|2
+ϵ2 . We know turn to the second term. We consider
+the random variable X = sup
+s ⩽1
+|Bs −sB1|. We have by scaling of Brownian motion (recall
+56
+
+
+--- PDF page 57 ---
+also that |y|
+√
+t ⩽A for all t ⩾ϵ2):
+⩽π
+Z 1
+ϵ2
+1
+2πt
+
+P(sup
+s ⩽t
+|Bs −s
+t Bt| ⩽1) −P(sup
+s ⩽t
+|Bs −s
+t Bt| ⩽1 −|y|)
+
+dt
+= π
+Z 1
+ϵ2
+1
+2πtP( 1
+√
+t −|y|
+√
+t ⩽X ⩽1
+√
+t) dt
+⩽CA|y|
+Z 1
+ϵ2
+1
+t3/2 dt
+⩽CA
+|y|
+ϵ .
+In conclusion, we can ﬁnd a CA > 0 such that for all x, y ∈D(δ) with |y −x| ⩽Aϵ:
+E[(Xϵ(x) −Xϵ(y))2] ⩽CA
+|y −x|
+ϵ
+.
+B
+Proof of convergence of Theorem 5.12
+Let us carry out the proof in the case of the square lattice for simplicity. The reader may
+then adapt the proof to the general case using subsubsection B below.
+Let D be the standard square [0, 1]2. We let Dϵ stand for the ϵ−1-dilation of D, i.e.
+Dϵ = D
+ϵ and Lϵ for the lattice ϵZ2 ∩D. For simplicity, let us suppose that ϵ =
+1
+2N where
+N is an integer. We partition D into the squares
+∆ϵ,i,j := [(i −1
+2)ϵ, (i + 1
+2)ϵ] × [(j −1
+2)ϵ, (j + 1
+2)ϵ].
+We ﬁx δ ∈]0, 1[ and we will work in D(δ) = {x ∈D; d(x, ∂D) ⩾δ} the points in D which
+are at distance δ from the boundary.
+We introduce, for all t ∈[0, 1], the Gaussian process Zϵ(t, x) =
+√
+tXϵ(x)+√1 −t ¯Xϵ(x)
+where Xϵ(x) is the discrete GFF on Lϵ (that we extend to the square D by setting it
+constant in each ∆ϵ,i,j) and ¯Xϵ(x) is an independent Gaussian process with covariance
+π
+R ∞
+ϵ
+pD(t, x, y) dt. In view of the techniques of generalized Gaussian multiplicative chaos
+[132], one must show the following three points:
+1. For all A > 0,
+sup
+x,y∈D(δ),
+|x−y| ⩽Aϵ
+|E[Xϵ(x)Xϵ(y)] −π
+Z ∞
+ϵ2 pD(t, x, y)dt| ⩽¯CA.
+where ¯CA > 0 is some constant independent from ϵ.
+2. If we set:
+CA = lim
+ϵ→0
+sup
+x,y∈D(δ),
+|x−y| ⩾Aϵ
+|E[Xϵ(x)Xϵ(y)] −π
+Z ∞
+ϵ2 pD(t, x, y)dt|
+then CA goes to 0 as A goes to inﬁnity.
+57
+
+
+--- PDF page 58 ---
+3. For all α < 1, we have the following convergence uniformly in t ∈[0, 1]:
+lim
+ϵ→0 E[
+
+
+sup
+δϵ ⩽i,j ⩽1−δ
+ϵ
+Z
+∆ϵ,i,j
+eγZϵ(t,x)−γ2
+2 E[Zϵ(t,x)]dx
+
+
+α
+] = 0
+(B.1)
+in the subcritical case γ < 2 or
+lim
+ϵ→0 E[
+
+
+r
+ln 1
+ϵ
+sup
+δϵ ⩽i,j ⩽1−δ
+ϵ
+Z
+∆ϵ,i,j
+e2Zϵ(t,x)−2E[Zϵ(t,x)]dx
+
+
+α
+] = 0
+(B.2)
+in the critical case γ = 2.
+Proof of item 1,2
+Proof of item 1 is straightforward.
+The covariance of Xϵ is given by:
+∀x, y ∈Lϵ,
+E[Xϵ(x)Xϵ(y)] = E⌊x
+ϵ ⌋[
+τ∂Dϵ
+X
+i=1
+1Si=⌊y
+ϵ ⌋]
+where (Si)i ⩾1 is the simple random walk in Z2 starting from ⌊x
+ϵ ⌋and τ∂Dϵ stands for the
+ﬁrst exit time of the random walk out of Dϵ. By [100], we have the following expression:
+E[Xϵ(x)Xϵ(y)] =
+X
+z∈∂Dϵ
+P ⌊x
+ϵ ⌋(Sτ∂Dϵ = z)a(z −⌊y
+ϵ ⌋) −a(⌊x
+ϵ ⌋−⌊y
+ϵ ⌋)
+where x, y ∈Lϵ and a(x) is the potential kernel for the simple random walk:
+a(x) = 2
+π ln |x| + 2¯γ + ln 8
+π
++ O( 1
+|x|2 )
+and ¯γ is the Euler constant. Now, recall the following expression for the Green function
+of Brownian motion in D killed upon touching the boundary:
+GD(x, y) =
+Z
+∂D
+pD(x, z) ln |z −y|
+|x −y|dz
+where pD is the Poisson kernel. Let A > 0. We set pϵ(x, z) = P ⌊x
+ϵ ⌋(Sτ∂Dϵ = ⌊z
+ϵ⌋)/ϵ, then
+we get for |x −y| ⩾ϵA (see [100]) and x, y ∈[δ, 1 −δ]2:
+E[Xϵ(x)Xϵ(y)] =
+X
+z∈∂Dϵ
+P ⌊x
+ϵ ⌋(Sτ∂Dϵ = z) ln |z −⌊y
+ϵ ⌋| −ln |⌊x
+ϵ ⌋−⌊y
+ϵ ⌋| + O( 1
+A2 )
+=
+X
+z∈∂Dϵ
+P ⌊x
+ϵ ⌋(Sτ∂Dϵ = z) ln |ϵ(z −⌊y
+ϵ ⌋)| −ln |ϵ(⌊x
+ϵ ⌋−⌊y
+ϵ ⌋)| + O( 1
+A2 )
+=
+Z
+∂D
+pϵ(x, z) ln |ϵ(⌊z
+ϵ ⌋−⌊y
+ϵ ⌋)|dz −ln |ϵ(⌊x
+ϵ ⌋−⌊y
+ϵ ⌋)| + O( 1
+A2 )
+By lemma B.1 in [136], we have that P
+z∈∂Dϵ P ⌊x
+ϵ ⌋(Sτ∂Dϵ = z) ln |ϵ(z −⌊y
+ϵ ⌋)| converges
+uniformly to
+R
+∂D pD(x, z) ln |z −y|dz. By the uniform convergence above, we get that CA
+converges to 0 as A →∞.
+58
+
+
+--- PDF page 59 ---
+Proof of item 3
+We will work in the critical case γ = 2 as the subcritical case is a straithforward adaptation
+of the proof in [132].
+We have the following inequality:
+E[
+
+
+r
+ln 1
+ϵ
+sup
+δϵ ⩽i,j ⩽1−δ
+ϵ
+Z
+[iϵ,(i+1)ϵ]×[jϵ,(j+1)ϵ]
+e2Zϵ(t,x)−2E[Zϵ(t,x)]dx
+
+
+α
+]
+⩽E[
+
+
+r
+ln 1
+ϵ ϵ2
+sup
+δϵ ⩽i,j ⩽1−δ
+ϵ
+sup
+x∈[iϵ,(i+1)ϵ]×[jϵ,(j+1)ϵ]
+e2Zϵ(t,x)−2E[Zϵ(t,x)]
+
+
+α
+]
+Let us ﬁx t. If x ∈∆ϵ,i,j, we decompose the process Zϵ(t, x) = Zϵ(t, i, j) + ¯Zϵ(t, x)
+where:
+Zϵ(t, i, j) =
+√
+tXϵ(x) +
+√
+1 −t√π
+Z
+D×[ϵ2,∞[
+inf
+x∈∆ϵ,i,jpD(s
+2, x, y)W(dy, ds).
+and ( ¯Zϵ(t, x))x∈∆ϵ,i,j is the remaining smooth Gaussian process. Note that the process
+¯Zϵ(t, x) has the following properties:
+• It is continuous on ∆ϵ,i,j
+• There exists some constant C > 0 independent from ϵ, i, j, t and such that:
+∀x ∈∆ϵ,i,j, E[ ¯Zϵ(t, x)2] ⩽C
+• There exists some constant C > 0 independent from ϵ, i, j, t and such that:
+∀x ∈∆ϵ,i,j, 0 ⩽E[Zϵ(t, i, j) ¯Zϵ(t, x)] ⩽C
+We can then introduce the standard 2d discrete cascade (Zi,j)1 ⩽i,j ⩽1
+ϵ independent
+from ¯Zϵ (see [57]). Recall that there exists a constant C > 0 independent from ϵ, i, j, t such
+that for all (i, j), (i′, j′) ∈[|δ
+ϵ, 1−δ
+ϵ |]:
+E[Zi,jZi′,j′] ⩽E[Zϵ(t, i, j)Zϵ(t, i′, j′)] + C
+From above, we deduce that one can ﬁnd a ﬁxed random variable Y independent from
+Zϵ of bounded variance (with respect to all variables ϵ, i, j, t) and independent Gaussian
+processes (Yϵ,i,j(t, x))i,j (also independent from (Zi,j)1 ⩽i,j ⩽1
+ϵ ) such that the following
+holds:
+• For each i, j, the process Yϵ,i,j(t, x) is continuous in ∆ϵ,i,j and there exists some
+constant C > 0 independent from ϵ, i, j, t and such that:
+∀x ∈∆ϵ,i,j, 0 ⩽E[Yϵ,i,j(t, x)2] ⩽C
+59
+
+
+--- PDF page 60 ---
+• The processes Zϵ + Y and eZϵ have same variance, where eZϵ = Zi,j + Yϵ,i,j. Thus, we
+have:
+E[(Zϵ(t, x) + Y )2] = E[ eZϵ(t, x)2]
+• The processe Zϵ + Y is more correlated than the process eZϵ:
+E[(Zϵ(t, x) + Y )(Zϵ(t, x) + Y )] ⩾E[ eZϵ(t, x) eZϵ(t, y)]
+Therefore the process Zϵ(t, x) + Y is stochastically dominated by the process eZϵ(t, x) by
+the standard Slepian lemma (see [57] for example). In conclusion, we get that:
+⩽E[
+
+
+r
+ln 1
+ϵ ϵ2
+sup
+δϵ ⩽i,j ⩽1−δ
+ϵ
+sup
+x∈[iϵ,(i+1)ϵ]×[jϵ,(j+1)ϵ]
+e2Zϵ(t,x)−2E[Zϵ(t,x)]
+
+
+α
+]
+⩽CE[
+
+
+r
+ln 1
+ϵ ϵ2
+sup
+δϵ ⩽i,j ⩽1−δ
+ϵ
+¯Zi,je2Zi,j−2E[Zi,j]
+
+
+α
+]
+where ¯Zi,j = supx∈∆ϵ,i,j e2Yϵ,i,j(x)−2E[Yϵ,i,j(x)2]. Now, it is plain to see that the random mea-
+sure which gives a mass
+q
+ln 1
+ϵϵ2 ¯Zi,je2Zi,j−2E[Zi,j] to each square ∆ϵ,i,j converges (possibly
+along subsequences) in law to a measure which is absolutely continuous with respect to
+the standard canonical cascade measure (which correponds to taking ¯Zi,j = 1). Since this
+measure has no atoms, we deduce that:
+E[
+
+
+r
+ln 1
+ϵ ϵ2
+sup
+δϵ ⩽i,j ⩽1−δ
+ϵ
+¯Zi,je2Zi,j−2E[Zi,j]
+
+
+α
+] →
+ϵ→0 0.
+General case
+To adapt the above proof to the general class of isoradial graphs, one just need the following
+properties of the Green function, which can be found in [37] with the minor diﬀerence that
+we deﬁne the Green function as −2π times the Green function of [37]. The minus serves
+to have a positive deﬁnite function and the 2π is the standard normalization in Liouville
+quantum gravity to have the Green function that asymptotically behaves like a normalized
+log. In what follows, GΓn stands for the discrete Green function on Γn and GΩn for the
+discrete Green function on Ωn with 0 boundary condition. In particular, from Deﬁnition
+2.3+Theorem 2.5 in [37], we have:
+1. GΓn(x, x) = ln 1
+ϵn +c for some explicit constant c, which does not depend on relevant
+quantities.
+2. ∀x̸ = y ∈Γn,
+GΓn(x, y) = ln
+1
+|x −y| + O
+
+ϵ2
+n
+|x −y|2
+
+uniformly w.r.t. the shape of Γn and x̸ = y ∈Γn.
+60
+
+
+--- PDF page 61 ---
+3. GΩn = GΓn −G∗
+Ωn where (G∗
+Ωn)n is a sequence of functions that uniformly converges
+on the closed balls included in Ωtowards the function G∗deﬁned by
+△G∗(·, y) = 0 on Ω,
+G∗(·, y) = ln
+1
+| · −y| on ∂Ω.
+4. for each closed ball B ⊂Ω, there is a constant CB > 0 such that ∀x, y ∈B and
+n ⩾0
+ln 1
+ϵn
+−C ⩽GΩn ⩽ln 1
+ϵn
++ C.
+C
+Multifractal formalism
+Proof of theorem 4.1
+We will prove theorem 4.1 in dimension d = 2 though the proof can easily be adapted to all
+dimensions (we will indicate when appropriate how to adapt the proof to all dimensions).
+The proof that we will provide is robust, i.e. it is enough to show the result for one special
+Gaussian sequence satisfying the above conditions to deduce the result for all Gaussian
+sequences by using Kahane’s convexity inequalities. Therefore, let us choose the exact
+scale invariant ﬁeld ¯X with covariance kernel given by:
+∀x, y ∈U,
+E[ ¯X(x) ¯X(y)] = ln+
+1
+|x −y|.
+Let us also consider a white noise decomposition ( ¯Xϵ)ϵ∈]0,1] of ¯X as constructed in [132] (in
+all dimensions, one can work with the exact stochastic scale invariant kernels introduced in
+[127]). In particular, the process ϵ →¯Xϵ has independent increments and ¯Xϵ,ϵ′ := ¯Xϵ −¯Xϵ′
+has a correlation cutoﬀof length ϵ′ (i.e. if the Euclidean distance between two sets A, B
+is greater than ϵ′ then ( ¯Xϵ,ϵ′(x))x∈A and ( ¯Xϵ,ϵ′(x))x∈B are independent). The correlation
+structure of ( ¯Xϵ)ϵ∈]0,1] is given for ϵ ∈]0, 1] by:
+E[ ¯Xϵ(x) ¯Xϵ(y)] =
+
+
+
+
+
+0
+if |x −y| > 1
+ln
+1
+|x−y|
+if ϵ ⩽|x −y| ⩽1
+ln 1
+ϵ + 2(1 −|x−y|1/2
+ϵ1/2
+)
+if |y −x| ⩽ϵ
+.
+In particular, we have the following exact stochastic scale invariant relation for all λ < 1:
+( ¯Xλϵ(λx))|x| ⩽1
+(Law)
+=
+( ¯Xϵ(x))|x| ⩽1 + Ω1
+λ
+where Ω1
+λ is a centered Gaussian random variable of variance ln 1
+λ independent of ¯Xϵ.
+Preliminary lemma
+Now we begin the proof. Recall that we work in dimension d = 2.
+Lemma C.1. Let γ ∈[0, 2[. If a ∈]0, 1] satisﬁes (2 −γ2
+2 )a −γ2a2
+2
+> 0 then there exists a
+constant C > 0 such that:
+sup
+ϵ∈]0,1]
+E
+h Z
+[0, 1
+2 ]2
+eγ ¯
+Xϵ(v)−γ2
+2 E[ ¯
+Xϵ(v)2]
+(|v| + ϵ)γ2
+dv
+ai
+⩽C.
+(C.1)
+61
+
+
+--- PDF page 62 ---
+Proof. By stochastic scale invariance, we have the following property:
+E
+h Z
+[0, 1
+2 ]2
+eγ ¯
+Xϵ(v)−γ2
+2 E[ ¯
+Xϵ(v)2]
+(|v| + ϵ)γ2
+dv
+ai
+⩽E
+h Z
+[0, 1
+4 ]2
+eγ ¯
+Xϵ(v)−γ2
+2 E[ ¯
+Xϵ(v)2]
+(|v| + ϵ)γ2
+dv
+ai
++ E
+h Z
+[0, 1
+2 ]2\[0, 1
+4 ]2
+eγ ¯
+Xϵ(v)−γ2
+2 E[ ¯
+Xϵ(v)2]
+(|v| + ϵ)γ2
+dv
+ai
+⩽
+1
+2a(2−γ2
+2 )−γ2a2
+2
+E
+h Z
+[0, 1
+2 ]2
+eγ ¯
+X2ϵ(v)−γ2
+2 E[ ¯
+X2ϵ(v)2]
+(|v| + 2ϵ)γ2
+dv
+ai
++ 4aγ2 sup
+ϵ E
+h Z
+[0, 1
+2 ]2 eγ ¯
+Xϵ(v)−γ2
+2 E[ ¯
+Xϵ(v)2]dv
+ai
+,
+where in the last inequality we have used stochastic scale invariance. By assumption, we
+have ρ =
+1
+2a(2−γ2
+2 )−γ2a2
+2
+< 1. Since γ ∈[0, 2[, we also have:
+C def
+= 4aγ2 sup
+ϵ E
+h Z
+[0, 1
+2 ]2 eγ ¯
+Xϵ(v)−γ2
+2 E[ ¯
+Xϵ(v)2]dv
+ai
+< +∞.
+Set:
+un = E
+h Z
+[0, 1
+2 ]2
+eγ ¯
+Xϵn(v)−γ2
+2 E[ ¯
+Xϵn(v)2]
+(|v| + ϵn)γ2
+dv
+ai
+where ϵn =
+1
+2n . We have just proved that un+1 ⩽ρun + C hence the sequence (un)n is
+bounded, thus giving the result.
+C.1
+Proof of Theorem 4.1
+In what follows, the value of α is ﬁxed and given by α = 2 + (1
+2 −q)γ2.
+Lower bound
+Lemma C.2. Fix β > 0. There exist two constants D > 0 and η > 0 such that for all
+r > 0, we have:
+E
+h Z
+[0,1]2 1{Mγ(B(x,r)) ⩾rα−β}Mqγ(dx)
+i
+⩽Drη.
+Proof. We ﬁx ϵ, ϵ′ > 0 such that ϵ′ < rϵ. Let Ω1/r denote a centered Gaussian random
+variable of variance ln 1
+r. We write Ω1/r =
+q
+ln 1
+rN whrere N is a standard Gaussian. By
+62
+
+
+--- PDF page 63 ---
+using the Girsanov transform, we get:
+E
+h
+1
+{
+R
+B(x,r) eγ ¯
+Xrϵ(u)−γ2
+2 E[ ¯
+Xrϵ(u)2]du ⩾rα−β}eqγ ¯
+Xϵ′(x)−q2γ2
+2
+E[ ¯
+Xϵ′(x)2]i
+= P
+h
+eC
+Z
+B(x,r)
+e ¯
+γXrϵ(u)−γ2
+2 E[ ¯
+Xrϵ(u)2]
+(|u −x| + rϵ)qγ2
+du ⩾rα−βi
+⩽P
+h
+eCeγΩ1/r
+Z
+B(0,1)
+eγ ¯
+Xϵ(v)−γ2
+2 E[ ¯
+Xϵ(v)2]
+(|v| + ϵ)qγ2
+dv ⩾r−βi
+⩽P
+
+eCeγΩ1/r ⩾r−β
+2 
++ P
+h Z
+B(0,1)
+eγ ¯
+Xϵ(v)−γ2
+2 E[ ¯
+Xϵ(v)2]
+(|v| + ϵ)qγ2
+dv ⩾r−β
+2
+i
+⩽P
+
+N ⩾β
+2γ
+r
+ln 1
+r −
+C
+q
+ln 1
+r
+
++ P
+h Z
+B(0,1)
+eγ ¯
+Xϵ(v)−γ2
+2 E[ ¯
+Xϵ(v)2]
+(|v| + ϵ)qγ2
+dv ⩾r−β
+2
+i
+⩽eCβγ−2r
+β2
+8γ2 + r
+aβ
+2 E
+h Z
+B(0,1)
+eγ ¯
+Xϵ(v)−γ2
+2 E[ ¯
+Xϵ(v)2]
+(|v| + ϵ)γ2
+dv
+ai
+⩽eCβγ−2r
+β2
+8γ2 + C′r
+aβ
+2 ,
+where C is the constant appearing in (4.2) and C′ comes from Lemma C.1. Therefore, by
+integrating this identity with respect to dx, we get that:
+E
+h Z
+[0,1]2 1
+{
+R
+B(x,r) eγ ¯
+Xrϵ(u)−γ2
+2 E[ ¯
+Xrϵ(u)2]du ⩾rα−β}eqγ ¯
+Xϵ′(x)−q2γ2
+2
+E[ ¯
+Xϵ′(x)2]dx
+i
+⩽Drη
+where D and η are independent of ϵ, ϵ′. One can take the limit as ϵ′ →0 and conclude
+that:
+E
+h Z
+[0,1]2 1
+{
+R
+B(x,r) eγ ¯
+Xrϵ(u)−γ2
+2 E[ ¯
+Xrϵ(u)2]du ⩾rα−β}Mqγ(dx)
+i
+⩽Drη.
+Now one can use Fatou twice to get that:
+E[
+Z
+[0,1]2 1{Mγ(B(x,r)) ⩾2rα−β}Mqγ(dx)
+i
+⩽E
+h Z
+[0,1]2 lim inf
+ϵ→0
+1
+{
+R
+B(x,r) eγ ¯
+Xrϵ(u)−γ2
+2 E[ ¯
+Xrϵ(u)2]du ⩾rα−β}Mqγ(dx)
+i
+⩽lim inf
+ϵ→0
+E
+h Z
+[0,1]2 1
+{
+R
+B(x,r) eγ ¯
+Xrϵ(u)−γ2
+2 E[ ¯
+Xrϵ(u)2]du ⩾rα−β}Mqγ(dx)
+i
+⩽Drη.
+Upper bound
+Here, we prove the following result:
+63
+
+
+--- PDF page 64 ---
+Lemma C.3. Fix β > 0. There exist two constants D > 0 and η > 0 such that for all
+r > 0, we have:
+E[
+Z
+[0,1]2 1{Mγ(B(x,r)) ⩽rα+β}Mqγ(dx)
+i
+⩽Drη.
+Proof. Along the same lines as the proof of the lower bound, we get that:
+E
+h
+1
+{
+R
+B(x,r) eγ ¯
+Xrϵ(u)−γ2
+2 E[ ¯
+Xrϵ(u)2]du ⩽rα+β}eqγ ¯
+Xϵ′(x)−q2γ2
+2
+E[ ¯
+Xϵ′(x)2]i
+⩽P
+h
+e−CeγΩ1/r ⩽r
+β
+2 ] + P
+h Z
+B(0,1)
+eγ ¯
+Xϵ(v)−γ2
+2 E[ ¯
+Xϵ(v)2]
+(v + ϵ)qγ2
+dv ⩽r
+β
+2
+i
+⩽eCβγ−2r
+β2
+8γ2 + r
+β
+2 E
+h Z
+B(0,1)
+eγ ¯
+Xϵ(v)−γ2
+2 E[ ¯
+Xϵ(v)2]
+(|v| + ϵ)qγ2
+dv
+−1i
+⩽eCβγ−2r
+β2
+8γ2 + r
+β
+2
+h Z
+B(0,1)
+eγ ¯
+Xϵ(v)−γ2
+2 E[ ¯
+Xϵ(v)2]dv
+−1i
+⩽eCβγ−2r
+β2
+8γ2 + r
+β
+2
+where, in the last inequality, we have used ﬁniteness of the negative moments (see [132]).
+We can now prove theorem 4.1. Fix β > 0. By using lemmas C.2, C.3 and the Borel-
+Cantelli lemma, we get that Mqγ(Kc
+(β)) = 0 where:
+K(β) =
+[
+N ⩾1
+\
+n ⩾N
+n
+x ∈U;
+1
+2n(α+β) ⩽Mγ(B(x, 1
+2n )) ⩽
+1
+2n(α−β)
+o
+.
+We conclude by setting
+K =
+\
+j ⩾1
+K(1/j) ∩
+n
+x ∈U; lim
+ϵ→0
+Xϵ(x)
+−ln ϵ = γq
+o
+since it is obvious that Mqγ(
+
+x ∈U; lim
+ϵ→0
+Xϵ(x)
+−ln ϵ = γq
+	c) = 0. By taking q = 1, we have
+proved that
+Mγ
+n
+x ∈U; lim
+ϵ→0
+ln Mγ(B(x, ϵ))
+ln ϵ
+= d −γ2
+2
+oc
+= 0,
+and therefore
+Mqγ
+n
+x ∈U; lim
+ϵ→0
+ln Mqγ(B(x, ϵ))
+ln ϵ
+= d −q2γ2
+2
+oc
+= 0.
+Therefore Mqγ( ¯Kc) = 0 where we have set
+¯K = K(β) ∩
+n
+x ∈U; lim
+ϵ→0
+ln Mqγ(B(x, ϵ))
+ln ϵ
+= d −q2γ2
+2
+o
+.
+64
+
+
+--- PDF page 65 ---
+Proof of Theorem 4.2
+Finally, we adress the issue of the Hausdorﬀdimension of Kγ,1. By proposition 4.9 (a) in
+[61], we have dimH(Kγ,1) ⩾d −γ2
+2 . Fix β > 0. We cut [0, 1]2 into the standard 4n dyadic
+intervals In
+j = xn
+j +[0, 1
+2n [2 of size length
+1
+2n . We introduce the following random variables:
+µn
+j = lim
+η→0 4n
+Z
+In
+j
+eγ(Xη(x)−X1/2n(xn
+j ))−γ2
+2 ln(2n/η)dx,
+and
+αn
+j = sup
+x∈In
+j
+|X1/2n(x) −X1/2n(xn
+j )|.
+By using Kahane’s convexity inequalities and the fact that the Mγ(O) has negative mo-
+ments when O is an open set (see [132]), we get the existence for all q > 0 of a constant
+Cq (independent of n) such that:
+E[
+1
+(µn
+j )q ] ⩽Cq, n ⩾1, 1 ⩽j ⩽4n.
+By using the fact that (Xϵ)ϵ>0 is a smooth Gaussian approximation, we also get the
+existence of some constant Cq (independent of n) such that (see [104] for example):
+E[eqαn
+j ] ⩽Cq, n ⩾1, 1 ⩽j ⩽4n.
+Therefore, one easily gets that:
+P(∪N ⩾1 ∩n ⩾N {
+inf
+1 ⩽j ⩽4nµn
+j e−3γαn
+j ⩾
+1
+2nβ }) = 1.
+For all x in In
+j , we get that Mγ(In
+j ) ⩾µn
+j e−3γαn
+j 4neγX1/2n(x)−γ2
+2 ln 2n; hence, we deduce
+that on Kγ,1 we have:
+lim
+r→0
+Mγ(B(x, r))
+rd−γ2/2+β
+= ∞
+Since this is valid for all β > 0, proposition 4.9 (b) in [61] gives dimH(Kγ,1) ⩽d −γ2
+2 .
+References
+[1] A¨ıd´ekon E., Shi Z.: The Seneta-Heyde scaling for the branching random walk,
+arXiv:1102.0217v2.
+[2] Albeverio, S., Hoegh-Krohn, R.: The Wightman axioms and the mass gap for strong
+interactions of exponential type in two dimensional space-time. J. Funct. Anal. 16,
+39-82 (1974)
+[3] S. Albeverio, G. Gallavotti and R. Hoegh-Krohn: Some Results for the Exponential
+Interaction in Two or More Dimensions Commun.Math.Phys.70,187-192 (1979).
+65
+
+
+--- PDF page 66 ---
+[4] A¨ıd´ekon E.: Convergence in law of the minimum of a branching random walk,
+arXiv:1101.1810v3, to appear in Annals of Probability.
+[5] Allez R., Rhodes R., Vargas V.: Lognormal ⋆-scale invariant random measures, to
+appear in Probability Theory and Related Fields, arXiv:1102.1895v1.
+[6] Ambjørn J., Boulatov D., Nielsen J.L., Rolf J., Watabiki Y.: The spectral dimension
+of 2D Quantum Gravity. JHEP 9802 (1998) 010, arXiv:hep-lat/9808027v1.
+[7] Ambjørn J., Anagnostopoulos K.N., Ichihara T., Jensen L., Watabiki Y.: Quantum
+Geometry and Diﬀusions. JHEP11(1998)022.
+[8] Arguin L-P., Zindy O.: Poisson-Dirichlet statistics for the extremes of a log-correlated
+Gaussian ﬁeld, arXiv:1203.4216v1.
+[9] Alvarez-Gaum´e L., Barbon J.L., Crnkovic C., Nucl. Phys., B394 (1993), 383.
+[10] Bacry, E., Delour, J., and Muzy, J.F.: Multifractal random walks, Phys. Rev. E, 64
+(2001), 026103-026106.
+[11] Bacry E., Kozhemyak, A., Muzy J.-F.: Continuous cascade models for asset returns,
+available at www.cmap.polytechnique.fr/ bacry/biblio.html, to appear in Journal of
+Economic Dynamics and Control.
+[12] Bacry E., Muzy J.F.: Log-inﬁnitely divisible multifractal process, Communications in
+Mathematical Physics, 236 (2003), 449-475.
+[13] Bailleul I.: KPZ in a multidimensional random geometry of multiplicative cascades,
+available at ”http://perso.univ-rennes1.fr/ismael.bailleul/”.
+[14] Barral J.: Moments, continuit´e, et analyse multifractale des martingales de Mandel-
+brot, Probab. Theory Relat. Fields, 113 (1999), 535–569.
+[15] Barral J., Continuity of the multifractal spectrum of a random statistically self-similar
+measure, J. Theoretic. Probab., 13 (2000), 1027–1060.
+[16] Barral J., Fan A.-H., Peyrire J. , Mesures engendr´ees par multiplications, Panoramas
+et Synth`eses 32: Quelques interactions entre analyse, probabilit´es et fractals, 2010.
+[17] Barral J., Jin X., Rhodes R., Vargas V.: Gaussian multiplicative chaos and KPZ
+duality, to appear in Commun.Math.Phys., arXiv:1202.5296v2.
+[18] Barral J., Jin X.: On exact scaling log-inﬁnitely divisible cascades, arXiv:1208.2221
+[math.PR].
+[19] Barral J., Kupiainen A., Nikula M., Saksman E., Webb C.: Critical Mandelbrot cas-
+cades, arXiv:1206.5444v1.
+[20] Barral J., Kupiainen A., Nikula M., Saksman E., Webb C.: Basic properties of critical
+lognormal multiplicative chaos, arXiv:1303.4548.
+66
+
+
+--- PDF page 67 ---
+[21] Barral, J., Mandelbrot, B.B.: Multifractal products of cylindrical pulses, Probab. The-
+ory Relat. Fields 124 (2002), 409-430.
+[22] Barral, J., Mandelbrot, B.B.: Random Multiplicative Multifractal Measures I, II, III,
+in M. Lapidus, M. van Frankenhuijsen, eds., Fractal geometry and applications: a
+jubilee of Benoˆıt Mandelbrot, Proceedings of Symposia in Pure Mathematics, vol 72.,
+n. 2, 3-90, 2004.
+[23] Barral J., Rhodes R., Vargas V.: Limiting laws of supercritical branching random
+walks, Comptes rendus - Mathematique, 350, pp. 535-538, 2012.
+[24] Barral, J., Seuret, S., The singularity spectrum of L´evy processes in multifractal time.
+Adv. Math. 214 (2007), 437–468.
+[25] Bauer M., Bernard D., Cantini L.: Oﬀ-Critical SLE(2) and SLE(4): a Field Theory
+Approach. J. Stat. Mech. (2009) P07037.
+[26] Benjamini, I., Curien, N.: Simple random walk on the uniform inﬁnite planar quad-
+rangulation: Subdiﬀusivity via pioneer points, arXiv:1202.5454.
+[27] Benjamini, I., Schramm, O.: KPZ in one dimensional random geometry of multi-
+plicative cascades, Communications in Mathematical Physics, vol. 289, no 2, 653-662,
+2009.
+[28] Biggins, J.D. and Kyprianou, A.E.: Measure change in multitype branching, Adv.
+Appl. Probab. 36 (2004), 544581.
+[29] Biggins, J.D. and Kyprianou, A.E.: Fixed points of the smoothing transform; the
+boundary case, Electronic Journal of Probability, vol. 10 (2005).
+[30] D.V. Boulatov and V.A. Kazakov, Phys. Lett. 184B (1987) 247.
+[31] Bramson M., Ding J., Zeitouni O.: Convergence in law of the maximum of the two-
+dimensional discrete Gaussian Free Field, arXiv:1301.6669v1.
+[32] Br´ezin E., Kazakov V.A. , Zamolodchikov Al.B.: Scaling violation in a ﬁeld theory of
+closed strings in one physical dimension, Nuclear Physics B338, 673-688 (1990).
+[33] Carpentier D., Le Doussal P.: Glass transition of a particle in a random potential,
+front selection in nonlinear RG and entropic phenomena in Liouville and Sinh-Gordon
+models, Phys. Rev. E 63:026110 (2001).
+[34] Castaing B., Gagne Y., Hopﬁnger E.J.: Velocity probability density-functions of high
+Reynolds-number turbulence, Physica D 46 (1990) 2, 177-200.
+[35] Castaing B., Gagne Y., Marchand M.: Conditional velocity pdf in 3-D turbulence, J.
+Phys. II France 4 (1994), 1-8.
+[36] Chainais, P.: Multidimensional inﬁnitely divisible cascades. Application to the mod-
+elling of intermittency in turbulence, European Physical Journal B, 51 no. 2 (2006),
+pp. 229-243.
+67
+
+
+--- PDF page 68 ---
+[37] Chelkak D., Smirnov S.: Discrete complex analysis on isoradial graphs, Advances in
+Mathematics 228 (2011) 15901630.
+[38] Chen L., Jakobson D.: Gaussian Free Fields and KPZ Relation in R4, arXiv:1210.8051.
+[39] Chevillard L., Rhodes R., Vargas V.: Gaussian multiplicative chaos for symmetric
+isotropic matrices, arxiv.
+[40] Chevillard L., Robert R., Vargas V. (2010), A Stochastic Representation of the Local
+Structure of Turbulence, EPL, 89, 54002.
+[41] Cizeau, P., Gopikrishnan, P., Liu, Y., Meyer, M., Peng, C.K., Stanley, E.: Statistical
+properties of the volatility of price ﬂuctuations, Physical Review E, 60 no.2 (1999),
+1390-1400.
+[42] Cont, R.: Empirical properties of asset returns: stylized facts and statistical issues,
+Quantitative Finance, 1 no.2 (2001), 223-236.
+[43] Daley D.J., Vere-Jones D.: An introduction to the theory of point processes, Springer-
+Verlag, (1988).
+[44] Das S.R., Dhar, A., Sengupta A.M., Wadia S.R., Mod. Phys. Lett., A5 (1990), 1041.
+[45] David F., Nucl. Phys. B257 (1985) 45.
+[46] David F., Nucl. Phys. B257 (1985) 543.
+[47] David F.: Conformal Field Theories Coupled to 2-D Gravity in the Conformal Gauge,
+Mod. Phys. Lett. A 3 1651-1656 (1988).
+[48] Distler J., Kawai H.: Conformal Field Theory and 2-D Quantum Gravity or Who’s
+Afraid of Joseph Liouville?, Nucl. Phys. B321 509-517 (1989).
+[49] Duchon,
+J.,
+Robert,
+R.,
+Vargas,
+V.:
+Forecasting
+volatility
+with
+the
+multi-
+fractal random walk model, submitted to Mathematical Finance, available at
+http://arxiv.org/abs/0801.4220.
+[50] Duplantier B.: A rigorous perspective on Liouville quantum gravity and KPZ, in
+Exact Methods in Low-dimensional Statistical Physics and Quantum Computing, J.
+Jacobsen, S. Ouvry, V. Pasquier, D. Serban, and L.F. Cugliandolo, eds., Lecture Notes
+of the Les Houches Summer School: Volume 89, July 2008, Oxford University Press
+(Clarendon, Oxford) (2010).
+[51] Duplantier B.: Random walks and quantum gravity in two dimensions. Phys. Rev.
+Lett., 81 (25):5489-5492, 1998.
+[52] Duplantier B., in Fractal geometry and applications: a jubilee of Benot Mandelbrot,
+Part 2 (Amer. Math. Soc., Providence, RI, 2004), vol 72 of Proc. Sympos. Pure Math.
+365-482, arXiv:math-ph/0303034.
+[53] Duplantier B., Kostov I.: Conformal spectra on a random surface, Phys. Rev. Lett.,
+vol 61 no 13 (1988), 1433.
+68
+
+
+--- PDF page 69 ---
+[54] Duplantier D. and Kwon K.-H.: Conformal invariance and intersection of random
+walks. Phys. Rev. Lett., 61:25142517, 1988.
+[55] Duplantier, B., Sheﬃeld, S.: Duality and KPZ in Liouville Quantum Gravity, Physical
+Review Letters 102, 150603 (2009).
+[56] Duplantier, B., Sheﬃeld, S.: Liouville Quantum Gravity and KPZ, Inventiones Math-
+ematicae 185 (2) (2011) 333-393.
+[57] Duplantier B., Rhodes R., Sheﬃeld S., Vargas V.: Critical Gaussian multiplicative
+chaos: convergence of the derivative martingale, arXiv.
+[58] Duplantier B., Rhodes R., Sheﬃeld S., Vargas V.: Renormalization of Critical Gaus-
+sian Multiplicative Chaos and KPZ, arXiv.
+[59] Duplantier B., Rhodes R., Sheﬃeld S., Vargas V.: Log-correlated Gaussian ﬁelds: a
+primer, in preparation.
+[60] Durrett R., Liggett T.M.: Fixed points of the smoothing transformation, Probability
+Theory and Related Fields 64 (3) (1983) 275-301.
+[61] Falconer K.J.: The geometry of fractal sets, Cambridge University Press, 1985.
+[62] Fan A.H.: Some topics in the theory of multiplicative chaos, in Progress in Probability,
+57, Ch. Bandt, M. Zaehle and U. Mosco (Ed.), Birkhauser, 2004, 119-134.
+[63] Fan A.H.: Sur le chaos de L´evy d’indice 0 < α < 1, Ann. Sciences Math. Qu´ebec, vol
+21 no. 1, 1997, p. 53-66.
+[64] Foias C., Manley O., Rosa R., Temam R. (2001) Navier-Stokes equations and turbu-
+lence, Cambridge University Press, Cambridge.
+[65] Frisch, U.: Turbulence, Cambridge University Press (1995).
+[66] Frohlich J., in Lecture Notes in Physics, vol. 216, ed.L. Garrido (Springer, 1985);
+Ambjorn J., Durhuus B. and Frohlich J., Nucl. Phys. B257 (1985) 433.
+[67] Fyodorov Y. and Bouchaud J.P.: Freezing and extreme-value statistics in a random
+energy model with logarithmically correlated potential, J. Phys. A 41 (2008) 372001.
+[68] Fyodorov Y, Le Doussal P., Rosso A.: Statistical Mechanics of Logarithmic REM:
+Duality, Freezing and Extreme Value Statistics of 1/f Noises generated by Gaussian
+Free Fields, J. Stat. Mech. (2009) P10005.
+[69] Fyodorov Y, Le Doussal P., Rosso A.: Freezing transition in decaying Burgers turbu-
+lence and random matrix dualities, Europhysics Letters, 90, (2010) 60004.
+[70] Garban C.: Quantum gravity and the KPZ formula, s´eminaire Bourbaki, 64e anne,
+2011-2012, no 1052.
+[71] Garban C, Rhodes R., Vargas V.: Liouville Brownian motion, arXiv:1301.2876.
+69
+
+
+--- PDF page 70 ---
+[72] Garban C, Rhodes R., Vargas V.: On the heat kernel and the Dirichlet form of Liou-
+ville Brownian motion, arXiv:1302.6050.
+[73] Ginsparg P. and Moore G.: Lectures on 2D gravity and 2D string theory, in Recent
+direction in particle theory, Proceedings of the 1992 TASI, edited by J. Harvey and
+J. Polchinski (World Scientiﬁc, Singapore, 1993).
+[74] Ginsparg P., Zinn-Justin J.: 2D gravity + 1D matter, Physics Letters B240, 333-340
+(1990).
+[75] Glimm J., Jaﬀe A.: Quantum Physics: a functional integral point of view, Berlin-
+Heidelberg-New York, Springer-Verlag 1981.
+[76] Gneiting, T.: Criteria of Polya type for radial positive deﬁnite functions, Proceedings
+of the American Mathematical Society, 129 no. 8 (2001), 2309-2318.
+[77] Gneiting, T.: Criteria of Polya type for radial positive deﬁnite functions, Proceedings
+of the American Mathematical Society, 129 no. 8 (2001), 2309-2318.
+[78] Gray, Mathews, Macrobert: Bessel Functions, Macmillan and co. (1922).
+[79] Gross, D.J. and Klebanov I.R.: One-dimensional string theory on a circle, Nuclear
+Physics B344 (1990) 475–498.
+[80] Guerra F., Toninelli F.L.: The Thermodynamic Limit in Mean Field Spin Glass Mod-
+els, Commun. Math. Phys. 230, 71-79 (2002).
+[81] Hoegh-Krohn, R.: A general class of quantum ﬁelds without cut oﬀs in two space-time
+dimensions. Commun. Math. Phys. 21, 244-255 (1971).
+[82] Hu X., Miller J., Peres Y.: Thick points of the Gaussian free ﬁeld, Annals of Proba-
+bility, 2010, vol. 38, 896-926.
+[83] Hu Y., Shi Z.: Minimal position and critical martingale convergence in branching
+random walks, and directed polymers on disordered trees, Annals of Probability, vol.
+37, no 2, 2009, 742-789.
+[84] Janson S.: Gaussian Hilbert spaces, vol. 129, Cambridge Tracts in Mathematics. Cam-
+bridge University Press, Cambridge, 1997.
+[85] Kahane, J.-P.: Sur le chaos multiplicatif, Ann. Sci. Math. Qu´ebec, 9 no.2 (1985),
+105-150.
+[86] Kahane, J.-P.: Sur le mod`ele de turbulence de Benoˆıt Mandelbrot., C.R. Acad. Sci.
+Paris, 278 (1974), 567–569.
+[87] Kahane, J.-P., Peyri`ere, J., Sur certaines martingales de B. Mandelbrot. Adv. Math.
+22 (1976), 131–145.
+[88] Kazakov V., Kostov I., and Kutasov D.: A Matrix Model for the 2d Black Hole, in
+Nonperturbative Quantum Eﬀects 2000, JHEP Proceedings.
+70
+
+
+--- PDF page 71 ---
+[89] Kazakov V.A., Phys. Lett. 119A (1986) 140.
+[90] Kazakov V.A., Nucl. Phys. B (Proc. Supp.) 4 (1988) 93.
+[91] Klebanov I.R.: Touching random surfaces and Liouville gravity, Phys. Rev. D 51,
+18361841 (1995).
+[92] Klebanov I.R., Hashimoto A.: Non-perturbative Solution of Matrix Models Modiﬁed
+by Trace-squared Terms, Nucl. Phys. B434 (1995) 264-282.
+[93] Klebanov I.R., Hashimoto A.: Wormholes, Matrix Models, and Liouville Gravity,
+Nucl. Phys. (Proc. Suppl.) 45B,C (1996) 135-148.
+[94] Knizhnik V.G., Polyakov A.M., Zamolodchikov A.B.: Fractal structure of 2D-
+quantum gravity, Modern Phys. Lett A 3(8) (1988), 819-826.
+[95] Kolmogorov A. N. (1941), The local structure of turbulence in incompressible viscous
+ﬂuid for very large Reynolds numbers, Dokl. Akad. Nauk SSSR 30 301 [in Russian].
+English translation: Proc. R. Soc. London, Ser. A 434 (1991), 9.
+[96] Kolmogorov A.N.: A reﬁnement of previous hypotheses concerning the local structure
+of turbulence, J. Fluid. Mech., 13 (1962), 83-85.
+[97] Korchemsky, Mod. Phys. Lett., A7 (1992) 3081; Phys. Lett. 296B (1992), 323.
+[98] Kyprianou, A.E.: Slow variation and uniqueness of solutions to the functional equation
+in the branching random walk. J. Appl. Probab. 35 (1998) 795802.
+[99] Lalley S.P., Sellke T.: A conditional limit theorem for frontier of a branching Brownian
+motion, Ann. Probab. 15, 1987, 1052-1061.
+[100] Lawler G., Limic, V.: Random Walk, a modern introduction.
+[101] Lawler G.F., Schramm O., and Werner W.: Values of Brownian intersec-
+tion
+exponents.
+I.
+Half-plane
+exponents.
+Acta
+Math.,
+187(2):237–273,
+2001,
+arXiv:math.PR/9911084.
+[102] Lawler
+G.F.,
+Schramm
+O.,
+and
+Werner
+W.:
+Values
+of
+Brownian
+inter-
+section
+exponents.
+II.
+Plane
+exponents.
+Acta
+Math.,
+187(2):275–308,
+2001,
+arXiv:math.PR/0003156.
+[103] Lawler G.F., Schramm O., and Werner W.: Values of Brownian intersection expo-
+nents. III. Two-sided exponents. Ann. Inst. H. Poincar´e Probab. Statist., 38(1):109–
+123, 2002, arXiv:math.PR/0005294.
+[104] Ledoux, M., Talagrand, M.: Probability in Banach Spaces, Springer-Verlag (1991).
+[105] Le Gall, J-F.: The topological structure of scaling limits of large planar maps. Invent.
+Math. 169 (2007), no. 3, 621670.
+[106] Le Gall J.F.: Uniqueness and universality of the Brownian map, arXiv:1105.4842,
+2011.
+71
+
+
+--- PDF page 72 ---
+[107] Le Gall J.F., Miermont G.: Scaling limits of random trees and planar maps.
+arXiv:1101.4856, 2011.
+[108] Liu Q.S., Fixed points of a generalized smoothing transformation and applications
+to the branching random walk, Adv. Appl. Probab. 30 (1998) 85-112.
+[109] Madaule T.: Convergence in law for the branching random walk seen from its tip,
+arXiv:1107.2543v2.
+[110] Makarov N., Smirnov S.:Oﬀ-critical lattice models and massive SLEs, in Exner, Pavel
+(ed.), XVIth International Congress on Mathematical Physics, Prague, 3 - 8 August
+2009. 362-371, World Sci. Publ., Singapore. arXiv:0909.5377
+[111] Mandelbrot B.B.: A possible reﬁnement of the lognormal hypothesis concerning the
+distribution of energy in intermittent turbulence, Statistical Models and Turbulence,
+La Jolla, CA, Lecture Notes in Phys. no. 12, Springer, (1972), 333-351.
+[112] Mandelbrot B.B.: Intermittent turbulence in self-similar cascades, divergence of high
+moments and dimension of the carrier, J. Fluid. Mech. 62 (1974), 331-358.
+[113] Maruyama, G: Inﬁnitely divisible processes, Theory Probab. Appl., 9 no.15 (1970),
+3-23.
+[114] Miermont G.: The Brownian map is the scaling limit of uniform random plane quad-
+rangulations, arXiv:1104.1606, 2011.
+[115] Molchan, G.M.: Scaling exponents and multifractal dimensions for independent ran-
+dom cascades, Comm. Math Physics 179 (1996), 681-702.
+[116] Neveu, J.: Multiplicative martingales for spatial branching processes. In Seminar on
+Stochastic Processes, 1987, (eds: E. Cinlar, K.L. Chung, R.K. Getoor). Progress in
+Probability and Statistics, 15, 223-241. Birkhauser, Boston (1988).
+[117] Nienhuis, B.: Coulomb gas formulation of two-dimensional phase transitions, in
+Phase Transitions and Critical Phenomena, edited by C. Domb and J. L. Lebowitz,
+(Academic, London, 1987), Vol. 11.
+[118] Obukhov A.M.: Some speciﬁc features of atmospheric turbulence, J. Fluid. Mech.,
+13 (1962), 77-81.
+[119] Parisi G.: On the one dimensional discretized string, Physics Letters B238, 209-212
+(1990).
+[120] Parisi G., Frisch U.: On the singularity structure of fully developed turbulence,
+Proceed. Turbulence and predictability in geophysical ﬂuid dynamics and climate dy-
+namics, (M. Ghil, R. Benzi and G. Parisi, eds, 1985) Ed. Varenna, 1983, pp. 84-87.
+[121] Pasenchenko, O. Yu.: Suﬃcient conditions for the characteristic function of a two-
+dimensional isotropic distribution, Theory Probab. Math. Statist., 53 (1996), 149-152.
+[122] Peyri`ere, J., Turbulence et dimension de Hausdorﬀ. C. R. Acad. Sc. Paris 278 (1974),
+567–569.
+72
+
+
+--- PDF page 73 ---
+[123] Polchinski J., Critical behavior of random surfaces in one dimension, Nuclear Physics
+B346 (1990) 253–263.
+[124] Polchinski J.: String theory, Volume 1, An introduction to the Bosonic String. Cam-
+bridge Monographs on Mathematical Physics. Cambridge university press 1998.
+[125] Polyakov A.M., Phys. Lett. 163B (1981) 207.
+[126] Rhodes R., Sohier J., Vargas, V.: ⋆-scale invariant random measures, to appear in
+Annals of Probability, available on arxiv.
+[127] Rhodes R., Vargas, V.: Multidimensional multifractal random measures, Electronic
+Journal of Probability, 15 (2010) 241-258.
+[128] Rhodes, R. Vargas, V.: KPZ formula for log-inﬁnitely divisible multifractal random
+measures, ESAIM Probability and Statistics, 15 (2011) 358-371.
+[129] Rhodes, R. Vargas, V.: Optimal transportation for multifractal random measures
+and applications, Ann. Inst. H. Poincar Probab. Statist. 49, Number 1 (2013), 119-
+137.
+[130] Rhodes, R. Vargas, V.: Spectral dimension of Liouville quantum gravity, arxiv.
+[131] Robert, R. Vargas, V.: Hydrodynamic Turbulence and Intermittent Random Fields,
+Communications in Mathematical Physics, 284 (3) (2008), 649-673.
+[132] Robert, R., Vargas, V.: Gaussian multiplicative chaos revisited, Annals of Probabil-
+ity, 38 2 (2010) 605-631.
+[133] Schmitt, F., Lavallee, D., Schertzer, D., Lovejoy, S.: Empirical determination of uni-
+versal multifractal exponents in turbulent velocity ﬁelds, Phys. Rev. Lett. 68 (1992),
+305-308.
+[134] Sheﬃeld S.: Gaussian free ﬁelds for mathematicians, Probab. Th. Rel. Fields, 139
+(2007) 521–541.
+[135] Sheﬃeld, S.: Conformal weldings of random surfaces: SLE and the quantum gravity
+zipper. preprint, arXiv:1012.4797.
+[136] Smirnov, S.: Conformal invariance in random cluster models. I. Holomorphic
+fermions in the Ising model, Ann. Math., 172 (2010), 1435-1467.
+[137] Stolovitzky, G., Kailasnath, P., Sreenivasan, K.R.: Kolmogorov’s Reﬁned Similarity
+Hypotheses, Phys. Rev. Lett. 69(8) (1992), 1178-1181.
+[138] C. Webb, Exact asymptotics of the freezing transition of a logarithmically correlated
+random energy model, J. Stat. Phys., 145 (2011), 1595–1619.
+73
