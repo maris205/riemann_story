@@ -245,3 +245,45 @@ SHA-256：`eb76943a1fcef239eaf66bdf845d1d53892c4b852e9e9ab831ca87a1c461ca72`。
 
 SHA-256：`6489116c3b1edfcc0d0ac777627a48b749c83f1aa0962e15f17cc8e6648080b0`。
 
+
+
+## 第09节补充：信件原页与2025年现场
+
+核对日期：2026年10月22日。
+
+### connes_varese_2025_lecture.jpg
+
+- [本地图](connes_varese_2025_lecture.jpg)；[来源页](https://www.rism.it/rism-channel/2025/new-frontiers-on-the-riemann-hypothesis)；[原件](https://www.rism.it/images/2025/06/04/thumbnails/thumb_connes_toeplitz.jpg)。
+- 孔涅在右侧；2025年6月4日Villa Toeplitz学术活动。主办方录像配图，©RISM，未见单独开放许可及摄影者姓名。
+- 尺寸：320×240；保持原内容。
+- SHA-256：`04b5d12808b2bcfd7821c8594182ea1fe6ee56713cc72cdd24007cbe77838e14`。
+
+### connes_varese_2025_public.jpg
+
+- [本地图](connes_varese_2025_public.jpg)；[来源页](https://www.rism.it/rism-channel/2025/alain-connes-incontra-la-cittadinanza-di-varese)；[原件](https://www.rism.it/images/2025/06/04/thumbnails/thumb_connes_palazzo_estense.jpg)。
+- 孔涅在中间；同日Salone Estense公众活动。主办方录像配图，©RISM，未见单独开放许可及摄影者姓名。
+- 尺寸：320×240；保持原内容。
+- SHA-256：`1d7e6af96edb0876b857747abe977218146ee7eff2b8197275bfd4b30cf6ac01`。
+
+### connes_letter_p23.png
+
+- [本地图](connes_letter_p23.png)；[来源页](https://arxiv.org/abs/2602.04022v1)；[原件](https://arxiv.org/pdf/2602.04022v1)。
+- Alain Connes，预印本第23页完整页面转PNG；CC BY 4.0，未改文字与公式。
+- 尺寸：953×1348；保持原内容。
+- SHA-256：`319fd1d2ae5090754edbca83e95fe0fbfd447537c2a52f9e41abea5c70dbdf0a`。
+
+### connes_letter_p24.png
+
+- [本地图](connes_letter_p24.png)；[来源页](https://arxiv.org/abs/2602.04022v1)；[原件](https://arxiv.org/pdf/2602.04022v1)。
+- Alain Connes，预印本第24页完整页面转PNG；CC BY 4.0，未改文字与公式。
+- 尺寸：953×1348；保持原内容。
+- SHA-256：`be7b7a04f16219952e68bfadacd529112755cfe6d74ce08bc395bdd887eb7e11`。
+
+### connes_letter_p25.png
+
+- [本地图](connes_letter_p25.png)；[来源页](https://arxiv.org/abs/2602.04022v1)；[原件](https://arxiv.org/pdf/2602.04022v1)。
+- Alain Connes，预印本第25页完整页面转PNG；CC BY 4.0，未改文字与公式。
+- 尺寸：953×1348；保持原内容。
+- SHA-256：`b357a862a3f5a129d24da7e9c39cf4b3505e63ad1b1d51df0e9006743332bb93`。
+
+正文误差清单沿用本目录已有第25页完整数值块；本轮与重新下载的预印本逐项核对。更完整的许可及视频记录见[09资料](../../资料/09_给黎曼的一封信/04_图片与视频素材.md)。
