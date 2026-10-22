@@ -225,3 +225,51 @@
 - SHA-256：`749fcdce3e1c83a42ae11305b9e05c9dc7b45b1b14b73f57481967ff7a8cfd25`。
 
 第04章本次改写保留three_zero_fronts示意图；原maynard.jpg肖像与mobius_zero_detector示意图不再插入本章，原文件及说明保留供其他章节和后续修订使用。
+
+## 第05章新增人物与研究场景图片（2026-10-22）
+
+以下六图直接保存来源发布的原文件，未裁剪、调色、合成、去除标识或重新编码。来源页未给出可确认适用于这些图片的开放许可；版权归原权利人，不标为本项目原创、CC或已核实公有领域。历史肖像的拍摄时间与摄影者不详，保留档案原有信息。用于本章对应人物与活动的历史介绍，来源如下。
+
+### hadamard_archive_portrait.jpeg
+
+- 内容：阿达马历史肖像；档案未标拍摄年份，不当作1896年现场。
+- [来源页面](https://mathshistory.st-andrews.ac.uk/Biographies/Hadamard/pictdisplay/)；[原图](https://mathshistory.st-andrews.ac.uk/Biographies/Hadamard/Hadamard_4.jpeg)。
+- 尺寸：271×326；文件：8129字节。
+- SHA-256：`6dd0c02472a8ae64c105e699eb37ff1ff5533b32ec6b79f2751bbdaeca5b9d3a`。
+
+### vallee_poussin_archive_portrait.jpeg
+
+- 内容：德拉瓦莱·普桑历史肖像；档案未标拍摄年份。
+- [来源页面](https://mathshistory.st-andrews.ac.uk/Biographies/Vallee_Poussin/pictdisplay/)；[原图](https://mathshistory.st-andrews.ac.uk/Biographies/Vallee_Poussin/Vallee_Poussin_3.jpeg)。
+- 尺寸：295×326；文件：11393字节。
+- SHA-256：`623df4d6e07c3908de04d5e9ce6d155112f91713536c7be8434fee25507c047e`。
+
+### kadiri_resilience_2023.jpg
+
+- 内容：卡迪里2023年1月26日公开讲座的官方视频封面，包含户外人物照和活动信息；不是视频内现场截帧。
+- [来源页面](https://www.ulethbridge.ca/public-professor/public-professor-series-dr-habiba-kadiri)；[原图](https://i.ytimg.com/vi/0fLl0-94svI/maxresdefault.jpg)。
+- 尺寸：1280×720；文件：138710字节。
+- SHA-256：`55d2e0807f81a4310b4fc9f0ca41aa813cb6dad04f49cf2dd52e3542c81c19bd`。
+
+### explicit_number_theory_whiteboard_2023.jpg
+
+- 内容：2023年7月2—15日Inclusive Paths in Explicit Number Theory暑期学校研究小组合影，地点UBC Okanagan。原相册未逐一注明姓名，因此不猜认人物。
+- [来源页面](https://www.birs.ca/files/workshops/UBCO/2023/23ss001/index.html)；[原图](https://www.birs.ca/files/workshops/UBCO/2023/23ss001/Workshop_Photos/Research_in_Groups/IMG_2020.jpg)。
+- 尺寸：1874×1055；文件：337760字节。
+- SHA-256：`cc978580645c5d2fa7a15c046e502e35da03532ff1a8dc2c6034adc2e815ef2d`。
+
+### bellotti_unsw_profile.jpeg
+
+- 内容：Chiara Bellotti在UNSW博士研究生资料页使用的照片。只用于求学阶段介绍，不据旧资料页认定2026年仍为博士生。
+- [来源页面](https://www.unsw.edu.au/hdr/chiara-bellotti)；[原图](https://www.unsw.edu.au/content/dam/images/canberra/unsw-canberra/general/headshots/2023-03-canberra-hdr/2023-03-chiara-bellotti.cropimg.width=335.crop=square.jpeg)。
+- 尺寸：335×335；文件：15847字节。
+- SHA-256：`3200d77b8e955792aeaf3e97d425f18665c553a21933bda793670f4e8304e0c9`。
+
+### explicit_number_theory_group_2023.jpg
+
+- 内容：2023年7月显式数论暑期学校户外合影。活动页与参与者名单确认Kadiri组织、Trudgian授课；不对画中具体位置作身份认定，不当作2026年论文作者合影。
+- [来源页面](https://www.birs.ca/events/2023/summer-schools/23ss001)；[原图](https://www.birs.ca/files/workshops/UBCO/2023/23ss001/23ss001_groupphoto.jpg)。
+- 尺寸：4032×3024；文件：1622976字节。
+- SHA-256：`f20d737020abe3107b0379fa335118fdf8a8a34b60ef173bd9458c8f01530e21`。
+
+第05章保留classical_boundary_parameter示意图；原positive_trigonometric_barrier与zero_free_contour_shift不再嵌入正文，文件及原说明保留。
