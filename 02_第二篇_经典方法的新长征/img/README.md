@@ -273,3 +273,137 @@
 - SHA-256：`f20d737020abe3107b0379fa335118fdf8a8a34b60ef173bd9458c8f01530e21`。
 
 第05章保留classical_boundary_parameter示意图；原positive_trigonometric_barrier与zero_free_contour_shift不再嵌入正文，文件及原说明保留。
+
+## 第06章新增人物与历史场景图片（2026-10-22）
+
+五张网页照片按原文件保存，AIM入口图从原刊PDF内嵌图提取，未裁剪、补画、合成或去除摄影标识。来源未给出本次能够确认适用于这些图片的开放许可；版权归原权利人，不标为项目原创、CC或已核实公有领域。
+
+### hardy_cricket_team.jpeg
+
+- 内容：哈代带领The Mathematicals板球队出场，对手为The Rest of the World；拍摄日期未标。
+- [来源页](https://mathshistory.st-andrews.ac.uk/Biographies/Hardy/pictdisplay/)；[原图／原刊](https://mathshistory.st-andrews.ac.uk/Biographies/Hardy/Hardy_8.jpeg)。
+- 尺寸：536×326；22964字节。
+- SHA-256：`526cdc5bf84701822d7c5bb8efd857575bc29a8640410f3fe713b415d7af71fd`。
+
+### levinson_archive.jpeg
+
+- 内容：莱文森历史照片，未标拍摄时间。
+- [来源页](https://mathshistory.st-andrews.ac.uk/Biographies/Levinson/pictdisplay/)；[原图／原刊](https://mathshistory.st-andrews.ac.uk/Biographies/Levinson/Levinson_3.jpeg)。
+- 尺寸：286×326；9831字节。
+- SHA-256：`bc374b4a171b05ea2bc90d3de5aa21a8a8bae3d5d743f7e2e37dc64ed437b684`。
+
+### hung_bui_manchester.jpg
+
+- 内容：Hung Bui，曼彻斯特大学研究者资料照；不作为2010年现场。
+- [来源页](https://research.manchester.ac.uk/en/persons/hung.bui/)；[原图／原刊](https://research.manchester.ac.uk/files-asset/48050542/Hung01.JPG)。
+- 尺寸：1081×910；104121字节。
+- SHA-256：`572da0d9670ee61a4c718ac8aeb7a39246962387017ae8b1cb119bacd53bd95c`。
+
+### aim_entrance_2005.png
+
+- 内容：2005年Notices of the AMS实地报道第1331页的AIM入口照片；从PDF内嵌图提取为PNG，未裁剪或合成。2005为刊载年份。
+- [来源页](https://aimath.org/news/fea-aim.pdf)；[原图／原刊](https://aimath.org/news/fea-aim.pdf)。
+- 尺寸：387×260；208835字节。
+- SHA-256：`97c60f1073f506a7675dd5ad56fa867a5e2b857045d0411537ee17f82615078b`。
+
+### nicolas_robles.jpg
+
+- 内容：Nicolas Robles，个人网站资料照；未标拍摄日期。
+- [来源页](https://www.nicolasrobles.com/)；[原图／原刊](https://static.wixstatic.com/media/5cdb7b_0d66317229334fd7921b4a2f08123a5b.jpg)。
+- 尺寸：654×979；49007字节。
+- SHA-256：`2e255c43be0b011cb697d1fbef2e5f6f2cf86ab7c821c05b8e6c7a6c36a13c49`。
+
+### kyle_pratt_byu.jpg
+
+- 内容：Kyle Pratt，BYU学术主页照片；保留byuphotos.com标识，不作为2018年现场。
+- [来源页](https://mathdept.byu.edu/~kpratt/)；[原图／原刊](https://mathdept.byu.edu/~kpratt/pratt.jpg)。
+- 尺寸：600×900；237527字节。
+- SHA-256：`2ee4a401120e400b5aafd7189314bf3d1e78390bf75e85393d3a26e5325b9a35`。
+
+本次保留finite_mollifier_toy与proportion_quantifiers两幅教学图；argument_principle_toy移入资料底稿作为可选解释，原文件保留。[第06章图片与视频索引](../../资料/06_临界线上的零点比例/04_图片与视频素材.md)。
+
+## 第06章场景照片替换（2026-10-22）
+
+优先采用保留环境与人物关系的照片。以下两图替换正文中的莱文森近照与Pratt单人肖像；旧文件继续留作备用。新图均按来源原文件保存，未裁剪、补画、合成。未确认开放许可，版权归原权利人。
+
+### levinson_with_manuscript.jpeg
+
+- 内容：莱文森手持文稿的室内照片，保留背景桌面与设备；档案未标年月和具体场合，不称为三分之一成果的写作现场。
+- [来源页](https://mathshistory.st-andrews.ac.uk/Biographies/Levinson/pictdisplay/)；[原图](https://mathshistory.st-andrews.ac.uk/Biographies/Levinson/Levinson_2.jpeg)。
+- 尺寸：271×326；15099字节。
+- SHA-256：`702459537513c8b22277287f8595e3a04cd25baac7f7a1e16bcdbbc7754fac0c`。
+
+### pratt_ford_students_2018.jpg
+
+- 内容：2018年厄巴纳，Kevin Ford与其博士生Kyle Pratt、Xianchang Meng、George Shakan合影；身份与年份依Ford相册图注，不擅自标注每个人的左右位置。
+- [来源页](https://ford126.web.illinois.edu/Gallery_of_Mathematicians/index.html)；[原图](https://ford126.web.illinois.edu/Gallery_of_Mathematicians/2018_Kyle_Meng_George_1.jpg)。
+- 尺寸：2560×1440；1293236字节。
+- SHA-256：`233f8c20158229cc9ccf842ee594c998893a30f61997fd2505a5ea22bd41d85e`。
+
+## 第07章人物场景照片（2026-10-22）
+
+四图均为来源站点公开原文件，已逐张查看；未裁剪、合成或生成历史场景。未确认开放许可，版权归原权利人。下列来源供溯源，不等于取得出版或视频商用许可。
+
+### de_bruijn_outdoors.jpeg
+
+- 内容：德布鲁因窗前档案照；拍摄年份及具体地点未标。
+- [来源页](https://mathshistory.st-andrews.ac.uk/Biographies/De_Bruijn/pictdisplay/)；[原图](https://mathshistory.st-andrews.ac.uk/Biographies/De_Bruijn/De_Bruijn_2.jpeg)。
+- 署名：MacTutor档案，未列摄影者。
+- 尺寸：279×326；8725字节。
+- SHA-256：`b703ee92c2aead841cb7834c9020f74ac90c2786982b1b75a9a4ce98306ee78f`。
+
+### newman_ningbo_2018.jpg
+
+- 内容：Charles Newman在2018年3月8日宁波诺丁汉大学首届Mathday讲座现场。
+- [来源页](https://www.nottingham.edu.cn/en/university-life/news/article.aspx?id=a4a738f6-c3d4-46bf-b497-e13e2f456622&language=en-GB)；[原图](https://www.nottingham.edu.cn/image-library/Department-News/Engineering/Charles.xca1ce676.jpg)。
+- 署名：宁波诺丁汉大学，页面未单列摄影者。
+- 尺寸：714×536；76597字节。
+- SHA-256：`72e29193d29c680207cb7d18e818684a260717593707514546dda52a685816e8`。
+
+### tao_ucla_chalkboard.jpg
+
+- 内容：Terence Tao站在写满公式的黑板前；不用作2018年合作现场。
+- [来源页](https://newsroom.ucla.edu/file?fid=68c099122cfac203a54672da)；[原图](https://s3.amazonaws.com/cms.ipressroom.com/173/files/20258/68c099122cfac203a54672da_250827_TerenceTao-10/250827_TerenceTao-10_d6a83876-c08e-4632-902d-ec4be0b28a48-prv.jpg)。
+- 署名：David Esquivel／UCLA。文件名含日期样式，但不单凭文件名断言拍摄时间。
+- 尺寸：1920×1259；233672字节。
+- SHA-256：`f1e873bfa847dcf4189a3efeee4914f5cdbea2f992a8dd59fbdc9ac6e71a011b`。
+
+### ono_zagier_whiteboard_2019.jpg
+
+- 内容：Ken Ono在左、Don Zagier在右，身后白板为生日题；2019年是报道日期，不是已核实拍摄日期。
+- [来源页](https://phys.org/news/2019-05-mathematicians-revive-abandoned-approach-riemann.html)；[原图](https://scx1.b-cdn.net/csz/news/800a/2019/3-mathematicia.jpg)。
+- 署名：Emory University，原报道未单列摄影者。
+- 尺寸：800×501；50493字节。
+- SHA-256：`bf4c4e8e0790330965f4ac29453f5e1c871ee5a8dc0759d764c720e072b672d9`。
+
+保留两幅原创教学图toy_heat_zero_collision与jensen_quantifier_grid。后者门槛d²只是示意，未画入GORZ论文另有的d≤8全覆盖结果；正文图注已说明。旧real_roots_quadratic_toy作为备用素材保留。[第07章图片与视频索引](../../资料/07_德布鲁因–纽曼常数/04_图片与视频素材.md)。
+
+## 第08章人物场景照片（2026-10-22）
+
+新增三图均已逐张查看，按来源文件保存，没有裁剪、去水印、合成或生成历史场景。
+
+### matomaki_blackboard.jpg
+
+- 内容：Kaisa Matomäki与写着莫比乌斯函数、短区间估计的黑板。2019年采访配图，拍摄日期未标。
+- [来源页](https://dimensiolehti.fi/haastattelu-kaisa-matomaki/)；[原图](https://dimensiolehti.fi/app/uploads/2019/03/liitutaululla_600.jpg)。
+- 署名与许可：Dimensio人物采访，作者Mona Zabihian；图注未明确摄影者。未确认该图开放许可。
+- 尺寸：600×471；73825字节。
+- SHA-256：`45280ca513af812ca826894a2a377d27231b80911d38f85f1e9a9e56b98f7617`。
+
+### radziwill_mfo_2017.jpg
+
+- 内容：Maksym Radziwiłł，2017年Oberwolfach的Automorphic Forms and Arithmetic活动；户外雕塑背景。
+- [来源页](https://owpdb.mfo.de/detail?photo_id=21953&suggest=1)；[原图](https://owpdb.mfo.de/photoNormal?id=21953)。
+- 署名与许可：Petra Lein, Archives of the Mathematisches Forschungsinstitut Oberwolfach。版权MFO；保留原低分辨率与水印，按[CC BY-SA 2.0 DE](https://creativecommons.org/licenses/by-sa/2.0/de/)使用，见[馆藏条款](https://owpdb.mfo.de/terms_of_use)。
+- 尺寸：399×266；34237字节。
+- SHA-256：`8977fb9420bc66b66528f9b8ea83e7eaeda7d3d72a7eec9768e0d592178d2e56`。
+
+### erdos_tao_1985.jpg
+
+- 内容：Paul Erdős与十岁的Terence Tao，1985年。PAW图注确认Tao family供图；不能断言当时正在讨论偏差问题。
+- [来源页](https://paw.princeton.edu/article/mind-mathematician)；[原图](https://paw.princeton.edu/sites/default/files/images/content/Tao_ErdosNew.jpg)。
+- 署名与许可：Tao family／Princeton Alumni Weekly刊载版本；图注未单列拍摄者。[Commons同一历史照片](https://commons.wikimedia.org/wiki/File:Paul_Erdos_with_Terence_Tao.jpg)列Billy或Grace Tao及CC BY-SA 2.0许可；本地保存的是PAW版本，不冒称Commons原文件，后续出版应核对所用版本。
+- 尺寸：612×367；27287字节。
+- SHA-256：`11bc7fa179cad7339c4d8496828b78a6152354c80c733fc993d3db2de372c9d1`。
+
+保留mobius_factor_trees、mobius_walk_2000、mobius_short_windows三幅原创教学图及原CSV。旧tao.jpg不再插入本章，文件保留。[第08章图片与视频索引](../../资料/08_莫比乌斯随机游走/04_图片与视频素材.md)。
