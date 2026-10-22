@@ -1,6 +1,6 @@
 # 第二篇图片来源与使用说明
 
-人物照片按各自来源页所列许可使用，保留作者署名与原有水印、标识；本项目未裁剪、去水印、调色或重新编码。照片不因收入本仓库而改变许可。原图下载链接仅供核对出处，正文引用本目录中保留原文件字节的副本。
+人物照片分别记录来源页所列许可或权利状态，保留可核实的作者署名与原有水印、标识；本项目未裁剪、去水印、调色或重新编码。照片不因收入本仓库而改变许可。原图下载链接仅供核对出处，正文引用本目录中保留原文件字节的副本。
 
 ## tao.jpg
 
@@ -198,3 +198,30 @@
 数据：src/mobius_windows.csv，共90行。按素因子筛精确计算μ(1…2000)，画出(100,130]、(800,830]、(1500,1530]。青色+1，金色−1，灰点0。
 范围：这些不是Matomäki–Radziwiłł定理的证明或统计验证，也没有宣称每个短区间平方根抵消。
 来源：Matomäki–Radziwiłł, Multiplicative functions in short intervals, https://arxiv.org/abs/1501.04585 ，正式版 https://annals.math.princeton.edu/wp-content/uploads/annals-v183-n3-p06-p.pdf 。
+
+## 第04章新增现场照片（2026-10-22）
+
+以下三图直接保存哥本哈根大学数学系官方活动页发布的文件，未裁剪、调色、补画、去除标识或重新编码。活动页未列出这些现场照片的摄影者及开放许可，版权归原权利人；本章在介绍相关人物、讲座与数学思路时作有出处的场景引用，不标为项目原创、CC或公有领域。活动主页另有肖像注明摄影者或CC0，该标注不移用于本处的现场照片。
+
+### maynard_copenhagen_conversation_2024.jpg
+
+- 内容：梅纳德在2024年哈拉尔德·玻尔讲座活动中与人交谈，背景包括大厅壁画、茶歇纸杯与参会者。原页未明确该张摄于报告前还是报告后，正文不作具体断言。
+- 发布方：哥本哈根大学数学系。[现场相册](https://www.math.ku.dk/english/calendar/events/hbl-maynard/photos-from-the-james-maynard-lecture/)，[讲座主题与介绍](https://www.math.ku.dk/english/calendar/events/hbl-maynard/)。
+- [原图](https://www.math.ku.dk/english/calendar/events/hbl-maynard/photos-from-the-james-maynard-lecture/hbl_james_maynard_2024__01_.jpg)，1100×619，103143字节。
+- SHA-256：`dd2aef7ae8db021c959e991ae477b2cd8f7e918b2f0ac96b562dde917743ae7f`。
+
+### guth_copenhagen_kakeya_2025.jpg
+
+- 内容：2025年11月21日，古思在王虹获奥斯特洛夫斯基奖的活动中作研究介绍；投影展示挂谷集合及不同方向的线段，画面保留讲台和黑板。本图不是2024年与梅纳德合作的现场，不把画中投影说成零点密度证明。
+- 发布方：哥本哈根大学数学系。[活动与相册原页](https://www.math.ku.dk/english/calendar/events/ostrowski/)。
+- [原图](https://www.math.ku.dk/english/calendar/events/ostrowski/ostrowski_wang__2_.jpg)，1100×733，54954字节。
+- SHA-256：`4a31e2742a6d916c9fd7834acd5a509c4a178f611cd03ea5fbf77548fce65e16`。
+
+### maynard_copenhagen_blackboard_2024.jpg
+
+- 内容：2024年哈拉尔德·玻尔讲座“Prime numbers and zero densities”。梅纳德指向黑板上的黎曼显式公式，前景为听众和阶梯教室。
+- 发布方：哥本哈根大学数学系。[现场相册](https://www.math.ku.dk/english/calendar/events/hbl-maynard/photos-from-the-james-maynard-lecture/)。
+- [原图](https://www.math.ku.dk/english/calendar/events/hbl-maynard/photos-from-the-james-maynard-lecture/hbl_james_maynard_2024__08_.jpg)，1100×619，71687字节。
+- SHA-256：`749fcdce3e1c83a42ae11305b9e05c9dc7b45b1b14b73f57481967ff7a8cfd25`。
+
+第04章本次改写保留three_zero_fronts示意图；原maynard.jpg肖像与mobius_zero_detector示意图不再插入本章，原文件及说明保留供其他章节和后续修订使用。
