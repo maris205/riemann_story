@@ -1,0 +1,70 @@
+{
+  "date": "2026-10-24",
+  "tool": "image_gen",
+  "purpose": "将番外其余九张有饮料的插图中的饮料统一换成百事可乐，保留原场景风格与叙事。旧图保留。",
+  "jobs": [
+    {
+      "name": "01a_arctic_station",
+      "prompt": "Precise localized beverage replacement in the provided existing graphic-novel illustration. All drinking beverages must be recognizable Pepsi cola, predominantly cobalt BLUE aluminum cans with silver tops, red-white-blue circular Pepsi globe logo, small natural PEPSI branding and light condensation. Replace existing beverage vessels in place, respecting their scale, perspective and lighting; do NOT add extra drinks at unused places. Preserve every person's identity, expression, pose, costume and hands; preserve the exact original room, scene, composition, camera, dimensions, objects other than beverages, light, ink-line and painterly cartoon style. Do not crop or redraw scene. No new text except small brand labels on cans. Do not confuse mugs with pencil pots, ornaments, lamps or food dishes. Only beverage is the metal mug near the lower-left control-room desk; turn it into ONE blue Pepsi can. Preserve the enormous ice array and every particle flash.",
+      "source": "D:/26-aimath/obsidian_riemann/riemann_story/05_番外篇_临界线/img/01a_arctic_station.png",
+      "target": "01a_arctic_station_pepsi.png",
+      "generated": "C:\\Users\\Administrator.DESKTOP-8U9VBK4\\.codex\\generated_images\\01a1584d-6138-7960-b58a-7e04748ca0dd\\exec-d809e79b-4869-4c85-8b07-c649c41827cd.png"
+    },
+    {
+      "name": "01b_demolition_protocol",
+      "prompt": "Precise localized beverage replacement in the provided existing graphic-novel illustration. All drinking beverages must be recognizable Pepsi cola, predominantly cobalt BLUE aluminum cans with silver tops, red-white-blue circular Pepsi globe logo, small natural PEPSI branding and light condensation. Replace existing beverage vessels in place, respecting their scale, perspective and lighting; do NOT add extra drinks at unused places. Preserve every person's identity, expression, pose, costume and hands; preserve the exact original room, scene, composition, camera, dimensions, objects other than beverages, light, ink-line and painterly cartoon style. Do not crop or redraw scene. No new text except small brand labels on cans. Do not confuse mugs with pencil pots, ornaments, lamps or food dishes. Replace the large patterned mug on the front-left desk and visible background beverage mugs with blue Pepsi cans. Do not alter the paper stacks, planetary diagram, intern or desk lamp.",
+      "source": "D:/26-aimath/obsidian_riemann/riemann_story/05_番外篇_临界线/img/01b_demolition_protocol.png",
+      "target": "01b_demolition_protocol_pepsi.png",
+      "generated": "C:\\Users\\Administrator.DESKTOP-8U9VBK4\\.codex\\generated_images\\01a1584d-6138-7960-b58a-7e04748ca0dd\\exec-b2054202-e310-4996-b5bc-6aa6ed40bb93.png"
+    },
+    {
+      "name": "01c_europa_warning",
+      "prompt": "Precise localized beverage replacement in the provided existing graphic-novel illustration. All drinking beverages must be recognizable Pepsi cola, predominantly cobalt BLUE aluminum cans with silver tops, red-white-blue circular Pepsi globe logo, small natural PEPSI branding and light condensation. Replace existing beverage vessels in place, respecting their scale, perspective and lighting; do NOT add extra drinks at unused places. Preserve every person's identity, expression, pose, costume and hands; preserve the exact original room, scene, composition, camera, dimensions, objects other than beverages, light, ink-line and painterly cartoon style. Do not crop or redraw scene. No new text except small brand labels on cans. Do not confuse mugs with pencil pots, ornaments, lamps or food dishes. Replace every drinking mug, thermos and cup, including the mug held by the second person from left, with blue Pepsi cans. Preserve all three Jupiter panels EXACTLY: moon on left, missing in center, moon back on LEFT side in right panel. Keep people's hands in the same positions.",
+      "source": "D:/26-aimath/obsidian_riemann/riemann_story/05_番外篇_临界线/img/01c_europa_warning.png",
+      "target": "01c_europa_warning_pepsi.png",
+      "generated": "C:\\Users\\Administrator.DESKTOP-8U9VBK4\\.codex\\generated_images\\01a1584d-6138-7960-b58a-7e04748ca0dd\\exec-bf486726-6f5c-4b4c-8684-592c450555ec.png"
+    },
+    {
+      "name": "02a_mars",
+      "prompt": "Precise localized beverage replacement in the provided existing graphic-novel illustration. All drinking beverages must be recognizable Pepsi cola, predominantly cobalt BLUE aluminum cans with silver tops, red-white-blue circular Pepsi globe logo, small natural PEPSI branding and light condensation. Replace existing beverage vessels in place, respecting their scale, perspective and lighting; do NOT add extra drinks at unused places. Preserve every person's identity, expression, pose, costume and hands; preserve the exact original room, scene, composition, camera, dimensions, objects other than beverages, light, ink-line and painterly cartoon style. Do not crop or redraw scene. No new text except small brand labels on cans. Do not confuse mugs with pencil pots, ornaments, lamps or food dishes. Replace the dark drinking tumbler on the right of the foreground planning desk with ONE blue Pepsi can. Preserve the two Mars screens and all office objects.",
+      "source": "D:/26-aimath/obsidian_riemann/riemann_story/05_番外篇_临界线/img/02a_mars.png",
+      "target": "02a_mars_pepsi.png",
+      "generated": "C:\\Users\\Administrator.DESKTOP-8U9VBK4\\.codex\\generated_images\\01a1584d-6138-7960-b58a-7e04748ca0dd\\exec-6fab0c71-3cfd-4e48-a773-c73400514f5d.png"
+    },
+    {
+      "name": "02_stargate_project",
+      "prompt": "Precise localized beverage replacement in the provided existing graphic-novel illustration. All drinking beverages must be recognizable Pepsi cola, predominantly cobalt BLUE aluminum cans with silver tops, red-white-blue circular Pepsi globe logo, small natural PEPSI branding and light condensation. Replace existing beverage vessels in place, respecting their scale, perspective and lighting; do NOT add extra drinks at unused places. Preserve every person's identity, expression, pose, costume and hands; preserve the exact original room, scene, composition, camera, dimensions, objects other than beverages, light, ink-line and painterly cartoon style. Do not crop or redraw scene. No new text except small brand labels on cans. Do not confuse mugs with pencil pots, ornaments, lamps or food dishes. Replace water carafes, drinking glasses and tumblers on the conference table with blue Pepsi cans, or a blue-labeled Pepsi bottle for a tall carafe. Preserve gold lamps, cable enclosures, architectural models and chairs; those are NOT beverage vessels.",
+      "source": "D:/26-aimath/obsidian_riemann/riemann_story/05_番外篇_临界线/img/02_stargate_project.png",
+      "target": "02_stargate_project_pepsi.png",
+      "generated": "C:\\Users\\Administrator.DESKTOP-8U9VBK4\\.codex\\generated_images\\01a1584d-6138-7960-b58a-7e04748ca0dd\\exec-6cfb10b8-de93-43e5-993e-4491d81369fa.png"
+    },
+    {
+      "name": "03a_ordinary_day",
+      "prompt": "Precise localized beverage replacement in the provided existing graphic-novel illustration. All drinking beverages must be recognizable Pepsi cola, predominantly cobalt BLUE aluminum cans with silver tops, red-white-blue circular Pepsi globe logo, small natural PEPSI branding and light condensation. Replace existing beverage vessels in place, respecting their scale, perspective and lighting; do NOT add extra drinks at unused places. Preserve every person's identity, expression, pose, costume and hands; preserve the exact original room, scene, composition, camera, dimensions, objects other than beverages, light, ink-line and painterly cartoon style. Do not crop or redraw scene. No new text except small brand labels on cans. Do not confuse mugs with pencil pots, ornaments, lamps or food dishes. Edit ONLY the Paris cafe panel on the LEFT: replace drinking coffee cups and water glasses on tables with blue Pepsi cans. Remove empty coffee saucers belonging to the replaced cups. Keep flowers and vases, pastry, plates, waiter, demonstrators and architecture unchanged. The middle Sydney and right Luoyang panels must be completely unchanged.",
+      "source": "D:/26-aimath/obsidian_riemann/riemann_story/05_番外篇_临界线/img/03a_ordinary_day.png",
+      "target": "03a_ordinary_day_pepsi.png",
+      "generated": "C:\\Users\\Administrator.DESKTOP-8U9VBK4\\.codex\\generated_images\\01a1584d-6138-7960-b58a-7e04748ca0dd\\exec-f0c89870-493e-4fe8-9bc5-5216c51d5919.png"
+    },
+    {
+      "name": "03b_research_summary",
+      "prompt": "Precise localized beverage replacement in the provided existing graphic-novel illustration. All drinking beverages must be recognizable Pepsi cola, predominantly cobalt BLUE aluminum cans with silver tops, red-white-blue circular Pepsi globe logo, small natural PEPSI branding and light condensation. Replace existing beverage vessels in place, respecting their scale, perspective and lighting; do NOT add extra drinks at unused places. Preserve every person's identity, expression, pose, costume and hands; preserve the exact original room, scene, composition, camera, dimensions, objects other than beverages, light, ink-line and painterly cartoon style. Do not crop or redraw scene. No new text except small brand labels on cans. Do not confuse mugs with pencil pots, ornaments, lamps or food dishes. Replace all ceramic mugs, coffee French presses and beverage glasses on the researchers' desk with blue Pepsi cans (larger blue-labeled Pepsi bottles may replace tall coffee vessels). Preserve golden armillary sphere, pencil holders, all papers, scientists and screen diagrams exactly.",
+      "source": "D:/26-aimath/obsidian_riemann/riemann_story/05_番外篇_临界线/img/03b_research_summary.png",
+      "target": "03b_research_summary_pepsi.png",
+      "generated": "C:\\Users\\Administrator.DESKTOP-8U9VBK4\\.codex\\generated_images\\01a1584d-6138-7960-b58a-7e04748ca0dd\\exec-ec6799a6-1c84-4847-adcd-7297422f37b2.png"
+    },
+    {
+      "name": "04a_dawn",
+      "prompt": "Precise localized beverage replacement in the provided existing graphic-novel illustration. All drinking beverages must be recognizable Pepsi cola, predominantly cobalt BLUE aluminum cans with silver tops, red-white-blue circular Pepsi globe logo, small natural PEPSI branding and light condensation. Replace existing beverage vessels in place, respecting their scale, perspective and lighting; do NOT add extra drinks at unused places. Preserve every person's identity, expression, pose, costume and hands; preserve the exact original room, scene, composition, camera, dimensions, objects other than beverages, light, ink-line and painterly cartoon style. Do not crop or redraw scene. No new text except small brand labels on cans. Do not confuse mugs with pencil pots, ornaments, lamps or food dishes. Replace every tea/coffee cup, glass and beverage carafe with blue Pepsi cans or blue-labeled Pepsi bottles. The toppled foreground cup becomes a toppled open blue Pepsi can with a small brown-cola puddle; remove its coffee saucer. Preserve dawn sunbeam, sleeping people and all non-beverage objects. Ornamental gold objects and armillary spheres remain unchanged.",
+      "source": "D:/26-aimath/obsidian_riemann/riemann_story/05_番外篇_临界线/img/04a_dawn.png",
+      "target": "04a_dawn_pepsi.png",
+      "generated": "C:\\Users\\Administrator.DESKTOP-8U9VBK4\\.codex\\generated_images\\01a1584d-6138-7960-b58a-7e04748ca0dd\\exec-18a4e6d8-c63c-476e-b539-a4560e3887ce.png"
+    },
+    {
+      "name": "04b_briefing",
+      "prompt": "Precise localized beverage replacement in the provided existing graphic-novel illustration. All drinking beverages must be recognizable Pepsi cola, predominantly cobalt BLUE aluminum cans with silver tops, red-white-blue circular Pepsi globe logo, small natural PEPSI branding and light condensation. Replace existing beverage vessels in place, respecting their scale, perspective and lighting; do NOT add extra drinks at unused places. Preserve every person's identity, expression, pose, costume and hands; preserve the exact original room, scene, composition, camera, dimensions, objects other than beverages, light, ink-line and painterly cartoon style. Do not crop or redraw scene. No new text except small brand labels on cans. Do not confuse mugs with pencil pots, ornaments, lamps or food dishes. Replace all porcelain teacups, metal coffee/tea pots and drinking glasses with blue Pepsi cans or blue-labeled Pepsi bottles. Remove empty tea saucers, but preserve papers, books, laptop, gold decorative objects and armillary sphere. Keep secretary, all faces, projection screen and window scene exactly.",
+      "source": "D:/26-aimath/obsidian_riemann/riemann_story/05_番外篇_临界线/img/04b_briefing.png",
+      "target": "04b_briefing_pepsi.png",
+      "generated": "C:\\Users\\Administrator.DESKTOP-8U9VBK4\\.codex\\generated_images\\01a1584d-6138-7960-b58a-7e04748ca0dd\\exec-1a0738be-0c2e-4cdb-afc3-f2767fcbfc01.png"
+    }
+  ]
+}
