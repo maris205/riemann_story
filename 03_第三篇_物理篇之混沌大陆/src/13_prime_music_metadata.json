@@ -1,0 +1,13 @@
+{
+  "zero_count": 10000,
+  "gap_count": 9999,
+  "mean_spacing": 0.9999699077245581,
+  "local_density": 7.095078917553774,
+  "source": "https://www-users.cse.umn.edu/~odlyzko/zeta_tables/zeros4",
+  "offset_base": "144176897509546973000",
+  "source_accuracy": "probably within 1e-6; source does not guarantee",
+  "area_numeric": 14.025917888242335,
+  "area_exact": 14.02585092994046,
+  "curves": "GUE and GOE Wigner surmises, not exact infinite-dimensional spacing laws",
+  "bounded_model": "Berry–Keating 2011; positive x,p; contour axes log x, log p"
+}

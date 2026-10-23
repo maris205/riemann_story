@@ -1,0 +1,51 @@
+[
+  {
+    "file": "Wang_Zahl_2025.pdf",
+    "url": "https://arxiv.org/pdf/2502.17655",
+    "pages": 127,
+    "sha256": "631e8b2118e3d03ded2d5fe79f9acdf74353877d143e9887a3c31278cd13ed01",
+    "bytes": 4020917
+  },
+  {
+    "file": "Sogge_2026_Work_of_Wang.pdf",
+    "url": "https://arxiv.org/pdf/2609.40161",
+    "pages": 15,
+    "sha256": "900e860bae967d789e29d9474a88eb76dbb81b8616bbbb64ab9caa5c4338ac86",
+    "bytes": 1519938
+  },
+  {
+    "file": "Deng_Hani_Ma_2024.pdf",
+    "url": "https://arxiv.org/pdf/2408.07818",
+    "pages": 192,
+    "sha256": "61cc39d44eabf2f119880a9f1bd0cbb9409382ac3f67beff4c952f69290a30ed",
+    "bytes": 7682019
+  },
+  {
+    "file": "Deng_Hani_Ma_2025.pdf",
+    "url": "https://arxiv.org/pdf/2503.01800",
+    "pages": 48,
+    "sha256": "43eb2ba85d1c5494cff2f65fef56cff176e59a2d2f68e11a34deb2f7cea0d74f",
+    "bytes": 1127581
+  },
+  {
+    "file": "Bodineau_etal_2026.pdf",
+    "url": "https://arxiv.org/pdf/2602.04407",
+    "pages": 39,
+    "sha256": "3c6e2aa83741c5ca2369a9c8c85394eb74f602c20ed8380c49ba8f940a6f2578",
+    "bytes": 1108992
+  },
+  {
+    "file": "Hong_Wang_citation.pdf",
+    "url": "https://www.mathunion.org/fileadmin/documents/2026-07/Hong_Wang_Citations.pdf",
+    "pages": 1,
+    "sha256": "3735f202023e5fd5047f9f76c0a4c0b422128265dc89c7e4555688dfac49ff23",
+    "bytes": 129102
+  },
+  {
+    "file": "Yu_Deng_citation.pdf",
+    "url": "https://www.mathunion.org/fileadmin/documents/2026-07/Yu_Deng_Citations.pdf",
+    "pages": 1,
+    "sha256": "993a803e2e0dd0309cddd15df5d200d7e20e560e3523caf1b22e836efa7f6e46",
+    "bytes": 130800
+  }
+]

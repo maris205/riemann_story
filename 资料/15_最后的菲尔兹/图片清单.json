@@ -1,0 +1,56 @@
+[
+  {
+    "file": "15_wang_newspaper_front.png",
+    "width": 1080,
+    "height": 1528,
+    "source_page": "https://www.xinhuanet.com/zgjx/2019v/20260730/fff32967ac5440c9ba990256f675ac7f/c.html",
+    "original": "https://www.xinhuanet.com/zgjx/2019v/20260730/fff32967ac5440c9ba990256f675ac7f/20260730fff32967ac5440c9ba990256f675ac7f_20260730ebe41e7e17694b18996d290f4ac5d371.png",
+    "notes": "广西日报版面，主创团队经中国记协网公开；未找到开放许可证。原件直接复制，无裁剪或增强。",
+    "sha256": "0dbaac53af55d5db08d99c059eee213e35f9d4a0e30b03877039dd315e31e2ba"
+  },
+  {
+    "file": "15_fields_ceremony.jpg",
+    "width": 1013,
+    "height": 653,
+    "source_page": "https://www.news.cn/photo/20260723/b98a44dec78e4ba3a0fc6b0a7486cee3/c.html",
+    "original": "https://www.news.cn/photo/20260723/b98a44dec78e4ba3a0fc6b0a7486cee3/c78HzvnsTk249o3e.jpg",
+    "notes": "新华社记者李睿摄；保留原图与标识，未见开放许可证。",
+    "sha256": "cf17e3bdcb719183fc026c40f3c4d49a06a2a81446d4b9ea43366e49d9bd212f"
+  },
+  {
+    "file": "15_two_conjectures_author.jpg",
+    "width": 1440,
+    "height": 1080,
+    "source_page": "作者在本次对话提供",
+    "original": "作者素材/作者实拍_两个猜想_20260803.jpg",
+    "notes": "用户明确为本人拍摄。按本次授权用于该书稿；未另行添加公共开放许可证。",
+    "sha256": "158a43a6c41f395928c34299af9d99b428a00b9b52444d8dc50fcd34b3208958"
+  },
+  {
+    "file": "15_wang_red_coat.jpg",
+    "width": 1920,
+    "height": 1080,
+    "source_page": "https://www.simonsfoundation.org/2026/07/23/2026-fields-medals-awarded-to-four-of-worlds-top-mathematicians/",
+    "original": "https://www.youtube.com/watch?v=mTPyjR3qmTA&t=142s",
+    "notes": "Simons Foundation原片02:22，1920×1080视频帧；未裁剪、补画、去字幕。拍摄日期未详；不能标为7月颁奖当日。未见开放许可证。",
+    "sha256": "042a67f73ab5138abd87abbfdd2b9faa0f37382b27289a6196aa66e83a823127"
+  },
+  {
+    "file": "15_deng_anime_desk.jpg",
+    "width": 1920,
+    "height": 1080,
+    "source_page": "https://www.simonsfoundation.org/2026/07/23/2026-fields-medals-awarded-to-four-of-worlds-top-mathematicians/",
+    "original": "https://www.youtube.com/watch?v=ERemSkQtoDk&t=102s",
+    "notes": "Simons Foundation原片01:42，1920×1080视频帧；保留字幕与原有标识。未见开放许可证。",
+    "sha256": "00c23d2a14849716fa2ee5ffac474c5aa4056f6c1edd6e6c9e0c44a953487da9"
+  },
+  {
+    "file": "15_guth_window.png",
+    "width": 645,
+    "height": 697,
+    "source_page": "https://m.bjnews.com.cn/detail/1785241827169153.html",
+    "original": "https://media.bjnews.com.cn/fz/html/AttachPubDev/2026/7/wangyanhu20267282030263126482.png",
+    "notes": "新京报原报道图注标潇湘晨报。个人摄影者、具体拍摄日未详。未见开放许可证。",
+    "sha256": "8601d3216c41fd23b64e12eb17b600794841204280149dfe9760a56da7750c64"
+  }
+]

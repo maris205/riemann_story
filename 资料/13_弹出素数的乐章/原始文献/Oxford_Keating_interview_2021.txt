@@ -1,0 +1,1328 @@
+
+--- PDF PAGE 1 ---
+Oxford Mathematics and 
+the coronavirus 
+Ideas for a complex world
+Equality, diversity and inclusion 
+Can maths help us to win 
+at Fantasy Football? 
+The Oxford Mathematics Annual Newsletter 2021
+Sir Roger Penrose  
+wins Nobel Prize
+
+
+--- PDF PAGE 2 ---
+Ideas for a  
+complex world 
+7 
+ 
+Oxford Mathematics 
+in the time of the 
+coronavirus 
+12
+Equality, diversity  
+and inclusion in  
+Oxford Mathematics 
+20 
+Can maths help us to 
+win at Fantasy Football? 
+23 
+Contents 
+Sir Roger Penrose wins  
+Nobel Prize
+5 
+Head of Department’s letter	
+3
+Interview with Jon Keating	
+9
+Ulrike Tillmann, Fernando Alday, Bryan Birch 	
+11
+Appointments and achievements	
+15
+The past year in Oxford Mathematics	
+17
+Obituary: Peter M. Neumann OBE	
+18
+A world history of mathematics	
+21 
+What’s on in Oxford Mathematics?
+400 years of the Sedleian Professors	
+22	
+New books by Oxford Mathematicians	
+24
+Helping future students
+Undergraduate lectures for the world	
+25
+Social media
+#WhatsonYourMind 	
+Public Lectures	
+26
+Our Graduate Student Campaign	
+A final thought	
+27
+2	
+Oxford Mathematics Annual Newsletter 2021 
+ 
+
+
+--- PDF PAGE 3 ---
+I am writing this in early 2021, and like everyone 
+else I am hoping this will be a better year than 
+2020. The coronavirus pandemic has been an 
+enormous challenge for all of us. With the benefit of 
+hindsight, there are definitely some things I would 
+have done differently over the past 10 months. 
+However, overall I am impressed and proud at how 
+we have come through this period, adapting to 
+the circumstances and managing to maintain our 
+teaching, research and departmental operations, 
+while at the same time looking out for everyone’s 
+health, both physical and mental.
+At the beginning, we were lucky with the timing, 
+managing to get to the end of Hilary Term 2020 just 
+as the first infections affected a handful of students 
+and staff, thankfully not seriously. We had already 
+started to practice home working and had bought 
+additional staff laptops, so when the first national 
+lockdown came we moved to working from home 
+surprisingly easily. However, staff with school-age 
+children faced the substantial challenges of home-
+schooling, and staff and students living alone faced 
+the challenges of isolation and loneliness, especially 
+for those new to Oxford or without local support 
+networks.
+In Trinity Term we moved to online teaching, 
+tutorials and revision classes. The third year (Part 
+B) and fourth year (Part C) exams also went online 
+after being extensively revised; we were very 
+concerned about how that would work in practice, 
+but our students at home coped amazingly well 
+with the challenges of using their mobile phones to 
+photograph and upload their examination scripts, 
+and surprisingly few had major internet problems. 
+The first year exams (Prelims) were cancelled, and 
+the second year exams (Part A) were delayed to 
+the start of Michaelmas Term; I don’t think the 
+University had a good alternative to that but it was 
+tough on the second-year students having their 
+exams hanging over them for the summer, and then 
+going straight from exams into the start of their 
+Michaelmas Term lectures.
+Over the summer we slowly started to re-open 
+the Andrew Wiles Building, with the priority 
+being the DPhil students, many of whom live in 
+accommodation which, due to Oxford’s high rents, 
+are not spacious and do not provide good working 
+conditions. With good ventilation, good adherence 
+to social distancing and the use of face coverings we 
+have successfully (so far!) avoided transmission of 
+the virus within our building since the beginning 
+of April. A huge amount of work went on over the 
+summer investigating and documenting the best 
+technological approaches for remote teaching, 
+both pre-recorded lectures and tutorial and class 
+teaching.
+Even more effort then went into recording all of 
+the lectures for Michaelmas. By the end of the 
+Head of  
+Department’s letter
+Mike Giles
+CONTENTS
+3	
+Oxford Mathematics Annual Newsletter 2021 
+Head of Department’s letter
+
+
+--- PDF PAGE 4 ---
+summer, when normally everyone would feel refreshed for the 
+new academic year, instead there was a lot of weariness visible in 
+the many online Microsoft Teams meetings we had become far 
+too used to.
+Michaelmas Term was tiring for everyone, added to by the 
+unfortunate timing of an Athena Swan submission, (a framework 
+which is used across the globe to support and transform gender 
+equality within higher education and research) and the mammoth 
+government REF exercise to evaluate the quality of our research. 
+There was a spike of student infections at the start of term, mainly 
+among first- and second-year undergraduates who never entered 
+our building, but with the help of the University’s own testing 
+service that quickly subsided and we continued the choice of 
+face–face or online classes for Part B and C students throughout 
+the term. Of course the undergraduate admissions process moved 
+entirely online, but through careful preparation by both us and the 
+applicants that went ahead surprisingly well.
+Over Christmas and the New Year most people had a good two-
+week rest; for too many that was the first proper break since April. 
+Our Christmas present was the arrival of first the Pfizer vaccine 
+and then our own Oxford–AstraZeneca vaccine. This gives us 
+considerable optimism as we look towards Summer. However, the 
+new coronavirus variant with its increased transmissability has led 
+to a new national lockdown with all teaching online until the end 
+of Hilary Term.
+At present the pandemic is dominating our lives, but by the time 
+of the next Newsletter I hope to be in a position to reflect on Black 
+Lives Matter and report on some of the actions being taken in 
+response by the University and the Department; one first step 
+discussed later in the Newsletter is the welcome appointment of 
+Geoffrey Mboya as an MPLS Equality, Diversity and Inclusion 
+Fellow for the Mathematical, Physical and Life Sciences Division 
+here in Oxford. Also, elsewhere in this Newsletter we talk about 
+the COVID-19 research of a number of colleagues, and the 
+wonderful news of the award of the Nobel Prize in Physics to  
+Sir Roger Penrose.
+To finish, I hope all of you and your families have kept well 
+during these difficult times, and that we will be able to meet again 
+in person in the not-too-distant future.
+“the undergraduate 
+admissions process 
+moved entirely 
+online, but through 
+careful preparation 
+by both us and the 
+applicants that  
+went ahead 
+surprisingly well.”
+CONTENTS
+4	
+Oxford Mathematics Annual Newsletter 2021 
+Head of Department’s letter
+
+
+--- PDF PAGE 5 ---
+Roger Penrose moved to Oxford to take up the Rouse Ball Chair 
+of Mathematics in 1973, together with a Professorial Fellowship 
+at Wadham College. Eight years earlier he had published a 
+remarkable three-page paper with the title ‘Gravitational collapse 
+and space–time singularities’. It had not passed unnoticed. Based 
+on this, he was elected to a Royal Society Fellowship in 1972 and 
+has received many prizes for his collaborations with Stephen 
+Hawking. Finally, more than fifty years after publication, the paper 
+was cited by the Nobel Prize Committee in awarding Roger half 
+of the 2020 Prize in Physics for ‘The discovery that black hole 
+formation is a robust prediction of the general theory of relativity’.
+A remarkable paper and a remarkable story. The long gap and 
+the fact that black holes are not mentioned explicitly in the paper 
+may be puzzling, but the explanation lies in the context of his 
+work and in the fact that the Physics Prize cannot be awarded 
+for a theoretical discovery, however brilliant, until it has been 
+confirmed by observation or experiment. 
+Roger’s paper opens with a reference to the discovery of 
+‘quasistellar radio sources’ (quasars). It had been suggested in 
+1964 that the source of a quasar’s enormous energy might be 
+matter falling into a massive black hole in the centre of a galaxy. 
+But it was still a highly controversial idea that black holes might 
+actually exist. Moreover it was not even clear in 1964 that general 
+relativity would allow black holes to form under reasonable 
+physical assumptions. There were models of gravitational collapse 
+that produced black holes, but only from highly symmetric initial 
+conditions and with highly unrealistic assumptions about the 
+gravitating matter. It was widely thought that the collapse of a real 
+astronomical body would require impossible compression. 
+Sir Roger Penrose wins  
+Nobel Prize 
+Nick Woodhouse
+Former Head of Department and fellow mathematical physicist
+Roger Penrose was 
+presented with his Nobel 
+Medal at the Swedish 
+Ambassador’s residence in 
+London in December.
+“He was elected to 
+a Royal Society 
+Fellowship in 1972 
+and has received 
+many prizes for his 
+collaborations with 
+Stephen Hawking”
+CONTENTS
+5	
+Oxford Mathematics Annual Newsletter 2021 
+Sir Roger Penrose wins Nobel Prize 
+
+
+--- PDF PAGE 6 ---
+It was this theoretical problem that Roger’s paper’s solved. The 
+remarkable observational work of his co-laureates, Reinhard 
+Genzel and Andrea Ghez, has now demonstrated that our own 
+galaxy does indeed have a black hole at its centre with a mass that 
+is some four million times that of the Sun, thus opening the door 
+for the award of the Nobel Prize for Roger’s theoretical discovery 
+and for their observational verification. 
+Roger is often described as a ‘polymath’, with his scientific and 
+mathematical contributions spread over many fields. That is 
+certainly true, but the ‘polymath’ label does not do justice to the 
+coherence of his scientific outlook and to his extraordinary facility 
+for seeing connections between seemingly diverse fields. His 1965 
+paper is a remarkable exploitation of one of the key ideas that runs 
+through many of his contributions to geometry and theoretical 
+physics – namely the central role of null geodesics. 
+When Roger arrived in Oxford, he was exploring through his 
+‘twistor theory’ a related circle of connections between conformal 
+geometry, photon trajectories, and the way in which complex 
+numbers enter relativity theory and quantum mechanics. The 
+role of complex numbers in quantum mechanics was familiar, but 
+Roger was struck by the fact that they also enter relativity through 
+the natural identification of the celestial sphere with the Riemann 
+sphere – natural, in the sense that it is independent of the motion 
+of the observer. Twistor theory was motivated originally by the 
+need to reconcile general relativity with quantum field theory, 
+but it soon became apparent that the ideas had much wider 
+application, notably through his frequent discussions in Oxford 
+about four-dimensional geometry with Michael Atiyah and  
+Nigel Hitchin. 
+Roger quickly built up a large and very lively group of graduate 
+students, postdocs, and visitors. Every Friday, the group gathered 
+in his office for a ‘lunchtime’ meeting that often lasted into early 
+evening. The meetings started with a question-and-answer 
+session, Roger usually providing the answers with impromptu 
+lectures on a huge range of topics. One in particular stands out 
+in my memory, on Church’s λ-calculus. I did not know until 
+later that Roger had played a key part in the importation of the 
+λ-calculus into the design of programming languages, when he 
+worked for Christopher Strachey in the 1950s. 
+Several members of the group went on to achieve great distinction 
+in areas that at first sight have little connection with the central 
+motivation of twistor theory, but where a little digging shows 
+the extraordinary breadth of Roger’s vision at work. It was a 
+wonderful and inspiring era. Today Roger is still working on these 
+ideas, not least in the context of his ‘cyclic cosmology’, where 
+conformal geometry is again centre stage.
+Roger is often 
+described as a 
+‘polymath’, with 
+his scientific and 
+mathematical 
+contributions  
+spread over  
+many fields.
+CONTENTS
+6	
+Oxford Mathematics Annual Newsletter 2021 
+Sir Roger Penrose wins Nobel Prize 
+
+
+--- PDF PAGE 7 ---
+Mathematics is entering people’s lives in new ways, 
+accelerated by the pandemic, whether in the political 
+rhetoric of ‘following the science’, in the A-level results 
+algorithm to predict grades, or in the mathematical 
+models to decide lockdown restrictions. 
+Thinking back to the start of last year, it would be hard to 
+imagine the role that mathematics has come to play in our lives. 
+As a society, we are developing a vast quantitative toolbox: 
+mathematical and statistical tools, which use data to build 
+models and algorithms. These tools are used to tackle the 
+complex problems that society is facing. 
+On a smaller scale are us, as individual human beings. We 
+encounter complex situations in our day-to-day lives, and we 
+have ideas for how to approach them. But there’s a disconnect, 
+where quantitative tools seem distant from our everyday lives.
+Contrary to what we might expect, there are many connections 
+between the ideas from our day-to-day lives and those in the 
+quantitative toolbox. Mathematics helps us to abstract human 
+ideas into quantitative tools.
+Ideas for a complex world 
+Anna Seigal
+Hooke Research Fellow
+CONTENTS
+7	
+Oxford Mathematics Annual Newsletter 2021 
+Ideas for a complex world 
+
+
+--- PDF PAGE 8 ---
+Here’s an example. When we think about someone we know, 
+information about that person comes to mind, and we can use this 
+information to describe personality differences between people. 
+We can visualise this by imagining giving people scores across a 
+few personality traits and plotting them on these axes.
+Some personality traits are more useful than others for identifying 
+differences. In the first plot, the six people are all quite nice and 
+friendly and the points are close together. In the second plot, the 
+people are more spread out but lie along a line. In the third plot, 
+the people are spread out in all directions. The personality traits 
+of the third plot are a good summary of the differences among the 
+six people.
+The axes that spread people out best are key measurements. We 
+translate complex data into key measurements all the time, even 
+if we don’t think of plotting data points. For a small number of 
+people we can think up specific key measurements, but this is 
+more difficult if we want to compare thousands of people, instead 
+of just six. At these larger scales we can use a quantitative tool.
+One popular tool to find key measurements is ‘principal 
+component analysis’. For data recorded in a matrix, we use linear 
+algebra (the theory of matrices) to find the key measurements. 
+This tool could be used, for example, to compare genetic 
+information of hospital patients in order to understand a new 
+disease treatment, the schoolwork of students to predict their 
+exam results, or the habits of social media users to predict how 
+they may respond to an advertisement. 
+Not all data is well described by a two-dimensional matrix. In 
+my research, I’m interested in multi-dimensional generalisations 
+of matrices, known as tensors, and I use multi-linear algebra 
+(the theory of tensors) to develop tools for tensor data. This 
+extends the scope of our toolbox to applications where we seek 
+to understand the interplay between multiple different types of 
+measurement.
+Find out more 
+Anna Seigal’s Oxford Mathematics Public Lecture,  
+Ideas for a Complex World, is available on YouTube.
+Watch lecture
+funny
+outgoing
+serious
+shy
+outgoing
+rational
+emotional
+shy
+friendly
+nice
+mathematics
+quantitative tool
+applications
+idea
+CONTENTS
+8	
+Oxford Mathematics Annual Newsletter 2021 
+Ideas for a complex world 
+
+
+--- PDF PAGE 9 ---
+Since September 2019 Jon Keating FRS has been 
+Oxford’s Sedleian Professor of Natural Philosophy. 
+From November 2019 he has also been President of 
+the London Mathematical Society. Here he tells us 
+about his career and these two positions.
+Could you please tell us about your mathematical activities/
+career before coming to Oxford?
+I read Physics as an undergraduate in Oxford and then did a PhD 
+in Theoretical Physics in Bristol with Sir Michael Berry. I was a 
+Lecturer in Applied Mathematics at the University of Manchester, 
+before returning to (simultaneously) a Readership in Applied 
+Mathematics at Bristol and a Research Fellowship funded by 
+Hewlett-Packard; I spent half of my time in the University and the 
+other half on working at Hewlett-Packard’s Research Labs. I went 
+on to became Professor of Mathematical Physics and, later, Henry 
+Overton Wills Professor of Mathematics in Bristol. In addition, in 
+Bristol I served spells as Head of Mathematics and then as Dean of 
+the Science Faculty. For the past five years, I was also Chair of the 
+Heilbronn Institute for Mathematical Research, a collaboration 
+between the UK academic mathematics community and GCHQ, 
+focused on developing new applications of discrete mathematics. 
+How do you view your position as Sedleian Professor?
+Natural Philosophy describes perfectly my mathematical interests, 
+which sit between Applied Mathematics, Mathematical Physics, 
+and Pure Mathematics. It is, of course, daunting to be following 
+on from such distinguished previous holders of the Chair. It is also 
+exciting to have the opportunity to develop new applications of 
+the mathematics on which I work. 
+Interview with Jon Keating 
+“This is a much 
+larger department. 
+The breadth of 
+mathematical 
+interests and 
+expertise is 
+remarkable, and 
+the intellectual 
+environment is 
+exceptional.”
+CONTENTS
+9	
+Oxford Mathematics Annual Newsletter 2021 
+Interview with Jon Keating 
+
+
+--- PDF PAGE 10 ---
+In what ways is Oxford different from your previous  
+places of work?
+This is a much larger department. The breadth of mathematical 
+interests and expertise is remarkable, and the intellectual 
+environment is exceptional. There is a considerably wider range 
+of courses, and the overall quality of the teaching provision is 
+outstanding. There are more graduate students and early-career 
+researchers here, and they add significantly to the environment. 
+Do you have any particular ambitions in this role?
+My research interests over the past few years have focused on 
+properties of random matrices and on their applications, which 
+range from data science, machine learning, and mathematical 
+finance, to neuroscience, numerical analysis, quantum physics, 
+and number theory. My ambition is to establish a research group 
+in this area in Oxford. I am also developing a new undergraduate 
+course in Random Matrix Theory, which began this year. 
+ 
+What are your main responsibilities as LMS President?
+To ensure that the Society emerges from the current pandemic 
+in as healthy a shape as possible, and that during this highly 
+challenging period we provide every support we can to the 
+mathematics community. We are focusing in particular on 
+helping early-career researchers, mathematicians with caring 
+responsibilities, and sharing best practice in online teaching. 
+We are also developing a new scheme to support aspiring 
+mathematicians from disadvantaged backgrounds, with generous 
+backing from one of our members, Dr Tony Hill, who is also an 
+Oxford Mathematics alumnus. I manage to combine the two roles 
+by making full use of my excellent administrative colleagues in 
+Oxford and at the LMS! 
+Which mathematicians have particularly influenced you?
+Michael Berry, Philip Drazin, Freeman Dyson, Peter Sarnak (who 
+once posed a challenge that became the focus of my research 
+for several years), and Uzy Smilansky (who, when I was an 
+undergraduate, spent a sabbatical year in Oxford, during which 
+he gave a wonderful lecture on chaos that I found hugely inspiring 
+and which determined my choice of PhD advisor and subject).
+How do you see your subject developing over the next  
+few years?
+Random Matrix Theory started as an applications-driven area 
+of research. In the past couple of decades the focus has shifted 
+to developing the fundamental mathematical foundations of the 
+area. I now see the pendulum swinging back to applications. With 
+the much deeper understanding we have of the subject, and with 
+many new mathematical techniques at our disposal, I believe 
+the possibilities relating to new applications are considerable. 
+For example, in one of my recent papers we use supersymmetric 
+matrix integrals to address a problem in machine learning. 
+Jon Keating with LMS 
+prizewinners, including  
+Oxford’s Ben Green (back left)  
+and Heather Harrington  
+(next to Jon Keating)
+CONTENTS
+10	 Oxford Mathematics Annual Newsletter 2021 
+Interview with Jon Keating 
+
+
+--- PDF PAGE 11 ---
+Ulrike Tillmann:  
+LMS President Designate
+Ulrike Tillmann FRS, has been appointed 
+President Designate of the London Mathematical 
+Society, in succession to Jon Keating. She takes 
+up her appointment in November 2021. Ulrike 
+has been at Oxford since 1992 and her research 
+interests lie in algebraic topology – in particular, 
+her work on the moduli spaces of Riemann 
+surfaces and manifolds of higher dimensions has 
+been inspired by problems in quantum physics and 
+string theory, and more recently has broadened 
+into areas of data science. In September 2021 
+Ulrike will take up the position of Director of 
+the Isaac Newton Institute for Mathematical 
+Sciences, the UK’s national research institute for 
+mathematics, while also continuing to work part-
+time in Oxford.
+Fernando Alday:  
+Rouse Ball Professor
+Luis Fernando Alday has been appointed 
+Oxford’s Rouse Ball Professor of Mathematics. 
+Born in Argentina and receiving his doctorate 
+in Italy, Fernando was appointed a Professor of 
+Mathematical Physics and Tutor in Mathematics 
+at Hertford College in 2010. His research 
+interests lie mainly in developing mathematical 
+tools for understanding fundamental questions 
+in quantum field theory and quantum gravity. 
+Unlike Cambridge, where the Rouse Ball Chair 
+is in pure mathematics, the Oxford Chair is in 
+applied mathematics. Beginning in 1928 when 
+Oxford’s first Rouse Ball professor, E. A. Milne, 
+was appointed, other holders of the Chair have 
+been Charles Coulson, Roger Penrose and, more 
+recently, Philip Candelas. 
+Bryan Birch:  
+Royal Society Medal 
+Bryan Birch FRS, Emeritus Professor, has been 
+awarded the Royal Society’s prestigious Sylvester 
+Medal for 2020, for his work on the theory of 
+elliptic curves, and in particular on the Birch 
+and Swinnerton-Dyer Conjecture, one of the 
+Clay Mathematics Institute’s ‘Millennium Prize 
+Problems’. The Medal is named after J. J. Sylvester, 
+Oxford’s Savilian Professor of Geometry from  
+1883 to 1897.
+CONTENTS
+11	 Oxford Mathematics Annual Newsletter 2021 
+ 
+
+
+--- PDF PAGE 12 ---
+You’re not kidding. The world has lived a mathematical model 
+for over a year. We’ve learnt the new language of R-number, 
+exponential growth, moving averages, and much more. But 
+behind the shock is a more familiar story: the story of a diverse 
+collection of individuals responding to a crisis, individuals with 
+expertise across a range of areas, anxious to put their skills to use 
+– only in this case these individuals are mathematicians, Oxford 
+Mathematicians to be precise.
+But back to Robin. As early as January, based on data from Wuhan 
+in China, Robin was estimating that the risk of a serious spread of 
+the disease was as high as 37%. He concluded, before the phrase 
+‘test and trace’ was common parlance, that ‘rigorous surveillance 
+was essential’. His research paper and its prophetic words won the 
+Journal of Clinical Medicine’s Outstanding Research Award 2020.
+Through his modelling and advice, Robin has continued to play an 
+active role during the pandemic. In the summer he co-organised 
+a major conference at Cambridge’s Isaac Newton Institute on 
+government interventions, and in May he gave a very successful 
+Oxford Mathematics Public Lecture to explain the modeller’s 
+language to a non-specialist audience
+Clearly the scientific community had been galvanised by the 
+pandemic. This was laudable, but it brought its own issues: one 
+pandemic led to another in the shape of thousands of research 
+papers by academics from a multitude of disciplines. How to sort 
+the wheat from the chaff? The usual model of peer review taking 
+months proved itself unfit for purpose.
+Oxford Mathematics in the 
+time of the coronavirus
+In the innocent days of July 2019, Oxford Mathematician 
+Robin Thompson co-authored a paper on the spread of 
+infectious diseases, and how mathematics had a crucial role 
+to play. Writing on the Oxford Mathematics website, he 
+concluded that mathematical models will continue to play 
+important roles for forecasting and guiding interventions 
+during epidemics. 
+Dyrol Lumbard 
+External Relations Manager
+Robin Thompson’s Public 
+Lecture explains the 
+mathematical modelling  
+of infectious diseases.
+Watch lecture
+CONTENTS
+12	 Oxford Mathematics Annual Newsletter 2021 
+Oxford Mathematics in the time of the Coronavirus
+
+
+--- PDF PAGE 13 ---
+Renaud also gave an Oxford Mathematics Public Lecture on the 
+subject in June 2020. 
+With the health crisis came the economic crisis, and from the 
+start Oxford Mathematicians were anticipating and modelling 
+the impact. As early as April, Doyne Farmer and his colleagues 
+were identifying the impact of the pandemic on different sectors 
+and workers in the USA, and were forecasting the new normal 
+of a two-tier working world of largely protected home workers 
+and more severely affected manufacturing and consumer-facing 
+companies and employees. In May, Doyne and his team wrote 
+a paper to advise on the best way to reopen an economy while 
+keeping the R-number under control.
+The range of our research has been huge. Helen Byrne, Heather 
+Harrington and Anna Seigal are part of COMBAT, a team of 
+134 researchers across Oxford who are trying to understand 
+the variability between patients in their immune responses and 
+outcomes from acute COVID-19 infection. They have looked 
+Step forward Oxford Mathematicians Alain Goriely and Philip 
+Maini. In the UK, a group of modellers attached to the Royal 
+Society decided to address the COVID-19 crisis by creating a 
+new national initiative. Headed by Mike Cates in Cambridge, 
+‘Rapid Assistance in Modelling the Pandemic’ (RAMP) was 
+born. In Oxford, Alain and Philip were asked by RAMP to set 
+up a new mechanism to review research speedily and, when it 
+proved valuable, to report to the various scientific committees and 
+departments advising the government. ‘The Rapid Review Group’ 
+was divided into six different subject panels and was staffed by 
+an all-star team of 120 dedicated expert volunteers. It assessed 
+critical scientific work within 24–48 hours, bypassing the typical 
+months-long process offered by scientific journals. The Group is 
+still very active, and its efforts are now funded by UK Research 
+and Innovation, the Government’s research funding body.
+As the pandemic spread, understanding people’s movements 
+and behaviour became critical to predicting that spread, and 
+for devising ways to control it. Smartphone data was a new tool 
+in the armoury. Oxford Mathematician Renaud Lambiotte and 
+his colleagues identified call records as the best data source for 
+capturing ‘live’ information about people’s movements. Each call 
+record contains information about the time and the cell tower to 
+which the phone was connected when the interaction took place. 
+Such information can be used to infer, in real time, statistical 
+aspects of population densities and trajectories. However, Renaud 
+and the team went further, by calling for a more coordinated 
+approach to this data in the light of the uncoordinated use of 
+it across the world, and they also stressed the need for agreed 
+privacy standards in the light of increased intrusion into 
+individual lives. 
+Above:
+Alain Goriely and Philip Maini 
+Right:
+Renaud Lambiotte’s Oxford 
+Mathematics Public Lecture, 
+Smartphones v COVID-19. 
+Watch lecture
+CONTENTS
+13	 Oxford Mathematics Annual Newsletter 2021 
+Oxford Mathematics in the time of the Coronavirus
+
+
+--- PDF PAGE 14 ---
+Goriely has worked with a colleague from Stanford University, 
+advising the Newfoundland Government on whether to lift its 
+travel ban – research that ended up in court as the Government 
+successfully fought a challenge to the ban in front of the Province’s 
+Supreme Court. Alain has since been called as an expert witness 
+in yet another challenge to the same travel ban – and remarkably, 
+thanks to their isolation, public policy and the travel ban, the 
+epidemic is still under control in Newfoundland.
+Mathematics has never been a narrow discipline. But in this crisis 
+it has reached beyond science, to economics, and even to the law 
+… and ultimately into our everyday lives.
+at multi-modal molecular and immunological data sets from a 
+range of patients with COVID-19, and are using state-of-the-art 
+mathematical and computational techniques from topological 
+data analysis, tensors and machine learning. Their ambition is  
+to enable targeted interventions at an individual level. 
+Meanwhile Sam Palmer has looked at the role of T-cells in the 
+immune system as a key factor in explaining why the elderly are 
+more likely to catch, and suffer from, COVID-19. In turn, Alain 
+Above:
+Maps of Newfoundland  
+showing travel and infection 
+rates (Alain Goriely).
+Left:
+Hospitalisations by age  
+for Coronavirus patients  
+(Sam Palmer).
+CONTENTS
+14	 Oxford Mathematics Annual Newsletter 2021 
+Oxford Mathematics in the time of the Coronavirus
+
+
+--- PDF PAGE 15 ---
+We welcome the following new Faculty members. 
+Paul Balister (Memphis, USA)
+Associate Professor of Combinatorics, and Tutorial Fellow  
+of Wadham College
+— 
+Research interests:  
+Probabilistic combinatorics and its applications to other 
+areas of mathematics; random geometric graphs;  
+extremal graph theory.
+Dawid Kielak (Bielefeld, Germany)
+Associate Professor of Pure Mathematics and its Interfaces, 
+and Tutorial Fellow in Pure Mathematics at Hertford College
+—
+Research interests:  
+The intersection of geometric group theory with  
+ring theory.
+Justin Sirignano (Illinois, USA)
+Associate Professor of Mathematics
+—
+Research interests:  
+Deep learning models for large financial datasets; 
+asymptotic analysis of deep learning models, and 
+convergence analysis of statistical learning algorithms. 
+Konstantin Ardakov has been 
+awarded the 2020 Adams Prize of 
+the University of Cambridge for his 
+work in algebra. 
+Martin Bridson FRS, James Maynard 
+and Endre Süli have all been elected 
+to The Academia Europaea.
+Helen Byrne and Benjamin 
+Walker have received Society of 
+Mathematical Biology awards 
+for 2021. Helen has become a 
+Fellow of the Society, and Ben has 
+been awarded the H. D. Landahl 
+Mathematical Biophysics Award. 
+José Carrillo has been elected a 
+member of the board of the European 
+Society for Mathematical and 
+Theoretical Biology.
+Gui-Qiang G. Chen has been elected  
+a Fellow of the European Academy  
+of Sciences. 
+Alison Etheridge FRS, OBE and Nick 
+Trefethen FRS are invited speakers at 
+the European Mathematical Society’s 
+meeting, 8ECM, in Portorož, Slovenia, 
+in June 2021; Robin Wilson is giving 
+one of the invited Public Lectures. 
+Cristiana De Filippis has been awarded 
+the Gioacchino Iapichino Prize for 
+2020 by the Italian National Academy.
+Appointments. . . 
+. . .and achievements
+This has been another excellent year for awards and achievements, 
+with a diverse range of prizes and recipients.
+CONTENTS
+15	 Oxford Mathematics Annual Newsletter 2021 
+Appointments and achievements
+
+
+--- PDF PAGE 16 ---
+Alain Goriely and Derek Moulton 
+(pictured) have been awarded the 
+2019 PNAS (Proceedings of the 
+National Academy of Sciences of 
+the USA) Cozzarelli Prize in the 
+Engineering and Applied Sciences 
+category. 
+Heather Harrington has been awarded 
+one of the Philip Leverhulme Prizes 
+for 2020 for ‘outstanding researchers 
+whose work has already attracted 
+international recognition’.
+Ehud Hrushovski has been elected a 
+Fellow of the Royal Society.
+Andrea Mondino has been awarded 
+a Whitehead Prize for 2020 by the 
+London Mathematical Society for his 
+contributions to geometric analysis. 
+Erik Panzer and Richard Wade 
+have been awarded Royal Society 
+University Research Fellowships  
+for 2020.
+Anna Seigal has been awarded the 
+SIAM Richard C. DiPrima Prize 
+for 2020; this prize recognises an 
+early-career researcher in applied 
+mathematics.
+Robin Thompson has been awarded 
+the Journal of Clinical Medicine 
+Outstanding Research Award for 
+2020.
+Other University awards
+The University’s Mathematical, 
+Physical, and Life Sciences  
+Division (MPLS) has appointed 
+Geoffrey Mboya an Equality,  
+Diversity and Inclusion Fellow  
+for 2020–21. See page 20.
+Vicky Neale was awarded a 2020 
+PGCert Portfolio Prize, one of the 
+Vice-Chancellor’s Education Awards. 
+Doireann O’Kiely received an MPLS 
+Early Career Impact Award for 
+contributions to the manufacture  
+of thin glass sheets.
+And finally, US President Biden has 
+named Eric Lander Director of Office 
+of Science and Technology Policy and 
+adviser on science. Eric was a Rhodes 
+Scholar at Wolfson College from 1978 
+to 1980 and was awarded a DPhil 
+degree for a thesis on algebraic coding 
+theory and symmetric block designs, 
+written under the supervision of  
+Peter Cameron.
+Recognition of  
+distinction awards
+Álvaro Cartea (Mathematical 
+Finance), Heather Harrington 
+(Mathematics), Renaud Lambiotte 
+(Networks and Nonlinear Systems) 
+and Andreas Münch (Applied 
+Mathematics) have all been  
+promoted to Professor.
+CONTENTS
+16	 Oxford Mathematics Annual Newsletter 2021 
+Appointments and achievements
+
+
+--- PDF PAGE 17 ---
+The past year in  
+Oxford Mathematics
+CONTENTS
+
+
+--- PDF PAGE 18 ---
+Obituary:  
+Peter M. Neumann obe
+Martin Bridson
+Whitehead Professor of Pure Mathematics
+Peter Neumann was a remarkable man who crammed 
+several lifetimes of work into one, inspiring those 
+around him. The best of citizens and the kindest of 
+men, Peter never seemed flustered as he moved 
+cheerily among his many roles. Much is written 
+elsewhere about the manifold ways in which he 
+enhanced the lives of others, so here we focus on his 
+life as an Oxford Mathematician.
+Peter was internationally renowned for his profound and 
+enduring contributions to mathematics and its history, but he was 
+adamant that teaching was at least as important as research, and 
+he dedicated much of his life to providing others with the ability 
+to share in the joy that he found in mathematics. A famously 
+dedicated tutor, he covered undergraduate scripts in green ink late 
+into the night before tutorials. He brewed wickedly strong coffee 
+to fuel those tutorials, and animated his famous Kinderseminar 
+for graduate students with the same brew. Here, generations of 
+Oxford algebraists and their fellow-travellers – including 40 of his 
+own DPhil students – were encouraged to think broadly about 
+mathematics and to give their first talks, gently coached and 
+constructively criticised, always with great courtesy. 
+That same courtesy awaited speakers in the weekly Oxford 
+Algebra Seminar, but the wisest of distinguished speakers in 
+that context took careful guard when Peter interjected: pausing 
+his fountain pen over his hardbacked notebook, he spoke with 
+purpose – ‘I don’t understand…’ or ‘Could you help me…’ were 
+sure flags that something just said conflicted with his ocean of 
+knowledge, insight, and meticulous attention to detail.  
+CONTENTS
+18	 Oxford Mathematics Annual Newsletter 2021 
+Obituary: Peter M. Neumann OBE
+
+
+--- PDF PAGE 19 ---
+Peter was a master of notes: he recorded budding 
+ideas and concise records of talks in his notebooks, 
+filed efficiently; he sent frequent missives to 
+encourage, congratulate, or offer sympathy, to share 
+ideas and references, and often to invite. All were 
+signed Πeter or Π. The invitations were welcome 
+above all: the anticipated joy of an evening with 
+Peter was always augmented by a new tale and a 
+sparkle of unexpected knowledge. 
+Peter was born in Oxford in 1940 while his mother, 
+a refugee from Germany, was studying for her 
+doctorate. He was raised in Hull. In 1959 he came to 
+The Queen’s College as an undergraduate, and apart 
+from his ‘year abroad’ as a Junior Research Fellow 
+at Merton (and sabbaticals overseas) he remained 
+at Queen’s for the rest of his life, becoming a JRF in 
+1964, a Tutorial Fellow in 1966, and an Emeritus 
+Fellow in 2008. He loved the College and served 
+it in every imaginable way, just as he served the 
+Mathematical Institute.
+Peter was appointed to a University Lectureship in 
+1967, shortly after the Mathematical Institute in St 
+Giles opened. He had written his doctorate A Study 
+of Some Finite Permutation Groups in 1966 under 
+the direction of Graham Higman, the Waynflete 
+Professor. Higman built a large school of algebra 
+in Oxford and Peter became its fulcrum. His work 
+achieved international acclaim and the University 
+awarded him a DSc degree in 1976 (one of many 
+accolades). He remained ‘Dr Neumann’ throughout 
+his career, refusing to ask for a titular professorship 
+because he regarded the DSc degree as a more 
+appropriate recognition of distinction.
+Group theory (the study of symmetry) was, in its 
+many guises, Peter’s abiding mathematical passion. 
+It was a thread that bound his professional life 
+to his family: his parents, Hanna and Bernhard, 
+were both giants in the field and the first of his 100 
+or so papers, ‘Wreath products and varieties of 
+groups’, was written jointly with them in 1962. His 
+passion for group theory also permeated his life as 
+a historian of mathematics: part of his enduring 
+legacy is his translation and commentary on the 
+works of Évariste Galois, the founder of group 
+theory, which Peter worked on in Paris during the 
+first phase of his retirement in 2008. Peter’s legacy as 
+a historian is surveyed elsewhere, but it is important 
+to record here that he was the driving force that 
+made the History of Mathematics a permanent 
+feature of Oxford’s teaching and research. 
+‘Retirement’ was not the most apt of words in 
+Peter’s case. His foci shifted in this phase of his life 
+but his dedication and enthusiasm, underpinned 
+by the constant support of his wife Sylvia, herself 
+a mathematician, were undimmed, even when 
+he struggled with his health. ‘As long as my diary 
+permits it, I can fill in for a day, a week, a month or 
+a term, if need arises’, he wrote spontaneously to a 
+list of young colleagues in 2014, offering to cover 
+any teaching need. He continued to lecture first-year 
+undergraduates – whose enthusiasm he adored – 
+while quietly deflecting his stipend to the Institute’s 
+fund to support graduate students. 
+He retained a keen interest in contemporary group 
+theory, but after retirement Peter spent more time 
+nurturing a love of mathematics among school 
+children, which is something that he cared deeply 
+about. The OBE that he had been awarded in 2008 
+for services to Mathematics Education was earned 
+many times over. His abiding legacy includes the 
+UK Mathematics Trust, which he was instrumental 
+in setting up, serving as its inaugural Chair from 
+1996 to 2004. And, as ever with Peter, leadership 
+was matched by local action: when I was too busy to 
+run the chess club at our local primary school, Peter 
+took over and quickly started teaching extension 
+maths as well, inspiring children from a wide 
+range of backgrounds who loved ‘The Professor’, 
+cycling up the hill to Headington on his butcher’s 
+bicycle, smartly dressed. That bicycle was an icon: 
+he claimed to have his best ideas while cycling, 
+and extolled the virtues of cycling to London for 
+meetings. 
+Peter Neumann’s achievements and legacy as an 
+Oxford Mathematician are immense, and yet he was 
+so much more.
+CONTENTS
+19	 Oxford Mathematics Annual Newsletter 2021 
+Obituary: Peter M. Neumann OBE
+
+
+--- PDF PAGE 20 ---
+In Michaelmas Term 2020 I was elected as one of the 
+ten inaugural Equality, Diversity and Inclusion (EDI) 
+Fellows by the University’s Mathematical, Physical, 
+and Life Sciences Division. 
+My responsibilities include participating in their termly Steering 
+Group meetings, providing input and ideas for a divisional 
+EDI action plan, and helping to implement actions, raise local 
+awareness of EDI principles and activities, and enhance self-
+awareness and learning in EDI areas.
+With my EDI Fellow’s personal budget, and with departmental 
+and divisional funding for spending on EDI activities in the 
+building, I am seeking through Mfano Africa (a mentoring 
+programme targeting pre-PhD mathematics students in Africa) 
+to play a small part in building a critical mass of research capacity 
+in Africa through volunteer mentors who give crash courses 
+and one-hour talks, start a reading group or advise students 
+through short mini-projects intended to introduce them to 
+research frontiers, thereby improving their DPhil applications. 
+Among the senior mentors whose courses are lined up at Mfano 
+are Prof. Fengfan Yang of Nanjing University of Aeronautics & 
+Astronautics and Prof. Edris Titi of Cambridge University.
+As a pilot project in the Summer of 2021, Mfano Africa plans to 
+airlift two promising African students to Oxford for an unrivalled 
+opportunity to build their research experience and receive 
+training on putting together mathematics graduate applications. 
+(The word ‘airlift’ is motivated by the historic Kennedy Airlift, 
+which supported promising East African students to receive 
+Equality, diversity and inclusion 
+in Oxford Mathematics
+Geoffrey Mboya
+EDI Fellow
+CONTENTS
+20	 Oxford Mathematics Annual Newsletter 2021 
+Equality, diversity and inclusion in Oxford Mathematics
+
+
+--- PDF PAGE 21 ---
+college and university education in the US and Canada from 1959 
+to 1963.) As Oxford Mathematician Balász Szendröi has noted:
+“This project is a great way to bring some eminent African 
+students to Oxford, create opportunities for these students, and 
+explore ways to interact with their wider communities.” 
+The success of this pilot project would create a guidepost for 
+future implementation of the 7th Action of Oxford’s Race and 
+Equality Charter which seeks to increase the proportion of 
+postgraduate research applications from well-qualified graduate 
+students from low- and middle-income countries, and an aim 
+of the Mathematical Institute’s Good Practice Statement of 
+promoting mathematics to all prospective students, regardless  
+of gender or background.
+In addition, in my role as 
+Mathematics EDI Fellow, 
+I’ve proposed strategies for 
+improving the Oxford study 
+experience for student 
+parents and suggested 
+improvements on wording 
+and target audiences for 
+open position advertising, 
+with the aim of seeing the 
+Institute appoint its first 
+black faculty member.
+Much of the mathematics that is 
+done throughout the world today 
+is essentially European in style, a 
+legacy of colonialism. However, 
+other parts of the world have had, 
+and continue to have, their own 
+mathematical traditions, though 
+in many cases records are sketchy. 
+The Department commissioned a 
+series of posters, to be displayed 
+in the Andrew Wiles Building 
+and online, in which I provide 
+a taste of the different types of 
+mathematics that have appeared 
+throughout the world, and to 
+show that these are as much a part 
+of the story of mathematics as 
+European contributions. 
+Find out more
+The full poster series is available from 
+our website. Download here
+A world history of mathematics
+Christopher Hollings
+Clifford Norton Senior Research Fellow in the History of Mathematics
+CONTENTS
+21	 Oxford Mathematics Annual Newsletter 2021 
+Equality, diversity and inclusion in Oxford Mathematics
+
+
+--- PDF PAGE 22 ---
+In 2021, Oxford’s Sedleian Chair of Natural 
+Philosophy marks its 400th anniversary. Founded by 
+a bequest from Sir William Sedley (c.1558–1618),  
+it is one of the University’s oldest Professorships. 
+Like similar positions established around the same time (such as 
+the Savilian Chairs of Geometry and Astronomy), its purpose was 
+to provide centrally organised lectures on a specific subject, in this 
+case natural philosophy. 
+During the first century of its existence, the Chair was held by 
+physicians such Thomas Willis, who emphasised medical topics in 
+their teaching. For much of the 18th century, on the other hand, 
+the Sedleian Professors were theologians, whose links to natural 
+philosophy are less clear, but by the end of that century, the Chair 
+was occupied by the astronomer Thomas Hornsby. Following his 
+tenure, it passed into the hands of applied mathematicians, where 
+it remained. 
+Since the mid-20th century, the Sedleian Chair has been a high-
+profile research post, rather than a teaching position, and has been 
+held by prominent applied mathematicians; the current holder 
+is Jon Keating (see page 9). An edited volume on the history 
+of the Sedleian Chair, to be published by OUP, is currently in 
+preparation.
+400 years of the  
+Sedleian Professors
+Christopher Hollings
+Clifford Norton Senior Research Fellow in the History of Mathematics
+Top row: Jon Keating (2019–), Thomas Willis (1660–75),  
+Augustus Love (1899–1940) / Bottom row: John Ball (1996–2019),  
+George Temple (1953–68) (left), Sydney Chapman (1946–53)
+CONTENTS
+22	 Oxford Mathematics Annual Newsletter 2021 
+What’s on in Oxford Mathematics?
+
+
+--- PDF PAGE 23 ---
+Fantasy Premier League (FPL) is an increasingly popular way of 
+adding extra stress and disappointment to a weekend of watching 
+football, with around 7.5 million people worldwide playing the 
+official game last season. Players choose a squad of professional 
+footballers from across the league, and score points based on their 
+real-world performances. This has led to some fierce debate around 
+how much of the game is just luck and how much is having a keen 
+sense of strategy. Consistently strong players have reputations for 
+creating elaborate statistical models, or for being strategic thinkers: 
+among the top players this year were World Chess Champion 
+Magnus Carlsen, who finished tenth, and myself, an Oxford 
+Mathematician, who ended up as the overall Champion.
+‘Oxford Mathematician wins Fantasy Football’ is an excellent 
+headline, and naturally led to much speculation about how 
+maths might help to improve one’s game. This felt like a perfect 
+opportunity to hit the back of the net by giving an Oxford 
+Mathematics Public Lecture about maths and Fantasy Football, 
+which has now been viewed by over 100,000 people.
+So, can maths tell us how to win Fantasy Football? Betteridge’s 
+law suggests that any headline ending in a question mark can be 
+answered by the word “no”, and this one is no exception: I was at 
+least as lucky as I was well prepared. However, there are certainly 
+interesting mathematical ways to investigate FPL. I repurposed 
+some of the techniques I use in my Mathematical Biology research 
+and used them to compare different strategies. Ultimately we 
+found some quite interesting results… but if you want to find out 
+how to improve your play, you’ll have to watch the lecture! 
+Can maths help us to win  
+at Fantasy Football?
+Joshua Bull 
+Postdoctoral Research Associate  
+Winner of the official 2020 Fantasy Premier League
+Find out more 
+Joshua’s Oxford Mathematics Public Lecture,  
+Can maths tell us how to win at Fantasy Football?,  
+is available on YouTube. Watch lecture
+CONTENTS
+23	 Oxford Mathematics Annual Newsletter 2021 
+What’s on in Oxford Mathematics?
+
+
+--- PDF PAGE 24 ---
+Vicky Neale and David Acheson, 
+two of Oxford’s most engaging and 
+accessible speakers and writers, have 
+produced new books for a general 
+readership. 
+In Why Study Mathematics? Vicky 
+describes the experience of studying 
+mathematics at University and 
+discusses the many benefits of a 
+mathematics degree.  
+In The Wonder Book of Geometry 
+(a New Scientist ‘Don’t Miss’ Book 
+of the Week, and a BBC Science 
+Book of the Year), David takes 
+us on a geometrical tour from 
+Ancient Greece to the present day, 
+demonstrating why geometry is the 
+spirit of mathematics. 
+Other recent books for general 
+audiences include Robin Wilson’s 
+Pitkin Guide on Isaac Newton (with 
+Raymond Flood) and Number 
+Theory: A Very Short Introduction 
+(OUP), his 50th book.
+Helping future students
+In the Outreach team we’ve been 
+concerned about the effect of 
+school closures on the brightest 
+maths students, some of whom 
+were preparing to apply for Oxford. 
+Following the success of our online 
+open days in the summer of 2020, 
+we launched a weekly online MAT 
+livestream, with James Munro, 
+our Admissions and Outreach 
+Coordinator going live for two hours 
+every Thursday to solve Oxford 
+Mathematics Admissions Test (MAT) 
+problems, with help from a hundred 
+or so prospective applicants in the 
+online audience.
+In 2021, with the schools closed 
+again, we’ve launched an exciting 
+new project which we’ve called the 
+Oxford Online Maths Club. We’re 
+using livestream broadcasts and 
+email newsletters to send out to any 
+16–18-year-olds who are thinking of 
+studying mathematics at university, 
+or who are about to start a maths 
+course later this year. We’re excited to 
+expand the range of maths that we’re 
+covering, looking in particular at links 
+between the A-level syllabus that our 
+participants are currently studying 
+and the university curriculum that 
+they may study one day. Anyone with 
+suggestions of interesting maths we 
+should be broadcasting to 16–18-year-
+olds, or anyone who’d like to join us 
+live as a guest presenter, is welcome  
+to get in touch with us at  
+oomc@maths.ox.ac.uk.
+New books by Oxford Mathematicians
+Alumni
+Have you written any 
+book that relates to 
+maths? If so, send us the 
+details and we’ll include 
+a selection next year.
+CONTENTS
+24	 Oxford Mathematics Annual Newsletter 2021 
+What’s on in Oxford Mathematics?
+
+
+--- PDF PAGE 25 ---
+Undergraduate lectures  
+for the world 
+For two years we’ve been putting a 
+selection of Oxford Mathematics 
+undergraduate lectures on YouTube. 
+These comprise individual lectures 
+from courses, and they’ve proved very 
+popular – a popularity that the wise 
+YouTube algorithm noticed, leading  
+to over 12 million views so far (and 
+97% ‘likes’).
+However, in December 2020 we 
+went a step further by putting up a 
+whole course – Ben Green’s Metric 
+Spaces, in 11 online lectures. Why? 
+Well, why not? A whole course gives 
+a fuller flavour of the Oxford student 
+experience, and we will follow this  
+up with more lectures in 2021. 
+Social media 
+While social media understandably 
+provoke concern, there’s no doubt 
+that in the right hands they can be 
+a force for good. Certainly, for us 
+in Oxford Mathematics, they‘ve 
+been invaluable in disseminating 
+our research, promoting our public 
+lectures, and drawing in aspiring 
+students via our online student 
+lectures, as well as putting us in 
+touch with a range of voices from 
+around the world.
+Our policy is not to ‘retweet’ 
+endlessly or to ‘over-tweet’. We have 
+280,000 YouTube subscribers and 
+40,000 social media followers. Why 
+not join the dialogue? See links on 
+the last page.
+#WhatsonYourMind 
+In 2019 Sam Cohen had an idea: 
+Why not ask Oxford Mathematicians 
+to talk for one minute about what’s 
+on their minds?
+So we got out our iPhones, bought a 
+cheap tripod, and invited colleagues 
+to take a break from all that maths 
+and to talk about it instead.
+The result has been nearly 40 films 
+watched by many thousands across 
+social media. Some talk about their 
+research, some let their thoughts 
+wander. Arguably, the star of the show 
+has been Sam Howison with a series 
+of films that range from winners and 
+losers in tennis to the joys of coffee. 
+You can find them on our Facebook  
+or Instagram pages.
+Sam Howison 
+demonstrates the 
+Utilities Problem.
+Melanie Rupflin’s second-year lecture 
+on Differential Equations on the Oxford 
+Mathematics You Tube channel.
+CONTENTS
+25	 Oxford Mathematics Annual Newsletter 2021 
+What’s on in Oxford Mathematics?
+
+
+--- PDF PAGE 26 ---
+Public Lectures 
+We’ve kept things simple in a difficult year. We began with two Public 
+Lectures on the pandemic, the first a widely recognised tour de force 
+of the mathematical modeller’s art by Robin Thompson. We then had 
+a summer silence as the world gradually drowned online. Our return 
+in the Autumn was Covid-lite as we told the world how maths can 
+help us to win fantasy football (see page 23), and how it can make us 
+better people. Or at least, how we can try…
+2020, has already raised £25,000 from 
+nearly 100 generous donors. With 
+your help, we can further boost the 
+Oxford Mathematical Institute Fund 
+which is dedicated to the funding of 
+scholarships for graduate students.
+If you would like to donate you can 
+make a gift online. 
+If you would like to know more about 
+leaving a gift to Oxford Mathematics 
+in your will, please contact Caitlin 
+Tebbit – caitlin.tebbit@devoff.ox.ac.uk
+Our Graduate Student Campaign
+The Oxford Mathematics 2020–21 
+Appeal aims to provide the financial 
+support vital to our academic future 
+– namely, funding for the next 
+generation of Graduate Students. 
+Those students, free from financial 
+pressure, will provide the youthful 
+energy and talent which will drive 
+mathematical research in Oxford 
+and around the World. Could you 
+contribute to that future?
+The appeal, launched in October 
+CONTENTS
+26	 Oxford Mathematics Annual Newsletter 2021 
+What’s on in Oxford Mathematics?
+
+
+--- PDF PAGE 27 ---
+Get in touch
+We hope that you will enjoy this annual newsletter.
+We are interested to receive your comments,  
+and also contributions for future newsletters.  
+Please contact the editor, Robin Wilson, 
+c/o lumbard@maths.ox.ac.uk
+A final thought
+2021 is the product of consecutive prime numbers (43 and 47).  
+The last time this happened was in 1763, and the next time  
+will not be until 2491.
+Also, 20-21 is obtained by concatenating two consecutive  
+integers, and the next such year that’s also a product of  
+consecutive primes will not happen until:
+794018604377235322848433897872605582794018604377235322848433897872605583
+Design: William Joseph
+maths.ox.ac.uk

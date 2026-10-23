@@ -1,0 +1,1422 @@
+
+--- PDF page 1 ---
+Ergod. Th. & Dynam. Sys., (2025), 45, 1757–1776
+© The Author(s), 2024. Published by Cambridge
+University Press. This is an Open Access article, distributed under the terms of the Creative Commons
+Attribution licence (https://creativecommons.org/licenses/by/4.0), which permits unrestricted re-use,
+distribution and reproduction, provided the original article is properly cited.
+doi:10.1017/etds.2024.57
+1757
+Exact dimension functions of the prime
+continued fraction Cantor set
+TUSHAR DAS
+† and DAVID SAMUEL SIMMONS‡
+† Department of Mathematics & Statistics, University of Wisconsin-La Crosse,
+1725 State Street, La Crosse, WI 54601, USA
+(e-mail: tdas@uwlax.edu)
+‡ Department of Mathematics, University of York, Heslington, York YO10 5DD, UK
+(e-mail: david9550@gmail.com)
+(Received 17 June 2023 and accepted in revised form 31 May 2024)
+For Mariusz Urba´nski, on the occasion of the 2023 Sierpi´nski Medal
+Abstract. We study the exact Hausdorff and packing dimensions of the prime Cantor set,
+P , which comprises the irrationals whose continued fraction entries are prime numbers.
+We prove that the Hausdorff measure of the prime Cantor set cannot be ﬁnite and positive
+with respect to any sufﬁciently regular dimension function, thus negatively answering a
+question of Mauldin and Urba´nski (1999) and Mauldin (2013) for this class of dimension
+functions. By contrast, under a reasonable number-theoretic conjecture we prove that the
+packing measure of the conformal measure on the prime Cantor set is in fact positive and
+ﬁnite with respect to the dimension function ψ(r) = rδ log−2δ log(1/r), where δ is the
+dimension (conformal, Hausdorff, and packing) of the prime Cantor set.
+Key words: continued fractions, prime numbers, fractal geometry, thermodynamic formal-
+ism and transfer operators, Hausdorff and packing measures
+2020 Mathematics Subject Classiﬁcation: 11K50 (Primary); 11N05, 37D35, 28A78,
+37F35 (Secondary)
+1. Introduction
+Iterated function systems (IFSs) have been studied intensively since the 1980s by several
+groups of researchers, including Bandt, Barnsley, Dekking, Falconer, Graf, Hata, Hutchin-
+son, Mauldin, Schief, Simon, Solomyak, and Urba´nski. For a very selective sampling of
+such research see [2–4, 9, 12, 13, 20, 24, 26, 33, 35]. Much of the early research on IFSs
+focused on systems with a ﬁnite number of Euclidean similarities as generators. Since the
+1990s the theory has been extended to handle systems with countably many conformal
+maps. Mauldin and Urba´nski were among the pioneers of this extension of IFS theory,
+ﬁrst to the study of inﬁnite conformal iterated function systems (CIFSs), and then to their
+https://doi.org/10.1017/etds.2024.57 Published online by Cambridge University Press
+
+
+--- PDF page 2 ---
+1758
+T. Das and D. S. Simmons
+generalizations, namely, conformal graph directed Markov systems (CGDMSs) that may
+be used to study Fuchsian and Kleinian group limit sets as well as Julia sets associated
+with holomorphic and meromorphic iteration; see [24, 26].
+In particular, the CIFS/CGDMS framework may be leveraged to encode a variety of
+sets that appear naturally at the interfaces of dynamical systems, fractal geometry and
+Diophantine approximation. In particular, with an eye on the focus of our paper, one
+can encode real numbers via their continued fraction expansions leading to the Gauss
+continued fraction IFS, which is a prime example of an inﬁnite CIFS whose generators are
+the Möbius maps x →1/(a + x) for a ∈N. Given any subset A ⊂N, let A denote the
+set of all irrationals x ∈[0, 1] whose continued fraction partial quotients all lie in A. Then
+A may be expressed as the limit set of the subsystem of the Gauss IFS that comprises the
+maps x →1/(a + x) for a ∈A; see, for example, [7, 18, 25].
+We focus on P , the prime Cantor set of our title, that is, the Cantor set of irrationals
+whose continued fraction entries are prime numbers. Let δ = δP denote the common value
+[25, Theorems 2.7 and 2.11] for the Hausdorff and packing dimensions of P . Using a
+result due to Erd˝os [10] guaranteeing the existence of arbitrarily large two-sided gaps in
+the sequence of primes, Mauldin and Urba´nski [25, Corollaries 4.5 and 5.6] proved that
+despite there being a conformal measure and a corresponding invariant Borel probability
+measure for this CIFS, the δ-dimensional Hausdorff and packing measures were zero and
+inﬁnity, respectively. (Such phenomena cannot occur in the setting of ﬁnite-alphabet Gauss
+IFSs, since their limit sets are Ahlfors regular.) This result led naturally to the surprisingly
+resistant problem, ﬁrst stated by Mauldin and Urba´nski in [25, Problem 2 in §7] and later
+repeated by Mauldin in the 2013 Erd˝os centennial volume [23, Problem 7.1], of determining
+whether there was an appropriate dimension function with respect to which the Hausdorff
+and packing measures of P were positive and ﬁnite. The study of such dimension
+functions, called exact dimension functions, has offered mathematicians myriad challenges
+over the past century. A very selective sampling of results follows: for Liouville numbers
+see [27]; for Bedford–McMullen self-afﬁne carpets see [28, 29]; for geometrically ﬁnite
+Kleinian limit sets see [34]; and for random recursive constructions, Brownian sample
+paths and beyond see [13, 38].
+2. Main theorems
+We start by stating our main results; precise deﬁnitions will follow in the next section.
+Let δ = δP denote the common value [25, Theorems 2.7 and 2.11] for the Hausdorff and
+packing dimensions of P . If μ is a locally ﬁnite Borel measure on R, then we let
+Hψ(μ) def
+= inf{Hψ(A) : μ(R \ A) = 0},
+Pψ(μ) def
+= inf{Pψ(A) : μ(R \ A) = 0}.
+A function ψ is doubling if for all C1 ≥1, there exists C2 ≥1 such that for all x, y with
+C−1
+1
+≤x/y ≤C1, we have C−1
+2
+≤ψ(x)/ψ(y) ≤C2.
+THEOREM 2.1. Let μ = μP be the conformal measure on P , and let ψ be a doubling
+dimension function such that (r) = r−δψ(r) is monotonic. Then Hψ(μ) = 0 if the series
+https://doi.org/10.1017/etds.2024.57 Published online by Cambridge University Press
+
+
+--- PDF page 3 ---
+Exact dimension functions of the prime continued fraction Cantor set
+1759
+∞
+
+k=1
+y(1−2δ)/(1−δ)
+(log y)δ/(1−δ) ↿y=(λ−k)
+(2.1)
+diverges, and = ∞if it converges, for all (equivalently, for any) ﬁxed λ > 1.
+Note that 1/2 < δ ≈0.657 < 1 [7, Table 1 and §3], so the exponent in the numerator is
+negative.
+The following corollary negatively resolves [23, Problem 7.1] and part of [25, Problem 2
+in §7] for sufﬁciently regular dimension functions, for example Hardy L-functions [16, 17].
+COROLLARY 2.2. For any doubling dimension function ψ such that (r) = r−δψ(r) is
+monotonic, we have Hψ(P ) ∈{0, ∞}.
+Proof. By way of contradiction suppose that 0 < Hψ(P ) < ∞. Then Hψ ↿P is a
+conformal measure on P and therefore a scalar multiple of μP , and thus Hψ(P ) =
+Hψ(Hψ ↿P ) ∈{0, ∞} by Theorem 2.1, a contradiction.
+Remark. Letting ψ(r) = rδ logs(1/r) with s > (1 −δ)/(2δ −1) gives an example of a
+function that satisﬁes the hypotheses of Theorem 2.1 such that the series (2.1) converges.
+For this function, we have Hψ(P ) ≥Hψ(μ) = ∞. This afﬁrmatively answers part of
+[25, Problem 2 in §7].
+THEOREM 2.3. Let μ be the conformal measure on P , let θ = 21/40, and let
+φ(x) = log(x) log log(x) log log log log(x)
+log2 log log(x)
+·
+(2.2)
+Then
+Pψ(μ) = ∞
+where ψ(r) = rδφ−δ(log(1/r)).
+(2.3)
+Pψ(μ) = 0
+where ψ(r) = rδ log−s(1/r) if s > θδ/(2δ −1)
+(2.4)
+We can get a stronger result for packing measure by assuming the following conjecture.
+Conjecture 2.4. Let pn denote the nth prime, and let dn = pn+1 −pn. For each k ≥1 let
+Rk
+def
+= lim sup
+n→∞
+min(dn+1, . . . , dn+k)
+log2(pn)
+·
+Then 0 < Rk < ∞for all k ∈N.
+Remark. The case k = 1 of Conjecture 2.4 is known as the Cramér–Granville conjecture.
+Early heuristics led Harald Cramér to conjecture that it is true with R1 = 1 [8]. Applying
+Cramér’s heuristics to the case k ≥2 of Conjecture 2.4 yields the prediction that
+Rk = 1/k. Speciﬁcally, assume that each integer n has probability 1/log(n) of being
+prime. Under this assumption, for m ≤n the probability that no integers in an interval
+(n, n + m] are prime is approximately (1 −1/log(n))m ≍exp(−m/log(n)). Thus, the
+probability that dn > m is approximately exp(−m/log(pn)), since dn > m if and only if
+the interval (pn, pn +m] has no primes. So the probability that min(dn+1, . . . , dn+k) > m
+https://doi.org/10.1017/etds.2024.57 Published online by Cambridge University Press
+
+
+--- PDF page 4 ---
+1760
+T. Das and D. S. Simmons
+is approximately exp(−km/log(pn)). Now ﬁx a constant C > 0. The probability that
+min(dn+1, . . . , dn+k) ≥C log2(pn) is approximately exp(−kC log2(pn)/log(pn)) =
+p−kC
+n
+. Now, by the Borel–Cantelli lemma, the probability is 1 that min(dn+1, . . . , dn+k) ≥
+C log2(pn) for inﬁnitely many n if and only if the series 
+n p−kC
+n
+diverges, which by the
+prime number theorem is true if and only if C ≤1/k. It follows (under this probabilistic
+model) that Rk = 1/k, where Rk is as in Conjecture 2.4.
+However, improved heuristics now suggest that R1 = 2e−γ , where γ
+is the
+Euler–Mascheroni constant; see [14, 15, 30]. So perhaps an appropriate correction would
+be Rk = 2e−γ /k.
+THEOREM 2.5. If the cases k = 1, 2 of Conjecture 2.4 are true, then Pψ(μ) ∈(0, ∞),
+where ψ is given by the formula
+ψ(r) = rδ log−2δ log(1/r).
+(2.5)
+Note that the cases k = 1, 2 of Conjecture 2.4 correspond to information about the
+lengths of one-sided and two-sided gaps in the primes, respectively.
+Question 2.6. Determine whether (2.5) is an exact dimension function for the prime
+Cantor set, that is, whether 0 < Pψ(P ) < ∞.
+2.1. Outline of the proofs.
+The basic idea of the proofs is to use the Rogers–Taylor–Tricot
+density theorem (Theorem 3.5), which relates the Hausdorff and packing measures of a
+measure μ to the upper and lower densities
+Dψ
+μ(x) def
+= lim sup
+r↘0
+μ(B(x, r))
+ψ(r)
+,
+Dψ
+μ(x) def
+= lim inf
+r↘0
+μ(B(x, r))
+ψ(r)
+·
+at μ-almost every point x ∈R. We use the Roger–Taylor–Tricot density theorem as applied
+to the conformal measure μ. The next step is to estimate these densities using a global
+measure formula (Theorem 4.5), which relates the μ-measure of a ball B(x, r) to the
+μ-measure of certain cylinders contained in that ball. Here, a ‘cylinder’ is a set of the
+form [ω] = φω([0, 1]), where φω is a composition of elements of the Gauss IFS (cf. §3).
+This allows us to estimate Dψ
+μ(x) and Dψ
+μ(x) in terms of certain sets Jk,α,ϵ ⊂E, where E
+is the set of primes (see Proposition 4.6 for more details). Speciﬁcally, Dψ
+μ(x) and Dψ
+μ(x)
+can be estimated in terms of certain sets Sα,1 and Sα,−1, respectively.
+Next, we need to estimate the μ-measure of x such that Dψ
+μ(x) = 0 (respectively,
+Dψ
+μ(x) = 0). This is done via Lemma 4.4, which relates the μ-measure of Sα,1
+(respectively, Sα,−1) to the μ-measures of Jk,α,1 (respectively, Jk,α,−1). Speciﬁcally, the
+former is 0 if and only if the latter series converges. So the next thing we need to do is
+estimate the series 
+k μ(Jk,α,ϵ); this is done in Lemma 4.8 for the case of a general Gauss
+IFS (φa)a∈E. Finally, in §5 we perform further computations in the case where E is the set
+of primes, yielding Theorems 2.1, 2.3, and 2.5.
+https://doi.org/10.1017/etds.2024.57 Published online by Cambridge University Press
+
+
+--- PDF page 5 ---
+Exact dimension functions of the prime continued fraction Cantor set
+1761
+2.2. Layout of the paper.
+In §3 we introduce preliminaries such as the concept of Gauss
+IFSs and Hausdorff and packing dimensions, as well as the Rogers–Taylor–Tricot theorem
+and its corollary. In §4 we prove some results that hold in the general setting of Gauss
+IFSs, which are used to prove our main theorems but may also be interesting in their own
+right. Finally, in §5 we specialize to the case of the prime Gauss IFS, allowing us to prove
+our main theorems.
+3. Preliminaries and notation
+Convention 3.1. In what follows, A ≲B means that there exists a constant C > 0 such that
+A ≤CB. A ≍B means A ≲B ≲A. A ≲+ B means there exists a constant C such that
+A ≤B + C. A ≲+,× B means that there exist constants C1, C2 such that A ≤C1B + C2.
+Convention 3.2. All measures and sets are assumed to be Borel, and measures are assumed
+to be locally ﬁnite. Sometimes we restate these hypotheses for emphasis.
+Recall that the continued fraction expansion of an irrational number x ∈(0, 1) is the
+unique sequence of positive integers (an) such that
+x = [0; a1, a2, . . .] def
+=
+1
+a1 +
+1
+a2 + ...
+Given E ⊂N, we deﬁne the set E to be the set of all irrationals in (0, 1) whose continued
+fraction expansions lie entirely in E. Equivalently, E is the image of EN under the coding
+map π : NN →(0, 1) deﬁned by π((an)) = [0; a1, a2, . . .].
+The set E can be studied dynamically in terms of its corresponding Gauss iterated
+function system, that is, the collection of maps E
+def
+= (φa)a∈E, where
+φa(x) def
+=
+1
+a + x ·
+(The Gauss IFS E is a special case of a conformal iterated function system (see, for
+example, [7, 24, 25]), but in this paper we deal only with the Gauss IFS case.) Let
+E∗= 
+n≥0 En denote the collection of ﬁnite words in the alphabet E. For each ω ∈E∗,
+let φω = φω1 ◦· · · ◦φω|ω|, where |ω| denotes the length of ω. Then
+π(ω) = lim
+n→∞φω↿[1,n](0).
+Equivalently, π(ω) is the unique intersection point of the cylinder sets [ω ↿[1, n]], where
+[ω] def
+= φω([0, 1]).
+Next, we deﬁne the pressure of a real number s ≥0 to be
+PE(s) def
+=
+lim
+n→∞
+1
+n log
+
+ω∈En
+∥φ′
+ω∥s,
+where ∥φ′
+ω∥def
+= supx∈[0,1] |φ′
+ω(x)|. The Gauss IFS E is called regular if there exists
+δ = δE ≥0 such that PE(δE) = 0. The following result was proven in [24].
+https://doi.org/10.1017/etds.2024.57 Published online by Cambridge University Press
+
+
+--- PDF page 6 ---
+1762
+T. Das and D. S. Simmons
+PROPOSITION 3.3. [24, Theorem 3.5] Let E be a regular (Gauss) IFS. Then there exists
+a unique measure μ = μE on E such that
+μE(A) =
+
+a∈E
+
+φ−1
+a (A)
+|φ′
+a(x)|δE dμE(x)
+for all A ⊂[0, 1].
+The measure μ appearing in Proposition 3.3 is called the conformal measure of E, and
+δE is called the conformal dimension of E. Recall that the bounded distortion property
+(cf. [24, (2.9)]) states that
+|φ′
+ω(x)| ≍∥φ′
+ω∥
+for all ω ∈E∗and x ∈[0, 1].
+This implies that the measure of a cylinder set [ω] satisﬁes
+μ(ω) def
+= μ([ω]) ≍∥φ′
+ω∥δ
+and that
+μ(ωτ) ≍μ(ω)μ(τ)
+for all ω, τ ∈E∗.
+(3.1)
+Convention 3.4. We write μ(A) = 
+ω∈A μ(ω) for all A ⊂E∗, and μ(A) = μ(π(A))
+for all A ⊂EN.
+The aim of this paper is to study the Hausdorff and packing measures of the measure
+μP , where P ⊂N is the set of primes. To deﬁne these quantities, let ψ : (0, ∞) →
+(0, ∞) be a dimension function, that is, a continuous increasing function such that
+limr→0 ψ(r) = 0. Then the ψ-dimensional Hausdorff measure of a set A ⊂R is
+Hψ(A) def
+= lim
+ϵ↘0 inf
+ ∞
+
+i=1
+ψ(diam(Ui)) : (Ui)∞
+1
+is a countable cover of A with diam(Ui) ≤ϵ for all i
+
+and the ψ-dimensional packing measure of A is deﬁned by the formulas
+
+Pψ(A)
+def
+= lim
+ϵ↘0 sup
+ ∞
+
+j=1
+ψ(diam(Bj)) : (Bj)∞
+1 is a countable disjoint collection of balls
+with centers in A and with diam(Bj) ≤ϵ for all j
+
+and
+Pψ(A) def
+= inf
+ ∞
+
+i=1
+
+Pψ(Ai) : A ⊂
+∞
+	
+i=1
+Ai
+
+.
+A special case is when ψ(r) = rs for some s > 0, in which case we write Hψ = Hs and
+Pψ = Ps.
+If μ is a locally ﬁnite Borel measure on R, then we let
+Hψ(μ) def
+= inf{Hψ(A) : μ(R \ A) = 0},
+Pψ(μ) def
+= inf{Pψ(A) : μ(R \ A) = 0}.
+https://doi.org/10.1017/etds.2024.57 Published online by Cambridge University Press
+
+
+--- PDF page 7 ---
+Exact dimension functions of the prime continued fraction Cantor set
+1763
+This is analogous to the deﬁnitions of the (upper) Hausdorff and packing dimensions of μ;
+see [11, Proposition 10.3].
+Remark. The Hausdorff and packing dimensions of sets [11, §2.1] and the (upper)
+Hausdorff and packing dimensions of measures [11, Proposition 10.3] can be deﬁned in
+terms of Hs and Ps as follows:
+dimH(A) def
+= sup{s ≥0 : Hs(A) > 0}, dimH(μ) def
+= sup{s ≥0 : Hs(μ) > 0},
+dimP (A) def
+= sup{s ≥0 : Ps(A) > 0}, dimP (μ) def
+= sup{s ≥0 : Ps(μ) > 0}.
+It follows from [25, Theorems 2.7 and 2.11] and Theorems 2.1 and 2.3 above that
+dimH(P ) = dimP (P ) = dimH(μP ) = dimP (μP ) = δP .
+For each point x ∈R let
+Dψ
+μ(x) def
+= lim sup
+r↘0
+μ(B(x, r))
+ψ(r)
+,
+Dψ
+μ(x) def
+= lim inf
+r↘0
+μ(B(x, r))
+ψ(r)
+·
+THEOREM 3.5. (Rogers–Taylor–Tricot density theorem, [39, Theorems 2.1 and 5.4]; see
+also [32]) Let μ be a positive and ﬁnite Borel measure on R, and let ψ be a dimension
+function. Then for every Borel set A ⊂R,
+μ(A) inf
+x∈A
+1
+Dψ
+μ(x)
+≲× Hψ(A) ≲× μ(R) sup
+x∈A
+1
+Dψ
+μ(x)
+,
+(3.2)
+μ(A) inf
+x∈A
+1
+Dψ
+μ(x)
+≲× Pψ(A) ≲× μ(R) sup
+x∈A
+1
+Dψ
+μ(x)
+·
+(3.3)
+COROLLARY 3.6. Let μ, ψ be as in Theorem 3.5. Then
+Hψ(μ) ≍× ess sup
+x∼μ
+1
+Dψ
+μ(x)
+,
+(3.4)
+Pψ(μ) ≍× ess sup
+x∼μ
+1
+Dψ
+μ(x)
+·
+(3.5)
+Here the implied constants may depend on μ and ψ, and ess supx∼μ denotes the essential
+supremum with x distributed according to μ.
+Proof. We prove (3.4); (3.5) is similar. For the ≲direction, take
+A =
+
+x :
+1
+Dψ
+μ(x)
+≤ess sup
+y∼μ
+1
+Dψ
+μ(y)
+
+in the right half of (3.2). A has full μ-measure, so Hψ(μ) ≤Hψ(A). For the ≳direction,
+let B be a set of full μ-measure, ﬁx t < ess supy∼μ(1/Dψ
+μ(y)), and let
+https://doi.org/10.1017/etds.2024.57 Published online by Cambridge University Press
+
+
+--- PDF page 8 ---
+1764
+T. Das and D. S. Simmons
+A = B ∩
+
+x :
+1
+Dψ
+μ(x)
+≥t
+
+.
+Then μ(A) > 0. Applying the left half of (3.2), using Hψ(A) ≤Hψ(B), and then taking
+the inﬁmum over all B and supremum over t yields the ≳direction of (3.4).
+Remark. For a doubling dimension function ψ and a conformal measure μ = μE, the
+ess sup in (3.4)–(3.5) can be replaced by ess inf due to the ergodicity of the shift
+map σ with respect to μ [24, Theorem 3.8]. Indeed, a routine calculation shows that
+Dψ
+μ(x) ≍Dψ
+μ(σ(x)) for all x, whence ergodicity implies that the function x →Dψ
+μ(x)
+is constant μ-almost everywhere, and similarly for x →Dψ
+μ(x).
+Terminological note. If ψ is a dimension function such that Hψ(A) (respectively,
+Hψ(μ)) is positive and ﬁnite, then ψ is called an exact Hausdorff dimension function
+for A (respectively, μ). Similar terminology applies to packing dimension.
+4. Results for regular Gauss IFSs
+In this section we consider a regular Gauss IFS E and state some results concerning
+Hψ(μE) and Pψ(μE), given appropriate assumptions on E and ψ. Throughout the section
+we will make use of the following assumptions, all of which hold for the prime Gauss
+IFS P .
+Assumption 4.1. The set E ⊂N satisﬁes an asymptotic law
+#(E ∩[N, 2N]) ≍f (N),
+(4.1)
+where f is regularly varying with exponent s ∈(δ, 2δ). (A function f is said to be regularly
+varying with exponent s if for all a > 1, we have limx→∞(f (ax)/f (x)) = as.) For
+example, if E is the set of primes, then by the prime number theorem f (N) = N/ log(N)
+satisﬁes (4.1), and f is regularly varying with exponent s = 1 ∈(δ, 2δ), since 1/2 < δP < 1.
+Assumption 4.2. There exists λ > 1 such that for all 0 < r ≤1,
+μ({a ∈E : λ−1r < ∥φ′
+a∥≤r}) ≍μ({a ∈E : ∥φ′
+a∥≤r}).
+For example, if E is the set of primes, then this assumption follows from the prime number
+theorem via a routine calculation showing that both sides are ≍rδ/log(1/r).
+Assumption 4.3. The Lyapunov exponent −
+a∈E μ(a) log ∥φ′
+a∥is ﬁnite. Note that this
+is satisﬁed when E is the set of primes, since μ(a) log ∥φ′
+a∥≍a−2δ log(a) and δ > 1/2.
+For each k ∈N, let
+Wk
+def
+= {ω ∈E∗: λ−(k+1) < ∥φ′
+ω∥≤λ−k}.
+(4.2)
+Note that although the sets ([ω])ω∈Wk are not necessarily disjoint, there is a uniform bound
+(depending on λ) on the multiplicity of the collection, that is, there exists a constant C
+independent of k such that supx{#{ω ∈Wk : x ∈[ω]}} ≤C.
+https://doi.org/10.1017/etds.2024.57 Published online by Cambridge University Press
+
+
+--- PDF page 9 ---
+Exact dimension functions of the prime continued fraction Cantor set
+1765
+LEMMA 4.4. Assume that Assumption 4.2 holds. Let J = (Jk)∞
+1 be a sequence of subsets
+of E, and let
+J
+def
+=
+∞
+
+k=1
+μ(Jk),
+SJ
+def
+= {ω ∈EN : there exist inﬁnitely many (n, k) such that ω ↿n ∈Wk, ωn+1 ∈Jk}.
+Then μ(SJ ) > 0 if J = ∞, and μ(SJ ) = 0 otherwise.
+Proof. For each k ∈N, let
+Ak =
+	
+{[ωa] : ω ∈Wk, a ∈Jk}.
+We claim that
+(1)
+μ(Ak) ≍μ(Jk) and that
+(2)
+the sequence (Ak)∞
+1 is quasi-independent, meaning that μ(Ak ∩Aℓ) ≲μ(Ak)μ(Aℓ)
+whenever k̸ = ℓ.
+Proof of (1). Since the collection ([ω])ω∈Wk has bounded multiplicity, we have
+μ(Ak) ≍
+
+ω∈Wk
+
+a∈Jk
+μ(ωa) ≍
+
+ω∈Wk
+μ(ω)μ(Jk)
+and
+
+ω∈Wk
+μ(ω) ≍
+
+ω∈Wk∥φ′
+ω↿|ω|−1∥>λ−k
+μ(ω)
+(since([ω])ω∈Wkhas bounded multiplicity)
+≍
+
+ω∈E∗∥φ′ω∥>λ−k
+
+a∈Eωa∈Wk
+μ(ω)μ(a)
+≍
+
+ω∈E∗∥φ′
+ω∥>λ−k
+μ(ω)
+
+a∈E∥φ′
+ωa∥≤λ−k
+μ(a)
+(by Assumption 4.2)
+≍
+
+ω∈E∗∥φ′
+ω∥>λ−k
+
+a∈E∥φ′
+ωa∥≤λ−k
+μ(ωa) = μ([0, 1]) = 1.
+Proof of (2). Let k < ℓ. Then
+μ(Ak ∩Aℓ) =
+
+ω∈Wk
+
+a∈Jk
+
+τ∈E∗ωaτ∈Wℓ
+
+b∈Jℓ
+μ(ωaτb)
+≍
+
+ω∈Wk
+μ(ω)
+
+a∈Jk
+μ(a)
+
+τ∈E∗ωaτ∈Wℓ
+μ(τ)μ(Jℓ)
+≲μ(Jk)μ(Jℓ) ≍μ(Ak)μ(Aℓ),
+where the ≲in the last line is because the collection {[τ] : τ ∈E∗, ωaτ ∈Wℓ} has
+bounded multiplicity.
+Now if 
+k μ(Jk) < ∞, the convergence case of the Borel–Cantelli lemma completes
+the proof. If 
+k μ(Jk) = ∞, then (2) implies that condition [5, (3)] holds, so [5, Lemma
+DBC] completes the proof.
+https://doi.org/10.1017/etds.2024.57 Published online by Cambridge University Press
+
+
+--- PDF page 10 ---
+1766
+T. Das and D. S. Simmons
+THEOREM 4.5. (Global measure formula for Gauss IFSs) Let E be a regular Gauss IFS.
+Then for all x = π(ω) ∈E and r > 0, there exists n such that
+[ω ↿n + 1] ⊂B(x, Cr)
+(4.3)
+and
+M(x, n, r) ≤μ(B(x, r)) ≲M(x, n, Cr),
+(4.4)
+where
+M(x, n, r) def
+=
+
+a∈E
+[(ω↿n)a]⊂B(x,r)
+μ((ω ↿n)a),
+and where C ≥1 is a uniform constant.
+We call this theorem a ‘global measure formula’ due to its similarity to other global
+measure formulas found in the literature, such as [37, §7], [36, Theorem 2].
+Proof. Note that the ﬁrst inequality M(x, n, r) ≤μ(B(x, r)) follows trivially from
+applying μ to both sides of the inclusion {[τa] ⊂B(x, r) : a ∈E} ⊂B(x, r).
+Given x = π(ω) ∈E and r > 0, let m ≥0 be maximal such that B(x, r) ∩E ⊂
+[ω ↿m]. By applying the inverse transformation φ−1
+ω↿m to the setup and using the bounded
+distortion property we may without loss of generality assume that m = 0, or equivalently
+that B(x, r) intersects at least two top-level cylinders. We now divide into two cases.
+•
+If [ω1] ⊂B(x, r), then we claim that
+B(x, r) ∩E ⊂
+	
+a∈E
+[a]⊂B(x,Cr)
+[a]
+which guarantees (4.4) with n = 0. Indeed, if y = π(τ) ∈B(x, r) ∩E, then
+1/(τ1 + 1) ≤π(τ) ≤π(ω) + r ≤1/ω1 + r and thus
+diam([τ1]) ≍1
+τ 2
+1
+≲max
+
+ 1
+ω2
+1
+, r2
+
+≍diam([ω1]) + r2 ≤2r + r2 ≲r.
+•
+If [ω1] is not contained in B(x, r), then one of the endpoints of [ω1], namely 1/ω1 or
+1/(ω1 + 1), is contained in B(x, r), but not both. Suppose that 1/ω1 ∈B(x, r); the
+other case is similar. Now for all N ∈E such that [(ω1 −1) ∗1 ∗N] ∩B(x, r)̸ = ∅
+(where ∗denotes concatenation), we have
+r ≥d(1/ω1, [(ω1 −1) ∗1 ∗N]) ≍1/(ω2
+1N) ≍d(1/ω1, min([ω1 ∗N]))
+and thus [ω1 ∗N] ⊂B(1/ω1, Cr) ⊂B(x, (C + 1)r) for an appropriately large
+constant C. Applying μ and summing over all such N gives
+https://doi.org/10.1017/etds.2024.57 Published online by Cambridge University Press
+
+
+--- PDF page 11 ---
+Exact dimension functions of the prime continued fraction Cantor set
+1767
+μ(B(x, r)) ≤μ([ω1] ∩B(x, r)) +
+
+N∈E
+[(ω1−1)∗1∗N]∩B(x,r)̸=∅
+μ([(ω1 −1) ∗1 ∗N])
+≲
+
+N∈E
+[ω1∗N]⊂B(x,(C+1)r)
+μ([ω1 ∗N])
+which implies (4.4) with n = 1. On the other hand, since
+r ≥d(x, 1/ω1) ≍1/(ω2
+1ω2) ≥1/(ω2
+1ω2
+2) ≍diam([ω ↿2]),
+we have [ω ↿2] ⊂B(x, Cr) as long as C is sufﬁciently large.
+Fix ϵ ∈{±1} (loosely speaking, ϵ = 1 when we are trying to prove results about
+Hausdorff measure, and ϵ = −1 when we are trying to prove results about packing
+measure), a real number α > 0, and a doubling dimension function ψ(r) = rδ(r). We
+will assume that  is ϵ-monotonic, meaning that  is decreasing if ϵ = 1 and increasing
+if ϵ = −1. Fix α > 0, and for each k ∈N let
+Jk,α,ϵ
+def
+= {a ∈E : there exists r ∈[∥φ′
+a∥, 1] with r−δμ(B([a], r)) ⋚α(λ−kr)}.
+Here ⋚denotes ≥if ϵ = 1 and ≤if ϵ = −1, and λ > 1 is as in Assumption 4.2. Write
+Sα,ϵ
+def
+= SJα,ϵ for Jα,ϵ
+def
+= (Jk,α,ϵ)∞
+k=1,
+as deﬁned in Lemma 4.4. Note that Sα,1 grows smaller as α grows larger, while Sα,−1 grows
+larger as α grows larger.
+PROPOSITION 4.6. For all ω ∈EN,
+sup{α : ω ∈Sα,1} ≍Dψ
+μ(π(ω)),
+inf{α : ω ∈Sα,−1} ≍Dψ
+μ(π(ω)).
+Proof. Let x = π(ω), ﬁx r > 0, and let C, n, and τ = ω ↿n be as in the global measure
+formula. Write τ ∈Wk for some k, as in (4.2). By the global measure formula, we have
+
+a∈E
+[τa]⊂B(x,r)
+μ(τa) ≤μ(B(x, r)) ≲
+
+a∈E
+[τa]⊂B(x,Cr)
+μ(τa).
+Now for each β ≥1 let
+β
+def
+= μ(B(x, βr))
+ψ(βr)
+·
+Let y = π(σ nω), where σ : EN →EN is the shift map. Then there exist constants
+C2, C3 > 0 (independent of x, r, n, and k) such that for all s > 0,
+B(x, C2λ−ks) ⊂φτ(B(y, s)) ⊂B(x, C3λ−ks).
+https://doi.org/10.1017/etds.2024.57 Published online by Cambridge University Press
+
+
+--- PDF page 12 ---
+1768
+T. Das and D. S. Simmons
+Taking s = C−1
+3 λkr and s = C−1
+2 Cλkβr, and using the bounded distortion property and
+the fact that μ(τ) ≍λ−δk, yields
+1 ≲
+1
+ψ(r)λ−δk
+
+a∈E
+[a]⊂B(y,C−1
+2 Cλkr)
+μ(a),
+β ≳β
+1
+ψ(r)λ−δk
+
+a∈E
+[a]⊂B(y,C−1
+3 λkβr)
+μ(a).
+Write b = ωn+1, so that x ∈[τb] ⊂B(x, Cr) by (4.3) and thus by the bounded distortion
+property y ∈[b] ⊂B(y, C4λkr) for sufﬁciently large C4. Then R def
+= 2C4λkr ≥diam([b]).
+Thus,
+μ(B(y, R)) ≤μ(B([b], R)) ≤μ(B(y, 2R)),
+so 1 ≲ ≲β β for some C5, C6 > 0, where
+ def
+=
+1
+ψ(λ−kR)λ−δk
+
+a∈E
+[a]⊂B([b],R)
+μ(a) =
+1
+(λ−kR)R−δ
+
+a∈E
+[a]⊂B([b],R)
+μ(a).
+Applying the global measure formula again yields
+1 ≲
+1
+(λ−kR)R−δμ(B([b], R)) ≲β
+for some C7, C8 > 0, and thus
+1 ≥C9α ⇒R−δμ(B([b], R)) ≥α(λ−kR) ⇒β ≥C10α,
+β ≤C11α ⇒R−δμ(B([b], R)) ≤α(λ−kR) ⇒1 ≤C12α
+for some C9, C10, C11, C12 > 0 and for all α > 0. It follows that
+Dψ
+μ(π(ω)) ≥C13α ⇒ω ∈Sα,1 ⇒Dψ
+μ(π(ω)) ≥C14α,
+Dψ
+μ(π(ω)) ≤C15α ⇒ω ∈Sα,−1 ⇒Dψ
+μ(π(ω)) ≤C16α,
+since ω ∈Sα,ϵ if and only if there exist inﬁnitely many n, k, R such that ω ↿n ∈Wk,
+R ∈[∥φ′
+ωn+1∥, 1], and R−δμ(B([b], R)) ⋚α(λ−kR), and lim supr↘0 1 = lim supr↘0
+β = Dψ
+μ(π(ω)) and lim infr↘0 1 = lim infr↘0 β = Dψ
+μ(π(ω)). Taking the supre-
+mum (respectively, inﬁmum) with respect to α completes the proof.
+So to calculate Hψ(μ) or Pψ(μ), we need to determine whether the series
+α,ϵ
+def
+= ∞
+k=1 μ(Jk,α,ϵ) converges or diverges for each α > 0.
+LEMMA 4.7. Let ϵ = 1, and suppose that  is ϵ-monotonic. If ∞
+k=1 μ(Jk,α,ϵ) converges
+(respectively, diverges) for all α > 0, then Hψ(μ) = ∞(respectively, = 0); otherwise
+Hψ(μ) is positive and ﬁnite. If ϵ = −1, the analogous statement holds for Pψ(μ).
+https://doi.org/10.1017/etds.2024.57 Published online by Cambridge University Press
+
+
+--- PDF page 13 ---
+Exact dimension functions of the prime continued fraction Cantor set
+1769
+Proof. By Corollary 3.6 (and the subsequent remark), it sufﬁces to show that
+Dψ
+μ(π(ω)) = 0 (respectively, = ∞) for a positive μ-measure set of ωs. By Proposition 4.6,
+this is equivalent to showing that sup{α : ω ∈Sα,1} = 0 (respectively, = ∞), or
+equivalently that ω /∈Sα,1 (respectively, ∈Sα,1) for all α > 0. For each α, to show this for
+a positive μ-measure set of ωs it sufﬁces to show that μ(Sα,1) = 0 (respectively, > 0),
+which by Lemma 4.4 is equivalent to showing that ∞
+k=1 μ(Jk,α,1) converges (respectively,
+diverges). The cases ϵ = −1 and where ∞
+k=1 μ(Jk,α,ϵ) converges for some α but diverges
+for others are proven similarly.
+LEMMA 4.8. Assume that Assumptions 4.1, 4.2, and 4.3 all hold, and that  is
+ϵ-monotonic. Then there exists a constant C ≥1 such that for all α > 0 and ϵ ∈{±1}, we
+have
+′
+Cϵα,ϵ ≲+,× α,ϵ ≲+,× ′
+C−ϵα,ϵ
+where
+′
+α,−1
+def
+=
+
+a∈E
+μ(a)
+max
+1≤x≤a/3 log(1/−1(α−1x−δ#(B(a, x) ∩E))),
+′′
+α
+def
+=
+
+a∈E
+μ(a) log(1/−1(α−1F(a−1))),
+′
+α,1
+def
+= ′
+α,−1 + ′′
+α.
+Here F(r) = rδf (r−1), where f is as in Assumption 4.1.
+Proof. Indeed,
+∞
+
+k=1
+μ(Jk,α,ϵ)
+=
+
+a∈E
+μ(a)#{k ∈N : there exists r ∈[∥φ′
+a∥, 1]r−δμ(B([a], r)) ⋚α(λ−kr)}
+=
+
+a∈E
+μ(a) max{k ∈N : there exists r ∈[∥φ′
+a∥, 1]r−δμ(B([a], r)) ⋚α(λ−kr)}
+(since  is decreasing if ϵ = 1 and increasing if ϵ = −1)
+≍+,×
+
+a∈E
+μ(a) max(0,
+max
+r∈[∥φ′a∥,1] logλ(r/−1(α−1r−δμ(B([a], r)))))
+∈
+ 
+a∈E
+μ(a) logλ ∥φ′
+a∥, C
+
++
+
+a∈E
+μ(a)
+max
+r∈[∥φ′a∥,1] logλ(1/−1(α−1r−δμ(B([a], r))))
+(since r ≤1 ≲1/−1(α−1r−δμ(B([a], r)))).
+The ﬁrst term is ﬁnite by Assumption 4.3. The second term can be analyzed by considering
+1,α
+def
+=
+
+a∈E
+μ(a)
+max
+a−1≤r≤1
+logλ(1/−1(α−1r−δμ(B([a], r)))),
+2,α
+def
+=
+
+a∈E
+μ(a)
+max
+∥φ′a∥≤r≤a−1/3
+logλ(1/−1(α−1r−δμ(B([a], r)))).
+https://doi.org/10.1017/etds.2024.57 Published online by Cambridge University Press
+
+
+--- PDF page 14 ---
+1770
+T. Das and D. S. Simmons
+Then
+1,α + 2,α ≲+,× α,ϵ ≲+,× 1,3δα + 2,3−δα.
+Now for r > 0 sufﬁciently small we have
+μ(B(0, r)) ≥
+
+a≥r−1
+μ(a) ≍
+
+a≥r−1
+a−2δ
+≍
+∞
+
+k=0
+#(E ∩[2kr−1, 2k+1r−1])(2kr−1)−2δ
+≍
+∞
+
+k=0
+f (2kr−1)2−2kδr2δ ≍f (r−1)r2δ
+(sincef is regularly varying with exponent s < 2δ)
+and similarly for the reverse direction, giving
+μ(B(0, r)) ≍r2δf (r−1).
+When r ≥a−1, we have B(0, r) ∩[0, 1] ⊂B([a], r) ⊂B(0, 2r), so
+μ(B([a], r)) ≍r2δf (r−1)
+and thus ′
+1,Cϵα ≤1,α ≤′
+1,C−ϵα, where
+′
+1,α
+def
+=
+
+a∈E
+μ(a)
+max
+a−1≤r≤1
+log(1/−1(α−1rδf (r−1))).
+Since f is regularly varying with exponent s > δ, the function F(r) = rδf (r−1) is
+monotonically decreasing for r sufﬁciently small, while −1 is decreasing (respectively,
+increasing) if ϵ = 1 (respectively, ϵ = −1). It follows that the maximum occurs at r = a−1
+(respectively, r = 1), corresponding to
+′
+1,α ≍+
+
+a∈E
+μ(a) log(1/−1(α−1F(a−1)))
+if ϵ = 1
+(4.5)
+and
+′
+1,α ≍+
+
+a∈E
+μ(a) const. < ∞
+if ϵ = −1.
+(4.6)
+The latter series always converges, whereas the former series may either converge or
+diverge.
+On the other hand, we have
+2,α ≍
+
+a∈E
+μ(a)
+max
+a−2≤r≤a−1/3
+log(1/−1(α−1r−δμ(B([a], r)))).
+Using the change of variables r = a−2x and the fact that μ(b) ≍μ(a) ≍a−2δ for all
+b ∈E such that B([a], r) ∩[b]̸ = ∅, we get ′
+2,Cϵα ≲2,α ≲′
+2,C−ϵα, where
+′
+2,α
+def
+=
+
+a∈E
+μ(a)
+max
+1≤x≤a/3 log(1/−1(α−1x−δ#(B(a, x) ∩E)))
+(4.7)
+and C ≥1 is a constant. Combining (4.5), (4.6), and (4.7) yields the conclusion.
+https://doi.org/10.1017/etds.2024.57 Published online by Cambridge University Press
+
+
+--- PDF page 15 ---
+Exact dimension functions of the prime continued fraction Cantor set
+1771
+5. Proofs of main theorems
+In this section we consider the Gauss IFS P , where P is the set of primes. We begin with
+a number-theoretic lemma.
+LEMMA 5.1. For all δ < 1,
+#(P ∩B(a, x)) ≲(x/a)δf (a)
+for 1 ≤x ≤a/3
+(5.1)
+where f (N) = N/ log(N) is as in Assumption 4.1.
+Proof. A well-known result of Hoheisel [19] (see also [6, Ch. V] for a book reference)
+states that there exists θ < 1 such that
+#(P ∩[a, b]) ≍b −a
+log(a)
+if aθ ≤b −a ≤a.
+(5.2)
+(This result has seen numerous improvements (see [31] for a survey), but it does not matter
+very much for our purposes, although the lower bound does make a difference in our
+upper bound for the exact packing dimension. The most recent improvements we were
+aware of are θ = 6/11 + ϵ for the upper bound [21] and θ = 21/40 for the lower bound
+[1, pp. 562].)
+It follows that
+#(P ∩B(a, x)) ≲
+x
+log(a)
+if aθ ≤x ≤a/3.
+In this case, since δ < 1 and x ≤a we have
+x
+log(a) = x
+a f (a) ≤
+
+x
+a
+δ
+f (a),
+and combining yields (5.1) in this case. On the other hand, if 1 ≤x ≤aθ, then
+#(P ∩B(a, x)) ≤2x + 1 ≲(x/a)δf (a),
+since
+x1−δ ≤a(1−δ)θ ≲a1−δ/ log(a),
+demonstrating (5.1) for the second case.
+Thus, for appropriate C ≥1,
+′
+α,−1 ≤
+
+a∈P
+μ(a) log(1/−1(Cα−1
+max
+1≤x≤a/3 x−δ(x/a)δf (a)))
+=
+
+a∈P
+μ(a) log(1/−1(Cα−1a−δf (a)))
+=
+
+a∈P
+μ(a) log(1/−1(Cα−1F(a−1))) ≍+ ′′
+C−1α.
+It follows that ′
+α,1 ≲′′
+C−1α.
+https://doi.org/10.1017/etds.2024.57 Published online by Cambridge University Press
+
+
+--- PDF page 16 ---
+1772
+T. Das and D. S. Simmons
+Proof of Theorem 2.1. Set ϵ = 1 and E = P . If  is increasing, then Hψ(μ) ≲Hδ(μ) = 0
+and the series (2.1) diverges, so we may henceforth assume that  is decreasing, allowing
+us to use Lemma 4.8. Using the Iverson bracket notation
+[] =
+1,
+ true,
+0,
+ false,
+we have
+′′
+α ≍+
+
+a∈P
+μ(a)
+∞
+
+k=1
+[k ≤logλ(1/−1(α−1F(a−1))]
+=
+
+a∈P
+μ(a)
+∞
+
+k=1
+[F −1(α(λ−k)) ≥a−1]
+≍
+∞
+
+k=1
+
+a∈P
+a≥1/F −1(α(λ−k))
+a−2δ
+≍
+∞
+
+k=1
+x1−2δ
+log x ↿x=1/F −1(α(λ−k))
+Now we have f (x) = x/ log x, thus F(r) = rδ−1/ log(r−1) and F −1(x) ≍(x log x)1/(δ−1).
+So we can continue the computation as
+≍
+∞
+
+k=1
+x1−2δ
+log x ↿x=(y log y)1/(1−δ),y=α(λ−k)
+≍
+∞
+
+k=1
+(y log y)(1−2δ)/(1−δ)
+log y
+↿y=α(λ−k)
+≍
+∞
+
+k=1
+(y log y)(1−2δ)/(1−δ)
+log y
+↿y=(λ−k) .
+If this series converges for all α > 0, then so do ′
+α,1 and (by Lemma 4.8) 
+k μ(Jk,α,1),
+and thus by Lemma 4.7 we have Hψ(μ) = ∞. On the other hand, if the series diverges,
+then so does 
+k μ(Jk,α,1) for all α > 0, and thus by Lemma 4.7 we have Hψ(μ) = 0.
+Proof of Theorem 2.3. We can get bounds on the exact packing dimension of μP by using
+known results about the distribution of primes. First, we state the strongest known lower
+bound on two-sided gaps.
+THEOREM 5.2. [22] Let pn denote the nth prime and let dn = pn+1 −pn. For all k,
+lim sup
+n→∞
+min(dn+1, . . . , dn+k)
+φ(pn)
+> 0
+where φ is as in (2.2).
+https://doi.org/10.1017/etds.2024.57 Published online by Cambridge University Press
+
+
+--- PDF page 17 ---
+Exact dimension functions of the prime continued fraction Cantor set
+1773
+Let k = 2 and let (nℓ) be a sequence along which the limit superior is achieved, and
+let aℓ= pnℓ+2 ∈P for some ℓ∈N, so that P ∩B(aℓ, x) = {aℓ}, where x = cφ(aℓ) for
+some constant c > 0. Then we have
+′
+α,−1 ≳
+
+a∈P
+a−2δ log(1/−1(α−1x−δ#(P ∩B(a, x))))
+≥
+
+ℓ∈N
+a−2δ
+ℓ
+log(1/−1(α−1c−δφ(aℓ)−δ)).
+Let ψ(r) = rδφ−δ(log(1/r)) as in (2.3), so that (r) = φ−δ(log(1/r)) and −1(x) =
+exp(−φ−1(x−1/δ)). Note that
+φ−1(x) = log(1/−1(x−δ)) ≍ex
+log2 x
+x log log x ,
+and thus, letting α = c−δγ −δ,
+a−2δ log(1/−1(α−1c−δφ(a)−δ)) = a−2δφ−1(γ φ(a))
+≍a−2δaγ
+so that ′
+α,−1 diverges for γ >2δ. Combining with Lemmas 4.7 and 4.8 demonstrates (2.3).
+On the other hand, we use the lower bound of Hoheisel’s theorem (5.2) to get an upper
+bound on the exact packing dimension. Let θ = 21/40. Fix a ∈P and 1 ≤x ≤a/3, and
+let θ = 21/40 as in (5.1). If x ≥aθ, then we have
+x−δ#(P ∩B(a, x)) ≳x−δ
+x
+log(a) ≥a−θδ
+aθ
+log(a) ≳a−θδ,
+and if x ≤aθ, then we have
+x−δ#(P ∩B(a, x)) ≥x−δ ≥a−θδ.
+Thus, for appropriate c2 > 0,
+′
+α,−1 ≍
+
+a∈P
+a−2δ
+max
+1≤x≤a/3 log(1/−1(α−1x−δ#(P ∩B(a, x))))
+≤
+
+a∈P
+a−2δ log(1/−1(c2α−1a−θδ)).
+Letting
+ψ(r) = rδ log−s(1/r), (r) = log−s(1/r), −1(x) = exp(−x−1/s),
+we get
+′
+α,−1 ≲
+
+a∈P
+a−2δaθδ/s < ∞
+if θδ/s < 2δ −1
+Combining with Lemmas 4.7 and 4.8 demonstrates (2.4).
+https://doi.org/10.1017/etds.2024.57 Published online by Cambridge University Press
+
+
+--- PDF page 18 ---
+1774
+T. Das and D. S. Simmons
+Proof of Theorem 2.5. In what follows we assume the cases k = 1, 2 of Conjecture 2.4.
+From the case k = 1 of Conjecture 2.4, in particular from R1 < ∞, it follows that the gaps
+between primes have size dn = O(log2(pn)), and thus for all a ∈P and 1 ≤x ≤a/3,
+we have
+x−δ#(P ∩B(a, x)) ≳x−δ
+
+x
+log2(a)
++ 1
+
+≥x−δ
+
+x
+log2(a)
+δ
+=
+1
+log2δ(a)
+·
+(5.3)
+On the other hand, from the case k = 2, in particular R2 > 0, it follows that for
+an appropriate constant c > 0 there exists an inﬁnite set I ⊂P (that is, the set
+{pn+2 : min(dn+1, dn+2) ≥c log2(pn+2)} for an appropriate constant c > 0) such that
+for all a ∈I and 1 ≤x = xa = c log2(a) ≤a/3 we have P ∩B(a, x) = {a} and thus
+x−δ#(P ∩B(a, x)) = x−δ ≍
+1
+log2δ(a)
+.
+(5.4)
+Now let ψ(r) = rδ log−2δ log(1/r) be as in (2.5), so that (r) = log−2δ(1/r) and
+−1(x) = exp(−exp(x−1/2δ)). In particular, −1 is increasing. It follows that for
+appropriate C1 ≥1 ≥C2 > 0,
+[a ∈I] log
+
+1/−1
+
+α−1
+C1
+log2δ(a)
+
+≤
+(5.4)
+max
+1≤x≤a/3 log(1/−1(α−1x−δ#(B(a, x) ∩P )))
+≤
+(5.3)
+log
+
+1/−1
+
+α−1
+C2
+log2δ(a)
+
+,
+and plugging into (4.7) yields
+
+a∈I
+μ(a) log
+
+1/−1
+
+α−1
+C1
+log2δ(a)
+
+≤′
+α,−1 ≤
+
+a∈P
+μ(a) log
+
+1/−1
+
+α−1
+C2
+log2δ(a)
+
+.
+We get
+
+a∈I
+a−2δa(αC−1
+1 )1/2δ ≲′
+α,−1 ≲
+
+a∈P
+a−2δa(αC−1
+2 )1/2δ.
+By choosing α > 0 so that (αC−1
+2 )1/2δ < 2δ −1, we get ′
+α,−1 < ∞, and by choosing
+α > 0 so that (αC−1
+1 )1/2δ > 2δ, we get ′
+α,−1 = ∞. It follows then from Lemmas 4.7 and
+4.8 that Pψ(μ) is positive and ﬁnite.
+Acknowledgements.
+We dedicate this paper to our friend, collaborator, and teacher,
+Mariusz Urba´nski, on the occasion of his being awarded the 2023 Sierpi´nski Medal. The
+second-named author was supported by a Royal Society University Research Fellowship
+URF\R1\180649. We thank the referees for carefully checking the paper and making
+suggestions to improve the exposition.
+https://doi.org/10.1017/etds.2024.57 Published online by Cambridge University Press
+
+
+--- PDF page 19 ---
+Exact dimension functions of the prime continued fraction Cantor set
+1775
+REFERENCES
+[1]
+R. C. Baker, G. Harman and J. Pintz. The difference between consecutive primes. II. Proc. Lond. Math.
+Soc. (3) 83(3) (2001), 532–562.
+[2]
+C. Bandt and S. Graf. Self-similar sets. VII. A characterization of self-similar fractals with positive
+Hausdorff measure. Proc. Amer. Math. Soc. 114(4) (1992), 995–1001.
+[3]
+B. Bárány, K. Simon and B. Solomyak. Self-Similar and Self-Afﬁne Sets and Measures (Mathematical
+Surveys and Monographs, 276). American Mathematical Society, Providence, RI, 2023.
+[4]
+M. F. Barnsley. Fractals Everywhere. Academic Press, Boston, 1988.
+[5]
+V. Beresnevich and S. Velani. The divergence Borel–Cantelli lemma revisited. J. Math. Anal. Appl. 519(1)
+(2023), Paper no. 126750.
+[6]
+K. Chandrasekharan. Arithmetical Functions (Die Grundlehren der mathematischen Wissenschaften, 167).
+Springer-Verlag, Berlin, 1970.
+[7]
+V. Chousionis, D. Leykekhman and M. Urba´nski. On the dimension spectrum of inﬁnite subsystems of
+continued fractions. Trans. Amer. Math. Soc. 373(2) (2020), 1009–1042.
+[8]
+H. Cramér. On the order of magnitude of the difference between consecutive prime numbers. Acta Arith. 2
+(1936), 23–46.
+[9]
+F. M. Dekking. Recurrent sets. Adv. Math. 44(1) (1982), 78–104.
+[10] P. Erdös. On the difference of consecutive primes. Bull. Amer. Math. Soc. (N.S.) 54 (1948), 885–889.
+[11] K. Falconer. Techniques in Fractal Geometry. John Wiley & Sons, Chichester, 1997.
+[12] K. J. Falconer. Fractal Geometry: Mathematical Foundations and Applications. John Wiley & Sons,
+Chichester, 1990.
+[13] S. Graf, R. D. Mauldin and S. C. Williams. The exact Hausdorff dimension in random recursive
+constructions. Mem. Amer. Math. Soc. 71(381) (1988), x+121pp.
+[14] A. Granville. Harald Cramér and the distribution of prime numbers. Scand. Actuar. J. 1995(1) (1995),
+12–28; Harald Cramér Symposium (Stockholm, 1993).
+[15] A. Granville. Unexpected irregularities in the distribution of prime numbers. In Proceedings of the
+International Congress of Mathematicians , Vols. 1, 2 (Zürich, 1994). Ed. S. D. Chatterji. Birkhäuser, Basel,
+1995, pp. 388–399.
+[16] G. H. Hardy. Properties of logarithmic-exponential functions. Proc. Lond. Math. Soc. (2) 10 (1911), 54–90.
+[17] G. H. Hardy. Orders of Inﬁnity. The Inﬁnitärcalcül of Paul du Bois-Reymond (Cambridge Tracts in
+Mathematics and Mathematical Physics, 12). Hafner Publishing Co., New York, 1971.
+[18] D. Hensley. Continued Fractions. World Scientiﬁc Publishing Co., Hackensack, NJ, 2006.
+[19] G. Hoheisel. Primzahlprobleme in der Analysis. Sitz. Preuss. Akad. Wiss. 33 (1930), 580–588.
+[20] J. E. Hutchinson. Fractals and self-similarity. Indiana Univ. Math. J. 30(5) (1981), 713–747.
+[21] S. T. Lou and Q. Yao. A Chebychev’s type of prime number theorem in a short interval. II.
+Hardy-Ramanujan J. 15 (1992), 1–33 (1993).
+[22] H. Maier. Chains of large gaps between consecutive primes. Adv. Math. 39(3) (1981), 257–269.
+[23] R. D. Mauldin. Some problems and ideas of Erdös in analysis and geometry. Erdös Centennial (Bolyai
+Society Mathematical Studies, 25). Ed. L. Lovász, I. Z. Ruzsa and V. T. Sós. János Bolyai Mathematical
+Society, Budapest, 2013, pp. 365–376.
+[24] R. D. Mauldin and M. Urba´nski. Dimensions and measures in inﬁnite iterated function systems. Proc. Lond.
+Math. Soc. (3) 73(1) (1996), 105–154.
+[25] R. D. Mauldin and M. Urba´nski. Conformal iterated function systems with applications to the geometry of
+continued fractions. Trans. Amer. Math. Soc. 351(12) (1999), 4995–5025.
+[26] R. D. Mauldin and M. Urba´nski. Graph Directed Markov Systems: Geometry and Dynamics of Limit Sets
+(Cambridge Tracts in Mathematics, 148). Cambridge University Press, Cambridge, 2003.
+[27] L. Olsen and D. L. Renfro. On the exact Hausdorff dimension of the set of Liouville numbers. II.
+Manuscripta Math. 119(2) (2006), 217–224.
+[28] Y. Peres. The packing measure of self-afﬁne carpets. Math. Proc. Cambridge Philos. Soc. 115(3) (1994),
+437–450.
+[29] Y. Peres. The self-afﬁne carpets of McMullen and Bedford have inﬁnite Hausdorff measure. Math. Proc.
+Cambridge Philos. Soc. 116(3) (1994), 513–526.
+[30] J. Pintz. Cramér vs. Cramér. On Cramér’s probabilistic model for primes. Funct. Approx. Comment. Math.
+37(part 2) (2007), 361–376.
+[31] J. Pintz. Landau’s problems on primes. J. Théor. Nombres Bordeaux 21(2) (2009), 357–404.
+[32] C. A. Rogers and S. J. Taylor. The analysis of additive set functions in Euclidean space. Acta Math. 101
+(1959), 273–302.
+[33] A. Schief. Separation properties for self-similar sets. Proc. Amer. Math. Soc. 122(1) (1994), 111–115.
+https://doi.org/10.1017/etds.2024.57 Published online by Cambridge University Press
+
+
+--- PDF page 20 ---
+1776
+T. Das and D. S. Simmons
+[34] D. Simmons. On interpreting Patterson–Sullivan measures of geometrically ﬁnite groups as Hausdorff and
+packing measures. Ergod. Th. & Dynam. Sys. 36(8) (2016), 2675–2686.
+[35] K. Simon, B. Solomyak and M. Urba´nski. Invariant measures for parabolic IFS with overlaps and random
+continued fractions. Trans. Amer. Math. Soc. 353(12) (2001), 5145–5164.
+[36] B. O. Stratmann and S. L. Velani. The Patterson measure for geometrically ﬁnite groups with parabolic
+elements, new and old. Proc. Lond. Math. Soc. (3) 71(1) (1995), 197–220.
+[37] D. P. Sullivan. Entropy, Hausdorff measures old and new, and limit sets of geometrically ﬁnite Kleinian
+groups. Acta Math. 153(3–4) (1984), 259–277.
+[38] S. J. Taylor. The measure theory of random fractals. Math. Proc. Cambridge Philos. Soc. 100(3) (1986),
+383–406.
+[39] S. J. Taylor and C. TricotJr. Packing measure, and its evaluation for a Brownian path. Trans. Amer. Math.
+Soc. 288(2) (1985), 679–699.
+https://doi.org/10.1017/etds.2024.57 Published online by Cambridge University Press

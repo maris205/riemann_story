@@ -23,7 +23,7 @@ def counts():
  foot(f,'同一证明框架分别给出：简单在线比例 ≥ 2−R；不同位置比例 ≥ (3−R)/2（渐近）。','优化窗对应约67.25%与83.625%。第二个界不是仅由第一个界推出；重零点不必只有二重。')
  save(f,'multiplicity_counting_units')
 def symmetry():
- f=base('假设一个离线零点，对称性带来什么？','第17章 · ζ 的非平凡零点对称；四个空心点仅为假设位置，不是已发现的零点')
+ f=base('假设一个离线零点，对称性带来什么？','第18章 · ζ 的非平凡零点对称；四个空心点仅为假设位置，不是已发现的零点')
  a=f.add_axes([.14,.25,.72,.53],facecolor=BG);a.set_xlim(0,1);a.set_ylim(-1,1);a.axvline(.5,color=TEAL,lw=2,ls='--');a.axhline(0,color=MUTED,lw=1);a.spines[['top','right','left']].set_visible(False);a.set_yticks([]);a.set_xticks([0,.3,.5,.7,1],['0','1−σ','1/2','σ','1']);a.tick_params(labelsize=16)
  pts=[(.7,.6,r'$\rho=\sigma+i\gamma$'),(.3,.6,r'$1-\bar\rho$'),(.7,-.6,r'$\bar\rho$'),(.3,-.6,r'$1-\rho$')]
  for x,y,l in pts:a.scatter([x],[y],s=150,facecolors=BG,edgecolors=GOLD,lw=2.5);a.text(x,y+(.15 if y>0 else -.23),l,ha='center',fontsize=24,color=NAVY)
@@ -32,7 +32,7 @@ def symmetry():
  foot(f,'上方镜像对是 ρ 与 1−共轭ρ；再取复共轭，得到下半平面的对应点。','图取σ=0.7、γ=0.6仅作布局。关于1/2的对称性让右侧无零结论传到左侧；并不自行排除这些假设点。')
  save(f,'zero_symmetry_quartet')
 def envelope():
- f=base('实部，决定一项振荡的增长尺度','第17章 · 显式公式的直觉：先看单个零点项，不把它当作全部误差')
+ f=base('实部，决定一项振荡的增长尺度','第18章 · 显式公式的直觉：先看单个零点项，不把它当作全部误差')
  a=f.add_axes([.085,.27,.48,.49],facecolor=BG);x=np.geomspace(2,1000,200)
  a.loglog(x,x**.875,color=GOLD,lw=2.5,label='β = 7/8');a.loglog(x,x**.5,color=TEAL,lw=2.5,label='β = 1/2');a.legend(frameon=False,fontsize=16);a.spines[['top','right']].set_visible(False);a.set_xlabel('x（对数刻度）');a.set_ylabel('归一化振幅 x^β（对数刻度）');a.grid(alpha=.12)
  b=panel(f,[.61,.27,.33,.49]);txt(b,.5,.92,r'$\rho=\beta+i\gamma$',26);txt(b,.5,.69,r'$x^\rho=x^\beta e^{i\gamma\log x}$',26)

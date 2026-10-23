@@ -1,0 +1,2095 @@
+S´eminaire BOURBAKI
+Janvier 2026
+78e ann´ee, 2025–2026, n° 1247
+DERIVATION OF THE BOLTZMANN EQUATION
+FROM HARD-SPHERE DYNAMICS
+[after Y. Deng, Z. Hani, and X. Ma]
+by Thierry Bodineau, Isabelle Gallagher,
+Laure Saint-Raymond & Sergio Simonella
+Contents
+Introduction. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+1
+1. The Boltzmann equation. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+3
+2. Short time derivation. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+7
+3. Proof of Lanford’s theorem using cluster expansions. . . . . . . . . . . . . . . . 12
+4. Long time derivation. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 22
+5. Consequences and perspectives. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 34
+References. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 35
+Introduction
+The Boltzmann equation describes the time evolution of the particle density of a
+collisional rarefied gas in the position and velocity phase space. Its success, together
+with the kinetic theory it gave rise to, represents an undisputed achievement in physics.
+In this note we present the result by Deng, Hani, and Ma (2024), who derive the
+Boltzmann equation starting from a microscopic system of hard spheres, for times much
+larger than the mean free time (the average time between two collisions of a given
+particle): the derivation holds on the same time interval on which there is a smooth
+solution of the Boltzmann equation.
+Let us start by describing the main theorem informally. A precise statement requires
+a number of definitions and will appear on page 23 (Theorem 4.1). Consider N hard
+spheres moving in Rd, initially “independent” and identically distributed according to
+a distribution f 0 = f 0(x, v). Assume that the Boltzmann equation with initial data f 0
+admits a smooth solution f on a time-span [0, T]. Then, for any t ∈[0, T], the (random)
+fraction of hard spheres in any set ∆⊂R2d converges in probability to
+Z
+∆f(t), in the
+limit when the number of particles N →∞and their diameter ε →0 in such a way
+that the mean free time is of order 1.
+The problem of deriving the Boltzmann equation from microscopic systems has been
+addressed by many authors in the past century. An initial key step is the enlightening
+arXiv:2602.04407v2  [math.AP]  14 Oct 2026
+
+
+1247–02
+work of Grad (1958) on the low-density scaling, where he wrote down an effective
+differential equation for the first correlation function in the low-density regime. The
+first mathematical result on this problem goes back to Cercignani (1972) and to the
+celebrated theorem of Lanford (1975), who proved that in the special case of the hard-
+sphere system, the asymptotic factorisation of the correlation functions (known in kinetic
+theory as the propagation of chaos property) can be established by a careful study of
+trajectories. In particular, Lanford demonstrated that there is no contradiction between
+the reversibility in the microscopic laws of mechanics and the irreversibility exhibited by
+Boltzmann’s equation. The proof was an important breakthrough and after a number of
+subsequent works until the early 2000’s, the details of the argument were completed and
+the result refined and generalized(1). The main limitation of the method — unsurpassed
+until the work of Deng, Hani and Ma except for some specific settings(2) is that the
+result is only valid for a very short time: essentially a small fraction of the mean free
+time(3). The reason for this drawback is that the method of proof consists in expanding
+the correlation functions into time series, which only converge for short times. Actually,
+the Boltzmann equation is itself very difficult to study mathematically and the existence
+and uniqueness of solutions for long times is only known in specific settings. This lack
+of stability is due to the locality of the interaction, which is also one of the reasons why
+it is so difficult to prove the convergence of the microscopic dynamics.
+Deng, Hani and Ma were able, fifty years after the seminal paper by Lanford, to
+go beyond the short time restriction and to prove the long-awaited result that the
+convergence of the hard-sphere dynamics holds up to any time for which the Boltzmann
+equation has a smooth solution.
+Important ideas for this proof have already been
+devised in the series of works by Deng and Hani (2023a, 2026, 2023b) to derive a kinetic
+equation in the context of wave turbulence on long times (see Remark 4.4 for some
+comments).
+In this paper, we present some of the key ideas of the proof of Deng, Hani, and Ma
+(2024). In Section 1 we introduce the Boltzmann equation and present some classical
+well-posedness results and their limitations. Section 2 is devoted to the presentation of
+the short time derivation result by Lanford (Theorem 2.1). A pictorial sketch of proof
+of Lanford’s theorem is provided in Section 3: this somewhat unusual presentation is
+(1)See Spohn (1991), Cercignani, Illner, and Pulvirenti (1994), Cercignani, Gerasimenko, and Pet-
+rina (1997), Matthies and Theil (2012) Gallagher, Saint-Raymond, and Texier (2014), Pulvirenti,
+Saffirio, and Simonella (2014), Ayi (2017), Gerasimenko and Gapyak (2021), Le Bihan (2022), Dolmaire
+(2023), Dolmaire and Saffirio (2024).
+(2)Perturbation of vacuum in (Illner and Pulvirenti, 1989; Denlinger, 2018), tagged particle at equilib-
+rium in (van Beijeren, Lanford, Lebowitz, and Spohn, 1980; Bodineau, Gallagher, and Saint-Raymond,
+2016; Catapano, 2018; Foug`eres, 2024) or fluctuations around equilibrium in (Bodineau, Gallagher,
+Saint-Raymond, and Simonella, 2023a, 2024b; Le Bihan, 2025a,b).
+(3)To keep in mind the order of physical magnitudes, for a gas at room temperature and atmospheric
+pressure the mean free time is of the order of 10−9 seconds, while the mean free path is of the order of
+10−5 meters.
+
+
+1247–03
+designed as a preparation to the presentation of the proof of the theorem by Deng, Hani
+and Ma (Theorem 4.1), which is provided in Section 4. Some consequences of the result,
+and perspectives, are given in Section 5.
+Acknowledgements. — We are very grateful to Fran¸cois Golse, Mario Pulvirenti, Herbert
+Spohn and Isabelle Tristani for useful comments on a previous version of this manuscript.
+We especially thank Nicolas Bourbaki for a very thorough reading and many suggestions.
+S.S. acknowledges funding from the European Union (ERC CoG KiLiM, 101125162).
+1. The Boltzmann equation
+The Boltzmann equation, devised by Boltzmann in 1872, is the cornerstone of kinetic
+theory. It provides a statistical description of a gas constituted of identical particles
+moving in the d-dimensional space Rd (d = 2, 3) with uniform rectilinear motion between
+each elastic binary collision (see Section 2.1 below for more).
+Under the assumption that the particles are independent and identically distributed
+(this is referred to as the “chaos assumption”), their common distribution f is expected
+to be a real-valued function depending on t ∈R (time), x ∈Rd (position) and v ∈Rd
+(velocity) satisfying the Boltzmann equation
+(1)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+∂tf(t, x, v)+v · ∇xf(t, x, v)
+|
+{z
+}
+transport
+=
+Z
+Rd×Sd−1
+
+f(t, x, v′
+⋆)f(t, x, v′)
+|
+{z
+}
+gain term
+−f(t, x, v⋆)f(t, x, v)
+|
+{z
+}
+loss term
+
+×
+
+(v −v⋆) · ω
+
++ dv⋆dω ,
+f(0, x, v) = f 0(x, v)
+where the “pre-collisional” velocities (v′, v′
+⋆) in the “gain” term on the right-hand side
+are defined by the scattering laws
+(2)
+v′ := v −
+
+(v −v⋆) · ω
+
+ω ,
+v′
+⋆:= v⋆+
+
+(v −v⋆) · ω
+
+ω .
+v′
+v′
+∗
+v∗
+v
+ω
+Figure 1. The hard-sphere scattering law.
+
+
+1247–04
+Note that
+(3)
+v + v⋆= v′ + v′
+⋆,
+|v|2 + |v⋆|2 = |v′|2 + |v′
+⋆|2 ,
+which express the fact that collisions are elastic and thus momentum and energy are
+conserved during collisions. The initial value of f is prescribed to be a given function f 0.
+We have used the notation a+ for max(0, a).
+In the following we shall use the shorthand notation
+f⋆:= f(v⋆) ,
+f ′ := f(v′)
+and
+f ′
+⋆:= f(v′
+⋆) ,
+so that the right-hand side of (1) becomes
+(4)
+Q(f, f)(v) :=
+Z 
+f ′f ′
+⋆−ff⋆
+
+(v −v⋆) · ω
+
++ dv⋆dω .
+1.1. Conservation laws and H-Theorem
+From (3) and using the well-known fact (see for instance Cercignani, 1972) that the
+mappings (v, v⋆) 7→(v⋆, v) and (v, v⋆, ω) 7→(v′, v′
+⋆, ω) have unit Jacobian determinants,
+one can show formally that for any test function φ defined on Rd, and with the notation
+introduced at the end of the previous paragraph,
+Z
+Q(f, f) φ dv = 1
+4
+Z
+[f ′f ′
+⋆−ff⋆](φ + φ⋆−φ′ −φ′
+⋆)
+
+(v −v⋆) · ω
+
++ dv dv⋆dω .
+In particular, it can be shown that
+Z
+Q(f, f)φ dv = 0
+for all f regular enough
+if and only if φ(v) is a collision invariant, meaning that φ(v) is a linear combination
+of {1, v1, . . . , vd, |v|2}. Thus, successively multiplying the Boltzmann equation (1) by
+the collision invariants and then integrating in velocity gives rise formally to the local
+conservation laws:
+∂t
+Z
+f(t, x, v) dv + ∇x ·
+Z
+f(t, x, v)v dv = 0 ;
+∂t
+Z
+f(t, x, v)v dv + ∇x ·
+Z
+f(t, x, v)v ⊗v dv = 0 ;
+∂t
+Z
+f(t, x, v)|v|2
+2 dv + ∇x ·
+Z
+f(t, x, v)|v|2
+2 v dv = 0 .
+The second line should be understood component-wise as
+∀1 ≤i ≤d ,
+∂t
+Z
+f(t, x, v)vi dv +
+d
+X
+j=1
+∂j
+Z
+f(t, x, v)vivj dv = 0 .
+Taking φ = log f and using the additivity of the logarithm shows that the collision
+operator is dissipative in the sense that
+D(f) := −
+Z
+Q(f, f) log f dx dv ≥0
+
+
+1247–05
+with equality if and only if log f is a collision invariant. This leads to the entropy
+inequality
+(5)
+Z
+f log f(t, x, v) dx dv +
+Z t
+0 D(f)(s) ds ≤
+Z
+f 0 log f 0(x, v) dx dv ,
+known since Boltzmann as the H-Theorem. Note that this increase in the entropy,
+defined by
+Z
+−f log f(t, x, v)dxdv (which is strict unless f is an equilibrium, i.e. a
+spatially homogeneous Gaussian distribution) reflects the fact that Boltzmann’s equation
+is time irreversible, in contrast with the particle system: we refer to Paragraph 1.3 below
+for more on this point.
+1.2. Existence theories
+In this paragraph we give a short presentation of three approaches to solving the
+Cauchy problem (1): the question is to know whether given f 0, there exists a unique
+solution to the equation, and what is its life span.
+Renormalised solutions. — For many partial differential evolution equations, a natural
+approach to constructing solutions is to exploit the a priori controls provided by the
+equation in order to design an approximation scheme.
+We have presented in the previous paragraph the conservation laws associated with
+the Boltzmann equation (1). Unfortunately such a priori information on the solution,
+typically the log-linear bound (5) — also known as an L log L bound — is not sufficient
+to make sense of the collision term which is quadratic. By introducing a notion of
+renormalised solution (a function with bounded entropy satisfying a formally equivalent
+equation obtained by taming concentrations) and exploiting the entropy inequality (5),
+DiPerna and Lions (1989) nevertheless succeeded in proving the global existence of
+renormalised solutions to (1). However, their uniqueness is not known to date, nor the
+fact that they satisfy (1) even in the sense of distributions.
+Fixed-point methods. — In such a situation where the a priori bound does not provide
+enough information to conclude, the strategy usually employed is to change perspective
+and consider the PDE as a fixed point problem to be solved. More precisely, using the
+so-called Duhamel formula we can rewrite the equation (1) in integrated form:
+(6)
+f(t) = Stf 0 + Bt
+
+f(t), f(t)
+
+,
+Bt
+
+f(t), f(t)
+
+:=
+Z t
+0 St−sQ
+
+f(s), f(s)
+
+ds,
+where St is the free transport operator that attaches to any function g on R2d the
+function
+Stg(x, v) := g(x −vt, v) .
+Solving (6) reduces to looking for a Banach space in which the operators St and Bt
+operate continuously. A typical result, based on the Cauchy-Kowalewskaya theorem
+(as in Treves (1970) or Nirenberg (1972) for instance) states that if f 0 is a continuous
+
+
+1247–06
+function in a weighted space L∞
+β in velocities, meaning that f 0 is continuous on R2d
+and satisfies
+(7)
+∥f0∥L∞
+β :=
+f0 exp(β
+2 |v|2)
+
+L∞(R2d) < ∞
+for some β > 0, then there exists a constant Cβ > 0 (depending only on β) such that
+the solution of (6) has a unique continuous solution on [0, T], with
+T =
+Cβ
+f0 exp(β
+2|v|2)
+
+L∞(R2d)
+·
+Actually not only is the solution continuous, but it is also stable with respect to perturba-
+tions of the initial data, in the same function space. We refer for instance to Kaniel and
+Shinbrot (1978) for a result of this type. Unlike the renormalised solutions framework
+presented above, this type of result does not make any use of the particular structure
+of the nonlinear term (especially of the cancellations between the gain and loss terms):
+it suffices for the nonlinear term to be quadratic and to produce a linear loss in velocity
+(actually this loss is triggered by the defect of integrability in (4) for large relative
+velocities v −v∗).
+To exaggerate somewhat, by this method one is roughly solving an equation of the
+type
+∂tf = f 2 .
+Such an equation is of course known to have a solution blowing up in finite time, so
+the only way to improve the well-posedness of (6) is to use more information on the
+structure of the nonlinear term.
+Perturbative methods. — Using the entropy seems difficult as it provides too little a
+priori smoothness and decay on the solution, so a third strategy consists in exploit-
+ing known global solutions and then to act perturbatively. For instance, since the
+Maxwellian
+Mβ(v) := βd/2
+(2π)
+d
+2 exp
+ 
+−β |v|2
+2
+!
+is a stationary solution, one can try to solve (6) in the vicinity of Mβ. Assuming the
+initial data takes the form
+f 0 = Mβ(1 + g0)
+with g0 smooth and small enough in an appropriate function space (with strong enough
+decay in velocities), then one can produce a unique solution f(t) = Mβ(1 + g(t)) for
+all positive times (Ukai, 1974). This approach crucially uses the fact that the collision
+operator 2Q(Mβ, ·) is coercive in L2(M −1
+β dv), which is inherited from the dissipative
+nature of the equation. Another possibility is considering solutions which do not depend
+on the space variable (Carleman, 1932).
+
+
+1247–07
+1.3. The Loschmidt paradox and the loss of information
+What went down in history as the most famous criticism of Boltzmann’s theory is
+an argument due to Loschmidt (1876) (see Cercignani, 1998, for an historical account).
+It confronts two indisputable facts: the microscopic laws of classical mechanics are
+reversible, yet the kinetic world displays an arrow of time, as the H-Theorem indeed
+shows.
+The apparent contrast can be interpreted as related to information: the irreversible
+evolution corresponds to a gradual loss of microscopic detail. Entropy measures the
+level of information, and the entropy production quantifies the amount of information
+discarded when the complete microscopic state of the particle system is replaced by a
+reduced statistical description.
+In fact, a mathematical investigation of the transition from particle systems to the
+kinetic description allows one to complement this discussion with a more pragmatic
+perspective. It allows indeed to quantify the defect of chaos (see Section 3.2 below), and
+to relate the entropy production to the growth of microscopic correlations (see Spohn,
+1997).
+2. Short time derivation
+In this section we shall present Lanford’s theorem, which ensures the validity of the
+Boltzmann equation (1) starting with a system of hard spheres, for a short time. It also
+provides a control on correlations, and therefore on the chaos approximation, i.e. the
+asymptotic factorisation of the correlation functions.
+2.1. The hard-sphere system and the Liouville equation
+We assume throughout that the gas is made of small identical particles, which are
+spheres of diameter ε ≪1 interacting only through contact (see Figure 2). This is
+referred to as a hard-sphere gas. If the gas consists of N particles, its state is described by
+vi(t−)
+vj(t−)
+vj
+vi
+vi(t+)
+vj(t+)
+εω = xi(t) −xj(t)
+Figure 2. The hard-sphere dynamics and the deflection condition.
+
+
+1247–08
+the collection (x1, . . . , xN) ∈RdN of their positions and the collection (v1, . . . , vN) ∈RdN
+of their velocities. Knowing the state of the gas at a certain instant (say t = 0), we
+can describe its state at any time t ∈R by solving the following system of ordinary
+differential equations:
+(8)
+dxi
+dt = vi ,
+dvi
+dt = 0
+as long as |xi(t) −xj(t)| > ε
+for 1 ≤i̸ = j ≤N ,
+with specular reflection condition at each collision: if |xi(t) −xj(t)| = ε, then
+(9)
+
+
+
+vi(t+) := vi(t−) −
+
+(vi(t−) −vj(t−)) · ω
+
+ω
+vj(t+) := vj(t−) +
+
+(vi(t−) −vj(t−)) · ω
+
+ω
+where ω := (xi(t) −xj(t))/ε is the unit vector in the direction of the relative positions
+at the collision time t.
+As pointed out in (2)-(3), this condition ensures that the
+collisions are elastic: momentum and energy are conserved. Note that (8) has a unique
+global solution
+
+(x1, . . . , xN)(t), (v1, . . . , vN)(t)
+
+outside a set of initial data which has
+Lebesgue measure zero (see Alexander, 1976, for example).
+The dynamics of the particles is deterministic, and we choose the initial state of the
+gas randomly following a grand-canonical formalism (see, for example, Ruelle, 1969).
+The grand-canonical formalism is known to be technically convenient when dealing with
+correlations at low density (see van Beijeren, Lanford, Lebowitz, and Spohn, 1980).
+We therefore assume that the number of particles N in the gas is random, with a
+Poisson-like distribution with parameter µε > 0 to be determined. Given N particles,
+we denote by xN := (x1, . . . , xN) in RdN the vector representing the position of each of
+these particles and by vN := (v1, . . . , vN) in RdN the vector representing their velocities.
+We set zN := (xN, vN). As a shorthand notation we shall write also zH for the set (zi)i∈H
+when H is a subset of {1, . . . , N}. For simplicity let us assume that the initial density
+distribution W ε,0
+N corresponds to almost independent and identically distributed particles
+(10)
+1
+N!W ε,0
+N (zN) := 1
+Zε
+µN
+ε
+N! 1D ε
+N(zN)
+N
+Y
+i=1
+f 0(zi) ,
+where D ε
+N encodes the exclusion condition
+D ε
+N :=
+
+zN ∈R2dN : |xi −xj| > ε ∀i̸ = j
+
+and the partition function is defined by
+(11)
+Zε := 1 +
+X
+N≥1
+µN
+ε
+N!
+Z
+D ε
+N
+dzN
+N
+Y
+i=1
+f 0(zi) .
+Note that the small correlation due to the initial exclusion is harmless in the analysis
+that will follow and we will ignore it most of the time. The distribution of a single
+particle f 0 is assumed to be a continuous and Lipschitz probability density on R2d
+satisfying (7) for some β > 0.
+
+
+1247–09
+The probability of an event A relative to the measure (10) will be denoted by Pε(A),
+and Eε will be the expectation. In particular, the expectation of the number of parti-
+cles N is determined asymptotically by µε in the sense that
+lim
+ε→0 µ−1
+ε Eε[N] = 1 .
+We assume from now on that the gas is dilute by setting
+(12)
+µε = ε−(d−1) .
+Since the size of a cylinder based on a sphere of diameter ε is proportional to εd−1,
+this choice of scaling guarantees that the mean free time between collisions of a given
+particle is of the order of one, meaning that it is essentially independent of ε.
+The Newtonian system satisfied by the particles translates, at the level of the distri-
+bution function W ε
+N(t) for all times t, into the following Liouville equation
+(13)
+∂tW ε
+N + vN · ∇xNW ε
+N = 0
+in
+D ε
+N ,
+with specular reflection condition at the boundary of D ε
+N.
+2.2. Lanford’s theorem
+We are interested in the typical behaviour of a particle in the hard-sphere gas. We
+recall that, according to the grand-canonical description given in Section 2.1, the ran-
+domness comes through the initial configuration of particles (z1(0), · · · , zN(0)), chosen
+according to the probability measure (10). The main object of investigation becomes
+then the discrete random field
+(14)
+Πε(h, t) := 1
+µε
+N
+X
+i=1
+h(zi(t))
+defined on bounded test functions h ∈C0(R2d). This random field is introduced, by
+following the original intuition of Boltzmann, to “count” the number of particles in little
+boxes of the one-particle phase space R2d. The scope of Lanford’s theorem is to prove
+a law of large numbers for this random field; namely that its distribution concentrates,
+as ε →0, to the deterministic limit driven by the Boltzmann equation:
+(15)
+Πε(h, t) →
+Z
+R2d f(t)h(x, v)dxdv .
+To do this, we are led to study the first and second moments of Πε, that means in
+particular computing the expectation (with respect to (10))
+(16)
+Eε [Πε(h, t)] =:
+Z
+R2d f ε
+1(t, x, v)h(x, v) dxdv
+where the right hand side defines the first correlation function f ε
+1. Due to the invariance
+under permutations of the density distribution W ε
+N(t), it is not hard to see that this
+amounts to studying its projection on the one-particle space:
+(17)
+f ε
+1(t, z1) = 1
+µε
+∞
+X
+p=0
+1
+p!
+Z
+dz2 . . . dzp+1 W ε
+p+1(t, zp+1) .
+
+
+1247–10
+The evolution of f ε
+1(t) over time is therefore dictated by that of W ε
+N(t) for all integers N.
+It is also easy to see that the equation satisfied by f ε
+1 is not closed : if we define the
+correlation function of order k to be the joint probability of k typical, selected particles
+(18)
+Eε
+ 1
+µk
+ε
+X
+(i1,i2,...ik)
+h
+
+zi1(t), zi2(t), . . . zik(t)
+
+=:
+Z
+R2dk f ε
+k(t, z1, . . . zk)h(z1, . . . , zk) dz1 . . . dzk
+then the equation satisfied by f ε
+1 involves the second correlation function f ε
+2, whose
+equation itself involves f ε
+3, and so on. We more generally obtain that the equation on f ε
+k
+can be written
+(19)
+∂tf ε
+k + vk · ∇xkf ε
+k = Cε
+k,k+1f ε
+k+1
+in
+Dε
+k ,
+with a specular reflection condition at the boundary of Dε
+k.
+This set of equations
+on (f ε
+k)k≥1 is referred to as the BBGKY hierarchy. The collision operator Cε
+k,k+1 comes
+from the boundary term in Green’s formula and is defined as follows:
+(20)
+(Cε
+k,k+1f ε
+k+1)(zk) :=
+k
+X
+i=1
+Z
+f ε
+k+1(z⟨i⟩
+k , xi, v′
+i, xi + εω, w′)
+
+(w −vi) · ω
+
++ dωdw
+−
+Z
+f ε
+k+1(z⟨i⟩
+k , xi, vi, xi + εω, w)
+
+(w −vi) · ω
+
+−dωdw ,
+where (v′
+i, w′) is recovered from (vi, w) through the scattering laws (9), and with the
+notation
+z⟨i⟩
+k := (z1, . . . , zi−1, zi+1, . . . , zk) .
+Note that if C1,2 denotes the formal limit of Cε
+1,2 as ε goes to zero, then the right-hand
+side Q(f, f) of the Boltzmann equation (4) is none other than C1,2(f ⊗2).
+The key result derived by Lanford (1975) is the convergence for short times of f ε
+1(t)
+to f(t), the solution of the Boltzmann equation with initial data f 0.
+Theorem 2.1 (Lanford, 1975). — Under assumption (7), there exists a time TL > 0
+depending on C0 and β such that, for any t ∈[0, TL],
+(21)
+lim
+ε→0 f ε
+1(t) = f(t)
+uniformly in R2d.
+Remark 2.2 (More on Lanford’s convergence result). — The formula (10) for the initial
+data is a specific choice, which is adopted here merely for the sake of simplicity. Lanford
+(1975, 1976) discussed the initial conditions much more thoroughly. He gave conditions
+characterising a typical initial state for which Theorem 2.1 holds.
+The convergence (21) actually holds in a weighted space similar to (7) but with a
+deteriorated parameter β (indeed f ε
+1(t) is shown to decay as Mβ(t) with β(t) decaying
+linearly in time).
+
+
+1247–11
+Remark 2.3 (On the propagation of chaos). — Since the evolution of f ε
+1 involves the
+whole BBGKY hierarchy, the proof actually shows that f ε
+k(t) converges to f ⊗k(t) on the
+same time interval, almost everywhere in R2dk: the initial chaos property f ε
+k(0) ∼(f 0)⊗k
+satisfied by (10) is therefore asymptotically preserved on [0, TL]. Using that, for k ≥2,
+the correlation functions are linked to the higher order moments of the field Πε, this im-
+plies also the stronger statement (15), i.e. the convergence in probability of the empirical
+measure (see Spohn, 1991).
+Nowadays, we are able to control much more detailed information about the random
+field Πε, such as its local Poissonian statistics, small fluctuations (including a central
+limit theorem), and large deviations from the typical behavior; see Section 5 for related
+considerations.
+Remark 2.4 (On the time restriction). — The main drawback of the result is the time
+restriction TL: it can be checked that this time is of the same order as the time T on
+which a fixed point method allows to solve the Boltzmann equation (see Section 1.2).
+The achievement of the main result presented in this paper (Theorem 4.1 below) is
+that TL can be replaced by the time on which the Boltzmann equation has a smooth
+solution, regardless of the way such a solution is constructed. See Section 4 for more
+on this.
+2.3. A strategy of the proof
+Lanford’s proof, progressively refined and made more quantitative by many authors
+over the years, is nowadays a classical argument in perturbation theory: we refer for
+instance to Uchiyama (1988), Spohn (1991), Cercignani, Illner, and Pulvirenti (1994),
+Cercignani, Gerasimenko, and Petrina (1997), Ukai (2001), Gallagher, Saint-Raymond,
+and Texier (2014), and Pulvirenti, Saffirio, and Simonella (2014). The original proof is
+built upon the hard-sphere hierarchy (19). The guiding idea is:
+(0′) Express the correlation function f ε
+1(t) in terms of the initial correlation func-
+tions f ε
+k(0), using a series expansion in “collision histories”, labelled by binary tree
+graphs, obtained by iterating the Duhamel formula associated with (19) backwards
+in time. Each term corresponds to the backward flow of a finite group of particles
+that are successively added in a collisional configuration and then evolve under the
+reduced hard-sphere dynamics.
+The argument then proceeds in three steps.
+(1′) Prove that, for sufficiently short times, the series expansion of f ε
+1(t) constructed
+in Step (0′) is absolutely convergent, uniformly in ε, in weighted L∞spaces such
+as (7).
+(2′) Prove that in the low-density scaling (12), almost all collision histories have no
+recollision, meaning that no collision occurs other than the ones prescribed by the
+collision tree constructed in Step (0′).
+
+
+1247–12
+(3′) The rest of the argument is simple: neglecting recollisions, the measure of which
+tends to zero, one sees that the expansion reduces termwise to the iterated Duhamel
+formula for the Boltzmann equation, and by inspection that f ε
+k(t) →f ⊗k(t) when
+ε →0.
+The proof we present in Section 3 below is not the original proof by Lanford, though
+the two proofs share many similarities. The main difference lies in the way the func-
+tions f ε
+k(t) are explicitly represented. In place of a backward iterated formula, the
+guiding idea is a cluster expansion of trajectories as in (Bodineau, Gallagher, Saint-
+Raymond, and Simonella, 2022), in turn inspired from previous work on cumulant
+methods (Pulvirenti and Simonella, 2017; Bodineau, Gallagher, Saint-Raymond, and
+Simonella, 2023b). The plan is the following:
+(0) Implement a dynamical cluster expansion associated to the hard-sphere dynamics.
+This leads to express f ε
+k(t) as an expansion over cluster trajectories labelled by
+complex collision graphs (encoding all possible interactions between the particles).
+(1) Obtain uniform bounds on the expansion (as in (1′) above).
+(2) Reduce to minimally connected (tree) graphs, by showing that one can discard
+recollisions. This implies the chaos property as in (2′) above.
+(3) Identify the Boltzmann equation after the limit ε →0.
+Overall, the cluster expansion strategy is more complicated than Lanford’s original
+method. In fact, it requires to understand and exploit subtle cancellations among graphs
+with different signs (both in Steps (1) and (3)). The interest of presenting this strategy
+is that it prepares for the proof of the main result of this paper in Section 4, which will
+overcome the time restriction to [0, TL] arising from Step (1).
+3. Proof of Lanford’s theorem using cluster expansions
+3.1. A pictorial proof of Steps (0) to (3)
+In this paragraph, we provide pictorial explanations of the main steps of the proof of
+Theorem 2.1. For more details, we refer to Bodineau, Gallagher, Saint-Raymond, and
+Simonella (2022).
+Step (0). — Starting from an initial particle configuration zN(0) = zN in R2dN, the
+collisions in the dynamics induce correlations between the particles.
+Given a time
+interval [0, τ], the particle evolution leads to a partition into (connected) collision
+graphs λ1, . . . , λn with edges labelled by the particle indices in {1, . . . , N}. This is
+obtained by adding a vertex at the intersection of two particle paths (represented by
+edges) when they collide in [0, τ] and the λi represent all the connected components
+obtained after this construction; see Figure 3. This representation depends strongly on
+the time window [0, τ] and on the initial data. In particular the number n of collision
+graphs ranges from 1 to N.
+
+
+1247–13
+t
+0
+τ
+λ1
+λ2
+λ3
+λ5
+λ4
+Figure 3. This figure encodes the hard-sphere dynamics of 11 particle trajec-
+tories during the time interval [0, τ]. The particles (which are “independent”)
+at initial time are represented by red bullets and their paths by lines. A colli-
+sion between 2 particles is represented by a circle and leads to a scattering of
+the particles : as an example, a particle trajectory is represented by the green
+broken line. This evolution leads to the collision graphs {λ1, . . . , λ5} which
+contain different numbers of particles (in particular λ3 and λ5 contain only one
+particle).
+Notice that, in general, collision graphs are not minimally connected and may include
+cycles, as displayed in Figure 4. In this case, some of the collisions may be called
+“recollisions” to indicate their role in the generation of the cycles.
+t
+0
+τ
+λ1
+λ2
+λ3
+λ5
+λ4
+Figure 4. Compared to Figure 3, the collision graphs λ1 and λ4 display cycles.
+The top (bottom) collisions in those graphs are recollisions if we follow the
+cluster trajectory forward (backward) in time.
+Consider now the evolution of a particle which belongs to a collision graph λi. Its
+trajectory can be complicated due to the collisions, however it is determined only by
+the particles in λi (see Figure 4). The notation λi will refer not only to a collision
+graph, but also to the coordinates of the particles indexed by the edges of λi and their
+time evolution. In this way, there is a one-to-one correspondence between an initial
+configuration {zN} and a decomposition {λ1, . . . , λn}. This will allow us to change our
+point of view and, instead of the grand-canonical measure W ε
+N with initial datum given
+in (10), to study a measure on collision graphs
+(22)
+1
+n!
+f
+W ε
+n(λ1, . . . , λn) := 1
+eZε
+1
+n!
+n
+Y
+i=1
+νε(λi)
+Y
+i̸=j
+1λi̸∼λj ,
+n ≥0 ,
+where
+(23)
+νε(λ) := µ|λ|
+ε
+|λ|!(f 0)⊗|λ|1λ is a collision graph dz|λ| .
+
+
+1247–14
+We will not define formally this measure, but intuitively f
+W ε
+n has a structure similar
+to W ε
+N : instead of choosing particles with density f 0, each collision graph is chosen
+according to a density νε which will determine the number of particles in the graph
+as well as the corresponding coordinates so that their trajectories satisfy the collision
+constraints imposed by the graph. By definition, the dynamics should depend only on
+the particles within each graph, thus the measure (22) has also an exclusion condition
+as the trajectories in different collision graphs λi, λj should not approach at a distance
+less than ε. This is denoted by λi̸ ∼λj and is the counterpart of the exclusion term 1D ε
+N
+in (10). Finally |λ| denotes the number of particles in λ, which we shall refer to as the
+size of λ.
+In the Boltzmann–Grad scaling (12), a typical particle undergoes one collision per
+unit time, thus in a small time interval [0, τ], with τ smaller than the mean free time
+between collisions:
+– the size of a collision graph is expected to be of order 1, and therefore the corre-
+sponding trajectories should remain simple(4). A few collision graphs will be as
+large as log µε, but on the whole, their distribution is well behaved;
+– the exclusion condition is a weak constraint and will hold outside a negligible set,
+meaning that the initial configurations leading to a violation of this condition will
+have vanishing probability as ε goes to zero.
+The cluster expansion method is a well established perturbation theory devised originally
+to study the equilibrium Gibbs distributions of weakly interacting gases. This versatile
+tool has then been applied in a variety of cases (see e.g. Poghosyan and Ueltschi, 2009)
+and we will implement it here to study the weakly interacting collision graphs (which
+already encode the dynamical information)(5).
+The interaction in the measure (22) comes from the dynamical exclusion condition
+which we are going to rewrite as
+(24)
+Y
+i,j≤n
+i̸=j
+1λi̸∼λj =
+Y
+i,j≤n
+i̸=j
+
+1 −1λi∼λj
+
+,
+where λi ∼λj means that the collision graphs overlap, i.e. that two particles from each
+collision graph must meet in the time interval [0, τ], as in Figure 5. An overlap is not
+a collision and it does not modify the microscopic dynamics, it is just a convention to
+represent the complement of {λi̸ ∼λj}: overlaps represent fictitious dynamics, where
+particles from different collision graphs can cross each other.
+(4) Here the smallness of τ is crucial: indeed it has been shown (by numerical and formal arguments)
+that, for τ of the order of one mean free time, the size of collision graphs is expected to explode, by
+strong analogy with Erd˝os-Renyi random graphs with supercritical parameter (Patterson, Simonella,
+and Wagner, 2016, 2017).
+(5)In the context of scaling (12), cluster expansion techniques have been studied intensively starting
+from Pulvirenti and Simonella (2017), and proved to be a natural and powerful strategy when one aims
+at quantifying correlations and studying fluctuations: see Bodineau, Gallagher, Saint-Raymond, and
+Simonella (2020, 2023b, 2024b), Le Bihan (2025a,b), and Simonella and Winter (2026).
+
+
+1247–15
+By expanding the product (24), we will get terms of the form 1λi1∼λi21λi2∼λi3 which
+should be interpreted as follows : the trajectories of the particles are fully determined
+by each collision graph λi1, λi2, λi3 and there are two additional geometric constraints
+as λi1, λi2 and λi2, λi3 must overlap (see Figure 5). After this expansion, the relevant
+objects are the clusters σi = {λi1, . . . , λiℓ} which are collections of collision graphs
+constrained to overlap. Of course, this operation will possibly lead to further cycles:
+this can be seen in {λ1, λ2, λ3} in Figure 5 for instance, since new cycles have been
+created due to the overlaps 1λ1∼λ21λ2∼λ31λ1∼λ3.
+t
+0
+τ
+{λ1, λ2, λ3}
+{λ4, λ5}
+Figure 5. Above, the collisions graphs in Figure 4 have been associated to
+form two clusters : on the left λ1, λ2, λ3 are now linked by three overlaps,
+represented by black dots and on the right λ4, λ5 are linked by one overlap.
+Note that the overlaps on the left generate one cycle.
+Once the exclusion of the collision graphs has been expanded, there is no more
+interaction between the clusters. Thus the measure (22) can be upgraded to define a
+distribution on independent clusters. This distribution will have a structure reminiscent
+of a Poisson measure, however it will no longer be a probability measure as the different
+terms in the expansion of (24) have signs. The distribution will have the form
+(25)
+1
+Z
+ε
+1
+m!
+m
+Y
+i=1
+˜νε(σi)
+m ≥0 ,
+where the measure on the cluster σ = {λ1, . . . , λn} is defined (using (23)) by
+(26)
+˜νε(σ) := 1
+n!φε(λ1, . . . , λn)
+n
+Y
+i=1
+νε(λi) ,
+and φε encodes the cluster structure between the collision graphs
+φε(λ1, . . . , λn) :=
+X
+Y
+{j,j′}∈E(Gn)
+(−1λj∼λj′) ,
+where the sum runs on all connected graphs Gn with n vertices, and E(Gn) denotes the
+corresponding set of edges.
+Now recall that the Lanford theorem is a statement on f ε
+1(t) — or more generally
+on the k-th correlation function f ε
+k(t), k ≥1, which describes the behaviour of k
+typical, selected particles. One thus needs to project the new measure defined in (25)
+by computing correlation functions as in (18).
+
+
+1247–16
+Let us detail the procedure to recover f ε
+1(t). By (16), using the exchangeability (i.e.
+the symmetry of the measure under permutations), we have that
+Z
+R2d f ε
+1(t, x, v)h(x, v) dxdv ≈Eε [h(z1(t))] .
+The previous decomposition in clusters has two crucial properties
+– The trajectory of a given particle depends only on the particles in the same cluster,
+in particular z1(t) is completely prescribed by the cluster σ1 containing particle 1;
+– The measure W ε
+N is not factorized at the level of particles, but by definition it is
+at the level of clusters (see (25)).
+Therefore we can rewrite the previous formula as
+Z
+R2d f ε
+1(t, x, v)h(x, v) dxdv ≈E˜νε [h(z1(t))] ,
+keeping only the factor corresponding to the cluster σ1, since the average of all other
+factors in the product (corresponding to clusters independent from particle 1) is 1.
+Recall that the measure ˜νε(σ1) is given by (23)-(26) encoding the conditioning by the
+geometric constraints associated to σ1.
+Figure 6 depicts the case of f ε
+1(t), where the particle in green is the typical particle,
+the history of which we are interested in. In this case, only one connected cluster is left:
+all other clusters disappear from the analysis.
+t
+0
+τ
+Figure 6. Projection leading to the distribution of a typical particle: fε
+1(τ)
+is expressed as an expansion over cluster trajectories of this form, labelled by
+connected collision graphs. The particle associated with fε
+1(τ) is depicted by a
+green circle at time τ and its path is also green.
+Of course for f ε
+2(t) (more generally f ε
+k(t)), a similar expansion holds true, but two (or
+up to k) clusters may appear in such an expansion, due to the fact that we select two
+(or k) particles; see Figure 7.
+From now on and in agreement with Figure 6 and the following ones, we shall call
+“green particles” the particles of interest, meaning those recorded in f ε
+k(t) as opposed to
+those appearing due to a collision/overlap.
+
+
+1247–17
+t
+0
+τ
+t
+M1
+M2
+Figure 7. Projection leading to the distribution of two typical particles: fε
+2(t)
+is an expansion over cluster trajectories that may belong either to two discon-
+nected collision graphs (on the left), or to the same cluster (on the right).
+Step (1). — Using the fact that the gas is dilute and the time τ is small, one can show
+that typically the clusters contain only few particles, and few collisions and overlaps.
+Thus the corresponding distribution (22) can be studied analytically and it is well
+behaved.
+More precisely, we want to control the norm of the functions f ε
+k(t), or (which is a very
+similar task), we want to understand the behaviour of the partition function Z
+ε in (25).
+Note that, to compute these functions, we have to sum over all possible collections of
+clusters and integrate over all the corresponding cluster trajectories.
+First of all, one can prove an estimate on the density of collision graphs νε defined
+by (23) (which, recall, contain no overlaps) of the type
+(27)
+X
+λ
+Z
+R2d|λ| |νε(λ)| = O (C0µε) ,
+provided that τ ≪C−1
+0
+where C0 is defined by (7). This is based on geometric estimates,
+taking into account the negligible volume of configurations which should satisfy the |λ|−1
+independent collision constraints imposed by the graph λ (roughly, each such constraint
+is associated to a volume of order µ−1
+ε τ).
+Secondly, one has to prove an estimate on the density of clusters ˜νε defined by (26).
+At this point, we observe that the function φε involves all possible connected graphs on n
+vertices. This grows badly with n: however, these graphs appear with alternating signs
+in the expansion of φε (each overlap carries a −1). A powerful argument due to Penrose
+(1967) allows to cancel all the graphs with cycles, showing that the original expansion can
+be bounded from above by a simpler expansion running only over minimally connected
+graphs (ℓℓ−2 graphs involving ℓgraphs {λi1, . . . , λiℓ}). Using this and the geometric
+estimates, one arrives at a uniform bound of the type
+(28)
+X
+σ
+Z
+|˜νε(σ)| = O (C0µε)
+provided that τ ≪C−1
+0 . This eventually leads to
+(29)
+f ε
+k(τ) ≤Ck .
+
+
+1247–18
+Recalling that each f ε
+k(τ) has been written as a sum over all possible collections of
+clusters, this uniform bound allows one to reduce the proof of Theorem 2.1 to the
+computation of the limit, graph by graph.
+Step (2). — Here we want to prove the asymptotic propagation of chaos, i.e. that the
+initial independence of particles (up to exclusion) is preserved, up to an error vanishing
+with ε, at time τ > 0 recalling that this time is much smaller than the typical time
+between two collisions. This means that going forward in time from time 0 to τ, when
+two particles in the cluster of a green particle meet, they must be independent at the
+instant before: their histories before that encounter should involve different particles
+altogether.
+This is obviously not the case in Figure 8, since the top collision involves particles
+that already encountered before.
+t
+0
+τ
+M
+Figure 8. A recollision (surrounded by a dashed circle) imposes constraints
+on the orange part of the trajectory to form a cycle.
+But actually such events are highly improbable. We have already mentioned that at
+time 0, each particle in the cluster is constrained to a negligible volume of order µ−1
+ε τ.
+Having two particles meet, although they have already interacted in the past, imposes
+an even stronger constraint on the velocities and deflection angles at their previous
+interaction, which leads to an extra decay in ε. One can prove that in the set of all
+cluster trajectories of the green particle, the main order term corresponds to clusters
+with no cycles at all, meaning trees as in Figure 9.
+t
+0
+τ
+M
+Figure 9. Graph (molecule) of leading type in the computation of fε
+1(t).
+A very similar argument shows that, in the limit of f ε
+2(t) (see Figure 7 left case), not
+only are cycles absent, but the two green particles cannot, asymptotically, belong to a
+
+
+1247–19
+single connected graph. In other words, the leading contributions come only from clusters
+with two disconnected components (M1, M2), the first containing the green particle 1
+and the second containing the green particle 2. As the components M1 and M2 are
+independent from each other, this leads to the factorisation f ε
+2(t) →f(t)⊗f(t) for ε →0
+(see Step (3) below).
+Remark 3.1. — The technique developed in (Deng, Hani, and Ma, 2024) represents
+a highly detailed quantitative version of the estimates for clusters with cycles, where
+it will be shown that, as the number of cycles increases, the corresponding clusters
+contribute progressively less.
+Consider for instance Figure 8, corresponding to a cluster which we denote M. In
+the work by Deng, Hani and Ma, clusters of such type are called molecules. They are
+represented by graphs with edges given by the particles and with vertices associated with
+collisions or overlaps, with possible cycles generated by collisions (vertices of type ◦).
+The orange cycle is the basic example of a {33} molecule which will be the elementary
+pattern to gain smallness (we refer to Section 4.4 for more).
+Step (3). — To conclude, we need to prove that f ε
+1(t) is close to the solution of the
+Boltzmann equation (1), i.e to identify its limit f as the solution to (1). This means in
+essence relating Figure 9 to the nonlinear PDE (1). As mentioned previously, a natural
+expansion of the solution of (1) over trajectories is obtained by simply iterating the
+Duhamel formula. Due to the quadratic character of the collision operator, this leads
+to binary tree graphs.
+t
+0
+τ
+t
+0
+τ
+s
+Figure 10. On the left, the trajectory of a tagged particle is depicted in green
+and the part of the cluster which is not involved in this trajectory is represented
+in dashed lines. At the analytical level, the contributions of the dashed lines
+cancel and the only relevant part of the cluster is the tree represented in the
+right picture. In the backward direction the tagged trajectory is modified by a
+collision (at time s) determined by two independent trees in [0, s]. This is the
+factorisation property from which Boltzmann equation can be recovered.
+The key point here is to prove that from any tree graph left by Step (2) above (see
+Figure 9), one can extract a binary tree by following the history of the green particle
+backward in time, and keeping only the particles that collided directly or indirectly
+
+
+1247–20
+with the green particle, moving backwards. This leads to Figure 10 where the forgotten
+pieces of trajectory are represented by dashed lines.
+Is the omission of the dashed part allowed? The answer is affirmative and can be
+proved by cancellations between graphs with different signs. For instance, in Figure 10
+the dashed paths encounter in an overlap •, which carries a minus sign. This cancels
+exactly with the same graph where the • is replaced by a ◦corresponding to a collision.
+3.2. Quantification of the chaos property
+The chaos property can be made more quantitative by studying more precisely the
+convergence of f ε
+k(t) to a tensorised structure. For instance arguing as above, it is not
+difficult to prove that
+(30)
+f ε
+2(t) −f ε
+1 ⊗f ε
+1(t) = O(µ−1
+ε )
+for short times, in L1 norm (see the right part of Figure 7). A similar estimate is valid
+for f ε
+k −(f ε
+1)⊗k at least for finite (or slowly diverging) values of k.
+We would like to introduce now correlation errors which isolate and quantify the
+departure from chaos, by means of new functions Eε
+k(t) with the property that Eε
+k(t)
+vanishes if and only if the k particles are all independent. The decay of Eε
+k(t) with ε
+should control precisely how far the microscopic dynamics remains from the tensorised
+Boltzmann one, providing a bridge between the existence of the solution f(t) and the
+validity of the kinetic limit. This method was introduced in (Pulvirenti and Simonella,
+2017) and inspired from previous works on stochastic particle systems by De Masi and
+Presutti (1991) and Caprino, De Masi, Presutti, and Pulvirenti (1991)(6).
+To understand the correlations intuitively, recall that the k-point correlation func-
+tion f ε
+k(t, z1, . . . , zk) is determined by projecting on the clusters containing the particles
+indexed by K = {1, . . . , k} at time t. At leading order each tagged particle is associated
+with a different cluster and f ε
+k factorises in the low-density limit. Correlations emerge
+between two particles when they belong to the same cluster, see Figure 11. The projec-
+tion on the clusters splits the particles indexed by K into two sets: particles in H ⊂K
+belong to a cluster containing at least another particle in H, whereas each particle
+in K \ H is associated with a cluster without any other tagged particle. The correlation
+can then be decomposed as
+(31)
+f ε
+k(t, zK) =
+X
+H⊂K
+
+f ε
+1
+⊗K\H(t) Eε
+H(t) ,
+where {Eε
+h}h≥2 are the correlation errors.
+Here we use the abbreviated nota-
+tion
+
+f ε
+1
+⊗K\H(t) =
+
+f ε
+1
+⊗(k−|H|)(t, zK\H), and Eε
+H(t) = Eε
+|H|(t, zH). The functions f ε
+1
+(6)In (Caprino, De Masi, Presutti, and Pulvirenti, 1991), a similar method (therein called the method
+of v-functions), proved effective to overcome Lanford’s short time restriction, for a kinetic limit on a
+lattice.
+
+
+1247–21
+t
+0
+τ
+z1
+z2
+z3
+z4
+z5 z6
+t
+0
+τ
+z1
+z2
+z3
+z4
+z5 z6
+Figure 11. In the top figure, representing a contribution to fε
+6, parti-
+cles 1, 2 belong to two independent clusters, instead the trajectories of par-
+ticles 3, 4 (respectively 5, 6) are correlated by the constraint of belonging to
+the same cluster. Such a configuration cluster will contribute to a term of the
+type fε
+1(t, z1) fε
+1(t, z2) Eε
+H(t, z3, z4, z5, z6) in (31) with H = {3, 4, 5, 6}. To indi-
+cate this contribution, we update the colours in the bottom figure: red bullets
+indicate particles which are uncorrelated (their distribution will approximate
+the solution of the Boltzmann equation), while purple bullets indicate particles
+associated to the correlation error. Ultimately the distribution at time τ is
+obtained by integrating over the initial variables which are depicted by red
+bullets and are distributed according to a product measure f0 (as the initial
+correlations can be ignored by assumption).
+and Eε
+H are obtained by summing over all the clusters compatible with the correspond-
+ing dynamical constraints.
+Note that the correlation error Eε
+j can be also defined
+directly from (f ε
+ℓ)ℓ≤j and in particular the first terms are
+Eε
+2 = f ε
+2 −f ε
+1 ⊗f ε
+1,
+Eε
+3 = f ε
+3 −
+X
+f ε
+2 ⊗f ε
+1 + 2f ε
+1 ⊗f ε
+1 ⊗f ε
+1.
+Intuitively, Eε
+j gathers all particles with some correlations, possibly distributed among
+several clusters: for instance, in Figure 11, particles 3, 4 and 5, 6 do not belong to the
+same cluster and the two pairs are independent.
+The correlation errors are therefore much smaller than f ε
+k −(f ε
+1)⊗k and Pulvirenti
+and Simonella (2017) proved that, for suitable constants α, γ ∈(0, 1) and C > 0,
+(32)
+Z
+|Eε
+H(t, zK)| dvH ≤C εγ|H|,
+|H| < ε−α, 0 ≤t < τ .
+Hence, groups of up to ε−α particles behave independently, up to an exponentially small
+error.
+
+
+1247–22
+Once the first correlation function f ε
+1(τ) has been approximated by the solution of
+the Boltzmann equation f(τ), one will be able to rewrite (31) up to an error (vanishing
+with ε in L1) as
+(33)
+f ε
+k(τ, zK) =
+X
+H⊂K
+f ⊗K\H(τ) Eε
+H(τ) + error.
+We shall call this a cumulant expansion of f ε
+k(τ).
+As we shall see in Section 4, a
+similar cumulant expansion of the correlation functions provides a convenient ansatz
+to be propagated to times longer than τ. Once the tensorised component is known to
+approximately satisfy the Boltzmann equation, and assuming that the solution of the
+Boltzmann equation is smooth, controlling the growth and decay of the Eε
+j’s will be the
+key.
+However, no one knows how to iterate (32)-(33) as a black box, over time steps of
+length τ. As we shall see in the next section, Deng, Hani and Ma solve this issue in a
+drastic way: they complement the ansatz with a full expansion of the E−functions, all
+the way from time zero up to arbitrary times, bounded by an explicit graph expansion
+(see Figure 13 and Sections 4.2, 4.4).
+4. Long time derivation
+4.1. The theorem by Deng, Hani, Ma
+The breakthrough of Deng, Hani, and Ma (2024) is to extend Lanford’s convergence
+result to much longer times than the mean free time. Note that this is not a simple
+technical extension of the previous proof since the series expansions (27) and (28)
+involving respectively νε and ˜νε will be divergent, which is related to the fact that
+collision graphs on large time intervals [0, T] are expected to have giant components
+(see footnote (4)). The main challenge is then to find a way to combine:
+– cluster expansions of the dynamics which converge only locally in time;
+– the chaos assumption which is known to hold in a strong sense only at time 0.
+Indeed (32) involves a L1
+v norm, in contrast with the assumptions at time zero
+which guarantee a similar estimate in L∞
+v . The result (32) cannot be iterated as
+written, due to this loss in topology(7).
+The strategy implemented by Deng, Hani and Ma is therefore to design an iteration
+scheme which allows to extract at each time step the leading order terms (corresponding
+to a factorised state) and keep expanding only the remainders. The control on the
+leading order terms is then made possible due to a stability argument on the Boltzmann
+(7)It is well known, since the work of Lanford, that the loss of topology is not merely a technical
+issue but rather an intrinsic feature of the low-density limit, inseparably linked to the transition to
+irreversibility discussed in Section 1.3.
+
+
+1247–23
+equation, and requires as explained in Section 1.2 some regularity on its solution, which
+will be measured in the weighted space L∞,1
+β
+defined by the following norm:
+(34)
+∥f∥L∞,1
+β
+:=
+X
+k∈Zd
+sup
+|x−k|≤1
+sup
+v∈Rd
+f(x, v) exp(β
+2 |v|2)
+ .
+Their result can be stated as follows.
+Theorem 4.1 (Deng, Hani, and Ma, 2024). — In the low-density scaling (12),
+(35)
+lim
+ε→0 f ε
+1(t) = f(t)
+in L1(R2d), for t in any finite time interval [0, T] such that the solution f to the Boltz-
+mann equation with initial data f 0 satisfies
+∀t ∈[0, T] ,
+∥f(t)∥L∞,1
+β
++ ∥∇xf(t)∥L∞,1
+β
+≤C
+for some C > 0, β > 0.
+Note that, unlike Theorem 2.1, the convergence result (35) holds only in L1(R2d).
+Remark 4.2 (On the functional setting). — The space L∞,1
+β
+encodes both the exponential
+decay in v, and a decay at infinity in x. These properties ensure in particular that the
+total mass is finite, which is not the framework used to derive hydrodynamic limits of
+the Boltzmann equation (consisting in perturbations of the Maxwellian Mβ). In a recent
+preprint (Deng, Hani, and Ma, 2025), the authors derive an extension of Theorem 4.1
+to the torus setting.
+Remark 4.3 (On diverging times). — Although the convergence result is stated on finite
+time intervals, the proof shows that it can be extended to slowly diverging times Tε →∞
+as ε →0 if the solution to the Boltzmann equation is global and satisfies
+sup
+t∈R+
+
+∥f(t)∥L∞,1
+β
++ ∥∇xf(t)∥L∞,1
+β
+
+< +∞.
+Quantifying the divergence of Tε is an important step to study fast relaxation limits
+leading to hydrodynamic models.
+Remark 4.4 (On the similarities with wave turbulence). — The proof of Theorem 4.1
+shares many similarities with the derivation by the same authors of the wave kinetic
+equation from the weakly nonlinear Schr¨odinger equation (8) (Deng and Hani, 2023a,
+2026, 2023b).
+Formal derivations of this equation date back to the early work of
+Peierls (1929) on phonons. A first rigorous result was obtained in (Lukkarinen and
+Spohn, 2011) in a close-to-equilibrium setting and for short times, using tools developed
+(8)At the level of weakly nonlinear waves, the second moment of the wave field is governed by the wave
+kinetic equation, which is the counterpart of the Boltzmann equation. The analogue of the hard sphere
+empirical density is actually the so-called Wigner function, which is quadratic in the wave fields and
+random. In the kinetic limit, this object satisfies also a law of large numbers which is the counterpart
+of (15).
+
+
+1247–24
+by Erd¨os, Salmhofer and Yau in the context of the linear Schr¨odinger equation with
+random potential (Erd˝os and Yau, 2000; Erd˝os, Salmhofer, and Yau, 2008). In their
+breakthrough series of papers, Deng and Hani were able to derive the nonlinear equation
+and they extended the result to arbitrarily long times. We refer to de Suzzoni (2025)
+for an introduction to these works which we will not comment further on as the setting
+is very different from the hard sphere dynamics, and we are not familiar enough with
+the details of the proof.
+4.2. Strategy of the proof
+The strategy devised by Deng, Hani, and Ma (2024) is to establish a cumulant
+expansion of the correlation functions similar to (31) for further times T = Lτ, where L
+is an integer,
+f ε
+k(Lτ, zK) =
+X
+H⊂K
+
+f ε
+1
+⊗K\H(Lτ) Eε
+H(Lτ) ,
+and to provide a graphical representation of the correlation errors Eε
+H(Lτ) by iterating
+the dynamical cluster expansion (25) on the small time intervals [ℓτ, (ℓ+ 1)τ], ℓ< L.
+The main difference between the dynamical cluster expansion on [0, τ] and on any
+further time interval [ℓτ, (ℓ+ 1)τ] is the fact that correlations at time ℓτ are a priori
+no longer negligible : one has to keep track of the dynamical correlations on [0, ℓτ].
+In other words, the representation in Figure 11 where correlations come only from
+overlaps and collisions during the small time interval has to be changed to take into
+account previous correlations, meaning that on the bottom line some particles will be
+independent (represented by red bullets on the line t = τ in Figure 12), while other will
+be already correlated (represented by purple bullets in Figure 12).
+As already mentioned, iterating the whole cluster expansion on each time step would
+lead to divergent series (due to the huge number of graphs). Note that this divergence
+still holds when looking at the iterated expansion of the Boltzmann equation with
+Duhamel series. The first key idea in the work by Deng, Hani and Ma is to
+extract the leading order terms which are factorised and should compare to
+the solution of the Boltzmann equation, and to expand only the correlation
+errors, for which the combinatorics of the graphs should be compensated by
+the smallness coming from the geometric constraints. This idea of extracting
+the maximally factorised state is not present at all in the proof of Theorem 2.1, where
+propagation of chaos is obtained as a consequence of the convergence of the correlation
+functions to the Boltzmann hierarchy. It appeared in subsequent works when establishing
+more quantitative chaos estimates in (Pulvirenti and Simonella, 2017), or looking at
+fluctuations in (Bodineau, Gallagher, Saint-Raymond, and Simonella, 2023b). But,
+for hard spheres, it had not been implemented before to obtain information on the
+maximally factorised state thanks to the solution of the Boltzmann equation, and to
+improve the convergence.
+
+
+1247–25
+0
+τ
+2τ
+f A(τ)
+f A(τ)
+f 0 f 0
+f 0
+f 0
+f A(τ)
+f A(τ)
+f A(τ)
+f A(τ)
+Figure 12. The collision graph depicted during the time interval [τ, 2τ]
+involves 11 particles at time τ.
+It is a contribution to a term of the
+type fA(2τ)Eε
+H(2τ) with |H| = 4 in an expansion similar to (33). We have
+introduced here the notation fA, used by Deng, Hani and Ma to indicate an
+approximation to the Boltzmann density. In the example of this figure, fε
+11(τ) is
+further expanded in a similar way and the purple particles in H1, with |H1| = 2,
+associated to the correlation error at time τ. These particles are dynamically
+correlated in the past, whereas the particles indicated by red bullets at time τ
+are independently distributed and for those particles we stop the expansion.
+The error function Eε
+H1(τ) is computed by another expansion on [0, τ] with the
+conditions that the particles in H1 interact dynamically. For simplicity the
+initial measure is chosen to be a product (neglecting the initial correlations
+which are much smaller than the dynamical correlations).
+Let us describe the strategy in a little more detail. Set s ≥1. To identify the different
+correlation errors in f ε
+s((ℓ+ 1)τ, zs), one argues iteratively. One first applies the cluster
+expansion (25) in [ℓτ, (ℓ+ 1)τ] and then evaluates it by using the representation (31)
+of (f ε
+Kℓ(ℓτ))Kℓaccording to the following rules (we have added subscripts ℓto the sets H
+and K to emphasize that the study takes place on the time step [ℓτ, (ℓ+ 1)τ]):
+1. the variables in Kℓ\ Hℓare integrated with respect to the density f ε
+1(ℓτ) which is
+close to f(ℓτ) by the induction assumption,
+2. the variables in Hℓare called root particles and they are dynamically correlated
+in the past history in [0, ℓτ]. Thus another cluster expansion in the previous time
+interval is needed to compute their joint distribution.
+The previous simple extraction is actually not sufficient to control the expansion of
+the correlation errors. Indeed the previous short time cluster expansion (25) leads to
+collision graphs which can be a priori arbitrarily large and have an unbounded number
+of recollisions. Both events are very unlikely and have been neglected in the time in-
+terval [0, τ] to derive the convergence to the Boltzmann equation (see Section 3). For
+the iteration, it is convenient to remove these events from the main part by introduc-
+ing truncated microscopic dynamics(9), and deriving a modified cumulant expansion of
+type (33) involving an error term, obtained by a modified Penrose argument(10).
+(9)Section 4.1 in Deng, Hani, and Ma (2024).
+(10)Section 5 in Deng, Hani, and Ma (2024).
+
+
+1247–26
+t
+Figure 13. Three time layers representing a correlation term EH(3τ) be-
+tween |H| = 4 root particles at time 3τ. The dynamical correlations between
+the root particles form cycles which may spread over several layers.
+To reach a large time T = Lτ, the previous strategy is iterated thanks to a time
+layering procedure(11) (see Figure 13). Applying the rules above at each step, one gets
+the general version of (33)
+(36)
+f ε
+k(ℓτ, zK) =
+X
+H⊂K
+(f A)⊗K\H(ℓτ) Eε
+H(ℓτ) + Errε(ℓτ, zK) ,
+where
+1. f A(ℓτ) is similar to f(ℓτ) but is a better approximation of f ε
+1(ℓτ), and is built on
+the truncated dynamics. This means that, on each layer, each collision graph
+has size less than a certain threshold Λ and has less than a fixed number Γ
+recollisions. Furthermore the number of overlaps in each cluster (or molecule with
+the terminology of Deng, Hani and Ma) cannot exceed Λ. The cut-off Λ ≤| log ε|C∗
+0,
+for C∗
+0 a given constant is allowed to diverge slowly, instead Γ will be chosen large
+but fixed.
+2. The correlation error Eε
+H is obtained by a cluster expansion and also built on the
+truncated dynamics.
+3. The error Errε collects all the remainders accumulating at all steps and will converge
+to zero with ε in L1-norm.
+The distribution f A(ℓτ) is approximated step by step by the solution of the Boltzmann
+equation. In particular it is shown(12) that
+(37)
+∥f A(ℓτ) −f(ℓτ)∥L∞,1
+βℓ
+≤εθℓ
+for some βℓ> 0 and θℓ> 0 that can be explicitly computed(13). The existence of a
+regular solution to the Boltzmann equation on the time interval [0, T] is key to establish
+(11)Proposition 3.25 in Deng, Hani, and Ma (2024).
+(12)Proposition 6.1, proved in Section 14 in (Deng, Hani, and Ma, 2024).
+(13)(1.34) in (Deng, Hani, and Ma, 2024).
+
+
+1247–27
+this estimate, see Section 4.3 below. Besides the existence of such a solution, the proof of
+Deng, Hani and Ma does not use any other mechanism of cancellation in the Boltzmann
+equation.
+The dynamical correlations are shown to be negligible due to the constraint on the
+recollisions(14):
+(38)
+∥Eε
+H(ℓτ)∥L1 ≤ε3−d−2+c∗|H|,
+where |H| stands for the number of particles in H. Roughly speaking each root particle
+at time Lτ (depicted in purple on Figure 13) is correlated with at least one other root
+particle and the corresponding dynamical constraints provide a small factor of order ερ.
+As can be seen on Figure 13, this correlation can appear through several layers and many
+other root particles can be generated in the iterative procedure. The cut-off Λ ≤| log ε|C∗
+0
+on the size of the molecules (clusters) is needed to tame the combinatorial factor on the
+number of all molecules (see condition (2) in the description below (36), and Section
+4.4 below for more). Nevertheless the number of allowed recollisions can lead to a
+huge complexity of dynamical patterns. The analysis of the recollisions is the main
+achievement of the proof by Deng, Hani and Ma, and is based on a precise algorithmic
+decomposition of the collision graphs, see Section 4.4 below.
+4.3. The maximally factorised part
+By construction, the distribution f A((ℓ+ 1)τ) (which is represented by red circles on
+Figure 12 and subsequent figures) is defined recursively by a dynamical cluster expansion
+on [ℓτ, (ℓ+ 1)τ]
+– such that each collision graph has size less than Λ and has less than Γ recollisions,
+and the number of overlaps in the cluster is less than Λ,
+– acting on independent particles distributed according to f A(ℓτ).
+On the other hand, the solution f((ℓ+ 1)τ) to the Boltzmann equation can be
+represented by a dynamical cluster expansion on [ℓτ, (ℓ+ 1)τ]
+– such that each cluster is a binary tree graph,
+– acting on independent particles distributed according to f(ℓτ).
+In order to compare both distributions, the idea is to further decompose
+(39)
+f A = ¯f A + δf A
+where the leading term ¯f A corresponds to the restriction to (bounded) clusters which
+are minimally connected, and
+(40)
+f = ¯f + δf
+where the leading term ¯f corresponds to the restriction to (minimally connected) clusters
+which have size less than Λ.
+(14)Proposition 6.2 in Deng, Hani, and Ma (2024).
+
+
+1247–28
+The difference ¯f A −¯f is controlled using a kind of weak-strong stability principle
+for the Boltzmann equation in mild form. The cancellation exhibited in Figure 10
+(Step (3) of the proof of Lanford’s theorem described on page 19) shows that the tree
+graphs involved in the definition of ¯f A((ℓ+ 1)τ) can be reduced to binary tree graphs.
+In other words, ¯f A((ℓ+ 1)τ) and ¯f((ℓ+ 1)τ) have the same cluster expansion, acting
+respectively on ¯f A(ℓτ) and ¯f(ℓτ), and with a small spatial discrepancy due to the ε
+distance separating collisional particles in ¯f A(ℓτ) contrary to ¯f(ℓτ).
+Using the multilinearity of the cluster expansion, we then obtain that each single
+term in the sum defining ( ¯f A −¯f)((ℓ+ 1)τ) has at least one occurrence of ( ¯f A −¯f)(ℓτ)
+or one occurence of ε∇xf(ℓτ), which allows to propagate the smallness (up to a small
+loss due to the contribution of large velocities) from time ℓτ to time (ℓ+ 1)τ.
+The contribution δf in (40) is easily shown to be small, as the remainder of a geo-
+metric series (recall that the time-step is τ only, so the series is under control). The
+contribution δf A of the subleading terms in f A in (39) requires much more care because
+of the need to compensate the loss due to large velocities. This loss is more or less pro-
+portional to the size of the molecule, i.e. to the total number of collisions and overlaps
+which can be much bigger than the number of particles in the cluster. One thus needs
+to gain additional smallness, which comes from the geometric constraints associated to
+the recollisions. This is done thanks to a simplified version of the algorithms used to
+control correlation errors sketched in the section below.
+4.4. The remainder terms
+The core of the paper by Deng, Hani, and Ma (2024) is the estimate (38) of the
+remainder term which takes into account the recollisions. Recall that the time inter-
+val [0, T] is split into L layers of size τ. As explained in Section 4.2, given ℓ≤L, the
+remainder term Eε
+H(ℓτ, zH) at time ℓτ can be estimated in L1 by computing, for all
+compatible molecules M, the cost (smallness) of the constraint that the root particles
+(recall they are the particles in H, represented by purple bullets) have to be correlated,
+as in Figure 13. A similar combinatorial classification of correlation terms has been pre-
+viously developed in the context of wave turbulence to derive the wave kinetic equation
+from the (microscopic) nonlinear Schr¨odinger equation; see Deng and Hani (2023b) and
+references therein.
+The cost of a molecule is an upper bound on the concatenation of the cluster expansion
+weights associated with M over ℓlayers. A molecule M is interpreted as a graph such
+that a collision or an overlap is coded by a node and the edges are particle trajectories
+between 2 nodes. These nodes have degree 4 (2 incoming and 2 outgoing particles) and
+if a particle trajectory stops, or is created between two layers, the corresponding node
+has degree 1 (represented respectively by free ends or by red dots in Figure 13).
+Let us first estimate the combinatorics of molecules. The number of graphs with
+degree less than 4, with m nodes and ρ independent cycles, is bounded by Cmmρ.
+
+
+1247–29
+Roughly, there are less than Cm trees and each cycle boils down to adding a link
+between two nodes. Given m ≤| log ε|C∗
+0, the number of molecules is estimated by
+(41)
+#{M , |M| = m, ρ cycles} ≤Cmmρ ≤Cm | log ε|C∗
+0 ρ.
+The logarithmic bound on the molecule size was imposed in the construction of each
+time layer (see condition (2) below (36)). This is essential to control the combinatorics,
+and the additional error term Errε in (36) takes this cut-off into account.
+The divergence in the combinatorial factor (41) has to be compensated by the cost of
+the recollisions associated with the molecules involved in Eε
+H. On a single time layer, we
+have already seen that one single recollision is enough to provide some smallness and to
+derive the chaos property (30). More generally quantitative bounds on the correlations
+of j particles were stated in (32). The bound provided in (Deng, Hani, and Ma, 2024)
+on each given molecule is much stronger: not only does it hold on a large time since ℓis
+arbitrary, but it provides additional smallness for each cycle. We will concentrate here
+on the difficult case when the number ρ of cycles can be much larger than the cardinality
+of |H|. The major breakthrough by Deng, Hani and Ma(15) is to establish
+that there is γ > 0 such that the cost of a given molecule can be estimated
+by τ |M|/9εγρ, meaning that the gain in smallness on the cost of the molecule
+is proportional to the number ρ of cycles. The upper bound (38) on ∥Eε
+H(ℓτ)∥L1
+follows by combining (41) and this upper bound.
+Given a molecule M, computing its cost can be seen as evaluating an integral over
+the parameters associated with the trajectories compatible with M. In the proof by
+Deng, Hani and Ma(16), the molecules are overparametrised as each collision/overlap
+is determined by 8d + 1 variables : one for the position and velocity on each of the 4
+edges and one for the time of the collision/overlap. Thus a given particle is associated
+with several sets of distinct variables strongly correlated by the constraints at each
+collision/overlap. The range of these parameters is further reduced by the dynamical
+constraints of the cycles imposed by M so that the smallness follows from the integration
+over the trajectory parameters (see Figure 14). The idea behind the duplication of the
+integration variables is to forget the original structure of the trajectories and to compute
+the multiple integrals in any order provided the dynamical constraints are satisfied. For
+example, the position and velocity of a particle can be chosen at the beginning of a time
+layer or in the middle of it. The difficulty is to determine, among all these variables,
+which are the degrees of freedom providing the best parametrisation of (a
+large proportion of) the cycles(17). Ordering the parameters will be achieved by
+an algorithmic procedure described below. Once an order is determined, one can use a
+Fubini argument to control the cost of the molecule.
+(15)Eq. (9.53) of their paper, up to some terms which have been omitted for simplicity.
+(16)Definition 7.3.
+(17) This problem has an analogue in the derivation of wave kinetic equations and the strategy is
+inspired from previous literature on this topic; see Deng and Hani (2023b) and references therein.
+
+
+1247–30
+t
+M
+M1
+M2
+fixed
+free
+Figure 14. In this figure, the graph represents a molecule M with several
+cycles and H is of size 2. On the left a chain of collisions between a small number
+of particles creates several cycles. The constraints imposed by a molecule M
+with cycles imply that the parameters of the trajectories take values in a
+very small set of the phase space. The challenge is to identify the degrees of
+freedom among these parameters in order to gain a power εγρ proportional to
+the number of cycles ρ. This is done by splitting the molecule M into smaller
+entities on which the integration can be performed step by step. For example,
+the dotted line decomposes the molecule M into 2 molecules M1, M2 which will
+be evaluated one after the other. Given a configuration in M1, the particle
+trajectories crossing the dotted line are frozen and one has to integrate first
+over the degrees of freedom restricted to M2 to obtain estimates on the cycles
+uniformly in M1 and then to integrate over the parameters in M1. A complete
+splitting procedure is depicted on Figure 16.
+As can be imagined from Figure 14, the cycles associated with a molecule can be
+extremely intricate, leading to long range constraints on the parameters. In particular
+forcing a cycle to occur may trigger several cycles in chain reaction, in which case one
+cannot hope to gain easily a factor εc each time (see also Figure 17). The strategy
+devised by Deng, Hani and Ma identifies the degrees of freedom by decomposing the
+molecules through several algorithmic procedures(18) in order to reduce the
+complexity of dynamical graphs to elementary molecules(19) as in Figure 15
+involving only a few parameters. The elementary molecules are made of one or two
+collisions or overlaps (called atoms by Deng, Hani and Ma). The nature of the elementary
+molecules is determined by the number of degrees of freedom and they are classified
+into 3 categories: normal, good and bad(20). Molecules {3} (and sometimes {2}) are the
+basic elements in the complex molecules and they can be estimated by constants. The
+dynamical constraints of the cycles are encoded by the {33}-molecules which have a
+(18)Sections 10 to 12 in (Deng, Hani, and Ma, 2024).
+(19)Definition 8.11 in (Deng, Hani, and Ma, 2024).
+(20)See Definition 9.4 of Deng, Hani, and Ma (2024) for the precise description of the 11 categories.
+
+
+1247–31
+{2}
+{3}
+{33}
+t
+{4}
+Normal
+Good
+Bad
+Figure 15. Some of the elementary molecules are represented above (see
+Definition 8.11 of Deng, Hani, and Ma (2024)). The crosses represent variables
+which are given (or fixed). A {2}-molecule has 2 incoming fixed edges and
+therefore the outgoing particle trajectories are fully determined. A {3}-molecule
+has only 1 incoming fixed edge and the other incoming edge provides a degree
+of freedom which can act on the outgoing edges. A {33}-molecule encodes the
+cost of a recollision. Indeed the single incoming (free) edge (at the bottom) is
+strongly constrained as the outgoing particle of the first collision has to collide
+with the 2nd fixed particle trajectory. Integrating over this constraint leads
+to a small εc factor and in this sense {33} are good molecules. Finally, the
+{4}-molecule has no constraint and is considered as bad because integrating
+over too many degrees of freedom leads to a loss. Similar elementary molecules
+can be considered by fixing the outgoing parameters instead or by replacing
+the collisions by overlaps.
+cost of εc (see Figure 15). Thus {2} and {3}-molecules are said to be normal and {33}-
+molecules are good. Molecules {4} are bad since all variables are free, and the geometric
+constraint associated to the collision or overlap is not taken into account. Note that
+bad molecules may appear during the decomposition leading to losses which have to
+be compensated by enough gains with the {33} molecules. The precise cost of the
+elementary molecules is evaluated by computing collision integrals depending only on a
+few parameters(21).
+The decomposition of a molecule M into elementary molecules {2}, {3}, {33} and {4}
+is achieved in many steps starting from the large scales (see Figure 14) to localise
+progressively the costly structures of the cycles. In Figure 16 below, an example of
+a single cycle decomposition is depicted, following the UP algorithm(22). It is the
+simplest algorithm of a series of procedures in order to analyse the numerous structures
+which can arise in the molecules. But it is not enough to gain a power of εc for each
+cycle when the cycles in a molecule are very intricate, as in Figure 17.
+(21)Section 9 in (Deng, Hani, and Ma, 2024).
+(22)Definition 12.1 in (Deng, Hani, and Ma, 2024).
+
+
+1247–32
+⇒
+Step 1
+⇒
+Step 2
+⇒
+Step 3
+Figure 16. On the left, a molecule involving a cycle is depicted and the edges
+outside the dashed domain have not been explored yet by the algorithms. In
+the UP algorithm, the atoms are removed one after the other starting from the
+top collision in order to keep track of the time ordering associated with the
+molecule. In the first step, the top atom has been extracted as a {3}-molecule,
+meaning that the remaining edge in the dashed domain is now considered fixed.
+After the final step, three elementary {3}-molecules have been identified and a
+{33}-molecule will lead to a small cost εc. In this example, one cycle provides
+exactly one {33}-molecule as expected. For general molecules with overlaps,
+the decomposition procedure is more delicate as breaking an overlap may lead
+to non local changes.
+Recall that in (36), the main term of the cluster expansion has been devised so that, in
+each layer, a cluster has less than Γ recollisions. Under this condition, the succession of
+recollisions between a finite number of particles, as in Figure 17, is no longer a problem
+as the number of recollisions is bounded by Γ. Thus extracting a single power εc is
+enough to take into account the cycles due to recollisions within a cluster in a given
+layer, with a cost of εc/Γ per cycle.
+{3}
+{33}
+{2}
+{2}
+=⇒
+=⇒
+=⇒
+Figure 17. A series of cycles obtained by multiple recollisions of 3 particles
+is depicted on the left (see Figure 14). The UP algorithm is applied to the
+corresponding molecule, starting from the top, in order to decompose it into
+elementary molecules. After removing the top {3}-molecule, a {33}-molecule
+is extracted in the second step from the first cycle.
+This exhausts all the
+degrees of freedom and the next steps will only form {2}-molecules. Indeed
+fixing 2 outgoing edges of a collision prescribes exactly the 2 incoming edges
+and these constraints propagate along the chain of cycles. Thus only the first
+constraint can be extracted from this series of recollisions and the gain will not
+be proportional to the number of cycles.
+
+
+1247–33
+However this condition does not prevent the occurence of an arbitrary number of
+strongly correlated cycles formed through different layers. There are four main
+structures of two-layer molecules of this type, named toy models(23) (see Figure 18 for
+an example of the first toy model). Each toy model is specific and different algorithms
+are needed in each case to identify degrees of freedom(24). The toy models have a very
+streamlined structure : roughly speaking they look like two trees on each side of a layer
+with leaves glued together to form cycles.
+t
+⇒
+Step 1
+⇒
+Step 2
+Figure 18. The left figure depicts a chain of cycles with a ladder structure
+accross two layers represented by dashed lines. After removing the first two
+nodes on the left (as {3}-molecules), one gets a {33}-molecule for each step of
+the ladder. This leads to a gain εcρ proportional to the length of the ladder,
+i.e. to the number of cycles ρ. Note that the order in which the atoms are
+removed is key and a different procedure could have led only to a gain of order
+εc.
+A general molecule M is a priori much more complicated and does not have this
+tree-like structure. In fact the cycles can spread over several layers and not necessarily
+over two contiguous layers as in Figure 18. Given a molecule M, an essential part of
+the proof(25) is to clean up M in order to retain only the basic form of a toy model and
+discard (in a controlled way) the rest of the molecule. This goes through a series of
+delicate procedures among which the most important are:
+1. Removing the degeneracies in positions and velocities(26);
+2. Reducing the molecule in each layer to a tree by fragmenting each layer;
+3. Selecting the two layers across which most of the cycles will form;
+4. Cutting exceptional components.
+Combining all the previous procedures allows one to select the degrees of freedom
+associated with a large proportion of the cycles in a molecule.
+(23)Section 11 in (Deng, Hani, and Ma, 2024).
+(24)We refer to Section 11 of Deng, Hani, and Ma (2024) for an overview of those and to Section 13 for
+the complete implementation.
+(25)Section 12 in (Deng, Hani, and Ma, 2024).
+(26)For some particle configurations, a recollision may occur with high probability, e.g. when 3 particles
+are initially close to each other. The corresponding {33}-molecules are said to be degenerate and they
+will not provide the expected gain of order εc. The occurence of too many such events has to be
+estimated by other means.
+
+
+1247–34
+Remark 4.5. — To handle the remainder term in (36) corresponding to clusters with
+more than Γ recollisions, a new algorithm had to be devised(27). The key idea is to use
+a weak form of dispersion in Rd provided by the following quantitative statement by
+Burago, Ferleger, and Kononenko (1998) : any collection of q hard spheres in Rd will
+recollide at most O(qq2) times. Even though this estimate is far too crude in general, it
+provides a universal bound, so that if the number of recollisions between q hard spheres
+is too large, there must be an additional particle involved in the cycles and therefore a
+new degree of freedom. The use of this dispersion argument is the reason why the proof
+does not extend directly to the case of a hard-sphere gas in the torus Td.
+5. Consequences and perspectives
+The paper by Deng, Hani, and Ma (2024) is a crucial advance in deriving macro-
+scopic laws rigorously from microscopic models using the Boltzmann equation as an
+intermediate description, which was one of the questions addressed by Hilbert in his
+sixth problem. Hydrodynamic models such as the compressible Euler equations, or the
+incompressible Navier–Stokes equations can indeed be recovered as asymptotics of the
+Boltzmann equation in the fast relaxation limit, i.e. when the collision process is much
+faster than the transport. In order to complete the program and make a connection
+with particle systems, one therefore needs to derive the Boltzmann equation for times
+which are much longer than the mean free time.
+As mentioned in Remark 4.2, although it provides a convergence for times which
+are much longer than the mean free time, Theorem 4.1 is not exactly the result we
+need, because the functional setting imposed by (34) prevents us from considering initial
+distributions which are fluctuations around an equilibrium or satisfy at least a bound
+from below on the macroscopic density, which is required for all hydrodynamic limits.
+Furthermore, as noted in Remark 4.3, Theorem 4.1 does not provide a quantitative
+estimate on the time of validity of the Boltzmann approximation, which would be
+necessary to make explicit the scaling laws leading to the hydrodynamic limits from the
+particle system via the Boltzmann approximation.
+The recent preprint by Deng, Hani, and Ma (2025) aims at addressing these two
+objections. It relies on a similar proof, where the use of Burago, Ferleger, and Kononenko
+(1998) is adapted with a new cutting algorithm. It states the convergence from the
+hard-sphere dynamics to the compressible Euler equations, and incompressible Navier–
+Stokes equations, under strong regularity assumptions (which are known to be violated
+in the presence of compressible shocks for instance).
+It is worth stressing that the direct hydrodynamic limit from Hamiltonian particle
+systems, with no smallness in the density, is far from being understood and involves
+different kinds of problems. This limit should lead to the Euler and the Navier–Stokes
+(27)Section 15 of Deng, Hani, and Ma (2024).
+
+
+1247–35
+equations for real fluids(28). At present, a full mathematical result has been obtained
+only for stochastic dynamics (see Olla, Varadhan, and Yau, 1993; Esposito, Marra, and
+Yau, 1996).
+A natural question would be to know whether the techniques in (Deng, Hani, and
+Ma, 2024) can be extended to handle the fluctuations and large deviations both at the
+kinetic level and at the hydrodynamic level. Using refined cluster expansions (where
+the correlation error is further decomposed in cumulants corresponding to connected
+interaction graphs), we have proved in (Bodineau, Gallagher, Saint-Raymond, and
+Simonella, 2023b) that, in the low-density limit, fluctuations of the hard-sphere dynamics
+around the Boltzmann approximation can be described by the fluctuating Boltzmann
+equation, and large deviations can be described by a functional which satisfies some
+Hamilton-Jacobi equation. However, like Lanford’s theorem, these results hold only
+for short times (except at equilibrium where both the linear fluctuating Boltzmann
+equation, and the linear fluctuating Stokes-Fourier equations are derived globally in
+time in (Bodineau, Gallagher, Saint-Raymond, and Simonella, 2024b) and (Bodineau,
+Gallagher, Saint-Raymond, and Simonella, 2024a). It has recently been proved by Qi
+(2024) that the Hamilton-Jacobi equations are globally well-posed close to equilibrium,
+so one can hope to push the techniques of Deng, Hani, and Ma (2024) to that setting.
+Another important problem, which remains fully open in the field, is the low-density
+limit of microscopic systems in which the interaction potential is not compactly sup-
+ported, which is more relevant from the physical point of view (for some first partial
+results in this direction, see Ayi, 2017, and Le Bihan, 2025b). The main difficulty in this
+case is that the cross section (encoding the rate of the jump process (v′, v′
+⋆, ω) 7→(v, v∗, ω)
+in the Boltzmann collision operator) is not integrable. In particular, the gain and loss
+terms do not converge separately, and cancellations have to be used to make sense of the
+equation. A natural question is whether this type of cancellations could be exploited
+indirectly by assuming the existence of a regular solution, as in the argument by Deng,
+Hani and Ma presented in Section 4, to obtain a stable control of the microscopic
+dynamics.
+References
+R. Alexander (1976). “Time Evolution for Infinitely Many Hard Spheres”, Commun. in
+Math. Phys. 49, pp. 217–232.
+N. Ayi (2017). “From Newton’s law to the linear Boltzmann equation without cut-off”,
+Comm. Math. Phys. 350 (3), pp. 1219–1274.
+(28)For a recent discussion on the comparison of the different limit procedures, see e.g. Pulvirenti and
+Simonella (2026).
+
+
+1247–36
+H. van Beijeren, O. E. Lanford III, J. Lebowitz, and H. Spohn (1980). “Equilibrium
+Time Correlation Functions in the Low–Density Limit”, Journal Stat. Phys. 22 (2),
+pp. 237–257.
+T. Bodineau, I. Gallagher, and L. Saint-Raymond (2016). “The Brownian motion as
+the limit of a deterministic system of hard-spheres”, Inventiones mathematicae 203
+(2), pp. 493–553.
+T. Bodineau, I. Gallagher, L. Saint-Raymond, and S. Simonella (2020). “Fluctuation
+theory in the Boltzmann-Grad limit”, J. Stat. Phys. 180 (1-6), pp. 873–895.
+(2022). “Cluster expansion for a dilute hard sphere gas dynamics”, J. Math.
+Phys. 63 (7), Paper No. 073301, 26 pp.
+(2023a). “Long-Time Correlations for a Hard-Sphere Gas at Equilibrium”, Comm.
+Pure Appl. Math. 76 (12), pp. 3852–3911.
+(2023b). “Statistical dynamics of a hard sphere gas: fluctuating Boltzmann
+equation and large deviations”, Ann. of Math. (2) 198 (3), pp. 1047–1201.
+(2024a). “Dynamics of Dilute Gases at Equilibrium: From the Atomistic De-
+scription to Fluctuating Hydrodynamics”, Ann. Henri Poincar´e 25, pp. 213–234.
+(2024b). “Long-time derivation at equilibrium of the fluctuating Boltzmann
+equation”, Ann. Probab. 52 (1), pp. 217–295.
+D. Burago, S. Ferleger, and A. Kononenko (1998). “Uniform estimates on the number
+of collisions in semi- dispersing billiards”, Ann. Math. (2) 147 (3), pp. 695–708.
+S. Caprino, A. De Masi, E. Presutti, and M. Pulvirenti (1991). “A derivation of the
+Broadwell equation”, Comm. Math. Phys. 135 (3), pp. 443–465.
+T. Carleman (1932). “Sur la th´eorie de l’equation int´egrodiff´erentielle de Boltzmann”,
+Acta Math. 60, pp. 369–424.
+N. Catapano (2018). “The rigorous derivation of the Linear Landau equation from a
+particle system in a weak- coupling limit”, Kin. Rel. Mod. 11 (3), pp. 647–695.
+C. Cercignani (1972). “On the Boltzmann equation for rigid spheres”, Transport Theory
+Statist. Phys. Vol. 2, pp. 211–225.
+(1998). Ludwig Boltzmann. The man who trusted atoms. Oxford: Oxford Uni-
+versity Press.
+C. Cercignani, V. I. Gerasimenko, and D. I. Petrina (1997). Many-Particle Dynamics
+and Kinetic Equations. Kluwer Academic Publishers, Netherlands.
+C. Cercignani, R. Illner, and M. Pulvirenti (1994). The mathematical theory of di-
+lute gases. Vol. 106. Applied Mathematical Sciences. Springer-Verlag, New York,
+pp. viii+347.
+A. De Masi and E. Presutti (1991). Mathematical methods for hydrodynamic limits.
+Vol. 1501. Lecture Notes in Mathematics. Springer-Verlag, Berlin, pp. x+196.
+Y. Deng and Z. Hani (2023a). “Full derivation of the wave kinetic equation”, Invent.
+Math. 233 (2), pp. 543–724.
+(2023b). Long time justification of wave turbulence theory. arXiv: 2311.10082.
+
+
+1247–37
+(2026). “Derivation of the wave kinetic equation: full range of scaling laws.”
+Mem. Amer. Math. Soc. To appear.
+Y. Deng, Z. Hani, and X. Ma (2024). Long time derivation of the Boltzmann equation
+from hard sphere dynamics. arXiv: 2408.07818v3.
+(2025). Hilbert’s sixth problem: derivation of fluid equations via Boltzmann’s
+kinetic theory. arXiv: 2503.01800.
+R. Denlinger (2018). “The propagation of chaos for a rarefied gas of hard spheres in the
+whole space”, Arch. Ration. Mech. Anal. 229 (2), pp. 885–952.
+R. J. DiPerna and P.-L. Lions (1989). “On the Cauchy problem for Boltzmann equations:
+global existence and weak stability”, Ann. of Math. (2) 130 (2), pp. 321–366.
+T. Dolmaire (2023). “About Lanford’s theorem in the half-space with specular reflection”,
+Kin. Rel. Mod. 16 (2), pp. 207–268.
+T. Dolmaire and C. Saffirio (2024). “Derivation of the Boltzmann equation in the
+disk:quantitative controls of the recollisions”, in: Oberwolfach Reports. 20:3, 219–2198.
+L. Erd˝os, M. Salmhofer, and H. T. Yau (2008). “Quantum diffusion of the random
+Schr¨odinger evolution in the scaling limit I. The non-recollision diagrams.” Acta
+Math. 200 (2), pp. 211–277.
+L. Erd˝os and H. T. Yau (2000). “Linear Boltzmann equation as the weak coupling limit
+of a random Schr¨odinger equation”, Commun. Pure Appl. Math. 53 (6), pp. 667–735.
+R. Esposito, R. Marra, and H. T. Yau (1996). “Navier-Stokes equations for stochastic
+particle systems on the lattice”, Commun. Math. Phys. 182 (2), pp. 395–455.
+F. Foug`eres (2024). “On the derivation of the linear Boltzmann equation from the
+nonideal Rayleigh gas”, J. Stat. Phys. 191 (10), Paper No. 136, 16 pp.
+I. Gallagher, L. Saint-Raymond, and B. Texier (2014). From Newton to Boltzmann:
+hard spheres and short-range potentials. Zurich Lect. in Adv. Math. EMS.
+V. I. Gerasimenko and I.V. Gapyak (2021). “Boltzmann-Grad asymptotic behavior of
+collisional dynamics”, Rev. Math. Phys. 33 (2). Article N. 2130001, 32 p.
+H. Grad (1958). “Principles of the kinetic theory of gases”, in: Handbuch der Physik.
+Springer-Verlag, Berlin-Gottingen-Heidelberg, pp. 205–294.
+R. Illner and M. Pulvirenti (1989). “Global validity of the Boltzmann equation for two-
+and three-dimensional rare gas in vacuum: Erratum and improved result”, Commun.
+Math. Phys. 121 (1), pp. 143–146.
+S. Kaniel and M. Shinbrot (1978). “The Boltzmann Equation I. Uniqueness and Local
+Existence”, Communications in Mathematical Physics 58 (1), pp. 65–84.
+O. E. Lanford III (1975). “Time evolution of large classical systems”, in: Dynamical
+systems, theory and applications (Rencontres, Battelle Res. Inst., Seattle, Wash.,
+1974). Vol. 38. Lecture Notes in Phys. Springer, Berlin-New York, pp. 1–111.
+(1976). “On a derivation of the Boltzmann equation”, Ast´erisque 40, pp. 117–
+137.
+C. Le Bihan (2022). “Boltzmann-Grad limit of a hard sphere system in a box with
+diffusive boundary conditions”, Disc. Cont. Dyn Syst. 42 (4), pp. 1903–1932.
+
+
+1247–38
+C. Le Bihan (2025a). “Long time validity of the linearized Boltzmann equation for hard
+spheres: a proof without billiard theory”, Arch. Ration. Mech. Anal. 249 (4), Paper
+No. 40, 72 pp.
+(2025b). Long time validity of the linearized Boltzmann uncut-off and the lin-
+earized Landau equations from the Newton Law. arXiv:2408.03597.
+J. Loschmidt (1876). Sitzungsberichte der Kaiserlichen Akademie der Wissenschaften
+Wien, Math. Naturwiss. Klasse 73, pp. 128–142.
+J. Lukkarinen and H. Spohn (2011). “Weakly nonlinear Schr¨odinger equation with
+random initial data”, Invent. Math. 183, pp. 79–188.
+K. Matthies and F. Theil (2012). “A semigroup approach to the justification of kinetic
+theory”, SIAM J. Math. Anal. 44 (6), pp. 4345–4379.
+L. Nirenberg (1972). “An abstract form of the nonlinear Cauchy-Kowalewski theorem”,
+Jour. Diff. Geom 6, pp. 561–576.
+S. Olla, S.R.S. Varadhan, and H.-T. Yau (1993). “Hydrodynamical Limit for a Hamil-
+tonian System with Weak Noise”, Comm. Math. Phys. 3, pp. 523–560.
+R. Patterson, S. Simonella, and W. Wagner (2016). “Kinetic theory of cluster dynamics”,
+Phys. D: Nonlin. Phen. 335, pp. 26–32.
+(2017). “A Kinetic Equation for the Distribution of Interaction Clusters in
+Rarefied Gases”, J. Stat. Phys. 169 (1), pp. 126–167.
+R.E. Peierls (1929). “Zur kinetischen Theorie der W¨armeleitung in Kristallen”, Annalen
+Physik 3, pp. 1055–1101.
+O. Penrose (1967). “Convergence of fugacity expansions for classical systems”, in: Sta-
+tistical mechanics: foundations and applications. A. Bak ed., Benjamin, New York.
+S. Poghosyan and D. Ueltschi (2009). “Abstract cluster expansion with applications to
+statistical mechanical systems”, J. Math. Phys. 50 (5), Paper No. 053509, 17 pp.
+M. Pulvirenti, C. Saffirio, and S. Simonella (2014). “On the validity of the Boltzmann
+equation for short range potentials”, Rev. Math. Phys. 26 (2), pp. 1–64.
+M. Pulvirenti and S. Simonella (2017). “The Boltzmann-Grad limit of a hard sphere
+system: analysis of the correlation error”, Invent. Math. 207 (3), pp. 1135–1237.
+(2026). “Some Considerations on the Fluid-Dynamical Limit of Particle Systems”,
+Mathematics and Mechanics of Complex Systems 14 (2), pp. 143–154.
+C. Qi (2024). Global Solution of a Functional Hamilton-Jacobi Equation associated with
+a Hard Sphere Gas. arXiv: 2409.02805.
+D. Ruelle (1969). Statistical Mechanics. Rigorous Results. W.A. Benjamin Inc., New
+York.
+S. Simonella and R. Winter (2026). “Pointwise decay of cumulants in chaotic states at
+low density”, Markov Processes and Related Fields. To appear.
+H. Spohn (1991). Large Scale Dynamics of Interacting Particles. Texts and Monographs
+in Physics. Springer-Verlag, New York.
+(1997). “Loschmidt’s Reversibility Argument and the H-Theorem”, Pioneering
+Ideas for the Physical and Chemical Sciences.
+
+
+1247–39
+A-S. de Suzzoni (2025). “D´erivation de l’´equation cin´etique associ´ee `a l’´equation de
+Schr¨odinger cubique, d’apr`es Yu Deng et Zaher Hani”, in: S´eminaire Bourbaki. Volume
+2023/2024. Expos´es 1211–1226. Ast´erisque 454, pp. 341–374.
+F. Treves (1970). “An abstract nonlinear Cauchy-Kowalewska theorem”, Trans. Amer.
+Math. Soc 150, pp. 77–92.
+K. Uchiyama (1988). “Derivation of the Boltzmann equation from particle dynamics”,
+Hiroshima Math. J. 18, pp. 245–297.
+S. Ukai (1974). “On the existence of global solutions of mixed problem for non-linear
+Boltzmann equation”, Proc. Japan Acad. 50, pp. 179–184.
+(2001). “The Boltzmann-Grad Limit and Cauchy-Kovalevskaya Theorem”, Japan
+J. Indust. Appl. Math. 18, pp. 383–392.
+Thierry Bodineau
+I.H.E.S., Universit´e Paris-Saclay, CNRS
+Laboratoire Alexandre Grothendieck,
+35 Route de Chartres
+91440 Bures-sur-Yvette, France
+E-mail : bodineau@ihes.fr
+Isabelle Gallagher
+Universit´e Paris Cit´e, Sorbonne Universit´e
+CNRS, IMJ-PRG
+75013 Paris, France
+E-mail : isabelle.gallagher@u-pariscite.fr
+Laure Saint-Raymond
+I.H.E.S., Universit´e Paris-Saclay, CNRS
+Laboratoire Alexandre Grothendieck,
+35 Route de Chartres
+91440 Bures-sur-Yvette, France
+E-mail : laure@ihes.fr
+Sergio Simonella
+Sapienza Universit`a di Roma
+Dipartimento di Matematica G. Castelnuovo
+Piazzale A. Moro 5, 00185 Roma, Italy
+E-mail : sergio.simonella@uniroma1.it

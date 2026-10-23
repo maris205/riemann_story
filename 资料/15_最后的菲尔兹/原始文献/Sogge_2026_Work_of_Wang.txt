@@ -1,0 +1,858 @@
+The Work of Hong Wang
+Christopher D. Sogge∗
+Abstract. Hong Wang has made several tremendous contributions to harmonic analysis and geometric
+measure theory. On the 23rd of July 2026, she was awarded the Fields Medal. In this short article we shall
+focus on her work on the Kakeya problem and other problems related to the Fourier transform. We will try to
+put her work in historical context and present a small selection of her contributions to harmonic analysis.
+Keywords— Fourier transform, Kakeya sets, local smoothing, multiscale analysis
+1
+Introduction. Hong Wang received the Fields Medal for her stellar work in harmonic analysis and geometric
+measure theory.
+She resolved the three-dimensional Kakeya conjecture, the planar local smoothing conjecture for the
+wave equation and the Furstenberg set conjecture. Each of these conjectures was several decades old and had attracted
+the attention of the top researchers in the field.
+She has also been able to obtain the best known results for several
+other longstanding problems, including Stein’s restriction problem for the Fourier transform, the Bochner-Riesz problem
+concerning the convergence of truncated Fourier transforms, as well as the Falconer distance problem relating Hausdorff
+dimension and the structure of distance distributions.
+A major theme of Wang’s work is the novel use of multiscale methods in combination with deep and innovative
+geometric combinatorial arguments. Often these involve the discovery and exploitation of new geometric structures. Wang
+has also had remarkable success in extending and refining modern techniques in harmonic analysis and geometric measure
+theory, especially decoupling theory and multiscale analysis. The methods that she has introduced in her breakthroughs on
+several central problems in analysis have already been impactful in related areas such as geometry and partial differential
+equations.
+Much of Wang’s work, including her spectacular work with Joshua Zahl, [45], [46], [47], resolving the three-dimensional
+Kakeya conjecture and the remarkable work with Larry Guth and Ruixiang Zhang [23] settling the two-dimensional local
+smoothing conjecture for the wave equation, is related to the Euclidean Fourier transform
+(1.1)
+ˆf(ξ) =
+Z
+Rn e−2πix·ξ f(x) dx.
+Indeed, the Kakeya conjecture and the local smoothing conjecture belong to a family of conjectures, a “tower” of conjectures
+(see [11]), each of which has deep and surprising connections with the Fourier transform and one another. In this article we
+shall focus on Wang’s work on these problems. Before stating her breakthroughs, we shall give some historical background
+which helps to emphasize the significance of her results.
+2
+Background: The Kakeya Problem Before the results of Wang and Zahl [45], [46], [47] there were two
+other milestones that we shall describe in this section.
+2.1
+Early Kakeya Results For many years people have been interested in the “size” of Kakeya sets, which we
+define as follows:
+Definition 2.1. A compact subset K ⊂Rn, n ≥2, is called a Kakeya set if it contains a unit-line segment pointing
+in every direction.
+This assumption means that, if Sn−1 ⊂Rn is the unit sphere, then for each ω ∈Sn−1 one can find xω ∈Rn so that
+γω = { xω + tω : t ∈[0, 1]} ⊂K.
+Without knowing of each other’s work, in 1917, Abram Besicovitch and S¯oichi Kakeya were the first to study Kakeya
+sets. This was due to the relative isolation of Russian mathematicians at that time on account of the Russian revolution.
+They had very different motivations for studying Kakeya sets. Besicovitch was working on a problem in Riemannian
+integration concerning the extent to which the Fubini theorem for the Lebesgue integral extends to the Riemannian setting.
+Specifically, as stated in Besicovitch’s survey paper [3]:
+∗Department of Mathematics, Johns Hopkins University (sogge@jhu.edu) The author was supported in part by the NSF (DMS-
+2348996.
+1
+arXiv:2609.40161v1  [math.CA]  30 Sep 2026
+
+
+Given a function of two variables, Riemann-integrable on a plane domain, does there always exist a pair of mutually
+perpendicular directions such that the repeated simple integration along the two directions exists and gives the value of the
+integral over the domain?
+Besicovitch realized1 that if there were planar Kakeya sets of Lebesgue measure zero then these would provide a
+counterexample, ensuring that the answer must be “no”. See [15] for details.
+As we shall see, this is a recurrent theme. “Small” Kakeya sets yield negative results in analysis, and, consequently,
+one might hope that Kakeya sets cannot be “too small.”
+Kakeya’s motivation was much different. In his 1917 paper, “Some problems on maximum and minimum regarding
+ovals,” he proposed 54 problems. The most famous is what we now call the Kakeya needle problem:
+In the class of figures in which a segment of length 1 can be turned around through 360◦, remaining always within the
+figure, which one has the smallest area?
+Kakeya called sets with this property “revolvable.” Thus, his needle problem asks one to find a planar revolvable set
+of minimal area. He gave three examples: discs of diameter one, equilateral triangles of height one and deltoids2 of height
+one, as shown in Figure 2.1.
+The three sets in the figure have decreasing area. The disc of course is of area π/4 ≈.78, the triangle
+√
+3/3 ≈.58,
+while the deltoid has area π/8 ≈.39. Thus, the deltoid has half the area of the disc. Furthermore, when executing a
+three-point turn one’s car basically sweeps out a deltoid.
+Figure 2.1: Revolvable sets.
+Perhaps motivated by these sorts of considerations Kakeya conjectured that the deltoid is the solution of his needle
+problem, i.e., a revolvable set of minimal area. Unaware of Besicovitch’s work [1], the Kakeya needle problem aroused much
+interest. For instance, in 1925, Birkhoff writing about unsolved problems in his book, “The Origin, Nature and Influence
+of Relativity” [4], first mentions the four-color problem and then added: “Of like intriguing simplicity is the question raised
+a few years ago by the Japanese mathematician Kakeya.”
+Besicovitch established the following milestone which provided a negative solution to his problem concerning the
+Riemann integral, as well as the Kakeya needle problem:
+Theorem 2.2 (Besicovitch 1919/1928).
+There are Kakeya sets K ⊂Rn of measure zero, |K| = 0. Additionally, there
+are planar revolvable sets of arbitrarily small area.
+Besicovitch’s 1919 paper [1] establishing zero-measure planar Kakeya sets appeared in an obscure Russian journal that
+went defunct after only publishing a couple of volumes due to the turbulent times in Russia. At the time, Besicovitch
+was unaware of Kakeya’s problem, and mathematicians outside of Russia were largely unaware of Besicovitch’s work.
+Consequently, he was led to republish his construction of zero-measure Kakeya sets (often called “Besicovitch sets”) in
+his 1928 paper [2].
+In this paper he added a one-paragraph modification of his construction, due to the Hungarian
+mathematician Pál3, showing that there are revolvable sets of arbitrarily small area. Additionally, Besicovitch was only
+interested in planar sets, but one can obtain zero-measure Kakeya sets in Rn, n ≥3, by taking the Cartesian product of a
+zero-measure planar set K and [0, 1]n−2.
+Besicovitch’s construction is based on the observation that if one bisects the top vertex of a triangle and then slides the
+two halves along the bottom side so that they overlap, then the resulting object will have smaller area. If one starts with
+an equilateral triangle as in Figure 2.2, the resulting set will include a unit line segment pointing in each direction swept
+out by the top vertex. Thus, since segments have two directions, it contains segments pointing in 120◦= 60◦+ 60◦worth
+of directions. If one repeats this construction, as in Figure 2.2, the resulting set has even smaller area but still contains a
+1For the reasons we have stated before, unfortunately, Besicovitch’s 1917 work is lost to time and we are unable to provide a
+reference.
+2Recall that a deltoid is a roulette curve. One of unit height is formed by marking a circle of diameter 1/2 and then rolling it
+within a circle of diameter 3/2 to trace out the deltoid via the marked point.
+3Pál also showed that the equilateral triangle of height one is the smallest convex revolvable set in [33].
+2
+
+
+unit line segment pointing in all of these directions. By iterating this procedure, after ℓsteps, Besicovitch obtained a set
+Kl consisting of 2ℓ“ears” and having total area |Kℓ| ≈1/ℓ. He then set up a limiting argument to obtain a zero-measure
+set containing a unit line segment pointing in all the directions swept out by the top vertex of the equilateral triangle in
+Figure 2.2. Of course, by suitably rotating two copies of this set and taking unions with the original set, one obtains the
+zero-measure Kakeya set K in Theorem 2.2 when n = 2.
+The argument we have sketched is a slight simplification of Besicovitch’s original argument, due to Perron [35] and
+Schoenberg [38]. Additionally, the sets Kℓdescribed above are called “Perron trees”.
+Figure 2.2: Besicovitch’s construction: K0, K1, K2
+For more details about Besicovitch’s construction and the early history of the Kakeya problem, we refer the reader to
+his excellent survey article [3]. This paper was written to accompany a delightful film funded by a 1958 National Science
+Foundation grant established to “explore the possibilities of mathematical motion pictures”. This film about Kakeya sets
+was narrated by Besicovitch, and it was one of four mathematical films funded by this early NSF grant.
+2.2
+Kakeya Sets and Fourier Analysis Another old problem concerns the Lp-convergence of the truncated
+Fourier integrals,
+(2.1)
+SNf(x) =
+Z
+{ξ∈Rn: |ξ|≤N}
+e2πix·ξ ˆf(ξ) dξ,
+with the Fourier transform ˆf defined as in (1.1). Recall that Fourier’s inversion formula says that
+(2.2)
+f(x) =
+Z
+Rn e2πix·ξ ˆf(ξ) dξ,
+for well-behaved functions f, for instance f in S(Rn), the space of Schwartz-class functions. Recall also that, from this
+and a density argument, one obtains that there is L2-convergence of the ball multiplier operators, i.e.,
+(2.3)
+SNf →f
+in L2(Rn) as N →∞.
+By this we of course mean that if f ∈L2(Rn), then ∥SNf −f∥L2(Rn) →0 as N →∞.
+The SN are called ball multiplier operators since the Fourier transform of SNf is just ˆf multiplied by the indicator
+function of the N-ball, {ξ ∈Rn : |ξ| ≤N}. Also, by a simple dilation argument
+(2.4)
+∥SN∥p→p = ∥S∥p→p,
+if
+S = S1,
+with ∥· ∥p→p denoting the Lp(Rn) →Lp(Rn) operator norm.
+Given (2.3), it is natural to ask whether there is also Lp(Rn)-convergence of the truncated Fourier integrals SNf in
+(2.1). In other words, given a dimension n = 1, 2, . . . , for which exponents p ∈(1, ∞) do we have
+(2.5)
+SNf →f
+in Lp(Rn) as N →∞?
+It is not difficult to see that 1 < p < ∞is a necessary condition.
+This classical problem is called the multiplier problem for the ball. By the above considerations, there is an affirmative
+answer for a given p if and only if S : Lp(Rn) →Lp(Rn), with, as in (2.4), S being the multiplier operator associated with
+the unit ball, that is, S = S1.
+In 1928, M. Riesz [37] completely solved the one-dimensional ball multiplier problem, showing that
+(2.6)
+SNf →f
+in Lp(R)
+for every 1 < p < ∞.
+3
+
+
+Riesz’s proof of this landmark result introduced important new tools in harmonic analysis, including interpolation theory.
+In the 1970s Fefferman began his study of the ball multiplier problem in higher dimensions n ≥2. In [16] he came up
+with the following very surprising full resolution:
+(2.7)
+If n ≥2 then SNf →f in Lp(Rn) if and only if p = 2.
+He proved this milestone result by using Besicovitch’s iterative construction of zero-measure Kakeya sets mentioned before.
+In [16], Fefferman called his Ball Multiplier Theorem, (2.7), an “unfortunate fact.”
+Let us give a very rough sketch of Fefferman’s seminal proof linking the Fourier transform and Kakeya sets. To prove
+(2.7) for, say, n = 2, it suffices, by duality and the above considerations, to show that
+(2.8)
+S is unbounded on Lp(R2) for all p > 2.
+To prove (2.8) Fefferman introduced a remarkable construction relying on the properties of the iterates, Kℓ, described
+earlier in Besicovitch’s construction. To work spatially within sets of unit-scale near Kℓ, after recalling (2.4), one deduces
+that, to show S is unbounded on Lp(R2) for each p > 2, it suffices to show that
+(2.9)
+∥SN2f∥Lp(R2)/∥f∥Lp(R2) ≥CN, some f = fN, with CN →∞, as N →∞.
+To prove this Fefferman introduces f = P fj with the sum having N = 2ℓterms. He chooses each fj to be the
+indicator of a 1 × N −1 rectangle Rj times an oscillatory (modulation) factor
+fj(x) = e2πiN2x·θj 1Rj(x),
+with θj ∈S1 pointing in the direction of the long side of Rj (the one of length 1). It then follows that the Fourier transform
+ˆfj is concentrated on a 1 × N rectangle, Θj, centered at N 2θj, a point on the boundary of the N 2-disc, BN2, with short
+side pointing in the direction θj as in Figure 2.3. Note that roughly “half” of Θj is inside the N 2-disc and roughly “half”
+is outside. In this construction, only terms with θj corresponding to the direction of the N = 2ℓ“ears” of Kℓare included
+in the sum defining f.
+The rectangles Rj chosen will be disjoint, which ensures that
+(2.10)
+∥f∥Lq(R2) ≈1
+all q ≥2.
+The key and difficult step in Fefferman’s construction is showing that Rj can be chosen near each of the N = 2ℓ“ears” of
+Kℓso that SN2f has nontrivial L2-concentration on Kℓ:
+(2.11)
+∥SN2f∥L2(Kℓ) ≥c0 > 0,
+N = 2ℓ, ℓ= 1, 2, . . . .
+This is a delicate uniform lower bound due to the uncertainty principle and other considerations. It relies on the fact
+that the sets Kℓin the Besicovitch construction contain rectangles of size ∼1 × N −1 pointing in each of the θj-directions
+mentioned before, as well as the fact that ˆfj is concentrated on the 1 × N rectangle Θj “half” of which is inside BN2 and
+“half” outside.
+To use (2.10) and the difficult Kakeya mass compression estimate (2.11), Fefferman just uses Hölder’s inequality and
+the assumption that p > 2 to deduce that
+c0 ≤|Kℓ|
+1
+2 −1
+p ∥SN2f∥Lp(Kℓ) ≤|Kℓ|
+1
+2 −1
+p ∥SN2f∥Lp(R2).
+Since Besicovitch’s construction yields |Kℓ| ≈1/ℓ= 1/ log N, we deduce from this that
+∥SN2f∥Lp(R2)/∥f∥Lp(R2) ≳(log N)
+1
+2 −1
+p ,
+if p > 2,
+which yields (2.9).
+As with Besicovitch’s theorem, straightforward arguments show that the higher dimensional n ≥3 version of
+Fefferman’s theorem, (2.7), follows from the two-dimensional argument.
+This is a very rough sketch of Fefferman’s incredible observation that there are deep connections between properties of
+Kakeya sets and problems involving the Fourier transform, which has ben an important theme in harmonic analysis since
+his seminal paper [16]. For more details, the reader can go to Fefferman’s self-contained paper or Stein’s book [40].
+Due to Fefferman’s “unfortunate fact”, (2.8), in order to possibly have Lp-convergence, p̸ = 2, of truncated Fourier
+integrals representing f, it is necessary to mollify the ball multiplier operators. A standard way of doing this is by using
+the Bochner-Riesz operators Sδ
+N, δ > 0, defined by
+(2.12)
+Sδ
+Nf(x) =
+Z
+Rn e2πix·ξ ˆf(ξ) 1BN (ξ)
+ 1 −|ξ/N|2δ dξ,
+4
+
+
+Figure 2.3: Fefferman’s construction.
+with 1BN being the indicator function of the N-ball {ξ ∈Rn : |ξ| ≤N}. The analog of the ball multiplier operator then
+becomes, given p and n, when do we have Sδ
+Nf →f in Lp(Rn)? Since the Fourier multipliers 1BN (ξ) (1 −|ξ/N|2)δ become
+smoother as δ increases, there is naturally a minimum value of δ for an affirmative answer. Due to (2.8) and much more
+straightforward considerations, an optimal result would be one form of the Bochner-Riesz conjecture
+(2.13)
+Sδ
+Nf →f
+in Lp(Rn) if δ > δ(p, n) = max
+
+n| 1
+2 −1
+p| −1
+2, 0
+	
+.
+Analogous to the situation for the ball multiplier operators, one has (2.13) for a given exponent p if and only if
+Sδ : Lp(Rn) →Lp(Rn) with
+(2.14)
+Sδf(x) =
+Z
+{ξ∈Rn: |ξ|≤1}
+e2πix·ξ (1 −|ξ|2)δ ˆf(ξ) dξ.
+As a result, one sees that, if δ(p, n) is as above, then the Bochner-Riesz convergence in (2.13) is valid if and only if the
+standard form of the Bochner-Riesz conjecture holds:
+(2.15)
+Sδ : Lp(Rn) →Lp(Rn)
+if
+δ > δ(p, n).
+Just like Besicovitch, Fefferman proved his ball multiplier theorem by using the fact that there are zero-measure
+Kakeya sets K ⊂Rn, n ≥2. For the Bochner-Riesz conjecture to be valid, it is important that zero-measure Kakeya sets
+cannot be “too small.” Indeed, if dim denotes either Minkowski or Hausdorff dimension, Fefferman’s argument also shows
+that, if there are Kakeya sets K ⊂Rn satisfying dim K ≤n −α for some α > 0, then the bounds in (2.15) cannot be
+valid for exponents p ∈(p′(α, n), p(α, n)) \ {2}, for some exponent p(α, n) > 2, depending on n and α. Here p′(α, n) < 2
+denotes conjugate exponent for p(α, n) defined by 1/p(α, n) + 1/p′(α, n) = 1. Thus, the Bochner-Riesz conjecture implies
+that Kakeya sets must have full dimension.
+Around the same time as Fefferman’s work on the ball multiplier, the two-dimensional version of the Bochner-Riesz
+conjecture was fully resolved by Carleson and Sjölin [10]. More than a half-century later, though, the higher dimensional
+version of the conjecture remains open, highlighting the importance of ensuring that Kakeya sets in Rn, n ≥3, cannot be
+“too small”.
+2.3
+The Kakeya Conjecture Given Fefferman’s 1971 results, there has naturally been much interest since then
+in the following modern form of the Kakeya problem:
+Conjecture 2.3 (Kakeya Conjecture). Let n ≥2. Then if K is a Kakeya set in Rn,
+(2.16)
+dim K = n,
+with dim denoting either Minkowski dimension, dimM, or, more importantly, Hausdorff dimension, dimH.
+5
+
+
+We refer the reader to [15] for precise definitions of Minkowski and Hausdorff dimensions. We recall, though, that
+dimH E ≤dimM E for any E ⊂Rn, which means that the Hausdorff form of the Kakeya conjecture is stronger. To avoid
+technicalities, we shall mainly focus on the Minkowski version of the conjecture.
+One form of the Minkowski variant of (2.16) is easy to state. Indeed, if
+(2.17)
+Kδ = { y ∈Rn : dist (y, K) < δ },
+denotes a δ-neighborhood of a Kakeya set K, then (2.16) with dim = dimM is just the following lower bound for its measure:
+(2.18)
+For every ε > 0, |Kδ| ≥cε,K δε,
+whenever δ ∈(0, 1/2),
+with cε,K > 0 depending on ε and the Kakeya set. Note that if K is a zero-measure Kakeya set, then by the dominated
+convergence theorem, |Kδ| →0 as δ →0. The lower bound (2.18) says that the measure cannot go to zero too quickly.
+An equivalent formulation of the statement dimM K = n is that if N(δ) is the minimum number of δ-balls needed to
+cover Kδ, then limδ→0 log N(δ)/ log δ−1 = n. The definition of Hausdorff dimension involves countable coverings by sets of
+diameter δ or less, and this extra flexibility accounts for why dimH E ≤dimM E.
+In 1971, the same year as Fefferman’s important result, R. Davies [13] completely resolved the two-dimensional version
+of the conjecture.
+Theorem 2.4 (Davies 1971). If K ⊂R2 is a Kakeya set then dim K = 2.
+Since Davies’ work, many proofs of this two-dimensional result have been obtained. The simplest are L2-based. Indeed,
+by using ideas going back to Córdoba [12] (also from the 1970s), one can prove that Kakeya subsets of R2 always have
+full dimension by a simple argument involving the Cauchy-Schwarz inequality. Davies was a student of Besicovitch, and
+Córdoba was a student of Fefferman.
+3
+Wang and Zahl’s Resolution of the three-dimensional Kakeya Conjecture We now turn to the
+work of Hong Wang. One of her main results is the third milestone in the Kakeya story. In 2025, she and Joshua Zahl were
+able to fully resolve the three-dimensional Kakeya conjecture in the remarkable work [46]. As we shall discuss below, this
+is the first of the principal conjectures in harmonic analysis related to the Fourier transform to be settled in a dimension
+larger than two.
+The result of Wang and Zahl, coming more than a half century after its two-dimensional analog, is the following.
+Theorem 3.1 (Wang and Zahl, 2025). If K is a Kakeya subset of R3, then it must have full dimension, both Minkowski
+and Hausdorff. Thus, dimM K = dimH K = 3.
+We shall attempt to give some of the main ideas in the proof of this remarkable result. The proof was split up over
+three papers, [45], [46] and [47], spanning more than 300 pages.
+To minimize technicalities, we shall focus on the special case saying that Kakeya subsets of R3 always have full
+Minkowski dimension. As in the earlier discussion of background results, we shall also take a great deal of poetic license
+in places, for instance ignoring the role of various small constants that necessarily arise in the proof.
+Given the importance of the result, not surprisingly, there have been several expository articles about the work of
+Wang and Zahl. These include Guth [18], [19], [20], Hickman [24] and Tao [42]. There is also the excellent article and
+accompanying video by Quanta magazine [25].
+Before saying a few words about the proof of the Kakeya theorem of Wang and Zahl, let us mention some earlier work
+on the Kakeya conjecture for n ≥3. Given its importance, it is not surprising that many of the leading harmonic analysts
+of the last couple of generations had made important contributions. Many of the tools developed to obtain partial results
+played a role in Wang and Zahl’s proof.
+Let us briefly mention partial results for the three-dimensional Kakeya conjecture that preceded Theorem 3.1. First
+on the list is the important 1991 work of Bourgain [6] showing that dimH K ≥7/3. This was the first result going beyond
+L2-methods. Shortly afterwards, Wolff [48] improved the lower bound to dimH K ≥5/2, and his approach highlighted the
+power of multiscale analysis. The Wolff lower bound proved to be difficult to improve upon in the ensuing years. The
+first improvement was by Katz, Łaba and Tao [26], who showed that dimM K ≥5/2 + ε0 for some unspecified ε0 > 0 very
+small (think ε0 = 10−10). Though this improvement over the Wolff lower bound was modest (and only for Minkowski
+dimension), this paper introduced very important ideas, including the notion of sticky Kakeya sets. More recently, Katz
+and Zahl [27] obtained a result in the spirit of [26], showing that dimH K ≥5/2+ε0, also for some small unspecified ε0 > 0.
+3.1
+Discretization: Estimating unions of tubes As is standard, the first step in the proof of Theorem 3.1
+is to reduce to a discrete problem involving δ-tubes, {Tδ} = {T}, meaning that each T is a tube in R3 of length 1 and
+diameter δ ∈(0, 1/2). We shall say that Tδ has δ-separated directions if the directions of the tubes T, ωT ∈S2, satisfy
+|ωT −ωT ′| ≥δ for all T̸ = T ′ in Tδ.
+We can now state the main estimate of Wang and Zahl to handle Minkowski dimension:
+6
+
+
+Theorem 3.2 (Discrete Kakeya Theorem).
+Given ε > 0 there is a constant cε > 0 so that whenever Tδ = {T} is a
+collection of δ-separated δ-tubes with δ ∈(0, 1/2), we have
+(3.1)
+ [
+T ∈Tδ
+T
+ ≥cεδε  |Tδ| · |T|
+
+.
+Here |Tδ| denotes the cardinality of the collection of tubes and |T| ≈δ2 the volume of each tube in Tδ. Although
+the discrete Kakeya estimate (3.1) of Wang and Zahl is very simple (and trivial if the tubes happen to be disjoint), it is
+very difficult to prove. One must consider all possible configurations of directionally separated tubes, and, as Figure 2.3
+suggests, there can be many intersections potentially reducing | S T|. The point of (3.1) is that δ-separated tubes “cannot
+intersect too much”.
+Figure 3.1: Union of δ-tubes
+Let us give the simple argument showing that the discrete Kakeya estimates imply that dimM K = 3 if K ⊂R3 is
+a Kakeya set. We first note that, if as in (2.17), Kδ is a δ-neighborhood of K, then, since, by assumption, K contains a
+unit line segment in every direction, given ω ∈S2 we can find a δ-tube which points in the direction ω and belongs to Kδ.
+Using the fact that S2 is two-dimensional, we deduce from this that we can find a collection, Tδ, of δ-separated δ-tubes of
+cardinality |Tδ| ≈δ−2 with T ⊂Kδ, ∀T ∈Tδ. Whence, by (3.1),
+|Kδ| ≥
+ [
+T ∈Tδ
+T
+ ≥cεδε  δ−2 · δ2 
+= cεδε, ∀ε > 0.
+Thus, (2.18) must be valid and so our Kakeya set must satisfy dimM K = 3 as claimed.
+To prove the stronger and more important result concerning Hausdorff dimension, dimH K = 3, Wang and Zahl use a
+technical variant of (3.1) involving “shaded” portions of each of the tubes. Specifically, given potentially small λ > 0, they
+consider measurable subsets Y (T) ⊂T of each tube satisfying
+(3.2)
+|Y (T)| ≥λ|T|.
+Given any such “shading” they are able to show that, for each ε > 0 there is a K ∈N so that, for sufficiently small δ > 0
+(3.3)
+ [
+T ∈Tδ
+Y (T)
+ ≥δε λK  |Tδ| · |T|
+
+,
+assuming, as in (3.1), that the tubes in Tδ are δ-separated.
+By a more technical argument than above, (3.3) implies that Kakeya subsets of R3 must have full Hausdorff dimension.
+7
+
+
+3.2
+Sticky Kakeya sets: A significant special case Arguably the most significant step in Wang and Zahl’s
+proof of the Kakeya conjecture was handled in the first of their trilogy of papers, [47]. Here they showed that the conclusions
+of Theorem 3.2 are valid in the sticky case.
+Informally, a collection of δ-tubes, Tδ, is sticky if typically tubes pointing in similar directions must also sit together
+close in space. So, as in Figure 3.2, in the sticky case tubes with nearby directions cluster in nearby locations (like branches
+of a tree), while for a non-sticky collections, tubes can share nearly the same direction and sit in totally unrelated parts of
+space.
+Figure 3.2: Sticky vs Non-Sticky in 2-d
+Due to the multiscale arguments used, it is convenient to formulate things more precisely using coverings of the tubes
+Tδ by tubes Tρ of coarser intermediate scales ρ ∈(δ, 1/2). Specifically, we say that a collection of δ-separated δ-tubes Tδ
+is sticky if, for every such ρ, we can find a collection of ρ-tubes Tρ, with the following properties:
+i. every δ-tube Tδ ∈Tδ belongs to a ρ-tube Tρ,
+ii. |Tρ| = O(|Tδ| · (δ/ρ)2),
+iii. and, if Tδ[Tρ] = {T ∈Tδ : T ⊂Tρ}, then |Tδ[Tρ]| ≈(ρ/δ)2 for a typical Tρ ∈Tρ.
+Since the set of directions in R3 is two-dimensional, one can think of a sticky collection of tubes, Tδ, as an urban
+planner’s dream: Given any scale ρ ∈(δ, 1/2) Tδ is covered by exactly the right number ≈|Tδ| · (δ/ρ)2 neighborhoods
+{Tρ ∈Tρ}, with typical neighborhoods Tδ[Tρ] = {T ∈Tδ : T ⊂Tρ} having the natural size |Tδ[Tρ]| ≈(ρ/δ)2. Little to no
+flyover country. Sticky and non-sticky collections of tubes are depicted in Figure 3.3. For visualization reasons, we have
+only drawn the smaller δ-tubes (shaded red) in some of the larger ρ-tubes.
+Figure 3.3: Sticky and Non-sticky collections of tubes in R3
+We shall say that a Kakeya set K ⊂R3 is sticky if for every δ ∈(0, 1/2), Kδ (as above) can be covered by a collection
+Tδ of sticky δ-tubes. Then the main result from Wang and Zahl [47] is the following.
+8
+
+
+Theorem 3.3 (Sticky Kakeya Theorem).
+Sticky Kakeya subsets of R3 have full dimension. Additionally, (3.1) is
+valid if the δ-direction separated collection Tδ is sticky.
+We should point out that the sticky condition is rigid. Sticky Kakeya sets have a self-similar like structure. For
+instance, if one considers the δ-tubes lying in a typical ρ-tube as in Figure 3.3 and performs an anisotropic scaling sending
+the ρ-tube to a 1-tube, the image of the δ-tubes become a collection of ∼(δ/ρ)-tubes that is also sticky. Wang and Zahl
+exploited the rich structure of sticky Kakeya sets in their proof. On the other hand, they had to overcome two serious
+obstacles. The first is intuitive. Sticky Kakeya sets should be ones with the maximal amount of “compression” and naively
+the worst case for Theorem 3.1.
+A more serious obstacle was pointed out by Łaba, Katz and Tao [26]: the analog of Theorem 3.2 is false in the complex
+setting!
+Briefly, the “Heisenberg example” from [26] is given by
+(3.4)
+H =
+
+(z1, z2, z3) : Im (z3) = Im (z1 z2), |z1|, |z2|, |z3| ≤2
+	
+⊂C3.
+Note that H contains a 4 (real)-parameter family of line segments, {(z, w + az, zw + b) : |z| ≤1/2}, a, b ∈R, w ∈C
+with |a|, |b|, |w| ≤1. From this, one can see that there are ∼δ−4 complex δ-tubes about complex unit segments, T, with
+δ-separated directions which belong to a δ-neighborhood, Hδ, of H. Thus, | S
+T ∈T T| ≲δ. Since each complex tube has
+measure ∼δ4, it follows that | S T| ≲δ ≪1 ≈(|T| · |T|), which means the analog of (3.1) cannot hold here.
+The Heisenberg example also shares the key structural properties of sticky Kakeya subsets. From this we conclude
+that any proof of Theorem 3.3 must distinguish between the real and complex field. The fundamental structure of the
+Heisenberg example relies on the fact that C has the half-dimensional subfield R ⊂C. It turns out that R cannot have
+subfields of intermediate dimension. Indeed, an important theorem of Edgar and Miller [14] says that Borel subrings of R
+must either be zero-dimensional or be all of R.
+In order to prove their sticky Kakeya theorem Wang and Zahl used results that grew out of the celebrated sum-product
+theorem of Bourgain [7], which can be thought of as a quantitative variant of Edgar and Miller’s theorem. More precisely,
+Wang and Zahl used recent related results from projection theory ([30], [31], [32]) that were developed in the study of the
+Falconer distance problem. In particular, the results of Orponen, Shmerkin and Wang [32] help to provide the critical step
+in the proof which distinguishes between a sticky Kakeya set in R3 and the Heisenberg example (a subset of C3).
+3.3
+End of proof: Leveraging sticky Kakeya The directional hypotheses in the Discrete Kakeya Theorem
+(Theorem 3.2) are not typically preserved in the multiscale arguments that Wang and Zahl employ. Indeed, after zooming
+in on a small region of S
+T ∈Tδ T and rescaling, one could end up with a new collection of larger tubes where many of the
+tubes are pointing in nearly the same direction.
+Due to this, Wang and Zahl were led to proving stronger estimates involving hypotheses that can be used in their
+multiscale induction arguments. The assumptions take into account the density of Tδ in convex subsets C in R3. Specifically,
+(3.5)
+∆(Tδ, C) = #{T ∈Tδ : T ⊂C} × δ2
+|C|
+≈combined volume of tubes in C
+|C|
+.
+Due to the John ellipsoid theorem, one can always assume that the sets C are rectangular prisms for the sake of
+simplicity, but this is not very important. Figure 3.4 depicts low and high density clustering.
+Figure 3.4: Low and high densities
+For the remainder of the section, we shall assume that all of the tubes T ∈Tδ that arise are contained in the unit ball
+B = {x ∈R3 : |x| ≤1}.
+The stronger versions of the earlier discrete Kakeya theorem are based on two different types of tube clustering conditions:
+Definition 3.4. A collection of δ-tubes Tδ satisfies the Katz-Tao condition if
+(3.6)
+sup
+C⊂R3, convex
+∆(Tδ, C) ≲1.
+9
+
+
+Definition 3.5. A collection of δ-tubes Tδ satisfies the Frostman condition if
+(3.7)
+sup
+C⊂R3, convex
+∆(Tδ, C) ≲∆(Tδ, B).
+Wolff seems to be one of the first to have organized tubes as above. In his important Kakeya paper [48], his main
+result was formulated using the assumption (3.6), and in [49] he introduced the other type of clustering condition (3.7).
+For these reasons, Wang and Zahl also call (3.6) the Katz-Tao Convex Wolff Axiom and (3.7) the Frostman Convex Wolff
+Axiom. Wolff’s paper [49] concerned the X-ray transform, while the papers of Wang and Zahl seem to be the first to use
+the Frostman condition for the Kakeya problem.
+It is important to emphasize that the two conditions are complementary. For instance, the Katz-Tao condition is
+an absolute condition, imposing an absolute bound on the clustering density, while the Frostman condition is a relative
+condition saying that the clustering of tubes within convex sets is dominated by the clustering within the ball, B. The two
+conditions also give complementary requirements for the cardinality of Tδ. Indeed, by taking C = B in (3.6) we conclude
+that if the Katz-Tao condition holds then |Tδ| ≲δ−2, while, conversely, by taking C to be a single tube T, we deduce that
+if the Frostman condition holds then |Tδ| ≳δ−2. Another important observation is that if, as in Theorem 3.2, the tubes Tδ
+are δ-direction separated then the Katz-Tao condition holds, and the Frostman condition is valid if additionally |Tδ| ≳δ−2.
+It turns out that there is a very surprising “Yin and Yang” relationship between the two conditions that Wang and
+Zahl are able to exploit in their remarkable inductive proof of the following results.
+Theorem 3.6. (Strong Kakeya: Katz-Tao version) If Tδ as above is Katz-Tao, then (3.1) is valid, i.e.,
+(3.8)
+ [
+T ∈Tδ
+T
+ ≥cεδε  |Tδ| · |T|
+
+,
+∀ε > 0.
+Theorem 3.7. (Strong Kakeya: Frostman version) If Tδ as above is Frostman, then
+(3.9)
+ [
+T ∈Tδ
+T
+ ≥cεδε,
+∀ε > 0.
+Clearly, the arguments of §3.1 imply that either of these two theorems implies that Kakeya subsets of R3 must have
+full dimension. Also, of course, given the remarks before the statement, Theorem 3.6 yields Theorem 3.1, and Theorem 3.7
+yields the important special case where |Tδ| ≈δ−2.
+The two theorems are proved using a coupled inductive argument which takes advantage of the complementary nature
+of the two clustering conditions. The two inductive estimates4 say that for β ∈[0, 1]
+KT(β) :
+ [
+T ∈Tδ
+T
+ ≳δε |Tδ|−β  |Tδ| · |T|
+
+, ∀ε > 0,
+if Tδ is Katz-Tao,
+and, additonally,
+F(β) :
+ [
+T ∈Tδ
+T
+ ≳δε δ2β  |Tδ| · |T|
+β/2, ∀ε > 0,
+if Tδ is Frostman.
+We are oversimplifying the bounds a bit here for reasons of exposition. Wang and Zahl prove (and their arguments require)
+stronger estimates which are a bit more technical in nature, involving, for instance the shading described in §3.1.
+Note that since |T| ≈δ2, it is easy to see that both KT(β) and F(β) are valid when β = 1. Also, by the arguments
+in §3.1, for the special case where |Tδ| ≈δ−2 and the tubes have δ-separated directions, either of the two estimates imply
+that Kakeya subsets of R3 must have dimension ≥3 −2β. Thus KT(β) and F(β) can be thought of as partial Kakeya
+estimates.
+Here comes the striking argument of Wang and Zahl. Oversimplifying a bit (e.g., ignoring shading issues), they are
+able to carry out a self-improving inductive argument showing that:
+i. KT(β) implies F(β), and
+ii. if β > 0 and both KT(β) and F(β) are valid, then KT(β −ν(β)) must also be valid for some ν(β) > 0.
+Since the estimates include the factor δε in the right, this means that the set of β ∈[0, 1] for which the two estimates hold
+must be open and closed in [0, 1]. This set is nonempty because, as mentioned before, KT(1) and F(1) are both valid.
+Thus, KT(0) and F(0) are also valid, and hence Theorems 3.6 and 3.7 must also hold!!
+To summarize, Wang and Zahl set up an inductive argument that involves two complementary variations on the
+statement that Kakeya sets K ⊂R3 must satisfy dim K ≥3 −2β. Of course this is true for β = 1 because trivially
+4We are presenting here a slight variation from [22] of inductive bounds in [46].
+10
+
+
+dim K ≥1 as the Kakeya set contains line segments. Then, through multiscale arguments that we shall briefly discuss,
+they use the Yin and Yang nature of the two estimates to show that the dimension has to be a bit larger until concluding
+that Kakeya sets always are of full dimension after finitely many steps!
+We have attempted to describe, in very rough terms, the remarkable inductive argument used by Wang and Zahl
+to resolve the three-dimensional Kakeya conjecture. Let us also try to sketch how they are able to leverage their sticky
+Kakeya theorem to run the inductive argument just described. They developed the necessary tools in the last two papers
+[45] and [46] of their trilogy. Here they strengthened their “sticky” results and also found novel ways of organizing tubes
+to take advantage of structures occurring in the various steps of their multiscale arguments.
+To carry out the above inductive argument, Wang and Zahl take advantage of the fact that, if β > 0, they are able
+to prove stronger estimates than KT(β) and F(β) in the sticky case. Therefore, they can reduce to a range of scales for
+which the sticky criteria strongly break down. This can be expressed using Katz-Tao or Frostman clustering bounds. For
+the former, it means that if Tρ is a collection of ρ-tubes covering the δ-tubes, then, when δ is replaced by ρ in (3.6), the
+resulting sup is very large. This case, as in the right half of Figure 3.3, is an urban planner’s nightmare, with a large
+number of ρ-tubes needed to cover Tδ.
+To take advantage of this, Wang and Zahl use their organizational skills. They establish a “factorization lemma.”
+Using a straightforward pigeonhole argument they show that, after possibly culling the collection of tubes Tδ a negligible
+amount, they can find a collection R = {R} of a × b × 1 rectangles, with a ≤b ≤1 so that Tδ can be written, as depicted
+in Figure 3.5, as the disjoint union
+(3.10)
+Tδ =
+G
+R∈R
+Tδ[R],
+with
+Tδ[R] = {T ∈Tδ : T ⊂R}.
+where:
+i. the tubes Tδ[R] are Frostman in R, and
+ii. the a × b × 1 rectangles R are Katz-Tao in B.
+The first condition means that the analog of (3.7) is valid with B replaced by R, and ii) means that the analog of (3.6) is
+valid where Tδ is replaced by R (and in (3.5) the densities are similarly modified).
+Figure 3.5: Tδ[R] and R = {R}
+Due to the factorization (3.10), the estimates for | ∪T| in KT(β) and F(β) can be obtained by obtaining appropriate
+lower bounds for the union of the tubes in each a × b × 1 rectangle R, i.e., | ∪T ∈Tδ[R] T|, using the Frostman assumption,
+and then controlling volume lower bounds when unions of these sets are taken over R using the Katz-Tao assumption for
+the rectangles.
+Thus, Wang and Zahl reduce to controlling the interactions of Frostman tubes within a × b × 1 rectangles, and the
+interactions of shaded Katz-Tao rectangles with these side lengths. They are able to use the inductive bounds KT(β) and
+F(β) together with a simple organizing of rectangles according to planar direction argument to prove natural generalizations
+of these two estimates where tubes are replaced by rectangles for the variant of KT(β), and all the tubes are assumed to
+lie in an a × b × 1 rectangle for the F(β) variant.
+Recall that to carry out a difficult step of the self-improving inductive argument they can assume that Tδ is very non-
+sticky. Miraculously, after dealing with some relatively straightforward cases, they are able to use this to their advantage
+11
+
+
+by showing that each R ∈R in the key step of the proof must be shaped like an iPhone, by which we mean that a ≪b < 1.
+So, the “short side” of R must be much smaller than the “medium side” due to the very non-sticky assumption. The variants
+of KT(β) and F(β) involving R that they obtain in this part of the inductive argument involve positive powers of b/a ≫1
+in the right, and, as a result, they can cash in by using the auxiliary bounds involving R to carry out their self-improving
+argument!
+4
+Principal conjectures related to the Fourier transform Let us discuss Hong Wang’s work on other
+problems related to the Fourier transform.
+Earlier we presented the Bochner-Riesz and Kakeya conjectures. There are two other principal conjectures with close
+connections to the Fourier transform. These four conjectures form a family of problems with surprising connections. As
+we shall see, Hong Wang has made very important contributions to all four.
+Of the two not yet discussed, the oldest is Stein’s restriction problem dating back to the 1970s:
+(4.1)
+Show that for each n ≥2,
+∥ˆf∥Lq(Sn−1) ≤Cp∥f∥Lp(Rn), f ∈S(Rn), if 1 ≤p <
+2n
+n+1 and q = n−1
+n+1p′.
+Zygmund [52] in 1974 fully resolved this problem for the two-dimensional case. Thus, three of the four conjectures were
+fully understood in R2 in the early 1970s.
+The other main conjecture was formulated by the author [39] in 1991.
+It is a conjecture about optimal local Lp
+space-time regularity for the wave equation,
+(4.2)
+( ∂2
+t −∆
+
+u(x, t) = 0
+u(x, 0) = u0(x),
+∂tu(x, 0) = u1(x),
+with n ≥2. To state the conjecture, let Lp
+δ(Rn) be the Lp(Rn)-Sobolev space, associated with δ-derivatives, with norm
+∥f∥Lp
+δ (Rn) =
+ P δf∥Lp(Rn),
+P =
+√
+−∆.
+Then the local smoothing conjecture says that for u as in (4.2) we have
+(4.3)
+∥u∥Lp(Rn×[1,2]) ≲ε ∥u0∥Lp
+δ(p,n)+ε(Rn) + ∥u1∥Lp
+δ(p,n)−1+ε(Rn), ∀ε > 0,
+if p ≥
+2n
+n−1 and δ(p, n) = n( 1
+2 −1
+p) −1
+2,
+or equivalently, for P as above, and all ε > 0,
+(4.4)
+∥eitP f∥Lp(Rn×[1,2]) ≲ε ∥f∥Lp
+δ(p,n)+ε(Rn),
+with p and δ(p, n) as in (4.3).
+It is straightforward to obtain the optimal fixed-time estimates eitP : Lp
+(n−1)(1/2−1/p)(Rn) →Lp(Rn), if t ∈[1, 2] and
+p ≥2 (see [34]). The estimates (4.3) and (4.4) say that for p ≥
+2n
+n−1 one essentially gains 1/p derivatives by taking local
+space-time norms, and it is also easy to see that this would be the optimal range of exponents with this property. Note
+that the index δ(p, n) in the above conjecture agrees with the one in the Bochner-Riesz conjecture (2.13).
+The n-dimensional local smoothing conjecture is difficult and interesting because it implies the other principal
+conjectures for the same dimension.
+In [39] the simple argument showing that the local smoothing conjecture for the wave equation implies the Bochner-
+Riesz conjecture was given. This just boils down to the fact that the half-wave operators, eitP , and the Bochner-Riesz
+operators (2.14) are related via the Fourier transform:
+Sδ =
+Z ∞
+−∞
+e−itP eitmδ(t) dt,
+with mδ(t) = O
+ (1 + |t|)−1−δ 
+.
+Using this formula and Hölder’s inequality, it is not too difficult to show that the local smoothing conjecture (4.4) implies
+(2.15) for p ≥
+2n
+n−1, which, in turn, implies the Bochner-Riesz conjecture for all exponents p by duality and a simple
+interpolation argument.
+It turns out that all four conjectures are related. In fact they form a hierarchy. Tao [41] showed that the Bochner-Riesz
+conjecture implies the restriction conjecture. Bourgain in [6] showed that the restriction conjecture implies the Hausdorff
+version of the Kakeya conjecture. Thus, the four conjectures form a “tower” for each dimension n ≥2:
+(4.5) Local smoothing conjecture =⇒Bochner-Riesz conjecture
+=⇒Restriction conjecture
+=⇒Kakeya conjecture.
+12
+
+
+4.1
+Resolution of the planar local smoothing conjecture for the wave equation There was much
+work on the local smoothing conjecture for the wave equation. Early work in [39] and [29] showed that there is some gain
+in regularity versus the fixed-time estimates when taking space-time norms. These results yielded new proofs of Bourgain’s
+circular maximal theorem [5], etc.; however, they were far from optimal.
+A very important breakthrough came from Wolff [50].
+In order to obtain optimal local smoothing estimates for
+very large p when n = 2, he introduced decoupling theory, which has had a wide range of applications beyond the local
+smoothing conjecture (4.3), including ones in number theory [9]. The paper of Łaba and Wolff [28], completed and published
+posthumously after Wolff’s untimely death, extended the partial results in [50] to higher dimensions.
+Decoupling theory was developed by several authors in the years after Wolff’s paper, culminating in the optimal ℓ2
+decoupling bounds of Bourgain and Demeter [8].
+To describe the special case of their results which is related to the problem (4.3), we need to consider a portion of the
+light cone in Rn × R:
+Γ =
+
+(ξ, |ξ|) : |ξ| ∈[1, 2], and |ξ′|/|ξ| ≤1/2
+	
+, with ξ′ = (ξ1, . . . , ξn−1),
+and its δ-neighborhood (0 < δ ≪1)
+Γδ = { (η, τ) ∈Rn × R : dist((η, τ), Γ) < δ, τ ∈[1, 2]}.
+Finally, we let Partδ1/2[−1, 1]n−1 denote a partition of the cube [−1, 1]n−1 ⊂Rn−1 into non-overlapping cubes {J} of side
+length δ1/2. To each, we associate projection operators
+PJF(x, t) =
+Z 2
+1
+Z
+{ξ∈Rn: ξ′/τ∈J}
+e2πi⟨(x,t),(ξ,τ) ⟩ˆF(ξ, τ)dξdτ.
+The decoupling estimates for Γ of Bourgain and Demeter then say that for n ≥2
+(4.6)
+∥F∥Lp(Rn×R) ≲ε δ−α(p)−ε  X
+J∈Partδ1/2 [−1,1]n−1
+∥PJF∥2
+Lp(Rn×R)
+1/2,
+if supp ˆF ⊂Γδ and p > 2,
+with
+α(p) =
+(
+n−1
+4 (1 −2(n+1)
+(n−1)p)
+if p ≥2(n+1)
+n−1
+0
+if 2 < p ≤2(n+1)
+n−1 .
+The Fourier decomposition here is depicted in Figure 4.1. Each PJF is a “wave packet” with Fourier support belonging
+to one of the shaded “planks”.
+Figure 4.1: Cone decoupling
+An immediate corollary of the important decoupling bounds (4.6) is that (4.3) and (4.4) are valid for every p ≥2(n+1)
+n−1 .
+They do not, however, lead to optimal bounds for smaller exponents. For instance, when n = 2 and p = 4 is the critical
+exponent, they merely imply the weaker local smoothing estimates from [29] saying that there is local smoothing for L4 of
+order 1/8 −ε instead of the conjectured gain of 1/4 −ε derivatives.
+Using novel multiscale “wave envelope” arguments Guth, Wang and Zhang [23] were able to prove sharp square function
+estimates for n = 2 that finally resolved the planar local smoothing conjecture. Their square function bounds superficially
+resemble (4.6); however, it is much more difficult (and powerful) when p = 4 and n = 2 since the ℓ2 norm is taken inside
+the L4-norm:
+13
+
+
+Theorem 4.1 (Local Smoothing Theorem of Guth, Wang and Zhang).
+If n = 2, then
+(4.7)
+∥F∥L4(R2×R) ≲ε δ−ε  X
+J∈Partδ1/2 [−1,1]
+|PJF|2 1/2 
+L4(R2×R) , ∀ε > 0, if supp ˆF ⊂Γδ.
+Consequently, both (4.3) and (4.4) are valid when n = 2.
+It was well known (see [29]) that the sharp square function estimate (4.7) implies the conjecture for p = 4 and n = 2,
+and the conjecture for all of the other exponents follows from this and a simple interpolation argument.
+We have explained in some detail Wang’s work on the first and last of the conjectures listed in (4.5). She also has
+made significant contributions to the restriction problem, obtaining the best known results, starting with her 2019 thesis
+work under Guth [43], [44] and continued with her work with Wu [51]. Similarly, her work with Guo, Oh, Wu and Zhang
+[17] provided the best known results for the Bochner-Riesz conjecture.
+Let us conclude this section by emphasizing how in [23] Hong Wang and collaborators finally solved the only one of
+the four principal conjectures in (4.5) related to the Fourier transform that was not fully understood in the early 1970s.
+Furthermore, in her joint paper [46], she was able to resolve, for the first time, one of these conjectures in higher dimensions.
+So, she closed the door in two dimensions and opened it in higher dimensions, which is quite an accomplishment!
+5
+Other works We have only given a small sampling of Hong Wang’s work. Besides her work on the Fourier
+transform, she has several other very important results. These include her joint work on the Falconer distance problem
+with Larry Guth, Alex Iosevich, and Yumeng Ou [21], and her resolution of the Furstenberg Set Conjecture with Kevin
+Ren [36].
+Acknowledgments. The figures were all prepared using Anthropic’s Claude AI. Additionally, Figures 2.3, 3.3 and
+4.1 were adapted from ones in [24], [46] and [23], respectively.
+References
+[1] A. Besicovitch. Sur deux questions d’integrabilite des fonctions. J. Soc. Phys. Math., 2:105–123, 1919.
+[2] A. S. Besicovitch. On Kakeya’s problem and a similar one. Math. Z., 27(1):312–320, 1928.
+[3] A. S. Besicovitch. The Kakeya problem. Amer. Math. Monthly, 70:697–706, 1963.
+[4] G. D. Birkhoff. The Origin, Nature, and Influence of Relativity. Lowell Institute Lectures, Lowell Institute–Boston,
+and Los Angeles Lectures, University of California-Southern Branch, 1925.
+[5] J. Bourgain. Averages in the plane over convex curves and maximal operators. J. Analyse Math., 47:69–85, 1986.
+[6] J. Bourgain. Besicovitch type maximal operators and applications to Fourier analysis. Geom. Funct. Anal., 1(2):147–
+187, 1991.
+[7] J. Bourgain. On the Erdős-Volkmann and Katz-Tao ring conjectures. Geom. Funct. Anal., 13(2):334–365, 2003.
+[8] J. Bourgain and C. Demeter. The proof of the l2 decoupling conjecture. Ann. of Math. (2), 182(1):351–389, 2015.
+[9] J. Bourgain, C. Demeter, and L. Guth. Proof of the main conjecture in Vinogradov’s mean value theorem for degrees
+higher than three. Ann. of Math. (2), 184(2):633–682, 2016.
+[10] L. Carleson and P. Sjölin. Oscillatory integrals and a multiplier problem for the disc. Studia Math., 44:287–299, 1972.
+[11] J. Cepelewicz. A tower of conjectures that rests upon a needle. Quanta Magazine, 2023.
+[12] A. Córdoba. The Kakeya maximal function and the spherical summation multipliers. Amer. J. Math., 99(1):1–22,
+1977.
+[13] R. O. Davies. Some remarks on the Kakeya problem. Proc. Cambridge Philos. Soc., 69:417–421, 1971.
+[14] G. A. Edgar and C. Miller. Borel subrings of the reals. Proc. Amer. Math. Soc., 131(4):1121–1129, 2003.
+[15] K. J. Falconer. The geometry of fractal sets, volume 85 of Cambridge Tracts in Mathematics. Cambridge University
+Press, Cambridge, 1986.
+[16] C. Fefferman. The multiplier problem for the ball. Ann. of Math. (2), 94:330–336, 1971.
+[17] S. Guo, C. Oh, H. Wang, S. Wu, and R. Zhang. The Bochner-Riesz problem: an old approach revisited. Peking Math.
+J., 8(2):201–270, 2025.
+[18] L. Guth. Introduction to the proof of the Kakeya conjecture. arXiv:2505.07695, 2025.
+[19] L. Guth. Outline of the Wang-Zahl proof of the Kakeya conjecture in R3. arXiv:2508.05475, 2025.
+[20] L. Guth. The Kakeya conjecture after Wang and Zahl. arXiv:2604.03416, 2026.
+14
+
+
+[21] L. Guth, A. Iosevich, Y. Ou, and H. Wang.
+On Falconer’s distance set problem in the plane.
+Invent. Math.,
+219(3):779–830, 2020.
+[22] L. Guth, H. Wang, and J. Zahl. A streamlined proof of the Kakeya set conjecture in R3. arXiv:2601.14411, 2026.
+[23] L. Guth, H. Wang, and R. Zhang. A sharp square function estimate for the cone in R3. Ann. of Math. (2), 192(2):551–
+581, 2020.
+[24] J. Hickman. The Kakeya Conjecture: where does it come from and why is it important? arXiv:2512.09842, 2025.
+[25] J. Howlett. ‘Once in a Century’ Proof Settles Math’s Kakeya Conjecture. Quanta Magazine, 2025.
+[26] N. H. Katz, I. Łaba, and T. Tao. An improved bound on the Minkowski dimension of Besicovitch sets in R3. Ann.
+of Math. (2), 152(2):383–446, 2000.
+[27] N. H. Katz and J. Zahl. An improved bound on the Hausdorff dimension of Besicovitch sets in R3. J. Amer. Math.
+Soc., 32(1):195–259, 2019.
+[28] I. Ł aba and T. Wolff. A local smoothing estimate in higher dimensions. volume 88, pages 149–171. 2002. Dedicated
+to the memory of Tom Wolff.
+[29] G. Mockenhaupt, A. Seeger, and C. D. Sogge. Wave front sets, local smoothing and Bourgain’s circular maximal
+theorem. Ann. of Math. (2), 136(1):207–218, 1992.
+[30] T. Orponen. On the dimension and smoothness of radial projections. Anal. PDE, 12(5):1273–1294, 2019.
+[31] T. Orponen and P. Shmerkin. Projections, Furstenberg sets, and the ABC sum-product problem. J. Amer. Math.
+Soc., 39(3):857–913, 2026.
+[32] T. Orponen, P. Shmerkin, and H. Wang. Kaufman and Falconer estimates for radial projections and a continuum
+version of Beck’s theorem. Geom. Funct. Anal., 34(1):164–201, 2024.
+[33] J. Pál. Ueber ein elementares variationsproblem. Kongelige Danske Videnskabernes Selskab Math.-Fys. Medd., 2:1–35,
+1920.
+[34] J. C. Peral. Lp estimates for the wave equation. J. Functional Analysis, 36(1):114–145, 1980.
+[35] O. Perron. Über einen Satz von Besicovitsch. Math. Z., 28(1):383–386, 1928.
+[36] K. Ren and H. Wang. Furstenberg sets estimate in the plane. arXiv:2308.08819, 2023.
+[37] M. Riesz. Sur les fonctions conjuguées. Math. Z., 27(1):218–244, 1928.
+[38] I. J. Schoenberg. On the Besicovitch-Perron solution of the Kakeya problem. In Studies in mathematical analysis and
+related topics, Stanford Studies in Mathematics and Statistics, IV, pages 359–363. Stanford Univ. Press, Stanford,
+CA, 1962.
+[39] C. D. Sogge. Propagation of singularities and maximal functions in the plane. Invent. Math., 104(2):349–376, 1991.
+[40] E. M. Stein. Harmonic analysis: real-variable methods, orthogonality, and oscillatory integrals, volume 43 of Princeton
+Mathematical Series. Princeton University Press, Princeton, NJ, 1993. With the assistance of Timothy S. Murphy,
+Monographs in Harmonic Analysis, III.
+[41] T. Tao. The Bochner-Riesz conjecture implies the restriction conjecture. Duke Math. J., 96(2):363–375, 1999.
+[42] T. Tao. Rotating needles in space: the road to the Kakeya conjecture, and why it matters. arXiv:2608.22209, 2026.
+[43] H. Wang.
+A Restriction Estimate in R3.
+ProQuest LLC, Ann Arbor, MI, 2019.
+Thesis (Ph.D.)–Massachusetts
+Institute of Technology.
+[44] H. Wang. A restriction estimate in R3 using brooms. Duke Math. J., 171(8):1749–1822, 2022.
+[45] H. Wang and J. Zahl. The Assouad dimension of Kakeya sets in R3. Invent. Math., 241(1):153–206, 2025.
+[46] H. Wang and J. Zahl. Volume estimates for unions of convex sets, and the Kakeya set conjecture in three dimensions.
+arXiv:2502.17655v1, 2025.
+[47] H. Wang and J. Zahl. Sticky Kakeya sets and the sticky Kakeya conjecture. J. Amer. Math. Soc., 39(2):515–585,
+2026.
+[48] T. Wolff. An improved bound for Kakeya type maximal functions. Rev. Mat. Iberoamericana, 11(3):651–674, 1995.
+[49] T. Wolff. A mixed norm estimate for the X-ray transform. Rev. Mat. Iberoamericana, 14(3):561–600, 1998.
+[50] T. Wolff. Local smoothing type estimates on Lp for large p. Geom. Funct. Anal., 10(5):1237–1288, 2000.
+[51] S. Wu and H. Wang.
+Restriction estimates using decoupling theorems and two-ends Furstenberg inequalities.
+arXiv:2411.08871, 2024.
+[52] A. Zygmund. On Fourier coefficients and transforms of functions of two variables. Studia Math., 50:189–201, 1974.
+15

@@ -1,0 +1,74 @@
+{
+  "date": "2026-10-23",
+  "commits": {
+    "prime_logistic": "0bdeaaac9ac3f062e151d27a2d3c50bf241be5ef",
+    "riemann_logistic": "e3419dda3d5515afd91a5dd6e8d8b8398f359dde"
+  },
+  "files": [
+    {
+      "file": "fig5-discrete_gap_spectrum.ipynb",
+      "bytes": 298789,
+      "sha256": "512fe283345656eedf5f8bd4adeb11fcefb823f1e813ea69ceb9439c6a3e0d74"
+    },
+    {
+      "file": "fig5-discrete_gap_spectrum.source.txt",
+      "bytes": 3694,
+      "sha256": "f100b720ddc0ac2551ddb9b3bdecdcdf2f1f71e9c41dbb155c4d185f21c5191f"
+    },
+    {
+      "file": "fig5-discrete_gap_spectrum_cell0_saved.png",
+      "bytes": 219899,
+      "sha256": "fa2b3f9622b5474a18019f1901582cb0d325b27f93a03f8411e81190f29e7c62"
+    },
+    {
+      "file": "micro_ustc_data_match.ipynb",
+      "bytes": 1073607,
+      "sha256": "0f739a04e935fa74875bc65d9cf6a01099358d7df1b9bea80dc8f04933888b1f"
+    },
+    {
+      "file": "micro_ustc_data_match.source.txt",
+      "bytes": 14676,
+      "sha256": "7e94ff712eff82dc0de6195d797b455cf5ce34bee006a66826425e69bf4009ad"
+    },
+    {
+      "file": "micro_ustc_data_match_cell3_saved.png",
+      "bytes": 396928,
+      "sha256": "1edee42d8b7db1fab07af55ee490d234c6f3f08a4be23e4e9ab218ca8649fa62"
+    },
+    {
+      "file": "micro_ustc_data_match_cell5_saved.png",
+      "bytes": 389111,
+      "sha256": "65d14ec6e30bac9c0abc14ee29a1f6e03ed065ed2d2fa2277334a4cda9166326"
+    },
+    {
+      "file": "prime_logistic_commit.txt",
+      "bytes": 42,
+      "sha256": "30ecd92d7cf7b0d23949e65aeb07718da21f11191761a36d219460604d9cad2f"
+    },
+    {
+      "file": "prime_logistic_LICENSE",
+      "bytes": 11357,
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "file": "prime_logistic_README.md",
+      "bytes": 8051,
+      "sha256": "96c8bacb5ff6b08650073303247c2f3094284b22bfbbc843024f61f988cbfeff"
+    },
+    {
+      "file": "riemann_logistic_commit.txt",
+      "bytes": 42,
+      "sha256": "133a8cfd411f313a50856fca656cc4b7e59667f2e4c34302e3a2404c62a3326e"
+    },
+    {
+      "file": "saved_spectral_residuals.csv",
+      "bytes": 1294,
+      "sha256": "1832ed6a4147652eae86f6ef23b9c4ea4674fd91b3ae2bb8d61c3d6e7dfdd022"
+    },
+    {
+      "file": "ustc_first20_verified.csv",
+      "bytes": 1178,
+      "sha256": "94754aa2c32f491bd28201aba1aa455efb53afb5cfafbfe7578d09dc147514b4"
+    }
+  ]
+}

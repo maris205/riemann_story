@@ -1,0 +1,951 @@
+
+--- PDF page 1 ---
+Mathematics as seen by an artist: Inspiring mathematical objects
+English translation of the article entitled “Les mathématiques vues par un artiste: des objets mathématiques qui inspirent” and published in
+La Gazette de la Société Mathématique de France 181 (July 2024)
+Stéphane Vinatier and Reg Alcorn
+This article presents a series of hundreds of paintings produced by
+the painter Reg Alcorn1 since 2017, entitled Transitions, as well as
+the two mathematical objects he uses to determine the structure of
+the paintings in this series, one ancient and the other more recent,
+the Truchet tile and the Ulam spiral.
+Figure 1. Let All Blues Rejoice, acrylic on canvas, 120 × 120 cm, Reg
+Alcorn (2019).
+The title of our article echoes the one previously published
+by the same authors in the same journal [19], in which we pre-
+sented an initiative by the IREM of Limoges2 and the artist Reg
+Alcorn, in collaboration with the CCSTI3 of Limousin Récréasciences,
+1 https://www.reg-alcorn.fr
+2 Institute of Research on Mathematics Education.
+3 Center for Scientiﬁc, Technical and Industrial Culture.
+to disseminate mathematical culture through artistic media: sev-
+eral periods in the history of art were used to illuminate and
+highlight mathematical concepts (Antiquity and proportion, the
+Arab-Andalusian Middle Ages and paving, the Renaissance and per-
+spective). Reg Alcorn’s art was then serving the topics explored in
+this initiative by producing paintings that were used to explain
+the artistic and mathematical concepts involved. In the series
+Transitions, the artist reverses the perspective: he chooses objects
+from his study of mathematics and its history and uses them for
+his personal artistic explorations, resulting in unique works with
+purely artistic aims.4
+This may well be an effect of the work previously carried out
+jointly by Reg Alcorn and the IREM of Limoges, which greatly
+enriched the mathematical (or scientiﬁc) and artistic knowledge
+of those involved. The artist has immersed himself in numerous
+mathematical works (aimed at the general public, students and
+even researchers), which has aroused in him a genuine fascination
+for some of the objects or concepts encountered. So much so that,
+after a maturing phase, two of them, from very different eras and
+contexts, found themselves interwoven in the series of paintings
+Transitions.
+We will describe them in turn in the next two sections, taking
+the opportunity to develop certain mathematical or historical as-
+pects beyond what would be strictly necessary to understand the
+artist’s use of them, in the hope that these digressions will be of
+interest to our readers. Without pretending to be historians and
+keeping to the surface of mathematical theories, we thought it
+would be a good idea to present these objects through the circum-
+stances of their discovery, surprising in both cases, to show how
+they were apprehended and how they relate to key mathematical is-
+sues at the beginning of the 18th century or today. Finally, for those
+who would rather focus on the links between art and mathematics,
+the deﬁnitions of the objects at the start of Sections 1 and 2 should
+suﬃce to appreciate Reg Alcorn’s recipe for the paintings in his
+Transitions series, which we will give in the third and ﬁnal section.
+4That is why Reg Alcorn is listed as author of this article, almost
+entirely written by the ﬁrst author and based essentially on the artistic
+investigation of the second.
+20
+EMS MAGAZINE 135 (2025) — DOI 10.4171/MAG/248
+
+
+--- PDF page 2 ---
+1
+Truchet tiles
+The ﬁrst mathematical ingredient in the series Transitions, the
+Truchet tile, is itself at the crossroads of science and art, as we shall
+see. It takes us back to an important milestone in the development
+of combinatorics, when Father Sébastien Truchet (1657–1729),
+mathematician, typographer, “clockmaker, great canal specialist,
+inventor of countless machines (cannons, tree-transplanting ma-
+chines, sundials, etc.) including the famous mechanical tables of
+Marly” [1], became interested in the different relative positions
+of two squares, both divided into two colors: given two identical
+squares, split in two along the diagonal, with one half white and
+the other black (see Figure 2), in how many ways can they be
+arranged in relation to each other?
+Figure 2. Truchet tile.
+This question is systematically discussed by Truchet in a 1704
+paper for the Académie royale des sciences [18].
+Combinatorics and tessellations. Before presenting his answer,
+let us note that Truchet’s aim is to study ornamental pavings that
+can be made from this tile (he proposes a selection of them in
+his dissertation). This is indeed the motivation he himself gives
+for his study, by way of an introduction to his Mémoire [18,
+p. 363]:
+On the last trip I made to the Orléans Canal by order of His
+Royal Highness, I found in a castle named La Motte S. Lyé,
+4 leagues from Orléans, several square fayence tiles divided
+into two colors by a diagonal line, which were intended to
+tile a chapel & several other rooms. In order to form pleasant
+patterns & shapes by arranging these tiles, I first examined
+how many ways two of these tiles could be joined together,
+always arranging them in a chessboard.
+This work, in which chance and curiosity seem to have played an
+important role, makes him a precursor in the history of the study of
+tessellations, which was little practiced by scientists before the 19th
+century and the development of crystallography (although he had
+Kepler5 as a very illustrious predecessor in this ﬁeld [10]). It is also
+based on a combinatorial study, a ﬁeld to which his contribution
+is described in [16, p. 377] as follows:
+5 Johannes Kepler, German astronomer (1571–1630).
+Truchet’s treatise is of considerable importance for it is in
+essence a graphical treatment of combinatorics, a subject
+that, under the influence of Pascal, Fermat and Leibniz, was
+at the forefront of mathematics at the time.
+The originality of his approach, which links combinatorics and
+tessellations, is also underlined by André and Girou [3, p. 11].
+Truchet’s treatise. He begins by presenting 64 combinations ob-
+tained by considering that the two tiles are different: the ﬁrst has
+four possible orientations, as does the second, which can moreover
+be placed against any of the four sides of the ﬁrst. This number
+of combinations is immediately reduced to 32 if we no longer dif-
+ferentiate the two tiles, and further reduced to ten if, in addition,
+we disregard the pairs of tiles that only differ by rotation.6 These
+combinations and reductions are illustrated by two tables in [18],
+reproduced in Figure 3.
+The paper [15], in addition to examining the patrimonialization
+in various ways (mathematical, playful, pedagogical) of the Truchet
+tiles, rightly notes that ten equals the number of combinations
+with possible repetition of two objects among four. This equality
+does not seem immediately meaningful to us: if we have to choose
+two of the four squares, with possible repetition, to form the
+patterns considered by Truchet, and if we can arrange them in a line,
+regardless of pairwise rotation, the order in which we arrange them
+has an importance (ab does not produce the same result as ba,
+regardless of pairwise rotation) and some of the resulting patterns
+are identical after rotation, such as ab and dc (a, b, c, d denote the
+tiles obtained by successive quarter-turn rotations of the Truchet
+tile in Figure 2, see also Figure 9). However, these two effects
+compensate each other: the involutions deﬁned on {a, b, c, d}2 by
+(x, y) ↦(y, x) and (x, y) ↦(r(y), r(x)), where r is the “half-turn”
+that changes a to c and b to d, both have four ﬁxed points and
+six pairs of related couples, i.e., they have the same number of
+orbits; yet those of the ﬁrst involution correspond to combinations
+with possible repetition, and those of the second to patterns of
+two tiles regardless of pairwise rotation.
+The “graphical treatment” of the combinatorial problem evoked
+by [16] also consists in the spatial organization of the possible
+conﬁgurations, which reﬂects the systematic study carried out by
+Truchet: in each column of his Table I (see Table I in Figure 3), the
+“ﬁrst” tile is in the orientation drawn in the ﬁrst row, while that of
+the “second” varies according to the row; ﬁnally, the four relative
+positions appear in the four corners of each box of the table. The
+arrangement of the conﬁgurations shows the completeness of the
+initial search, so all that remains is to identify those that are alike
+according to the set criteria (Tables II and III in Figure 3).
+The author adds that he has begun work on combinations of
+three, four and ﬁve bisected tiles, but that he is not satisﬁed with
+6 See [16, p. 384, note 5.] for a discussion of these reductions.
+EMS MAGAZINE 135 (2025)
+21
+
+
+--- PDF page 3 ---
+Figure 3. Tables of the combinations obtained by Truchet [18]. (Source: gallica.bnf.fr / Bibliothèque nationale de France)
+it and intends to publish it at a later date (which will not be the
+case). Of course, complexity increases very rapidly with the number
+of tiles, as can be seen in Reg Alcorn’s paintings, if only because
+there are several spatial arrangements of three, four or ﬁve tiles: in
+a line, in an ‘L,’ in a square, in a ‘T,’ in a cross…
+Lastly, Truchet presents seven plates of tiling patterns obtained
+by connecting some of the 64 tile combinations he has listed: they
+include 24 tilings of size 12 × 12 tiles and six of size 24 × 18,
+chosen from among 100 completed tilings, themselves selected
+among patterns in “too large a quantity to report them all” [18,
+p. 364].
+Another reverend of the same religious order as Father Truchet,
+Dominique Doüat, took up this work and published a Method for
+making an infinite number of drawings in 1722 [8] containing 72
+tilings produced with Truchet’s bisected tiles. We show one of his
+plates in Figure 4.
+Sources. For all Truchet-related information, Jacques André’s web-
+site7 is an invaluable mine of documents and references, in addition
+to his own publications on the subject [1,3]. In particular, he men-
+tions the possibility of consulting Truchet’s treatise [18] on the
+Bibliothèque nationale de France’s Gallica documentary database
+(with plates of engravings ahead of the memoir), as well as in
+English translation in [16]. Doüat’s work [8] (which André makes
+available, preceded by a rich introduction) and the article Carreau
+7 https://jacques-andre.fr/faqtypo/truchet/
+(Architecture) [7] from Diderot and d’Alembert’s Encyclopédie, dis-
+cussed below, are also available on Gallica in facsimile. For all these
+documents, links to Gallica are provided in the bibliography. André
+also points to the transcribed version of the Encyclopédie on the
+ARTFL project site,8 see also the Édition Numérique Collaborative
+et CRitique de l’Encyclopédie which combines transcription and
+facsimile of the ﬁrst edition.9
+On Jacques André’s website, one can also ﬁnd a document [2]
+featuring illustrations of Truchet tilings from several sources: by
+Truchet himself, in his treatise [18] and in the Description des arts et
+métiers, an encyclopedia whose project was launched by Colbert,
+directed in particular by Réaumur, to which he contributed10; by
+Doüat [8]; from the Encyclopédie [7], whose Table des 64 combi-
+naisons is reproduced (while pointing out an error); and from a later
+work by an architect (Lemaire, 1862), from which two similarly
+inspired plates are featured.
+In the Encyclopédie. Diderot faithfully reproduces the contents of
+Truchet’s treatise in the article ‘Carreau’ of the Encyclopédie [7]:
+he presents the 64 combinations obtained by differentiating the
+two tiles under consideration, as well as the reductions to 32 and
+ten combinations we have described. He goes on to add a ﬁnal
+8 https://encyclopedie.uchicago.edu
+9 https://enccre.academie-sciences.fr/encyclopedie/
+10The plates date from 1705, but this encyclopedia only began to be
+published in fascicules from 1761 onwards.
+22
+EMS MAGAZINE 135 (2025)
+
+
+--- PDF page 4 ---
+Figure 4. A plate of tilings by Father Doüat [8].
+(Source: gallica.bnf.fr / Bibliothèque nationale de France)
+(double) reduction, consisting of identifying identical combinations
+by color inversion or by ﬂipping (the latter identiﬁcation is described
+as follows: “if we suppose them traced on transparent paper, we
+will see some of them by looking through the paper, the same
+way we see the others on the paper itself” [7, p. 700]). This leaves
+only four classes of combinations. He concludes the reduction as
+follows:
+Perhaps if we had looked for a way of arranging the combi-
+nations of these tiles on paper, we would have found a law
+that would have dispensed with the previous enumeration:
+but this is what no one has yet attempted, nor the combina-
+tion of several tiles, and even less the combination of tiles of
+several colors.
+It is noteworthy that Diderot concludes this study by highlight-
+ing a number of gaps in the knowledge of the time on this subject,
+which can be considered open questions to the scientiﬁc commu-
+nity; and it is just as noteworthy that the artist Reg Alcorn happily
+exploited a variant of this last gap, by declining at will the colors
+of the halves of the squares he laid out on his canvas, taking full
+advantage of his artistic freedom and ﬁnding there a ﬁeld in which
+to express his talent. To describe the way he arranges them, we’ll
+introduce a second, more recent and complex mathematical object
+a little further down, in Section 2.
+Another enumeration of combinations. Before that, let us try to
+answer Diderot’s ﬁrst question and show how we can arrive at
+the four terminal combinations more quickly than by Truchet’s and
+Diderot’s successive reductions. We start with two empty squares,
+and there is, disregarding rotation, only one way to assemble them
+side by side:
+We now add a diagonal to each: there are, a priori, two possible
+choices of the diagonal in each of the two squares, so four possi-
+bilities; but they are two by two identical by ﬂipping, which leaves
+us with the two conﬁgurations:
+We now need to color one half out of two in each square. Again, in
+each of the two conﬁgurations, there are two choices for the half to
+be colored in each of the two squares, i.e., a priori four possibilities
+for each conﬁguration, which would make eight possibilities in
+total. But each of these is accompanied by one where the colors are
+reversed, so if we identify the identical combinations by reversing
+the colors, this divides the number of possibilities by two, and we
+get the following four combinations:
+The result points the way to another, even more straightforward
+demonstration: allowing rotation, the two tiles can be arranged
+in a line and, allowing ﬂipping and color inversion, we get the
+following pattern ﬁrst.
+It remains to choose the second motif from the possible four.
+2
+The Ulam spiral
+Now we come to our second mathematical ingredient.
+Creativity from boredom. According to Martin Gardner,11 who tells
+the story in an article for the popular science magazine Scientific
+American [11], the mathematician Stanislaw Ulam, bored while
+attending a conference in the autumn of 1963, began to draw
+a grid on a sheet of paper to represent a chessboard; changing
+his mind, he began to number the intersections starting from the
+center of the grid and spiraling around it in an anti-clockwise
+direction; then he began to circle the prime numbers and, to
+his great surprise, saw lines forming along the diagonals (Fig-
+ure 5).
+As Gardner points out, this fact is not very signiﬁcant for a small
+spiral, insofar as all the integers belonging to a line of diagonal
+11American writer (1914–2010), great popularizer of mathematics.
+EMS MAGAZINE 135 (2025)
+23
+
+
+--- PDF page 5 ---
+65
+64
+63
+62
+61
+60
+59
+58
+57
+66
+37
+36
+35
+34
+33
+32
+31
+56
+67
+38
+17
+16
+15
+14
+13
+30
+55
+68
+39
+18
+5
+4
+3
+12
+29
+54
+69
+40
+19
+6
+1
+2
+11
+28
+53
+70
+41
+20
+7
+8
+9
+10
+27
+52
+71
+42
+21
+22
+23
+24
+25
+26
+51
+72
+43
+44
+45
+46
+47
+48
+49
+50
+73
+74
+75
+76
+77
+78
+79
+80
+81
+Figure 5. Ulam spirals 9 × 9 (prime numbers are circled) and 200 × 200 (prime numbers are represented by gray dots, 1 in the center by a black dot).
+direction have the same parity, all the primes (except one12) are
+odd and the density of primes is high among the smallest integers.
+So in the 9 × 9 spiral shown in Figure 5, the 21 odd primes are
+distributed among just 41 possible positions, forming lines parallel
+to the diagonals…
+Consolidation. However, Ulam was able to verify with two col-
+laborators, Stein and Wells [17], that the observed phenomenon
+was not conﬁned to small integers, but appeared to be a general
+property of prime numbers. To do this, they used the MANIAC II
+computer at their research institution, the Los Alamos laboratory
+of the University of California, as well as magnetic tapes containing
+tables of prime numbers, to obtain spirals covering much larger
+numbers of integers (photos of spirals obtained with 10000 and
+65000 integers are reproduced in [11], they resemble the spiral on
+the right in Figure 5, at different scales).
+As impressive as these images of unexpected prime number
+alignments may be, so much so that Ulam’s spiral made the front
+page of the issue of Scientific American in which Gardner’s article
+appeared, Ulam and his collaborators explain that they are due to
+the large numbers of prime values taken by certain quadratic func-
+tions of the integers, of the type n ↦an2 + bn + c with a,b,c ∈ℤ,
+such as Euler’s famous formula
+E(n) = n2 + n + 41
+(1)
+for which all the values for n between 0 and 39 are distinct primes (!)
+and which takes about 47.5% of prime values among its values
+up to 10000000 [17, p. 520]. Ulam and his colleagues have identi-
+12 Or rather except two!
+ﬁed other quadratic forms with high rate τ of prime values up to
+10000000, including
+4n2 + 170n + 1847
+(τ ≈46.6%),
+4n2 + 4n + 59
+(τ ≈43.7%).
+(2)
+However, the reporter of the article pointed out that the integer
+values of the ﬁrst are included in the sequence of numbers produced
+by Euler’s formula (on even integers):
+4n2 + 170n + 1847 = E(2n + 42).
+The rate of 46.6% of prime values among values up to 107 of
+E(2n + 42) is roughly the rate of prime values among values up
+to 107 of E at even integers; by comparison with the overall rate,
+that at odd integers must be 48.4%. We do not know whether
+this slight difference between the rates for even and odd integers
+is asymptotically conﬁrmed. We shall see below that our knowl-
+edge of the asymptotic behavior of the number of prime values of
+polynomials is essentially conjectural.
+Alignments parallel to semi-diagonals. It is easy to position one-
+self in Ulam’s spiral by observing (on Figure 5) that the piece
+of spiral that goes from 1 to (2n + 1)2 for an integer n forms
+a square, each side of which contains 2n + 1 integers, centered
+at 1, with the number (2n + 1)2 = 4n2 + 4n + 1 in the bottom
+right-hand corner. We immediately deduce the expressions of the
+numbers at the other corners of the square of size 2n + 1. They
+form the four semi-diagonals starting from 1, and are plotted on
+Figure 6.
+For example, the numbers of the southeast semi-diagonal
+are the squares of odd integers, of the form 4n2 + 4n + 1, so
+24
+EMS MAGAZINE 135 (2025)
+
+
+--- PDF page 6 ---
+1
++40
++40
++58
+4n2 −2n + 1
+4n2 + 4n + 1
+4n2 + 1
+4n2 + 2n + 1
+E(2n −1)
+E(2n)
+NE
+SW
+NW
+SE
+Figure 6. Alignments parallel to semi-diagonals.
+that the values of the second quadratic form mentioned in (2),
+(4n2 + 4n + 1) + 58, occupy, for n large enough, the translation
+of this semi-diagonal by 58 upwards (we turn counter-clockwise,
+following Ulam’s example).
+Similarly, the numbers of the northeast (resp. southwest) semi-
+diagonal are integers of the form 4n2 −2n + 1 (resp. 4n2 + 2n + 1),
+so that the values of Euler’s formula (1) at odd integers, E(2n −1) =
+(4n2 −2n + 1) + 40 (resp. at even ones, E(2n) = (4n2 + 2n + 1) +
+40), occupy, for n large enough, the translation of the northeast
+(resp. southwest) semi-diagonal by 40 to the left (resp. right).
+We therefore see in Figure 7 alignments of prime numbers
+in directions parallel to the diagonals, produced by the quadratic
+forms (1) and (2), which according to [17] take many prime values
+at integers, up to 107. To ﬁnd out whether this phenomenon
+persists beyond this value, when the size of the spiral is further
+increased, we need to look at the asymptotic behavior of these
+polynomials.
+Asymptotic behavior. Hardy and Littlewood’s “Conjecture F” (1923)
+predicts the asymptotic behavior of the number of values of the
+variable, natural number less than a positive real x, for which r poly-
+nomials with integer coeﬃcients simultaneously take prime values,
+in the form of a constant depending on the respective polynomials
+multiplied by the function x/(ln x)r. See [5] for more details in the
+general case.
+In [13], Jacobson and Williams study polynomials of degree 2
+that generalize Euler’s formula, of the form fA(x) = x2 + x + A with
+A ∈ℤ. Denoting by PA(n) the number of prime values taken by fA
+at natural integers at most n and by Δ = 1 −4A the discriminant
+of fA, they state Conjecture F as follows:
+PA(n) ∼2C(Δ) ∫
+n
+0
+dx
+ln fA(x),
+(3)
+Figure 7. In the Ulam spiral 160 × 160, E(n) for n ≤160: in red (prime
+values) and blue (other values); 4n2 + 4n + 59 for n ≤80: in orange
+(prime values) and green (other values).
+where the Hardy–Littlewood constant C(Δ) is deﬁned by the Euler
+product:
+C(Δ) = ∏
+p ≥3
+(1 −
+( Δ
+p )
+p −1).
+It is a product on odd primes p, with ( Δ
+p ) denoting the Legendre
+symbol for Δ on p. One can check by calculation (via integration
+by parts) or by using the formulation of the conjecture given in [5]
+(note that the constant is deﬁned here by an Euler product over
+all primes) that the equivalence (3) can also be written as
+PA(n) ∼C(Δ) n
+ln n.
+(4)
+Under this conjecture, the constant C(Δ) has a decisive inﬂuence on
+the asymptotic behavior of the number of prime values taken by fA.
+The numerical results support Conjecture F. For A = 41, we have
+C(−163) = 3.3197732 and the Euler polynomial x2 + x + 41 takes
+87% of prime values up to 100 (estimated value using (4): 72%) and
+47.5% up to 3162 = ⌊√107⌋according to [17] (estimated value:
+41.2%). We know from [13] that this rate is 22.08% up to 107 (es-
+timated value: 20.6%) and that, for A′ = 3399714628553118047,
+we have
+C(−13598858514212472187) = 5.3670819
+and 25.17% of prime values up to 107; even if this rate is lower than
+the estimated value (33.3%), it is higher than the corresponding
+rate for A = 41, which seems to corroborate the fact that a larger
+Hardy–Littlewood constant corresponds asymptotically to a larger
+number of prime values.
+EMS MAGAZINE 135 (2025)
+25
+
+
+--- PDF page 7 ---
+The value of C(Δ) associated with the integer A′ considered
+above was the largest known before the calculations presented
+in [13]. The prepublication [4, §4.2] explains how to determine
+a high-precision approximate value of C(Δ) and also gives as an ex-
+ample the much smaller value for A = 75, C(−299) = 0.3109767.
+The maximum value for C(Δ) found by Jacobson and Williams is
+5.65726388 (under the generalized Riemann hypothesis), corre-
+sponding to an integer with 71 decimal digits.
+Arithmetic progressions. One may also see in [5] that, while the
+general Conjecture F is supported by numerical calculations and
+sieve methods, it is only proven in the case of one polynomial of
+degree 1: it then comes down to Dirichlet’s arithmetic progressions
+theorem (in the quantitative version proved by de La Vallée Poussin),
+which states that for all coprime integers a,b the polynomial ax + b
+takes inﬁnitely many prime values (uniformly distributed in the in-
+vertible classes modulo a). More precisely, denoting by Pa,b(n) the
+number of prime values of ax + b at natural numbers at most n,
+we have the equivalence
+Pa,b(n) ∼
+a
+φ(a)
+n
+ln n
+where φ is the Euler totient function; this conﬁrms the equiv-
+alence (4) and speciﬁes the Hardy–Littlewood constant in this
+particular case. This result in degree 1 also has a graphic inter-
+pretation: let us write the integers in a rectangular grid of given
+width, starting at the top left and ﬁlling the grid line by line. The
+numbers an + b for n ∈ℕthen lie on a straight line (cut into pieces
+by the grid), so the corresponding prime values again produce
+alignments.
+In all other cases, we cannot even prove that the number whose
+asymptotic behavior the conjecture predicts, tends towards inﬁnity
+with x. For example, the integer values of the two polynomials x
+and x + 2 that are simultaneously prime are the twin primes, and
+we do not know whether they are inﬁnite or not.
+In degree 1, we know even more thanks to Green and Tao’s
+Theorem [12]: not only do arithmetic progressions contain an in-
+ﬁnite number of primes, but there are arithmetic progressions of
+primes of any length: for any natural number k, there are primes
+p1, p2, …, pk which are consecutive terms of an arithmetic se-
+quence, i.e., such that the differences pi+1 −pi are constant. The
+proof of the theorem is not constructive, and ﬁnding such se-
+quences is diﬃcult, as the common difference is likely to be very
+large.13
+Small variable values. Several authors have studied the ﬁrst values
+of other polynomials of degree 2, with smaller coeﬃcients and for
+smaller values of the variable, and therefore more likely to explain
+13The current record is for k = 27, set by Gahan in 2019, see https://
+oeis.org/A327760.
+the lines that show on the small-scale plots of Ulam’s spiral. The
+polynomial of degree 2:
+36x2 + 18x −1801
+(5)
+holds the current record for the number of consecutive distinct
+prime values: 45 (between −33 and 11, established by Ruby
+in 1989); it therefore surpasses the Euler polynomial (only two
+other polynomials are known for which this is true, due to Fung
+and dating from 1988). In addition, it takes 49 distinct prime values
+in 50 consecutive values of the variable, with ﬁve possible starts
+between −41 and −33. See the introduction and Section 2 of [9]
+for details.
+In that paper, Dress and Olivier present the results of their numer-
+ical search for polynomials with a large number of prime values,
+counting only the distinct prime values taken for 50, 100, 500 or
+1000 consecutive values of the variable. In the latter case, they
+signiﬁcantly improve on previous results with the polynomials
+• x2 + x −1354363: 698 prime values (from x = 1139 to
+x = 2138);
+• x2 + x −752293 and 4x2 + 2x −349513: 685 prime values;
+• 4x2 + 2x −501229: 684 prime values.
+Note that 36x2 + 18x −1801 = E(6x + 1) −1844 and that,
+for any A ∈ℤ:
+x2 + x + A = E(x) + A −41
+and
+4x2 + 2x + A = E(2x) + A −41,
+so that the polynomials we have just discussed, like Euler’s formula,
+produce alignments in Ulam’s spiral parallel to the northeast and/or
+southwest semi-diagonals, provided the value of the variable is
+suﬃciently large. A number of other polynomials taking a large
+number of prime values appear in [9], which are neither of this
+form nor of the second identiﬁed by Ulam and his collaborators (2),
+including in degree 2. A precise description of the alignments that
+may appear in Ulam’s spiral is found in [14], along with ﬁgures
+showing the distribution of values of some of these other polyno-
+mials (in the spiral-wound plane as for Ulam’s spiral), such as the
+one in Figure 8.
+3
+The genesis of the Transitions series
+At the origin of the Transitions series, there is … a desire for geom-
+etry! Like several other artists before him, Reg Alcorn was looking
+for a geometric process to structure the canvases of his new series.
+Among the artists who followed this path, some of them hav-
+ing links to mathematics, are Mondrian (1872–1944), Kandinsky
+(1866–1944), Vasarely (1906–1997), Morellet (1926–2016) and, of
+course, Picasso (1881–1973) and the Cubist movement in general,
+for the analysis of perception and the geometrization of space.
+26
+EMS MAGAZINE 135 (2025)
+
+
+--- PDF page 8 ---
+Figure 8. Fung polynomial values 103n2 + 31n −3391 for n ≤1000
+(prime values in red).
+3.1
+Reg Alcorn’s approach
+For his series of paintings Transitions, the artist has developed
+a systematic procedure14 determined by the two mathematical
+ingredients presented above: Truchet tiles and Ulam’s spiral. In fact,
+to the four tiles obtained by turning the Truchet tile in Figure 2,
+he adds two: an all-white square and an all-black square. It is
+convenient to codify them as in Figure 9.
+a
+b
+c
+d
+k
+w
+Figure 9. The expanded Truchet tile inventory.
+He then chooses a sequence of some of these tiles, of any
+length, for example daadb, and – instead of arranging it in a line,
+which would look like this:
+– he winds it in a spiral from the center of the painting, repeating
+the sequence identically until the painting is ﬁlled. In our example,
+the ﬁrst steps are:
+14Although he might occasionally deviate from it, over the course of the
+two hundred paintings in this series.
+for the ﬁrst occurrence of the sequence, then:
+and
+with two, three, four and ﬁve occurrences respectively (a complete
+square is obtained). Figure 10 shows the result with 20 occurrences
+of the sequence (i.e., 100 tiles forming a square of 10×10).
+Figure 10. The pattern daadb wound in a spiral (repeated 20 times).
+We realize immediately that the very simple process we have im-
+plemented quickly produces complex, unpredictable patterns, even
+though they are determined by the sequence chosen at the outset
+and, in particular, are highly dependent on its length. For example,
+it can be seen in Figure 11 that sequences with lengths in multiples
+of four produce much more regular patterns than the example of
+length ﬁve chosen above, notably because the numbers belonging
+to any of the pattern’s semi-diagonals are always congruent mod-
+ulo 4. This means that the same tile can be found all along (resp.,
+at least every other time) a semi-diagonal of a pattern produced by
+a sequence of length four (resp., eight). It is worth noting that, even
+in this case, reversing two tiles will produce very different effects.
+An atlas of sequences is in preparation, which promises to
+show the incredible richness of this process, complementing the
+numerous canvases created by the artist, more examples of which
+are given below.
+EMS MAGAZINE 135 (2025)
+27
+
+
+--- PDF page 9 ---
+Figure 11. abck, abkc and aaawwwww.
+3.2
+Playing with color
+Once the sequence has been selected and the conﬁguration of
+the painting determined, Reg Alcorn’s art consists in choosing the
+colors that will replace the black and white of the areas drawn
+by the completed paving, accentuating particular motifs, some-
+times revealing different ones depending on the distance from
+the viewer,15 provoking amazing visual effects as in the paintings
+displayed in Figure 12, where the complex juxtapositions of colors
+puzzle and draw the eye in, and can even, in full size, make us
+doubt the reality of what we are actually looking at.
+Combining colors. The basic rule is to choose two main colors,
+red and green for example, which complement each other well,
+15 It is striking that, with a completely different take on Truchet’s tilings,
+[16] also stresses the differences in perception depending on distance
+from the motif or the scale at which it is viewed.
+and assign one to the white areas created by the paving, and the
+other to the black areas. However, in the world of painting, things
+are not all black and white, and different combinations of the two
+colors can replace either one or the other for a given area, obtained
+either by mixing them in varying proportions, or by superimposing
+one on the other. The choice of one variant or another may be
+guided, for example, by the shapes that appear and whether or
+not the artist wishes to emphasize them, or simply by the color
+harmony of the painting.
+Then, during the slow, delicate work of ﬁlling in the areas, the
+artist gives free rein to his inspiration to introduce a third, warmer
+color here, a cooler one there, as the overall picture takes shape in
+his mind, and he senses whether or not to broaden his palette. In
+the end, there are no real rules when it comes to the colors: the
+constraint of the paving patterns is the framework within which
+the artist’s freedom to choose, arrange and interact with them can
+fully expand. In his words:
+Figure 12. The paintings Golden Orbweaver, oil on canvas, 130 × 130 cm (2018); Garden Raga, acrylic on canvas, 130 × 130 cm (2019); Stripe Break,
+acrylic on canvas, 120 × 120 cm (2020) – Reg Alcorn.
+28
+EMS MAGAZINE 135 (2025)
+
+
+--- PDF page 10 ---
+Coming across a picture of the Ulam spiral in a completely
+different context, I saw the potential. The creation of the
+paintings at first depends largely on these calculations, but in
+the elaboration, the eye and intuition also come into play.
+Precision. Long an adept of fast painting, where brushstrokes
+amalgamate colors into rich, vibrant textures with slightly blurred
+outlines, Reg Alcorn adopted a different way of painting for the
+Transitions series: slow, precise work, very sharp contours, which
+he had previously experimented with in geometrically patterned
+canvases inspired in particular by Penrose tilings.
+Although the colors are well delineated on the canvas, predict-
+ing the effect their juxtaposition will produce in the patterns created
+by the sequence of Truchet tiles is a challenge that only the artist’s
+long experience and sense of color can meet. And there are surpris-
+ing outcomes in certain cases, when the colors “vibrate” in contact
+with each other, whenever the eye is at the right distance from the
+canvas. All this is the fruit of long-term research, as he explains:
+I spent a long time trying to develop a formal grammar
+capable of exploiting these combinations, in order to create
+compelling yet legible configurations for any harmony, and to
+highlight the colors’ distinct identities.
+Pigments. Note that the chemical composition of the pigments
+is very important for this work: for example, the red-green sec-
+tor shows signiﬁcant variations in visual impact depending on
+whether, for example, cadmium red dark is used in combination
+with phthalocyanine green, or iron oxide red with green earth.
+There are actually a dozen top-of-the-range reds, according to
+paint manufacturers, made of either mineral, vegetable or synthetic
+pigments, with differences in hue, transparency or opacity. Their
+texture depends on the thickness of the paint, the additives and
+tools used, the texture of the canvas fabric and its preparation for
+the color. Let us take two colors as examples: cadmium red light, an
+opaque, vivid color with great visual impact, and alizarin crimson
+red, a transparent, very dark color with a violet-red tendency. Their
+juxtaposition enhances their identities, while their overlay modiﬁes
+both colors.
+The paintings in the “Transitions” series invite us to discover
+a chromatic perspective, giving the illusion that colors are at
+different distances. Composing these paintings, I embarked
+on an exciting odyssey, exploiting the alchemy of colors
+and multiple combinations without being committed to
+representativeness. This is the heart of “Transitions.”
+3.3
+Variations
+The rule we have described for determining the paintings’ motifs,
+that is, the choice of a sequence of Truchet tiles wound into a spiral,
+has also been subject to exceptions, even transgressions, in the
+course of the very many canvases that have been created. These
+have often proved to be judicious and enriching in terms of new
+perspectives. Some paintings, for example, are constructed from
+several spirals starting from different foci, which can give the impres-
+sion of a more realistic painting: with ﬁve foci, one thinks almost
+instinctively of the more or less symmetrical ﬁve-pointed shapes so
+familiar in the natural environment, like that of a silhouette with
+a head, two arms and two legs, somehow blurred by the pictorial
+process, unless the colors chosen by the painter make it appear.
+In other paintings, Truchet tiles are replaced by “Pythagorean”
+rectangles cut diagonally into two triangles of sides 3, 4, 5, wound
+into a spiral in the same way as before. The ﬁrst consequence
+is that the canvases are no longer necessarily square, which was
+almost always the case before, as a matter of construction; the
+second is that the lines delimiting the spiral are less blended into
+the overall motif, revealing more of the painting’s structure. Finally,
+the elongated triangles give rise to smoother, more ﬂuid shapes
+than Truchet’s tiles. Of course, the artist also played with mixing
+“Greek” tiles with Truchet’s, or even with squares cut into four
+triangles along the diagonals – there are countless combination
+possibilities… An example is shown in Figure 13.
+3.4
+From so simple a beginning
+A stunning characteristic of Reg Alcorn’s process is that, despite its
+great simplicity, it produces extraordinarily rich and complex pat-
+terns. Music is another artistic ﬁeld where this principle is frequently
+found.
+Figure 13. Snow step, oil on canvas, 120 × 120 cm, Reg Alcorn (2023).
+EMS MAGAZINE 135 (2025)
+29
+
+
+--- PDF page 11 ---
+Electronic musician Grand Ciel experimented with it, notably by
+mixing loops of very simple sounds of different lengths (on three,
+four and ﬁve beats, for example), on the occasion of a conference-
+performance organized by the IREM de Limoges for the Fête de
+la Science 2019, at the Musée national Adrien Dubouché in Limo-
+ges, as part of the Year of Mathematics. This show entitled From
+so simple a beginning sought to dramatize that principle, with
+a live performance by the painter and musician improvising to-
+gether, following a two-part lecture by the ﬁrst author and his
+colleague Olivier Prot, to introduce the theme, the Ulam spiral and
+Reg Alcorn’s method.
+During a second, longer performance of the show, we also pro-
+posed an example of a mathematical question in which complexity
+appears unexpectedly in a problem that is easy to state, in this
+case the Jacobsthal function that associates with any integer n the
+largest difference between two consecutive integers prime to n,
+and for which only about sixty terms are known when applied to
+primorials.16 The ﬁrsts are
+2, 4, 6, 10, 14, 22, 26, 34,
+and the following is not 38 but 40!
+The show’s title quotes Charles Darwin [6], to reﬂect the fact
+that the mentioned characteristic, far from applying only to the
+arts or mathematics, is intrinsic to the evolution of life:
+From so simple a beginning, endless forms most beautiful
+and most wonderful have been, and are being, evolved.
+Acknowledgements. The authors are very grateful to the article’s
+anonymous referees for their careful reading and many helpful
+suggestions. They also thank Jean-Bernard Bru and Miriam Gellrich
+Pedra for managing the translation of the original text into English.
+Special thanks to the Basque Center for Applied Mathematics for
+funding the translation from French to English. The Magazine of
+the EMS thanks La Gazette de la Société Mathématique de France
+for the authorization to republish this English translation of the
+paper entitled “Les mathématiques vues par un artiste: des objets
+mathématiques qui inspirent” and published in La Gazette 181
+(July 2024).
+References
+[1] J. André, De Pacioli à Truchet: trois siècles de géométrie pour
+les caractères. In 4000 ans d’histoire des mathématiques: les
+mathématiques dans la longue durée. IREM de Rennes, Rennes,
+France (2002) https://bibnum.publimath.fr/IWH/IWH02004.pdf
+16 https://oeis.org/A048670
+[2] J. André, Les planches de pavages de Truchet. (2010)
+https://jacques-andre.fr/faqtypo/truchet/truchet-planches.pdf
+[3] J. André and D. Girou, Father Truchet, the typographic point, the
+Romain du roi, and tilings. TUGboat 20, 8–14 (1999)
+https://www.tug.org/TUGboat/Articles/tb20-1/tb62andr.pdf
+[4] H. Cohen, High precision computations of Hardy–Littlewood
+constants. Preprint, (1998) https://oeis.org/A221712/a221712.pdf
+[5] K. Conrad, Hardy–Littlewood constants. In Mathematical properties
+of sequences and other combinatorial structures (Los Angeles, CA,
+2002), pp. 133–154, Kluwer Acad. Publ., Boston, MA (2003)
+[6] C. Darwin, On the origin of species by means of natural selection,
+or the preservation of favoured races in the struggle for life. John
+Murray, London (1859)
+[7] D. Diderot, Carreau s. m. (Architecture). In Encyclopédie ou
+dictionnaire raisonné des sciences, des arts et des métiers. Vol. II.,
+pp. 699–701, Briasson, Paris (1752) https://gallica.bnf.fr/ark:/12148/
+bpt6k50534p/f705
+[8] D. Doüat, Méthode pour faire une infinité de desseins différens,
+avec des carreaux mi-partis de deux couleurs par une ligne
+diagonale. Jacques Quillau, Imprimeur Juré de l’Université, Paris
+(1722) https://gallica.bnf.fr/ark:/12148/bpt6k5823204r
+[9] F. Dress and M. Olivier, Polynômes prenant des valeurs premières.
+Experiment. Math. 8, 319–338 (1999)
+[10] P. Esperet and D. Girou, Coloriage du pavage dit ‘de Truchet.’
+Cahiers GUTenberg 31, 5–18 (1998) http://www.numdam.org/item/
+CG_1998___31_5_0/
+[11] M. Gardner, Mathematical games: The remarkable lore of the prime
+numbers. Scientific American 210.3 120–130 (1964)
+[12] B. Green and T. Tao, The primes contain arbitrarily long arithmetic
+progressions. Ann. of Math. (2) 167, 481–547 (2008)
+[13] M. J. Jacobson, Jr. and H. C. Williams, New quadratic polynomials
+with high densities of prime values. Math. Comp. 72, 499–519
+(2003)
+[14] S. Marquès and S. Vinatier, Alignments in Ulam’s spiral. (Work in
+progress) (2025)
+[15] L. Rougetet and M. Boutin, Jeu de parquet et combinaisons,
+ou la double patrimonialisation d’un objet et de ses savoirs
+mathématiques. Philos. Sci. (Paris) 26, 91–121 (2022)
+[16] C. S. Smith and P. Boucher, The tiling patterns of Sebastien Truchet
+and the topology of structural hierarchy. Leonardo 20, 373–385
+(1987)
+[17] M. L. Stein, S. M. Ulam and M. B. Wells, A visual display of some
+properties of the distribution of primes. Amer. Math. Monthly 71,
+516–520 (1964)
+[18] S. Truchet, Mémoire sur les combinaisons. In Mémoires de
+mathématique et de physique tirés des registres de l’Académie
+Royale des Sciences, pp. 363–372, Paris (1704) https://gallica.bnf.fr/
+ark:/12148/bpt6k3486m/f517
+[19] S. Vinatier and R. Alcorn, Les maths vues par un artiste: une
+expérience de diffusion de la culture mathématique via l’art et
+l’histoire de l’art. Gaz. Math. 144 48–53 (2015)
+30
+EMS MAGAZINE 135 (2025)
+
+
+--- PDF page 12 ---
+Stéphane Vinatier is a Professor in Mathematics at the University of
+Limoges, France. His research is conducted within the XLIM research
+institute, UMR CNRS 7252. Specialized in algebraic number theory,
+focusing on the Galois action on invariants in number ﬁeld extensions
+under speciﬁc ramiﬁcation conditions. He is also interested in other
+mathematical domains, such as combinatorics. He has contributed to
+the French network of research institutes in mathematics education,
+serving as its head for two years. He continues to engage in experimental
+education projects.
+stephane.vinatier@unilim.fr
+William Reginald Alcorn was born in Zambia in 1950 to Irish and Scottish
+parents. He developed a passion for painting at a very early age. After
+studying humanities in England, he traveled around Europe, eventually
+settling in France. With projects in music, languages, science and, more
+recently, mathematics, he divides his time between his painting studio
+and popularizing the arts, notably as part of the activities of the IREM of
+Limoges.
+regalcorn.frescoevent@gmail.com
+Heritage of 
+European Mathematics
+The book series Heritage of European Mathematics 
+features the selected or collected works of distinguished 
+mathematicians. Biographies of and correspondence 
+between outstanding mathematicians, as well as 
+other texts of historico-mathematical interest are also 
+­included.
+Forthcoming title:  
+From Differential Geometry to Relativity: 
+Levi-Civita’s Lectures on the Absolute  
+Differential Calculus, 1925–1928,  
+by Rossana Tazzioli (Lille)
+All books in the series are clothbound.
+Advisory Board
+Ciro Ciliberto | Università degli Studi di Roma “Tor Vergata” 
+Władysław Narkiewicz | Uniwersytet Wrocławski 
+Samuel J. Patterson | Universität Göttingen 
+Rossana Tazzioli | Université de Lille
+For more details visit ems.press/hem
+… il me paraît que 
+si l’on veut faire 
+des progrès dans 
+les mathématiques 
+il faut étudier les 
+maîtres …
+… it appears to me 
+that if one wants 
+to make progress in 
+mathematics one 
+should study the 
+masters …
+Niels Henrik Abel, 
+in his Paris 
+­notebook dated 
+6 August 1826
+Heritage of  
+European Mathematics
+EMS Press is an imprint of the European Mathe-
+matical Society – EMS – Publishing House GmbH
+Straße des 17. Juni 136 | 10623 Berlin | Germany
+https://ems.press | orders@ems.press
+ADVERTISEMENT
+EMS MAGAZINE 135 (2025)
+31

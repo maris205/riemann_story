@@ -1,0 +1,21 @@
+[
+  {
+    "file": "Tao_2026_ICM_2608.16753v1.pdf",
+    "url": "https://arxiv.org/pdf/2608.16753v1",
+    "sha256": "ea1d16a81ec79f362914f85b832996e3eb8c3b81b1c983358fc6d76ac7420ee0",
+    "pages": 13,
+    "downloaded": "2026-10-23"
+  },
+  {
+    "file": "Tao_Math_2_0.pdf",
+    "reused_from": "资料\\17_NS爆破与722篇论文\\原始文献\\Tao_Math_2_0.pdf",
+    "sha256": "7e3b6ec69751f5d108b517aebed0f223537e1f4638fc59c7f9f1bd7d5027eb9f",
+    "note": "Existing original source; version rechecked 2026-10-23"
+  },
+  {
+    "file": "BCH_translation_audit.pdf",
+    "reused_from": "资料\\17_NS爆破与722篇论文\\原始文献\\BCH_translation_audit.pdf",
+    "sha256": "3282e2c4103b955d635173749e7bf887fef7af7dd39e1abdb750b951030c538b",
+    "note": "Existing original source; version rechecked 2026-10-23"
+  }
+]

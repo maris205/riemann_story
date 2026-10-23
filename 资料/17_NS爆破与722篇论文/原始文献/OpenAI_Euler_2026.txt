@@ -1,0 +1,4097 @@
+=== PAGE 1 ===
+FINITE TIME BLOWUP FOR THE EULER EQUATION
+OPENAI
+Abstract. We exhibit finite-time blowup for the three-dimensional incompressible, unforced
+Euler equations from smooth, compactly supported, divergence-free initial data.
+Contents
+1.
+Introduction
+1
+2.
+The amplification mechanism and proof order
+3
+3.
+A localized oscillation over a smooth Euler flow
+9
+4.
+Amplification and transfer of the wave geometry
+34
+5.
+Choosing the scales and iterating the construction
+44
+6.
+The limiting initial datum and finite-time breakdown
+54
+References
+56
+1. Introduction
+We study the unforced incompressible Euler equations on R3:
+∂tu + (u · ∇)u + ∇p = 0,
+∇· u = 0,
+u(·, 0) = u0.
+(1.1)
+Here u(t, x) ∈R3 is the velocity and p(t, x) ∈R is the pressure. Spatial norms below are
+over R3, unless a different domain is specified. We prove that a smooth initial velocity can
+develop a singularity in finite time. We take the initial datum in
+C∞
+c,σ(R3) = {u0 ∈C∞
+c (R3; R3) : ∇· u0 = 0}
+(1.2)
+and write T∗(u0) for the maximal lifespan of its smooth Euler solution. Local existence gives
+T∗(u0) > 0 [24].
+Theorem 1.1. There exists u0 ∈C∞
+c,σ(R3) such that 0 < T∗(u0) < ∞. Its smooth Euler solution
+satisfies
+lim sup
+t↑T∗
+∥∇u(t)∥L∞= ∞,
+∫︂T∗
+0
+∥curl u(t)∥L∞dt = ∞.
+1.1. Historical context. The Beale–Kato–Majda criterion [1] states that a smooth three-
+dimensional Euler solution continues past time T if ∫︁T
+0 ∥curl u(t)∥L∞dt < ∞. Finite-time
+breakdown therefore requires this integral to diverge.
+Elgindi [15] proved finite-time blowup on R3 for axisymmetric velocities without swirl
+in C1,α, for sufficiently small α > 0. Elgindi, Ghoul, and Masmoudi [16] proved stability
+of this blowup and obtained finite-energy examples with the same regularity. Córdoba,
+Martínez-Zoroa, and Zheng [13] proved blowup from finite-energy C1,α initial velocities
+that are smooth away from the origin. Their construction places vorticity in infinitely many
+1
+
+=== PAGE 2 ===
+2
+OPENAI
+regions approaching the origin, separated by regions where the vorticity vanishes. Elgindi
+and Pasqualotto [19] proved blowup from finite-energy C1,α initial velocities that are smooth
+away from a circle. Recent preprints of Chen and Shkoller [5, 29] prove blowup on R3 for
+finite-energy axisymmetric velocities without swirl in C1,α, for every 0 < α < 1/3.
+For each fixed 0 < ε < 1/2, Córdoba and Martínez-Zoroa [10, Theorem 1.1] constructed
+finite-energy solutions to the forced Euler equations on R3, with velocity in C3,1/2 before
+blowup and an external force uniformly bounded in C1,1/2−ε ∩L2. For these solutions,
+∫︁t
+0 ∥∇u(s)∥L∞ds diverges as t ↑T < ∞. For the incompressible porous media equation,
+Córdoba and Martínez-Zoroa [11] constructed singularities from smooth initial data by
+successive amplification of oscillatory layers, using approximations of increasing order to
+keep every spatial derivative of the source uniformly bounded.
+For smooth initial data, Chen and Hou [6, 7] proved blowup in an axially periodic
+cylinder with an impermeable wall, combining analysis with rigorous numerical estimates.
+Theorem 1.1 treats smooth, compactly supported initial velocities on R3.
+Growth of derivatives also underlies strong ill-posedness at critical regularity. Bourgain
+and Li [2] used large deformation of the particle flow to prove norm inflation for two-
+dimensional Euler in the critical velocity space H2. Elgindi and Jeong [17] gave a construction
+in which localized vorticity generates a hyperbolic flow that stretches the vorticity gradient.
+Elgindi and Masmoudi [18] proved strong ill-posedness in the velocity spaces Ck ∩L2 for
+integers k ≥1, by estimating singular integral terms along the particle flow.
+A related approach starts from oscillatory approximate solutions, estimates their difference
+from exact solutions, and combines spatially separated examples. Córdoba and Martínez-
+Zoroa [9] used this approach to prove ill-posedness and loss of regularity for the inviscid
+surface quasi-geostrophic equation. For two-dimensional Euler, Córdoba, Martínez-Zoroa,
+and O˙za´nski [12] constructed global solutions with initial velocity in Hr, 1 < r < 2, that lose
+a positive amount of Sobolev regularity at every positive time. Their approximate solutions
+use a radial background flow to shear an angularly oscillating perturbation and amplify its
+vorticity derivatives. Jeong, Martínez-Zoroa, and O˙za´nski [23] constructed three-dimensional
+Euler solutions with a continuously decreasing Sobolev regularity threshold, starting from
+vorticity in Hs, 0 < s < 3/2. Their mechanism combines hyperbolic deformation with vortex
+stretching.
+For weak solutions, which satisfy Euler’s equations in the sense of distributions, unique-
+ness and conservation of kinetic energy can fail. De Lellis and Székelyhidi [26] constructed
+nonunique bounded weak solutions. They later constructed continuous solutions on the
+three-dimensional torus with decreasing kinetic energy [27]. On the same periodic domain,
+Isett [22] proved that, for every 0 < β < 1/3, there are solutions with spatial Cβ regularity
+whose kinetic energy is not constant. Buckmaster, De Lellis, Székelyhidi, and Vicol [4]
+constructed solutions in this regularity range whose kinetic energy equals any prescribed
+smooth positive function of time.
+Craik and Criminale [14] constructed exact finite-amplitude waves on affine background
+flows, exploiting the cancellation of the wave’s quadratic self-interaction. Fabijonas and
+Holm [20] proposed iterated superpositions of such waves. Le Dizès and Leblanc [25]
+showed that their construction generally satisfies the equations only along a single trajectory,
+preventing its use as the background for the next iteration.
+The linearized Euler equation describes the evolution of a small perturbation of a given
+flow. For perturbations with a rapidly varying phase, Lifschitz and Hameiri and Friedlander
+and Vishik [28, 21] studied the leading equations for the phase gradient and the velocity
+
+=== PAGE 3 ===
+FINITE TIME BLOWUP FOR THE EULER EQUATION
+3
+amplitude perpendicular to it. At the nonlinear level, Cheverry [8] constructed oscillatory
+approximate solutions of incompressible Euler and analyzed the additional phase corrections
+required by their nonlinear evolution. We write the leading linear system in (2.4) and use it
+to select oscillations whose velocity gradients grow along particle trajectories. Proposition 3.1
+corrects these oscillations to exact smooth Euler solutions; Proposition 4.1 shows that their
+new gradients can amplify subsequent oscillations.
+2. The amplification mechanism and proof order
+We now outline the iteration used to prove Theorem 1.1. The construction in Sections 3
+to 5 will produce exact smooth odd Euler solutions Uj, with pressures pj, on nested time
+intervals. At stage j, we add a localized oscillation and corrections to Uj−1 to obtain Uj. We
+call Uj−1 the parent flow and Uj the child flow of this stage. The child becomes the parent at
+stage j + 1. Their initial data have support in a fixed ball. We choose times tj ↑T∞< ∞, with
+Uj defined through tj, such that
+|∇Uj(tj, 0)| −→∞,
+∑
+j
+∥Uj(0) −Uj−1(0)∥Hm < ∞
+for every fixed m.
+(2.1)
+Throughout the construction we also maintain ∇2pj(t, x) ≤K+I, with a constant K+ for
+all stages. We choose the initial perturbations by solving displacement boundary value
+problems. This upper bound is used in proving those problems uniquely solvable; see (3.11).
+2.1. Flow deformation and wave amplification. Fix a stage and write u = Uj−1 for the
+parent velocity and p = pj−1 for its pressure. We follow the oscillations in particle coordinates,
+where their phase remains fixed. A particle starting at a has trajectory X(t, a) given by
+∂tX(t, a) = u(t, X(t, a)),
+X(0, a) = a.
+Along this trajectory, set
+F = ∇aX,
+M(t, a) = ∇u(t, X(t, a)),
+H(t, a) = ∇2p(t, X(t, a)).
+(2.2)
+Incompressibility gives det F = 1.
+Differentiating the trajectory equation and ∂ttX =
+−∇p(t, X) gives
+Ft = MF,
+Ftt = −HF.
+(2.3)
+Thus the pressure Hessian controls the acceleration of the deformation. The corresponding
+vorticity equation is
+(∂t + u · ∇)ω = (ω · ∇)u,
+ω = curl u.
+This equation describes vorticity stretching along a particle trajectory.
+For a localized
+oscillation, we also track its phase and velocity amplitude. We call such an oscillation a
+packet.
+Write a = ℓy, where ℓ> 0 is the localization length, and choose a unit vector m0
+and a large frequency k. The phase is km0 · y. Its physical gradient is (k/ℓ)m, where
+m(t, y) = F(t, ℓy)−Tm0. The principal velocity coefficient v(t, y) satisfies
+mt = −MTm,
+vt = −Mv + 2mm · Mv
+|m|2 ,
+m · v = 0,
+(2.4)
+with M evaluated at (t, ℓy). The last term in the velocity equation preserves m · v = 0, so v
+remains orthogonal to the phase normal m. For an amplitude α > 0, a nonnegative compactly
+
+=== PAGE 4 ===
+4
+OPENAI
+supported cutoff χ1(y), and a smooth zero-mean periodic profile fδ with sufficiently small
+δ > 0, the leading velocity increment is
+wlead(t, X(t, ℓy)) = ℓα
+k χ1(y)v(t, y) fδ(km0 · y).
+(2.5)
+Differentiating the phase produces the leading gradient αχ1v ⊗m f ′
+δ. Increasing k reduces
+the velocity by a factor k−1, while leaving this leading gradient unchanged.
+We choose all parent flows to be odd, u(t, −x) = −u(t, x), so X(t, 0) = 0. Along this
+fixed central trajectory, the parent gradient contains a rank-one shear hqpT, with scalar
+amplitude h and orthogonal unit vectors p, q. This matrix sends p to hq and vanishes on
+vectors perpendicular to p. The shear acts together with the rest of the parent gradient to
+rotate m and amplify v. At the target time tj, when the new shear reaches its prescribed size,
+the directions m/|m| and v/|v| define the normal and transverse velocity of the next frame.
+Choosing α makes the new leading rank-one gradient the parent shear for the next packet;
+Proposition 4.1 quantifies both the growth and the transfer of directions.
+Córdoba and Martínez-Zoroa also use a vorticity layer to amplify a more localized layer
+in their forced Euler construction [10, §1.2].
+Products of zero-mean periodic functions need not have zero mean.
+The nonlinear
+corrections therefore include a phase-independent part as well as an oscillatory part. To
+construct both, we first regard the phase as an independent variable θ ∈T = R/(2πZ) and
+write
+⟨A⟩θ = 1
+2π
+∫︂2π
+0
+A(t, y, θ) dθ.
+(2.6)
+The mean is this phase average; the oscillatory part has zero average. The linear mean and
+transverse problems in (3.19) and (3.27) determine their successive coefficients, including the
+spatially nonlocal mean pressure. After enough coefficients have been added, the error left
+in Euler’s equation is small. Lemma 3.3 constructs a further correction that cancels this error.
+We then evaluate the resulting fields at θ = km0 · y. This evaluation is the restriction to the
+physical phase graph.
+2.2. Initial smallness and control of pressure. At an amplification stage j, the activation
+time is t0 = tj−1: it separates the boundary value problem used to choose the wave from its
+forward evolution toward the target tj. The auxiliary displacement coefficient η determines
+the velocity coefficient by v = ηt −Mη along a parent trajectory. To obtain the initial
+increment bounds (3.17) and the Sobolev summability in (2.1), we prescribe this displacement
+at activation. If t0 > 0, we solve a displacement boundary value problem on [0, t0], with zero
+displacement at time zero and a prescribed endpoint at t0. We call this interval the packet’s
+history. The endpoint is chosen to select the growing transverse solution after activation,
+while the history estimates control the initial velocity increment. At t0 = 0, the transverse
+velocity is prescribed directly.
+In particle coordinates, the uniform upper bound on the pressure Hessians is
+H ≤K+I,
+that is,
+ηTHη ≤K+|η|2.
+Together with the initial gradient bounds and the short time interval, it gives coercivity of
+the displacement form whose interior term is ∫︁(|ηt|2 −ηTHη) dt; see (3.11). Large negative
+eigenvalues of H increase this form. We consequently control the positive eigenvalue
+contribution of each new packet, using the leading increment
+∆Hlead = −2αχ1(m · Mv)m ⊗m
+|m|2 f ′
+δ(θ).
+(2.7)
+
+=== PAGE 5 ===
+FINITE TIME BLOWUP FOR THE EULER EQUATION
+5
+After a short initial part of the amplification interval, the geometric construction gives
+m · Mv > 0. The profile is chosen with f ′
+δ(0) = δ−1 and f ′
+δ ≥−C. Its large positive derivative
+produces the desired gradient and a negative semidefinite leading pressure increment;
+the uniformly bounded negative derivative limits the positive pressure increment. The
+scale choices make these positive contributions and the errors in (3.14) summable. On the
+history interval and the short initial part of amplification, the full pressure increments satisfy
+summable bounds.
+The mean displacement boundary condition enforces compact support of the initial mean
+correction; the initial oscillatory correction is localized by the cutoff. Thus all initial data have
+a common compact support. Together with (2.1), this gives convergence to u0 ∈C∞
+c,σ(R3). If
+its Euler solution were smooth past T∞, stability would compare it with every Uj up to tj,
+contradicting the growing gradients. This gives T∗(u0) ≤T∞.
+2.3. The stages of the proof. Amplification separates the packet’s initial size from the shear
+it later produces. At the central target point, its leading gradient is αδ−1v ⊗m. We choose
+α so that αδ−1|v||m| = hchild, the desired size of the next shear; see (4.13). The history
+comparison (4.12) in Proposition 4.1 contains an exponentially decaying factor. We choose
+the scales so that this factor outweighs the parent coefficient bounds and the derivatives
+introduced by high frequency, making the initial increments summable in every fixed Sobolev
+norm.
+The target directions m/|m| and v/|v| must also form a frame in which the new shear can
+amplify the next packet. Proposition 4.1 establishes this transfer and the sign m · Mv > 0 after
+the short initial part of amplification. The sign makes the large positive part of f ′
+δ contribute
+a negative semidefinite leading pressure increment. The scale choices make the positive
+pressure contributions and correction errors summable, preserving the common upper
+Hessian bound. Proposition 3.1 realizes the growing wave as an exact Euler perturbation: it
+constructs the nonlinear corrections and bounds their effect on the gradient, pressure, and
+initial data. We prove this packet estimate first under growth assumptions, then establish
+those assumptions and the frame transfer for the parent shear. The resulting exact flow
+supplies the parent for the next stage. Figure 1 shows where these results enter the iteration.
+1. Construct the mean and oscillatory corrections. In Section 3, a smooth parent flow
+supplies the coefficients of two linear inverses. Lemma 3.2 controls their derivatives, hence
+the expansion in inverse frequency and the cancellation of successive coefficients.
+2. Obtain an exact Euler solution. Section 3.6 removes the remaining error and restricts
+the solution to the physical phase graph. Proposition 3.1 collects the resulting gradient,
+pressure, initial-data, and particle-map estimates used in the iteration.
+3. Prove amplification and transfer of the frame. Proposition 4.1 supplies the growing
+transverse solution and propagator bound required by the packet construction. It also
+shows that the frame at the target time satisfies the geometric conditions for another
+application.
+4. Choose the scales and iterate. Sections 5.2, 5.3 and 5.5 choose and verify the amplitudes,
+frequencies, localization lengths, and time intervals. The seed and inductive step in
+Sections 5.6 and 5.7 produce the solutions Uj with the bounds in (2.1).
+5. Pass to the limiting initial datum. Section 6 proves smooth convergence of the initial
+data, applies Euler stability under the assumption of continuation past T∞, and proves
+the divergence assertions in Theorem 1.1: unboundedness of ∥∇u(t)∥∞as t ↑T∗, and
+∫︁T∗
+0 ∥curl u(t)∥∞dt = ∞.
+
+=== PAGE 6 ===
+6
+OPENAI
+Amplify a wave in the parent Uj−1
+At tj, set αδ−1|m||v|
+=
+hchild.
+Proposition 4.1
+Construct the exact child Uj
+Add the packet; bound the gradient and pressure errors.
+Proposition 3.1
+Verify the hypotheses for the next packet
+Transfer the frame and preserve the
+pressure and particle-map bounds.
+Section 5.7
+Take the limit of the initial velocities
+Uj(0)
+→
+u0 in every Hm, while |∇Uj(tj, 0)| →
+∞.
+Section 6
+j →∞
+Use Uj as the next parent
+Figure 1. Construction of Uj from the smooth parent Uj−1. Proposition 4.1
+supplies a growing wave with the target shear and directions needed for
+repetition; Proposition 3.1 adds the wave and its corrections to obtain an exact
+Euler solution. The return arrow means that, after the checks in Section 5.7,
+Uj becomes the parent at stage j + 1. The downward limit uses the initial-data
+summability and gradient growth in (2.1), with tj ↑T∞. Euler stability in
+Section 6 then gives T∗(u0) ≤T∞.
+2.4. Notation and conventions. Particle labels and components. We write a for a physical
+particle label and y = a/ℓfor its normalization, where 0 < ℓ≤1. In §4, the physical label is
+written a, since a = Bpq(t0) denotes the scalar in (4.4). For a coefficient b(t, a), the normalized
+coefficient bℓ(t, y) = b(t, ℓy) satisfies ∂I
+ybℓ= ℓ|I|(∂I
+ab)(t, ℓy); thus normalization does not
+increase supremum derivative bounds. A dot on a quantity in particle coordinates denotes
+differentiation in physical time at a fixed label. For an orthonormal frame (p, q, n), we write
+Bij = i · Bj and vi = i · v, for i, j ∈{p, q, n}.
+Derivative norms. The packet estimates use s = 6 and T = R/(2πZ) with normalized
+measure. An ordered word I of length n is an ordered sequence of n coordinate derivatives,
+and ∂I is their composition. For functions on R3 or R3 × T, set
+| f |n = ∑
+|I|=n
+∥∂I f ∥Hs,
+|a|n,∞= ∑
+|I|=n
+∥∂Ia∥Ws,∞.
+(2.8)
+Here a denotes a coefficient, which need not decay at infinity. On a time interval, a norm with
+a supremum in time means the sum of the supremum for each word; the same wordwise
+convention applies to L2 in time. The sum of wordwise suprema is at most dn times the
+supremum of the word sum in dimension d, which only changes a fixed growth constant in
+a factorial estimate.
+
+=== PAGE 7 ===
+FINITE TIME BLOWUP FOR THE EULER EQUATION
+7
+Gevrey bounds. An order-two Gevrey bound for f means
+| f |n ≤CRn(n!)2
+(n ≥0),
+with C, R independent of n; coefficient bounds use |a|n,∞instead. Such bounds allow
+nonzero compactly supported cutoffs. The product rules in §3.1 and the linear estimates
+in Lemma 3.2 preserve this form after fixed enlargements of R, allowing us to control the
+successive coefficients of the oscillatory expansion. For ρR < 1, the weighted derivative
+norm (3.43) satisfies
+∥f ∥ρ = ∑
+n≥0
+ρn| f |n
+(n!)2 ≤
+C
+1 −ρR.
+We use this norm in Lemma 3.3 to control the correction simultaneously at all spatial
+derivative orders. Constants in estimates stated only at a fixed derivative order may depend
+on that order.
+Polynomial constants.
+The parameter P ≥2 collects finitely many coefficient and scale
+bounds. In the packet estimates, Pc denotes a fixed power that may be enlarged finitely
+many times. Its exponent may depend on s, the dimension, and the fixed exponent c0 in the
+packet data bounds of §3.2, but is independent of the frequency, the number of expansion
+terms, and the derivative order. In §4, Kh controls factorial Sobolev bounds for X −id, Xt,
+and Xtt, as in (3.15). Powers Kc
+h may also be enlarged a fixed finite number of times. Their
+exponents depend on the fixed low-order bounds, not on the stage or the exponent in the
+preceding stage’s estimate. Constants described as fixed in §5 are independent of the stage
+index; §5.2 specifies their order of choice.
+
+=== PAGE 8 ===
+8
+OPENAI
+Notation index. The entries below locate the definitions used in each construction. Symbols
+attached to a packet or a stage retain the scope of that construction.
+Notation
+Meaning
+Definition
+Flow, phase, and primary oscillation
+C∞
+c,σ, T∗(u0)
+Smooth compactly supported divergence-free data on R3,
+and the maximal smooth lifespan of the solution from u0.
+(1.2)
+X, F, M, H
+Particle map, deformation F = ∇aX, velocity gradient
+M = ∇u, and pressure Hessian H = ∇2p, with the last two
+evaluated along the parent trajectory.
+(2.2)
+a, a
+Physical particle label; a is used in §4, where a is a scalar
+coefficient.
+§2.4
+ℓ, y, Ξ
+Localization length, rescaled label a = ℓy, and
+Ξ(t, y) = ℓ−1X(t, ℓy); also F = ∇yΞ.
+(3.5)
+θ, ⟨·⟩θ
+Independent angle in T = R/(2πZ), with average
+(2π)−1 ∫︁2π
+0
+· dθ. Physical evaluation uses θ = km0 · y.
+(2.6)
+k, κ
+Packet frequency in the rescaled label and its inverse κ = k−1;
+the physical phase gradient is (k/ℓ)m.
+(3.7)
+m0, m, Dm, v
+Fixed unit phase normal, transported normal m = F−Tm0,
+Dm = |m|2, and primary transverse velocity coefficient
+m · v = 0.
+(2.4), (3.7)
+α, fδ, δ
+Amplitude, odd zero-mean periodic profile, and its
+concentration parameter; f ′
+δ(0) = δ−1. The leading velocity is
+(ℓα/k)χ1v fδ.
+(2.5), (3.4)
+di, ˜︁di, Di
+di = ∑j(F−1)ji∂yj, ˜︁di = di + kmi∂θ, and Di = κ∂yi + (m0)i∂θ.
+Physical graph derivatives are ℓ−1 ˜︁di.
+(3.7); (3.46)
+Norms and packet corrections
+s, I, | f |n, |a|n,∞
+s = 6; I is an ordered derivative word. Sum ∥∂I f ∥Hs,
+respectively ∥∂Ia∥Ws,∞, over |I| = n, on R3 or R3 × T as
+specified.
+(2.8)
+P, Pc, Pj
+Data-size bound P ≥2, fixed powers of P, and the bound
+chosen at stage j. The exponent c in Pc is independent of
+frequency, expansion length, and derivative order.
+§2.4; (5.10)
+R, d, h(t) in shift
+bounds
+Derivative growth constant, nonnegative integer shift, and
+positive time profile; the derivative bound is
+h(t)Rn+d((n + d)!)2. This h is a general profile.
+(3.1)
+ρ, ∥f ∥ρ
+Radius and weighted derivative norm ∑n≥0 ρn| f |n/(n!)2.
+(3.43)
+χ1, χo
+Fixed even cutoffs: supp χ1 ⊂{|y| < 1/2}, χ1(0) = 1; χo = 1
+on |y| ≤1, supported in |y| ≤2.
+§3.1
+R⊥, K, G, KR
+Orthonormal basis matrix for m⊥
+0 , K = FTF, G = K−1, and
+KR = RT
+⊥KR⊥.
+(3.10)
+Kh, g(t)
+Factorial Sobolev bound Kh for X −id, Xt, Xtt; positive profile
+g(t0) = 1 weighting the transverse propagator on |y| ≤1/2
+by g(t)/g(s′), t0 ≤s′ ≤t ≤S.
+(3.15); §3.2 (iii)
+K+, Be, Bc, L
+Upper pressure-Hessian bound H ≤K+I, lower initial
+symmetric gradient bounds −BeI for |ℓy| ≥r and −BcI for
+|ℓy| < r, and coefficient L of the initial boundary operator.
+(3.11)
+
+=== PAGE 9 ===
+FINITE TIME BLOWUP FOR THE EULER EQUATION
+9
+Notation
+Meaning
+Definition
+N , A
+Newton operator (−∆y)−1 and initial-support operator
+curly χN χ curly, where χ(y) = χo(ℓy).
+(3.20)
+Ap, Bp, Qp, Cp
+Zero-angle-mean transverse and angle-independent velocity
+coefficients at inverse-frequency order p; vector potential
+Qp = −∂−1
+θ (m × Ap)/Dm and curl remainder Cp = d × Qp.
+The angle primitive has zero mean.
+(3.33)
+Nk, Wa, qa
+Expansion length Nk = ⌊kϑ⌋, ϑ = 10−6, and approximate
+normalized velocity and pressure increments; physical
+increments carry factors ℓand ℓ2.
+(3.34)
+Amplification geometry
+p, q, n, Bij
+Orthonormal frame of an older flow: normalized ray,
+normalized transverse velocity, and n = p × q; Bij = i · Bj for
+i, j ∈{p, q, n}.
+(4.2)
+B, h, h∗, E
+Older central gradient, current shear amplitude, its activation
+value, and error in M(t, 0) = B + hqpT + E, with h(t0) = h∗.
+(4.3)
+a, β, ε
+Frozen coefficients a = Bpq(t0), β = Bnq(t0)/a, and
+ε = √
+a/h∗. The physical label in §4 is a.
+(4.4)
+τ, x, xprev, xtar
+Rescaled times τ = a(t −t0)/ε, x =
+√︁
+β τ, comparison scale
+xprev ≍β−1/2, and target value xtar. Here x is not spatial
+position.
+(4.4)
+p2, q2, n2, Atar
+Child frame p2 = m/|m|, q2 = v/|v|, n2 = p2 × q2, and
+central target magnitude Atar = |m(ttar, 0)||v(ttar, 0)|.
+Proposition 4.1
+Iteration and limiting datum
+Uj, pj, Mj, Hj
+Exact stage solution and its pressure, with Mj = ∇Uj,
+Hj = ∇2pj. At stage j ≥J, the parent is Uj−1 and the older
+solution is Uj−2; UJ−2 = UB is the base.
+§5, §5.4
+xj, hj, kj, ℓj, δj, αj
+Stage scale parameter, target shear, frequency, localization
+length, profile concentration, and amplitude
+αj = δjhj/(|m(tj, 0)||v(tj, 0)|) for j ≥J.
+(5.3), (5.18)
+tj, Sj, Wj
+Target time, retained horizon, and available width. Stage
+j ≥J activates at t0 = tj−1, with tJ−1 = 0, and retains
+Sj = tj + 2Wj+1.
+(5.7), (5.8)
+T∞
+Finite accumulation time limj tj; the limiting datum satisfies
+T∗(u0) ≤T∞.
+(6.4), (6.6)
+3. A localized oscillation over a smooth Euler flow
+In this section we prove Proposition 3.1, the packet estimate used in the iteration outlined
+in §2. We work under the hypotheses in §3.2; the next section will establish the required
+wave growth and propagator bounds for a parent shear. Starting from the given smooth
+Euler solution u, we construct another exact solution unew by adding the leading oscillation
+(2.5) and correction terms. The resulting gradient and pressure-Hessian differences are (3.13)
+and (3.14) in Claim 1 of Proposition 3.1.
+Two linear problems supply the correction terms.
+Equation (3.19) constructs angle-
+independent velocities; its boundary condition (3.25) imposes compact support at time zero.
+
+=== PAGE 10 ===
+10
+OPENAI
+Equation (3.29) constructs transverse velocity coefficients with zero angle mean and retains
+the spatial support of its forcing.
+We first seek approximate velocity and pressure increments as finite series in k−1, with θ
+independent of y; these are (Wa, qa) in (3.34). Substitution into Euler’s equation leaves an
+error, called the residual. Its normalized form is bounded in (3.45). Under (3.12), Lemma 3.3
+constructs correction fields on R3 × T with zero initial velocity. Restricting to θ = km0 · y
+then gives the physical velocity and pressure in (3.47)–(3.48).
+3.1. Norms, cutoffs, and factorial estimates. We first fix the derivative bounds and cutoff
+functions used to control all orders of the oscillatory expansion with a common growth
+constant. We use the derivative norms | f |n and |a|n,∞of §2.4, which sum the H6 and W6,∞
+norms over ordered derivative words. The data bound P ≥2 and fixed powers Pc follow the
+conventions in the same section. For R ≥1 and an integer d ≥0, we say that a function has
+shift d with profile h(t) > 0 if
+∑
+|I|=n
+sup
+t
+h(t)−1∥∂I f (t)∥Hs ≤Rn+d((n + d)!)2
+(n ≥0).
+(3.1)
+In the linear estimates we also use the version of (3.1) obtained by replacing each
+supt h(t)−1∥∂I f (t)∥Hs by ∥h−1∂I f ∥L2
+t Hs. Here R is the constant controlling derivative growth:
+a larger R gives a weaker bound. Later we sum these derivatives with weights involving a
+small radius ρ, chosen proportional to R−1. The shift d records the losses from differentiation,
+products, and inverse operators while R remains fixed across the expansion.
+Here are the two elementary rules used to keep a common growth constant for the entire
+construction. The Sobolev product inequality in dimension at most four and Leibniz’s rule
+show that, if fi has shift di and profile hi for i = 1, 2, with the same R, then f1 f2 satisfies the
+bound for shift d1 + d2 and profile h1h2, up to a fixed multiplicative constant, because
+(n
+l)((l + d1)!)2((n −l + d2)!)2
+((n + d1 + d2)!)2
+=
+(n
+l)
+(n+d1+d2
+l+d1 )
+2 ≤
+(︃n
+l
+)︃−1
+,
+n
+∑
+l=0
+(︃n
+l
+)︃−1
+≤3.
+(3.2)
+The same proof applies to multiplication Ws,∞× Hs →Hs. A derivative in y or θ raises the
+shift by 1 and preserves the profile. Multiplication by a coefficient a satisfying
+∑
+|I|=n
+sup
+t
+∥∂Ia(t)∥Ws,∞≤PcRn
+c (n!)2,
+Rc = Pc,
+costs an additional shift when R is a sufficiently large fixed power of P.
+The second rule estimates an unknown sequence of derivative bounds Zn from a prescribed
+sequence Fn. Suppose these sequences are nonnegative and satisfy the triangular estimate
+Zn ≤Pc
+(︄
+Fn +
+n
+∑
+l=1
+(︃n
+l
+)︃
+Rl
+c(l!)2Zn−l
+)︄
+.
+(3.3)
+For an integer d ≥1, suppose Fn ≤Rn+d−1((n + d −1)!)2 for every n ≥0. Induction then
+gives Zn ≤Rn+d((n + d)!)2 for every n ≥0. Indeed, division by Rn+d((n + d)!)2 bounds the
+data term by Pc/R and the remaining sum by Pc ∑l≥1(Rc/R)l times the largest previous
+normalized bound. We choose R so that their sum is at most one. This choice depends on
+the estimate at the fixed Sobolev index producing (3.3), and never on the expansion length.
+The cutoff χ1 localizes the oscillatory velocity in the rescaled label y. The cutoff χo,
+evaluated later at ℓy, will impose support of the initial mean velocity in the physical label.
+
+=== PAGE 11 ===
+FINITE TIME BLOWUP FOR THE EULER EQUATION
+11
+We fix even smooth cutoffs χ1, χo on R3
+y with
+0 ≤χ1 ≤1,
+supp χ1 ⊂{|y| < 1/2},
+χ1(0) = 1,
+χo = 1 on {|y| ≤1},
+supp χo ⊂{|y| ≤2},
+and derivative bounds Cn+1(n!)2. Such cutoffs follow, for example, from the extension
+by zero of exp(−1/z) for z > 0. Cauchy’s estimate on the complex circle of radius z/2
+gives n!(2/z)n exp(−c/z) ≤Cn+1(n!)2; integration, products, and fixed rescalings give the
+asserted cutoffs. The leading gradient and pressure-Hessian increments depend on f ′
+δ, as
+in (3.13) and (3.14). For sufficiently small δ > 0, we therefore fix a smooth odd periodic
+function fδ of mean zero such that
+f ′
+δ(0) = δ−1,
+−C ≤f ′
+δ ≤δ−1,
+∥∂n
+θ fδ∥Hs+2(T) ≤δ−c(Cδ−c)n(n!)2.
+(3.4)
+To see this explicitly, take an even nonnegative bump g ≤1 constructed as above, with
+derivative bounds Cn+1(n!)2, supported in a small subinterval of (−π, π), with g(0) = 1,
+and put cg = ⟨δ−1g(θ/δ)⟩θ. This number is independent of δ. The even function
+hδ(θ) = δ−1g(θ/δ) −cg
+1 −cgδ
+has mean zero, maximum δ−1 at zero, and a uniform lower bound. Its odd periodic primitive
+is fδ. The derivative estimates follow from the cutoff estimates and the bounded mean-zero
+integration operator.
+3.2. Coordinates and hypotheses. We write the velocity increment as ℓW(t, y, θ) in the
+particle coordinates x = X(t, ℓy), where X is the parent particle map, ℓis the localization
+length, and y is the rescaled particle label. The angle θ ∈T is initially an independent
+variable. To obtain the physical increment we restrict to θ = km0 · y, where k is the frequency
+and m0 is a fixed unit phase normal. The coefficient and propagation assumptions below are
+the inputs to Proposition 3.1.
+Fix the hypothesis exponent c0. Let u be a smooth odd Euler velocity on R3 × [0, S], where
+0 < S ≤1, with pressure p, and let X(t, a) be its particle map:
+Xt(t, a) = u(t, X(t, a)),
+X(0, a) = a.
+The map X(t, ·) preserves volume and X(t, 0) = 0. Fix 0 < ℓ≤1 and define
+Ξ(t, y) = ℓ−1X(t, ℓy),
+F = ∇yΞ,
+M = (∇u)(t, X(t, ℓy)),
+H = (∇2p)(t, X(t, ℓy)). (3.5)
+Differentiation of the particle equation and of Euler’s equation gives
+det F = 1,
+F(0) = I,
+Ft = MF,
+Ftt = −HF.
+(3.6)
+Set di = ∑j(F−1)ji∂yj. These are the commuting derivatives in the coordinates Ξ; the Jacobian
+identity gives d · W = divy(F−1W).
+Fix a constant unit vector m0 and a frequency k > 0, and put
+m = F−Tm0,
+Dm = |m|2,
+˜︁d = d + km∂θ,
+κ = k−1.
+(3.7)
+We first regard θ as an independent periodic variable. The graph restriction of a function
+a(t, y, θ) is a(t, y, km0 · y). Its derivative with respect to the normalized physical coordinate
+Ξ = x/ℓis the graph restriction of ˜︁da. Its physical derivative is the graph restriction of
+ℓ−1 ˜︁da. In particular the components of ˜︁d commute. Adding the physical velocity ℓW and
+
+=== PAGE 12 ===
+12
+OPENAI
+pressure ℓ2q, evaluated on this graph at x = X(t, ℓy), preserves Euler’s equation whenever
+W, q satisfy, on R3 × T,
+Wt + MW + W · ˜︁dW + ˜︁dq = 0,
+˜︁d · W = 0.
+(3.8)
+Fix t0 ∈[0, S) and a constant 3 × 2 matrix R⊥whose columns are an orthonormal basis
+of m⊥
+0 . Also fix α > 0. The time t0 separates the history interval [0, t0], when t0 > 0, from
+forward evolution on [t0, S]. We first prescribe the primary velocity coefficient v. If t0 > 0,
+choose a constant ξT ∈R2 with |ξT| ≤Pc0. For each fixed y, choose ξ = ξ(t, y) with
+ξ(0, y) = 0 and ξ(t0, y) = ξT so that the following action, with η = FR⊥ξ, is stationary under
+variations ξ ↦→ξ + εb satisfying b(0) = b(t0) = 0:
+∫︂t0
+0 (|ηt|2 −Hη · η) dt.
+Set v = FR⊥ξt on this interval. If t0 = 0, prescribe v(0) to be a constant unit vector in m⊥
+0 .
+In either case, continue v from t0 by
+vt = −Mv + 2mm · Mv
+Dm
+.
+(3.9)
+Under (3.11), this fixed-endpoint variational problem has a unique solution; the argument is
+given with (3.27). Thus the endpoint data determine v on [0, t0].
+For vectors z ∈R3 and b ∈R2, the squared lengths |Fz|2 and |FR⊥b|2 are quadratic forms
+with matrices K and KR, respectively. Introduce these matrices and the inverse G:
+K = FTF,
+G = K−1 = F−1F−T,
+KR = RT
+⊥KR⊥.
+(3.10)
+The following assumptions concern these coefficients, the time interval, and the forward
+propagation of the primary equation.
+(i) Coefficient and scale bounds. For each coefficient A ∈{F, F−1, Ft, Ftt, M, H}, assume
+∑
+|I|=n
+sup
+0≤t≤S
+∥∂I
+yA(t)∥Ws,∞(R3) ≤Pc0(Pc0)n(n!)2
+(n ≥0).
+The matrices K, G, KR have eigenvalues bounded below by P−c0, and the scalar Dm
+satisfies Dm ≥P−c0. The inverses K−1, G−1, K−1
+R , D−1
+m satisfy coefficient bounds of the
+same form. The inverses of S and, when positive, t0 are at most Pc0. Also ℓ−1, δ−1 ≤Pc0.
+(ii) Quadratic-form bounds and coercivity. For nonnegative K+, Be, Bc, the quadratic-form
+bounds
+H ≤K+I,
+sym M(0) ≥−BeI
+if |ℓy| ≥r,
+sym M(0) ≥−BcI
+if |ℓy| < r
+hold, where 0 < r < 1/4. Choose a scalar L ≥0 for the displacement boundary term in
+(3.21). This term compensates for the possible negative initial gradient inside |ℓy| < r.
+With the dimensional constants C1, C2 in (3.23), assume
+K+S2
+2
++ BeS + C2Bcr3S ≤1
+2,
+L ≥C1Bc,
+0 ≤L ≤Pc0.
+(3.11)
+Alternatively, if sym M(0) ≥−BeI everywhere, the interior bound may be omitted and
+Bc = 0 used in (3.11).
+(iii) Transverse propagation and amplitude. For each y with |y| ≤1/2, express a transverse
+solution of (3.9) as A(t, y) = F(t, y)R⊥a(t, y), where a(t, y) ∈R2 is its vector of
+transverse coefficients. For t0 ≤s′ ≤t ≤S, assume that the linear map a(s′, y) ↦→a(t, y)
+
+=== PAGE 13 ===
+FINITE TIME BLOWUP FOR THE EULER EQUATION
+13
+has operator norm at most Pc0g(t)/g(s′), where g : [t0, S] →(0, ∞) and g(t0) = 1. The
+amplitude satisfies α, sup[t0,S] αg ≤Pc0.
+All the data are smooth.
+For the packet estimate, retain these smooth data and assume §3.2 (i)–(iii).
+Proposition 3.1. There is a finite exponent Q = Q(c0), uniform over the smooth packet data
+satisfying §3.2 (i)–(iii), such that for every k ≥k0(c0) satisfying
+PQ ≤kϑ/100,
+ϑ = 10−6,
+(3.12)
+there is a smooth odd exact Euler solution unew on [0, S], with pressure pnew.
+1. Gradient and pressure increments. At x = X(t, ℓy), with θ = km0 · y, its increments satisfy
+∇unew −∇u = αχ1v ⊗m f ′
+δ(θ) + O(k−1/4),
+(3.13)
+∇2pnew −∇2p = −2αχ1(m · Mv)m ⊗m
+Dm
+f ′
+δ(θ) + O(k−1/4).
+(3.14)
+The errors are uniform globally in space and on [0, S].
+2. Particle-map bounds. Suppose in addition that, for every integer n ≥0, the parent particle map
+obeys
+∑
+|I|=n
+sup
+0≤t≤S
+∥∂I
+a(X −id, Xt, Xtt)∥Hs ≤Kn+1
+h
+(n!)2,
+1 ≤Kh ≤Pc0.
+(3.15)
+Then, for every integer n ≥0, the particle map Xnew of unew obeys
+∑
+|I|=n
+sup
+0≤t≤S
+∥∂I
+a(Xnew −id, Xnew
+t
+, Xnew
+tt
+)∥Hs ≤(kC∗)n+1(n!)2,
+C∗= 10(s + 2).
+(3.16)
+3. Initial increment. The initial increment splits as uhigh,0 + umean,0, with supports in {|a| ≤ℓ/2}
+and {|a| ≤2}, respectively. For each fixed integer m ≥0,
+∥uhigh,0∥Hm ≤ℓ−mαkmPcm,
+∥umean,0∥Hm ≤ℓ−mk−2Pcm.
+(3.17)
+If t0 = 0 and L = 0, then umean,0 = 0. Let ϕδ be the mean-zero periodic primitive of fδ. In this
+case, the initial oscillatory increment is
+uhigh,0(a) = −ℓ2α
+k2 curla [χ1(a/ℓ)(m0 × v(0))ϕδ(km0 · a/ℓ)] .
+(3.18)
+Proof strategy for Proposition 3.1. We first solve the linear equation for the angle-
+independent correction, imposing compact support of its initial velocity through a
+displacement boundary condition. We then solve the linear equation for the zero-mean
+correction subject to m · A = 0. The estimates in Lemma 3.2 allow these two corrections to be
+constructed successively at each power of k−1. After truncation, the remaining error satisfies
+(3.45). Finally, Lemma 3.3 removes that error with a correction having zero initial velocity, so
+the initial support is preserved.
+3.3. A linear inverse with compactly supported initial velocity. To construct the mean part
+of the packet in Proposition 3.1, let f ∈L2((0, S); L2(R3; R3)) be angle independent. We seek
+an angle-independent velocity B and pressure ¯q satisfying
+Bt + MB + d ¯q = f,
+d · B = 0,
+supp B(0) ⊂{|ℓy| ≤2}.
+(3.19)
+Only B(0) is required to have compact support; the pressure and the mean velocity at positive
+times may be nonlocal. Introduce an auxiliary displacement η = Fz, where divy z = 0 and
+
+=== PAGE 14 ===
+14
+OPENAI
+z(S) = 0. The terminal condition fixes the additive constant in z. Since Ft = MF, its
+associated velocity is
+B = ηt −Mη = Fzt,
+d · B = divy zt = 0.
+We will impose zt(0) = LAz(0), with A chosen to have compactly supported output.
+Introduce the Newton operator N = (−∆y)−1, the cutoff χ(y) = χo(ℓy), and the nonnegative
+operator
+A = curly χN χ curly .
+(3.20)
+The outer curl makes Av divergence free, and the outer cutoff gives supp Av ⊂{|ℓy| ≤2}.
+For smooth v,
+⟨Av, v⟩= ∥N 1/2χ curly v∥2
+2 ≥0.
+On the Hilbert space
+V = {z ∈H1((0, S); L2
+σ(R3)) : z(S) = 0},
+∥z∥V = ∥zt∥L2
+t L2y,
+where L2
+σ denotes distributionally divergence-free fields, define the bilinear form in the first
+line below. We seek z ∈V satisfying the second line for every b ∈V:
+a(z, b) =
+∫︂S
+0
+∫︂
+R3
+(︁(Fz)t · (Fb)t −HFz · Fb
+)︁
+dy dt + ⟨M(0)z(0), b(0)⟩+ L⟨Az(0), b(0)⟩,
+a(z, b) = −
+∫︂S
+0 ⟨f, Fb⟩dt
+(b ∈V).
+(3.21)
+We first prove that A is bounded on L2, then prove a(z, z) ≥P−c∥z∥2
+V. For a scalar
+multiplier ψ with ∥ψ∥∞+ ∥∇ψ∥3 < ∞,
+∥ψ curl z∥˙H−1 ≤C
+(︁∥ψ∥∞+ ∥∇ψ∥3
+)︁∥z∥2.
+(3.22)
+Indeed, pairing with φ and integrating by parts gives ⟨z, ψ curl φ + ∇ψ × φ⟩. Hölder’s
+inequality and ∥φ∥6 ≤C∥∇φ∥2 prove (3.22). For two scalar multipliers ψ1, ψ2 satisfying
+these bounds, use
+⟨v, curl ψ1N ψ2 curl z⟩= ⟨N 1/2ψ1 curl v, N 1/2ψ2 curl z⟩.
+Applying (3.22) to both factors proves that curl ψ1N ψ2 curl is bounded on L2. For our cutoff,
+∥∂Iχ∥∞+ ∥∇∂Iχ∥3 ≤Cn+1(n!)2
+(|I| = n).
+Here the factor ℓn+1 in the second term is multiplied by the L3 scaling factor ℓ−1. By Leibniz’s
+rule, [∂I, A]z is a sum of terms
+curl(∂Jχ)N (∂Kχ) curl ∂I′z,
+|J| + |K| + |I′| = |I|,
+|J| + |K| ≥1.
+The pairing estimate bounds each operator on L2. Applying up to s further derivatives gives
+∥curl(∂Jχ)N (∂Kχ) curl ∥Hs→Hs ≤C|J|+|K|+1(︁(|J| + |K|)!
+)︁2.
+These bounds control the boundary terms when we differentiate (3.21).
+The boundary contribution from M(0) can be negative on {|ℓy| < r}. To absorb it into
+L⟨Az(0), z(0)⟩, we bound the L2 mass of z(0) in this region by the boundary form and a
+small multiple of ∥z(0)∥2
+2. Put Z = ∥N 1/2χ curl z(0)∥2 and w = N curl(χ curl z(0)). The
+Fourier multiplier of N 1/2 curl has norm at most one, so ∥w∥2 ≤Z. Since divy z(0) = 0 and
+χ = 1 on |y| ≤ℓ−1,
+−∆(z(0) −w) = 0
+on |y| < ℓ−1.
+
+=== PAGE 15 ===
+FINITE TIME BLOWUP FOR THE EULER EQUATION
+15
+The harmonic interior estimate on the concentric ball |y| < (2ℓ)−1 gives
+sup
+|y|<(2ℓ)−1 |z(0) −w|2 ≤Cℓ3∥z(0) −w∥2
+L2(|y|<ℓ−1).
+On |y| < r/ℓ, use |z(0)|2 ≤2|w|2 + 2|z(0) −w|2 and ∥w∥2 ≤Z. Integrating the supremum
+bound over this ball, whose volume is Cr3ℓ−3, and using r < 1/4 gives dimensional constants
+C1, C2 such that
+∥z(0)∥2
+L2(|ℓy|<r) ≤C1Z2 + C2r3∥z(0)∥2
+2.
+(3.23)
+Let E = ∫︁S
+0 ∥(Fz)t∥2
+2 dt. Since z(S) = 0,
+F(t)z(t) = −
+∫︂S
+t (Fz)τ(τ) dτ.
+Cauchy–Schwarz and F(0) = I give
+∫︂S
+0 ∥Fz∥2
+2 dt ≤S2
+2 E,
+∥z(0)∥2
+2 ≤SE,
+The quadratic-form assumptions give
+⟨M(0)z(0), z(0)⟩≥−Be∥z(0)∥2
+2 −Bc∥z(0)∥2
+L2(|ℓy|<r).
+Using H ≤K+I and (3.23), we obtain
+a(z, z) ≥
+(︃
+1 −K+S2
+2
+−BeS −C2Bcr3S
+)︃
+E + (L −C1Bc)Z2 ≥1
+2E.
+The final inequality is (3.11). Moreover zt = F−1(Fz)t −F−1Ftz and terminal integration
+imply ∥zt∥2
+L2
+t L2 ≤PcE. Thus the bounded bilinear form is coercive on V, whether or not
+M(0) is symmetric. The Lax–Milgram theorem gives a unique solution of (3.21).
+We now show that the variational solution produces a velocity satisfying (3.19), including
+its initial support condition. Let Pσ be the L2 orthogonal projection onto the divergence-free
+fields L2
+σ. Testing with compact support in time first gives
+(︁
+PσFTFzt
+)︁
+t = Pσ
+[︁
+FT f + ((FTF)t −2FTFt)zt
+]︁
+.
+The terms containing z cancel because Ftt = −HF. On L2
+σ, the operator T(t) = PσFTF is
+positive with inverse norm Pc. The identity T(t)−1 −T(s)−1 = T(t)−1(T(s) −T(t))T(s)−1
+shows that its inverse is continuously differentiable in time. The displayed differential
+equation gives Tzt ∈H1((0, S); L2
+σ). Multiplication by the continuously differentiable inverse
+T(t)−1 therefore gives zt ∈H1((0, S); L2
+σ), and
+Pσ(FTFztt) = Pσ(FT f −2FTFtzt).
+(3.24)
+Integrating (3.21) by parts now gives
+⟨−zt(0) + LAz(0), b(0)⟩= 0
+(b ∈V).
+Here F(0) = I and Ft(0) = M(0) cancel the two terms containing M(0)z(0). The trace b(0)
+ranges over L2
+σ, and both zt(0) and Az(0) belong to this space. Hence
+zt(0) = LAz(0).
+(3.25)
+Set
+B = Fzt,
+d ¯q = f −Bt −MB.
+(3.26)
+
+=== PAGE 16 ===
+16
+OPENAI
+By (3.24), there is a distribution ¯q with ∇y ¯q = FT( f −Bt −MB) ∈L2, hence d ¯q = f −Bt −
+MB. Moreover d · B = divy zt = 0. Finally B(0) = LAz(0) has the required compact support.
+Only the initial mean velocity is localized; the mean field at positive times is allowed to be
+nonlocal.
+3.4. The transverse inverse and its derivative bounds. Let R⊥be the constant 3 × 2 matrix
+whose orthonormal columns span m⊥
+0 , and set m = F−Tm0. For a force f (t, y, θ) with zero
+angle mean, we seek A, π satisfying
+At + MA + m∂θπ = f,
+m · A = 0.
+This inverse constructs corrections generated by the force f. Their displacement endpoints
+vanish when t0 > 0, and their initial velocity vanishes when t0 = 0. The primary coefficient
+v in (3.9) instead solves the homogeneous equation with prescribed terminal displacement
+or initial velocity. When t0 > 0, we first construct A on [0, t0]. At each fixed (y, θ), seek ξ ∈
+H1
+0((0, t0); R2) and set η = FR⊥ξ. Require the following identity for every b ∈H1
+0((0, t0); R2):
+∫︂t0
+0 (ηt · ζt −Hη · ζ) dt = −
+∫︂t0
+0
+f · ζ dt,
+ζ = FR⊥b,
+b(0) = b(t0) = 0.
+(3.27)
+The equation contains no derivatives in y or θ. Since η(t0) = 0,
+∫︂t0
+0 (|ηt|2 −Hη · η) dt ≥
+(︃
+1 −K+t2
+0
+2
+)︃∫︂t0
+0
+|ηt|2 dt ≥1
+2
+∫︂t0
+0
+|ηt|2 dt.
+Together with the coefficient bounds, this proves coercivity in ∥ξt∥L2(0,t0). The use of an
+upper bound on the pressure Hessian to control this quadratic action has a precedent in
+Brenier’s short-time action-minimization criterion for Euler flows [3, Section 2]. Integrating
+(3.27) by parts and using Ftt = −HF gives, with KR = RT
+⊥FTFR⊥,
+KRξtt = RT
+⊥FT( f −2FtR⊥ξt),
+A = FR⊥ξt.
+(3.28)
+For zero endpoint data, uniqueness gives ξ(·, y, θ) = 0 whenever f (·, y, θ) = 0. The coeffi-
+cients are independent of θ, so averaging the variational equation gives ⟨ξ⟩θ = 0 whenever
+⟨f ⟩θ = 0. Thus A preserves spatial support and zero angle mean.
+Equation (3.28) gives (FR⊥)T( f −At −MA) = 0. The columns of FR⊥span m⊥, so
+this residual is parallel to m. Differentiating m · A = 0 and using mt = −MTm gives
+m · At = m · MA. The coefficient of m in the residual is therefore (m · f −2m · MA)/Dm, and
+At + MA + m∂θπ = f,
+π = ∂−1
+θ
+(︃m · f −2m · MA
+Dm
+)︃
+.
+(3.29)
+Here ∂−1
+θ
+is defined on zero-mean functions by ˆ︁
+∂−1
+θ h(j) = (ij)−1ˆ︁h(j) for j̸ = 0, with zero
+coefficient at j = 0. For t ≥t0, write A = FR⊥a and solve the following first-order equation.
+Use a(t0) = ξt(t0) when t0 > 0, and a(0) = 0 when t0 = 0:
+KRat + 2RT
+⊥FTFtR⊥a = RT
+⊥FT f.
+(3.30)
+The following estimate collects the inverses (3.19) and (3.29), with the shift bounds defined
+in (3.1). The constraint m · A = 0 removes the leading phase divergence, but A need
+not satisfy ˜︁d · A = 0. The lemma therefore also bounds the vector potential QA and curl
+correction CA defined below; A + k−1CA will be exactly divergence free. The integer shift
+index d is distinct from the differential operator in d ¯q and dπ.
+For these estimates, retain the parent flow u, its pressure p and particle map X, and
+the data P, S, ℓ, k, t0, m0, R⊥, F, M, H from §3.2. Assume all data are smooth and satisfy the
+
+=== PAGE 17 ===
+FINITE TIME BLOWUP FOR THE EULER EQUATION
+17
+coefficient, inverse, time, and scale bounds in §3.2 (i), the quadratic-form and coercivity
+conditions in §3.2 (ii), and the propagator and amplitude bounds with profile g in §3.2 (iii).
+Use the cutoff χo fixed in §3.1 and the shift convention (3.1).
+Lemma 3.2. For the mean inverse (3.21) and transverse inverse (3.29), with smooth data satisfying
+§3.2 (i)–(iii), there exists a choice R = Pc with the following properties for every integer d ≥10 and
+every h0 > 0.
+(a) Mean inverse. An angle-independent smooth force f of shift d −10 with constant profile h0
+gives, through (3.21), the fields B, Bt, d ¯q of shift d with the same profile, where B, d ¯q are defined
+by (3.26). These fields satisfy (3.19); the initial trace is B(0) = LAz(0).
+(b) Transverse inverse. Let a smooth force f have zero angle mean and spatial support in |y| ≤1/2.
+Use zero displacement at both ends of the history interval when t0 > 0, and zero initial velocity
+when t0 = 0, followed by (3.30). Write A, π for the resulting velocity and pressure coefficients
+in (3.29). Suppose the force has shift d −10, separately on these intervals, with profile
+h(t) =
+{︄
+h0,
+0 ≤t ≤t0,
+h0g(t),
+t0 ≤t ≤S.
+Define the vector-potential coefficient QA and its curl correction CA by
+QA = −∂−1
+θ
+m × A
+Dm
+,
+CA = d × QA.
+Then A, At, π, QA, CA, CA,t, dπ have shift d with profile h. The solution is transverse, m · A = 0,
+and these fields retain zero angle mean. Any fixed closed spatial set containing the support of the
+force at every time also contains the support of these fields.
+The choice of R is independent of the shift and the number of expansion terms.
+When t0 > 0, prescribed terminal displacement ξ(t0) = ξT is handled by writing ξ =
+ξ0 + tξT/t0, where ξ0(0) = ξ0(t0) = 0. Then ξ0 satisfies (3.28) with force f −2FtR⊥ξT/t0,
+and
+A = FR⊥
+(︃
+ξ0,t + ξT
+t0
+)︃
+.
+The displacement and velocity bounds include the derivative bounds of ξT/t0, and the
+preserved support set must also contain supp ξT. If ⟨ξT⟩θ = 0, the pressure construction and
+zero-angle-mean conclusions also apply. Taking f = 0 and the terminal data prescribed in
+§3.2 recovers the history displacement and velocity of the primary coefficient v.
+Proof. We first obtain the estimates at the fixed Sobolev order s, then control additional
+derivatives by (3.3). Time traces and the forward propagator give the stated time suprema.
+For the mean form, consider
+a(z, b) =
+∫︂S
+0 (⟨g1, bt⟩+ ⟨g0, b⟩) dt + ⟨gb, b(0)⟩,
+b ∈V,
+where g1, g0 ∈L2((0, S); L2(R3; R3)) and gb ∈L2(R3; R3). The original forcing corresponds
+to g1 = 0, g0 = −FT f, and gb = 0. Since b(S) = 0,
+∥b∥L2
+t L2 ≤S∥bt∥L2
+t L2,
+∥b(0)∥2 ≤S1/2∥bt∥L2
+t L2.
+Coercivity therefore yields
+∥zt∥L2
+t L2 ≤Pc(∥g1∥L2
+t L2 + ∥g0∥L2
+t L2 + ∥gb∥2).
+
+=== PAGE 18 ===
+18
+OPENAI
+Spatial difference quotients preserve L2
+σ and the terminal condition. Subtracting the translated
+form puts every coefficient difference on the right side. At derivative level j, those terms
+contain coefficient derivatives in Wj,∞and previously controlled derivatives of zt of order at
+most j −1. Derivatives of z and their initial values are controlled by ∂I
+yz(t) = −∫︁S
+t ∂I
+yzt(τ) dτ.
+For the boundary commutators, apply (3.22) with derivatives of χ as the multipliers. Taking
+weak limits of difference quotients proves the next derivative bound. Induction through the
+fixed orders j = 0, . . . , s gives
+∥zt∥L2
+t Hs ≤Pc(︁∥g1∥L2
+t Hs + ∥g0∥L2
+t Hs + ∥gb∥Hs)︁
+.
+For the general weak data above, set
+Zn = ∑
+|I|=n
+∥∂I
+yzt∥L2
+t Hs,
+Fn = ∑
+|I|=n
+(︁∥∂I
+yg1∥L2
+t Hs + ∥∂I
+yg0∥L2
+t Hs + ∥∂I
+ygb∥Hs)︁
+.
+Apply the fixed-s estimate to each differentiated equation. Every commutator places a
+nonempty subset of the additional derivatives on a coefficient, giving (3.3). For the original
+forcing g0 = −FT f, Leibniz’s rule gives
+∑
+|I|=n
+∥∂I
+y(FT f )∥L2
+t Hs ≤Pc
+n
+∑
+l=0
+(︃n
+l
+)︃
+Rl
+c(l!)2 ∑
+|J|=n−l
+∥∂J
+y f ∥L2
+t Hs.
+After normalization by the claimed factorial bound, the terms with l ≥1 contain the
+geometric factors (Rc/R)l used in the commutator estimate. They are included in the choice
+R = Pc. The product rule (3.2) also gives a bound with an additional shift. Finite higher
+regularity is first obtained by difference quotients, so the factorial induction does not assume
+the existence of the derivatives it estimates.
+To estimate T(t)−1, write T(t)v = h with v, h ∈L2
+σ. For a spatial multi-index β,
+T(t)∂β
+yv = ∂β
+yh −Pσ ∑
+0<γ≤β
+(︃β
+γ
+)︃
+∂γ
+y(FTF) ∂β−γ
+y
+v.
+The projection commutes with spatial derivatives. The L2 coercivity of T(t) starts the
+induction, and this identity gives its fixed-s and factorial estimates. Consequently (3.24)
+yields ztt ∈L2
+t Hs. For w ∈H1((0, S); Hs), use the following trace inequality, with all
+unmarked norms taken in Hs:
+sup
+t
+∥w(t)∥≤C
+(︁
+S−1/2∥w∥L2
+t + S1/2∥wt∥L2
+t
+)︁
+(3.31)
+Apply this inequality to w = ∂I
+yzt for each derivative word I. The strong equation also gives
+∥ztt(t)∥Hs ≤Pc(︁∥f (t)∥Hs + ∥zt(t)∥Hs)︁
+,
+and its differentiated equations give the corresponding factorial bounds in the time supre-
+mum when f is bounded in time.
+For every spatial derivative word I, the bounds
+∂I
+yzt ∈H1((0, S); Hs) give continuity in Hs and a well-defined initial trace.
+For the transverse history problem, apply the coercivity and difference-quotient arguments
+to ξ on [0, t0]. Its strong equation is (3.28), with K−1
+R
+replacing T(t)−1, and there is no
+boundary operator to commute. Angle derivatives commute with the equation because its
+coefficients are independent of θ. Apply (3.31) with S replaced by t0; the factors involving
+t−1
+0
+are bounded by Pc.
+
+=== PAGE 19 ===
+FINITE TIME BLOWUP FOR THE EULER EQUATION
+19
+Write (3.30) as at + Ca = Df, where
+C = 2K−1
+R RT
+⊥FTFtR⊥,
+D = K−1
+R RT
+⊥FT.
+The assumed propagator bound and g(t0) = 1 give
+sup
+t0≤t≤S
+∥a(t)∥2
+g(t)
+≤Pc
+(︃
+∥a(t0)∥2 +
+∫︂S
+t0
+∥f (t)∥2
+g(t)
+dt
+)︃
+.
+For a spatial multi-index β,
+(∂β
+ya)t + C∂β
+ya = ∂β
+y(Df ) −∑
+0<γ≤β
+(︃β
+γ
+)︃
+(∂γ
+yC)∂β−γ
+y
+a.
+Thus each differentiated equation has the original propagator, with lower derivatives of
+a added to its forcing. Apply the Duhamel estimate successively through order s. After
+division by g, each time integral is bounded by the corresponding weighted supremum
+because S ≤1. These finitely many steps cost Pc. Additional derivative words give (3.3)
+with profile g. Angle derivatives commute with the coefficients. All these fields remain
+supported in |y| ≤1/2, where the propagator estimate is assumed. In particular we never
+use a Gronwall factor exponential in the undifferentiated matrix norm.
+The inverse coefficient bounds can also be recovered from the coefficient bounds and
+∥J−1∥∞≤Pc. For a coefficient matrix J being inverted and |β| ≥1, differentiating JJ−1 = I
+gives
+∂βJ−1 = −J−1 ∑
+0<γ≤β
+(︃β
+γ
+)︃
+(∂γJ)∂β−γJ−1.
+Induction through the fixed Ws,∞orders gives a bound Pc. Further derivative words give the
+convolution in (3.3); choosing a sufficiently large fixed power R = Pc proves the factorial
+bounds for J−1.
+To make the derivative accounting explicit, an input force of shift d −10 gives successively
+the following available shifts:
+quantity
+zt in L2
+t
+ztt in L2
+t
+zt in L∞
+t
+ztt in L∞
+t
+B, Bt, d ¯q
+shift
+d −9
+d −8
+d −7
+d −6
+≤d −4.
+(3.32)
+The first column follows from the weak estimate and (3.3); the second follows from (3.24).
+The trace inequality gives the third column, and the strong equation in the time supremum
+gives the fourth. For the last column, use B = Fzt, Bt = Ftzt + Fztt, and d ¯q = f −Bt −MB.
+For the transverse history interval, replace zt, ztt by ξt, ξtt and use (3.28). At t0, its forward
+data a(t0) = ξt(t0) have shift d −7. The forward inverse gives d −6, multiplication to obtain
+A costs a shift, and (3.29) gives At with at most one more. Hence π, QA have shift at most
+d −4, QA,t at most d −3, CA, dπ at most d −2, and CA,t at most d −1. Adding the bounds
+from the history and forward intervals costs a fixed factor, which the final shift absorbs. For
+the mean velocity, the initial support follows from B(0) = LAz(0). For the transverse fields,
+the equations act separately at each y, and their coefficients are independent of θ. Spatial
+support and zero angle mean are therefore preserved by the inverse and by the formulas
+for π, QA, CA. Finally, A = FR⊥a gives m · A = m0 · R⊥a = 0, with a = ξt on the history
+interval.
+□
+
+=== PAGE 20 ===
+20
+OPENAI
+3.5. Cancelling the coefficients of the oscillatory expansion. We construct the finite ap-
+proximation (3.34) and prove (3.44) and (3.45). The quadratic term can have nonzero angle
+mean even when the leading oscillation has zero mean. At each power of κ = k−1, we
+therefore solve the mean equation before the oscillatory equation, using Lemma 3.2 for
+the required support and growth bounds. The next subsection removes the remaining
+momentum residual with a correction whose initial velocity is zero.
+Let Nk = ⌊kϑ⌋. The index p below denotes a power of κ, not a derivative order. For
+1 ≤p ≤Nk, we seek zero-mean transverse fields Ap and angle-independent fields Bp
+satisfying m · Ap = 0 and d · Bp = 0. For each Ap, define a vector potential Qp and its curl
+remainder Cp. We also define Vp, which collects the terms multiplying κp in the velocity
+expansion:
+Qp = −∂−1
+θ
+m × Ap
+Dm
+,
+Cp = d × Qp,
+Vp = Ap + Bp + Cp−1,
+C0 = 0.
+(3.33)
+The role of Cp is exact incompressibility. Indeed m × ∂θQp = Ap, so
+κpAp + κp+1Cp = κp+1 ˜︁d × Qp.
+The approximation is
+Wa =
+Nk
+∑
+p=1
+(︁
+κp(Ap + Bp) + κp+1Cp
+)︁
+,
+qa =
+Nk
+∑
+p=1
+(︁
+κp ¯qp + κp+1πp
+)︁
+,
+(3.34)
+and ˜︁d · Wa = 0 identically.
+We set B1 = 0, ¯q1 = 0, and A1 = αχ1v fδ.
+Define π1 =
+−2∂−1
+θ ((m · MA1)/Dm) by (3.29) with zero forcing. When t0 > 0, multiply the primary
+displacement coordinate ξ by αχ1 fδ. This factor is independent of time, and (3.28) contains
+no label or angle derivatives. The multiplied displacement therefore solves the history
+equation and gives the velocity coefficient A1.
+Here is the precise coefficient extraction. Extend the notation by VNk+1 = CNk and Vp = 0
+outside 1 ≤p ≤Nk + 1. The coefficient of κp in the quadratic term with label derivatives
+is ∑i+j=p Vi · dVj; in the term with a phase derivative it is ∑i+j=p+1(Vi · m)∂θVj. Thus for
+2 ≤p ≤Nk the forcing for Ap + Bp is
+fp = −Cp−1,t −MCp−1 −dπp−1 −∑
+i+j=p
+Vi · dVj −
+∑
+i+j=p+1
+(Vi · m)∂θVj.
+(3.35)
+There is no phase-derivative term of order zero, since the positive indices i, j cannot satisfy
+i + j = 1. The term of order one vanishes because V1 = A1 and m · A1 = 0. In the label-
+derivative sum, both indices are at most p −1, so all coefficients are already known. In the
+phase-derivative sum, order-p coefficients can occur only when (i, j) = (1, p) or (p, 1). The
+first term vanishes because V1 · m = 0. In the second, Vp · m = Bp · m + Cp−1 · m, so the only
+undetermined nonzero term is −(Bp · m)∂θA1. Separate it by writing
+fp = f known
+p
+−(Bp · m)∂θA1,
+¯fp = ⟨f known
+p
+⟩θ.
+(3.36)
+Here f known
+p
+depends only on coefficients already constructed, and ⟨h⟩θ = (2π)−1 ∫︁2π
+0
+h dθ.
+The undetermined term has zero angle mean. We first solve
+Bp,t + MBp + d ¯qp = ¯fp,
+d · Bp = 0,
+(3.37)
+
+=== PAGE 21 ===
+FINITE TIME BLOWUP FOR THE EULER EQUATION
+21
+using (3.21), with displacement zero at S and initial trace (3.25). With this Bp fixed, we solve
+Ap,t + MAp + m∂θπp = f known
+p
+−¯fp −(Bp · m)∂θA1,
+m · Ap = 0.
+(3.38)
+using the transverse inverse. When t0 > 0, its displacement coordinate vanishes at both 0
+and t0. When t0 = 0, impose Ap(0) = 0. Forward continuation is given by (3.30). Thus each
+order is constructed from the preceding orders, with the mean solved before the oscillation.
+The leading coefficient A1 is supported in |y| ≤1/2. At every later order, terms involving
+only angle-independent coefficients disappear when the angle mean is subtracted. Every
+remaining term in the transverse forcing contains an oscillatory coefficient, or a derivative of
+such a coefficient, already supported in this set. This also holds for the term involving the
+newly solved Bp, since it contains ∂θA1. The transverse inverse and the formulas for Qp and
+Cp preserve this support. Thus all oscillatory coefficients, including their curl remainders,
+are supported in |y| ≤1/2.
+When t0 > 0, the history inverse gives the velocity coefficient Ap on [0, t0], and the forward
+problem uses Ap(t0) as its initial value. The history and forward pieces of Ap therefore agree
+at t0 and satisfy the same first-order velocity equation. Their first derivatives agree there;
+induction in time derivatives proves smooth matching. The mean strong equation gives the
+same time regularity as its forcing. Thus all coefficients are smooth. The oddness of u makes
+F, M, H even in y. Under (y, θ) ↦→(−y, −θ), both d and ∂θ reverse parity. Uniqueness of the
+linear inverses then proves inductively that Ap, Bp, Cp are odd and Qp, πp, ¯qp are even, the
+latter pressure being defined up to a constant.
+We prove the following coefficient bounds by induction on p, using a common growth
+constant R = Pc independent of Nk. Set
+ap = 100p −80
+(p ≥1),
+bp = 100p −140
+(p ≥2),
+γ(t) =
+{︄
+α,
+t ≤t0,
+αg(t),
+t ≥t0,
+H0 = max(1, α, sup αg).
+(3.39)
+With a fixed R = Pc, the fields
+Ap, Ap,t, πp, Qp, Cp, Cp,t, dπp
+have shift ap and profile γH2p−2
+0
+; the fields Bp, Bp,t, d ¯qp have shift bp and constant profile
+H2p−2
+0
+.
+The shift costs of the two inverses are given in Lemma 3.2 and (3.32). For t0 > 0, the
+primary endpoint data αχ1 fδξT, after division by α, have derivative norms bounded by
+Pc(Pc)n(n!)2. The affine extension tαχ1 fδξT/t0 and these linear estimates require fewer than
+a1 = 20 shifts. For t0 = 0, the same conclusion follows from the corresponding derivative
+bounds for the initial data αχ1v(0) fδ after division by α.
+For the induction step, fix 2 ≤p ≤Nk and assume the bounds at lower orders. We
+first estimate the mean force and obtain the bound for Bp; that current-order bound is
+then available in the transverse force. To apply Lemma 3.2, the mean force must have shift
+bp −10 = 100p −150, and the zero-mean force must have shift ap −10 = 100p −90. The
+table gives shift bounds for the forcing terms and indicates whether their angle mean, their
+zero-mean part, or both may be nonzero. The bounds include the displayed derivatives and
+
+=== PAGE 22 ===
+22
+OPENAI
+multiplication by the known coefficients.
+forcing term at order p
+shift bound
+part of the forcing
+Vi · dVj, i + j = p
+100p −158
+mean or oscillatory
+(Bi · m)∂θAj, i + j = p + 1
+100p −118
+oscillatory
+(Bi · m)∂θCj−1, i + j = p + 1
+≤100p −118
+oscillatory
+(Ci−1 · m)∂θ(Aj + Cj−1), i + j = p + 1
+≤100p −158
+mean or oscillatory
+Cp−1,t, MCp−1, dπp−1
+≤100p −178
+oscillatory.
+Every summand of Vi has shift at most ai. The first line therefore starts with ai + aj =
+100p −160 and uses two further shifts for differentiation and multiplication by F−1 in d. The
+second starts with bi + aj = 100p −120 and uses two further shifts for ∂θ and multiplication
+by m. Terms with Ai · m vanish, and pure mean terms have smaller shifts. Each displayed
+bound lies below its required force shift, including the bound for the term involving the
+newly solved Bp.
+The target profiles for the mean and oscillatory forces at order p are H2p−2
+0
+and γ(t)H2p−2
+0
+,
+respectively. For i + j = p, the angle mean of Vi · dVj is bounded with the first profile, and
+its zero-mean part is bounded with the second. For i + j = p + 1, the product (Bi · m)∂θAj
+has profile γ(t)H2p−2
+0
+. Replacing Bi by Ci−1 introduces another factor γ(t) and reduces the
+exponent of H0 by two. The resulting profile γ(t)2H2p−4
+0
+is bounded by either target profile
+because γ(t) ≤H0 and H0 ≥1. Terms containing further curl remainders have smaller
+exponents of H0. The linear terms Cp−1,t, MCp−1, and dπp−1 have profile γ(t)H2p−4
+0
+and
+therefore satisfy the oscillatory target. Angle averaging and subtraction of the average are
+bounded operations.
+There are O(p) products in each forcing. Let dtarget denote bp −10 for the mean force and
+ap −10 for the oscillatory force. The table allows every product to be bounded with shift
+dtarget −1. Increasing this shift to dtarget multiplies the available bound by R(n + dtarget)2.
+Since dtarget ≥25p, choosing R = Pc sufficiently large covers the number of products and
+the fixed powers of P from the product estimates. The choice of R needed for (3.3) is also
+independent of p. Applying the two inverse estimates now proves the claimed coefficient
+bounds with a growth constant independent of the expansion order.
+The coefficients are now constructed and bounded at a fixed value of R. It remains to show
+that truncating the expansion leaves a residual small enough to correct by exact evolution.
+After orders 1, . . . , Nk have canceled, the residual in (3.8) contains orders Nk + 1, . . . , 2Nk + 2,
+including CNk,t and dπNk. Their shifts are at most 110(p + 1) at order p. The elementary
+inequality
+(n + d)! ≤2n+dn!d!
+(3.40)
+separates derivative order from expansion order. Uniformly in time, it bounds the derivative
+norm | · |n of every such coefficient by
+(Pc)n(n!)2 [Pc(CNk)300]p+1.
+Indeed, a shift index d ≤110(p + 1) and p ≤2Nk + 2 give
+(d!)2 ≤(CNk)220(p+1).
+There are at most CNk products at each order. Their sum is covered by
+(CNk) (CNk)220(p+1) ≤(CNk)300(p+1);
+
+=== PAGE 23 ===
+FINITE TIME BLOWUP FOR THE EULER EQUATION
+23
+fixed powers of P and fixed constants raised to p + 1 are absorbed in the factor (Pc)p+1. The
+same factorial splitting gives this bound for |Vp|n, |Vp,t|n, and |∇y,θVp|n for 1 ≤p ≤Nk + 1.
+We estimate the first two velocity coefficients separately to obtain bounds independent of
+Nk. The coefficients of κ and κ2 in Wa are A1 and A2 + B2 + C1. In (3.39), their shift indices
+are a1 = 20, a2 = 120, and b2 = 60, with C1 having shift a1. These indices are independent of
+Nk. For each such fixed index d, (3.40) gives
+Rn+d((n + d)!)2 ≤Pc(Pc)n(n!)2.
+Their profiles are also bounded by fixed powers of P, so the same bound applies to these
+first two velocity coefficients. Since 300ϑ < 0.01, enlarging Q in (3.12) ensures
+Pc(CNk)300 ≤k0.01.
+(3.41)
+Define the lifted approximate velocity and its transport coefficient by
+za = κ−1F−1Wa,
+ba = (κza, m0 · za).
+(3.42)
+Here za is the velocity increment in parent label coordinates, rescaled by κ−1. The first three
+components of ba transport y, and its last component transports θ on R3 × T. To sum the
+derivative bounds, choose a sufficiently small radius ρ = P−c and define
+∥f ∥ρ = ∑
+n≥0
+ρn| f |n
+(n!)2 .
+(3.43)
+The growth bounds above are summable when ρR is sufficiently small; thus ρ is the norm
+radius corresponding to the growth constant R. After decreasing ρ by a fixed factor, the
+sums over derivative orders n converge. Summing over expansion orders p using (3.41) then
+gives
+∥za∥ρ + ∥za
+t ∥ρ + ∥∇y,θza∥ρ ≤Pc,
+∥ba∥ρ ≤k−1Pc + O(k−1.9).
+(3.44)
+Indeed m0 · F−1Ap = m · Ap = 0, so the transverse coefficients do not contribute to the
+last component of ba. The mean terms and curl remainders first occur at order κ in za.
+Their coefficients at that order have bounds independent of Nk. Terms of order p ≥3
+in Wa contribute to za a sum bounded by ∑p≥3 k1−p+0.01(p+1). The same calculation gives
+∥Wa −κA1∥ρ ≤k−2Pc. Define the normalized residual by
+ra = κ−1F−1(︁
+Wa
+t + MWa + Wa · ˜︁dWa + ˜︁dqa)︁
+.
+The residual coefficient bounds and (3.41) give
+∥ra∥ρ ≤Pc
+2Nk+2
+∑
+p=Nk+1
+k1−p+0.01(p+1).
+Since Nk = ⌊kϑ⌋, enlarging the fixed threshold k0(c0) if necessary gives
+∥ra∥ρ ≤exp(−0.7kϑ log k) =: Rk.
+(3.45)
+All radius shrinkings and all powers of P used so far are fixed.
+
+=== PAGE 24 ===
+24
+OPENAI
+3.6. Correcting the approximate solution. The normalized residual ra of the approximation
+(3.34) satisfies (3.45). Differentiating along the physical graph introduces a factor of k, which
+complicates estimates for the correction. On R3
+y × Tθ, the transport coefficient ba is small by
+(3.44). We solve there for a correction e to the lifted velocity za, with zero initial value, and
+restrict the resulting solution to the physical graph afterward. Throughout this subsection,
+s = 6, κ = k−1, and
+Di = κ∂yi + (m0)i∂θ,
+G = F−1F−T,
+K = G−1 = FTF.
+(3.46)
+The divergence associated with D is divD v := ∑3
+i=1 Divi = κ divy v + m0 · ∂θv. Thus a field
+is divergence-free with respect to D precisely when divD v = 0. The notation D × v similarly
+denotes the curl obtained by replacing each coordinate derivative with Di. These operators
+satisfy
+˜︁d = κ−1F−TD,
+˜︁d · (κFz) = divD z.
+Thus writing W = κFz expresses incompressibility through the constant-coefficient deriva-
+tives Di. For a vector field v and an integer r ≥0, write
+|v|n,r =
+∑
+I∈{1,2,3,4}n
+∥∂Iv∥Hr.
+A word I specifies an ordered list of derivatives in (y, θ); for n = 0 this is just the Hr norm.
+Coefficient norms use Wr,∞in place of Hr. All constants in the Gevrey energy estimates
+below are independent of the cutoff in derivative order and of the auxiliary viscosity.
+The preceding estimates give a radius P−c at which za = κ−1F−1Wa, ∂tza, and the first
+derivatives of za have weighted norm at most Pc. At that radius,
+ba = (κza, m0 · za),
+∑
+n≥0
+ρn
+(n!)2 |ba|n,s ≤B0 ≤k−1/2.
+We decrease the radius by a fixed factor when necessary. The normalized residual ra has
+weighted Hs norm at most
+Rk = exp(−0.7kϑ log k).
+The coefficient bounds, including the fixed number of extra derivatives used below, have the
+form PcRn
+0(n!)2, where R0 = Pc.
+Take the smooth packet data and hypotheses in §3.2, and impose the smallness condition
+(3.12), with Q = Q(c0) fixed sufficiently large and k ≥k0(c0) sufficiently large. Let (Wa, qa)
+be the truncated expansion (3.34) constructed in the preceding subsection, and let za and ra be
+its lifted velocity and normalized residual, satisfying (3.44) and (3.45). Set ∆k = exp(−kϑ/2).
+Lemma 3.3. For the truncated velocity and pressure (Wa, qa) in (3.34), there exist a smooth velocity
+correction e and a smooth vector pressure correction pe on [0, S] × R3
+y × Tθ satisfying
+e(0) = 0,
+divD e = 0,
+D × pe = 0,
+and, at a fixed radius ρ∗= P−c,
+sup
+0≤t≤S
+(︁∥e(t)∥ρ∗+ ∥et(t)∥ρ∗+ ∥pe(t)∥ρ∗
+)︁≤Pc∆k.
+There is a smooth scalar qe(t, y) with
+∇yqe(t, y) = κpe(t, y, km0 · y).
+
+=== PAGE 25 ===
+FINITE TIME BLOWUP FOR THE EULER EQUATION
+25
+The velocity and pressure defined by
+unew(t, X(t, ℓy)) = u(t, X(t, ℓy))
++ ℓ[Wa + κFe](t, y, km0 · y).
+(3.47)
+and
+pnew(t, X(t, ℓy)) = p(t, X(t, ℓy))
++ ℓ2[︁
+qa(t, y, km0 · y) + qe(t, y)
+]︁
+.
+(3.48)
+form an exact Euler solution on [0, S]. The velocity unew is smooth and odd, and its initial increment
+is
+unew(0, ℓy) −u(0, ℓy) = ℓWa(0, y, km0 · y).
+Proof. We first construct the pressure inverse and estimate the correction on R3 × T. We then
+remove the auxiliary viscosity and restrict to the physical graph to obtain the asserted Euler
+solution.
+The pressure equation. Let G be the L2 closure of the fields Dϕ, with ϕ smooth, periodic
+in θ, and compactly supported in y. Its orthogonal complement consists exactly of fields
+satisfying divD v = ∑i Divi = 0 in distributions. The orthogonal projection PG has Fourier
+symbol
+(κξ + jm0) ⊗(κξ + jm0)
+|κξ + jm0|2
+,
+(ξ, j) ∈R3 × Z,
+with an arbitrary value on its measure-zero singular set. Thus it commutes with derivatives
+and has norm at most one on every Hr. For a given vector field f, we seek p ∈G such that
+f −Gp ∈G⊥, equivalently
+divD(Gp −f ) = 0.
+Since G is symmetric and G ≥P−cI, the operator PGG|G is invertible on G by coercivity. We
+denote its pressure solution operator by
+T f = (PGG|G)−1PG f.
+Here p = T f ∈G denotes the vector output of the pressure inverse; the physical pressure
+is scalar. Translation preserves G. Applying spatial difference quotients to PG(Gp) = PG f
+therefore proves the inverse bounds through the fixed Sobolev order s. Differentiating a
+word of n additional derivatives then gives, for r = s −1, s,
+|p|n,r ≤Pc
+(︄
+| f |n,r +
+n
+∑
+l=1
+(︃n
+l
+)︃
+Rl
+0(l!)2|p|n−l,r
+)︄
+.
+(3.49)
+Indeed, every commutator places at least one additional derivative on G; the remaining
+derivatives fall on p. The same argument at any fixed larger index gives a finite inverse
+bound, without a claim that its constant is uniform in that index.
+Substitute W = κFz into (3.8) and multiply by κ−1F−1. Using ˜︁d = κ−1F−TD gives
+zt + 2F−1Ftz + z · Dz + κF−1(z · ∇yF)z + Gp = 0,
+divD z = 0.
+(3.50)
+Here p = κ−2Dq is a vector pressure variable. In particular, Wt + MW = κFzt + 2κFtz,
+and W · ˜︁dW = κF(z · Dz) + κ2(z · ∇yF)z, which verify the factors in this equation. The
+approximate vector pressure pa = κ−2Dqa belongs to G. Its oscillatory part is a D-derivative
+of a Sobolev function. Its angle-independent part is an L2 gradient in y, hence belongs to the
+j = 0 component of G.
+
+=== PAGE 26 ===
+26
+OPENAI
+Write z = za + e and p = pa + pe, with e(0) = 0. Subtracting the approximate equation,
+whose left side is ra, from (3.50) gives the correction equation. For 0 < ν ≤1, we regularize
+it by adding ν∆y,θe:
+et + b · ∇y,θe + Z(e) + Gpe = −ra + ν∆y,θe,
+divD e = 0,
+(3.51)
+where
+b = (κ(za + e), m0 · (za + e)),
+Z(e) = e · Dza + 2F−1Fte
++ κF−1[︁(za + e) · ∇yF
+]︁(za + e) −κF−1(za · ∇yF)za.
+Thus Z contains no derivative of e, and div b = 0. Applying PG to (3.51) determines pe. We
+isolate the derivative of e carried by the transport term by writing pe = p0 + p1, where
+p0 = −T (Z(e) + ra),
+p1 = −T (b · ∇y,θe).
+The viscosity contributes no pressure because divD(∆e) = ∆(divD e) = 0; the operators Di
+have constant coefficients and commute with ∆.
+An estimate with a finite derivative cutoff. We first derive an a priori estimate for smooth
+solutions of (3.51) on their interval of existence, uniformly in the derivative cutoff and the
+auxiliary viscosity. A slowly decreasing norm radius will absorb the transport and pressure
+commutators while remaining positive on [0, S]. For each word I of additional derivatives,
+define EI ≥0 by the following formula, where λ ∈N4
+0 indexes the base derivatives and the
+integral is over R3 × T:
+E2
+I = ∑
+|λ|≤s
+∫︂
+⟨K∂λ∂Ie, ∂λ∂Ie⟩,
+En = ∑
+|I|=n
+EI.
+The bounds on K give P−c|e|n,s ≤En ≤Pc|e|n,s. For m ≥0, a decreasing radius ρ(t) > 0, and
+wn = ρn/(n!)2, set
+Xm =
+m
+∑
+n=0
+wnEn,
+Ym =
+m
+∑
+n=0
+nwnEn.
+Choose ρ ≤(PcR0)−1. After multiplication by wn and summation in (3.49), its commutator
+terms are bounded by Pc ∑l≥1(ρR0)l times the corresponding weighted pressure norm.
+Absorbing this quantity into the left side and applying the multiplication estimates gives
+m
+∑
+n=0
+wn|p0|n,s ≤Pc(Xm + X2
+m + Rk),
+(3.52)
+m
+∑
+n=0
+wn|p1|n,s−1 ≤Pc(B0 + Xm)Xm.
+(3.53)
+In the second line the derivative on e is contained in its base Hs norm. At base index s we
+instead use the shifted estimate
+m−1
+∑
+j=0
+(j + 1)wj+1|p1|j,s ≤Pc(B0 + Xm)Ym.
+(3.54)
+To check its derivative count explicitly, the term with l derivatives on b and j −l on ∇e has
+weight ratio
+(j + 1)wj+1(j
+l)
+wl(j −l + 1)wj−l+1
+=
+(︃j + 1
+l
+)︃−1
+≤1.
+
+=== PAGE 27 ===
+FINITE TIME BLOWUP FOR THE EULER EQUATION
+27
+For the commutator terms in (3.49), the same ratio compares the weight at pressure order
+j with the weight at order j −l. Their sum is bounded by Pc ∑l≥1(ρR0)l times the left side
+of (3.54), and is absorbed there. Consequently this estimate needs no velocity or pressure
+derivative beyond the cutoff m.
+For n = |I| and |λ| ≤s, apply ∂λ∂I to (3.51) and pair in L2(R3 × T) with K∂λ∂Ie. The
+highest pressure term vanishes:
+⟨K∂λ∂Ie, G∂λ∂I pe⟩= ⟨∂λ∂Ie, ∂λ∂I pe⟩= 0.
+Here KG = I, the differentiated velocity satisfies divD(∂λ∂Ie) = 0, and the differentiated
+pressure belongs to G. If all additional derivatives fall on pe, a commutator with a base
+derivative on G uses only |pe|n,s−1. Terms with l ≥1 additional derivatives on G use |pe|j,s,
+j = n −l. For their p1 part, the relevant ratio is
+wj+l(j+l
+l )
+wl(j + 1)wj+1
+= ρ−1 j + 1
+(j+l
+l )
+≤ρ−1.
+The weighted sum of the derivatives of G with l ≥1 is bounded by Pc ∑l≥1(ρR0)l ≤PcρR0.
+Combining this bound with (3.54) gives the contribution PcR0(B0 + Xm)Ym. The p0 terms
+and the terms with all additional derivatives on pe are controlled by (3.52) and (3.53).
+For transport, put h = ∂λ∂Ie. Since div b = 0, integration by parts gives
+⟨Kh, b · ∇h⟩= −1
+2
+∫︂
+⟨(b · ∇K)h, h⟩.
+For terms with all additional derivatives on e, the base commutators satisfy
+∥[∂λ, b · ∇]∂Ie∥2 ≤C∥∇b∥Hs−1∥∇∂Ie∥Hs−1,
+by the product estimate in Hs−1. A term with l ≥1 additional derivatives on b uses |b|l,s
+and |e|j+1,s, where j = n −l. The preceding weight ratio therefore bounds their sum by
+Pcρ−1(B0 + Xm)Ym. After summation in the weighted energies, differentiating K in time
+contributes at most PcXm. For the heat term, integration by parts with the same h gives
+ν⟨Kh, ∆h⟩= −ν∑
+a
+⟨K∂ah, ∂ah⟩−ν∑
+a
+⟨(∂aK)h, ∂ah⟩≤−1
+2νP−c∥∇h∥2
+2 + νPc∥h∥2
+2.
+Since Z(e) contains no derivative of e, the multiplication estimates give
+m
+∑
+n=0
+wn|Z(e)|n,s ≤Pc(Xm + X2
+m).
+Moreover, differentiating the weights contributes ∑m
+n=0 w′
+nEn = (ρ′/ρ)Ym. Summing the
+energy estimates with these contributions yields
+X′
+m ≤Pc(Xm + X2
+m + Rk) +
+[︃ρ′
+ρ + Pc(ρ−1 + R0)(B0 + Xm)
+]︃
+Ym.
+(3.55)
+At zeros of an individual energy we first use (E2
+I + ϵ2)1/2, then send ϵ to zero at fixed m. All
+constants in this inequality are independent of m and ν.
+Choose
+ρ(0) = (PcR0)−1,
+ρ′ = −CPc(B0 + ∆k).
+The fixed exponent in this choice is enlarged to cover all preceding constants. The scale
+condition PQ ≤kϑ/100, for a sufficiently large fixed Q, ensures ρ(t) ≥ρ(0)/2 on [0, S].
+
+=== PAGE 28 ===
+28
+OPENAI
+Under the bootstrap assumption Xm ≤∆k, the bracket in (3.55) is nonpositive. Since
+Xm(0) = 0, Gronwall’s inequality then gives
+Xm(t) ≤PcS exp(PcS)Rk < 1
+2∆k.
+Indeed,
+log(PcS exp(PcS)Rk) = log(PcS) + PcS −0.7kϑ log k.
+The scale condition makes the first two terms negligible relative to kϑ log k. For sufficiently
+large k, this expression is less than −kϑ/2 −log 2 = log(∆k/2).
+Continuity closes the
+bootstrap uniformly in m and ν.
+Existence and removal of viscosity. We construct the correction (e, pe) asserted in Lemma 3.3
+by solving (3.51) for ν > 0 and then passing to ν ↓0. To eliminate the pressure and construct
+a parabolic equation on the divergence-free subspace, set P(t) = I −GT . The identity
+PGGT = PG shows that P(t) takes values in {v : divD v = 0}; it fixes every field in this space.
+Moreover, P(t)Gp = 0 for p ∈G. Apply it to the non-heat terms in (3.51). For each fixed
+q = s + m, the projected nonlinearity is locally Lipschitz Hq →Hq−1. The heat estimate
+∥eνt∆f ∥Hq ≤C
+(︁
+1 + (νt)−1/2)︁∥f ∥Hq−1
+gives a local mild solution by contraction and continuation while its Hq norm remains
+bounded. Write eν for the viscous solution, and set
+bν = (κ(za + eν), m0 · (za + eν)),
+f ν = −P(t)
+(︁
+bν · ∇eν + Z(eν) + ra)︁
+.
+Then
+∂teν −ν∆eν = f ν,
+eν(0) = 0.
+No time derivative of P(t) enters this equation. Its range is fixed, and [Di, ∆] = 0, so the
+heat flow preserves divD eν = 0.
+On a compact existence interval I = [t1, t2], heat maximal regularity gives
+∥eν∥L2(I;Hq+1) + ∥∂teν∥L2(I;Hq−1) ≤Cν,q,I
+(︂
+∥eν(t1)∥Hq + ∥f ν∥L2(I;Hq−1)
+)︂
+.
+The constant may depend on ν; only finiteness is used here. For the inhomogeneous term,
+the Fourier kernel satisfies
+∫︂∞
+0
+ν|ξ, j|2e−ν|ξ,j|2t dt ≤1.
+Young’s inequality in time gives the two-derivative gain in L2; low frequencies are bounded
+on I. Since eν ∈L∞(I; Hq) ∩L2(I; Hq+1), product estimates place the unprojected source in
+L2(I; Hq). The pressure inverse gives the same regularity for pν
+e:
+bν · ∇eν + Z(eν) + ra,
+pν
+e ∈L2(I; Hq).
+For derivative words J with |J| ≤m and |λ| ≤s, the preceding bounds give
+∂λ∂Jeν ∈L2(I; H1),
+∂λ∂J∂teν ∈L2(I; H−1).
+Multiplication by K preserves H1, so the differentiated equation can be tested against K∂λ∂Jeν.
+This justifies the energy estimate through the H−1–H1 pairing, or equivalently by smoothing.
+The uniform energy bound extends eν to S, and uniqueness at q = s identifies the solutions
+constructed with different derivative cutoffs.
+For every fixed integer j ≥0, the energy bounds and pressure inverse give
+sup
+0<ν≤1
+(︂
+∥eν∥L∞
+t Hj+2 + ∥∂teν∥L∞
+t Hj + ∥pν
+e∥L∞
+t Hj
+)︂
+≤Cj.
+
+=== PAGE 29 ===
+FINITE TIME BLOWUP FOR THE EULER EQUATION
+29
+Here the two extra derivatives bound the heat term. Local Sobolev compactness and time
+equicontinuity give a sequence νl ↓0 such that, for every finite j,
+eνl −→e
+in C([0, S]; Hj
+loc),
+pνle ⇀∗pe
+in L∞([0, S]; Hj),
+νl∆eνl −→0
+in L∞([0, S]; Hj).
+The pressure limit remains in the closed gradient space G. Passing to the limit in (3.51) gives
+et + b · ∇e + Z(e) + Gpe = −ra,
+divD e = 0,
+e(0) = 0,
+where b = (κ(za + e), m0 · (za + e)). For each fixed t and finite derivative cutoff m, local
+convergence and the uniform global Hs+m bound imply weak convergence in Hs+m. Lower
+semicontinuity gives
+Xm(e(t)) ≤lim inf
+l→∞Xm(eνl(t)) ≤∆k.
+Monotone convergence as m →∞proves the full weighted bound. The limit equation and
+pressure formula give
+e ∈W1,∞
+t
+Hj
+(j ≥0),
+pe = −T
+(︁
+Z(e) + ra + b · ∇e
+)︁
+.
+Because e ∈W1,∞
+t
+Hj+1, the source in the pressure formula is continuous in Hj. Continuity
+of T (t) at this fixed Sobolev index gives pe ∈CtHj. Repeated differentiation of the inviscid
+correction equation and the pressure formula gives smoothness in time.
+It remains to bound pe and et in the weighted norm. Their formulas contain ∇y,θe, so we
+shrink the radius to control this additional derivative. Let ρmin = ρ(0)/2 ≤inf[0,S] ρ(t) and
+ρ∗= ρmin/2. The cost of an additional derivative at this smaller radius is bounded by
+sup
+n≥0
+ρn
+∗((n + 1)!)2
+ρn+1
+min (n!)2
+= ρ−1
+min sup
+n≥0
+(n + 1)22−n ≤Cρ−1
+min = Pc.
+The pressure inverse and the limit equation therefore yield
+sup
+0≤t≤S
+(︁∥e(t)∥ρ∗+ ∥pe(t)∥ρ∗+ ∥et(t)∥ρ∗
+)︁≤Pc∆k.
+The viscous equation is invariant under joint reflection (y, θ) ↦→(−y, −θ), with the prescribed
+odd parity of za, ra and even parity of F, G. Uniqueness makes eν odd, and this parity passes
+to the limit.
+Restriction to the physical graph. Put vdiag(y) = v(y, km0 · y). The chain rule gives ∇yvdiag =
+κ−1(Dv)diag componentwise. In particular, D × pe = 0 implies ∇y × pdiag
+e
+= 0. Since R3 is
+simply connected, there is a smooth potential qe satisfying
+∇yqe = κpdiag
+e
+,
+dqe = κF−Tpdiag
+e
+.
+Indeed,
+κ−1F−1dqe = Gpdiag
+e
+,
+which is the pressure term in the graph restriction of the correction equation. Adding the
+restricted approximate and correction equations therefore gives (3.8) on the physical graph
+for W = Wa + κFe, with scalar pressure (qa)diag + qe. Moreover,
+˜︁d · W = ˜︁d · Wa + divD e = 0.
+
+=== PAGE 30 ===
+30
+OPENAI
+Thus the velocity and pressure in (3.47) and (3.48) solve Euler’s equation in physical coordi-
+nates. For every scalar or vector component v,
+∫︂
+R3 |v(y, km0 · y)|2 dy ≤C
+∫︂
+R3 ∥v(y, ·)∥2
+H1(T) dy.
+Applying this estimate and the chain rule to Wa + κFe and its derivatives gives finite spatial
+Sobolev norms for the graph-restricted velocity increment. The same argument applies to
+the gradient of the pressure increment, using the estimated gradients of the mean pressure
+potentials. The volume-preserving change of coordinates and the bounded derivatives of
+F, F−1 transfer these increment bounds to physical space. Higher spatial bounds and the
+equation give time continuity and smoothness at every finite order. The correction vanishes
+initially, so the prescribed initial perturbation is retained. This proves Lemma 3.3 and
+supplies the exact solution asserted in Proposition 3.1. The remaining subsections prove its
+derivative, particle-map, and initial-data conclusions.
+□
+3.7. The leading gradient and pressure Hessian.
+Proof of Claim 1 of Proposition 3.1. To prove (3.13) and (3.14), we must control the errors after
+differentiating velocity once and pressure twice. Each derivative on the physical graph
+can cost a factor of k. For the exact normalized velocity W = Wa + κFe, differentiating the
+leading term gives
+˜︁dj(κA1,i) = αχ1vimj f ′
+δ + κdj(αχ1vi) fδ.
+The second term is at most k−1Pc. The coefficient estimates following (3.44) give ∥Wa −
+κA1∥ρ ≤k−2Pc at a radius P−c. A graph derivative, at a smaller radius, therefore contributes
+at most k−1Pc. The correction κFe contributes at most Pc∆k, where ∆k = exp(−kϑ/2) is the
+bound obtained in Lemma 3.3. These bounds prove (3.13) by (3.12).
+For the pressure, (3.29) gives
+π1 = −2αχ1
+m · Mv
+Dm
+∂−1
+θ
+fδ.
+The term in ˜︁di ˜︁dj(κ2π1) with both derivatives on the angle is therefore
+κ2k2mimj∂2
+θπ1 = −2αχ1(m · Mv)mimj
+Dm
+f ′
+δ.
+Each remaining term has at most one phase derivative kmi∂θ, hence is bounded by k−1Pc.
+The higher oscillatory pressures begin with κ3π2 and their second graph derivatives sum
+to the same bound. The mean pressures begin with κ2 ¯q2; using the estimated gradient d ¯qp
+and a further derivative di bounds their Hessians directly, without estimating the potentials.
+The normalized error-pressure gradient is dqe = κF−Tpe on the graph. A further graph
+derivative costs at most kPc, giving Pc∆k. This proves (3.14). Restoring the physical factors ℓ
+for velocity and ℓ2 for pressure cancels the factors from one and two physical derivatives,
+respectively.
+□
+3.8. Factorial bounds for the new particle map.
+Proof of Claim 2 of Proposition 3.1. We next prove the particle-map estimate (3.16). Here we
+assume the parent particle-map bound (3.15). Estimating the new velocity’s physical Lips-
+chitz norm and then exponentiating would lose the required frequency bound. We instead
+use the small transport field b on R3 × T defined below. For z = za + e, put
+b = (κz, m0 · z).
+
+=== PAGE 31 ===
+FINITE TIME BLOWUP FOR THE EULER EQUATION
+31
+Its derivative word sums in L∞and L2 have bounds BRn
+b(n!)2, where B ≤2k−1/2 and Rb = Pc.
+The corresponding bounds for bt have size and growth constant bounded by fixed powers
+of P. By increasing Q, we ensure BRb ≪1. Let Φ(t, y, θ) be the flow of b on R3 × T, so
+∂tΦ = b(t, Φ) and Φ(0, y, θ) = (y, θ). This flow preserves four-dimensional volume because
+divy,θ b = 0. Use the lift ˆ︁Φ to R3 × R with ˆ︁Φ(0) = id. Its displacement is periodic in the
+angular variable and defines Φ −id on R3 × T.
+We give the composition estimate used for Φ. In the ordered derivative formula for a
+composition, group a word of length n into q nonempty blocks with sizes j1, . . . , jq summing
+to n. When we sum over the ordered sizes, the combinatorial coefficient is n!/(q! ∏i ji!). On
+inserting the factorial bounds for the outer qth derivative and the inner jith derivatives, and
+dividing by (n!)2, the remaining factor is
+q! ∏
+q
+i=1 ji!
+n!
+≤1.
+(3.56)
+It is one when every ji = 1. Increasing an index ji multiplies the ratio by (ji + 1)/(n + 1) ≤1,
+proving the inequality for all block sizes. Sums over component directions are controlled by
+the word sums themselves.
+Fix a derivative cutoff J ≥1 and define, for ζ ≥0,
+U(t, ζ) = dζ +
+J
+∑
+n=1
+∥∂n(Φ(t) −id)∥∞
+(n!)2
+ζn.
+Here ∥∂nh∥∞denotes the sum of the L∞norms over derivative words of length n. The
+notation ∥∂nh∥2 uses the corresponding sum of L2 norms. Choose the dimensional constant
+d to bound the first-derivative word sum of the identity. Thus U bounds the derivative series
+of Φ through order J. The integral equation for Φ and (3.56), compared through degree J,
+give
+U(t, ζ) ≤dζ +
+∫︂t
+0 B
+RbU(t′, ζ)
+1 −RbU(t′, ζ) dt′
+if RbU(t′, ζ) < 1 for 0 ≤t′ ≤t.
+(3.57)
+At ζ = (4dRb)−1, the initial right side is 1/(4Rb). If RbU ≤1/2, the integral increases RbU
+by at most BRbS. The smallness BRb ≪1 closes the bootstrap, giving RbU ≤1/2. Returning
+to the integral equation gives ∥∂n(Φ −id)∥∞≤CBSζ−n(n!)2 for 1 ≤n ≤J; the order-zero
+bound follows by direct integration of b. The estimates are uniform in the finite truncation,
+so passing to all orders is justified.
+For the L2 estimate, place (∂qb) ◦Φ in L2 and the derivatives of Φ in L∞.
+Volume
+preservation gives ∥(∂qb) ◦Φ∥2 = ∥∂qb∥2. Consequently, at the value of ζ chosen above,
+J
+∑
+n=1
+∥∂n(Φ(t) −id)∥2
+(n!)2
+ζn ≤
+∫︂t
+0 B
+RbU(t′, ζ)
+1 −RbU(t′, ζ) dt′ ≤BS.
+This gives ∥∂n(Φ −id)∥2 ≤BSζ−n(n!)2 for 1 ≤n ≤J, uniformly in J. At order zero, the
+integral equation and volume preservation give ∥Φ −id∥2 ≤BS directly. Finally,
+Φt = b ◦Φ,
+Φtt = (bt + (b · ∇y,θ)b) ◦Φ.
+The preceding composition and product estimates at a smaller radius P−c give size and
+growth constant bounded by fixed powers of P for these two fields in both L2 and L∞.
+
+=== PAGE 32 ===
+32
+OPENAI
+Write ˆ︁Φ(t, y0, θ0) = (y(t), θ(t)), using the angular lift defined above. Along this trajectory,
+d
+dt
+(︁
+θ(t) −km0 · y(t)
+)︁= m0 · z −kκm0 · z = 0.
+Thus θ0 = km0 · y0 implies θ(t) = km0 · y(t), so the flow preserves the physical phase graph.
+Let πy : R3 × T →R3 be projection onto the first three coordinates, and define the rescaled
+map
+Y(t, a) = ℓπyΦ
+(︃
+t, a
+ℓ, km0 · a
+ℓ
+)︃
+.
+(3.58)
+Here the last argument is interpreted in T, and Y(0, a) = a.
+In the normalized label
+coordinate y, the velocity underlying this flow is κz(t, y, km0 · y). Its divergence is
+divy
+(︁
+κz(t, y, km0 · y)
+)︁= κ divy z + m0 · ∂θz = divD z = 0.
+Thus Y preserves three-dimensional volume. Each derivative of a graph restriction costs at
+most Ck; its L2 bound uses the one-dimensional trace inequality in θ and at most one further
+derivative on the product space, without an additional graph factor. Rescaling then gives
+Y −id, Yt, Ytt polynomial size and growth constant kℓ−1Pc in both L2 and L∞.
+The new physical particle map is
+Xnew(t, a) = X(t, Y(t, a)).
+(3.59)
+Set y = Y(t, a)/ℓand θ = km0 · y. The definition of Y and graph invariance give Yt(t, a) =
+ℓκz(t, y, θ), while (∇aX)(t, Y(t, a)) = F(t, y). Hence
+d
+dtX(t, Y(t, a)) = u(t, X(t, Y(t, a))) + ℓκF(t, y)z(t, y, θ) = unew(t, X(t, Y(t, a))).
+The initial value is X(0, Y(0, a)) = a, which verifies (3.59).
+For the final composition, write the inner map as g = id + h. Suppose
+∥∂nh∥∞≤AiRn
+i (n!)2,
+∥∂n f ∥∞≤AoRn
+o(n!)2
+(n ≥0).
+The derivative series of g is bounded by (d + 2AiRi)ζ when ζ ≤(2Ri)−1. Choose ζ also to
+satisfy Ro(d + 2AiRi)ζ ≤1/2. Then (3.56) gives
+∥∂n( f ◦g)∥∞≤CAoζ−n(n!)2.
+If g is a volume-preserving diffeomorphism and the assumed bounds for f hold in L2, the
+conclusion holds in L2 as well: place the derivative of f in L2 and retain L∞bounds for the
+derivatives of g.
+Apply this estimate with g = Y. For the displacement, use
+Xnew −id = (Y −id) + (X −id) ◦Y.
+For its time derivatives, use
+Xnew
+t
+= Xt ◦Y + (∇X ◦Y)Yt,
+Xnew
+tt
+= Xtt ◦Y + 2(∇Xt ◦Y)Yt + (∇2X ◦Y)[Yt, Yt] + (∇X ◦Y)Ytt.
+In the factors ∇X ◦Y, write ∇X = I + ∇(X −id). The remaining outer functions are spatial
+derivatives of X −id, Xt, or Xtt of order at most two, so the parent hypothesis bounds their
+sizes and growth constants by fixed powers of P. For g = Y, the preceding estimates give
+Ai ≤Pc and Ri ≤kPc. The radius in the composition estimate can therefore be chosen
+with ζ−1 ≤kPc. Applying the product estimate to the displayed time derivatives gives
+size Pc and growth constant kPc for Xnew −id, Xnew
+t
+, and Xnew
+tt
+. Passing from L2 to Hs
+
+=== PAGE 33 ===
+FINITE TIME BLOWUP FOR THE EULER EQUATION
+33
+costs s shifts, hence at most Cn+1
+s
+Pc(kPc)n+s(n!)2. Condition (3.12), after a further fixed
+enlargement of Q, bounds this by (kC∗)n+1(n!)2 with C∗= 10(s + 2). This proves (3.16)
+without a frequency-dependent exponential.
+□
+3.9. Initial support and the completion of the packet estimate.
+Proof of Claim 3 of Proposition 3.1. It remains to prove the initial-data bounds (3.17) and the
+support assertions in Proposition 3.1. The correction e in Lemma 3.3 has e(0) = 0. Set
+ya = a/ℓand θa = km0 · a/ℓ, with θa interpreted in T, and define
+uhigh,0(a) = ℓ
+Nk
+∑
+p=1
+(︁
+κpAp + κp+1Cp
+)︁(0, ya, θa),
+umean,0(a) = ℓ
+Nk
+∑
+p=2
+κpBp(0, ya).
+(3.60)
+Since X(0, a) = a and B1 = 0, formula (3.47) gives unew(0, a) −u(0, a) = uhigh,0(a) +
+umean,0(a).
+At time zero every oscillatory coefficient retains the factor α, including coefficients solved
+using a positive history interval. For fixed m, apply (3.40) only at n ≤m + s + 1. All depen-
+dence on m enters a prefactor Pcm; the remaining expansion-order factor is [Pc(CNk)300]p+1,
+with c independent of m. Thus (3.41) sums these bounds with the same choice of Q. For
+Tk f (y) = f (y, km0 · y), the chain rule and the embedding H1(T) ↪→L∞(T) give
+∥Tk f ∥Hm(R3) ≤Cmkm∥f ∥Hm+1(R3×T).
+The extra derivative is taken before restriction to the graph. Physical rescaling satisfies
+∥ℓg(·/ℓ)∥Hm ≤ℓ5/2−m∥g∥Hm ≤ℓ−m∥g∥Hm.
+Applying these estimates to the oscillatory sum gives the first bound in (3.17).
+The mean initial velocity begins at κ2B2(0) and has no angle derivatives. Orders p ≥3
+sum as ∑p≥3 k−p+0.01(p+1); the separate fixed-order estimate bounds κ2B2(0) by k−2Pcm. This
+proves the second initial bound. The oscillatory supports are |a| ≤ℓ/2, and (3.25) gives
+the mean supports |a| ≤2. The exact correction has zero initial value. If t0 = 0 and L = 0,
+the prescribed forward initial conditions give Ap(0) = 0 for every forced p ≥2, hence
+also Cp(0) = 0; the boundary condition gives Bp(0) = 0. The initial increment is therefore
+ℓ(κA1 + κ2C1)(0, ya, θa): the primary oscillation and its curl correction. Since F(0) = I
+and v(0) is constant when t0 = 0, Q1(0, y, θ) = −αχ1(y)(m0 × v(0))ϕδ(θ). The identity
+ℓκ2( ˜︁d × Q1)(0, ya, θa) = ℓ2κ2 curla[Q1(0, ya, θa)] at time zero gives (3.18).
+Only finitely many polynomial exponents have entered the proof: the fixed-s inverses, the
+common growth constant, the separation of derivative and expansion orders, the weighted
+error estimate, and the graph and flow estimates. The only factorial growth with the
+expansion length was absorbed by (CNk)300(p+1), with 300ϑ < 0.01. Thus a single finite
+Q(c0) ensures every use of (3.12). The constants cm in the initial bounds may depend on
+the fixed Sobolev order m; their summation over expansion orders uses the same Q. This
+completes the proof of Proposition 3.1.
+□
+
+=== PAGE 34 ===
+34
+OPENAI
+4. Amplification and transfer of the wave geometry
+The packet construction in Proposition 3.1 is now proved, conditional on bounds for the
+primary wave and its transverse propagator. In this section we prove those bounds for a
+parent shear of the form (4.3), and prove that the resulting gradient can amplify the next
+packet. The scale choices and the verification that the packet and parent hypotheses hold at
+every stage remain for §5.
+Claim 1 of Proposition 3.1 gives a leading gradient proportional to v ⊗m in (3.13) and a
+pressure-Hessian increment with coefficient m · Mv in (3.14). Here M is the parent velocity
+gradient from (3.5), m = F−Tm0 is the transported phase normal, and v solves (3.9). We
+must control both the size and the directions of m, v so that the new gradient can serve as
+the parent shear for the next packet.
+The result proved here, Proposition 4.1, supplies the pressure sign, the new frame p2 =
+m/|m|, q2 = v/|v|, and bounds comparing the gradient amplitude factor |m||v| at earlier
+times with its target value. It also bounds the linear map taking arbitrary transverse data
+from time s to time t, as required by §3.2 (iii). The proof follows m, v in the moving frame of
+the parent shear (4.3).
+4.1. The parent field and the statement to be proved. We first specify the parent shear and
+state the estimates needed for the next packet. We retain the particle map and the matrices
+F, M, H from (3.5), with the label and component conventions in §2.4. A ray is a nonzero
+vector m satisfying ˙m = −MTm; it is the normal to a transported phase surface. A transverse
+velocity is a vector v with m · v = 0 satisfying
+˙v = −Mv + 2mm · Mv
+|m|2 .
+(4.1)
+The last term enforces transversality: direct differentiation gives d
+dt(m · v) = 0.
+Let the parent be a smooth odd Euler flow on [0, S], 0 < S ≤1, with the particle map
+and matrices F, M, H in (3.5), localization length 0 < ℓ≤1, and activation time t0 ∈[0, S).
+Impose the following hypotheses.
+(i) Parent shear and frame. Let B(t) be the gradient at the origin of an older Euler
+solution. At stage j of the iteration, B is the gradient of Uj−2, while Uj−1 is the parent.
+Take orthonormal vectors p(t), q(t) obtained by normalizing, respectively, a ray and a
+transverse velocity for B, and put n = p × q. The normalization equations are
+˙p = −BTp + Bppp,
+˙q = −Bq + 2Bpqp + Bqqq.
+(4.2)
+Suppose that on an activation interval [t0, S] the current parent satisfies
+M(t, 0) = B(t) + h(t)q(t)p(t)T + E(t),
+∥E(t)∥≤E∗,
+h(t0) = h∗,
+˙h
+h = −Bpp −Bqq.
+(4.3)
+The scalar h is the shear strength, and E is the remaining gradient error. The rank-one
+matrix hqpT sends the old normal p into the old transverse direction q. We assume
+∥B∥≤CG∗and ∥˙B∥≤CG2
+∗, where G∗≥1.
+(ii) Particle-map bounds. Let Kh ≥2 bound X −id, Xt, Xtt in physical particle labels as in
+(3.15). Sobolev embedding, finitely many additional derivatives, and F−1 = cof(F)T
+give bounds Kc
+h for F, F−1, Ft, Ftt, M, H and their first physical-label derivatives. At
+derivative order j ≥0, their Gevrey multiplier bounds have the form Kc
+h(Kc
+h)j(j!)2, with
+the exponent convention in §2.4.
+
+=== PAGE 35 ===
+FINITE TIME BLOWUP FOR THE EULER EQUATION
+35
+(iii) Scales and error bounds. We freeze the frame coefficients Bpq and Bnq at t0 and rescale
+time using their values. Choose a positive comparison parameter xprev and set
+a = Bpq(t0) ∈[1/2, 2],
+β = Bnq(t0)
+a
+,
+1
+2 ≤βx2
+prev ≤2,
+ε =
+√︁
+a/h∗,
+τ = a(t −t0)
+ε
+,
+x =
+√︁
+β τ.
+(4.4)
+Thus xprev is comparable to β−1/2, while τ and x measure elapsed physical time in
+units ε/a and ε/(a
+√︁
+β), respectively. Here 0 < β ≤β0 for a sufficiently small absolute
+constant β0, and the target is x = xtar ≥2. Its physical time is ttar = t0 + εxtar/(a
+√︁
+β).
+We assume 0 ≤τ ≤Θ, where Θ ≥2 + β−1/2 + xtar/
+√︁
+β, and require
+ttar ≤S ≤ttar + (ε/a)Θ−60.
+Thus the interval reaches the target and extends at most Θ−60 units of τ beyond it. Set
+e∗= C
+(︃
+εΘG2
+∗+ E∗+ ℓKc
+h
+ε
+)︃
+,
+e∗Θ60 ≤x−10
+prev.
+(4.5)
+The three summands account for variation of the older gradient and frame, the central
+error E, and the difference between central and neighboring coefficients after rescaling
+by ε. The smallness condition controls their accumulated effect on the ray and velocity
+equations. The fixed constant C in this definition is chosen large enough for the
+estimates below. Equivalently, we may use a sufficiently small fixed constant on the
+right of the smallness condition.
+(iv) History and activation conditions (t0 > 0). Assume H(t, y) ≤K+I on [0, t0] for all
+labels y, together with the packet coercivity condition (3.11). Also assume, on [0, t0],
+∥M∥∞≤CMh∗,
+∥H∥∞≤CHh∗hold,
+1 ≤hold ≤h∗,
+t−1
+0
+≤h∗.
+(4.6)
+Here hold controls the allowed size of the history pressure Hessian relative to the
+current shear scale h∗. At activation write B = B(t0) + E(t0) and require
+Bpp < 0,
+∥B∥≤ζh∗.
+(4.7)
+The fixed number ζ > 0 is chosen sufficiently small in terms of CM, CH. Finally
+t−1
+0
+≤Kc
+h when t0 > 0. The conditions on B will allow us to choose a stationary history
+displacement whose terminal velocity has vp(t0, 0) ≤0 < vq(t0, 0).
+Choose m0 = F(t0, 0)Tn(t0)/|F(t0, 0)Tn(t0)| and m = F−Tm0. Then m(t0, 0) is a positive
+multiple of n(t0), so the central transverse velocity at activation lies in span{p(t0), q(t0)}.
+Fix a constant 3 × 2 matrix R⊥whose columns form an orthonormal basis of m⊥
+0 .
+Proposition 4.1. For every parent flow satisfying the four hypotheses in §4.1, there is a primary
+transverse velocity v with the following properties. When t0 > 0, the construction chooses a constant
+endpoint ξT ∈R2. On [0, t0], the velocity is v = FR⊥ξt, where FR⊥ξ is the stationary displacement
+with ξ(0) = 0 and ξ(t0) = ξT from §3.2.
+1. Activation data and pressure sign. Its central activation data satisfy
+vq(t0, 0) = 1,
+−C ≤vp(t0, 0) ≤0.
+(4.8)
+For t0 = 0 we take v(t0) = q. On every label |y| ≤1/2,
+m · Mv > 0
+(τ ≥1).
+(4.9)
+
+=== PAGE 36 ===
+36
+OPENAI
+2. Frame transfer and compression. At (t, y) = (ttar, 0) define p2 = m/|m|, q2 = v/|v|,
+n2 = p2 × q2 and a2 = p2 · Mq2, β2 = (n2 · Mq2)/a2. Then
+a2
+a = 1 + O
+(︄
+x−4
+tar + β
+x2
+tar
++
+√︁
+β
+x3
+tar
++ e∗Θ40
+)︄
+,
+β2x2
+tar = 1 + O
+(︂√︁
+β + x−4
+tar + e∗Θ40)︂
+,
+(4.10)
+The parent gradient also satisfies
+p2 · Mp2 ≤−c√
+h∗
+xprevxtar
++ C(G∗+ E∗).
+(4.11)
+3. Relative sizes. The size estimates below hold for an absolute constant b > 0. Write Atar =
+|m(ttar, 0)||v(ttar, 0)|. Uniformly on the packet support, |m||v|/Atar ≤C for τ ≥1, whereas on
+the history interval, and after activation for 0 ≤τ < 1,
+|m||v|
+Atar
+≤Kc
+hΘcε−c exp(−bxprev).
+(4.12)
+4. Propagator and normalization. There is a positive scalar function g, with g(t0) = 1, such
+that the following bound holds uniformly at every fixed label |y| ≤1/2. Write any transverse
+solution of (4.1) as A = FR⊥a⊥. The solution map a⊥(s) ↦→a⊥(t) has operator norm at most
+Pcg(t)/g(s) for t0 ≤s ≤t ≤S. For any prescribed child shear hchild, the normalization
+α = δhchild
+Atar
+(4.13)
+satisfies α ≤Pce−bxprev and sup[t0,S] αg ≤Pc. Here P contains Kh, ε−1, Θ, hchild, δ−1 and, when
+applicable, t−1
+0 , or polynomial upper bounds for them.
+The bounds on the transverse propagator and on αg verify §3.2 (iii), which is required to
+apply Proposition 3.1. At the central label y = 0, the phase km0 · y vanishes and χ1(0) = 1.
+Since f ′
+δ(0) = δ−1, at t = ttar the leading gradient increment is
+αδ−1v ⊗m = hchild
+|m||v| v ⊗m = hchildq2pT
+2 .
+(4.14)
+Thus (3.13), with its stated error, produces a shear in the new frame. On the interval in
+(4.9), the matrix coefficient −2αχ1(m · Mv)(m ⊗m)/|m|2 multiplying f ′
+δ in (3.14) is negative
+semidefinite.
+4.2. Choosing the velocity at the activation time.
+Proof of Proposition 4.1. We first prove the activation-data assertion in Claim 1 of Proposi-
+tion 4.1. For t0 > 0, we choose the activation velocity through the endpoint of its stationary
+history displacement. We seek an endpoint whose terminal velocity has p-component at
+most zero and q-component strictly positive, then normalize the latter to 1. The forward
+analysis uses (4.8) at the central label and the neighboring-label estimates proved below. Let
+s0 > 0 be defined by m(t0, 0) = s0n. The bounds for F±1 give s0 + s−1
+0
+≤Kc
+h. Suppose t0 > 0.
+Until we return to neighboring labels, all coefficients are evaluated at the central label. For
+an endpoint Y ∈n(t0)⊥, consider paths satisfying m(t) · η(t) = 0, η(0) = 0, and η(t0) = Y,
+with action
+E(η) =
+∫︂t0
+0 (|ηt|2 −Hη · η) dt.
+
+=== PAGE 37 ===
+FINITE TIME BLOWUP FOR THE EULER EQUATION
+37
+The constrained variational equation (3.27) constructs the stationary path with these end-
+points. Since ∫︁|η|2 ≤(t2
+0/2) ∫︁|ηt|2, the coercivity condition gives E(η) ≥1
+2
+∫︁|ηt|2 for paths
+starting at zero. The stationary path minimizes the action among paths with its endpoints.
+Write ηY for the stationary path when its endpoint is displayed explicitly. Define the linear
+endpoint map Λ : n(t0)⊥→n(t0)⊥by ΛY = projn(t0)⊥ηY
+t (t0). Integration by parts gives
+E(ηY) = Y · ΛY: the stationary action is a quadratic form in the endpoint Y. For stationary
+paths with endpoints Y, Z, integration by parts also gives
+Y · ΛZ =
+∫︂t0
+0 (ηY
+t · ηZ
+t −HηY · ηZ) dt = Z · ΛY.
+Thus Λ is symmetric, and the preceding coercive estimate gives Λ ≥0. We next bound its
+entries in units of the shear strength h∗. Set
+L0 = t−1
+0
++ ∥M∥∞+ ∥H∥1/2
+∞+ 1.
+Use a comparison path ηcmp that is zero until t0 −L−1
+0
+and then equals L0(t −t0 +
+L−1
+0 ) projm(t)⊥Y. It remains transverse and has the required endpoints. The derivative of this
+projection operator is bounded by C∥M∥∞, so |E(ηcmp)| is at most
+C
+(︃
+L0 + ∥M∥2
+∞
+L0
++ ∥H∥∞
+L0
+)︃
+|Y|2 ≤C0h∗|Y|2.
+Minimality gives Y · ΛY ≤E(ηcmp), and consequently 0 ≤Λ ≤C0h∗I.
+Write the trial displacement as η = FR⊥ξ. Its primary velocity is w = ηt −Mη = FR⊥ξt.
+We use w before its final normalization. Its terminal value lies in n(t0)⊥. Write b = Λpq,
+d = Λqq and u = Λpp −Bpp > 0. The endpoint map in the (p, q) coordinates is
+(︃
+wp
+wq
+)︃
+=
+(︃
+u
+b −Bpq
+b −h∗−Bqp
+d −Bqq
+)︃(︃
+Yp
+Yq
+)︃
+.
+If b ≤h∗/2, we take Y = −p, obtaining
+wp = −u ≤0,
+wq = h∗+ Bqp −b ≥h∗/3.
+If b > h∗/2, the positive semidefiniteness of Λ gives Λpp ≥b2/Λqq ≥h∗/(4C0). We take
+Y = q −(b −Bpq)p/u. Then wp = 0 and
+wq = d −Bqq −(b −h∗−Bqp)(b −Bpq)
+u
+=
+(︃
+d −b2
+u
+)︃
+−Bqq + b2 −(b −h∗−Bqp)(b −Bpq)
+u
+.
+The term d −b2/u is nonnegative, since u ≥Λpp. The numerator in the last term is
+bh∗+ b(Bpq + Bqp) −h∗Bpq −BqpBpq ≥h2
+∗/2 −C(C0 + 1)ζh2
+∗.
+Together with u ≤(C0 + ζ)h∗, this proves wq ≥ch∗after fixing ζ. In either case divide η, Y, w
+by the positive number wq(t0), retaining these symbols for the rescaled quantities. The
+normalized velocity v = w satisfies (4.8), and the normalized endpoint satisfies |Y| ≤C/h∗.
+At the central label η = FR⊥ξ, so choose ξT = RT
+⊥F(t0, 0)−1Y. This gives η(t0, 0) = Y, since
+m0 · F(t0, 0)−1Y = m(t0, 0) · Y = 0.
+At each neighboring physical label a, prescribe this same coordinate endpoint ξT. Its
+physical displacement endpoint is F(t0, a)R⊥ξT. We need bounds polynomial in Kh for
+
+=== PAGE 38 ===
+38
+OPENAI
+the history velocity and for its variation between labels; the latter control the neighboring
+activation data. Set ˜︁ξ = ξ −tξT/t0, which has zero endpoints. The coercive estimate
+applied to its equation gives ∥ξt∥L2
+t ≤Kc
+h. Subtracting (3.27) at labels a1, a2 gives ∥ξt(·, a1) −
+ξt(·, a2)∥L2
+t ≤Kc
+h|a1 −a2|, since every coefficient difference has this same bound. Equation
+(3.28) supplies the analogous L2
+t bounds for ξtt and its difference. The time Sobolev inequality
+converts these into supremum bounds for ξt; multiplication by FR⊥then gives
+sup
+[0,t0]
+|v| ≤Kc
+h,
+sup
+[0,t0]
+|v(t, a1) −v(t, a2)| ≤Kc
+h|a1 −a2|.
+The localized primary coefficient in the packet construction is A1 = αχ1v fδ. Multiplying
+the history displacement by the same time-independent factor αχ1 fδ gives a localized
+displacement whose primary velocity is A1. This multiplication preserves the stationary
+equation (3.27), which contains no spatial or angular derivatives. The activation data are
+now fixed. To complete Claim 1 of Proposition 4.1, we must establish the sign condition (4.9)
+during forward evolution.
+4.3. The rotating frame and the leading equations. Starting from the activation data (4.8),
+we express the ray and velocity equations (2.4) in moving, scaled coordinates. This subsection
+identifies the ideal system (4.20) and bounds its coefficient error. We prove growth for that
+system in §4.4 and compare it with the exact evolution in §4.5. In the frame (p, q, n) of
+(4.2), the large shear hqpT in (4.3) occupies a single matrix entry. Because this frame moves
+with the older flow, the change of coordinates also contributes a rotation term to the time
+derivatives. The scaling h∗ε2 = a from (4.4) normalizes the leading shear coefficient in these
+equations.
+Let R f have columns (p, q, n) and set Sf = RT
+f ˙R f . Differentiating (4.2) gives
+(Sf )12 = Bpq,
+(Sf )13 = Bpn,
+(Sf )32 = −Bnq,
+ST
+f = −Sf .
+We use this central frame at every packet label |y| ≤1/2. The corresponding physical label
+is a = ℓy, so the physical-label derivative bound shows that its parent gradient differs from
+B + hqpT by at most E∗+ ℓKc
+h. The component columns and the gradient matrix in this
+frame are
+ˆ︁m = RT
+f m,
+ˆ︁v = RT
+f v,
+ˆ︁
+M = RT
+f MR f .
+Since ˙RT
+f = −Sf RT
+f , differentiation gives
+˙ˆ︁m = −( ˆ︁
+M −Sf )T ˆ︁m,
+˙ˆ︁v = −( ˆ︁
+M + Sf )ˆ︁v + 2 ˆ︁m ˆ︁m · ˆ︁
+Mˆ︁v
+| ˆ︁m|2 .
+(4.15)
+We suppress the hats in the component calculations below. Scalar products and norms are
+unchanged because the frame is orthonormal. Introduce scaled components by
+m/s0 = (P, εQ, N),
+v = (εU, V, εW).
+(4.16)
+In physical vectors these formulas read m = s0(Pp + εQq + Nn) and v = εUp + Vq + εWn.
+The letters P, Q, N, U, V, W in the scaled equations denote component functions; in particular
+this P is distinct from the packet data bound in §3. Transversality is the identity PU + QV +
+NW = 0. At τ = 0 and the central label, (P, Q, N) = (0, 0, 1) and (U, V) = (−λ, 1), where
+0 ≤λ ≤C/ε. At neighboring labels, the initial values of these five components differ from
+their central values by at most ℓKc
+h/ε.
+
+=== PAGE 39 ===
+FINITE TIME BLOWUP FOR THE EULER EQUATION
+39
+p
+n
+Activation
+x = 0
+x = 1
+Target
+x = xtar
+x2p + n
+√
+1 + x4
+Normalized projection onto the mov-
+ing (p, n) plane.
+0 ≤x ≤1: growth of the transverse
+velocity
+(Equation (4.22)).
+x = xtar ≥2: form p2 = m/|m| from
+the full transported phase normal
+(Equation (4.10)).
+Figure 2. The phase normal in the ideal system (4.17), projected onto the
+moving (p, n) plane and normalized to unit length. It turns from n toward
+p as the scaled time x increases. The marked values are x = 0 at activation,
+x = 1 at the end of the interval used to prove (4.22), and the target at which
+the new frame is calculated in (4.10). The target ray is drawn at xtar = 2; the
+estimates allow any xtar ≥2. The full vector is x2p −2ε
+√︁
+β xq + n, and the
+transverse velocity remains perpendicular to this full vector. The rays have
+unit length; the velocity amplitude is not shown.
+A prime now denotes d/dτ. The leading ray system and its solution are
+P′ = −Q,
+Q′ = −2βN,
+N′ = 0;
+P0 = βτ2 = x2,
+Q0 = −2βτ,
+N0 = 1.
+(4.17)
+Figure 2 shows its normalized projection onto the (p, n) plane. We record why the errors
+are small despite the large shear. Its scaled coefficient obeys ε2h/a = 1 + O(εΘG∗). The
+entries (M −Sf )12 and (M −Sf )32 are respectively O(E∗+ ℓKc
+h) and 2Bnq + O(E∗+ ℓKc
+h).
+The moving entries Bpq, Bnq change by O(εΘG2
+∗), including frame rotation. All remaining
+scaled coefficients contain either an error or a factor εO(G∗). Thus the exact ray system
+differs entrywise from (4.17) by at most Ce∗.
+The triangular ideal propagator has norm CΘ2.
+Write Z = (P, Q, N)T and Z0 =
+(P0, Q0, 1)T.
+The error equation has forcing bounded by Ce∗(|Z0| + |Z −Z0|) and ini-
+tial error at most Ce∗.
+Since |Z0| ≤CΘ2, Duhamel’s formula bounds sup |Z −Z0| by
+Ce∗Θ5 + Ce∗Θ3 sup |Z −Z0|. The condition e∗Θ3 ≪1 absorbs the last term and gives
+|P −P0| + |Q −Q0| + |N −1| ≤Ce∗Θ5,
+N ≥1/2.
+(4.18)
+The lower bound for N now allows us to solve the transversality identity:
+W = −PU + QV
+N
+.
+It remains to estimate the two independent velocity components U, V. Set Da = |m|2/s2
+0 =
+P2 + ε2Q2 + N2 and J = (m · Mv)/(s0a). Thus Da is the denominator in the scaled velocity
+correction, and the pressure sign is the sign of J. For arbitrary (U, V), with W determined
+
+=== PAGE 40 ===
+40
+OPENAI
+by transversality, we have
+|W| ≤CΘ2(|U| + |V|),
+|Da −(1 + P2
+0 )| ≤Ce∗Θ7,
+|J −[(P0 + β)V + Q0U]| ≤Ce∗Θ5(|U| + |V|).
+(4.19)
+For the last estimate the three leading row contributions are
+PBpqV
+a
+,
+hε2
+a QU,
+NBnqV
+a
+.
+Every other term contains an error or εO(G∗), multiplied by a factor bounded by CΘ4(|U| +
+|V|). In (4.15), the term −(M + Sf )v contributes −2V + O(e∗Θ2)(|U| + |V|) to U′, and the
+term parallel to m contributes 2PJ/Da. The main term in V′ is −U; all remaining terms,
+including 2ε2QJ/Da, are bounded by Ce∗Θ4(|U| + |V|). Using Da ≥1/4 in these rational
+expressions shows that the exact coefficient matrix for (U, V) differs by at most Ce∗Θ12 from
+that of the ideal system
+U′ = −2V + 2P0[(P0 + β)V + Q0U]
+1 + P2
+0
+,
+V′ = −U.
+(4.20)
+For this ideal system, setting D = 1 + P2
+0 and using D′ = −2P0Q0 gives
+(DV′)′ = 2(1 −βP0)V.
+(4.21)
+4.4. Growth of the ideal velocity. For the ideal system (4.20), we first estimate amplification
+up to x = 1 and then control the direction ratio U/V up to the target x = xtar. Let Vλ solve
+(4.21) with Vλ(0) = 1 and V′
+λ(0) = λ ≥0. Its companion velocity component is Uλ = −V′
+λ.
+On 0 ≤x ≤1, the right side is positive while Vλ > 0, so integration preserves positivity and
+monotonicity. Since x =
+√︁
+β τ, this region lasts for a scaled time β−1/2. The bounds D ≤2
+and 2(1 −βP0) ≥1 turn this long interval of growth into quantitative amplification:
+Vλ(τ) ≥1 + λ
+2 τ + 1
+2
+∫︂τ
+0 (τ −s)Vλ(s) ds ≥cosh(τ/
+√
+2).
+The second inequality follows by iteration of the positive integral kernel. Consequently
+Vλ(x = 1) ≥exp(b0/
+√︁
+β).
+(4.22)
+On this interval l = V′
+λ/Vλ satisfies l′ ≤2 −l2 and l ≥0. The function L(τ) =
+√
+2 coth(
+√
+2τ)
+solves L′ = 2 −L2 and tends to +∞as τ ↓0. Scalar comparison therefore gives l(τ) ≤
+√
+2 coth(
+√
+2τ), uniformly in λ, for τ > 0.
+Beyond x = 1 we need both a lower bound for the amplitude and an estimate for
+its direction ratio U/V.
+A reciprocal variable sends this range to a bounded interval
+and keeps the right-hand coefficient of the transformed scalar equation positive. Writing
+V(x) = Vλ(x/
+√︁
+β), (4.21) becomes
+(︁(1 + x4)Vx
+)︁
+x = (2/β −2x2)V.
+Set ρ = 1/x and f (ρ) = V(1/ρ)/ρ. In particular V(x) = ρ f (ρ) and Vx = −ρ2 f −ρ3 fρ.
+Substitution yields
+(︁(1 + ρ4) fρ
+)︁
+ρ = (2/β −2ρ2) f.
+
+=== PAGE 41 ===
+FINITE TIME BLOWUP FOR THE EULER EQUATION
+41
+Since f (1) > 0 and fρ(1) = −V(1) −Vx(1) < 0, the identity
+(1 + ρ4) fρ(ρ) = 2fρ(1) −
+∫︂1
+ρ (2/β −2s2) f (s) ds
+preserves fρ < 0 as we integrate backwards, and hence preserves f > 0. Thus xV(x) =
+f (1/x) is increasing. The direction ratio satisfies Uλ/Vλ = −
+√︁
+β Vx/V. To express it through
+f, define
+z = −
+√︁
+β fρ/ f,
+µ(ρ) =
+√︄
+2 −2βρ2
+1 + ρ4 ,
+σ = 1 −ρ.
+Direct logarithmic differentiation gives
+√︁
+β zσ = µ2 −z2 +
+√︁
+β 4ρ3
+1 + ρ4 z.
+(4.23)
+The first two terms on the right cancel at z = µ. We compare z with this positive root to
+obtain the direction estimate. At ρ = 1, z =
+√︁
+β + l(x = 1) is uniformly bounded. Equation
+(4.23) preserves z ≥0 and gives a uniform upper bound. For w = z −µ it becomes
+√︁
+β wσ = −(z + µ)w +
+√︁
+β
+(︃4ρ3
+1 + ρ4 z −µσ
+)︃
+.
+The bracket is bounded and z + µ ≥c > 0. Multiplication by the integrating factor therefore
+gives |w| ≤Ce−c(1−ρ)/√
+β + C
+√︁
+β. In particular, uniformly in λ ≥0,
+z2 =
+2
+1 + ρ4 + O(
+√︁
+β)
+(0 ≤ρ ≤1/2),
+rλ := Uλ
+Vλ
+=
+{︄
+−l,
+x ≤1,
+√︁
+β/x −z/x2,
+x ≥1.
+(4.24)
+For τ ≥1 these formulas bound |rλ| by an absolute constant. The ideal solution now has
+the required growth and direction estimates. These are the inputs to Section 4.5, where we
+prove the sign assertion in Claim 1 of Proposition 4.1 and obtain the propagator estimate
+needed for Claim 4 of Proposition 4.1.
+4.5. Stability relative to the growing solution. We transfer the ideal estimates from §4.4 to
+the exact scaled components (4.16). This proves the pressure sign in Claim 1 of Proposition 4.1
+and bounds the propagator for (U, V).
+The conversion to packet coordinates and the
+normalization required by Claim 4 are completed in §4.6. In this subsection V0 is the ideal
+solution with zero initial slope. In the propagator calculation, s, t denote scaled times.
+A small coefficient error acts throughout an interval on which the ideal solution grows
+exponentially. Measuring the propagator in units of V0(t)/V0(s) accounts for this growth
+and leaves an error controlled by powers of Θ. We need this comparison for arbitrary
+transverse data to supply the assumption in §3.2 (iii). For any solution Y of (4.21), that
+equation implies
+(︁
+DV2
+0 (Y/V0)′)︁′ = 0.
+(4.25)
+Applying this identity to Vλ, whose initial value is 1 and initial slope is λ, gives
+Vλ = V0(1 + λI),
+I(τ) =
+∫︂τ
+0
+du
+D(u)V0(u)2 ,
+I(1) ≥c > 0.
+(4.26)
+The last bound follows from uniformly bounded ideal coefficients on 0 ≤τ ≤1. Mono-
+tonicity before x = 1, and monotonicity of xV0 afterwards, show that V0(s)/V0(u) ≤CΘ for
+
+=== PAGE 42 ===
+42
+OPENAI
+s ≤u. Its logarithmic derivative l0 is uniformly bounded on the whole interval, including
+τ < 1 since its initial slope is zero.
+For arbitrary initial data Y(s), Y′(s), integration of (4.25) from s to t gives
+Y(t) = V0(t)
+V0(s)
+[︃
+Y(s) + D(s)(Y′(s) −l0(s)Y(s))
+∫︂t
+s
+(V0(s)/V0(u))2
+D(u)
+du
+]︃
+.
+(4.27)
+The integral is at most CΘ3 and D(s) ≤CΘ4. After extracting the same factor V0(t)/V0(s),
+differentiation adds a bounded multiple of the bracket and the term
+D(s)
+D(t) (Y′(s) −l0(s)Y(s))
+(︃V0(s)
+V0(t)
+)︃2
+,
+whose size is at most CΘ6(|Y(s)| + |Y′(s)|). Since (U, V) = (−Y′, Y) for the ideal system, its
+two-component propagator Φ0 satisfies
+∥Φ0(t, s)∥≤CΘ8V0(t)/V0(s).
+Let Φ be the exact propagator, and let ∆A be the difference between the exact and ideal
+coefficient matrices, so that ∥∆A∥≤Ce∗Θ12. Define ˜︁Φ(t, s) = V0(s)Φ(t, s)/V0(t), and define
+˜︁Φ0 similarly. Duhamel’s formula becomes
+˜︁Φ(t, s) = ˜︁Φ0(t, s) +
+∫︂t
+s
+˜︁Φ0(t, u)∆A(u)˜︁Φ(u, s) du.
+In the supremum norm over scaled times s ≤t, its integral operator has norm at most
+Ce∗Θ8+12+1 = Ce∗Θ21 ≪1.
+Summing the iterated Duhamel terms gives ∥Φ(t, s)∥≤
+2CΘ8V0(t)/V0(s). For the primary data, including their neighbor error, it also gives
+|U −Uλ| + |V −Vλ| ≤Ce∗Θ29(1 + λ)V0(t).
+(4.28)
+Indeed, (U −Uλ, V −Vλ)T solves the exact system with forcing ∆A(Uλ, Vλ)T and initial
+error of size Ce∗. The ideal propagator bound gives |(Uλ, Vλ)| ≤CΘ8(1 + λ)V0. Thus the
+initial error contributes Ce∗Θ8V0; Duhamel’s formula bounds the forcing contribution by
+Ce∗Θ12+8+8+1(1 + λ)V0.
+For τ ≥1, (4.26) gives Vλ ≥c(1 + λ)V0. Hence
+V > 0,
+V/Vλ = 1 + O(e∗Θ29),
+r := U/V = rλ + O(e∗Θ29).
+With w3 = W/V = −(Pr + Q)/N, it follows that w3 = −P0rλ −Q0 +O(e∗Θ31), and therefore
+J/V = P0 + β + Q0rλ + O(e∗Θ33).
+(4.29)
+The leading expression is at least β for x ≤1 because Q0rλ ≥0. For x ≥1 it equals
+x2 −β + 2
+√︁
+βz/x > 0. Condition (4.5), together with β ≍x−2
+prev, makes the error smaller than
+half these lower bounds. Since m · Mv = s0aJ, this proves (4.9). Together with the activation
+construction, this completes Claim 1 of Proposition 4.1. The relative error estimates also give
+the component bounds used in the target comparisons below.
+4.6. The next frame and the size comparisons. Claim 1 of Proposition 4.1 is proved, and
+a bound for the scaled velocity propagator is available. We now prove the frame and
+size conclusions in Claims 2 and 3, then convert that propagator bound and apply the
+normalization to finish Claim 4. The calculations use r = U/V and w3 = W/V from §4.5,
+together with the bound for J/V in (4.29).
+
+=== PAGE 43 ===
+FINITE TIME BLOWUP FOR THE EULER EQUATION
+43
+Frame transfer and compression. At the target, normalizing m and v removes their am-
+plitudes from a2 and β2. This reduces the transfer calculation to the component estimates
+above. With Ev = 1 + ε2(r2 + w2
+3) and T = M(v/V)/a, the definitions of p2, q2 give
+a2
+a =
+J/V
+√Da
+√Ev
+,
+β2 = [(P, εQ, N) × (εr, 1, εw3)] · T
+(J/V)√Ev
+.
+(4.30)
+The preceding estimates imply Tp = 1 + O(e∗Θ2), Tn = β + O(e∗Θ2), and εTq = rλ +
+O(e∗Θ31).
+The cross product is (−N + ε2Qw3, ε(Nr −Pw3), P −ε2Qr).
+Its leading dot
+product is consequently
+−1 + βP0 + (1 + P2
+0 )r2
+λ + P0Q0rλ = −1 + (1 + ρ4)z2 + βρ2 −2
+√︁
+βzρ3
+= 1 + O(
+√︁
+β),
+ρ = 1/x ≤1/2.
+The first equality follows by inserting P0 = x2, Q0 = −2
+√︁
+βx, and rλ =
+√︁
+β/x −z/x2; the
+βx2 and
+√︁
+βxz terms cancel. The accumulated error in this numerator is at most Ce∗Θ36,
+using |P| ≤CΘ2, |Q| ≤CΘ, |w3| ≤CΘ2 and ε ≤Ce∗. Also
+J/V = x2 −β + 2
+√︁
+βz/x + O(e∗Θ33),
+Da = 1 + x4 + O(e∗Θ7),
+Ev = 1 + O(ε2Θ4).
+Substitution in (4.30) proves (4.10). The compression is calculated directly from the shear:
+p2 · Mp2 = hεQP
+Da
++ O(G∗+ E∗).
+At the target, (4.18) gives QP ≤−c
+√︁
+βx3
+tar and Da ≤Cx4
+tar, while h ≍h∗and h∗ε = √
+ah∗.
+Since
+√︁
+β ≍x−1
+prev, this proves (4.11).
+Relative sizes. We now prove Claim 3 of Proposition 4.1. For τ ≥1, uniformly on neighbor-
+ing labels,
+|m||v| ≍s0
+√︁
+1 + x4 Vλ.
+This ideal size is bounded by a fixed multiple of its target value: Vλ increases up to x = 1,
+and afterwards x2Vλ = x f (1/x) increases. The logarithmic derivative of the latter with
+respect to τ is
+√︁
+β/x + z/x2, which is bounded; the allowed extra interval after the target
+changes size by a fixed factor. On the history interval |m||v| ≤Kc
+h, and for τ < 1 it is at most
+Kc
+hΘcε−c. In contrast,
+Vλ(x = xtar) ≥Vλ(x = 1)/xtar ≥x−1
+tar eb0/√
+β.
+These inequalities prove (4.12).
+Propagator and normalization. To finish Claim 4 of Proposition 4.1, we convert the prop-
+agator bound to the packet coordinates and apply the target normalization. Returning to
+physical times s, t, choose g(t) = Vλ(a(t −t0)/ε). Write τs = a(s −t0)/ε and τt = a(t −t0)/ε.
+Since I is increasing, (4.26) implies
+V0(τt)
+V0(τs) ≤Vλ(τt)
+Vλ(τs) = g(t)
+g(s).
+The packet coefficient vector corresponding to (U, V) is
+a⊥= RT
+⊥F−1
+(︃
+εUp + Vq −ε PU + QV
+N
+n
+)︃
+.
+The inverse map first forms A = FR⊥a⊥and then takes (U, V) = (ε−1p · A, q · A). The
+bounds on P, Q, N and F±1 therefore show that changing coordinates at the two endpoints
+
+=== PAGE 44 ===
+44
+OPENAI
+costs at most Kc
+hε−1Θc. Here P again denotes the packet data bound in Claim 4 of Proposi-
+tion 4.1. The propagator estimate therefore has the required form Pcg(t)/g(s), even before
+τ = 1. The target lower bound and (4.13) give α ≤Pce−bxprev. Write τtar = xtar/
+√︁
+β. The
+preceding monotonicity and size estimates give
+sup
+[t0,S]
+g ≤CxtarVλ(τtar),
+Atar ≥cs0
+√︂
+1 + x4
+tarVλ(τtar).
+In (4.13), these common amplitude factors cancel. Using s−1
+0
+≤Kc
+h gives sup αg ≤Pc. This
+completes the proof of Proposition 4.1.
+□
+5. Choosing the scales and iterating the construction
+We have proved two conditional construction results. Proposition 3.1 turns a prescribed
+growing wave into an exact Euler perturbation, and Proposition 4.1 supplies such a wave
+and the next frame under the geometric hypotheses in §4.1. It remains to choose the scales
+so that these hypotheses hold at every stage. In this section we make those choices and
+construct the exact solutions Uj in (2.1), starting from a smooth base flow.
+Repeating the amplification requires each new shear to dominate its predecessor before the
+parent’s existence interval ends. Meanwhile, the changes to the initial datum must remain
+summable in every fixed Sobolev norm. The exponential separation between initial and
+target sizes in (4.12) allows the scales to meet these demands while retaining the pressure,
+initial gradient, and particle-map bounds needed for another step. In §6, we will then pass
+from these distinct solutions to a limiting initial datum and prove that its solution breaks
+down.
+For each approximating exact solution Ui with pressure pi, write Mi = ∇Ui and Hi =
+∇2pi. Norms of these fields are taken over physical space and the time interval under
+discussion.
+5.1. A smooth starting flow and local existence. We construct a base solution UB whose
+central gradient gives a = 1 and β = x−2
+0
+in the geometric parameters (4.4). Localizing the
+vector potential of a linear velocity field gives a compactly supported, divergence-free datum
+with the required gradient near the origin.
+Fix an oriented orthonormal basis (p, q, n), with n = p × q. A large number x0 will be
+fixed last. Define the trace-free linear map
+LBq = p + x−2
+0 n,
+LBp = LBn = 0.
+Choose a fixed even, compactly supported Gevrey cutoff χB, with χB = 1 near the origin, as
+in §3.1, and set
+uB,0(a) = curl
+(︃
+−1
+3χB(a) a × LBa
+)︃
+.
+(5.1)
+Since curl(a × LBa) = −3LBa, this is a divergence-free, odd field equal to LBa near zero. Its
+support and all its factorial Sobolev bounds are uniform for x0 ≥1.
+We record the local theory used both here and at the end of the proof. For smooth
+divergence-free data, the projected Euler equation has a unique smooth solution on an
+interval whose length is bounded below in terms of the initial H3 norm. Its energy estimates
+are
+d
+dt∥u(t)∥Hm ≤Cm∥∇u(t)∥L∞∥u(t)∥Hm,
+m ≥3,
+m ∈N.
+(5.2)
+
+=== PAGE 45 ===
+FINITE TIME BLOWUP FOR THE EULER EQUATION
+45
+For completeness, apply a Fourier projection to |ξ| ≤N to the projected equation. This
+gives a locally Lipschitz ordinary differential equation on the band-limited subspace of Hm,
+with initial datum uN(0) = ΠNu0. Orthogonality of the projection preserves the transport
+cancellation. For a commutator product with derivative orders j and m −j + 1, interpolate
+between ∇u ∈L∞and ∇mu ∈L2, using
+∥∇ju∥L2(m−1)/(j−1) ≤Cm∥∇u∥1−(j−1)/(m−1)
+L∞
+∥∇mu∥(j−1)/(m−1)
+L2
+.
+The endpoint j = 1 has exponent ∞. The two interpolation powers add to one. The
+same calculation at each lower differentiated order, together with conservation of the
+undifferentiated energy, proves (5.2). The embedding H3(R3) ↪→C1
+b(R3) gives a common
+interval for all truncations; (5.2) then bounds every higher norm there. Their residual in the
+untruncated equation satisfies
+∥rN∥L2 ≤CN−(m−1)∥uN · ∇uN∥Hm−1.
+The L2 difference energy therefore gives convergence in CtL2
+x. Interpolation with the uniform
+higher bounds gives convergence in every fixed Sobolev order for smooth data. Passing to
+the projected equation constructs the solution and its continuous time derivatives. The same
+difference estimate proves uniqueness. The pressure gradient is the ordinary L2 gradient
+projection of −u · ∇u.
+Let UB be the solution with initial datum (5.1), and write XB for its particle map. The
+velocity UB has uniform factorial bounds on a fixed short interval. To see this, let ρ = ρ(t) > 0
+be a time-dependent radius, with ρ(0) below a uniform Gevrey radius of uB,0, and put
+Xρ = ∑
+r≥0
+ρr
+(r!)2 ∑
+|I|=r
+∥∂IUB∥Hs,
+Yρ = ∑
+r≥0
+rρr
+(r!)2 ∑
+|I|=r
+∥∂IUB∥Hs,
+s = 6.
+The factorial product estimates and the preceding transport cancellation give, at each finite
+truncation of these sums,
+X′
+ρ ≤CX2
+ρ +
+(︃ρ′
+ρ + CXρ
+ρ
+)︃
+Yρ.
+The initial value Xρ(0) is uniformly finite. Choose ρ′ < 0 with sufficiently large fixed
+absolute value. On a sufficiently short uniform interval, the coefficient of Yρ is nonpositive,
+Xρ stays bounded, and ρ stays positive. At a smaller radius, the projected equation bounds
+UB,t and the material acceleration. Applying the flow composition argument based on (3.56)
+gives the same kind of factorial bounds for XB −id, XB,t, and XB,tt, with a fixed constant Kh.
+In particular the velocity gradient MB and pressure Hessian HB are uniformly bounded. Fix
+KB with
+λmax(HB(t, x)) ≤KB
+on this interval. The later choice of time widths will place every construction inside this
+uniform base interval.
+5.2. The scales and their order of choice. We now specify the sizes of the packets to be
+constructed, then choose constants that make these sizes compatible with Propositions 3.1
+and 4.1. We index the base flow as UJ−2 = UB. The first packet produces UJ−1 with its
+prescribed shear already present at time zero. For each j ≥J, an amplification stage produces
+Uj from Uj−1; we call these the normal stages. The integer J determines where this indexing
+starts and will be chosen below.
+At a normal stage j ≥J, hj is the prescribed central shear size at the target, kj is the
+frequency in the scaled label y, and ℓj is the physical label scale of the packet support. The
+
+=== PAGE 46 ===
+46
+OPENAI
+parameter δj sets the peak derivative f ′
+δj(0) = δ−1
+j
+of the angular profile. The number xj is
+the dimensionless target used in Proposition 4.1; the next stage uses it as xprev. The following
+formulas define these sequences in terms of four constants J, D0, Dk, x0, whose values we
+choose in the order described below. The first line starts the geometric recursion at xJ−1 = x0.
+The next two lines prescribe the first packet, and the last two prescribe the normal stages:
+xJ−1 = x0,
+xj = j2xj−1
+(j ≥J),
+hJ−1 = xD0
+0 ,
+kJ−1 = xDk
+0 ,
+r = ℓJ−1 = x−D0
+0
+,
+δJ−1 = x−(D0+10)
+0
+,
+log hj = xj−1
+j5 ,
+log kj = xj−1
+j2 ,
+log δ−1
+j
+= xj−1
+j3 ,
+log ℓ−1
+j
+= xj−1
+j7/2
+(j ≥J).
+(5.3)
+Here r is the radius of the fixed ball in which we allow large negative eigenvalues of
+the initial symmetric velocity gradient. It equals the first packet’s support scale; all later
+oscillatory initial supports will lie in this ball. Real frequencies kj are admissible because the
+periodic angle profile is restricted to a graph on R3; spatial periodicity is not imposed.
+Bounds needed to apply the geometric proposition again. We will maintain
+∥Mi∥L∞≤CMhi,
+∥Hi∥L∞≤CHhihi−1
+(i ≥J −1),
+hJ−2 = 1.
+(5.4)
+These are the gradient and pressure-Hessian bounds required in (4.6) for the next amplifica-
+tion stage. To fix their constants, first choose CM larger than the base-flow bounds and the
+absolute constant C in |m||v|/Atar ≤C from Claim 3 of Proposition 4.1. After the normaliza-
+tion (4.13), this ratio bounds the new leading gradient by a constant times hi. Choose CH
+sufficiently larger than CM times that constant and the base Hessian bound: the pressure
+increment in (3.14) has one additional factor of the parent gradient, of size CMhi−1. The scale
+separation verified below allows these bounds also to include the preceding solution and the
+packet remainders.
+With CM, CH fixed, fix C0 in 0 ≤Λ ≤C0h∗I. Here Λ maps the terminal displacement of
+a stationary path to the transverse part of its terminal derivative, as defined in §4.2. Then
+choose ζ as in that proof, so that ∥B∥≤ζh∗, together with Bpp < 0, permits the activation
+velocity vp ≤0 < vq. Thus ζ specifies how small the older gradient and inherited error must
+be relative to the parent shear. The geometric smallness thresholds may depend on CM, CH;
+once those thresholds hold, the constant C in the size ratio above is absolute. This permits
+the stated order of choices.
+Bounds needed for the packet inverses. The packet coercivity condition (3.11) uses an
+upper bound for the pressure Hessian and lower bounds for the initial symmetric gradient,
+separately inside and outside |x| < r. We will maintain
+λmax(Hi(t, x)) ≤KB + 1,
+Mi(0, x) + Mi(0, x)T
+2
+≥
+{︄
+−BcI,
+|x| < r,
+−BeI,
+|x| ≥r.
+(5.5)
+The base Hessian satisfies λmax(HB) ≤KB, so the added 1 allows a total positive pressure-
+Hessian increase of less than 1 from all packets. Choose Be one larger than a uniform bound
+for ∥∇uB,0∥L∞; this similarly leaves room for the summed initial changes outside the ball.
+Inside it, the first packet has shear size hJ−1, so set
+Bc = CMhJ−1 + 2,
+L = C1Bc + 1.
+(5.6)
+
+=== PAGE 47 ===
+FINITE TIME BLOWUP FOR THE EULER EQUATION
+47
+Here C1 is the constant in (3.11), and L is the coefficient of the displacement boundary term
+in the mean inverse. This choice gives L > C1Bc. The remaining coercivity inequality will
+follow from the short time interval and the small volume r3 of the region with the larger
+bound Bc; it is verified in §5.5. Since hJ−1 = xD0
+0 , these formulas define Bc and L as functions
+of the still unchosen scale x0. Their polynomial growth in x0 will be included in the packet
+size estimates.
+The exponent required by the packet proposition. The input exponent c0 in §3.2 controls
+the derivative bounds for F, F−1, Ft, Ftt, M, H, the lower bounds for K, G, KR, Dm, and the
+derivative bounds for their inverses, as well as the time, scale, propagator, and amplitude
+bounds. When these quantities are obtained from the parent particle map and Proposition 4.1,
+their bounds involve finitely many fixed powers of the packet size parameter P. Choose c0
+larger than all those exponents. The packet proposition then supplies a fixed finite Q = Q(c0)
+for (3.12). Also fix ϑ = 10−6 from that condition and C∗= 10(s + 2) from (3.16). The latter
+means that a packet built at frequency kj−1 provides the parent particle-map bound Kh = kC∗
+j−1
+at the next stage. Neither c0 nor Q will change when we choose J or x0.
+Choosing the four constants in the scale formulas. We can now choose D0, Dk, J, x0 in (5.3).
+Set
+D0 = 1000.
+This gives the first shear hJ−1 = x1000
+0
+and radius r = x−1000
+0
+. The base time interval in (5.7)
+has length 6J2x2−D0/2
+0
+, which therefore tends to zero. The first geometric error also decays:
+its factor εΘ61 is at most C(J)x122−D0/2
+0
+, as checked in §5.5. Choose Dk sufficiently large
+compared with (D0 + 20)Q/ϑ and 1000. Here and below, Pi denotes the size parameter P
+in the application of the packet proposition that constructs Ui. For the first packet, the size
+parameter satisfies PJ−1 ≤C(J)xD0+20
+0
+, as verified in §5.5. Once x0 is sufficiently large, this
+choice makes kJ−1 = xDk
+0
+large enough for PQ
+J−1 ≤kϑ/100
+J−1
+and makes its k−1/4
+J−1 error sufficiently
+small for the first amplification stage.
+Next choose J large enough for the normal-stage formulas to satisfy three requirements.
+The calculations in §5.5 verify them uniformly for j ≥J once x0 is sufficiently large:
+1. The new frequency must dominate the packet input bounds: PQ
+j ≤kϑ/100
+j
+. For this, take J
+sufficiently large compared with Q/ϑ and C∗Q/ϑ. The second comparison accounts for
+the inherited particle-map bound kC∗
+j−1.
+2. The parent coefficients must vary little across the new packet support. Their contribution
+to (4.5) is ℓjKc
+h/ε. For every exponent c occurring there, take J sufficiently large compared
+with (cC∗)2. The exponent j−7/2 in log ℓ−1
+j
+then makes this spatial scale small enough to
+offset the factor Kc
+h inherited from the preceding frequency.
+3. The exponential reduction before amplification must outweigh the factor Kc
+hΘcε−c in (4.12).
+Take J sufficiently large compared with its fixed exponents divided by b, the constant
+in e−bxj−1. This makes the pressure and initial-gradient changes before amplification
+summable, even after multiplying by the shear sizes hjhj−1, as shown in (5.15).
+Increasing J by a fixed factor to meet these requirements is allowed. Finally choose x0
+sufficiently large, depending on all the constants now fixed. This makes the time interval
+lie inside the base solution’s existence interval, gives the required small total pressure and
+initial changes, and ensures all the scale comparisons in §5.5. Evaluate Bc, L from (5.6) at this
+chosen x0. Their values do not require any new choice of c0, Q, Dk, or J: their dependence
+on x0 was already included in the polynomial size bounds used above.
+
+=== PAGE 48 ===
+48
+OPENAI
+5.3. The time intervals. The scale sequences have now been fixed. The physical target times
+also depend on the parent gradients, so they are determined as we construct the solutions.
+The first packet over the base flow prepares the parent for stage J. For j ≥J, the time tj−1 is
+the activation time, tj is the new packet’s target time, and Sj is the horizon retained for the
+next stage. The first amplification stage j = J has activation time zero; all stages j > J have a
+positive history interval. Define the available time widths by
+Wj = 3xjxj−1
+√︁hj−1
+,
+Sbase = 2WJ = 6J2x 2−D0/2
+0
+.
+(5.7)
+Set UJ−2 = UB, tJ−1 = 0, and SJ−1 = Sbase.
+We first construct UJ−1 on this interval.
+Subsequently Uj will be constructed on [0, Sj], where its predecessor exists at least until
+Sj−1 = tj−1 + 2Wj.
+At stage j ≥J, compute a, β after Uj−1 and its shear frame have been constructed. Use
+the older gradient B(t) = Mj−2(t, 0) in (4.4) at t0 = tj−1, with h∗= hj−1, xprev = xj−1, and
+xtar = xj. The target time and retained horizon are then defined recursively by
+tj = tj−1 +
+xj
+√︁βahj−1
+,
+Sj = tj + 2Wj+1.
+(5.8)
+As long as a, βx2
+j−1 ∈[1/2, 2], this gives
+Wj
+6 ≤tj −tj−1 ≤2Wj
+3 .
+(5.9)
+5.4. The estimates maintained at each stage. At stage j ≥J, the packet is built over Uj−1,
+whose primary shear is measured relative to the older solution Uj−2. Both solutions therefore
+enter the induction hypothesis, which consists of the following bounds.
+(i) Parent shear and frame. The parent Uj−1 and older solution Uj−2 are smooth, odd,
+exact Euler solutions on the common interval [0, Sj−1]. At the origin on [tj−1, Sj−1],
+the parent has the form (4.3), with older field B = Mj−2, error |E| ≤k−1/4
+j−1 , and
+h(tj−1) = hj−1. The normalized frame evolves according to (4.2).
+(ii) Activation conditions. At activation, a, βx2
+j−1 ∈[1/2, 2]. For j > J, the activation
+inequalities (4.7) also hold. The first stage j = J instead uses the zero-time prescription
+in Proposition 4.1.
+(iii) Gradient and pressure bounds. The constructed solutions satisfy the low bounds
+(5.4) and the one-sided Hessian and initial gradient bounds (5.5) on their respective
+intervals. The base solution UJ−2 = UB has the uniform bounds established above. For
+j > J, the parent’s bounds on [0, tj−1], together with t−1
+j−1 ≤hj−1, give (4.6).
+(iv) Particle-map bounds. For i ∈{j −2, j −1} with i ≥J −1, the particle map of Ui
+satisfies (3.16) with k = ki, restricted to [0, Sj−1]. For i = J −2, use the uniform
+base-map bound from Section 5.1. In the current packet hypotheses we take Kh = kC∗
+j−1,
+and at positive-history stages require t−1
+j−1 ≤Kc
+h.
+The first-packet construction below establishes this state for j = J. The inductive step
+constructs Uj on [0, Sj] and establishes the same state for j + 1. We first check the scale
+inequalities used in both steps.
+
+=== PAGE 49 ===
+FINITE TIME BLOWUP FOR THE EULER EQUATION
+49
+5.5. Verifying the scale requirements. As the parent shear grows, its coefficient bounds also
+grow. The packet construction remains applicable provided the new frequency dominates
+them in the sense of (3.12). Expressing those bounds in terms of the chosen scales makes
+this condition explicit.
+Packet smallness. At a normal stage, let Pj be a sufficiently large fixed constant plus fixed
+multiples of
+kC∗
+j−1,
+ℓ−1
+j ,
+δ−1
+j
+,
+hj,
+hj−1,
+hJ−1,
+r−1,
+S−1
+base,
+xj,
+xj−1.
+(5.10)
+The first entry is the physical parent bound Kh. We may take Θ = C(1 + xjxj−1), and
+ε−1 ≤C√︁hj−1 ≤Chj−1. For j > J, the recursion for xj gives the exact identities
+log kj−1 =
+xj−1
+(j −1)4 ,
+log hj−1 =
+xj−1
+(j −1)7 .
+(5.11)
+Consequently, for a fixed C′ also covering the first-stage power Dk,
+log Pj
+log kj
+≤C
+{︄
+1
+j + C∗
+j2 + j2(︁
+log xj−1 + C′ log x0 + C′ log J
+)︁
+xj−1
+}︄
+.
+(5.12)
+Choose J and then x0 so that the right side is less than ϑ/(100Q). Thus PQ
+j ≤kϑ/100
+j
+at every
+stage. The same ratio tends to zero as j →∞. Uniformity follows directly from xj = j2xj−1:
+for each fixed A, the quantities jA log xj−1/xj−1 decrease at least geometrically once J and x0
+are sufficiently large. At the first packet stage the parent bound is fixed, and we may take
+PJ−1 ≤C(J)xD0+20
+0
+without including kJ−1; the choice of Dk proves the required smallness
+there. Thus the packet condition (3.12) holds at the seed and every normal stage.
+Compatible time intervals. The widths satisfy
+Wj+1
+Wj
+= j2(j + 1)2
+√︄
+hj−1
+hj
+.
+For j > J, the logarithm of the square-root factor is
+−xj−1
+2j5 +
+xj−1
+2(j −1)7 .
+For j = J the second term is instead (D0/2) log x0. In both cases the negative term dominates
+all logarithmic factors. In particular, the horizons nest, Sj ≤Sj−1, and the extra scaled time
+after target satisfies
+2
+√︂
+ahj−1 Wj+1 ≤Θ−60.
+(5.13)
+Also tJ ≥Sbase/12. At positive-history stages, t0 = tj−1 ≥tJ, so t−1
+0
+≤12S−1
+base ≤hj−1 ≤Kc
+h.
+For the first packet, S = Sbase; for each normal stage, S = Sj ≥tJ, so S−1 ≤12S−1
+base. For
+normal stages, these bounds are covered by the S−1
+base entry in (5.10).
+Geometric stability and shear separation. The error in (4.5) has three contributions: variation
+of the older field, the inherited packet error, and variation across the new packet support.
+Take
+E∗= k−1/4
+j−1 ,
+G∗= 1 + hj−2.
+For B(t) = Mj−2(t, 0), the older Euler solution satisfies ˙B = −B2 −Hj−2(t, 0). The bounds
+(5.4) therefore give ∥B∥≤CG∗and ∥˙B∥≤CG2
+∗; when j = J, use the uniform base bounds
+
+=== PAGE 50 ===
+50
+OPENAI
+instead. At j = J, we have G∗= 2, ε ≤Cx−500
+0
+, and Θ ≤CJ2x2
+0. Therefore
+εΘ61G2
+∗≪x−10
+0
+.
+The preceding packet error has arbitrarily strong polynomial decay by the choice of Dk, and
+the variation across packet labels, represented by ℓjKc
+h/ε in (4.5), includes exp(−x0/J7/2),
+which decays faster than every fixed inverse power of x0. At j = J + 1, the older size is
+G∗= 1 + xD0
+0 , while log ε = −x0/(2J5) + O(1). At subsequent stages,
+log(εG2
+∗) ≤−
+xj−1
+2(j −1)7 +
+2xj−1
+(j −1)2(j −2)7 + C
+≤−
+2xj−1
+5(j −1)7 + C.
+Thus εG2
+∗decays faster than every fixed inverse power of Θ and xj−1. The contribution from
+variation across packet labels has logarithm at most
+−xj−1
+j7/2 + cC∗xj−1
+(j −1)4 + Cxj−1
+(j −1)7 + C.
+Our choice of J makes this at most −xj−1/(2j7/2). Finally, the preceding frequency error has
+logarithm −xj−1/(4(j −1)4). These comparisons prove (4.5), with any fixed enlargement
+of its constants. The additional requirements β ≤β0 and xtar ≥2 hold because β ≤2x−2
+j−1
+and xj ≥J2x0. The same scale comparisons give the following three inequalities. They allow
+the new bounds to absorb the preceding gradient and Hessian bounds, preserve the strict
+quadratic-form inequality (4.7) at the next activation, and keep the oscillatory initial support
+inside |x| < r, respectively:
+hj ≫h2
+j−1,
+√︁hj−1
+xj−1xj
+≫G∗+ 1,
+ℓj < r,
+(5.14)
+including the first and second normal stages.
+Summable pressure and history costs. To preserve the upper Hessian and initial gradient
+bounds (5.5), we sum the increments in Claim 1 of Proposition 3.1. Throughout the history
+interval, and after activation while 0 ≤τ < 1, the size ratio (4.12), the normalization (4.13),
+and the parent bound (5.4) bound both leading increments by
+bj = Chjhj−1Kc
+hΘcε−ce−bxj−1.
+(5.15)
+For j > J, the logarithm of the prefactor Chjhj−1Kc
+hΘcε−c is bounded by C(c, C∗)xj−1/(j −
+1)4 + C log(xjhJ−1). Increasing J and then x0 gives bj ≤e−bxj−1/2; the first normal stage j = J
+obeys the same conclusion with a possibly smaller fixed exponent.
+On τ ≥1, the sign (4.9) and the lower bound f ′
+δ ≥−C in (3.4) control the positive part of
+the pressure-Hessian increment (3.14). The normalization (4.13) and the size comparison in
+Claim 3 of Proposition 4.1 bound this cost by Cδjhjhj−1. The scales (5.3) give
+δjhjhj−1 ≤exp
+(︃
+−xj−1
+2j3
+)︃
+.
+(5.16)
+The remaining errors are the k−1/4
+j
+remainders in (3.13) and (3.14). The sums of bj, δjhjhj−1,
+and k−1/4
+j
+, together with the sums of x−c
+j−1 for every fixed c > 0 used below, can be made as
+
+=== PAGE 51 ===
+FINITE TIME BLOWUP FOR THE EULER EQUATION
+51
+small as prescribed by choosing x0 last. Indeed each positive exponent xj−1/jA in these decay
+estimates grows at least geometrically after J. The seed cost is also small: δJ−1hJ−1 = x−10
+0
+.
+Coercivity. Finally, Sbase →0 and hJ−1r3Sbase →0. Hence, with a strict margin,
+(KB + 1)S2
+2
++ BeS + C2Bcr3S ≤1
+2
+(0 < S ≤Sbase).
+(5.17)
+This verifies the time and initial-data part of (3.11). None of these comparisons requires an
+inequality of the form ePc
+j ≪kj.
+5.6. The first packet. We construct UJ−1 over UJ−2 = UB. This seed packet supplies the
+parent shear and frame required by Section 5.4 for the first amplification stage j = J. Apply
+Proposition 3.1 over UB on [0, Sbase] with
+ℓ= ℓJ−1,
+k = kJ−1,
+δ = δJ−1,
+m0 = p,
+v(0) = q,
+α = δJ−1hJ−1,
+L = 0.
+For this application the base initial bound holds everywhere, so we use the coercivity
+condition with Bc = 0. The homogeneous propagator is bounded on this short interval, and
+we may take g = 1. For sufficiently large x0, the packet support |a| ≤ℓJ−1/2 lies where
+χB = 1, so MB(0, a) = LB there. Since m(0) = p and v(0) = q, m · MBv = p · LBq = 1 initially.
+Along a base particle, ˙MB = −M2
+B −HB; the base bounds and the ray and velocity equations
+therefore give
+m · MBv ≥1
+2
+on [0, Sbase].
+The packet hypotheses hold, and we obtain a smooth odd solution UJ−1. The output
+expansions yield
+∥MJ−1∥∞≤CMhJ−1,
+∥HJ−1∥∞≤CHhJ−1.
+Because the leading Hessian increment is a negative multiple of m ⊗m where f ′
+δ ≥0, and
+f ′
+δ ≥−C everywhere, its upper-eigenvalue cost is at most
+CδJ−1hJ−1 + k−1/4
+J−1 .
+At time zero, the mean coefficients Bp(0) and the forced oscillatory coefficients Ap(0), Cp(0)
+with p ≥2 vanish. By Claim 3 of Proposition 3.1, the remaining primary oscillation and its
+curl correction are supported in |x| ≤ℓJ−1/2 = r/2. Thus the initial exterior bound outside
+|x| < r is unchanged; inside that ball, Bc = CMhJ−1 + 2 leaves a strict margin.
+At the fixed origin, the packet expansion gives
+MJ−1 = MB + h(t)q(t)p(t)T + E(t),
+|E(t)| ≤k−1/4
+J−1 ,
+h(t) = α|m(t)||v(t)|
+δJ−1
+.
+The normalized ray and velocity form the orthonormal pair p(t), q(t), and h(0) = hJ−1. Their
+equations give h′/h = −(MB)pp −(MB)qq. For the next construction, stage j = J, UJ−1 is
+the parent and MB is the older gradient. At its activation time tJ−1 = 0, the prescribed base
+matrix gives exactly
+a = 1,
+β = x−2
+0 .
+There is no positive-history endpoint condition at stage j = J, since its activation time is
+tJ−1 = 0. The physical flow bound (3.16) supplies Kh = kC∗
+J−1 for the next packet. Together
+with the base-flow bounds, these estimates establish the state in Section 5.4 for j = J.
+
+=== PAGE 52 ===
+52
+OPENAI
+5.7. The inductive step. Assume the bounds in Section 5.4 at stage j ≥J. We construct Uj
+on [0, Sj] with central target gradient
+Mj(tj, 0) = Mj−1(tj, 0) + hjq2pT
+2 + O(k−1/4
+j
+),
+where p2 = m(tj, 0)/|m(tj, 0)| and q2 = v(tj, 0)/|v(tj, 0)| are the new frame in Claim 2 of
+Proposition 4.1. The normalization (4.13) and Claim 1 of Proposition 3.1 give this gradient.
+We then verify the bounds of Section 5.4 for j + 1: the summed costs from §5.5 preserve (5.5),
+the estimates (4.10) and (4.11) give the next activation parameters, and (3.16) controls the
+new particle map.
+Constructing Uj from Uj−1. We apply the packet construction to Uj−1, whose leading shear
+is measured relative to Uj−2. Write B(t) = Mj−2(t, 0). The origin is fixed by oddness. The
+gradient equation there gives
+˙B = −B2 −Hj−2,
+∥B∥≤CG∗,
+∥˙B∥≤CG2
+∗,
+G∗= 1 + hj−2.
+For j = J, these bounds follow from the uniform base estimates. Set t0 = tj−1, define tj, Sj
+by (5.8), and restrict Uj−1 to [0, Sj]. Apply Proposition 4.1 with h∗= hj−1, xprev = xj−1, and
+xtar = xj. Its hypotheses follow from Section 5.4 and the estimates in §5.5. This supplies the
+ray m and transverse velocity v: for j > J their activation data satisfy (4.8), while for j = J we
+use v(0) = q. Choose the amplitude so that the leading gradient increment at tj has size hj:
+αj =
+δjhj
+|m(tj, 0)||v(tj, 0)|.
+(5.18)
+Use ℓj, kj, δj and the boundary parameter L = C1Bc + 1 in the packet construction. Let X be
+the particle map of Uj−1 and write F(t, y) = DaX(t, ℓjy), as in (3.5). The bound (3.16), with
+Kh = kC∗
+j−1, controls the derivatives of X. Using F−1 = cof(F)T and (3.2) gives the coefficient
+and inverse multiplier bounds in §3.2 (i), with growth constants that are fixed powers of
+Kh. Coercivity follows from (5.17) and the choice of L. Claim 4 of Proposition 4.1 supplies
+a positive function g, with g(t0) = 1, for which the solution map from a⊥(s) to a⊥(t) in
+A = FR⊥a⊥has norm at most Pc
+j g(t)/g(s), uniformly for |y| ≤1/2 and t0 ≤s ≤t ≤Sj,
+and sup[t0,Sj] αjg ≤Pc
+j . It also gives
+αj ≤Pc
+j e−bxj−1.
+Together with the packet smallness condition verified in §5.5, these bounds verify the
+hypotheses of Proposition 3.1. Applying that proposition constructs an exact smooth odd
+Euler solution Uj on [0, Sj], with particle-map bound (3.16) at frequency kj.
+Preserving the global and initial bounds. We next verify (5.4) and (5.5). On the packet
+support for τ ≥1, Claim 3 of Proposition 4.1 and (5.18) give αj|m||v| ≤Cδjhj. Insert this
+bound, | f ′
+δj| ≤Cδ−1
+j
+, and ∥Mj−1∥∞≤CMhj−1 into (3.13) and (3.14) to obtain
+∥Mj −Mj−1∥∞≤Chj + k−1/4
+j
+,
+∥Hj −Hj−1∥∞≤CCMhjhj−1 + k−1/4
+j
+.
+In (3.14), the matrix m ⊗m/|m|2 is positive semidefinite. Since χ1 ≥0 and m · Mj−1v > 0,
+the leading Hessian increment is negative semidefinite wherever f ′
+δj ≥0. Where f ′
+δj < 0, the
+
+=== PAGE 53 ===
+FINITE TIME BLOWUP FOR THE EULER EQUATION
+53
+bound f ′
+δj ≥−C gives
+λmax(Hj) ≤λmax(Hj−1) + CCMδjhjhj−1 + k−1/4
+j
+.
+For labels with χ1(y) = 0, both leading increments vanish, while their remainders retain
+the global bound k−1/4
+j
+. Throughout the history interval, and after activation while 0 ≤
+τ < 1, both absolute increments are bounded by C(1 + CM)bj + k−1/4
+j
+. By §5.5, the sum of
+CCMδihihi−1, C(1 + CM)bi, and k−1/4
+i
+over i ≥J, together with the seed Hessian increment,
+is less than 1. Adding these upper bounds to λmax(HB) ≤KB gives
+λmax(Hj) ≤KB + 1.
+The triangle inequality, the preceding bounds for Mj−1, Hj−1, and these increment estimates
+give (5.4), by the choices of CM, CH and hj ≫h2
+j−1. At time zero, the same estimates give
+∥Mj(0) −Mj−1(0)∥∞≤C(1 + CM)bj + k−1/4
+j
+for every j ≥J, including j = J, for which
+t0 = τ = 0. The sum is smaller than the margins left in the exterior and core initial gradient
+bounds (5.5), so those bounds persist with a strict margin. These statements use the exact
+pressure expansion (3.14); no spatial locality of the pressure is assumed.
+Transferring the primary frame and activation conditions. For t ∈[tj, Sj], write m(t) =
+m(t, 0) and v(t) = v(t, 0), and define p2(t) = m(t)/|m(t)| and q2(t) = v(t)/|v(t)|. Oddness
+of Uj−1 gives X(t, 0) = 0, so the physical origin has label y = 0 and phase θ = kjm0 · y = 0.
+Since χ1(0) = 1 and f ′
+δj(0) = δ−1
+j
+, (3.13) gives
+Mj = Mj−1 + h(t)q2(t)p2(t)T + Ej(t),
+|Ej| ≤k−1/4
+j
+,
+h(t) = αj|m(t)||v(t)|
+δj
+,
+h(tj) = hj.
+At stage j + 1, Uj will be the parent solution and Uj−1 will supply the older field. The
+ray and velocity equations for Mj−1 imply that p2, q2 satisfy (4.2) with B = Mj−1, and
+h′/h = −(Mj−1)p2p2 −(Mj−1)q2q2. The parameter-transfer formula (4.10) shows that the
+relative errors in successive values of a are absolutely summable: they are bounded by a
+fixed multiple of
+x−4
+j
++ β
+x2
+j
++
+√︁
+β
+x3
+j
++ e∗Θ40.
+Indeed, β ≤2x−2
+j−1, xj ≥xj−1, and e∗Θ60 ≤x−10
+j−1 bound this expression by Cx−4
+j−1. Its sum
+can be made arbitrarily small by the final choice of x0, as in §5.5. Starting from a = 1, the
+product of the successive ratios anew/a therefore stays in [1/2, 2]. The other transfer estimate
+gives directly βnewx2
+j ∈[1/2, 2]; these errors need not be multiplied across stages.
+To verify (4.7) for stage j + 1, evaluate the following quantities at t = tj and set B =
+Mj−1(tj, 0) + Ej(tj). The compression estimate (4.11) and (5.14) give
+p2 · Mj−1p2 ≤−c√︁hj−1
+xj−1xj
++ C(G∗+ E∗) < −1.
+Since |Ej| ≤k−1/4
+j
+< 1, this implies Bp2p2 < 0, while
+∥Mj−1 + Ej∥
+hj
+≤CMhj−1 + 1
+hj
+< ζ.
+
+=== PAGE 54 ===
+54
+OPENAI
+Thus (4.7) holds at the next activation. The bounds (5.4) on [0, tj], together with t−1
+j
+≤hj,
+verify (4.6) for the next stage with t0 = tj, h∗= hj, and hold = hj−1. Every part of Section 5.4
+now holds with j replaced by j + 1, closing the induction.
+6. The limiting initial datum and finite-time breakdown
+The preceding section constructed exact solutions Uj whose central gradients |∇Uj(tj, 0)|
+grow without bound. These solutions have different initial data. It remains to obtain an
+initial datum u0 whose solution breaks down, as required by Theorem 1.1. In this section
+we complete that step. First, Section 6.1 uses the initial increment estimates to obtain
+convergence in every fixed Sobolev norm. Next, Section 6.2 shows that a smooth solution
+from the limiting datum persisting past the accumulation time would inherit the growing
+gradients by stability. Finally, Section 6.3 proves that ∥∇u(t)∥∞is unbounded as t ↑T∗(u0)
+and that ∫︁T∗(u0)
+0
+∥curl u(t)∥∞dt = ∞.
+6.1. Smooth convergence at the initial time. The first packet contributes a fixed smooth
+initial increment. To prove summability, it remains to estimate the normal stages. For each
+j ≥J, split Uj(0) −Uj−1(0) into the oscillatory and mean increments defined in (3.60). For
+every fixed integer m, apply (3.17) to these two increments. Substituting the scales (5.3) and
+αj ≤Pc
+j e−bxj−1 bounds the logarithms of their Hm norms, respectively, by
+−bxj−1 + mxj−1
+j2
++ mxj−1
+j7/2
++ Cm log Pj,
+(6.1)
+−2xj−1
+j2
++ mxj−1
+j7/2
++ Cm log Pj.
+(6.2)
+Since log Pj = o(log kj) = o(xj−1/j2), for sufficiently large j depending on m these bounds
+are at most −bxj−1/2 and −xj−1/j2, respectively. Both exponentials are summable. The
+mean increment umean,0 is independent of θ, so differentiating it does not produce the phase
+factor km
+j . This explains why the derivative contribution mxj−1/j2 in (6.1) is absent from
+(6.2).
+The sequence Uj(0) is therefore Cauchy in every Hm. By Claim 3 of Proposition 3.1, the
+oscillatory initial increments are supported in |a| ≤ℓj/2, and the mean initial increments
+are supported in |a| ≤2. Together with the fixed support of the base datum, these supports
+lie in a fixed ball. The limit
+u0 = lim
+j→∞Uj(0)
+in every Hm(R3)
+(6.3)
+is consequently smooth, compactly supported, odd, and divergence-free.
+6.2. Non-persistence of the smooth solution. The times tj in (5.8) increase and are bounded
+by Sbase, as verified in §5.5. Consequently their accumulation time
+T∞= lim
+j→∞tj
+satisfies
+0 < tJ ≤T∞≤Sbase.
+(6.4)
+Let u be the maximal smooth Euler solution with initial datum u0. Local existence gives
+T∗(u0) > 0. Suppose, for contradiction, that T∗(u0) > T∞. Then all Sobolev norms of u are
+bounded on [0, T∞]. Compare Uj with u on [0, tj], where Uj exists, and write w = Uj −u. Its
+equation is
+∂tw + u · ∇w + w · ∇u + w · ∇w + ∇(pj −p) = 0,
+div w = 0.
+
+=== PAGE 55 ===
+FINITE TIME BLOWUP FOR THE EULER EQUATION
+55
+Since div(u + w) = 0, each derivative word I satisfies ⟨∂Iw, (u + w) · ∇∂Iw⟩L2 = 0. The
+pressure term also has zero inner product with ∂Iw. Summing over |I| ≤3, Sobolev product
+estimates bound the terms containing u by C∥u∥H4∥w∥2
+H3, and the nonlinear terms containing
+only w by C∥w∥3
+H3. Thus
+y′(t) ≤Cuy(t) + Cy(t)2,
+y(t) = ∥w(t)∥H3,
+(6.5)
+where Cu depends on sup[0,T∞] ∥u∥H4 and is independent of j.
+While y ≤1, y(t) ≤
+y(0)e(Cu+C)T∞.
+For sufficiently large j, the right side is less than 1/2, since y(0) →0.
+This excludes a first time at which y = 1, so the bound holds on all of [0, tj], proving
+sup
+0≤t≤tj
+∥Uj(t) −u(t)∥H3 −→0.
+At tj, the leading increment hjq2pT
+2 has operator norm hj. The triangle inequality and (5.4)
+therefore give
+∥Mj(tj, 0)∥≥hj −CMhj−1 −k−1/4
+j
+−→∞.
+But H3 ↪→C1
+b and the preceding convergence imply ∥Mj(tj, 0) −∇u(tj, 0)∥→0. Since ∇u
+is bounded on [0, T∞], this contradicts the lower bound. Hence
+0 < T∗(u0) ≤T∞≤Sbase < ∞.
+(6.6)
+The maximal lifespan may end before T∞; this upper bound is sufficient for finite-time
+breakdown. The comparison on the intervals [0, tj] was made under the contradiction
+assumption T∗(u0) > T∞.
+6.3. Continuation criteria at the endpoint. Set T = T∗(u0) < ∞. We now prove the two
+divergence assertions of Theorem 1.1: the velocity gradient satisfies lim supt↑T ∥∇u(t)∥∞=
+∞, and the vorticity satisfies ∫︁T
+0 ∥curl u(t)∥∞dt = ∞.
+Suppose, for contradiction, that B := sup0≤t<T ∥∇u(t)∥∞< ∞. By (5.2),
+sup
+0≤t<T
+∥u(t)∥H3 ≤∥u0∥H3eC3BT ≤M3 := max{1, ∥u0∥H3eC3BT}.
+The local theory in Section 5.1 supplies a time δ0 = δ0(M3) > 0, uniform for smooth
+divergence-free data of H3 norm at most M3. For each s ∈[0, T), let vs be the solution
+starting from vs(s) = u(s) on [s, s + δ0). Fix an embedding constant Cemb > 0 such that
+∥∇f ∥∞≤Cemb∥f ∥H3, and set
+δ = min
+{︃δ0
+2 ,
+1
+2C3CembM3
+}︃
+> 0.
+The energy inequality at order three gives
+∥vs(t)∥H3 ≤
+M3
+1 −C3CembM3(t −s) ≤2M3
+(s ≤t ≤s + δ).
+For every integer m ≥3, apply (5.2) at order m to u on [0, s], using ∥∇u∥∞≤B, and to vs on
+[s, s + δ], using ∥∇vs∥∞≤2CembM3. For s ≤t ≤s + δ, this gives
+∥vs(t)∥Hm ≤∥u(s)∥Hme2CmCembM3δ ≤∥u0∥HmeCmBT+2CmCembM3δ.
+Thus all higher Sobolev norms remain finite on the interval of length δ, which does not
+depend on m or s. Choose s ∈(max{0, T −δ/2}, T). Uniqueness gives vs = u on [s, T),
+while s + δ > T, so vs gives a smooth extension past T. This contradicts maximality. Since u
+
+=== PAGE 56 ===
+56
+OPENAI
+is smooth on every compact subinterval of [0, T), a finite limsup of ∥∇u(t)∥∞at T would
+make B finite. It follows that
+lim sup
+t↑T∗(u0)
+∥∇u(t)∥∞= ∞.
+To prove the vorticity assertion, we first derive a logarithmic bound for ∥∇u∥∞in terms
+of ∥ω∥∞and ∥u∥H3.
+Write ω = curl u.
+The whole-space Biot–Savart identity is u =
+curl(−∆)−1ω. Thus ∇u(x) is the sum of a fixed linear function of ω(x) and a principal-
+value integral against ω(x −z), with kernel K(z). This kernel is homogeneous of degree
+−3, with smooth angular dependence and zero spherical mean. For 0 < d < 1/2, split this
+integral into |z| < d, d < |z| < 2, and a smoothly cut off far region. The zero spherical mean
+allows us to subtract ω(x) in the inner principal-value integral. The embedding H3 ↪→C1,λ,
+0 < λ < 1/2, gives |ω(x −z) −ω(x)| ≤C∥u∥H3|z|λ. Integrating against |K(z)| ≤C|z|−3
+yields⃓⃓⃓⃓
+∫︂
+|z|<d K(z)[ω(x −z) −ω(x)] dz⃓⃓⃓⃓≤Cdλ∥u∥H3.
+The middle region contributes C∥ω∥∞log(2/d). On the far region, write ω = curl u and
+integrate by parts, moving the derivative onto the cut-off kernel. The resulting kernel belongs
+to L2, so Cauchy–Schwarz bounds this contribution by C∥u∥2. Choose d = c(e + ∥u∥H3)−1/λ,
+with a fixed c > 0 small enough that d < 1/2. Then dλ∥u∥H3 ≤cλ and log(2/d) ≤
+C log(e + ∥u∥H3). Combining the three region estimates with the local term, and using
+conservation of kinetic energy, gives
+∥∇u∥∞≤C [1 + ∥u0∥2 + ∥ω∥∞log(e + ∥u∥H3)] .
+(6.7)
+Set Z(t) = log(e + ∥u(t)∥H3). Dividing the m = 3 case of (5.2) by e + ∥u∥H3 gives Z′ ≤
+C∥∇u∥∞, since ∥u∥H3/(e + ∥u∥H3) ≤1. Applying (6.7) therefore yields
+Z′ ≤C(1 + ∥u0∥2) + C∥ω∥∞Z.
+If ∫︁T∗
+0 ∥ω(t)∥∞dt were finite, Gronwall’s inequality would bound Z, hence supt<T ∥u(t)∥H3.
+The embedding H3 ↪→C1 and the preceding restart argument would then extend u past T,
+contradicting maximality. Therefore the datum (6.3) satisfies
+∫︂T∗(u0)
+0
+∥ω(t)∥L∞(R3) dt = ∞.
+The datum in (6.3), the finite lifespan in (6.6), and the two continuation conclusions above
+prove Theorem 1.1.
+References
+1. J. Thomas Beale, Tosio Kato, and Andrew Majda, Remarks on the breakdown of smooth solutions for the 3-D
+Euler equations, Communications in Mathematical Physics 94 (1984), no. 1, 61–66, https://doi.org/10.1007/
+BF01212349.
+2. Jean Bourgain and Dong Li, Strong ill-posedness of the incompressible Euler equation in borderline Sobolev spaces,
+Inventiones Mathematicae 201 (2015), no. 1, 97–157, https://doi.org/10.1007/s00222-014-0548-6.
+3. Yann Brenier, Generalized solutions and hydrostatic approximation of the Euler equations, Physica D: Nonlinear
+Phenomena 237 (2008), no. 14–17, 1982–1988, https://doi.org/10.1016/j.physd.2008.02.026.
+4. Tristan Buckmaster, Camillo De Lellis, László Székelyhidi, Jr., and Vlad Vicol, Onsager’s conjecture for
+admissible weak solutions, Communications on Pure and Applied Mathematics 72 (2019), no. 2, 229–274,
+https://doi.org/10.1002/cpa.21781.
+5. Jiajie Chen, Asymptotically self-similar blowup for 3D incompressible Euler with C1,1/3−velocity II: 3D profiles,
+blowup, and limiting behavior, arXiv:2605.15130, 2026, https://arxiv.org/abs/2605.15130.
+
+=== PAGE 57 ===
+FINITE TIME BLOWUP FOR THE EULER EQUATION
+57
+6. Jiajie Chen and Thomas Y. Hou, Stable nearly self-similar blowup of the 2D Boussinesq and 3D Euler equations
+with smooth data I: Analysis, arXiv:2210.07191, 2022, https://arxiv.org/abs/2210.07191.
+7.
+, Stable nearly self-similar blowup of the 2D Boussinesq and 3D Euler equations with smooth data II: Rigorous
+numerics, Multiscale Modeling & Simulation 23 (2025), no. 1, 25–130, https://doi.org/10.1137/23M1580395.
+8. Christophe Cheverry, Cascade of phases in turbulent flows, Bulletin de la Société Mathématique de France 134
+(2006), no. 1, 33–82, https://doi.org/10.24033/bsmf.2501.
+9. Diego Córdoba and Luis Martínez-Zoroa, Non existence and strong ill-posedness in Ck and Sobolev spaces for
+SQG, Advances in Mathematics 407 (2022), 108570, https://doi.org/10.1016/j.aim.2022.108570.
+10.
+, Blow-up for the incompressible 3D-Euler equations with uniform C1, 1
+2 −ε ∩L2 force, arXiv:2309.08495, 2023,
+https://arxiv.org/abs/2309.08495.
+11.
+, Finite time singularities of smooth solutions for the 2D incompressible porous media (IPM) equation with a
+smooth source, arXiv:2410.22920, 2024, Revised 2025. https://arxiv.org/abs/2410.22920.
+12. Diego Córdoba, Luis Martínez-Zoroa, and Wojciech S. O˙za´nski, Instantaneous gap loss of Sobolev regularity
+for the 2D incompressible Euler equations, Duke Mathematical Journal 173 (2024), no. 10, 1931–1971, https:
+//doi.org/10.1215/00127094-2023-0052.
+13. Diego Córdoba, Luis Martínez-Zoroa, and Fan Zheng, Finite time singularities to the 3D incompressible Euler
+equations for solutions in C∞(R3 \ {0}) ∩C1,α ∩L2, Annals of PDE 11 (2025), 19, https://doi.org/10.1007/
+s40818-025-00214-2.
+14. A. D. D. Craik and W. O. Criminale, Evolution of wavelike disturbances in shear flows: a class of exact solutions of
+the Navier–Stokes equations, Proceedings of the Royal Society of London. Series A 406 (1986), no. 1830, 13–26,
+https://doi.org/10.1098/rspa.1986.0061.
+15. Tarek M. Elgindi, Finite-time singularity formation for C1,α solutions to the incompressible Euler equations on R3,
+Annals of Mathematics 194 (2021), no. 3, 647–727, https://doi.org/10.4007/annals.2021.194.3.2.
+16. Tarek M. Elgindi, Tej-Eddine Ghoul, and Nader Masmoudi, On the stability of self-similar blow-up for C1,α
+solutions to the incompressible Euler equations on R3, Cambridge Journal of Mathematics 9 (2021), no. 4,
+1035–1075, https://arxiv.org/abs/1910.14071.
+17. Tarek M. Elgindi and In-Jee Jeong, Ill-posedness for the incompressible Euler equations in critical Sobolev spaces,
+Annals of PDE 3 (2017), 7, https://doi.org/10.1007/s40818-017-0027-7.
+18. Tarek M. Elgindi and Nader Masmoudi, L∞ill-posedness for a class of equations arising in hydrodynam-
+ics, Archive for Rational Mechanics and Analysis 235 (2020), no. 3, 1979–2025, https://doi.org/10.1007/
+s00205-019-01457-7.
+19. Tarek M. Elgindi and Federico Pasqualotto, From instability to singularity formation in incompressible fluids,
+arXiv:2310.19780, 2023, https://arxiv.org/abs/2310.19780.
+20. Bruce R. Fabijonas and Darryl D. Holm, Multi-frequency Craik–Criminale solutions of the Navier–Stokes equations,
+Journal of Fluid Mechanics 506 (2004), 207–215, https://doi.org/10.1017/S0022112004008511.
+21. Susan Friedlander and Misha M. Vishik, Instability criteria for the flow of an inviscid incompressible fluid, Physical
+Review Letters 66 (1991), no. 17, 2204–2206, https://doi.org/10.1103/PhysRevLett.66.2204.
+22. Philip Isett, A proof of Onsager’s conjecture, Annals of Mathematics 188 (2018), no. 3, 871–963, https://doi.org/
+10.4007/annals.2018.188.3.4.
+23. In-Jee Jeong, Luis Martínez-Zoroa, and Wojciech S. O˙za´nski, Instantaneous continuous loss of Sobolev regularity
+for the 3D incompressible Euler equation, arXiv:2508.06333, 2025, https://arxiv.org/abs/2508.06333.
+24. Tosio Kato, Nonstationary flows of viscous and ideal fluids in R3, Journal of Functional Analysis 9 (1972), no. 3,
+296–305, https://doi.org/10.1016/0022-1236(72)90003-1.
+25. S. Le Dizès and S. Leblanc, Note on ‘multi-frequency Craik–Criminale solutions of the Navier–Stokes equations’
+by B. R. Fabijonas and D. D. Holm, Journal of Fluid Mechanics 550 (2006), 43–50, https://doi.org/10.1017/
+S0022112005007949.
+26. Camillo De Lellis and László Székelyhidi, Jr., The Euler equations as a differential inclusion, Annals of Mathe-
+matics 170 (2009), no. 3, 1417–1436, https://doi.org/10.4007/annals.2009.170.1417.
+27.
+, Dissipative continuous Euler flows, Inventiones Mathematicae 193 (2013), 377–407, https://doi.org/10.
+1007/s00222-012-0429-9.
+28. Alexander Lifschitz and Eliezer Hameiri, Local stability conditions in fluid dynamics, Physics of Fluids A 3
+(1991), no. 11, 2644–2651, https://doi.org/10.1063/1.858153.
+29. Steve Shkoller, Incompressible Euler blowup at the C1,1/3 threshold, arXiv:2603.10945, 2026, https://arxiv.org/
+abs/2603.10945.

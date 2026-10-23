@@ -1,0 +1,2209 @@
+Article
+https://doi.org/10.1038/s41467-026-74935-8
+The Riemann Hypothesis manifested in
+dynamical quantum phase transitions
+Shijie Wei
+1,8
+, Yue Zhai2,3,8, Quanfeng Lu4,8, Wentao Yang4, Pan Gao1,
+Chao Wei2,3, Junda Song2,3, Franco Nori
+5,6, Tao Xin
+3
+& Guilu Long
+1,4,7
+The Riemann Hypothesis (RH), one of the most profound unsolved problems
+in mathematics, concerns the nontrivial zeros of the Riemann zeta function.
+Linking these zeros to physical phenomena offers new perspectives on their
+origin and veriﬁcation. Here we establish a direct correspondence between
+these zeros and dynamical quantum phase transitions in two complementary
+engineered quantum many-body systems, characterized by the average
+accumulated phase factor and the Loschmidt amplitude, respectively. This
+precise correspondence recasts the RH as the occurrence of phase transitions
+at a unique temperature and identiﬁes it as a previously unknown transition
+mechanism. We demonstrate this correspondence in a proof-of-principle
+experiment on a quantum processor. Moreover, we propose a quantum
+computational framework that implements both systems with polynomial
+resources, suggesting quantum advantage in probing the hypothesis. Our
+work bridges nonequilibrium quantum dynamics and number theory, posi-
+tioning quantum computing as a powerful platform for exploring mathema-
+tical conjectures, phase transitions and beyond.
+The Riemann zeta function is central to analytic number theory and
+has profound implications in mathematical physics. It admits a
+Dirichlet series representation valid for ReðsÞ > 0, ReðsÞ≠11:
+ζðsÞ =
+1
+1  21s
+X
+1
+n = 1
+ð1Þn + 1
+ns
+:
+ð1Þ
+The nontrivial zeros of the zeta function, conjectured by the cele-
+brated Riemann Hypothesis (RH) to all lie on the critical line ReðsÞ = 1
+2,
+remain one of the most profound unsolved problems in mathematics.
+The RH underpins more than a thousand theorems in mathematics and
+forms the foundation of the modern RSA cryptographic system; for
+example, the distribution of the nontrivial zeros encodes the ﬁne
+structure of prime numbers2. Despite extensive numerical evidence3,4,
+the RH remains unproven. Any new perspective on the zeta function is
+therefore of great signiﬁcance, regardless of whether it ultimately
+leads to a proof or refutation of the RH.
+Beyond its mathematical signiﬁcance, the Riemann zeta function
+has long inspired deep physical analogies5, sparking the search for a
+possible physical origin of the RH. The most inﬂuential idea in this
+direction is the Hilbert-Pólya conjecture6,7, which suggests that the
+nontrivial zeros of the zeta function might correspond to the eigenva-
+lues of an as-yet-unknown quantum Hamiltonian, motivating searches
+for such an operator8,9 and for signatures in diverse physical contexts5,10,
+including relativistic amplitudes11, chaotic quantum scattering12,13,
+quantum ﬁeld theory14, and random matrix theory15. Signiﬁcant
+progress16–18 has linked quantum systems to the Riemann zeta function
+through tailored state preparation, engineered spectra, and observable
+correspondences with its zeros. The genuine physical realization, dee-
+per connections and possible origins of the RH remain unknown.
+Received: 23 December 2025
+Accepted: 18 June 2026
+Check for updates
+1Beijing Academy of Quantum Information Sciences, Beijing, China. 2Southern University of Science and Technology, Shenzhen 518055, China. 3International
+Quantum Academy, Shenzhen 518048, China. 4Department of Physics, Tsinghua University, Beijing, China. 5Center for Quantum Computing, RIKEN, Wakoshi,
+Saitama, Japan. 6Quantum Research Institute, The University of Michigan, Ann Arbor, MI, USA. 7Tsinghua National Laboratory for Information Science and
+Technology, Beijing, China. 8These authors contributed equally: Shijie Wei, Yue Zhai, Quanfeng Lu.
+e-mail: weisj@baqis.ac.cn; xintao@iqasz.cn;
+gllong@tsinghua.edu.cn
+Nature Communications|
+(2026) 17:8163
+1
+1234567890():,;
+1234567890():,;
+
+Here, we propose a physical origin for the RH by demonstrating
+that the nontrivial zeros of the Riemann zeta function correspond
+directly to dynamical quantum phase transitions (DQPTs) in two
+complementary quantum systems within a framework19–26, as shown in
+Fig. 1. Both systems are initialized in thermal equilibrium and subse-
+quently driven out of equilibrium by quenches with specially designed
+interaction Hamiltonians that imprint properties of the zeta function
+onto measurable observables. The average accumulated phase factor
+in the ﬁrst system and the Loschmidt amplitude in the second system
+both vanish at evolution times corresponding to the nontrivial zeros,
+revealing DQPTs. By calculating the free energy and entropy, we fur-
+ther investigate the characteristics of the DQPTs.
+Furthermore, we introduce a quantum computational framework
+that efﬁciently simulates these dynamics on digital quantum pro-
+cessors, offering a clear quantum advantage for probing both DQPTs
+and the RH. This approach not only enables the experimental obser-
+vation of DQPTs tied to the zeros but also allows for the numerical
+exclusion of such critical behavior at non-zero points, thereby pro-
+viding a physical pathway to investigate the RH.
+As a proof-of-principle demonstration, we implement the ﬁrst
+system experimentally on a ﬁve-qubit nuclearspin quantum processor.
+The measured coherence dynamics reproduce the oscillatory behavior
+of the zeta function and exhibit clear signatures of DQPTs aligned with
+its nontrivial zeros. For the second system, suitable for exploring high-
+index zeros, large-scale numerical simulations conﬁrm the corre-
+spondence up to the 1012-th zero. Moreover, our gate-based framework
+constructs both models with polynomial resources and achieves at
+least a quadratic speedup over classical veriﬁcation of RH zeros. These
+results establish a concrete bridge between number theory, quantum
+physics, and quantum technology, opening scalable pathways toward
+one of mathematics’ most enduring mysteries and hinting at a deeper
+quantum structure underlying arithmetic.
+Results
+As shown in Fig. 1c, we study two complementary quantum dynamical
+processes within a framework, each initialized in a thermal state. In
+both cases, a single probe qubit is coupled to the system, and the
+combined system evolves under an interaction Hamiltonian for a
+duration t. The average accumulated phase factor Lðβ, tÞ in the ﬁrst
+setup directly encodes the behavior of ζ(s) in the thermodynamic limit,
+while the Loschmidt amplitude Gðβ, tÞ in the second captures the same
+feature in the joint thermodynamic and long-time limits.
+Remarkably, at β = 1
+2, both systems exhibit DQPTs, characterized
+by recurrent vanishing-and-revival oscillations in the observables,
+which correspond one-to-one to the nontrivial zeros. If the RH holds,
+such recurrent revivals occur exclusively on the critical line β = 1
+2 in the
+ﬁrst system. This correspondence indicates that RH can be reformu-
+lated as the statement that DQPTs occur only at the inverse
+a
+c
+Riemann Hypothesis
+Spin system with thermal state
+One probe qubit
+Temperature
+Interaction
+time t
+b
+x
+y
+z
+0
++
+x
+y
+z
++
+φ
+Loschmidt amplitude
+t
+Real
+Real
+Imaginary
+Imaginary
+Norm
+Non-trivial
+zeros
+Trivial zeros
+-6
+-4
+-2
+0
+0.5
+1
+Real axis
+Imaginary axis 
+t
+Phase transition 
+Accumulated phase
+factor
+d
+Fig. 1 | Correspondence between the Riemann zeta function and engineered
+quantum many-body systems. a The RH in the complex plane (β, t). It states that
+all nontrivial zeros of the zeta function lie on the critical line with real part β = 1/2.
+The distribution of the zeros of the zeta function is symmetric with respect to
+reﬂection across the real axis. b The zeta function ζ(1/2 + it) along the critical line.
+Each zero crossing, marked by a red dot, corresponds to a nontrivial zero of the
+zeta function. c Construction of two complementary quantum systems within a
+framework, each consisting of a single probe spin coupled to a many-body system
+initialized in a thermal state at inverse temperature β. The composite system
+subsequently evolves under the system interactions with time-reversal symmetry.
+The blue and red arrows represent the forward and backward time evolutions,
+respectively. d The dynamics of the accumulated phase factor Lðβ, tÞ and the
+Loschmidt amplitude Gðβ, tÞ reproduce key features of the zeta function, exhibiting
+vanishing-and-revival oscillations characteristic of DQPTs. Red dots highlight the
+phase-transition points, in one-to-one correspondence with the nontrivial zeros of
+the Riemann zeta function. The norms of both observables correspond to the norm
+of the zeta function.
+Article
+https://doi.org/10.1038/s41467-026-74935-8
+Nature Communications|
+(2026) 17:8163
+2
+
+temperature β = 1
+2 in a speciﬁc quantum many-body system. Con-
+versely, the RH reveals a previously unknown class of zeta-governed
+mechanisms for DQPTs. Moreover, the quantum systems exhibit time-
+reversal symmetry, which corresponds to the reﬂection symmetry of
+the zeta function. Together, these results establish a direct corre-
+spondence between the analytic features of the zeta function (Fig. 1b)
+and accessible quantum dynamics (Fig. 1d). We describe the con-
+struction of these quantum dynamics in the following sections.
+Probe spin coherence signaling RH
+We consider a quantum system with physical Hamiltonian
+Hph
+0 =
+X
+N
+n = 1
+En∣ni n
+h ∣,
+En = ε0 ln n,
+ð2Þ
+where ε0 sets the energy scale16. The system is initialized in the thermal
+state ρs = eHph
+0 =ðkBTÞ=ZðT, Hph
+0 Þ, with partition function
+ZðT, Hph
+0 Þ =
+X
+N
+n = 1
+eEn=ðkBTÞ =
+X
+N
+n = 1
+nε0=ðkBTÞ:
+ð3Þ
+We then introduce the dimensionless inverse temperature, Hamilto-
+nian, and time,
+β  ε0
+kBT ,
+H0  Hph
+0
+ε0
+,
+t  ε0tph
+ℏ
+:
+ð4Þ
+With these deﬁnitions, the thermal weight and dynamical phase of the
+n-th level become
+eEn=ðkBTÞ = nβ,
+eiEntph=ℏ= nit,
+ð5Þ
+and the partition function reduces to
+Zðβ, H0Þ =
+X
+N
+n = 1
+nβ:
+ð6Þ
+The complex parameter s = β + it is therefore a natural dimensionless
+variable. In the following, energies and times are measured in units of
+ε0 and ℏ/ε0, respectively.
+Constructing a logarithmic energy spectrum is central to realizing
+the proposed quantum system. Such spectra have appeared previously
+in a variety of number-theoretic and quantum-dynamical settings,
+including Bose–gas analogies for factorization27, wave-packet con-
+structions related to the zeta function16, factorization-oriented
+schemes based on interacting bosons or separable potentials28,29,
+and more recent holographic approaches30. In most of these works, the
+logarithmic spectrum is generated through analog constructions,
+typically by designing speciﬁc potentials or effective physical land-
+scapes. Equivalently, for ﬁnite N, the logarithmic spectrum admits an
+exact representation in terms of a many-body spin Hamiltonian. For
+N = 2q levels, encoding the energy eigenstates into the computational
+basis of q spins yields
+H0 =
+X
+q
+l = 0
+X
+1 ≤m1 <  < ml ≤q
+Jm1ml σz
+m1   σz
+ml,
+ð7Þ
+with l = 0 corresponding to the identity Pauli operator. Writing
+n  1 = Pq
+m = 12m1bðnÞ
+m , with bðnÞ
+m 2 f0, 1g and deﬁning zðnÞ
+m  ð1ÞbðnÞ
+m , the
+coefﬁcients are uniquely determined by
+Jm1ml = 1
+N
+X
+N
+n = 1
+ðln nÞ zðnÞ
+m1   zðnÞ
+ml , l = 0, 1, . . . , q:
+ð8Þ
+The logarithmic spectrum is thereforenot tied to a unique microscopic
+realization, but admits an exact representation in a spin system. In our
+experiments, we prepare the corresponding thermal state directly by
+engineering the level populations of the density matrix on a nuclear
+spin quantum processor. More generally, we present a universal
+quantum algorithm that prepares states and Hamiltonians with a
+logarithmic spectrum to arbitrary precision using only polynomial
+resources (see Section II D).
+We deﬁne the average accumulated phase factor as
+Lðβ, tÞ = Tr ρseiH0tσ1
+z
+
+
+,
+ð9Þ
+where eiH0tσ1
+z imprints a phase factor (−1)n+1n−it on the n-th population
+of ρs. This yields
+Lð β, tÞ =
+1
+Z β, H0
+ð
+Þ
+P
+N
+n = 1
+ð1Þn + 1 nβit
+!
+N!1
+121ð β + itÞ
+ð
+Þ ζ β + it
+ð
+Þ
+Z β, H0
+ð
+Þ
+ð10Þ
+in the thermodynamic limit. Hence, Lðβ, tÞ vanishes precisely when
+ζ(β + it) has a nontrivial zero. These zeros signal DQPTs in mixed states
+marked by non-analyticities in time 22. To connect these dynamical
+transitions
+to
+their
+equilibrium
+analogues,
+we
+invoke
+the
+Choi–Jamiołkowski isomorphism. The mixed state ρs is mapped to
+the puriﬁcation
+∣ρs
+
+= Zð β, H0Þ1=2 X
+N
+n = 1
+nβ=2∣ni∣nia
+ð11Þ
+in an enlarged Hilbert space H  Ha, where the ancilla space Ha is
+isomorphic to the physical one. Under evolution generated by H0 on
+the physical subsystem, the puriﬁed state evolves as
+∣ρðtÞ
+
+= ðeiH0t  IaÞ∣ρs
+
+,
+ð12Þ
+and the accumulated phase factor can be written as
+Lðβ, tÞ = ρs
+
+∣eiH0tσz
+1∣ρs
+
+:
+ð13Þ
+In equilibrium boundary statistical mechanics, where ZBðβ, R, HÞ =
+hψajeRHjψbi19,31, choosing ∣ψa
+
+= ∣ρs
+
+, ∣ψb
+
+= σz
+1∣ρs
+
+, and R = it gives
+ZBðβ, it, H0  IaÞ = Lðβ, tÞ,
+ð14Þ
+which identiﬁes Lðβ, tÞ as the boundary partition function between the
+boundary states ∣ρs
+
+and σz
+1∣ρs
+
+, analytically continued to complex time.
+In the thermodynamic limit, the associated free-energy density is
+deﬁned as20,32,33
+F 1ð β, tÞ =  lim
+N!1
+1
+log N ln jZBð β, it, H0  IaÞj
+=  lim
+N!1
+1
+log N ln jLðβ, tÞj,
+ð15Þ
+whose non-analyticities, signaling DQPTs, occur precisely at the non-
+trivial zeros of the zeta function. We further deﬁne the thermodynamic
+entropy density as
+Sðβ, tÞ =  ∂
+∂T
+β1F 1ðβ, tÞ
+
+
+=  F 1ðβ, tÞ + β ∂
+∂β F 1ðβ, tÞ,
+ð16Þ
+Article
+https://doi.org/10.1038/s41467-026-74935-8
+Nature Communications|
+(2026) 17:8163
+3
+
+whose asymmetric jumps across the nontrivial zeros reveal the
+underlying non-equilibrium nature of the dynamical phase transitions
+(see Methods IV B for more details). For β slightly below a zero, the
+increase of Sðβ, tÞ corresponds to a loss of quantum coherence and an
+effective ﬂow of information into internal degrees of freedom,
+consistent with thermalization. For β slightly above the zero, the
+decrease of Sðβ, tÞ reﬂects information backﬂow and partial re-
+coherence, signaling a revival of order. Thus, each nontrivial zero
+represents a non-equilibrium critical point at which the direction of
+information ﬂow reverses—a dynamical analog of the critical line in the
+RH, detailed in Supplementary Note 3.
+If the RH holds, such singularities occur exclusively along the
+critical line β = 1/2, analogous to Lee-Yang zeros in thermal systems32–34.
+For other temperatures β ≠1/2, no such phenomenon arises. In this
+interpretation, the RH asserts that the system exhibits a unique non-
+equilibrium critical phase transition in the complex (β, t) plane,
+separating
+dynamically distinct regions
+of quantum evolution.
+According to equation (15), the same correspondence can also be
+realized in a pure-state setting, and we omit the detailed derivation
+here for brevity.
+To access Lðβ, tÞ experimentally, we introduce a probe spin pre-
+pared in the superposition state ∣+ i = ð∣"
+
++ ∣#
+
+Þ=
+ﬃﬃﬃ
+2
+p
+and couple it to
+the system prepared in the thermal state ρs. Speciﬁcally, the ∣#
+
+branch of the probe ﬁrst evolves under the Hamiltonian
+Hc1 = λ∣#
+
+#
+
+∣ ðI  σ1
+zÞ
+ð17Þ
+for a duration t0, satisfying λt0 = π/2. This imprints a phase factor of
+(−1)n+1 onto the n-th component ∣ni n
+h ∣of ρs. The branch then evolves
+under
+Hc2 = ∣#
+
+#
+
+∣ H0
+ð18Þ
+for a duration t, while the ∣"
+
+branch remains unperturbed to serve as
+a reference. By measuring the probe coherence, we can directly extract
+hσxi + ihσyi = Tr ρseiH0tσ1
+z
+
+
+= Lðβ, tÞ,
+ð19Þ
+thereby providing experimental access to the dynamical signatures.
+Loschmidt echo corresponding to the RH
+We further construct a complementary quantum system whose
+Loschmidt amplitude is directly linked to the zeta function and is
+better suited to probing high-order zeros. As in the ﬁrst scheme, we
+begin with the physical Hamiltonian Hph
+0 with logarithmic spectrum En
+deﬁned in Eq. (2), and adopt the same dimensionless variables as in
+Eq. (4), namely the inverse temperature β, the rescaled Hamiltonian
+H0, and the time t. The system is then prepared in the thermal equi-
+librium state ρs of H0 and coupled to a probe spin, forming the com-
+posite mixed state ρ0 = ∣"
+
+"
+
+∣ ρs.
+The joint system then evolves for a duration t under the time-
+dependent Hamiltonian
+Hcðt0Þ = σx 
+H0  _θðt0ÞI
+
+
+,
+ð20Þ
+where θ(t) is the Riemann–Siegel theta function associated with ζ(1/
+2
++
+it),
+and
+the
+corresponding
+time-evolution
+operator
+is UðtÞ = exp½i
+R t
+0 Hcðt0Þ dt0.
+The generalized Loschmidt amplitude (GLA) is deﬁned as the
+overlap of the initial density matrix with the time-evolution operator22,
+Gðβ, tÞ = Tr½eiR t
+0 Hcdt0ρ0:
+ð21Þ
+Using the Riemann–Siegel approximation35 for the Hardy Z-function
+ZðtÞ = eiθðtÞζð1
+2 + itÞ, the GLA G
+1
+2 , t
+	
+
+can be written as
+G 1
+2 , t
+	
+
+=
+1
+2 Z
+1
+2, H0
+ð
+Þ
+eiθðtÞ P
+N
+n = 1
+n1
+2it + eiθðtÞ P
+N
+n = 1
+n1
+2 + it
+
+
+!
+N =
+ﬃﬃﬃﬃﬃﬃﬃ
+t=2π
+p
+t!1
+eiθðtÞ ζ
+1
+2 + it
+ð
+Þ
+2 Z
+1
+2, H0
+ð
+Þ :
+ð22Þ
+in the joint thermodynamic and long-time limit. The Loschmidt echo
+(LE) is deﬁned as BðtÞ = jGðtÞj2, from which the Loschmidt rate (or
+dynamical free energy) is obtained as
+F 2ðtÞ =  lim
+N!1
+1
+log N ln BðtÞ:
+ð23Þ
+At β = 1
+2, the LE exhibits vanishing-and-revival dynamics, vanishing at the
+critical times tc that correspond to the nontrivial zeros. These zeros of
+the LE generate non-analyticities in F 2ðtÞ, signaling DQPTs20,22. As the
+evolution time t increases, this correspondence becomes increasingly
+accurate. Taken together, the two systems ﬁt into a uniﬁed framework
+based on a probe qubit coupled to a logarithmic spectrum, while
+differing in observables, dynamical protocols, and asymptotic limits.
+We demonstrate that the GLA can be accessed via the expectation
+value of σz on the probe spin (see Methods IV C). Figure 2a shows
+numerical simulations of a three-spin system reproducing the zeros of
+the GLA corresponding to nontrivial zeros with imaginary parts in the
+range [420, 450]. Extending to a ten-spin system enables access to zeros
+with imaginary parts in [6.595 × 106, 6.595 × 106 + 10], corresponding to
+the 13502344-th to 13502366-th zeros, as shown in Fig. 2b. An eighteen-
+spin system further captures the DQPTs linked to the 1012-th and nearby
+zeros, as shown in Fig. 2c. Notably, the deviation between the estimated
+zeros and exact zeros decreases with increasing t, indicating improved
+precision of correspondence at larger zeros. In addition, we consider a
+pure initial state 1
+C
+PN
+n = 1nβ=2∣0i∣ni evolving under the system Hamil-
+tonian Hc. This system likewise exhibits DQPTs, characterized by non-
+analytic behavior in the Loschmidt amplitude, whose zeros correspond
+to the nontrivial zeros of the zeta function.
+Experimental veriﬁcation using nuclear spins
+The connection between physical quantum systems and the RH offers
+a novel method for experimentally probing the behavior of the zeta
+function through controlled Hamiltonian dynamics. As a proof-of-
+principle demonstration, we realized a ﬁve-qubit system on a nuclear
+magnetic resonance (NMR) platform. The qubits are encoded in the
+nuclear spins of a 1-bromo-2,4,5-triﬂuorobenzene molecule, partially
+aligned
+in
+the
+nematic
+liquid
+crystal
+solvent
+N-(4-methox-
+ybenzaldehyde)-4-butylaniline (MBBA)36–38. The molecule consists of
+three 19F nuclei and two 1H nuclei. A single nuclear spin serves as the
+probe qubit, with the remaining spins constituting a sixteen-
+dimensional working system. The effective Hamiltonian of this ﬁve-
+qubit system in the rotating frame is given by
+HNMR =
+X
+4
+j = 0
+πνj
+σ j
+z
+2 +
+X
+j < k
+π
+2
+Jjk + 2Djk
+
+
+σ j
+zσk
+z,
+ð24Þ
+where σj
+z is the Pauli-z operator on the j-th spin, νj denotes the chemical
+shift of the j-th spin, and (Jjk + 2Djk) represents the effective coupling
+strength between spins j and k. Here, Jjk and Djk correspond to the
+scalar and residual dipolar couplings, respectively. The molecular
+structure and Hamiltonian parameters are illustrated in Fig. 3a, b,
+respectively. All experiments were performed on a Bruker Avance III
+600 MHz spectrometer at T = 305 K.
+There are two major challenges in experimentally realizing this
+constructed Hamiltonian dynamics. The ﬁrst is the preparation of
+Article
+https://doi.org/10.1038/s41467-026-74935-8
+Nature Communications|
+(2026) 17:8163
+4
+
+thermal states, and the second is the implementation of controlled
+dynamical evolution. NMR systems are ensemble-based and naturally
+begin in a thermal equilibrium state
+ρeq  γF
+X
+3
+i = 1
+σi
+z + γH
+X
+5
+i = 4
+σi
+z,
+ð25Þ
+where we ignore the identity component for convenience and γF and
+γH denote the gyromagnetic ratios of the ﬂuorine and hydrogen nuclei,
+respectively. Starting from the initial state ρeq, we can redistribute the
+level populations via coherent control and subsequently eliminate the
+off-diagonal elements to arrive at a state close to the target
+ρ0ð βÞ  σz 
+X
+16
+n = 1
+nβ∣ni n
+h ∣:
+ð26Þ
+Figure 3c presents our procedure for preparing the thermal state (see
+Methods IV A for more details).
+In our experiment, two controlled Hamiltonian dynamics under
+Hc1 and Hc2 are implemented. The ﬁrst eiHc1t0 corresponds to a
+controlled-Z gate between the probe spin and the last spin. The second
+eiHc2t can be decomposed into multiple multi-qubit controlled-Rz(θn)
+operations. The rotation angles are given by θn = t ln n, where t denotes
+the imaginary part of s. Finally, we measure the probe-spin coherence
+through the element
+Lðβ, tÞ = "
+
+∣Utotρ0Uy
+tot∣#
+
+,
+ð27Þ
+where the total evolution operator is
+Utot = eiHc2teiHc1π=ð2λÞðH  IÞ:
+ð28Þ
+Figure 3 illustrates the full experimental sequence, from initial state
+preparation to ﬁnal measurement. To enhance control accuracy, we
+implement all coherent operations and unitary evolutions using
+shaped pulses optimized via a gradient ascent pulse technique39,
+yielding a numerical simulation ﬁdelity exceeding 99.5%.
+We conducted three types of experiments to comprehensively
+validate the theoretical predictions. First, we prepare the thermal state
+ρ0(β) with β = 0.5 (corresponding to the RH) and vary the evolution
+time t under the Hamiltonian Hc2. Second, we prepare another thermal
+state ρ0(β) with β = 0.3, which lies off the critical line of the RH, and
+again vary the evolution time t. Third, we ﬁx the evolution time to the
+imaginary part of the ﬁrst nontrivial zero, and scan β over the range
+[0.1, 0.9]. Then the coherence dynamics Lðβ, tÞ of the probe qubit is
+measured in each conﬁguration. Figure 4a, b present the coherence
+dynamics Lðβ, tÞ under different values of β. When β = 0.5, the
+coherence of the probe spin exhibits recurring vanishing-and-revival
+behavior, and the points where both the real and imaginary parts of
+Lðβ, tÞ approach zero correspond to nontrivial zeros of the zeta
+function. As a demonstration, coherence zeros at t1 = 14.12 (tth
+1 = 14:13),
+t2 = 20.96 (tth
+2 = 21:02), t3 = 25.09 (tth
+3 = 25:01), t4 = 30.44 (tth
+4 = 30:43),
+and t5 = 32.93 (tth
+5 = 32:94) are extracted through polynomial ﬁtting of
+the experimental data and agree well with the ideal zeros of the zeta
+function. In contrast, for β = 0.3, the coherence dynamics show no
+discernible vanishing-and-revival behavior, and no signiﬁcant coher-
+ence zeros are observed.
+The third conﬁguration, scanning β at ﬁxed t, is shown in Fig. 4c,
+where Lðβ, tÞ exhibits a clear minimum at β = 0.5, conﬁrming that the
+zero-crossing behavior is uniquely tied to the critical line. Figure 5
+illustrates the behavior of the free-energy density as a function of β and
+t. As the system size increases, coherence zeros and DQPTs occur upon
+crossing the critical line β = 0.5, in accordance with the RH. We also
+observe a regularly spaced sequence of singularities on the line β = 1,
+Fig. 2 | Generalized Loschmidt amplitude G 1
+2 , t
+	
+
+across different imaginary
+part regions. a Nontrivial zeros with imaginary parts in the range [420, 450],
+corresponding to the 216th to 235th zeros, obtained using a 3-spin quantum sys-
+tem. b Nontrivial zeros with imaginary parts in the range [6.595 × 106,
+6.595 × 106 + 10], corresponding to the 13502344-th to 13502366-th zeros, obtained
+using a 10-spin quantum system. c Nontrivial zeros with imaginary parts in the
+range [267653395648, 267653395660], corresponding to the (1012 −3)-th to
+(1012 + 43)-th zeros, obtained using an 18-spin quantum system. The blue solid line
+shows the simulated G 1
+2 , t
+	
+
+, while the red dashed line shows Z
+1
+2 + it
+	
+
+= 2Z 1
+2 , H0
+	
+
+	
+
+.
+Vertical red dashed lines mark the exact zeros, and blue dashed and dotted lines
+mark the zeros estimated by the quantum system. Insets show the deviation δt
+between the exact zeros and the estimated zeros, which decreases with increasing t.
+The zero-index annotations are assigned using tabulated zeta-zero data from
+LMFDB for panels (a, b) and from Odlyzko’s tabulation for panel (c)3.
+Article
+https://doi.org/10.1038/s41467-026-74935-8
+Nature Communications|
+(2026) 17:8163
+5
+
+arising from the poles of 1/(1 −21−s) and reﬂecting the inapplicability of
+the Dirichlet-series representation along β = 1.
+Thus, the non-analyticity of F 1ðβ, tÞ at nontrivial zeros provides a
+physical manifestation of the Riemann Hypothesis: the hypothesis is
+equivalent to the statement that the dynamical free-energy density of a
+suitably constructed quantum system becomes singular only along the
+critical line
+β
+=
+0.5
+in
+the
+complex
+temperature-time plane
+within 0 < β < 1.
+Fig. 4 | The coherence dynamics Lðβ, tÞ of the probe qubit and the
+nontrivial zeros. a, b Measured probe-qubit coherence Lðβ, tÞ as a function of
+evolution time t for β = 0.3 (a) and β = 0.5 (b). c Measured probe-qubit coherence
+jLðβ, tÞj as a function of β at ﬁxed time t = 14.134725, equal to the imaginary part of
+the ﬁrst nontrivial zero. Solid lines and open circles denote numerically calculated
+and experimental values of the probe spin coherence, respectively. d, e Behavior of
+the coherence as a function of t for ﬁxed β = 0.3 (d) and β = 0.5 (e). The ﬁrst, third
+and ﬁfth nontrivial zeros are identiﬁed at times where both the real part 〈σx〉and
+the imaginary part 〈σy〉vanish simultaneously. For β = 0.5, which lies on the
+critical line of the RH, the probe-qubit coherence exhibits multiple zeros that match
+the nontrivial zeros one-to-one, whereas for β = 0.3, away from the critical line, no
+such zeros are observed. f The behavior of the coherence for β ∈[0.35, 0.65] at a
+ﬁxed t corresponding to the ﬁrst nontrivial zero of the zeta function, showing that
+the coherence zero is approached near β = 0.5. The circles show the mean, and the
+error bars denote one standard deviation of the measured values from repeated
+experiments in this ﬁgure.
+-76.7
+H2
+F3
+H1
+F2
+F1
+F1
+H1
+F2
+F3
+H2
+55719.4
+66674.3
+70351
+-4015.8
+361.52
+152.7
+2017.9
+65.5
+-3981.6
+1641.3
+67.3
+134.2 1987.9 -16.4
+a
+ρeq
+ρ1
+ρ2
+b
+H2
+F3
+H1
+F2
+F1
+σz
+…
+…
+1
+λ
+15
+λ
+1
+φ
+15
+φ
+Zθ1
+Zθ2
+Zθ3
+Zθ14 Zθ15
+Zθ16
+H
+Z
+…
+…
+…
+…
+c
+d
+e
+f
+ρeq
+ρ1
+ρ2
+0000
+0001
+1110
+1111
+1110
+0000
+0001
+1111
+…
+…
+0
+0000
+0001
+1110
+1111
+1110
+0000
+0001
+1111
+σz
+σz
+σz
+σz
+1
+0
+1
+16
+0
+32
+16
+0
+32
+16
+0
+32
+16
+0
+32
+16
+0
+32
+16
+0
+32
+Re(ρij)
+0
+2.5
+-2.5
+H
+F
+H
+F
+F
+Br
+Z
+Zθ1 Zθ2 Zθ3
+Zθ14 Zθ15 Zθ16
+Fig. 3 | Physical system and quantum circuit for simulating the Riemann zeta
+function. a Molecular structure of the 1-bromo-2,4,5-triﬂuorobenzene. The ﬁve
+nuclear spins are encoded as qubits, with the F1 spin serving as the probe qubit to
+extract the average accumulated phase factor. b Measured Hamiltonian para-
+meters. The chemical shifts νi are shown on the diagonal, while the off-diagonal
+elements represent the coupling strengths (Jjk + 2Djk), both in units of Hz. c Quan-
+tum circuit implementation, including thermal state preparation, controlled
+dynamical evolution, and coherence measurement. H denotes the Hadamard gate
+acting on the probe qubit. Coherent operations for state preparation and multi-
+qubit quantum gates are realized using shaped control pulses. The parameters λi
+and φi for population transfer are determined by β, and the parameters θi are
+determined by t. d–f Effective population evolution during state preparation. Here,
+we employ the traceless deviation density matrix to describe the state evolution.
+Article
+https://doi.org/10.1038/s41467-026-74935-8
+Nature Communications|
+(2026) 17:8163
+6
+
+Gate-based quantum computing framework for probing the RH
+Since the two dynamical constructions introduced above admit many-
+body spin representations with exponentially many interaction terms,
+their direct realization on a gate-based quantum computer is highly
+nontrivial40. Therefore, we propose an efﬁcient computational frame-
+work that enables their realization on a universal gate-based quantum
+computer. The constructions in Sections II A and II B can be reduced to
+two fundamental tasks:
+(i)
+Preparation of the initial thermal state, which encodes the real
+part of the zeta argument.
+(ii)
+Simulation of time evolution under the target Hamiltonian,
+which encodes the imaginary part.
+According to the Choi-Jamiołkowski isomorphism, the initial ther-
+mal state can be encoded as a pure state ∣ψ0
+
+= 1
+C
+PN
+n = 1nβ=2∣ni. It can be
+prepared to precision ε using a polynomial number of qubits and basic
+gates.
+We
+further
+show
+that
+the
+evolution
+UðtÞ = eiH0t
+for
+H0 = PN
+n = 1 ln n∣ni n
+h ∣can also be implemented to precision ξ with
+polynomial resources, and controlled evolutions incur the same poly-
+nomial overhead.Theseguarantees ensure scalability ofour method on a
+gate-based quantum computer (see Methods IV D and Fig. 6 for details).
+We then apply this framework to accelerate the veriﬁcation and
+probing of nontrivial zeros via the Riemann–Siegel formula, which
+decomposes the zeta function into two partial summations that can be
+evaluated using systems similar to those in Section II A. To achieve a
+total error δ in the zeta function, the quantum circuit complexities are
+bounded by
+Polyðlog δ1, log jtj, log ð1  βÞ1, log β1Þ:
+ð29Þ
+The corresponding sample complexities for the two summations are
+bounded by
+Rs1 = Oðδ1Þð1  βÞ1jtjð1βÞ=2,
+Rs2 = Oðδ1Þβ1jtjð1βÞ=2:
+ð30Þ
+Hence, the overall computational complexity (See Methods IV E for
+details) is bounded by
+δ1jtjð1βÞ=2Polyðlog δ1, log jtj, ð1  βÞ1, β1Þ:
+ð31Þ
+Specializing to locating and verifying nontrivial zeros, the known
+explicit zero-free region41 implies that the relevant range is
+1
+2 ≤β ≤1 
+1
+O
+	
+ðln jtjÞ2=3ðln ln jtjÞ1=3
+ :
+ð32Þ
+In this regime, the complexity bound simpliﬁes to
+δ1jtjð1βÞ=2Polyðlog δ1, log jtjÞ:
+ð33Þ
+Thus, the ∣t∣-dependence reduces from
+ﬃﬃﬃﬃﬃ
+jtj
+p
+(direct Riemann-Siegel
+evaluation) to ∣t∣(1−β)/2 (at most ∣t∣1/4), yielding at least a quadratic
+speedup. Table 1 summarizes these complexity bounds.
+Discussion
+In this work, we have established a direct correspondence between the
+RH and the dynamics of engineered quantum many-body systems, and
+have experimentally veriﬁed this connection on a physical platform.
+The mapping between nontrivial zeros and DQPTs reveals a deep and
+Fig. 5 | Free-energy density F 1ðβ, tÞ as a function of β and t. a–c Theoretical
+F 1ðβ, tÞ for different system sizes d = log N (a, d = 4; b, d = 8; c, d →∞). In the
+thermodynamic limit, F 1ðβ, tÞ exhibits discontinuous jumps from ð1  βÞ ln 2 to ln 2
+at β = 1/2, signaling DQPTs. d–f Experimental signatures of the non-analytic
+behavior in the free-energy density. Error bars correspond to one standard
+deviation from repeated experiments. d, e Cuts of F 1ðβ, tÞ as a function of t at ﬁxed
+β = 0.3 (d) and β = 0.5 (e), comparing theoretical predictions (th) for different d
+with experimental data (exp). In e, critical times are marked at t1 = 14.12, t2 = 20.96,
+t3 = 25.09, t4 = 30.44 and t5 = 32.93, whereas no such behavior is observed in (d),
+consistent with the RH. f F 1ðβ, tÞ as a function of β at ﬁxed t = 14.134725, corre-
+sponding to the imaginary part of the ﬁrst nontrivial zero.
+Article
+https://doi.org/10.1038/s41467-026-74935-8
+Nature Communications|
+(2026) 17:8163
+7
+
+unexplored bridge between number theory and quantum physics. In
+particular, we have demonstrated that a thermally equilibrated quan-
+tum system, when driven by a tailored Hamiltonian, undergoes time-
+domain phase transitions whose critical points align precisely with the
+nontrivial zeros. To verify large nontrivial zeros, we also construct a
+quantum system that undergoes time-domain phase transitions whose
+critical points align increasingly accurately with the large nontrivial
+zeros. Together, these results suggest that the mysterious structure of
+the zeta function may admit a physical interpretation in terms of
+quantum critical dynamics. Conversely, the DQPTs triggered by the
+nontrivial zeros exhibit extreme sensitivity, enabling high-precision
+measurements of temperature and time.
+Although the logarithmic spectrum En = ln n does not occur in
+natural condensed-matter systems, it forms the foundation of our two
+engineered quantum many-body constructions. We demonstrate that
+both settings can be efﬁciently implemented on universal quantum
+hardware with polynomial time complexity, and numerical veriﬁcation
+of the RH can be achieved by our method with at least a quadratic
+speedup over classical methods. Beyond this, our results suggest that
+nontrivial zeros also encode signatures of information propagation in
+Fig. 6 | Construction of the quantum system on a gate-based quantum com-
+puter. a The initial state is prepared as ∣ψ0
+
+= ∣ψ0
+
+1 + ∣ψ0
+
+2  ∣ψ0
+
+3 (normalization
+omitted). The components ∣ψ0
+
+1, ∣ψ0
+
+2, and ∣ψ0
+
+3 correspond to the blue, orange,
+and slashed yellow regions, respectively. The states ∣ψ0
+
+1 and ∣ψ0
+
+2 are generated
+using controlled rotations and Grover’s amplitude-splitting method, respectively.
+b The time-evolution operator UðtÞ = eiH0t is implemented in ﬁve steps: logarithm
+computation, multiplication by t, phase imprinting, inverse multiplication, and
+inverse logarithm computation. c, d The polynomial and logarithmic oracles serve
+as preliminary building blocks for implementing the time-evolution operator and
+preparing the initial state.
+Article
+https://doi.org/10.1038/s41467-026-74935-8
+Nature Communications|
+(2026) 17:8163
+8
+
+quantum systems, motivating future studies of their relationship to
+out-of-time-ordered correlators (OTOCs)42–44 and other diagnostics of
+quantum chaos.
+Given the inherent difﬁculty of verifying the RH using classical
+computation, our approach opens a path toward leveraging quantum
+computing as an algorithmic tool for probing one of mathematics’
+most enduring open problems. We note that more efﬁcient classical
+methods for evaluating the zeta function on the critical line β = 1
+2 are
+known3,45. Our ongoing work explores how the proposed framework
+can accelerate the most time-consuming subroutines of these meth-
+ods, thereby further improving their overall efﬁciency.
+Moreover, the framework introduced here naturally extends to
+other series and special functions, including Dirichlet L-functions, and
+thus deﬁnes a broader class of number-theoretic benchmarks for
+demonstrating quantum advantage46. Since the prime number dis-
+tribution can be expressed in terms of the zeta function and related L-
+functions, the same ideas may be adapted to quantum simulations of
+prime-counting observables and to the evaluation of quantities such as
+the Witten index in string and supersymmetric ﬁeld theories.
+Methods
+Thermal state preparation in experiment
+The preparation sequence, shown in the main text, consists of two
+analytically designed line-selective shaped pulses, four pulsed ﬁeld
+gradients, and three SWAP gates. The ﬁrst shaped pulse selectively
+depletes population from all states except ∣"""""
+
+and ∣#####
+38,
+which serve as logical sources for encoding the thermal-equivalent
+distribution. A gradient pulse is applied immediately afterward to
+suppress non-diagonal coherence terms generated in this step. The
+second shaped pulse redistributes the populations from ∣"""""
+
+and
+∣#####
+
+into a target position matching the desired thermal dis-
+tribution. This step introduces zeroth-order coherences that cannot be
+fully removed by gradients alone. To address this, three SWAP
+operations are inserted before the ﬁnal two gradient pulses, transfer-
+ring coherence terms from homonuclear ﬂuorine spins to hetero-
+nuclear channels, where they can be completely dephased. Below, we
+detail the function of each component in the preparation protocol.
+The thermal equilibrium state of this ﬁve-qubit system is highly
+mixed. It can be described by a deviation density matrix of the form
+ρeq / γFðσ1
+z + σ2
+z + σ3
+zÞ + γHðσ4
+z + σ5
+zÞ,
+ð34Þ
+where γH and γF are the gyromagnetic ratios for 1H and 19F nuclei, and
+σi
+z is the Pauli-z operator for the i-th qubit. This matrix is traceless and
+diagonal, with the maximal populations residing in the ∣"""""
+
+and
+∣#####
+
+states. Furthermore, pairs of symmetric basis states (e.g.,
+∣"#"#"
+
+and ∣#"#"#
+
+) possess populations of equal magnitude but
+opposite sign, satisfying P∣"#"#"i + P∣#"#"#i = 0. This intrinsic symmetry
+is key to our line-selective approach, allowing us to manipulate
+populations.
+The ﬁrst shaped pulse is designed to selectively deplete the
+population of all energy levels except for the ∣"""""
+
+and ∣#####
+
+states38, which serve as the source states for subsequent redistribution.
+This is achieved by applying a series of analytically constructed π/2
+line-selective rotations between all pairsof symmetric basisstates (e.g.,
+∣"#"#"
+
+and ∣#"#"#
+
+). For a given pair of states, ∣xi and ∣xi, the initial
+population imbalance is transformed by an Ry(π/2) rotation as
+a
+0
+0
+a
+
+
+!
+Ryðπ=2Þ
+0
+a
+a
+0
+
+
+:
+ð35Þ
+Since these pairs have opposite initial populations in ρeq, applying a π/
+2 rotation about the y-axis effectively converts the diagonal population
+matrix to a purely off-diagonal one, which is then removed by a
+subsequent gradient pulse along the z-direction. Because the system
+has an odd number of qubits, this procedure avoids generating zeroth-
+order coherences. A pulsed ﬁeld gradient is then applied to remove
+any residual higher-order coherences, leading to a diagonal inter-
+mediate state ρ1 in which only the ∣"""""
+
+and ∣#####
+
+populations
+remain.
+The second shaped pulse redistributes the populations of
+∣"""""
+
+and ∣#####
+
+into a coherent superposition that encodes the
+target thermal-equivalent state. This state is represented by
+ρ = σz 
+X
+16
+n = 1
+nβ
+N 2 ∣ni n
+h ∣,
+ð36Þ
+with the normalization constant N . This is accomplished by a
+sequence of analytically determined line-selective rotations that
+couple the source basis to the remaining basis. Each rotation is
+precisely calculated to transfer a fraction of the population from
+∣"""""
+
+or ∣#####
+
+to a selected target basis. The rotation angles are
+derived from
+θk = 2sin1
+ﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃ
+pk=Prem
+p
+
+
+,
+ð37Þ
+where pk is the target population of the k-th basis and Prem is the
+remaining unallocated population. This asymmetric redistribution
+process inevitably introduces zeroth-order coherences, particularly
+among homonuclear ﬂuorine spins, which cannot be effectively
+suppressed by gradient ﬁelds alone.
+To address the issue of residual homonuclear coherences, we
+employ a SWAP-assisted gradient scheme. The core idea is to transfer
+these coherences from homonuclear channels to heteronuclear ones,
+where they can be completely dephased by a gradient pulse. The
+sequence begins with a SWAP(1,4) gate to exchange the states of qubit
+1 (19F) and qubit 4 (1H). This operation converts ﬂuorine-ﬂuorine
+coherences (e.g., between qubits 1 and 2) into heteronuclear coher-
+ences that can be dephased by the ﬁrst gradient pulse. A second
+SWAP(1,4) gate restores the original logical labeling. To eliminate the
+remaining ﬂuorine-ﬂuorine coherence between qubits 2 and 3, we next
+apply a SWAP(2,4) gate, shifting this coherence to the heteronuclear
+(3,4) channel, which is then removed by the second gradient pulse. For
+increased efﬁciency, the two middle SWAP gates, SWAP(1,4) and
+Table 1 | Complexity bounds for evaluating ζ(β + it) with precision δ across different regions using our quantum algorithm,
+compared to classical approaches
+Region of β
+Sample complexity Rs
+Total complexity RcRs
+0 < β < 1
+Oðδ1Þjtjð1βÞ=2ðβ1 + ð1  βÞ1Þ
+δ1jtjð1βÞ=2Polyðlog δ1, log jtj, ð1  βÞ1, β1Þ
+Possible zero region
+Oðδ1Þjtjð1βÞ=2ðβ1 + ð1  βÞ1Þ
+δ1jtjð1βÞ=2Polyðlog δ1, log jtjÞ
+β = 1
+2
+Oðδ1Þjtj1=4
+δ1jtj1=4Polyðlog δ1, log jtjÞ
+Classical method
+~ ∣t∣(Alternating series)50
+~ ∣t∣1/2 (Riemann–Siegel formula)35
+The possible zero region, deﬁned in Eq. (87), is the regime of interest for locating and verifying nontrivial zeros.
+Article
+https://doi.org/10.1038/s41467-026-74935-8
+Nature Communications|
+(2026) 17:8163
+9
+
+SWAP(2,4), can be combined into a single SWAP(1,2) operation. A ﬁnal
+SWAP(2,4) then returns the system to its original qubit conﬁguration.
+This sequence of SWAP gates and gradient pulses ensures that all
+zeroth-order coherences are effectively eliminated, yielding a clean
+thermal-equivalent state with a numerical ﬁdelity exceeding 99%.
+Free-energy and entropy density singularities
+The free-energy density is deﬁned as
+F 1ðβ, tÞ = lim
+N!1  1
+d ln jLðβ, tÞj,
+ð38Þ
+where d = log N denotes the number of degrees of freedom. According
+to equation (10), the accumulated phase factor can be expressed as
+Lðβ, tÞ = SNðsÞ=Zðβ, H0Þ,
+ð39Þ
+where SNðsÞ = PN
+n = 1ð1Þn + 1ns. We prove that (see Supplementary
+Notes 1 and 2)
+lim
+N!1  1
+d lnðjSNðsÞjÞ =
+β ln 2,
+ζðsÞ = 0,
+0,
+Otherwise,
+
+ð40Þ
+and
+lim
+N!1  1
+d ln Zðβ, H0Þ
+	
+
+=
+ðβ  1Þ ln 2,
+0 < β < 1,
+0,
+β > 1:
+
+ð41Þ
+Combining these results, the free-energy density in the thermody-
+namic limit is given by
+F 1ð β, tÞ
+= lim
+N!1  1
+d ln jSNðsÞj
+	
+
+ ln Zð β, H0Þ
+	
+
+	
+
+=
+ln 2,
+ζðsÞ = 0,
+ð1  βÞ ln 2,
+0 < β < 1, ζðsÞ≠0,
+0,
+β > 1:
+8
+>
+<
+>
+:
+ð42Þ
+Therefore, the thermodynamic entropy density is given by
+Sð β, tÞ =  F 1ðβ, tÞ + β ∂
+∂β F 1ð β, tÞ
+=
+ ln 2,
+0 < β < 1, ζðsÞ≠0,
+0,
+β > 1:
+
+ð43Þ
+in the thermodynamic limit. At the nontrivial zeros of the zeta func-
+tion, the free-energy density is nonanalytic, and the entropy density
+undergoes discontinuous jumps, providing strong evidence for the
+occurrence of DQPTs.
+Measurement of the Loschmidt amplitude
+We consider a system, similar to the one described in Section II B,
+designed to measure the Loschmidt amplitude deﬁned in Eq. (22). The
+composite system is initialized in the same state ρ0 = ∣"
+
+"
+
+∣ ρs, but
+now evolves under the coupling Hamiltonian Hc2 = 1
+2 σx  ðH0  _θðtÞIÞ,
+which is one half of the Hamiltonian Hc. The corresponding time-
+evolution
+operator
+is
+therefore
+UðtÞ = expði
+R t
+0 Hc2dt0Þ =
+expð i
+2
+R t
+0 Hcdt0Þ. Deﬁning AðtÞ = H0t  θðtÞI, the density matrix after
+evolution is
+Uρ0Uy = 1
+2 ∣+ i +
+h
+∣ ρs + eiAðtÞ∣+ i 
+h ∣ ρs
+
++ eiAðtÞ∣i +
+h
+∣ ρs + ∣i 
+h ∣ ρs
+
+,
+ð44Þ
+where ∣+ i =
+1ﬃﬃ
+2
+p ð∣"
+
++ ∣#
+
+Þ and ∣i =
+1ﬃﬃ
+2
+p ð∣"
+
+ ∣#
+
+Þ. The reduced den-
+sity matrix of the probe qubit is
+ρprobe = 1
+2 I + 1
+2 ReSðtÞσz + 1
+2 Im SðtÞσy,
+ð45Þ
+in which
+SðtÞ = Tr½eiAðtÞρs =
+1
+Zð1
+2 , H0Þ eiθðtÞ X
+N
+n = 1
+n1=2it:
+ð46Þ
+Consequently,
+measuring
+〈σz〉
+on
+the
+ﬁrst
+qubit
+yields ReSðtÞ = Gð1
+2 , tÞ.
+Gate-based realization of quantum systems
+In this subsection, we describe the construction of the target initial
+state
+∣ψ0
+
+= 1
+C
+X
+N
+n = 1
+nβ=2∣ni
+ð47Þ
+and the evolution operator
+UðtÞ = eiH0t,
+H0 =
+X
+N
+n = 1
+lnðnÞ∣ni n
+h ∣
+ð48Þ
+on a standard gate-based quantum computer as shown in Fig. 6. We
+begin with two preliminary lemmas. The ﬁrst establishes a quantum
+oracle for evaluating polynomial functions, while the second provides
+a procedure for approximating logarithmic functions to the required
+precision. Together, these results serve as building blocks for our main
+results: a method for constructing the initial state (Theorem 3) and an
+efﬁcient implementation of the evolution operator (Theorem 4).
+Lemma 1. (Polynomial oracle) Let O(f) denote an oracle implementing
+the transformation
+X
+x
+αx∣xi∣0i7!
+X
+x
+αx∣xi ∣f ðxÞ
+
+,
+ð49Þ
+where f(x) is a polynomial of degree at most D. Suppose the coefﬁ-
+cients of f and the input x are speciﬁed to a1 and a2 bits of precision,
+respectively. The output is encoded with r1 integer qubits and r2 frac-
+tional
+qubits.
+Then
+O(f)
+can
+be
+implemented
+using
+OðD2a2
+2 + D2a1a2 + Dðr1 + r2ÞÞ gates and OðD2a2 + a1Þ ancilla qubits.
+Proof sketch. Use reversible ﬁxed-point arithmetic to generate the
+power chain x, x2, …, xD. A reusable product register computes each
+term cdxd, adds it in place to the output, and is then uncomputed.
+Finally, reversing the power-generation circuit cleans the power
+workspace (see Supplementary Note 4 for details).
+Lemma 2. (Logarithm oracle) Let L denote an oracle implementing the
+transformation
+X
+N
+n = 1
+αn∣ni∣0i7!
+X
+N
+n = 1
+αn∣ni∣g
+log n
+E
+,
+ð50Þ
+where
+g
+log n approximates log n to within error η. Then L can be
+implemented using
+O ðlog NÞ3log2ð1=ηÞ + ðlog NÞ2log3ð1=ηÞ
+
+
+ð51Þ
+gates and Oðlog Nlog2ð1=ηÞÞ ancilla qubits.
+Article
+https://doi.org/10.1038/s41467-026-74935-8
+Nature Communications|
+(2026) 17:8163
+10
+
+Proof sketch. The construction proceeds in two steps. First, a
+register of ancilla qubits identiﬁes the interval
+Pν : 3  2ν1 ≤n < 3  2ν, 1 ≤ν ≤log N + 1
+3
+
+
+
+
+,
+ð52Þ
+yielding a contribution (ν + 1) in log n. Second, approximate the resi-
+dual contribution
+logð1 + dÞ,
+d = n=2ν + 1  1,
+ð53Þ
+to accuracy η using the polynomial oracle in Lemma 1. The result is
+encoded using log log N qubits for the integer part and logð1=ηÞ for the
+fractional part. Full details of the polynomial expansions and resource
+counts are provided in Supplementary Note 4.
+Construction of the initial state. The target initial state can be written
+(formally, up to normalization and coefﬁcients) as
+∣ψ0
+
+= ∣ψ0
+
+1 + ∣ψ0
+
+2  ∣ψ0
+
+3:
+ð54Þ
+We ﬁrst construct ∣ψ0
+
+1 using the Angle-preparation oracle Um, and
+then recover the initial state via the linear combination of Unitaries
+(LCU) method and ﬁxed-point amplitude ampliﬁcation. A complete
+proof is provided in Supplementary Note 5.
+Theorem 1. (Truncated state preparation) Let β > 0, β ≠1, and let
+n0, n1 2 N with n1 −n0 = 2k for some integer k > 0. Deﬁne
+∣ψ0
+
+1 = 1
+C1
+X
+n11
+n = n0
+nβ=2 ∣n  n0
+
+, C1 =
+ﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃ
+X
+n11
+n = n0
+nβ
+v
+u
+u
+t
+:
+ð55Þ
+Then ∣ψ0
+
+1 can be prepared on a standard gate-based quantum
+computer to precision ε > 0, using a number of gates and ancilla qubits
+bounded by
+Polyðlog ε1, log n1, log j1  βj1, β, vÞ,
+ð56Þ
+where v denotes the number of bits of precision used to represent β.
+The parameters are required to satisfy
+cang =
+1
+2 log2π
+192k2nβ
+1
+ε2
+ 
+!
+&
+’
+,
+n0 > dβ + 2cange:
+ð57Þ
+Proof sketch. The construction adapts Grover’s amplitude split-
+ting method 47, replacing integrals with partial summations. The
+desired distribution is generated by k iterative amplitude splits. At
+step m (0 ≤m ≤k −1), each bit string w ∈{0, 1}m is divided into
+branches w0 and w1, with a corresponding rotation angle θw,m. All
+rotations for strings of the same length m can be applied in parallel;
+hence, the main resource cost arises from constructing the angle-
+preparation oracle Um.
+Theorem 2. (Angle-preparation oracle Um) The unitary operator Um
+implements
+X
+w2f0, 1gm
+αw∣wi∣0i7!
+X
+w2f0, 1gm
+αw∣wi∣θw, m
+
+,
+ð58Þ
+where the rotation angle θw,m is deﬁned by
+θw, m = arcsin
+ﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃ
+Sða1, b1, βÞ=Sða2, b1, βÞ
+q
+,
+ð59Þ
+in which Sða, b, βÞ = Pb
+n = anβ and
+a1 = 2km1ð2w + 1Þ + n0,
+b1 = 2km1ð2w + 2Þ  1 + n0,
+a2 = 2kmw + n0:
+ð60Þ
+Then Um can be implemented such that each rotation angle is esti-
+mated to within error ε/k, using
+Polyðlog ε1, log n1, log j1  βj1, β, vÞ
+ð61Þ
+gates and ancilla qubits, where v denotes the number of bits of pre-
+cision used to represent β.
+Proof sketch. Each angle θw,m is obtained by a bit-wise bisection
+procedure. At iteration i, a trial angle θg,i is represented with i bits,
+and sin2ðθg, iÞ is compared to the target ratio S(a1, b1, β)/S(a2, b1, β).
+This comparison determines the i-th binary digit of θw,m. Repeating
+this procedure for Oðlogðk=εÞÞ iterations successively reﬁnes the
+approximation, yielding θw,m with precision ε/k. Furthermore, we
+show that both the computation of sin2ðθg, iÞ and the partial sums can
+be
+carried
+out
+with
+polynomial
+resources,
+which
+completes
+the proof.
+Theorem 3. (Initial state preparation) Let β > 0, β ≠1 and N 2 N. Deﬁne
+∣ψ0
+
+= 1
+C
+X
+N
+n = 1
+nβ=2∣ni,
+C =
+ﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃ
+XN
+n = 1 nβ
+r
+:
+ð62Þ
+Then ∣ψ0
+
+can be prepared deterministically on a quantum computer
+to precision ε > 0. The required number of gates and ancilla qubits is
+bounded by
+Polyðlog ε1, log N, log j1  βj1, β, vÞ,
+ð63Þ
+where v denotes the number of bits of precision used to represent β.
+Proof sketch. The construction proceeds in three steps. First,
+prepare the auxiliary state using controlled rotations48, noting that n0
+can be chosen to be Polyðβ, log N, logð1=εÞÞ
+∣ψ0
+
+2 = 1
+C2
+X
+n01
+n = 1
+nβ=2∣ni:
+ð64Þ
+Second, construct∣ψ0
+
+1 using Theorem 1, and combine it with ∣ψ0
+
+2 via
+the LCU method, yielding
+∣ψ0
+
+1 + ∣ψ0
+
+2:
+ð65Þ
+Third, eliminate the states with index n > N, given by
+∣ψ0
+
+3 = 1
+C3
+X
+n11
+n = N + 1
+nβ=2∣ni,
+ð66Þ
+yielding the desired state
+∣ψ0
+
+= ∣ψ0
+
+1 + ∣ψ0
+
+2  ∣ψ0
+
+3:
+ð67Þ
+With appropriate choices of n0 and n1, the ﬁxed-point ampliﬁcation
+step detailed in Supplementary Note 5 converts the preparation
+into a deterministic procedure that outputs a state ε-close to the
+target.
+Article
+https://doi.org/10.1038/s41467-026-74935-8
+Nature Communications|
+(2026) 17:8163
+11
+
+Construction of the evolution operator
+Theorem 4. (Evolution operator construction) Deﬁne the time evolu-
+tion operator
+UðtÞ = eiH0t,
+H0 =
+X
+N
+n = 1
+ln n∣ni n
+h ∣,
+ð68Þ
+where the evolution time t is speciﬁed with u bits of precision. Then
+U(t) can be implemented to precision ξ using
+Polyðlog N, log jtj, log ξ1, uÞ
+ð69Þ
+gates and ancilla qubits.. Proof sketch. The construction begins by
+using the logarithm oracle from Lemma 2 to compute the base-2
+logarithm,
+X
+N
+n = 1
+αn∣ni∣0i7!
+XN
+n = 1αn∣ni∣g
+log n
+E
+,
+ð70Þ
+where g
+log n approximates log2n to accuracy Oðξ=jtjÞ. We then multiply
+this register by ðln 2Þt to obtain an approximation to t ln n. Controlled
+Rz rotations conditioned on the phase register then imprint the phase
+factor eit ln n onto each computational basis state ∣ni, thereby realizing
+U(t) to precision ξ (see Supplementary Note 6 for details).
+The implementation of the controlled evolution
+expðiHc2tÞ = ∣"
+
+"
+
+∣ I + ∣#
+
+#
+
+∣ UðtÞ:
+ð71Þ
+in the ﬁrst system, as well as the time evolution
+exp i
+Z
+Hcdt
+
+
+= HðeiθðtÞ∣"
+
+"
+
+∣ UðtÞ + eiθðtÞ∣#
+
+#
+
+∣ UyðtÞÞH
+ð72Þ
+in the second system, exhibit the same complexity scaling. According to
+Theorem 4, both evolutions can be implemented to precision ξ using
+Poly log N, log jtj, log ξ1, u
+
+
+ð73Þ
+gates and ancilla qubits.
+Complexity bounds for evaluating ζ(s) in the critical strip
+In classical computation, evaluating ζ(s) at large imaginary parts in the
+critical strip 0 < β < 1 is notoriously challenging. The Riemann–Siegel
+formula can be expressed as:
+ζðsÞ =
+X
+x
+n = 1
+1
+ns + χðsÞ
+X
+y
+n = 1
+1
+n1s + OðxβÞ + Oðjtj1=2βyβ1Þ,
+ð74Þ
+with 2πxy = ∣t∣and χðsÞ = 2sπs1 sin πs
+2
+	 
+Γð1  sÞ. Setting x = y =
+ﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃ
+jtj=2π
+p
+yields
+ζðsÞ =
+X
+N
+n = 1
+ns + χðsÞ
+X
+N
+n = 1
+nð1sÞ + Oðjtjβ=2Þ,
+ð75Þ
+where N = d
+ﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃ
+jtj=2π
+p
+e. Thus, the main computational challenge reduces
+to evaluating partial Dirichlet sums.
+Using the quantum constructions in previous sections, we pre-
+pare the initial state
+∣ψ0
+
+= 1
+C
+X
+N
+n = 1
+nβ=2∣ni,
+C =
+ﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃ
+X
+N
+n = 1
+nβ
+v
+u
+u
+t
+,
+ð76Þ
+and apply the evolution operator
+UðtÞ = eiH0t,
+H0 =
+X
+N
+n = 1
+ln n∣ni n
+h ∣:
+ð77Þ
+The average accumulated phase factor can be obtained from the
+expectation values of σx + iσy on an introduced probe qubit, yielding
+Lð β, tÞ = hψ0jeiH0tjψ0i = 1
+C2
+X
+N
+n = 1
+ns:
+ð78Þ
+For 0 < β < 1, we have
+C2 =
+X
+N
+n = 1
+nβ ≤1 +
+Z N
+1
+xβ dx < N1β
+1  β ,
+ð79Þ
+and ∣χ(s)∣= Θ(∣t∣1/2−β) (see Supplementary Note 7). Hence, to approx-
+imate ζ(β + it) with precision δ, it sufﬁces to estimate the two partial
+sums PN
+n = 1 ns and PN
+n = 1 nð1sÞ to precisions OðδÞ and OðδÞjtjβ1=2
+respectively. Therefore, the required precisions in the estimation of
+〈σx〉and 〈σy〉of the probe qubits are
+d1 = ð1  βÞOðδÞ=N1β, d2 = βOðδÞjtjβ1
+2=Nβ,
+ð80Þ
+respectively. To achieve an overall precision of d1 and d2, the pre-
+paration of the initial state, the time evolution, and sampling the
+outputs must each be implemented to accuracies of order Oðd1Þ and
+Oðd2Þ, respectively. By Theorem 3 and Theorem 4, substituting ε and ξ
+with Oðd1Þ and Oðd2Þ yields gate and ancilla resource requirements for
+initial state preparation and evolution bounded by
+Polyðlog δ1, log jtj, log ð1  βÞ1, log β1, vÞ,
+ð81Þ
+and
+Polyðlog δ1, log jtj, log ð1  βÞ1, log β1, uÞ,
+ð82Þ
+respectively, where u and v denote the numbers of bits of precision
+used to represent t and β.
+Let ζ 0ðsÞ denote the derivative of ζ(s), which can be bounded by
+Poly(∣t∣, ∣1 −β∣−1, β−1) (see Supplementary Note 8 for details). Thus,
+setting u, v as Polyðlog δ1, log jtj, log ð1  βÞ1, log β1Þ ensures that
+rounding errors contribute at most OðδÞ. Substituting these bounds
+into the previous bounds gives gate and ancilla qubit costs Rc1 and Rc2
+for both summations
+Polyðlog δ1, log jtj, log ð1  βÞ1, log β1Þ:
+ð83Þ
+If 〈σx〉and 〈σy〉are estimated by direct sampling, sample
+complexity scales as Oðd2
+1 Þ and Oðd2
+2 Þ. With quantum amplitude
+estimation, this can be reduced to Oðd1
+1 Þ and Oðd1
+2 Þ. Since
+N = Θð
+ﬃﬃﬃﬃﬃ
+jtj
+p
+Þ, the required number of samples is bounded by
+Rs1 = Oðδ1Þð1  βÞ1jtjð1βÞ=2,
+Rs2 = Oðδ1Þβ1jtjð1βÞ=2:
+ð84Þ
+Hence, the overall complexity Ro = Rc1Rs1 + Rc2Rs2 is bounded by
+δ1jtjð1βÞ=2Polyðlog δ1, log jtj, ð1  βÞ1, β1Þ:
+ð85Þ
+Next, we consider the task of locating and verifying nontrivial
+zeros. These zeros are symmetric with respect to the critical line β = 1
+2,
+and there is a zero-free region, the Korobov–Vinogradov zero-free
+Article
+https://doi.org/10.1038/s41467-026-74935-8
+Nature Communications|
+(2026) 17:8163
+12
+
+region, which takes the form41
+β > 1 
+c
+ðln jtjÞ2=3ðln ln jtjÞ1=3 ,
+ð86Þ
+in which c > 0 is an explicit constant. Thus, we focus on the region
+satisfying
+1
+2 ≤β ≤1 
+c
+ðln jtjÞ2=3ðln ln jtjÞ1=3 ,
+ð87Þ
+for which the complexity bound simpliﬁes to
+δ1jtjð1βÞ=2Polyðlog δ1, log jtjÞ:
+ð88Þ
+Data availability
+The source data generated in this study have been deposited in the
+Zenodo repository under https://doi.org/10.5281/zenodo.2059066549.
+The source data include the numerical datasets, processed experi-
+mental data, theoretical data, and data used to generate the ﬁgures
+and tables. The source data are publicly available and are also available
+in the GitHub repository at https://github.com/lqf2025/Riemann-data.
+Code availability
+The code used in this study has been deposited in the Zenodo repo-
+sitory under DOI: 10.5281/zenodo.2059066549. The code used to gen-
+erate and analyze the data is publicly available and is also available in
+the GitHub repository at https://github.com/lqf2025/Riemann-data.
+References
+1.
+Milgram, M. S. Integral and Series Representations Of Riemann’s
+zeta function and Dirichlet’s eta function and a medley of related
+results. J. Math. 2013, 181724 (2013).
+2.
+Bui, H. M. Large gaps between consecutive zeros of the Riemann
+zeta-function. J. Number Theory 131, 67–95 (2011).
+3.
+Odlyzko, A. M. The 1022-nd zero of the Riemann zeta function.
+Contemp. Math. 290, 139–144 (2001).
+4.
+Bober, J. W. & Hiary, G. A. New computations of the Riemann Zeta
+Function On The Critical Line. Exp. Math. 27, 125–137 (2018).
+5.
+Schumayer, D. & Hutchinson, D. A. W. Colloquium: physics of the
+Riemann hypothesis. Rev. Mod. Phys. 83, 307–330 (2011).
+6.
+Berry, M. V. Riemann’s zeta function: a model for quantum chaos? In
+Quantum Chaos and Statistical Nuclear Physics. vol. 263 of Lecture
+Notes in Physics. https://doi.org/10.1007/3-540-17171-1_1 (Springer,
+Berlin, Heidelberg, 2005).
+7.
+Berry, M. V. & Keating, J. P. A new asymptotic representation for ζ(1/
+2 + it) and quantum spectral determinants. Proc. R. Soc. Lond., Ser.
+A 437, 151–173 (1992).
+8.
+Srednicki, M. Nonclassical degrees of freedom in the Riemann
+Hamiltonian. Phys. Rev. Lett. 107, 100201 (2011).
+9.
+Bender, C. M., Brody, D. C. & Müller, M. P. Hamiltonian for the zeros
+of the Riemann zeta function. Phys. Rev. Lett. 118, 130201 (2017).
+10.
+Tschaffon, M. E. N., Tkáčová, I. B., Maier, H. & Schleich, W. P. A
+Primer on the Riemann Hypothesis. In Sketches of Physics: The
+Celebration Collection, vol. 1000 of Lecture Notes in Physics.
+https://doi.org/10.1007/978-3-031-32469-7_7 (Springer, 2023).
+11.
+Remmen, G. N. Amplitudes and the Riemann Zeta function. Phys.
+Rev. Lett. 127, 241602 (2021).
+12.
+Gutzwiller, M. C. Stochastic behavior in quantum scattering. Phys. D
+(Amsterdam, Neth.) 7, 341–355 (1983).
+13.
+Bhaduri, R. K., Khare, A. & Law, J. Phase of the Riemann ζ function
+and the inverted harmonic oscillator. Phys. Rev. E 52, 486 (1995).
+14.
+Spector, D. Supersymmetry and the Möbius inversion function.
+Commun. Math. Phys. 127, 239–252 (1990).
+15.
+Hughes, C. P., Keating, J. P. & O’Connell, N. Random matrix theory
+and the derivative of the Riemann zeta function. Proc. R. Soc. Lond.,
+Ser. A 456, 2611–2627 (2000).
+16.
+Mack, R. et al. Riemann ζ function from wave-packet dynamics.
+Phys. Rev. A 82, 032119 (2010).
+17.
+Feiler, C. & Schleich, W. P. Entanglement and analytical continua-
+tion: an intimate relation told by the Riemann zeta function. New J.
+Phys. 15, 063009 (2013).
+18.
+Feiler, C. & Schleich, W. P. Dirichlet series as interfering probability
+amplitudes for quantum measurements. New J. Phys. 17,
+063040 (2015).
+19.
+Heyl, M. Dynamical quantum phase transitions: a review. Rep. Prog.
+Phys. 81, 054001 (2018).
+20. Heyl, M., Polkovnikov, A. & Kehrein, S. Dynamical quantum phase
+transitions in the transverse-ﬁeld Ising model. Phys. Rev. Lett. 110,
+135704 (2013).
+21.
+Karrasch, C. & Schuricht, D. Dynamical phase transitions after
+quenches in nonintegrable models. Phys. Rev. B 87, 195104 (2013).
+22. Heyl, M. & Budich, J. C. Dynamical topological quantum phase
+transitions for mixed states. Phys. Rev. B 96, 180304 (2017).
+23. Bhattacharya, U., Bandyopadhyay, S. & Dutta, A. Mixed state dyna-
+mical quantum phase transitions. Phys. Rev. B 96, 180303 (2017).
+24. Lang, H., Chen, Y., Hong, Q. & Fan, H. Dynamical quantum phase
+transition for mixed states in open systems. Phys. Rev. B 98,
+134310 (2018).
+25. Muniz, J. A. et al. Exploring dynamical phase transitions with cold
+atoms in an optical cavity. Nature 580, 602–607 (2020).
+26. Zhou, L., Wang, Q. -h, Wang, H. & Gong, J. Dynamical quantum
+phase transitions in non-Hermitian lattices. Phys. Rev. A 98,
+022129 (2018).
+27.
+Weiss, C., Page, S. & Holthaus, M. Factorising numbers with a
+Bose–Einstein condensate. Phys. A: Stat. Mech. Appl. 341,
+586–606 (2004).
+28. Gleisberg, F., Mack, R., Vogel, K. & Schleich, W. P. Factorization with
+a logarithmic energy spectrum. New J. Phys. 15, 023037 (2013).
+29. Gleisberg, F., Volpp, M. & Schleich, W. P. Factorization with a
+logarithmic energy spectrum of a two-dimensional potential. Phys.
+Lett. A 379, 2556–2560 (2015).
+30. Cassettari, D., Mussardo, G. & Trombettoni, A. Holographic reali-
+zation of the prime number quantum potential. PNAS Nexus 2,
+pgac279 (2023).
+31.
+LeClair, A., Mussardo, G., Saleur, H. & Skorik, S. Boundary energy
+and boundary states in integrable quantum ﬁeld theories. Nucl.
+Phys. B 453, 581–618 (1995).
+32. Peng, X. et al. Experimental observation of Lee-Yang zeros. Phys.
+Rev. Lett. 114, 010601 (2015).
+33. Francis, A. et al. Many-body thermodynamics on quantum com-
+puters via partition function zeros. Sci. Adv. 7, eabf2447 (2021).
+34. Wei, B.-B. & Liu, R.-B. Lee-Yang zeros and critical times in deco-
+herence of a probe spin coupled to a bath. Phys. Rev. Lett. 109,
+185701 (2012).
+35. de Reyna, J. High precision computation of Riemann’s zeta function
+by the Riemann-Siegel formula, I. Math. Comput. 80,
+995–1009 (2011).
+36. Shankar, R., Hegde, S. S. & Mahesh, T. S. Quantum simulations of a
+particle in one-dimensional potentials using NMR. Phys. Lett. A 378,
+10–15 (2014).
+37. Luo, Z. et al. Experimentally probing topological order and its
+breakdown through modular matrices. Nat. Phys. 14,
+160–165 (2018).
+38. Nie, X. et al. Self-consistent determination of the single-impurity
+Anderson model using a hybrid quantum-classical approach on a
+spin quantum simulator. Phys. Rev. Lett. 133, 140602 (2024).
+39. Khaneja, N., Reiss, T., Kehlet, C., Schulte-Herbrüggen, T. & Glaser, S.
+J. Optimal control of coupled spin dynamics: design of NMR pulse
+Article
+https://doi.org/10.1038/s41467-026-74935-8
+Nature Communications|
+(2026) 17:8163
+13
+
+sequences by gradient ascent algorithms. J. Magn. Reson. 172,
+296–305 (2005).
+40. Chen, C.-F., Kastoryano, M., Brandão, F. G. S. L. & Gilyén, A. Efﬁcient
+quantum thermal simulation. Nature 646, 561–566 (2025).
+41.
+Mossinghoff, M. J., Trudgian, T. S. & Yang, A. Explicit zero-free
+regions for the Riemann zeta-function. Res. Number Theory 10,
+11 (2024).
+42. Gärttner, M. et al. Measuring out-of-time-order correlations and
+multiple quantum spectra in a trapped-ion quantum magnet. Nat.
+Phys. 13, 781–786 (2017).
+43. Braumüller, J. et al. Probing quantum information propagation with
+out-of-time-ordered correlators. Nat. Phys. 18, 172–178 (2022).
+44. Google Quantum AI and Collaborators. Observation of constructive
+interference at the edge of quantum ergodicity. Nature 646, 825-
+830 (2025).
+45. Hiary, G. A. Fast methods to compute the Riemann zeta function.
+Ann. Math. 174, 891–946 (2011).
+46. Babbush, R. et al. Grand challenge of quantum applications. PRX
+Quantum 7, 020101 (2026).
+47. Grover, L. & Rudolph, T. Creating superpositions that correspond to
+efﬁciently integrable probability distributions. Preprint at arXiv
+https://arxiv.org/abs/quant-ph/0208112 (2002).
+48. Long, G.-L. & Sun, Y. Efﬁcient scheme for initializing a quantum
+register with an arbitrary superposed state. Phys. Rev. A 64,
+014303 (2001).
+49. Wei, S. et al. Source data and code for “The Riemann Hypothesis
+Manifested in Dynamical Quantum Phase Transitions”. Zenodo
+https://doi.org/10.5281/zenodo.20590665 (2026).
+50. Borwein, P. An efﬁcient algorithm for the Riemann zeta function. In
+Canadian Mathematical Society Conference Proceedings. 27,
+https://www.cecm.sfu.ca/pborwein/PAPERS/P155.pdf (2000).
+Acknowledgments
+We thank Nanxian Chen, Feihao Zhang, Muxi Zheng, Xinfang Nie, and
+Zidong Lin for the helpful discussions.
+Author contributions
+T.X., G.L.L. and S.W. supervised the project. S.W. proposed the initial
+theoretical idea and developed the theoretical framework together with
+Q.L. and T.X. Y.Z. performed the experiments under the supervision of
+T.X. W.Y., P.G. and F.N. contributed to the theoretical analysis, while
+C.W. and J.S. contributed to the experimental work. All authors partici-
+pated in the preparation of the manuscript.
+Funding
+This work was supported by the Beijing Nova Program (Grant No.
+20230484345 to S.W.), the National Natural Science Foundation of
+China (Grants No. 62571050 to S.W., 12275117 and 92576109 to T.X.), the
+Quantum Science and Technology—National Science and Technology
+Major Project (Grant No. 2024ZD0300400 to T.X.), the Guangdong
+Basic and Applied Basic Research Foundation (Grant No.
+2022B1515020074 to T.X.), and the Shenzhen Science and Technology
+Program (Grant No. QNXMB20250701092309013 to T.X.). This work was
+also supported in part by the Japan Science and Technology Agency
+(JST) via the CREST Quantum Frontiers Program (Grant No. JPMJCR24I2
+to F.N.), the Quantum Leap Flagship Program (Q-LEAP) to F.N., the
+Moonshot R&D Grant (Grant No. JPMJMS256E to F.N.), and the ASPIRE
+Program (Grant No. JPMJAP2513 to F.N.).
+Competing interests
+The authors declare no competing interests.
+Additional information
+Supplementary information The online version contains
+supplementary material available at
+https://doi.org/10.1038/s41467-026-74935-8.
+Correspondence and requests for materials should be addressed to
+Shijie Wei, Tao Xin or Guilu Long.
+Peer review information Nature Communications thanks the anon-
+ymous reviewer(s) for their contribution to the peer review of this work. A
+peer review ﬁle is available.
+Reprints and permissions information is available at
+http://www.nature.com/reprints
+Publisher’s note Springer Nature remains neutral with regard to jur-
+isdictional claims in published maps and institutional afﬁliations.
+Open Access This article is licensed under a Creative Commons
+Attribution-NonCommercial-NoDerivatives 4.0 International License,
+which permits any non-commercial use, sharing, distribution and
+reproduction in any medium or format, as long as you give appropriate
+credit to the original author(s) and the source, provide a link to the
+Creative Commons licence, and indicate if you modiﬁed the licensed
+material. You do not have permission under this licence toshare adapted
+material derived from this article or parts of it. The images or other third
+party material in this article are included in the article's Creative
+Commons licence, unless indicated otherwise in a credit line to the
+material. If material is not included in the article's Creative Commons
+licence and your intended use is not permitted by statutory regulation or
+exceeds the permitted use, you will need to obtain permission directly
+from the copyright holder. To view a copy of this licence, visit http://
+creativecommons.org/licenses/by-nc-nd/4.0/.
+© The Author(s) 2026
+Article
+https://doi.org/10.1038/s41467-026-74935-8
+Nature Communications|
+(2026) 17:8163
+14

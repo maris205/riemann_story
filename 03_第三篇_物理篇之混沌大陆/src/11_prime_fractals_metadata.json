@@ -1,0 +1,10 @@
+{
+  "date": "2026-10-22",
+  "spiral_side": 801,
+  "integer_max": 641601,
+  "prime_count": 52192,
+  "dragon_steps": 65536,
+  "dragon_rule": "step 0->1 east, turn left by 90*v2(n) at vertex n",
+  "checks": "known prime count; first spiral cells; unique cells; all odd-square corners; Euler 40 primes and next 2 composites; shifted diagonal identity; CF endpoints/nesting; valuation recursion; unit steps",
+  "limitations": "Finite drawings only. CF figure truncates alphabet to first 12 primes. No numerical dimension claim. Dragon encodes factor multiplicity, not prime positions."
+}

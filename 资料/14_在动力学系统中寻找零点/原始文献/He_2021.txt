@@ -1,0 +1,706 @@
+ARTICLE
+OPEN
+Riemann zeros from Floquet engineering a trapped-ion qubit
+Ran He
+1,2, Ming-Zhong Ai1,2, Jin-Ming Cui
+1,2✉, Yun-Feng Huang
+1,2✉, Yong-Jian Han1,2, Chuan-Feng Li
+1,2✉, Guang-Can Guo1,2,
+G. Sierra3 and C. E. Crefﬁeld
+4✉
+The non-trivial zeros of the Riemann zeta function are central objects in number theory. In particular, they enable one to reproduce
+the prime numbers. They have also attracted the attention of physicists working in random matrix theory and quantum chaos for
+decades. Here we present an experimental observation of the lowest non-trivial Riemann zeros by using a trapped-ion qubit in a
+Paul trap, periodically driven with microwave ﬁelds. The waveform of the driving is engineered such that the dynamics of the ion is
+frozen when the driving parameters coincide with a zero of the real component of the zeta function. Scanning over the driving
+amplitude thus enables the locations of the Riemann zeros to be measured experimentally to a high degree of accuracy, providing
+a physical embodiment of these fascinating mathematical objects in the quantum realm.
+npj Quantum Information (2021) 7:109 ; https://doi.org/10.1038/s41534-021-00446-7
+INTRODUCTION
+The Riemann zeta function ζ(s) is the Rosseta stone for number
+theory. The stone, found by Napoleon’s troops in Egypt, contains
+the same text written in three different languages, which enabled
+the Egyptian hieroglyphics to be deciphered. The ζ-function is also
+expressed in three different “languages”: as the series ∑nn−s over
+the positive integers n, as the product ∏p1/(1 −p−s) over the
+prime numbers p, and as the product / Q
+nð1  s=ρnÞes=ρn over
+the Riemann zeros ρn
+1. Note that the ﬁrst two deﬁnitions of ζ(s) are
+only convergent in the half plane Re½s > 1, while the third
+deﬁnition is valid over the entire complex s-plane. Riemann
+conjectured in 1859 that these zeros would have a real part equal
+to a half, ρn ¼ 1
+2 þ iEn, where En is a real number2. This is the
+famous Riemann Hypothesis (RH), one of the six unsolved
+Millennium
+problems
+(https://www.claymath.org/millennium-
+problems), whose solution would amplify our knowledge of the
+distribution of prime numbers with resulting consequences for
+number theory and factorization schemes3. More poetically, in the
+words of M. Berry, the proof of the RH would mean that “there is
+music in the prime numbers”4.
+One of the most interesting ideas to attack the RH is to show
+that the En are the eigenvalues of the Hamiltonian of a quantum
+system. This idea, suggested by Pólya and Hilbert around 19125,
+began to be taken seriously in the 70s with Montgomery’s
+observation6 that the Riemann zeros closely satisfy the statistics of
+the Gaussian unitary ensemble (GUE). In the 80s Odlyzko7 tested
+this prediction numerically for 105 zeros around the 1020th zero,
+ﬁnding only minor deviations from the GUE. These were explained
+later by Berry and collaborators8–10 using the theory of quantum
+chaos, and led him to propose that the En are the eigenvalues of a
+quantum chaotic Hamiltonian whose classical version contains
+isolated periodic orbits whose periods are the logarithm of the
+prime numbers. Much work has been done11–17 to ﬁnd such a
+Hamiltonian, but so far without a deﬁnitive answer.
+We present here an experimental observation of the lowest
+Riemann zeros, which is quite different from the spectral
+realization described above. Our intention is not to prove the
+RH, but rather to provide a physical embodiment of these
+mathematical objects by using advanced quantum technology.
+The physical system that we consider is a trapped-ion qubit. The
+ion is subjected to a time-periodic driving ﬁeld, and consequently
+its behavior is described by Floquet theory, in which the familiar
+energy eigenvalues of static quantum systems are generalized to
+“quasienergies”. These quasienergies can be regulated by the
+parameters of the driving, in a technique termed Floquet
+engineering. In particular, when the quasienergies are degenerate
+(or cross) the ion’s dynamics is frozen, which can be observed
+experimentally. The Riemann zeta function enters into this
+construction in the design of the driving ﬁeld, which is engineered
+to produce the freezing of the dynamics when the real part of
+ζ(s)/s, with s ¼ 1
+2 þ iE, vanishes. Thus observing the freezing of the
+qubit’s dynamics as the driving parameters are varied gives a
+high-precision experimental measurement of the location of the
+Riemann zeros.
+RESULTS
+Floquet theory
+We consider a two-level system subjected to a time-periodic
+driving, described by the Hamiltonian HðtÞ ¼ Jðσx þ fðtÞ
+2 σzÞ, where
+σx,z are the standard Pauli matrices and J represents the bare
+tunneling between the two energy levels. Henceforth we will set
+_ = 1, and measure all energies (times) in units of J (J−1). As H(t) is
+time-periodic, H(t) = H(t + T), where T is the period of the driving,
+the system is naturally described within Floquet theory, using a
+basis of Floquet modes and quasienergies which can be extracted
+from the unitary time-evolution operator for one driving-period
+U ¼ T exp½i
+R T
+0 Hðt0Þdt0 (where T
+denotes the time-ordering
+operator). The Floquet modes,
+ΦjðtÞ
+
+
+, are the eigenstates of
+U, and the quasienergies, ϵj, are related to the eigenvalues of U via
+λj ¼ exp iTϵj
+
+
+.
+The Floquet modes provide a complete basis to describe the
+time-evolution of the system, and the quasienergies play an
+analogous role to the energy eigenvalues of a time-independent
+system. The state of the qubit can thus be expressed as
+ψðtÞ
+j
+i ¼ P
+jαj exp iϵjt
+
+
+ΦjðtÞ
+
+
+, where the expansion coefﬁcients
+1CAS Key Laboratory of Quantum Information, University of Science and Technology of China, Hefei, China. 2CAS Center For Excellence in Quantum Information and Quantum
+Physics, University of Science and Technology of China, Hefei, China. 3Instituto de Física Teórica, UAM-CSIC, Madrid, Spain. 4Departamento de Física de Materiales, Universidad
+Complutense de Madrid, Madrid, Spain. ✉email: jmcui@ustc.edu.cn; hyf@ustc.edu.cn; cﬂi@ustc.edu.cn; c.crefﬁeld@ﬁs.ucm.es
+www.nature.com/npjqi
+Published in partnership with The University of New South Wales
+1234567890():,;
+
+αj are time-independent, and the Floquet modes are T-periodic
+functions of time. From this expression, it is clear that if two
+quasienergies approach degeneracy, the timescale for tunneling
+between them will diverge as 1/Δϵ. Although in general it is
+difﬁcult to obtain explicit forms for the quasienergies, even for the
+case of a two-level system, excellent approximations can be
+obtained in the high-frequency limit, when Ω = 2π/T is the largest
+energy scale of the problem, that is, Ω ≫J. In that case one can
+derive18 an effective static Hamiltonian, Heff = Jeffσx, where the
+effective tunneling is given by
+Jeff ¼ J
+T
+Z T
+0
+dteiFðtÞ :
+(1)
+Here F(t) is the primitive of the driving function, FðtÞ ¼
+R t
+0 dt0fðt0Þ,
+and the quasienergies are given by ϵ ± ¼ ± Jeff
+j
+j. The eigenvalues
+thus become degenerate when they are zero, corresponding to
+the vanishing of Jeff and the freezing of the dynamics. This
+expression is accurate to ﬁrst order in 1/Ω, and although in
+principle higher-order terms could be calculated using the
+Magnus expansion19, we will work at sufﬁciently high frequencies
+for this expression to give results of excellent accuracy.
+Equation (1) is the key to our approach. By altering the form of
+the driving, f(t), we are able to manipulate the effective tunneling
+and the quasienergies of the driven system. Our aim is to obtain a
+driving function such that Jeff(E) is proportional to the real part of
+g(E) with gðEÞ ¼ ζ 1=2 þ iE
+ð
+Þ= 1=2 þ iE
+ð
+Þ, yielding an effective
+Hamiltonian whose dynamics is intimately related to the proper-
+ties of the ζ-function. In particular, the effective tunneling will
+vanish, an effect termed “coherent destruction of tunneling”
+(CDT)20, when E coincides with one of the Riemann zeros. In the
+Methods section we give the details of the mathematical
+derivation of the driving function, which enables us to obtain
+Fourier series for f(t) and F(t) (see Fig. 4) which can be
+straightforwardly programmed into a waveform generator to
+provide the experimental driving. We choose to focus on the
+function −ζ(s)/s for two fundamental reasons. The ﬁrst is that it
+has a remarkably simple Fourier transform. This also motivated
+van der Pol21 and Berry22 to use this function as the basis for
+physical implementations of the Riemann zeros in diffraction
+experiments (in Fourier optics and in antenna radiation patterns
+respectively). The second reason is that this function decays slowly
+as E increases (see Fig. 4a). In previous work23,24 we proposed to
+use Floquet engineering to simulate the Riemann Ξ-function1.
+Although successful, the extremely rapid decay of the Ξ-function
+meant that only the lowest two Riemann zeros were resolvable. In
+contrast, the slower decay of ζ(s)/s should allow many more
+quasienergy crossings to be detectable, and thus more zeros to be
+identiﬁed.
+Experiment
+The experimental results were obtained by periodically driving a
+single
+trapped
+ion
+with
+microwave
+ﬁelds.
+The
+two-level
+system
+is
+encoded
+in
+the
+hyper-ﬁne
+clock
+transition
+0j i  2S1=2 F ¼ 0; mF ¼ 0
+j
+i and
+1j i  2S1=2 F ¼ 1; mF ¼ 0
+j
+i in a
+single ytterbium (171Yb+) ion conﬁned in a Paul ion trap25, as
+shown in Fig. 1a. This clock qubit has the advantages of high-
+ﬁdelity quantum operations and long coherence time26,27. The
+tunneling, J, in this system is of the order of 10 kHz, giving a
+resonant Rabi time of ~100 μs.
+After 1 ms of Doppler cooling and 50 μs of optical pumping, the
+ion is initialized in the ground state 0j i with a probability ≥99.5%.
+The qubit is then driven by a microwave ﬁeld for multiple periods.
+The driving function was generated from a programmable
+arbitrary waveform generator (AWG), which generates a phase
+modulated microwave with a carrier frequency of 200 MHz and a
+phase modulation function F(t)/224. It is then mixed with a
+12.443 GHz ﬁxed-frequency signal and ﬁltered by a high-pass
+ﬁlter. The ampliﬁed microwave ﬁelds near 12.643 GHz were
+delivered to the trapped ion from an horn antenna located
+outside the vacuum chamber. At the end of the multiple periods,
+the state is projected onto the eigenvector of σy with eigenvalue
++1, yþ
+
+
+¼
+1ﬃﬃ
+2
+p ð 0j i þ i 1j iÞ, by applying a π/4 rotation and normal
+ﬂuorescence detection. When more than one photon is detected,
+the measurement result is noted as 1; otherwise it is noted as 0.
+The time evolution of the state population is recorded as a
+function of the number of periods.
+In Fig. 1b we show the experimental protocol, plotted on the
+Bloch
+sphere.
+As
+noted
+previously,
+the
+Floquet
+modes
+Φ1ðE; Ω; tÞ
+j
+i ¼ aðtÞ 0j i þ bðtÞ 1j i
+and
+Φ2ðE; Ω; tÞ
+j
+i ¼ bðtÞ 0j i 
+aðtÞ 1j i are the eigenstates of the one-period time-evolution
+operator U(E, Ω), where Ω is the driving frequency, and E is a
+Fig. 1
+Experimental procedure to measure Floquet dynamics in a trapped-ion system. a The qubit is encoded in the clock transition of a
+single trapped 171Yb+ ion. The qubit is periodically driven by a microwave ﬁeld generated by an AWG and a ﬁxed-frequency signal source,
+which are both referenced to a 10 MHz rubidium frequency standard. b On the right Bloch sphere, the qubit is initialized to 0j i and evolves to
+UðTÞ 0j i after one period of driving with function f(E = 16, Ω = 5). The fast dynamics (“micromotion”) of the qubit during this elementary period
+is shown on the Bloch sphere, and arises from the intrinsic time-dependence of the Floquet states ΦjðtÞ
+
+
+. On the left Bloch sphere, the qubit
+starts from 0j i (the north pole) and evolves to UðnTÞ 0j i for multiple periods n = 1, 2, 3, . . . , 30. The red dots are the points measured at n = 5,
+10, 15, 20, 25, 30. The insert shows the probability P(n) of projecting the qubit onto yþ
+
+
+¼
+1ﬃﬃ
+2
+p ð 0j i þ i 1j iÞ after n periods. P(n) is a sinusoidal
+function of n, with frequency proportional to the quasienergy ϵj(E). For values of E satisfying ϵj(E) = 0, the state is frozen at 0j i and P(n) = 1/2 for
+all n. Since ϵj(E) is proportional to the real part of −ζ(1/2 + iE)/(1/2 + iE), we can therefore identify Riemann zeros by observing the freezing of
+the dynamics, i.e., P = 1/2.
+R. He et al.
+2
+npj Quantum Information (2021) 109 
+Published in partnership with The University of New South Wales
+1234567890():,;
+
+driving parameter related to the argument of the zeta function,
+ζ(1/2 + iE). Starting from the initial state 0j i, the population of the
+state
+projected
+onto
+yþ
+
+
+after
+n
+periods
+of
+driving
+is
+Pðn; E; ΩÞ ¼ 1=2  A sinð2nTϵjðE; ΩÞÞ, where A ¼ Refað0Þbð0Þg,
+and ϵj(E, Ω) is the quasienergy. It is clear that if E is equal to the
+zeros of ϵj(E, Ω), ϵj(E, Ω) vanishes and P(n, E, Ω) = 1/2 for all n. While
+if ϵj(E, Ω) ≠0, P(n, Ω, E) evolves sinusoidally with a frequency
+proportional to the quasienergy ϵj(E, Ω). The Riemann zeros can
+thus be identiﬁed by observing the freezing of the evolution
+of P(n, E, Ω) produced by CDT.
+To give a quantitative characterization of the state evolution,
+we deﬁne the S parameter as S(Ω, E, y+) = ∑n[P(n, Ω, E) −1/2],
+where n = {5, 10, 15, 20, 25, 30} are the number of driving periods
+in the experiment. It is straightforward to see that the zeros of the
+quasienergies are the zeros of S(Ω, E, y+) as well. Therefore a scan
+of the parameter E allows us to identify the Riemann zeros by
+observing S(Ω, E, y+) = 0. To give a direct comparison, we show in
+Fig. 2 the experimental results of S(Ω, E, y+) and the real part of
+g(E) as a function of E for Ω = 2, 5, 8, and 16, respectively. For
+Ω = 2, we can see that S(Ω, E, y+) shows a signiﬁcant distortion
+from the theoretical zeta function and does not allow the position
+of the Riemann zeros to be determined. Increasing Ω, however,
+substantially improves the results, and gives excellent agreement
+between data and theory over the range E ≤200, allowing the ﬁrst
+eighty Riemann zeros to be resolved. The measurement can be
+extended to higher E without loss of efﬁciency and accuracy. This
+improvement occurs because larger values of Ω satisfy the high-
+frequency approximation better, and thus Eq. (1) becomes more
+precise. The difference between the measured zeros and the exact
+Riemann zeros is shown in Fig. 2g. Most of the zeros can be
+identiﬁed with an accuracy of 1% or better. In Table 1 we present
+the agreement quantitatively for four different driving frequencies
+over a wide range of E. We give further, and more detailed,
+comparisons of the agreement in the Supplementary Information.
+Since increasing Ω further would satisfy the high-frequency
+limit better, it might be thought that the accuracy of the results
+can be improved by increasing the driving frequency to
+arbitrarily high values. This is not the case however. As we show
+in the Methods section, the best results will be obtained when
+the driving period T is small enough to satisfy the high-frequency
+limit, while at the same time T is sufﬁciently large for it to replace
+the upper limit of integration in Eq. (5). As a consequence of
+these opposing requirements, the best results will actually be
+obtained for mid-range frequencies. In Figs. 2d, f and h we show
+the results for Ω = 16. Comparing with the Ω = 8 result reveals
+that increasing the frequency has not improved the accuracy of
+the results.
+Fig. 2
+Identifying Riemann zeros by observing the frozen dynamics of the state. In (a–f) the black curve is the real part of g(E). The
+vertical gray lines indicate the Riemann zeros, {14.1347, 21.022, 25.0109, 30.4249, 32.9351, ...}; the other points where g(E) crosses the axis
+correspond to Re½gðEÞ vanishing but not Im½gðEÞ, and so do not represent Riemann zeros. The dots are the S parameter which is deﬁned as S
+(Ω, E, y+) = ∑n[P(n, Ω, E) −1/2], where n = {5, 10, 15, 20, 25, 30}. S(Ω, E, y+) is used to identify the Riemann zeros by observing S = 0. a When Ω =
+2, the high-frequency limit is not well satisﬁed, so the behavior of S(Ω, E, y+) does not match g(E). b By contrast, Ω = 5 does give good
+agreement for E ≤100. c Increasing Ω further to 8 provides even better agreement with g(E). e We implemented the measurement for E up to
+200 and identiﬁed the ﬁrst 80 Riemann zeros with high accuracy. d, f Results of Ω = 16. Data points with E ≤100 (E ≥100) were obtained by
+2000 (5000) measurements. The error bar δS of S(Ω, E, y+) is the sum of the statistical errors of the corresponding P(n, Ω, E), where n = {5, 10, 15,
+20, 25, 30}, within one standard deviation. g, h Zeros were extracted by interpolating S(Ω, E, y+) using a cubic polynomial 4000 times. Each
+time, S is sampled randomly in [S −δS, S + δS]. The error (dot) is the difference between the extracted zeros and the exact zeros (see
+Supplementary Information), with the error bars indicating the standard deviations of the extracted zeros. A vertical line with no red dot has
+an error falling outside the plot range.
+Table 1.
+Comparison of the experimentally measured Riemann zeros
+with the true values for different driving frequencies.
+E1
+E10
+E30
+E50
+E70
+Exact
+14.135
+49.774
+101.318
+143.112
+182.207
+Ω = 5
+14.07 (1)
+49.26 (19)
+Ω = 8
+14.06 (2)
+49.67 (3)
+101.13 (3)
+142.90 (9)
+182.28 (6)
+Ω = 12
+13.99 (4)
+49.36 (23)
+101.31 (3)
+142.72 (22)
+182.14 (6)
+Ω = 16
+14.03 (3)
+49.23 (22)
+101.33 (5)
+142.91 (13)
+181.98 (8)
+Zeros were extracted by interpolating S(Ω, E, y+) ± δS with a cubic
+polynomial 4000 times, where δS is the 1 −σ standard deviation of S. Each
+time, S is sampled randomly in [S −δS, S + δS]. The zeros are the mean of
+the interpolated zeros. The values in parentheses denote the standard
+deviation of the means in terms of the least signiﬁcant digit.
+R. He et al.
+3
+Published in partnership with The University of New South Wales
+npj Quantum Information (2021) 109 
+
+Reconstruction of prime numbers
+In 1859 Riemann found a formula that gives the number of primes π
+(x) below or equal to x in terms of the non-trivial zeros ρn ¼ 1
+2 þ iEn
+2.
+A consequence of this result is a theorem due to E. Landau in 1911
+who gave the asymptotic behavior of the sum3,28
+hðxÞ ¼ 
+X
+jρjT
+xρ ¼ T
+2π ΛðxÞ þ Oðlog TÞ
+(2)
+where Λ(x) is the Mangoldt function, that is equal to log p when
+x = pn and is zero otherwise. The function h(x) therefore has peaks at
+the primes p and their powers pn. We plot the function h(x) in Fig. 3,
+together with the function J(x)
+JðxÞ ¼
+X
+n1
+1
+n πðx1=nÞ
+(3)
+which jumps by 1 at every prime and by 1/n at the powers pn. Notice
+that the experimental error in the zeros does not affect appreciably
+the location of the peaks.
+5
+10
+15
+20
+x
+40
+20
+20
+40
+60
+hx, Jx
+5
+10
+15
+20 x
+40
+20
+20
+40
+60
+hx, Jx
+(a)
+(b)
+Fig. 3
+Primes from zeros. The function in Eq. (2) with the sum restricted to ∣En∣< 100 (blue) and the function 5J(x) given in Eq. (3) (red) are
+calculated (a) using the exact values of En and (b) using the values of En given in Table II (Extended Data) for Ω = 16. In both cases one can
+identify the ﬁrst eight primes and their powers.
+Fig. 4
+Derivation of the driving function. a The real component of g(E) = −ζ(1/2 + iE)/(1/2 + iE). b Van der Pol’s function is the Fourier
+transform, ~gðtÞ, of g(E). The function is bounded by the red curve exp jtj=2
+½
+, and contains an inﬁnite number of ﬁnite discontinuities for
+positive t, arising from the ﬂoor function (see Eq. (4)). c The blue curve shows FðtÞ ¼ cos1 ~gðtÞ cos Et
+ð
+Þ, the primitive of the driving function, for
+driving parameter E = 1. The discontinuities in ~gðtÞ give rise to discontinuities in this function as well. The red curve shows the Fourier
+expansion of F(t), truncated at 500 terms. We can note how the ﬁne detail is progressively blurred out as t increases. d The driving function,
+f(t), for E = 1, obtained as f(t) = ∂tF(t), plotted over 0 ≤t < T. The discontinuities in F(t) produce δ-function spikes in the driving function. By
+construction, f(t) is an even function of t, and so the full periodicity of this function is 2T.
+R. He et al.
+4
+npj Quantum Information (2021) 109 
+Published in partnership with The University of New South Wales
+
+DISCUSSION
+We have presented an experimental method for measuring the
+location of the zeros of the Riemann ζ-function, by using Floquet
+engineering to control the quasienergy levels of a periodically
+driven trapped ion. The experimentally measured values of the
+zeros are in excellent agreement with their theoretical values, and
+we have demonstrated how they can be used to reconstruct the
+prime numbers. The high level of experimental control over this
+system, and the implementation of a driving function derived
+from the complex function g(E) = −ζ(s)/s (where s = 1/2 + iE),
+allows as many as the ﬁrst 80 zeros to be resolved. Our analysis
+indicates that there is a “sweet spot” for the driving frequency, in
+which Ω is sufﬁciently large for the system to be in the high-
+frequency regime, while its period is large in comparison to the
+width of the Fourier transform of g(s). Using the experimentally
+measured zeros we have also obtained a good approximation of
+the lowest prime numbers. This reconstruction suggests the
+possibility of a direct experimental realization of the primes. The
+successful realization of the Riemann zeros in a quantum
+mechanical system represents an important step along a route
+inspired by the Hilbert and Pólya proposal, and may lead to
+further insights into the Riemann hypothesis. Another interesting
+line of research will be to employ more general modulations of
+the zeta function that would enable the exploration of different
+intervals along the critical line29.
+METHODS
+Driving function derivation
+Our starting point is the function gðEÞ ¼ ζ 1=2þiE
+ð
+Þ
+12þiE
+, where ζ(s) is the
+standard Riemann zeta function. We plot the behavior of this function in
+Fig. 4a. As van der Pol showed in 1947, its Fourier transform (Fig. 4b) can
+be written in the surprisingly simple form21
+~gðtÞ ¼ et=2  et=2½et :
+(4)
+where [x] is the integer part of x. As we can see from Fig. 4b, this function is
+localized around the origin, with an envelope of the form exp jtj=2
+ð
+Þ.
+By dividing the range of integration for the Fourier transform into two
+halves, it is straightforward to show that the real component of g(E) is
+given by
+Re gðEÞ
+½
+ ¼
+2
+4E2 þ 1 þ
+Z 1
+0
+~gðtÞ cos Et dt:
+(5)
+In order to observe the location of the Riemann zeros, our interest is
+focused on values of E > 10. Accordingly we can simply discard the ﬁrst
+term, as over this range its magnitude is smaller than the experimental
+uncertainty in the measurements.
+Our aim is to obtain a driving function f(t) such that the effective
+tunneling is proportional to the real component of g(E), that is,
+Re Jeff
+½
+ ¼ α Re gðEÞ
+½
+, where α is the constant of proportionality. Comparing
+Eq. (5) with Eq. (1), and assuming that the driving period T is sufﬁciently
+large to replace the upper limit of integration in Eq. (5), reveals that
+FðtÞ ¼ cos1 αT~gðtÞ cos Et
+ð
+Þ. The boundary condition F(0) = 0 requires
+setting
+α = 1/T,
+which
+yields
+the
+ﬁnal
+driving
+function
+fðtÞ ¼ ∂t cos1 ~gðtÞ cos Et
+ð
+Þ
+½
+. This choice of α also imposes the condition
+that the argument of the inverse cosine function is bounded within ± 1 as
+required, since ~gð0Þ is the global maximum of ~gðtÞ. We can note that
+replacing the upper limit of integration with T represents an important
+restriction on the value of Ω. This replacement means that T must be large
+in comparison with the width of ~gðtÞ, and thus the driving frequency Ω
+must correspondingly be low. However, for Eq. (1) to be an accurate
+description of the system’s dynamics requires a high value of Ω, so that the
+system is in the high-frequency regime. Therefore, good results will be
+obtained in an intermediate range of frequency, when both of these
+conditions can be adequately satisﬁed.
+We show the form of the F(t) and the driving function for a particular
+value of E in Fig. 4c and d. The ﬁnite discontinuities present in g(E) also
+produce discontinuities in F(t), and thus δ-function spikes in f(t). A
+convenient way to obtain f(t) numerically is to expand F(t) in a Fourier
+series, differentiate the series term by term, and then to re-sum it. As in
+ref. 23, we want the driving function to be of deﬁnite parity, so that the two
+Floquet states will be of opposite parity, and so can cross as the driving
+parameter E is varied. If this parity condition were not satisﬁed, the von
+Neumann–Wigner theorem would prevent the quasienergies becoming
+degenerate, and they could only form broader avoided crossings instead.
+For this reason we choose to expand F(t) as a Fourier sine series, so that its
+derivative, f(t) is a cosine series, and is thus an even function of time.
+Sufﬁcient terms must be included in the series to ensure that the ﬁne
+structure in f(t) is reproduced with sufﬁcient resolution. Typically in the
+experiment the series was truncated at 500 terms.
+In an analogous way, we could construct a driving function related to
+the imaginary component of g(E). Unfortunately, however, Im½gðEÞ does
+not cross the x-axis sharply in the way that Re½gðEÞ does, making the zeros
+more difﬁcult to locate accurately.
+Experimental details
+A long coherence time of the system is vital in the experiment. The
+hyperﬁne splitting of the (171Yb+) ion, ωhf ¼ 12642812118:5 þ ωB
+ð
+Þ Hz,
+has a second-order Zeeman shift ωB = 310.8B2, where B is the magnetic
+ﬁeld in Gauss (G). We used Sm2Co17 permanent magnets to generate a
+static magnetic ﬁeld of around B = 9.15 G to reduce the 50 Hz ac-line
+noise. The whole platform is shielded in a 2-mm-thick μ-metal enclosure to
+reduce the residual ﬂuctuating magnetic ﬁelds30. During the experiment,
+we still observed a slow drift of ~±30 Hz of the clock transition in 10 h. This
+corresponds to ΔB∼± 0.005 G, which is mainly due to the temperature drift
+in the laboratory. This drift is not negligible. Therefore the clock transition
+frequency was frequently measured by Ramsey type measurements and
+calibrated by updating the AWG wave frequency during the experiment
+every half hour.
+DATA AVAILABILITY
+Source data and all other data that support the plots within this paper and other
+ﬁndings of this study are available from the corresponding authors upon reasonable
+request.
+Received: 10 March 2021; Accepted: 17 June 2021;
+REFERENCES
+1. Edwards, H. M. Riemann’s zeta function (Academic, New York, 1974).
+2. Riemann, B. Ueber die anzahl der primzahlen unter einer gegebenen grosse. Ges.
+Math. Werke und Wissenschaftlicher Nachlaß 2, 145–155 (1859).
+3. Conrey, J. B. The Riemann hypothesis. Not. Am. Math. Soc. 50, 341–353 (2003).
+4. Berry, M. V. Hearing the music of the primes: auditory complementarity and the
+siren song of zeta. J. Phys. A: Math. Theor. 45, 382001 (2012).
+5. Montgomery, H. L. The pair correlation of the zeros of the zeta function. Proc.
+Symp. Pure Math. 24, 181–193 (1973).
+6. Montgomery, H. L. Distribution of the zeros of the Riemann zeta function. Proc.
+Int. Cong. Math. Vanc. 1, 379–381 (1974).
+7. Odlyzko, A. M. On the distribution of spacings between zeros of the zeta function.
+Math. Comp. 48, 273–308 (1987).
+8. Berry, M. V. Riemann’s zeta function: a model for quantum chaos?, In Quantum
+Chaos and Statistical Nuclear Physics, 1-17. (Lecture Notes in Physics, vol. 263.
+Springer, Berlin, Heidelberg, 1986).
+9. Berry, M. V. Semiclassical formula for the number variance of the Riemann zeros.
+Nonlinearity 1, 339 (1988).
+10. Bogomolny, E. B. & Keating, J. P. Gutzwiller’s trace formula and spectral statistics:
+beyond the diagonal approximation. Phys. Rev. Lett. 77, 1472 (1996).
+11. Berry, M. V. & Keating, J. P. The Riemann zeros and eigenvalue asymptotics. SIAM
+Rev. 41, 236–266 (1999).
+12. Connes, A. Trace formula in noncommutative geometry and the zeros of the
+Riemann zeta function. Sel. Math. N. Ser. 5, 29–106 (1999).
+13. Sierra, G. & Rodriguez-Laguna, J. The H = xp model revisited and the Riemann
+zeros. Phys. Rev. Lett. 106, 200201 (2011).
+14. Berry, M. V. & Keating, J. P. A compact hamiltonian with the same asymptotic
+mean spectral density as the Riemann zeros. J. Phys. A: Math. Theor. 44, 285203
+(2011).
+15. Srednicki, M. The Berry-Keating hamiltonian and the local Riemann hypothesis. J.
+Phys. A: Math. Theor. 44, 305202 (2011).
+16. Bender, C. M., Brody, D. C. & Müller, M. P. Hamiltonian for the zeros of the
+Riemann zeta function. Phys. Rev. Lett. 118, 130201 (2017).
+R. He et al.
+5
+Published in partnership with The University of New South Wales
+npj Quantum Information (2021) 109 
+
+17. Sierra, G. The Riemann zeros as spectrum and the Riemann hypothesis. Symmetry
+11, 494 (2019).
+18. Crefﬁeld, C. E. Location of crossings in the Floquet spectrum of a driven two-level
+system. Phys. Rev. B 67, 165301 (2003).
+19. Bukov, M., D’Alession, L. D. & Polkovnikov, A. Universal high-frequency behavior
+of periodically driven systems: from dynamical stabilization to Floquet engi-
+neering. Adv. Phys. 64, 139–226 (2015).
+20. Grossmann, F., Dittrich, T., Jung, P. & Hänggi, P. Coherent destruction of tun-
+neling. Phys. Rev. Lett. 67, 516 (1991).
+21. van der Pol, B. An electro-mechanical investigation of the Riemann zeta function
+in the critical strip. Bull. Am. Math. Soc. 53, 976–981 (1947).
+22. Berry, M. V. Riemann zeros in radiation patterns. J. Phys. A: Math. Theor. 45,
+302001 (2012).
+23. Crefﬁeld, C. E. & Sierra, G. Finding zeros of the Riemann zeta function by periodic
+driving of cold atoms. Phys. Rev. A 91, 063608 (2015).
+24. He, R. et al. Identifying the Riemann zeros by periodically driving a single qubit.
+Phys. Rev. A 101, 043402 (2020).
+25. Cui, J. M. et al. Experimental trapped-ion quantum simulation of the Kibble-Zurek
+dynamics in momentum space. Sci. Rep. 6, 33381 (2016).
+26. Olmschenk, S. et al. Manipulation and detection of a trapped Yb. hyperﬁne qubit.
+Phys. Rev. A 76, 052314 (2007).
+27. Wang, Y. et al. Single-qubit quantum memory exceeding ten-minute coherence
+time. Nat. Photon 11, 646–650 (2017).
+28. Landau, E. Über die nullstellen der zetafunction. Math. Ann. 71, 548 (1991).
+29. Berry, M. V. Riemann zeros in radiation patterns: II. Fourier transform of zeta. J.
+Phys. A 48, 385203 (2015).
+30. Ruster, T. et al. A long-lived Zeeman trapped-ion qubit. Appl. Phys. B 122, 254 (2016).
+ACKNOWLEDGEMENTS
+C.E.C. was supported by the Spanish MINECO through grant FIS2017-84368-P, and G.S.
+by PGC2018-095862-B-C21, QUITEMAD+ S2013/ICE-2801, SEV-2016-0597 and the CSIC
+Research Platform on Quantum Technologies PTI-001. R.H., M.Z.A., J.M.C., Y.F.H., Y.J.H.,
+C.F.L., and G.C.G. were supported by the National Key Research and Development
+Program of China (Grant Nos. 2017YFA0304100 and 2016YFA0302700), the National
+Natural Science Foundation of China (Grant Nos. 11874343, 61327901, 11774335, and
+11734015), Key Research Program of Frontier Sciences, CAS (Grant No. QYZDY-SSW-
+SLH003), the Fundamental Research Funds for the Central Universities (Grant Nos.
+WK2470000026, WK2470000027, and WK2470000028), and Anhui Initiative in Quantum
+Information Technologies (Grant Nos. AHY020100 and AHY070000).
+AUTHOR CONTRIBUTIONS
+C.E.C. and G.S. developed the theoretical proposal. R.H., M.Z.A., J.M.C. and Y.F.H.
+designed and performed the experiment. Y.J.H., C.F.L. and G.C.G. supervised the
+experiments. All authors contributed to the data analysis, progression of the project,
+discussion of the results and the writing of the manuscript.
+COMPETING INTERESTS
+The authors declare no competing interests.
+ADDITIONAL INFORMATION
+Supplementary information The online version contains supplementary material
+available at https://doi.org/10.1038/s41534-021-00446-7.
+Correspondence and requests for materials should be addressed to J.-M.C., Y.-F.H.,
+C.-F.L. or C.E.C.
+Reprints and permission information is available at http://www.nature.com/
+reprints
+Publisher’s note Springer Nature remains neutral with regard to jurisdictional claims
+in published maps and institutional afﬁliations.
+Open Access This article is licensed under a Creative Commons
+Attribution 4.0 International License, which permits use, sharing,
+adaptation, distribution and reproduction in any medium or format, as long as you give
+appropriate credit to the original author(s) and the source, provide a link to the Creative
+Commons license, and indicate if changes were made. The images or other third party
+material in this article are included in the article’s Creative Commons license, unless
+indicated otherwise in a credit line to the material. If material is not included in the
+article’s Creative Commons license and your intended use is not permitted by statutory
+regulation or exceeds the permitted use, you will need to obtain permission directly
+from the copyright holder. To view a copy of this license, visit http://creativecommons.
+org/licenses/by/4.0/.
+© The Author(s) 2021
+R. He et al.
+6
+npj Quantum Information (2021) 109 
+Published in partnership with The University of New South Wales

@@ -1,0 +1,2710 @@
+
+--- PDF page 1 ---
+arXiv:1505.01548v1  [math-ph]  7 May 2015
+The Sound of Fractal Strings and the Riemann
+Hypothesis
+Michel L. Lapidus
+Abstract We give an overview of the intimate connections between natural direct
+and inverse spectral problems for fractal strings, on the one hand, and the Riemann
+zeta function and the Riemann hypothesis, on the other hand (in joint works of the
+author with Carl Pomerance and Helmut Maier, respectively). We also brieﬂy dis-
+cuss closely related developments, including the theory of (fractal) complex dimen-
+sions (by the author and many of his collaborators, including especially Machiel
+van Frankenhuijsen), quantized number theory and the spectral operator (jointly
+with Hafedh Herichi), and some other works of the author (and several of his col-
+laborators).
+Key words: Riemann zeta function, Riemann hypothesis (RH), quantization, quan-
+tized number theory, fractal strings, geometry and spectra, direct and inverse spectral
+problems for fractal strings, Minkowski dimension, Minkowski measurability, com-
+plex dimensions, Weyl–Berry conjecture, fractal drums, inﬁnitesimal shift, spec-
+tral operator, invertbility, quantized Dirichlet series and Euler product, universality,
+phase transitions, symmetric and asymmetric criteria for RH.
+Suggested short title for the paper: ”Fractal Strings and the Riemann Hypothesis.”
+University of California
+Department of Mathematics
+900 University Avenue
+Riverside, CA 92521–0135, USA
+e-mail: lapidus@math.ucr.edu
+1
+
+
+--- PDF page 2 ---
+
+
+--- PDF page 3 ---
+Contents
+The Sound of Fractal Strings and the Riemann Hypothesis. . . . . . . . . . . . .
+1
+Michel L. Lapidus
+1
+Riemann Zeros and Spectra of Fractal Strings: An Informal
+Introduction . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+4
+2
+Fractal Strings and Minkowski Dimension . . . . . . . . . . . . . . . . . . . .
+7
+3
+Characterization of Minkowski Measurability and Nondegeneracy
+9
+4
+The Weyl–Berry Conjecture for Fractal Drums . . . . . . . . . . . . . . . . . 13
+4.1
+Weyl’s asymptotic formula with sharp error term for
+fractal drums . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 13
+4.2
+Further comments, extensions and applications . . . . . . . . . 15
+5
+Direct Spectral Problems for Fractal Strings and the Riemann
+Zeta Function in the Critical Interval . . . . . . . . . . . . . . . . . . . . . . . . . 19
+6
+Inverse Spectral Problems for Fractal Strings and the Riemann
+Hypothesis . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 22
+7
+Epilogue: Later Developments and Research Directions . . . . . . . . . 26
+7.1
+Fractal strings, ζ = ζ(s), and a geometric interpretation
+of the critical strip . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 27
+7.2
+Complex dimensions of fractal strings and oscillatory
+phenomena . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 28
+7.3
+Fractal zeta functions of arbitrary compact sets and
+higher-dimensional theory of complex dimensions . . . . . . 31
+7.4
+Quantized number theory, spectral operators and the
+Riemann hypothesis. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 37
+References . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 47
+3
+
+
+--- PDF page 4 ---
+4
+Contents
+1 Riemann Zeros and Spectra of Fractal Strings: An Informal
+Introduction
+Unlike an ordinary (Sturm–Liouville) vibrating string, which consists of a single
+interval (of length ℓ, say), a fractal string consists of inﬁnitely many intervals (of
+lengths ℓ1,ℓ2,··· ,ℓj,··· , with ℓj ↓0 as j →∞), vibrating independently of each
+other. Hence, the (eigenvalue or frequency) spectrum of a fractal string consists of
+the union of the spectra (counting multiplicities) of each of the countably many or-
+dinary strings of which it is composed.
+A fractal string (or, equivalently, its boundary, viewed as a compact subset of
+the real line R) always has (fractal) Minkowski dimension D between 0 and 1, the
+most extreme case D = 0 and D = 1 being referred to (following [Lap1]) as the least
+and most fractal case, respectively, while the case when D = 1/2 is referred to (also
+as in [Lap1]) as the midfractal case. The latter case will play a key role throughout
+this paper.
+By listening to a fractal string, one can detect whether or not one of its com-
+plex dimensions coincides with a nontrivial Riemann zero (that is, with a zero of the
+Riemann zeta function which is located in the critical strip 0 < Re(s) < 1). Indeed,
+it turns out that the Riemann zeta function ζ = ζ(s) mediates between the geometry
+and the spectrum of a fractal string:
+ζν(s) = ζ(s)·ζL (s),
+(1)
+where ζν,L (s) = ζν(s) := ∑∞
+k=1 f −s
+k
+is the spectral zeta function of the fractal
+string L , with { fk}∞
+k=1 denoting the sequence of (suitably normalized) frequen-
+cies of L , written in nondecreasing order according to their multiplicities, and
+ζL (s) := ∑∞
+j=1 ℓs
+j is the geometric zeta function of L . This relation (discovered
+in [Lap2, Lap3]) has played an important role in fractal string theory, as it enables
+one to understand why some of the complex dimensions of L (i.e., the poles of
+the meromorphic continuation of ζL ) may be “canceled” by (nontrivial) zeros of ζ.
+Accordingly, certain oscillations which are present in the intrinsic geometry of the
+fractal string are no longer “visible” (or rather, “audible”) in the spectrum of L .
+More poetically, it is shown in [LapMai1,2] that “One can hear the shape of
+a fractal string of dimension D̸ = 1/2” (in the sense of a certain inverse spectral
+problem, denoted by (ISP)D and to be speciﬁed in §6 below, and not in the original
+sense of Mark Kac [Kac]) if and only if the Riemann hypothesis is true. Moreover,
+one cannot hear it for all of the fractal strings of dimension 1/2 (because ζ = ζ(s)
+has zeros on the critical line Re(s) = 1/2). Hence, in the present approach, the truth
+of the Riemann hypothesis is equivalent to the existence of a (mathematical) phase
+transition at D = 1/2 and at no other dimension D in the “critical interval” (0,1).
+(See Theorems 15 and 17 below.) By “hearing the shape of a fractal string” here, we
+mean that the inverse spectral problem (ISP)D in §6 below has an afﬁrmative answer
+
+
+--- PDF page 5 ---
+Contents
+5
+for any fractal string of dimension D.
+Phrased a little more precisely: one can hear the shape of a fractal string of
+a given (Minkowski) dimension D ∈(0,1) if and only if the Riemann zeta function
+ζ(s) does not have any zero on the vertical line Re(s) = D. (See Theorem 14.) Fur-
+thermore, in general, one cannot hear the shape of a fractal string in the midfractal
+case where D = 1/2. (See Corollary 16.) Consequently, one can hear the shape of a
+fractal string in every possible dimension D ∈(0,1) (other than 1/2) if and only if
+the Riemann hypothesis [Rie] is true; that is, if and only if
+ζ(s) = 0,
+0 < Re(s) < 1 ⇒Re(s) = 1
+2.
+(2)
+(See Theorem 15.) These results have been established by the author and Helmut
+Maier in [LapMai2] (announced in 1991 in [LapMai1]) building on the author’s
+earlier work [Lap1] (see also [Lap2,3]) on a partial resolution of the Weyl–Berry
+conjecture in any dimension [Berr1,2]) as well as on the ensuing work of the author
+and Carl Pomerance [LapPom2] (announced in 1990 in [LapPom1]) on a resolution
+of the one-dimensional (modiﬁed) Weyl–Berry conjecture (of [Lap1]) and its unex-
+pected connections with the Riemann zeta function. (See Conjecture 9 and Theorem
+11 in §5.)
+Later on, these results of [LapMai2] (which made use at the heuristic level of
+the intuition of complex dimensions) were reinterpreted (by the author and Machiel
+van Frankenhuijsen in [Lap-vFr1,2]) in terms of the then rigorously deﬁned notion
+of complex dimension, as well as extended to a large class of Dirichlet series and
+integrals, including all of the arithmetic zeta functions for which the generalized
+Riemann hypothesis is expected to hold. (See also [Lap-vFr3, Chapter 9].) More-
+over, a method similar to the one used in [LapMai2], but now relying in part on the
+explicit formulas established in [Lap-vFr1–3](and direct computations as well as on
+inverse spectral problems), was used to show that the Riemann zeta function, along
+with a large class of Dirichlet series and integrals (including most of the arithmetic
+zeta functions, [ParSh1–2], [Sarn], [Lap-vFr3, Appendix A] or [Lap6, Appendices
+B, C and E], other than the zeta functions of varieties over ﬁnite ﬁelds, for which the
+result clearly does not hold), cannot have an inﬁnite vertical arithmetic progression
+of zeros. (See Lap-vFr3, Chapter 11] for this result and several extensions concern-
+ing the density of the zeros.)
+Unknown at the time to the authors of [Lap-vFr1] (and of earlier papers on
+this and related subjects), this latter result about the zeros in arithmetic progres-
+sion, in the special case of ζ, was already obtained by Putnam in [Put1–2] by a
+completely different method, which could not be generalized to this signiﬁcantly
+broader setting. This turned out to be quite beneﬁcial to the general theory of com-
+plex dimensions as it led us in [Lap-vFr1–3] to signiﬁcantly improve and reﬁne
+the authors’ original pointwise and distributional explicit formulas. (See, e.g., [Lap-
+
+
+--- PDF page 6 ---
+6
+Contents
+vFr3, Chapter 5].)
+In the rest of this paper, we will be more speciﬁc and explain what type of
+inverse spectral problem is involved here. (See, especially, §6.) First of all, we will
+need to precisely deﬁne (in §2) what is a fractal string as well as its Minkowski di-
+mension and content.
+We will then recall (in §3) results from [LapPom1,2] providing a character-
+ization of the notions of Minkowski measurability and nondegeneracy, which will
+play a key role in §5 and part of §6 (as well as serve as a motivation for some aspects
+of §7.4). In §4, we will discuss Weyl’s asymptotic formula and conjecture [We1,2]
+for the spectral asymptotics of drums with smooth (or sufﬁciently “regular”) bound-
+ary, as well as the Weyl–Berry conjecture [Berr1,2] for drums with fractal boundary
+(or “fractal drums”) and its partial resolution obtained in [Lap1]. In §5, we will
+present the resolution of the modiﬁed Weyl–Berry (MWB) conjecture [Lap1] for
+fractal strings obtained in [LapPom1,2], thereby establishing a precise connection
+between the corresponding direct spectral problem and the Riemann zeta function
+ζ = ζ(s) in the critical interval 0 < s < 1. In §6, we will introduce the aforemen-
+tioned inverse spectral problem (ISP)D, for each D ∈(0,1), and precisely state the
+results of [LapMai1,2] connecting it with the presence of zeros of the Riemann zeta
+function in the critical strip 0 < Re(s) < 1 (the so-called critical or nontrivial zeros),
+and thereby, with the Riemann hypothesis.
+Finally, in §7, we will discuss a variety of topics, closely connected to (or
+motivated in part by) the above developments. The subjects to be discussed in-
+clude the mathematical theory of complex dimensions of fractal strings developed
+in [Lap-vFr1–3] (see §7.2), its higher-dimensional counterpart recently developed in
+[LapRa˘Zu1] and [LapRa˘Zu2–8] (see §7.3), as well as aspects of “quantized number
+theory” (see §7.4) developed in [HerLap1] (and [HerLap2–4], along with [Lap7]).
+In particular, in the latter subsection, we will see that the aforementioned inverse
+spectral problem (ISP)D can be rigorously reinterpreted in terms of the invertibility
+(or “quasi-invertibility”) of the “spectral operator” a = ζ(∂), with the “inﬁnitesimal
+shift” (of the real line) ∂now playing the role of the usual complex variable s in the
+deﬁnition of the quantum (or operator-valued) analog of the classic Riemann zeta
+function ζ = ζ(s).
+We close this introduction by providing several relevant references. For gen-
+eral references concerning the theory of the Riemann zeta function and related
+aspects of analytic number theory, we mention, for example, [Edw, Ing, Ivi, Kar-
+Vor, Lap6, Lap-vFr3, ParSh1–2, Pat, Ser, Ti] along with the relevant references
+therein. For fractal string theory and the associated theory of complex dimensions,
+along with their applications to a variety of subjects, including fractal geometry,
+spectral geometry, number theory and dynamical systems, we refer to [Lap-vFr3],
+along with [EllLapMaRo, HamLap, Fal2, HeLap, HerLap1–5, LalLap1–2, Lap1–9,
+LapL´eRo, LapLu1–3, LapLu-vFr1–2, LapMai1–2, LapNe, LapPe1–3, LapPeWi1–
+
+
+--- PDF page 7 ---
+Contents
+7
+2, LapPom1–3, LapRa˘Zu1–8, LapRo1–2, LapRo ˘Zu, L´eMen, MorSepVi, Pe, PeWi,
+Ra, RatWi2, Tep1–2, ˘Zu1–2] and the relevant references therein. In particular,
+Chapter 13 of [Lap-vFr3] provides an exposition of a number of recent exten-
+sions and applications of the theory, including to fractal sprays (higher-dimensional
+analogs of fractal strings, [LapPom3]) and self-similar systems ([Lap-vFr3, §13.1],
+based on [LapPe2–3, LapPeWi1–2, Pe, PeWi]), p-adic (or nonarchimedean) geome-
+try, ([Lap-vFr3, §13.2], based on [LapLu1–3, LapLu-vFr1–2]), multifractals ([Lap-
+vFr3, §13.3], based on [LapRo, LapL´eRo, EllLapMaRo]), random fractal strings
+([Lap-vFr3, §13.4], based on [HamLap]), as well as fractal membranes and the
+Riemann (or modular) ﬂow on the moduli space of fractal membranes ([Lap-vFr3,
+§13.5], based on the book [Lap6] and on [LapNe]). As a general rule, we will give
+speciﬁc references to the most recent monograph [Lap-vFr3] rather than to the ear-
+lier research monographs, [Lap-vFr1] and [Lap-vFr2].
+2 Fractal Strings and Minkowski Dimension
+A (nontrivial) fractal string L is a bounded open set Ω⊂R which is not a ﬁnite
+union of intervals. Hence, Ωis an inﬁnite countable disjoint union of (bounded) in-
+tervals Ij, of lengths ℓj = |Ij|, for j = 1,2,··· : Ω= ∪∞
+j=1Ij. Since |Ω| = ∑∞
+j=1 ℓj < ∞,
+we may assume without loss of generality that (ℓj)∞
+j=1 is nonincreasing and so ℓj ↓0
+as j →∞. Furthermore, for our purposes, we may identify a fractal string with its
+associated sequence of lengths (or scales), L := (ℓj)∞
+j=1, written as above (count-
+ing multiplicities). Indeed, all of the geometric notions we will work with, such as
+V(ε), the Minkowski dimension and content, as well as the geometric zeta function
+and the complex dimensions, depend only on L = (ℓj)∞
+j=1 and not on the particular
+geometric realization of L as a bounded open subset Ωof R.
+Given ε > 0, the (inner) ε-neighborhood (or inner tube) of ∂Ω(or of L ) is
+given by
+Ωε := {x ∈Ω: d(x,∂Ω) < ε},
+(3)
+where ∂Ωdenotes the boundary of Ω(a compact subset of R) and d(·,∂Ω) denotes
+the (Euclidean) distance to ∂Ω.
+In the sequel, we will let
+V(ε) = VL (ε) := |Ωε|,
+(4)
+the volume (really, the length or 1-dimensional Lebesgue measure) of Ωε. As was
+mentioned above, it can be shown (cf. [LapPom1,2]) that V(ε) depends only on L
+(and not on the particular geometric realization Ωof L ). Then, given d ≥0, the
+d-dimensional upper Minkowski content of L (or of ∂Ω) is given by
+
+
+--- PDF page 8 ---
+8
+Contents
+M ∗
+d = M ∗
+d (L ) := lim
+ε→0+ sup V(ε)
+ε1−d ,
+(5)
+and similarly for the d-dimensional lower Minkowski content M∗,d = M∗,d(L ),
+except for the upper limit replaced by a lower limit.
+The Minkowski dimension of L (or of its boundary ∂Ω),1 denoted by D =
+DL , is deﬁned by
+D := inf{d ≥0 : M ∗
+d < ∞}
+(6)
+= sup{d ≥0 : M ∗
+d = +∞}.
+We note that since |Ω| < ∞, we always have 0 ≤D ≤1. Furthermore, from the phys-
+ical point of view, D will play the role of a critical exponent (or critical parameter):
+it is the unique real number D such that M ∗
+d = +∞for d < D and M ∗
+d = 0 for d > D.
+The upper (resp. lower) Minkowski content of L is deﬁned by M ∗:= M ∗
+D
+(resp., M∗:= M∗,D). We always have 0 ≤M∗≤M ∗≤∞. If 0 < M∗(≤)M ∗< ∞,
+then L is said to be Minkowski nondegenerate. If, in addition, M∗= M ∗(i.e., if
+the upper limit in Equation (5) is a true limit in (0,+∞), with d := D), then we
+denote by M this common value, called the Minkowsi content of L , and the frac-
+tal string L (or its boundary ∂Ω) is said to be Minkowski measurable. So that
+M = limε→0+ V(ε)/ε1−D and 0 < M < ∞.
+We close this section by stating a theorem that shows the intimate connec-
+tions between the geometric zeta function ζL of a fractal string L (introduced in
+§1 above, just after Equation (1)), and the Minkowski dimension of L . (Recall that
+ζL (s) = ∑∞
+j=1 ℓs
+j, for all s ∈C with Re(s) sufﬁciently large.) This result was ﬁrst
+observed by the author in [Lap2, Lap3], using earlier work of Besicovich and Tay-
+lor in [BesTay], and has since then been given several direct proofs in [Lap-vFr3,
+Theorem 1.10] and in [Lap-vFr3, Theorem 13.111]; see also [LapLu-vFr2].
+Theorem 1 ([Lap2, Lap3]). Let L be a fractal string. Then, the abscissa of con-
+vergence of ζL coincides with the Minkowski dimension of L : σ = D.
+Recall that the abscissa of convergence of ζL is given by
+σ := inf
+
+ρ ∈R :
+∞
+∑
+j=1
+ℓρ
+j < ∞
+
+.
+(7)
+It follows from this deﬁnition and from known results about Dirichlet series with
+positive coefﬁcients (see, e.g., [Ser, §VI.2.2 and §VI.2.3]) that ζL = ζL (s) is holo-
+morphic for Re(s) > D and that the open right half-plane {Re(s) > D} is the largest
+right half-plane (of the form {Re(s) > α}, for some α ∈R ∪{±∞}) to which ζL
+1 This is really the upper Minkowski dimension of ∂Ω, relative to Ω, but we will not stress this
+point in this paper (except perhaps in §7.3).
+
+
+--- PDF page 9 ---
+Contents
+9
+can be holomorphically continued as well as the largest such half-plane in which the
+Dirichlet series ∑∞
+j=1ℓs
+j is absolutely convergent(and hence, convergent).Therefore,
+ζL does not have any pole in {Re(s) > D}. (We refer, e.g., to [Ser, §V1.2 and §V1.3]
+or to [HardWr] for an introduction to the theory of Dirichlet series.)
+Furthermore, note that s = D is always a singularity of ζL (i.e., ζL (s) →+∞
+as s →D+, s ∈R) and therefore, if ζL can be meromorphically continued to an
+open (connected) neighborhood of D, then D is a pole of ζL . Theorem 1 above
+(according to which D = σ), along with this last observation, is one of the original
+justiﬁcations for calling the poles of a meromorphic continuation of ζL (to an open
+connected neighborhood of {Re(s) > D}) the (visible) complex dimensions of the
+fractal string L . (See [Lap-vFr1–3] and, for a brief introduction, see §7.2 below.)
+Here and thereafter, {Re(s) > α} stands for {s ∈C : Re(s) > α}. By con-
+vention, for α = −∞or +∞, respectively, it coincides with C or the empty set /0.
+Similarly, if α ∈R,{Re(s) = α} denotes the vertical line {s ∈C : Re(s) = α}.
+3 Characterization of Minkowski Measurability and
+Nondegeneracy
+We recall here some of the joint results of the author and Carl Pomerance ob-
+tained in [LapPom1,2]. Further results from that work will be discussed in §5.
+Theorem 2 (Characterization of Minkowski measurability, [LapPom2]). Let
+L = (ℓj)∞
+j=1 be a fractal string of Minkowski dimension D ∈(0,1). Then, L is
+Minkowski measurable if and only if
+ℓj ∼Lj−1/D as j →∞,
+(8)
+for some constant L ∈(0,+∞). In that case, the Minkowski content of L is given by
+M = 21−D
+1 −DLD.
+(9)
+Equation (8) precisely means that the limit of ℓj · j1/D exists in (0,+∞) and
+is equal to L. Furthermore, note that (8) is equivalent to
+NL (x) ∼MxD as x →+∞,
+(10)
+with M := LD and where NL , the geometric counting function of L , is deﬁned for
+all x > 0 by
+NL (x) = #({ j ≥1 : ℓ−1
+j
+≤x}).
+(11)
+
+
+--- PDF page 10 ---
+10
+Contents
+Here and thereafter, #B denotes the number of elements of a ﬁnite set B. More-
+over, Equation (10) precisely means that x−D NL (x) →M as x →+∞, for some
+M ∈(0,+∞).
+Although we will not use this result explicitly, it is helpful to also give the
+counterpart of Theorem 2 for Minkowski nondegeneracy. Let α∗(resp., α∗) be the
+lower (resp., upper) limit of ℓj · j1/D as j →∞; so that we always have 0 ≤α∗≤
+α∗≤∞.
+Theorem 3 (Characterization of Minkowski nondegeneracy, [LapPom2]). Let
+L be a fractal string of dimension D ∈(0,1). Then, L is Minkowski nondegenerate
+(i.e., 0 < M∗(≤)M ∗< ∞) if and only if
+0 < α∗(≤)α∗< ∞.
+(12)
+Concretely, Equation (12) means that there exist positive constants c, C ≥1
+such that c−1 j−1/D ≤ℓj ≤cj−1/D for all j ≥1 or, equivalently, C−1xD ≤NL (x) ≤
+CxD for all x > 0.
+Let Nν = Nν,L denote the spectral (i.e., frequency) counting function of L .
+Hence, Nν(x) := #({ f ∈σ(L ) : f ≤x}) for all x > 0, where σ(L ) = {n·ℓ−1
+j
+: n ≥
+1, j ≥1} denotes the (frequency) spectrum of L . (In essence, the frequencies of L
+are, up to a multiplicative normalizing positive constant, equal to the square roots
+of the eigenvalues of L ; that is, of the eigenvalues of the Dirichlet Laplacian −∆=
+−d2/dy2 on any geometric representation Ωof L by a bounded open subset of R.)
+It is also shown in [LapPom2] that Equation (12) (and hence also, the Minkowski
+nondegeneracy of L , according to Theorem 3) is equivalent to
+0 < δ∗(≤)δ ∗< ∞,
+(13)
+where δ∗(resp., δ ∗) denotes the lower (resp., upper) limit of ϕν(x)/xD as x →+∞,
+and ϕν(x) is the “asymptotic second term” for Nν(x); namely, ϕν(x) := W(x) −
+Nν(x), with W(x) := |Ω|x being the Weyl (or leading) term to be discussed in
+§4.1, §5 and §6 below. (In general, one always has ϕν(x) ≥0 for all x > 0 and
+thus 0 ≤δ∗≤δ ∗≤∞.)
+Equation (13) means that there exist c1 ≥1 such that c−1
+1 xD ≤ϕν(x) ≤c1xD
+for all x > 0; in other words, the error estimates of [Lap1], to be discussed further
+on in Theorem 8 of §4.1, are sharp in this case. More speciﬁcally, when N = 1 and
+D ∈(0,1), each of the equivalent conditions (12) and (13) characterizes the sharp-
+ness of the remainder estimates of [Lap1], recalled in Equation (19) (see Theorem
+8(i)) below).
+It is natural to wonder whether the counterpart of Theorem 3 and of its com-
+plement for Nν holds for one-sided (rather than two-sided estimates). The answer
+may be somewhat surprising to the reader. In short, it is positive for the upper esti-
+
+
+--- PDF page 11 ---
+Contents
+11
+mates but negative for the lower estimates. More speciﬁcally, still in [LapPom2], it
+is shown that
+M ∗< ∞⇔ℓj = O(j−1/D) as j →∞(i.e., α∗< ∞) ⇔NL (x) = O(xD)
+(14)
+as x →+∞⇔ϕν(x) = O(xD) as x →+∞, (i.e., δ ∗< ∞),
+and, more generally, that the exact counterpart of (14) holds for any d > 0, provided
+D and M ∗= M ∗
+D are replaced by d and M ∗
+d , respectively. This provides, in partic-
+ular, a converse (in the present one-dimensional case) to the error estimate obtained
+in [Lap1] for the asymptotic second term of Nν(x) to be discussed next; see part (i)
+of Theorem 8 below, specialized to the case where N = 1 and D ∈(0,1).
+Moreover, it is shown in [LapPom2] by means of an explicit counterexample
+that in the analog of (14) for M∗, the implications in one direction holds, but not in
+the other direction. For example, it is not true, in general, that M∗> 0 ⇔α∗> 0 ⇔
+δ∗> 0.
+Here, in Equation (14), as well as in the sequel, given f : [0,+∞) →R and
+g : [0,+∞) →[0,+∞), one writes that f(x) = O(g(x)) to mean that there exists a
+positive constant c2 such that |f(x)| ≤c2g(x), for all x sufﬁciently large. (For the
+type of functions or sequences we will work with, we may assume that this inequal-
+ity holds for all x > 0.) We use the same classic Landau notation for sequences
+instead of for functions of a continuous variable.
+In closing this section, we note that under mild assumptions on L (about
+the growth of a suitable meromorphic continuation of its geometric zeta function
+ζL ), it has since then been shown that within the theory of complex dimensions de-
+veloped in [Lap-vFr1–3], the characterization of Minkowski measurability obtained
+in [LapPom2] (Theorem 2 above) can be supplemented as follows (see [Lap-vFr3,
+Theorem 8.15]), under appropriate hypotheses.
+Theorem 4 (Characterizationof Minkowski measurability revisited, [LapPom2,
+Lap-vFr3]). Let L be a fractal string of Minkowski dimension D. Then, under suit-
+able conditions on ζL (speciﬁed in [Lap-vFr3, Section 8.3]), the following state-
+ments are equivalent:
+(i)
+L is Minkowski measurable.
+(ii)
+Condition (8), or equivalently (10), holds.
+(iii) D is the only complex dimension of L with real part D, and it is simple.
+Moreover, if any of these conditions is satisﬁed, then the Minkowski content of L is
+given by
+M = 21−D
+M
+1 −D = 21−D res(ζL ,D)
+D(1 −D) ,
+(15)
+
+
+--- PDF page 12 ---
+12
+Contents
+where res(ζL ,D) denotes the residue of ζL (s) at s = D, M := LD and L and M are
+given as in (8) and (10), respectively.
+Recall that the complex dimensions of L are the poles of a (necessarily
+unique) meromorphic continuation of ζL (to a connected open neighborhood of
+{Re(s) > D}). According to a result of [Lap2,3] (see Theorem 1 above), there are
+no complex dimensions with real parts > D; see the discussion following Equation
+(7) above.
+Remark 5. When L is a self-similar string (in the sense of [Lap-vFr3, Chapter 2]
+i.e., the boundary of L is a self-similar set), it is shown in [Lap-vFr3, Theorems
+2.16, 8.23 and 8.36] that no hypothesis on ζL is needed in the counterpart of The-
+orem 4, and that either of the equivalent statements (i), (ii) or (iii) of Theorem 4
+is true if and only if L is nonlattice; i.e., iff the subgroup of R generated by the
+logarithms of its distinct scaling ratios is not of the form ρZ, for some ρ > 0. If L
+is lattice, then it is Minkowski nondegenerate but is not Minkowski measurable.
+Finally, we mention that the original proof of Theorem 2 given in [Lap-
+Pom1,2] was analytical and combinatorial in nature. Several parts of the proof have
+since been established in a different manner by Falconer in [Fal2], using some tech-
+niques from the theory of dynamical systems, and more recently (and perhaps most
+concisely), by Rataj and Winter in [RatWi2] using techniques from geometric mea-
+sure theory (in particular, from [Sta, RatWi1] and the relevant references therein).
+Remark 6. We also note that the notion of Minkowski dimension was introduced
+(for noninteger values of the dimension) by Bouligand in the late 1920s in [Bou].
+The notion of (normalized) Minkowski content was introduced by Feder in [Fed],
+while that of Minkowski measurability was apparently ﬁrst used by Stach´o in [Sta].
+The Minkowski dimension is also often called “box dimension” (see, e.g.,
+[Fal1, Lap-vFr3, Man, Mat, Tri, LapRo2] or the applied literature on fractal
+dimensions), entropy dimension, or capacity dimension, for example. Contrary to
+the Hausdorff dimension, it is not σ-stable (that is, it is usually not true that
+D(∪∞
+k=1Ak) = supk≥1 D(Ak)), where D(A) denotes the upper Minkowski dimen-
+sion of A; see, e.g., [Fal1, Mat, Tri].2 Furthermore, unlike the Hausdorff measure
+(which is a true positive Borel measure, in the usual mathematical sense of the
+term, [Coh, Fal1, Foll, Mat, LapRo2]), the Minkowski content (when it exists) or
+more generally, the upper Minkowski content, is not a measure (it is only ﬁnitely
+sub-additive). In fact, as is pointed out in [Lap1] (see also [Lap2–3]), and some-
+what paradoxically, this is precisely because it does not have all of these desirable
+mathematical properties that the Minkowski dimension is important in the study of
+aspects of harmonic analysis as well as of spectral and fractal geometry, includ-
+ing the study of the vibrations and spectra of fractal drums or “drums with fractal
+boundary” ([Lap1–3], see also §4 below) and, in particular, of fractal strings (i.e.,
+one-dimensional drums with fractal boundary). See, e.g., [Lap1, Examples 5.1 and
+5.1’].
+2 A simple counterexample is provided by A := {1/k : k ≥1} and Ak := { 1
+k } for each k ≥1, viewed
+as subsets of R; then, D(A) = 1/2, whereas D(Ak) = 0 for all k ≥1 and hence, supk≥1 D(Ak) = 0.
+
+
+--- PDF page 13 ---
+Contents
+13
+4 The Weyl–Berry Conjecture for Fractal Drums
+In this section, we ﬁrst brieﬂy recall Weyl’s classic formula for the leading spec-
+tral asymptotics of ordinary (smooth or piecewise smooth) drums, as well as cor-
+responding extensions and sharp remainder estimates (from [Lap1]), valid for gen-
+eral fractal drums and providing a partial resolution of the Weyl–Berry conjecture
+([Berr1–2]) in any dimension; see §4.1. (In §5, we will specialize the situation to the
+one-dimensional case, which is the main focus of this paper.) In the latter part of this
+section, we will comment on various aspects of Weyl’s formula for fractal drums,
+both in the case of drums with fractal boundary (which is of most interest here) and
+in the related case of drums with fractal membrane (corresponding to Laplacians
+and Dirac operators on fractals themselves); see §4.2. We will also conclude this
+section by brieﬂy mentioning some of the physical and technological applications
+of these mathematical results about fractal drums and of the original (or modiﬁed)
+Weyl–Berry conjecture.
+4.1 Weyl’s asymptotic formula with sharp error term for fractal
+drums
+Hermann Weyl’s classic asymptotic formula ([We1,2]; see also, e.g., [CouHil,
+ReSi3]) for the frequency (or spectral) counting function Nν = Nν(x) of an ordi-
+nary (N-dimensional) drum can be stated as follows:
+Nν(x) = CN|Ω|NxN + o(xN)
+(16)
+as x →+∞. Here, |Ω| := |Ω|N denotes the volume of the bounded open set Ω⊂RN
+(i.e., the N-dimensional Lebesgue measure of Ω). Furthermore, given x > 0,Nν(x)
+is the number of (suitably normalized) frequencies f of the drum not exceeding x,
+and CN is an explicitly known positive constant which can be expressed in terms of
+the volume of the unit ball of RN (and therefore, in terms of appropriate values of
+the gamma function Γ = Γ (s)). In the sequel, we denote the leading term in (16) by
+W(x) := Cn|Ω|NxN
+(17)
+and call it the Weyl term. In addition, mathematically, the spectrum of the (N-
+dimensional) “drum” is interpreted as the spectrum of the Dirichlet Laplacian −∆
+on a given nonempty bounded open set Ω⊂RN(N ≥1), with boundary ∂Ω. Fur-
+thermore, the Dirichlet boundary conditions are interpreted variationally (or in the
+distributional sense); see, e.g., [LioMag, Bre] or [Lap1, §2].
+Since the Laplacian is a second order (self-adjoint, positive) linear operator,
+the aforementioned (normalized) frequencies are (up to a multiplicative constant)
+equal to the square roots of the eigenvalues. In the present situation, the spectrum
+
+
+--- PDF page 14 ---
+14
+Contents
+is discrete and hence, we can order these frequencies in nondecreasing order (and
+according to their multiplicities) as follows:
+0 < f1 ≤f2 ≤··· ≤fn ≤··· , with fn →+∞as n →∞.
+(18)
+Remark 7. Physically, W(x) can be interpreted as a volume in phase space. More
+speciﬁcally, W(x) is proportional to
+|{(x,ξ) ∈Ω× RN : |ξ|2 ≤x2}|2N = |B(0,1)|N |Ω|N xN,
+where RN × RN ≈R2N is the “phase space” (the space of positions and velocities
+or equivalently, momenta, of the classical particle) and for ρ > 0,B(0,ρ) denotes
+the ball of center the origin and radius ρ in RN.
+In [Berr1, Berr2], extending to the fractal case a classic conjecture of the
+mathematician Hermann Weyl [We1,2] in the “regular” (or “smooth” case),3 the
+physicist Michael Berry has conjectured that (16) should be completed to obtain
+an asymptotic second term for the spectral counting function Nν(x), of the form
+−CN,HHH(∂Ω)xH =: S(x), where H is the Hausdorff dimension of the boundary
+∂Ω(H ∈[N −1,N]),HH(∂Ω) is the H-dimensional Hausdorff measure of ∂Ω(a
+well-known fractal generalization to noninteger dimensions of the notion of “vol-
+ume”; see, e.g., [Fed, Fal1, Mat, Tri, LapRo2]), and CN,H is a positive constant
+independent of Ωand depending only on N and H (as well as expressed in terms of
+the gamma function, by analogy with the known results in integer dimensions for
+simple examples such as N-dimensional cubes).
+Unfortunately, it turns out that Berry’s conjecture (called the Weyl–Berry
+conjecture in [Lap1] and in the literature since then), although very stimulating,
+is not correct, as was ﬁrst noted by Brossard and Carmona by means of an explicit
+counterexample in [BroCar] and then, explained from a mathematical point of view
+(and illustrated by a family of even simpler counterexamples) in [Lap1]. (See, in
+particular, [Lap1, Examples 5.1 and 5.1’].) Furthermore, H should be replaced by
+D, the (inner) Minkowski dimension of ∂Ω, and HH(∂Ω) might reasonably be re-
+placed by MD(∂Ω), the (inner) Minkowski content of ∂Ω. Finally, as was shown
+in [Lap2,3] and [LapPom2,3], even the expected constant CN,H (when it exists) does
+not simply take the form of CN,D (where D is the Minkowski dimension of ∂Ω)
+but whatever replaces the factor of proportionality in the counterpart of S(x) should
+merely be expressed in terms of the residue at s = D of the meromorphic continua-
+tion of the corresponding spectral zeta function ζν(s) = ∑∞
+n=1 f −s
+n , where (fn)∞
+n=1 is
+the sequence of frequencies of the drum, as given in Equation (18) above. In fact, in
+§5, we will see that when N = 1 (the special case of fractal strings instead of higher-
+dimensional fractal drums) and when ∂Ω(or, equivalently, the fractal string) is
+Minkowski measurable (with Minkowski content denoted by M ), then C1,D is pro-
+3 See, e.g., [Mel1–2, Ivr1–3] and [H¨o1–3, Ph, See1–3] (along with the relevant references therein
+and in [Lap-vFr3, §12.5 and Appendix B]) for results (in the smooth case) concerning the Weyl
+conjecture about the asymptotic second term of the spectral counting function Nν(x).
+
+
+--- PDF page 15 ---
+Contents
+15
+portional to the positive number −ζ(D), where ζ = ζ(s) is the classic Riemann zeta
+function and D ∈(0,1). (See Theorem 11 below, where in light of (23), C1,D is of
+the form cDM , with cD given by Equation (24).)
+On the positive side, the following partial resolution of the Weyl–Berry con-
+jecture was obtained by the author in [Lap1] (recall that the Weyl term W(x) is given
+by (17) above and is therefore proportional to xN):
+Theorem 8 (Sharp error estimates, [Lap1]). Let Ωbe any (nonempty) bounded
+open subset of RN. Recall that we always have D ∈[N −1,N], where D = D(∂Ω)
+is the (inner) Minkowski dimension of ∂Ω; see comment (b) in §4.2 just below.
+(i) Then, in the “fractal case” where D ∈(N −1,N], we have
+Nν(x) = W(x)+ O(xD) as x →+∞,
+(19)
+provided M ∗
+D(∂Ω) < ∞, where the (pointwise) remainder estimate O(xD) is sharp
+for every D ∈(N −1,N). Furthermore, if M ∗
+D(∂Ω) = +∞, then D should be re-
+placed by D+ ε, for any arbitrarily small ε > 0.
+(ii) In the “nonfractal case” where D = N −1 (which is the case, for example,
+if the boundary ∂Ωis piecewise smooth or, more generally, locally Lipschitz), then
+exactly the same result as in part (i) holds, except for the fact that the error term
+now takes the form O(xD logx) as x →+∞(with D := N −1).
+When M ∗
+D(∂Ω) = +∞, either in case (i) or (ii) of Theorem 8, one should try
+to use the later extension of this theorem obtained in [HeLap] and expressed in terms
+of generalized (upper) Minkowski contents, relative to suitable gauge functions; see
+comment (g) in §4.2 just below.
+Note that in the most fractal case when D = N, the remainder estimate (19)
+still holds but is clearly uninteresting because then, the error term is of the same
+order as the leading term W(x) given by Equation (17).
+4.2 Further comments, extensions and applications
+We next comment on various aspects and extensions (in related contexts) of Theo-
+rem 8 and of the Weyl–Berry conjecture. Just as in §4.1, our discussion is not meant
+to be exhaustive in any way but simply aims at providing various pointers and ref-
+erences where the interested reader can ﬁnd a lot more detailed information.
+(a) The nonfractal case where D := N −1 (see part (ii) of Theorem 8
+just above) was essentially already obtained by G. M´etivier in [M´et3] (see also
+[M´et1,2]), in a slightly less precise form and using a different terminology (not
+
+
+--- PDF page 16 ---
+16
+Contents
+explicitly involving the notions of Minkowski dimension and content).
+(b) In Theorem 8, the (inner) Minkowski dimension D and (inner) upper
+Minkowski content M ∗
+D := M ∗
+D(∂Ω) are deﬁned exactly as in the one-dimensional
+case where N = 1 (see Equations (6) and (5), respectively), except that on the right-
+hand side of (5) (with d := D), V(ε)/ε1−D should be replaced by V(ε)/εN−D. Since
+Ω⊂RN is bounded, it has ﬁnite volume and therefore it is easy to check that D ≤N.
+Furthermore, since ∂Ωis the boundary of a (nonempty) bounded open set, its topo-
+logical dimension is equal to N −1 and hence, D ≥N −1. Consequently, as was
+observed in [Lap1], we always have N −1 ≤D ≤N. (For the special case of fractal
+strings, we have N = 1 and we thus recover the fact that 0 ≤D ≤1; see the statement
+following Equation (6) in §2.)
+In [Lap1], the case where D = N −1 is called the least or nonfractal case, the
+case where D = N is called the most fractal case, while the case where D = N −1
+2
+(i.e., the codimension N −D = {D} is equal to 1/2, where {D} ∈[0,1) is the frac-
+tional part of D), is referred to as the midfractal case. It turns out that each of these
+cases (where the codimension N −D takes the value 0,1 or 1/2, respectively)4 plays
+an important role in the proof of Theorem 8 (and its generalizations) given in [Lap1]
+(as well as in related spectral or geometric results obtained in [Lap1, Examples 5.1
+and 5.1’, along with Appendix C]).
+(c) To show that the remainder estimates are sharp (in case (i) of Theorem
+8 where D ∈(N −1,N) and M ∗
+D(∂Ω) < ∞), a simple one-family of examples is
+constructed in [Lap1, Example 5.1 (N = 1) and Example 5.1’ (N ≥1)]. When
+N = 1, it is of the form Ωa := ∪∞
+j=1((j + 1)−a, j−a), where a > 0 is arbitrary, so
+that ∂Ωa = {0} ∪{ j−a : j ≥1}. It follows that for every a > 0, H = 0 (since ∂Ωa
+is countable), whereas D = (a + 1)−1, ∂Ωa is Minkowski measurable (as deﬁned
+in §2 above and shown in [Lap1]) with Minkowski content M := MD(∂Ω) equal
+to 21−DaD/(1 −D); see [Lap1, Appendix C]. This was the ﬁrst explicit example
+of a fractal string and served as a motivation for the formulation of Theorem 2
+above (the characterization of Minkowski measurability for fractal strings, obtained
+in [LapPom2]) and the modifed Weyl–Berry conjecture, stated in [Lap1] and to
+be discussed in §5 below (see Conjecture 9). Note that the midfractal case where
+D = 1/2 corresponds to a = 1, while the most (D = 1) and least (D = 0) fractal
+cases correspond, respectively, to the limits a →0+ and a →+∞. Furthermore, the
+symmetry a ↔1/a exchanges D and 1 −D.
+Finally, when N ≥2, exactly the same statements as above are true for the N-
+dimensional analog (a fractal comb) of Ωa, deﬁned by Ωa,N := Ωa × [0,1]N−1. We
+then have that H = N −1,D = N −1 + (a + 1)−1, ∂Ωa,N is Minkowski measurable
+and MD(∂Ωα,N) has the same value as above. Furthermore, the remainder estimate
+(19) of part (i) of Theorem 8 is still sharp for every a > 0 (and hence, for every
+4 Strictly speaking, when D = N −1,N −D = 1 is not equal to {1}.
+
+
+--- PDF page 17 ---
+Contents
+17
+D ∈(N −1,N)); see [Lap1, Example 5.1’]. Actually, it follows from the later results
+(from [LapPom2]) recalled in §5 below that for every a > 0,
+Nν(x) = W(x)−cN,D MD(∂Ω)xD + o(xD) as x →+∞,
+(20)
+where Ω= Ωa,N, W(x) is given by (17), and cN,D is explicitly known.
+(d) Under suitable hypotheses, Theorem 8 has an exact counterpart for the
+Neumann Laplacian (instead of the Dirichlet Laplacian), with the boundary con-
+ditions interpreted variationally (as in [Bre, LioMag] or [Lap1, §2]) as well as for
+higher order, positive self-adjoint elliptic operators with (possibly) variable coef-
+ﬁcients and with Dirichlet, Neumann or mixed boundary conditions; see [Lap1],
+Theorem 2.1 and its corollaries. For the Neumann Laplacian, the error estimate (19)
+holds, for instance, for the classic Koch snowﬂake domain and, more generally, for
+all planar quasidics [Pomm, Maz] (e.g., for the simply connected planar domains
+bounded by the Julia sets of the quadratic maps z 7→z2 + c, where the complex pa-
+rameter c is sufﬁciently small).
+(e) In [BroCar], for the Dirichlet Laplacian and using probabilistic methods,
+Brossard and Carmona have obtained error estimates (as t →0+) for the partition
+function Zν = Zν(t) := Tr(et∆) (the trace of the heat semigroup), of interest in quan-
+tum statistical mechanics, probability theory, harmonic analysis and spectral theory.
+These estimates are also expressed in terms of the (inner) Minkowski dimension
+D. We should note, however, that even though part (i) of Theorem 8 implies those
+error estimates, the converse is not true, in general. Indeed, typically, beyond the
+leading term (for which a classic Tauberian theorem can be used in order to show
+the equivalence of the corresponding results for Nν(x) and Zν(t) (see, e.g., [Kac],
+[Sim]), pointwise asymptotic results for Nν(x) are considerably more difﬁcult to ob-
+tain than for Zν(t).
+(f) The Weyl–Berry conjecture for drums with fractal boundary (and its
+modiﬁcations in [Lap1]) has since been studied in a number of different con-
+texts, both analytically and probabilistically. We refer to [Lap-vFr3, §12.5] for
+a number of references on the subject, including [BroCar, Lap1–3, LapPom1–3,
+LapMai1–2, Ger, GerSchm, FlVas, HeLap, MolVai, vBGilk, Lap-vFr1–3, Ham-
+Lap, LapRa˘Zu1, LapRa˘Zu7]. We also refer to [Gilk], [H¨o1–3], [Lap1–3] and [Lap-
+vFr3, Appendix B] for related references (including [Gilk] in the case of partition
+functions) on the spectral asymptotics of smooth (as opposed to fractal) drums. A
+general introduction to Weyl’s aymptotic formula and its analytic or probabilistic
+proof (for smooth or piecewise smooth boundaries, for example) can be found in
+[CouHil, ReSi3, Gilk, Kac, Sim].
+Finally, we mention that the original Weyl–Berry conjecture was also formu-
+lated for “drums with fractal membrane” (as opposed to “drum with fractal bound-
+ary”). An appropriate modiﬁcation of the conjecture was established in that setting
+
+
+--- PDF page 18 ---
+18
+Contents
+by Jun Kigami and the author in [KiLap1] (building on a conjecture of [Lap3]) for a
+large class of self-similar fractal drums corresponding to Laplacians on fractals (the
+so-called “ﬁnitely ramiﬁed” or p.c.f. self-similar sets), such as the Sierpinski gasket,
+the pentagasket and certain fractal trees. In particular, in [KiLap1] is established a
+suitable analog of Weyl’s classic asymptotic formula, but now for the leading spec-
+tral asymptotics of Laplacians on (self-similar) fractals (see, e.g., [Ki]) rather than
+on bounded open sets with fractal boundary. The resulting semi-classical formula,
+along with its geometric interpretation, is further explored and extended from the
+point of view of nonsmooth geometric analysis and Connes’ noncommutative ge-
+ometry [Con], in [Lap4–5], [KiLap2] and (in a somewhat different setting and using
+suitably constructed Dirac operators and intrinsic geodesic metrics on the fractals
+under consideration), in [ChrIvLap] and [LapSar].
+Beside [KiLap1] and [Lap3], see also, e.g., [Lap-vFr3, §12.5.2] for many
+other references on (or related to) this subject, including [Ram, RamTo, Sh, FukSh,
+Ham1–2, Lap4–5, KiLap2, Sab1–3, Tep1–2, DerGrVo, ChrIvLap, LalLap1–2, Lap-
+Sar].
+(g) Theorem 8 above (from [Lap1]), along with the results from [LapPom2]
+stated in §3 above and §5 below, as well as a part of the results from [LapMai2]
+discussed in §6 below, have been extended by Christina He and the author in the
+research memoir [HeLap] to the more general situation where the (now general-
+ized) Minkowski content is no longer deﬁned in terms of a strict power law, but in
+terms of a large class of “gauge functions” involving, for example, expressions of
+the form xD logx, xD loglogx,··· or xD/logloglogx, etc. This is of interest in the
+applications to fractal geometry, spectral geometry, harmonic analysis, probability
+theory, stochastic processes and mathematical or theoretical physics.
+We close this section by brieﬂy commenting on the physical relevance of
+Weyl’s asymptotic formula (see [Kac] for an interesting overview), Theorem 8
+above (from [Lap1]) and the Weyl–Berry conjecture which partially motivated it.
+The Weyl–Berry conjecture, along with its various modiﬁcations and extensions,
+has potential or actual physical and engineering applications to condensed matter
+physics, quantum mechanics, quantum chemistry, quantum chaos, acoustics, dif-
+fusions and wave propagation in fractal or random media (i.e., on or off fractals),
+geophysics, radar and cell phone technology (fractal antennas), as well as the mak-
+ing of computer microchips. (See, e.g., [Berr1–2, Kac, Ram, RamTo, Sch, Lap1–6,
+SapGoMar, KiLap1–2, LapPa, LapNeuReGr, ChrIvSar, LalLap1–2, LapSar] and the
+relevant references therein.)
+We will next focus on the one-dimensional case (i.e., N = 1), as in the rest of
+this paper (with the exception of the present section), and therefore on the connec-
+tions between this subject and aspects of number theory, particularly the Riemann
+zeta function and the Riemann hypothesis, in §5 and §6, respectively.
+
+
+--- PDF page 19 ---
+Contents
+19
+5 Direct Spectral Problems for Fractal Strings and the Riemann
+Zeta Function in the Critical Interval
+Having discussed in §4 the Weyl classical asymptotic formula (with error term) and
+the closely related Weyl–Berry conjecture, we may now specialize the situation to
+the one-dimensional case (that of fractal strings, corresponding to N = 1 in §4.1) and
+discuss the key result of [LapPom2] establishing the (one-dimensional) “modiﬁed
+Weyl–Berry conjecture” for fractal strings; see Theorem 11 below. This brings to the
+fore direct connections between the spectra of fractal strings and the Riemann zeta
+function ζ = ζ(s), in the case of the “critical interval” 0 < s < 1. (See also Equation
+(1) above for a related general formula.) This connection will be further explored
+in §6 (based on [LapMai2]), in relation with the critical strip 0 < Re(s) < 1, the
+Riemann hypothesis and the converse of Theorem 11; that is, an inverse (rather than
+a direct) spectral problem for fractal strings; see, in particular, Theorems 14 and 15
+(from [LapMai2]) in §6 below.
+Let Ωbe an arbitrary (nontrivial) fractal string (i.e., a bounded open sub-
+set of R), of Minkowski dimension D ∈(0,1) and associated sequence of lengths
+L = (ℓj)∞
+j=1, written in nonincreasing order (according to multiplicities) and such
+that ℓj ↓0 as j →∞; see §2. In the sequel, we will refer to such a fractal string as Ω
+or L , interchangeably.
+Recall from our discussion in §1 and §4.1 that a one-dimensional fractal drum
+(i.e., drum with fractal boundary) is nothing but a fractal string. Furthermore, re-
+call from §2 that the (Minkowski) dimension of a fractal string always satisﬁes
+0 ≤D ≤1. In the sequel, we exclude the extreme cases where D = 0 and D = 1
+(the least or nonfractal case and the most fractal case, respectively) and therefore
+assume that D belongs to the critical interval (0,1) : 0 < D < 1.
+Letting N = 1 in the expression (17) for the Weyl term (i.e., the leading term
+in Weyl’s asymptotic formula (16)) W = W(x), we obtain (given our current nor-
+malization for the frequencies)
+W(x) = |Ω|1 x, for x > 0.
+(21)
+So that, according to Weyl’s classic formula (16), we have
+Nν(x) = W(x)+ R(x),
+(22)
+where W(x) is given by (21) and R(x) = o(x) as x →+∞. Furthermore, provided
+M ∗< ∞(i.e., L has ﬁnite upper Minkowski content), then according to part (i) of
+Theorem 8 above (from [Lap1]), the error term R(x) in (22) can be estimated as fol-
+lows: R(x) = O(xD) as x →+∞. Moreover, if L is Minkowski nondegenerate (i.e.,
+0 < M∗< M ∗< ∞), we even have that R(x) is truly of the order of xD as x →+∞
+(according to a result of [LapPom2] brieﬂy discussed in §2 above; and conversely
+
+
+--- PDF page 20 ---
+20
+Contents
+(still by [LapPom2]), if R(x) is exactly of the order of xD (resp., if R(x) = O(xD)),
+then L is Minkowski nondegenerate (resp., M ∗< ∞). (See Theorem 3 and Equa-
+tion (14).)
+The question is now to know when we really have an asymptotic second term,
+proportional to xD, in Weyl’s asymptotic formula (22). We will sometimes refer
+to such a term as a “monotonic second term”. In [Lap1], the following conjecture
+(called the MWB conjecture, for short) was stated.
+Conjecture 9 (Modiﬁed Weyl–Berry conjecture, [Lap1]). If L is a Minkowski mea-
+surable fractal string of dimension D ∈(0,1), then
+Nν(x) = W(x)−cD M xD + o(xD), as x →+∞,
+(23)
+where M denotes the Minkowski content of L (i.e., of its boundary ∂Ω) and cD is
+a positive constant depending only on D.
+Remark 10. (a) In higher dimensions (i.e., when N ≥2 and Ω⊂RN is a bounded
+open set), the counterpart of the MWB conjecture is not true, in general; see [FlVas]
+and, especially, [LapPom3] for various counterexamples. Moreover, one does not
+know whether it is true for a simply connected domain in the plane (i.e., when
+N = 2). It is not the object of the present paper to discuss this issue further, al-
+though it is of signiﬁcant interest and is also very intricate.
+(b) When N = 1, the Minkowski measurability condition is necessary, in gen-
+eral, for the spectral counting function Nν to admit a monotonic asymptotic second
+term, proportional to xD, as x →+∞. For example, for the Cantor string L = LCS
+(deﬁned by ΩCS := [0,1] \C, the complement in [0,1] of the classic ternary Cantor
+set C), Nν admits an oscillatory (asymptotic) second term. More speciﬁcally, for the
+Cantor string, the asymptotic second term is of the form −xD G(log3 x), where G is
+a 1-periodic function which is bounded away from zero and inﬁnity; see [LapPom2]
+and, especially, [Lap-vFr3, Equation (16.57) and §10.2.1]. This fact was ﬁrst proved
+in [LapPom1,2] (by a direct computation) and does not contradict the MWB con-
+jecture since (as was also ﬁrst proved in [LapPom1,2]), the Cantor string is not
+Minkowski measurable (but is Minkowski nondegenerate). Moreover, these issues
+were investigated in great detail in [Lap-vFr1–3], by using the theory of complex
+dimensions and associated explicit formulas developed in those monographs. (See,
+e.g., [Lap-vFr3], Chapter 6, §8.4 and Chapter 10.)
+It is shown, for example, in [Lap-vFr3, §6 and §8.4] (building in part on con-
+jectures and results in [Lap3]) that a self-similar string is Minkowski measurable
+if and only it is nonlattice (i.e., the logarithms of its distinct scaling ratios are ra-
+tionally independent). Moreover, it follows from loc. cit. that a lattice self-similar
+string (e.g., the Cantor string) is never Minkowski measurable (but is Minkowski
+nondegenerate) and that its spectral counting function Nν(x) always has an asymp-
+totic second term which is oscillatory and of the order of xD (in fact, it is of the form
+xD G(logx), where G is a nonconstant periodic function on R which is bounded
+away from zero and inﬁnity).
+
+
+--- PDF page 21 ---
+Contents
+21
+More generally, we will see in Theorem 14 of §6 (based on [LapMai2]) that if
+ζ = ζ(s) does not have any zeros on the vertical line {Re(s) = D}, then the existence
+of an asymptotic second term proportional to xD for the spectral counting function
+Nν(x) implies that L is Minkowski measurable (i.e., the hypothesis of Conjecture 9
+is also necessary).
+The following theorem (due to the author and Carl Pomerance in [LapPom2],
+and announced in [LapPom1]) gives the precise asymptotic second term of the spec-
+tral (or frequency) counting function of a Minkowski measurable fractal string,
+thereby resolving in the afﬁrmative the MWB conjecture for fractal strings and
+yielding the speciﬁc value of the positive constant cD appearing in Equation (23)
+above.
+Theorem 11 (Resolution of the MWB conjecture for fractal strings, [LapPom2]).
+The modiﬁed Weyl–Berry conjecture for fractal strings (Conjecture 9 above) is true
+for every D ∈(0,1). More speciﬁcally, if L is a Minkowski measurable fractal
+string of dimension D ∈(0,1), then its frequency counting function Nν = Nν(x)
+admits a monotonic second term, proportional to xD, of the exact same form as in
+Equation (23). Furthermore, the positive constant occurring in (23) is given by
+cD = (1 −D) 2−(1−D)(−ζ(D)).
+(24)
+Note that cD > 0 because ζ = ζ(s) is strictly negative in the critical interval
+0 < s < 1 (see, e.g., [Ti]): −ζ(D) > 0 since D ∈(0,1). Furthermore, in Equation
+(24), the constant cD is proportional to the positive number −ζ(D), and hence, to
+the value at s = D of ζ = ζ(s) in the critical interval 0 < s < 1.
+We next brieﬂy comment on the structure of the proof of Theorem 11 given
+in [LapPom2]. It relies on two different theorems. Namely, the geometric charac-
+terization of Minkowski measurability (Theorem 2 above, from [LapPom2]) along
+with the following theorem (also from [LapPom2]), which is of an analytic number
+theoretic nature and whose motivation will be explained after its statement. (In the
+sequel, given y ∈R,[y] stands for the integer part of y and {y} := y −[y] ∈[0,1)
+denotes the fractional part of y.)
+Theorem 12 (The sound of Minkowski measurable fractal strings, [LapPom2]).
+Let L be a Minkowski measurable fractal string of dimension D ∈(0,1). Equiv-
+alently, according to Theorem 2 (see Equation (8) in §3), let L = (ℓj)∞
+j=1 be a
+nonincreasing sequence of positive numbers satisfying (for some positive constant
+L > 0)
+ℓj ∼Lj−1/D as j →∞.
+(25)
+Then
+∞
+∑
+j=1
+[ℓjx] =
+ 
+∞
+∑
+j=1
+ℓj
+!
+x+ ζ(D)LDxD + o(xD) as x →+∞,
+(26)
+
+
+--- PDF page 22 ---
+22
+Contents
+where ζ denotes the classic Riemann zeta function. Equivalently, Equation (26) can
+be stated as follows:
+∞
+∑
+j=1
+{ℓj x} ∼−ζ(D) LDxD as x →+∞.
+We note that in order to state Theorem 12, one does not need to assume that
+L is Minkowski measurable and therefore, to rely on Theorem 2. Instead, one can
+simply assume that (25) (or, equivalently, (10)) holds for some D ∈(0,1). Theorem
+2 is then used when deducing Theorem 11 from Theorem 12.
+Given a fractal string Ω= ∪∞
+j=1Ij (as in §2), its spectral counting function
+Nν =: Nν(Ω,·) satisﬁes Nν(Ω,·) = ∑∞
+j=1 Nν(Ij,·), with Nν(Ij,·) = [ℓj x] for each
+j ≥1 because Ij is an interval of length ℓj. It follows that Nν(x) = ∑∞
+j=1[ℓj x],
+which is the left-hand side of (26). In light of the ﬁrst expression obtained for the
+Minkowski content M in Equation (15) (and the line following it), one then easily
+deduces Theorem 11 (and hence, the MWB conjecture for fractal strings, Conjec-
+ture 9) from Theorem 12. Note that |Ω|1 = ∑∞
+j=1ℓj, so that the leading term of
+Nν(x) = ∑∞
+j=1[ℓj x] in (26) coincides with the Weyl term W(x) (given by (21)), as
+it should. Furthermore, as was alluded just above, by using the expression of M
+given by the ﬁrst equality in (15) and eliminating LD in the asymptotic second term
+of (26), one establishes both the existence and the value of the positive constant cD
+(explicitly given by Equation (24) of Theorem 11).
+Physically, the aforementioned relation, Nν(Ω,·) = ∑∞
+j=1 Nν(Ij,·), follows
+from the fact that the intervals Ij comprising the fractal string Ω(or, more poetically,
+the strings of the fractal harp) are vibrating independently of one another. Mathe-
+matically, it follows from the variational formulation of the underlying eigenvalue
+problem; see, e.g., [Lap1] and the relevant references therein (including [LioMag]
+and [ReSi3]).
+6 Inverse Spectral Problems for Fractal Strings and the
+Riemann Hypothesis
+It is natural to wonder whether the converse of Theorem 11 (or essentially equiv-
+alently, of the MWB conjecture for fractal strings, Conjecture 9) is true. Roughly
+speaking, this means that if there are no oscillations of order D in the spectrum of L ,
+then there are no oscillations of order D in the geometry of L . Rephrased: If Nν(x)
+has an asymptotic second term, proportional to xD, is it true that L is Minkowski
+measurable?
+
+
+--- PDF page 23 ---
+Contents
+23
+More precisely, given D ∈(0,1), the inverse spectral problem (ISP)D under
+consideration can be stated as follows:
+(ISP)D If L is a fractal string of dimension D such that
+Nν(x) = W(x)−C xD + o(xD) as x →+∞,
+(27)
+for some nonzero (real) constant C , then is it true that L is Minkowski measur-
+able (or, equivalently, in light of Theorem 2 and the comment following it, that
+NL (x) ∼M xD as x →+∞, for some positive constant M, where NL = NL (x)
+denotes the geometric counting function of L )?
+The above problem, (ISP)D, is called an inverse spectral problem since
+given some spectral information about the fractal string L (namely, the existence
+for Nν(x) of a monotonic asymptotic second term, proportional to xD), one asks
+whether one can recover some geometric information about L (namely, that L is
+Minkowski measurable). Similarly, the MWB conjecture from [Lap1] (Conjecture
+9 above) and its resolution given in Theorem 11 above (from [LapPom2]) fall natu-
+rally within the class of direct spectral problems.
+Remark 13. (a) In the statement of (ISP)D, it is not necessary to assume that L
+is of Minkowski dimension D since a result from [LapPom2] (recalled in Theorem 3
+above and the comment following it) shows that (27) implies that L is Minkowski
+nondegenerate (i.e., 0 < M∗≤M ∗< ∞) and hence, has Minkowski dimension D.
+(b) Originally, in [LapMai1–2], the error term o(xD) in the counterpart of Equa-
+tion (27), was assumed to be slightly smaller, namely, O(xD/log1+δ x) as x →+∞,
+for some δ > 0. However, an unpublished work of Titus Hilberdink [Hil], using an
+improved version of the Wiener–Ikehara Tauberian theorem (see, e.g., [Pos]) used
+in [LapMai1–2], shows that the more general estimate o(xD) sufﬁces. (Actually, in
+[LapMai1–2], the better error estimate is only used for the sufﬁciency part of the
+proof of Theorem 14, that is, the part requiring the use of a Tauberian theorem.)
+(c) For Dirichlet boundary conditions (which are assumed here in (ISP)D), one
+must necessarily have C > 0 in Equation (27) because then, we have that Nν(x) ≤
+W(x) for all x > 0, which implies that C ≥0. Note that by hypothesis, C̸ = 0.
+In [LapMai2] (announced in [LapMai1]), the author and H. Maier have shown
+that this family of inverse spectral problems (ISP)D, for D ranging through the crit-
+ical interval (0,1), is intimately related to the presence of zeros of ζ = ζ(s) in the
+critical strip 0 < Re(s) < 1 (i.e., to the critical zeros of ζ), and thereby, to the
+Riemann hypothesis. More speciﬁcally, we have the following two theorems (the
+second one really being a corollary of the ﬁrst one).
+Theorem 14 (Characterization of the nonvanishing of ζ along vertical lines in
+the critical strip, [LapMai2]). Fix D ∈(0,1). Then, the inverse spectral problem
+
+
+--- PDF page 24 ---
+24
+Contents
+(ISP)D is true (that is, has an afﬁrmative answer for every fractal string of dimen-
+sion D satisfying the assumptions of (ISP)D) if and only if the Riemann zeta function
+ζ = ζ(s) does not have any zeros along the vertical line {Re(s) = D}; i.e., if and
+only the “D-partial Riemann hypothesis” is true.
+Theorem 15 (Spectral reformulation of the Riemann hypothesis, [LapMai2]).
+The inverse spectral problem (ISP)D is true for every value of D in (0,1) other than
+in the midfractal case when D = 1/2 (or equivalently, for every D ∈(0,1/2)) if and
+only if the Riemann hypothesis is true.
+Theorem 15 follows at once from Theorem 14 since the Riemann hypothe-
+sis states that ζ(s) = 0 with 0 < Re(s) < 1 implies that Re(s) = 1/2 (i.e., that s
+belongs to the critical line {Re(s) = 1/2}). The fact that in Theorem 15, D can be
+equivalently assumed to be in (0,1/2),(1/2,1) or in (0,1)\{1/2}, follows from the
+functional equation satisﬁed by ζ = ζ(s), according to which
+ξ(s) = ξ(1 −s), for all s ∈C,
+(28)
+and hence,
+ζ(s) = 0 ⇔ζ(1 −s) = 0, for 0 < Re(s) < 1.
+(29)
+Here, ξ = ξ(s) denotes the completed Riemann zeta function (or the global zeta
+function of Q, the ﬁeld of rational numbers), deﬁned by ξ(s) := π−s/2Γ (s/2)ζ(s).
+For the standard properties of ζ and of ξ, we refer, e.g., to [Edw, Ing, KarVor, Pat,
+Ti].
+The next result follows immediately from Theorem 14 and the well-known
+fact according to which ζ has a zero (and even inﬁnitely many zeros, according to
+Hardy’s theorem [Edw, Ti], even though it is not needed here) along the critical line
+{Re(s) = 1/2}.
+Corollary 16 ([LapMai2]). The inverse spectral problem (ISP)D is not true in the
+midfractal case when D = 1/2.
+The following interpretation of Theorem 15 and Corollary 16 has ﬁrst been
+proposed in [Lap2, Lap3] and has since been pursued in a different, but closely
+related context, in [HerLap1–5] and in [Lap7], as will be brieﬂy discussed towards
+the end of §7.4 below.
+Theorem 17 (The Riemann hypothesis as a mathematical phase transition,
+[Lap2, Lap3]). The Riemann hypothesis is true if and only if (ISP)D, the inverse
+spectral problem for fractal strings, fails to be true (i.e., fails to have an afﬁrmative
+answer) only in the midfractal case when D = 1/2.
+In [Lap2,3], the author also wondered (in an open problem) whether the math-
+ematical phase transition conditionally (i.e., under RH, and in fact, if and only if
+RH is true) occurring at D = 1/2 could be understood (in a suitable model) as a true
+
+
+--- PDF page 25 ---
+Contents
+25
+physical phase transition, of the type occurring in the theory of critical phenomena
+in statistical physics or quantum ﬁeld theory. He also asked whether the (then) intu-
+itive notion of fractal “complex dimension”, underlying the proof of the key part of
+Theorem 14 (as will be explained next), could not be understood as a “complexiﬁed
+space-time dimension”, as in Wilson’s theory of phase transitions and critical phe-
+nomena [Wil].
+We now brieﬂy comment on the proof of Theorem 14, the central result of
+[LapMai2], from which Theorem 15 and Corollary 16 (as well as Theorem 17) fol-
+low, given the known properties of the Riemann zeta function. First, note that The-
+orem 14 consists of two different theorems (and was stated as such in [LapMai1,2].
+The part of Theorem 14 corresponding to a sufﬁcient condition (for (ISP)D to be
+true) is established by using the Wiener–Ikehara Tauberian theorem (see, e.g., [Pos]
+or [LapMai2] for the statement of this theorem). That is, assuming that (for a given
+D ∈(0,1)), ζ(s)̸ = 0 for all s ∈C on the vertical line {Re(s) = D}, one uses the
+aforementioned Tauberian theorem in order to show that the inverse problem (ISP)D
+has an afﬁrmative answer (for all fractal strings of dimension D). On the other hand,
+in order to establish the converse, namely, the fact that the condition that ζ(s)̸ = 0
+for all s ∈C on the vertical line {Re(s) = D} is necessary for the inverse spectral
+problem (ISP)D to be true (i.e., to have an afﬁrmative answer for all fractal strings of
+dimension D), one uses in [LapMai1,2] in a key (but rigorous) manner the intuition
+(at the time) of complex dimension and its intimate connections with asymptotic
+oscillatory behavior (both in the geometry and the spectrum), along with Theorem
+2 (from [LapPom2]).5
+More speciﬁcally, we reason by contraposition. Fix D ∈(0,1) and assume
+that ζ(ω) = 0, for some ω ∈C such that Re(ω) = D. Then, due to the basic sym-
+metry of ζ (namely, ζ(s) = ζ(s), where the bar indicates that we are taking the
+complex conjugate of the given complex number), we also have ζ(ω) = 0. Let us
+write ω = D + iτ, with τ ∈R; so that ω = D −iτ. Without loss of generality, we
+may assume that τ > 0. (Clearly, τ̸ = 0 since ζ(D) < 0 because 0 < D < 1.)
+Next, for x > 0, let
+U(x) := xD + β(xω + xω) = xD(1 + 2β cos(τ logx)),
+(30)
+for some coefﬁcient β > 0 sufﬁciently small, and let V(x) := [U(x)], the integer
+part of U(x). It is easy to check that for all β small enough, U(x) > 0 and U
+is (strictly) increasing on (0,+∞); furthermore, the range of U is all of (0,+∞).
+Hence, for such values of β, given any integer j ≥1, we can uniquely deﬁne ℓj > 0
+such that U(ℓj) = j (and thus, V(ℓj) = j). In this manner, we deﬁne a fractal string
+L = (ℓj)∞
+j=1 with geometric counting function NL coinciding with V : NL = V. In
+5 It can now also be systematically understood in terms of the generalized explicit formulas of [Lap-
+vFr3, Chapter 5]; see [Lap-vFr3, Chapter 9]. The resulting theorems and assumptions, however, are
+somewhat different.
+
+
+--- PDF page 26 ---
+26
+Contents
+light of Equation (30), NL =V = [U] has sinusoidal (and hence, nontrivial periodic)
+oscillations, caused by the “complex dimensions” ω and ω. Therefore, NL (x) can-
+not be asymptotic to xD; equivalently, we do not have NL (x) ∼M xD as x →+∞,
+for some M > 0. (Note that here, according to (30), we would have to have M := 1.)
+It then follows from Theorem 2 (the characterization of Minkowski measurability,
+from [LapPom2]) and the comment following it that L is not Minkowski measur-
+able. Moreover, and using the fact that ζ(ω) = ζ(ω) = 0, via a direct computation6
+it is shown in [LapMai2] that Equation (27) holds for the fractal string L , for some
+(explicitly known) positive constant C . Consequently, the hypothesis (27) of (ISP)D
+is satisﬁed but its conclusion (namely, the Minkowski measurability of L ) is not;
+i.e., the inverse spectral problem (ISP)D cannot be true for this value of D ∈(0,1)
+because it fails to hold for this particular fractal string L . This proves that if (ISP)D
+is true for some D ∈(0,1), we must have ζ(s)̸ = 0 for all s ∈C such that Re(s) = D,
+as desired.
+We point out that in the above construction, the geometric oscillations caused
+by the nonreal complex dimensions ω and ω of L remain (as is obvious from (30)),
+but due to the fact that by construction, ζ(ω) = ζ(ω) = 0, the spectral oscillations
+(in the asymptotic second term of Nν(x)) disappear. Therefore, we see the subtle
+interplay between complex dimensions, geometric and spectral oscillations, as well
+as the critical zeros of ζ. (Clearly, both ω and ω belong to the open critical strip
+0 < Re(s) < 1 since we have that Re(ω) = Re(ω) = D and D ∈(0,1).)
+Finally, we note that by using the theory of complex dimensions developed
+in [Lap-vFr1–3], it can be shown that the above fractal L has exactly three com-
+plex dimensions (each of which has a real part equal to D and multiplicity one).
+Namely, the set DL of complex dimensions of L is given by DL = {D,ω,ω}.
+Moreover, observe that xω = xD xiτ and xω = xD x−iτ; so that the real part (resp., the
+imaginary part) of the complex dimension ω (or ω) determines the amplitude (resp.,
+the frequency) of the corresponding geometric or spectral oscillations (viewed mul-
+tiplicatively). This statement is now fully corroborated (for any fractal string and
+its complex dimensions) by the rigorous theory of complex dimensions of fractal
+strings and the associated (generalized) explicit formulas developed in [Lap-vFr1–
+3].
+7 Epilogue: Later Developments and Research Directions
+In this epilogue, by necessity of concision, we very brieﬂy discuss further develop-
+ments closely connected to (or partly motivated by) the results discussed in the main
+body of this paper as well as by related results and conjectures in [Lap1–3]. These
+topics include a geometric interpretation of the critical strip for the Riemann zeta
+6 This is now proved in [Lap-vFr1–3] by using the (generalized) explicit formulas from [Lap-vFr1–
+3] and Equation (1).
+
+
+--- PDF page 27 ---
+Contents
+27
+function ζ = ζ(s) (see §7.1), the theory of complex dimensions of fractal strings
+(see §7.2), fractal zeta functions and a higher-dimensional theory of complex di-
+mensions (valid for arbitrary bounded subsets of Euclidean spaces and relative frac-
+tal drums, see §7.3), quantized number theory and the spectral operator, along with
+a functional analytic reformulation of the results of [LapMai2] discussed in §6, as
+well as a different framework (developed in [HerLap1–5]) and a new asymmetric
+reformulation of the Riemann hypothesis recently obtained by the author in [Lap7]
+(see §7.4).
+7.1 Fractal strings, ζ = ζ(s), and a geometric interpretation of the
+critical strip
+The one-dimensional situation (i.e., the case of fractal strings) is ideally suited to the
+Riemann zeta function ζ = ζ(s) in the (closed) critical strip 0 ≤Re(s) ≤1, as we
+have seen in §5 and, especially, §6 above. This is due in part to the product formula
+(1), ζν(s) = ζ(s) · ζL (s), connecting the geometric zeta function ζL of a fractal
+string L to its spectral zeta function ζν,7 combined with the fact that fractal strings
+always have a (Minkowski) dimension between 0 and 1 : 0 ≤D ≤1.
+These facts, along with the results of [LapPom1,2] and some of the results
+and conjectures of [Lap1–3], have led to the following geometric interpretation of
+the (closed) critical strip 0 ≤Re(s) ≤1, using the terminology introduced in [Lap1]
+(in any dimension): The least (resp., most) fractal case when D = 0 (resp., D = 1),
+corresponds to the left- (resp., right-) hand side of the critical strip, that is, to the
+vertical line {Re(s) = 0} (resp., {Re(s) = 1}. Furthermore, the midfractal case when
+D = 1/2 corresponds to the critical line, namely, the vertical line {Re(s) = 1/2}
+where (according to the Riemann hypothesis) all of the nontrivial (or critical) zeros
+of ζ = ζ(s) are supposed to be located. This geometric picture of the critical strip
+has later been corroborated by the work in [LapMai1,2] described in §6 above. Its
+complete and rigorous justiﬁcation has then been provided by the theory of complex
+dimensions for fractal strings (that is, in the one-dimensional situation) developed
+in [Lap-vFr1–3]. (See, in particular, [Lap-vFr3, Chapters 9 and 11].) We will next
+brieﬂy describe (in §7.2) a few aspects of the latter theory.
+7 We note that the product formula (1) for the spectral zeta functions of fractal strings has since
+been extended in various ways in the setting of Laplacians on certain self-similar fractals; see
+[Tep1–2, DerGrVo, LalLap1–2].
+
+
+--- PDF page 28 ---
+28
+Contents
+7.2 Complex dimensions of fractal strings and oscillatory
+phenomena
+The theory of complex dimensions of fractal strings, developed by the author and
+M. van Frankenhuijsen in the research monographs[Lap-vFr1–3](and several corre-
+sponding articles), aimed originally at obtaining a much more accurate understand-
+ing of the oscillatory phenomena which are intrinsic to fractals (in their geometries
+and their spectra as well as in the underlying dynamics). This is accomplished via
+explicit formulas (generalizing Riemann’s original 1858 explicit formula and its ex-
+tensions to various aspects of number theory and arithmetic geometry, see [Edw, Ing,
+ParSh1–2, Pat, Sarn, Den1, Ti] along with [Lap-vFr3, §5.1.2 and §5.6]) expressed in
+terms of the underlying complex dimensions; see [Lap-vFr3, Chapter 5]. The latter
+complex dimensions are deﬁned as the poles of a suitable zeta function, typically a
+geometric, spectral, dynamical or arithmetic zeta function. (See [Lap-vFr3].)
+In the case of fractal strings, which is the main focus of the theory developed
+in [Lap-vFr1–3], these explicit formulas can be applied, for example, to the geo-
+metric counting function NL (x), the spectral counting function Nν(x), the volume
+of tubular neighborhoods V(ε) (giving rise to a “fractal tube formula”), or to the
+counting function of the number of primitive geodesics of an underlying dynamical
+system. (See [Lap-vFr3, Chapters 6–11].) In the special case of self-similar strings,
+the resulting fractal tube formulas give very precise information, in part due to the
+knowledge of the periodic (or, in general, the quasiperiodic) structure of the com-
+plex dimensions (see [Lap-vFr3], Chapters 2–3 and §8.4).
+For a fractal string L , under mild growth assumptions on the associated ge-
+ometric zeta function ζL (see [Lap-vFr3, §5.1]) and assuming that all the com-
+plex dimensions (i.e., the poles of ζL ) are simple, the fractal tube formula for
+V(ε) = VL (ε) takes the following form (see [Lap-vFr3, Chapter 8]):
+V(ε) = ∑
+ω∈D
+αω
+(2ε)1−ω
+ω(1 −ω) + R(ε),
+(31)
+where D = DL denotes the set of (visible) complex dimensions of L and αω :=
+res(ζL ,ω) for each ω ∈D. Furthermore, the error term R(ε) is precisely estimated
+in [Lap-vFr3]. In the important special case of self-similar strings (which includes
+the Cantor string discussed just below), one can take R(ε) ≡0 and therefore obtain
+an exact fractal tube formula (which holds pointwise); see [Lap-vFr3, §8.4].
+Remark 18. (a) The explicit formula is valid for multiple poles as well but must
+then take a different form, in general. Namely, we then have (see [Lap-vFr3, Theo-
+rems 8.1 and 8.7])
+V(ε) = ∑
+ω∈D
+res
+ζL (s) (2ε)1−s
+s(1 −s)
+,ω
+
++ R(ε).
+(32)
+
+
+--- PDF page 29 ---
+Contents
+29
+(b) The fractal tube formulas (31) and (32) hold pointwise or distributionally,
+depending on the growth assumptions made about ζL ; see [Lap-vFr3], §8.1, espe-
+cially, Theorems 8.1 and 8.7 and their corollaries. Also, in the so-called “strongly
+languid” case (in the sense of [Lap-vFr3, Deﬁnition 5.3]), we can let R(ε) ≡0 and
+therefore obtain an exact formula. This is the case, for example, for all self-similar
+strings; see [Lap-vFr3, §8.4].
+(c) For the ﬁrst higher-dimensional analog of (31) and (32), see [Lap-vFr1–
+3] for speciﬁc examples of fractal sprays (in the sense of [LapPom3]), and for a
+fairly general class of fractal sprays and self-similar tilings (or, less generally, sets),
+see [LapPe2–3, LapPeWi1–2]; see also [Pe, PeWi] and, for a direct approach in the
+case of the Koch snowﬂake curve, [LapPe1]. Within the general higher-dimensional
+theory of complex dimensions developed in [LapRa ˘Zu1–8], the precise counterpart
+of (31) and (32) is provided in [LapRa ˘Zu5–6] and [LapRa ˘Zu1, Chapter 5]; see §7.2
+for a brief discussion.
+Let us now specialize the above discussion to the Cantor string L = CS,
+viewed geometrically as the bounded open set Ω⊂R, deﬁned as the comple-
+ment of the classic ternary Cantor set in [0,1]; hence, ∂Ωis the Cantor set. Then
+L = CS = (ℓj)∞
+j=1, with ℓ1 = 1/3,ℓ2 = ℓ3 = 1/9,ℓ4 = ℓ5 = ℓ6 = ℓ7 = 1/27,··· . Al-
+ternatively, the lengths of the Cantor string (or harp) are the numbers 3−n−1 repeated
+with multiplicity 2n, for n = 0,1,2,···. Then
+ζCS(s) =
+3−s
+1 −2 ·3−s, for all s ∈C;
+(33)
+so that the set DCS of complex dimensions (here, the complex solutions of the equa-
+tion 1 −2 ·3−s = 0) is given by
+DCS = {D+ inp : n ∈Z},
+(34)
+where D := log3 2 = log2/log3 (the Minkowski dimension of CS or, equivalently,
+of the ternary Cantor set) and p := 2π/log3 (the oscillatory period of CS). Then
+(31) (with R(x) ≡0) becomes
+VCS(ε) =
+1
+2log3 ∑
+n∈Z
+(2ε)1−D−inp
+(D+ inp)(1 −D−inp) −2ε
+(35)
+= ε1−D G(logε−1)−2ε,
+where G is a periodic function which is bounded away from zero and inﬁnity. One
+then recovers the result from [LapPom1,2] according to which CS (and hence also,
+the Cantor set) is Minkowski nondegenerate but is not Minkowski measurable. (Ac-
+tually, the values of M∗and M ∗are computed explicitly in [LapPom2] as well as,
+
+
+--- PDF page 30 ---
+30
+Contents
+in a more general context, in [Lap-vFr3, Chapter 10].)
+Moreover, the geometric counting function of CS is given by
+NCS(x) =
+1
+2log3 ∑
+n∈Z
+xD+inp
+D+ inp −1
+(36)
+while the corresponding frequency counting function is given by
+Nν,CS(x) = x+
+1
+2log3 ∑
+n∈Z
+ζ(D+ inp) xD+inp
+D+ inp + O(1) as x →+∞.
+(37)
+(See [Lap-vFr3], §1.1.1, §1.2.2 and Chapter 6.)
+In (31) and (35)–(37), we see the intuitive (and actual) meaning of the com-
+plex dimensions. Namely, the real (resp., imaginary) parts correspond to the ampli-
+tudes (resp., frequencies) of the oscillations (in the spaces of scales, for (31) and
+(35)–(36), and in frequency space, for (37)).
+Remark 19 (Fractality and complex dimensions). The notion of fractality is noto-
+riously difﬁcult to deﬁne. Mandelbrot [Man] has proposed to deﬁne a fractal as a
+geometric object whose Hausdorff dimension is strictly greater than its topological
+dimension. There is an obvious problem with this deﬁnition (Mandelbrot was aware
+of it, as is stated in his book, [Man, p. 82]). Namely, the Cantor curve (or “devil’s
+staircase”) is not fractal in this sense (since its Hausdorff, Minkowski and topologi-
+cal dimensions are all equal to 1); however, as Mandelbrot states in [Man], everyone
+would agree that the Cantor curve should be called “fractal”. This issue has long
+preoccupied the present author.
+There is, however, a satisfactory way to resolve this apparent paradox as well
+as many other related and unrelated issues. In the theory of complex dimensions de-
+veloped in [Lap-vFr1–3], an object is called “fractal” if it has at least one nonreal
+complex dimension (with positive real part). (See [Lap-vFr3, §12.1].) Accordingly,
+the Cantor curve (CC) is, indeed, fractal because its set of complex dimensions
+is given by DCC = DCS ∪{1}, where DCS is the set of complex dimensions of the
+Cantor set (or, equivalently, the Cantor string) given by (34). (Hence, DCC has in-
+ﬁnitely many nonreal complex dimensions with positive real part.) Furthermore,
+(nontrivial) self-similar strings (and, more generally, self-similar geometries) are
+fractal.8 In order to accommodate random (and, in particular, stochastically self-
+similar fractals), as in [HamLap] and the relevant references therein, the above
+deﬁnition of fractality has been extended to allow for a “fractal” A to be such that
+its associated zeta function ζA has a natural boundary along a suitable curve of
+the complex plane, called a “screen” in [Lap-vFr3, §5.1] (and hence, such that ζA
+cannot be meromorphically extended beyond that curve). In [LapRa ˘Zu1–8], such a
+compact subset of RN is called a “hyperfractal”. In [LapRa ˘Zu1,2,4] are even con-
+8 An example of a trivial self-similar set is an interval of R or a cube in RN(N ≥2). In such cases,
+all of the complex dimensions are easily seen to be real; see [Lap-vFr3] and [LapRa˘Zu1].
+
+
+--- PDF page 31 ---
+Contents
+31
+structed “maximal hyperfractals”; that is, compact subsets A of RN (where N ≥1
+is arbitrary) such that ζA has a singularity at every point of the “critical line”
+{Re(s) = D}, where D is the Minkowski dimension of A.
+Remark 20 (Noncommutative Riemann ﬂow of zeros and the Riemann hypothe-
+sis, [Lap6]). In the long term, the theory of complex dimensions aims at unifying
+many aspects of fractal and arithmetic geometries. Many concrete and more ab-
+stract examples are provided in [Lap-vFr3]. This direction is pursued in many dif-
+ferent directions in the author’s book, In Search of the Riemann Zeros [Lap6], where
+is introduced the notion of fractal membrane (i.e., quantized fractal string) and the
+associated moduli spaces of fractal membranes (as well as of fractal strings). In
+[Lap6], a still conjectural (noncommutative) ﬂow on the moduli space of fractal
+membranes and correspondingly, a ﬂow of zeta functions (or partition functions)
+and a ﬂow of zeros are used in an essential manner in order to provide a possible
+new interpretation of (and approach to) the Riemann hypothesis.
+Accordingly, the ﬂow of fractal membranes can be viewed as some kind of non-
+commutative Ricci ﬂow which is transforming (as “time” tends to inﬁnity or phys-
+ically, as the absolute “temperature” tends to zero) generalized quasicrystals into
+(self-dual) pure crystals. Correspondingly, the zeta functions are becoming increas-
+ingly symmetric (that is, satisfy a true functional equation, in the limit), while the
+zeros (of these zeta functions) are pushed under this ﬂow (viewed as a ﬂow on the
+Riemann sphere) onto the Equator, which naturally represents the critical line in this
+context. Conjecturally, this would also provide a proof of the generalized Riemann
+hypothesis (GRH), valid for all of the number theoretic zeta functions for which
+the analog of the Riemann hypothesis is expected to be true. (See, e.g., [ParSh1–2],
+[Sarn], [Lap-vFr3, Appendix A] and [Lap6, Appendices B, C and E].) Very con-
+cisely, this is the interpretation of (and approach to) the Riemann hypothesis pro-
+posed in [Lap6]. Needless to say, it poses formidable mathematical and physical
+challenges but may nevertheless stimulate further investigations of the aforemen-
+tioned (noncommutative) Riemann (or “modular”) ﬂow, whether it be viewed as
+a (noncommutative) Ricci-type ﬂow or, physically, as a renormalization ﬂow (not
+unlike the one which presumably describes the time evolution of our universe).
+7.3 Fractal zeta functions of arbitrary compact sets and
+higher-dimensional theory of complex dimensions
+In a forthcoming book by the author, Goran Radunovi´c and Darko ˘Zubrini´c, entitled
+Fractal Zeta Functions and Fractal Drums, [LapRa˘Zu1] (see also the series of re-
+search and survey papers [LapRa˘Zu2–8]), is developed a higher-dimensional theory
+of complex dimensions, valid for any bounded subset of N-dimensional Euclidean
+space RN, with N ≥1 arbitrary. Distance and tube zeta functions are deﬁned in that
+general setting. Let D be the (upper) Minkowski dimension of a given (nonempty)
+bounded subset A of RN. Then it is shown in [LapRa˘Zu1–2] that the distance zeta
+
+
+--- PDF page 32 ---
+32
+Contents
+function of A, denoted by ζA = ζA(s) and deﬁned (for all s ∈C with Re(s) sufﬁ-
+ciently large and for a given δ > 0) by
+ζA(s) :=
+Z
+Aδ
+d(x,A)s−Ndx
+(38)
+is holomorphic for Re(s) > D.
+Remark 21. (a) This new type of fractal zeta function, ζA, was introduced by the
+author in 2009 in order to be able to extend to any higher dimension N the theory
+of complex dimensions of fractal strings developed in [Lap-vFr1–2] (and now also
+in [Lap-vFr3]). The case of fractal strings corresponds to N = 1; in that case, the
+precise relationship between ζL and ζA, with A := ∂L , is explained in [LapRa ˘Zu1]
+and [LapRa ˘Zu2].
+(b) For the simplicity of the discussion, we assume here that |A| = 0 (i.e., A
+is a Lebesgue null set), which is the case of most fractals of interest. We refer to
+[LapRaZu1] for a discussion of the general case.
+A ﬁrst key result of the theory is that the abscissa of convergence of this
+Dirichlet-type integral (viewed as a Lebesgue integral) or, equivalently, the abscissa
+of (absolute) convergence of ζA, coincides with D:
+σ = D,
+(39)
+the (upper) Minkowski (or box) dimension of A. Therefore, {Re(s) > D} is the
+largest open right half-plane (of the form {Re(s) > α}, for some α ∈R ∪{±∞}),
+on which the Lebesgue integral appearing on the right-hand side of (38) is conver-
+gent (i.e., absolutely convergent). This result is the higher-dimensional counterpart
+of Theorem 1 above (ﬁrst noted in [Lap2–3] in the case of fractal strings, i.e., when
+N = 1). The proof of Equation (39) makes use of an interesting integral estimate ob-
+tained in [HarvPol] in order to study the singularities of solutions of certain linear
+partial differential equations. (See also [˘Zu1].)
+Moreover, under mild assumptions, namely, if D < N (recall that we always
+have 0 ≤D ≤N), M D
+∗> 0 and the Minkowski dimension of A exists (i.e., the
+lower and upper Minkowski dimensions of A coincide), then {Re(s) > D} is also
+the maximal open right-half plane to which ζA = ζA(s) can be holomorphically
+continued; i.e., D coincides with Dhol(ζA), the abscissa of holomorphic continuation
+of ζA:
+D = σ = Dhol(ζA),
+(40)
+where, as above, D = D(A) and σ = Dabs(ζA).
+An entirely analogous theorem holds for the tube zeta function of A, denoted
+by ζA = eζA(s) and deﬁned by
+
+
+--- PDF page 33 ---
+Contents
+33
+eζA(s) =
+Z δ
+0
+ts−N|At|N
+dt
+t ,
+(41)
+for all s ∈C such that Re(s) > D.
+In fact, it can be shown that the two functions, ζA and (N −s) eζA, differ
+by an entire function, from which it follows that (for D < N), the two fractal zeta
+functions ζA and eζA have exactly the same qualitative properties. In particular, given
+a domain U ⊆C containing {Re(s) > D}, the common half-plane of (absolute)
+convergence of ζA and eζA, ζA can be meromorphically extended to U if and only if
+it is the case for eζA. Furthermore, ζA and eζA have exactly the same poles, in U (with
+the same multiplicities). These poles are called the (visible) complex dimensions of
+A. Moreover, the residues of ζA and eζA at a simple pole (or, more generally, the
+principal parts at a multiple pole) are related in a very simple way. For example, if
+D is simple, then we have
+res(ζA,D) = (N −D) res(eζA,D).
+Finally, if ζA (or, equivalently, eζA) can be meromorphically continued to an
+open and connected neighborhood of D, then D is a simple pole of ζA and eζA (i.e.,
+it is a complex dimension of A)9 and the residue of eζA at s = D is squeezed between
+the lower and upper Minkowski contents of A:
+M∗≤res(eζA;D) ≤M ∗.
+(43)
+If, in addition, A is Minkowski measurable, (with Minkowski content denoted by
+M , as before), then
+res(eζA;D) = M .
+(44)
+Both formulas (43) and (44) are valid even if D = N, although the justiﬁca-
+tion of this statement requires a speciﬁc argument; see [LapRa˘Zu1].
+We should note that, in light of the aforementioned functional equation con-
+necting ζA and eζA, the choice of δ is unimportant in the deﬁnition of ζA and eζA
+(in (38) and (41), respectively). Furthermore, the residues of ζA and eζA at (simple)
+complex dimensions are independent of δ.
+9 Since ζA and eζA are holomorphic in the open half-plane {Re(s) > D}, it then follows that
+D = max{Re(s) : s ∈D},
+(42)
+where D is the set of (visible) complex dimensions of A in any domain U containing this neigh-
+borhood of {D}.
+
+
+--- PDF page 34 ---
+34
+Contents
+In the special case when N = 1 (that is, for fractal strings), it is shown (still in
+[LapRa˘Zu1,2,8]) that the distance zeta function ζA and the geometric zeta function
+ζL are closely related (here, A := ∂Ωand L is the fractal string associated with
+the bounded open set Ω⊂R). In fact, given any subdomain U of {Re(s) > 0} (or,
+more generally, of C\{0}),ζL has a meromorphic continuation to U if and only
+if ζA = ζ∂Ωdoes. In fact, their difference can be shown to be holomorphic in U.
+Consequently, ζL and ζA have the same poles (with the same multiplicities) in U;
+i.e., they have the same visible complex dimensions. This is true independently of
+the geometric realization Ωof the fractal L = (ℓj)∞
+j=1 as a bounded open subset of
+R. In particular, we recover Theorem 1.
+A variety of results are provided in [LapRa˘Zu1–8], guaranteeing the exis-
+tence of a suitable meromorphic extension of ζA (and of eζA) beyond the half-plane
+of convergence {Re(s) > D}. Moreover, many examples of computation of the com-
+plex dimensions of a variety of fractals (when N = 1,2 or N ≥3) are provided
+throughout [LapRa˘Zu1–8]. These fractals include (one- or two-parameter) families
+of generalized Cantor sets, the Sierpinski gasket and carpet, the Menger sponge (a
+3-dimensional analog of the Sierpinski carpet, see, e.g., [Man]), families of spirals,
+fractal curves such as the Cantor curve (or devil’s staircase), which is examined
+from several points of view, as well as geometric chirps and curves with cusps. The
+theory is extended to a new class of objects, called relative fractal drums (RFDs),
+which allow a much greater ﬂexibility in many situations and generalize both the
+usual fractal drums (i.e., drums with fractal boundary, in the sense, for example, of
+[Lap1–3], as discussed in §4 above) and the class of bounded subsets of Euclidean
+space RN. It is noteworthy that in the case of RFDs, the relative Minkowski dimen-
+sion can be negative; it can even take the value −∞, as is shown in [LapRa˘Zu1,4,7],
+where geometric explanations are provided for this “dimension drop” phenomenon.
+In short, a relative fractal drum is a pair (A,Ω), with A an arbitrary (pos-
+sibly unbounded) subset of RN and Ωan open subset of RN with ﬁnite volume
+(i.e., |Ω|N < ∞) and such that Ω⊆Aδ, for some δ > 0. The special case of an
+ordinary fractal drum (or “drum with fractal boundary”, in the sense of [Lap1–3])
+corresponds to the case where A = ∂Ωand Ωis as above.
+Furthermore, the main results of [Lap1] (see Section 4.1 above, especially,
+Theorem 8) are used in an essential manner in order to show that the spectral zeta
+function of a fractal drum (that is, of the Dirichlet Laplacian on a bounded open
+subset of RN, with N ≥1) can be meromorphically extended to (at least) the open
+half-plane {Re(s) > D}, where (as before) D is the (upper) Minkowski dimension of
+the boundary ∂Ωof the drum. [This was already observed in [Lap3], using [Lap1]
+and a well-known Abelian-type theorem (in the sense of [Sim]), the converse of a
+Tauberian theorem. It can also be deduced from the main result of [Lap1] by a direct
+argument, based on the holomorphicity of an integral depending analytically on a
+
+
+--- PDF page 35 ---
+Contents
+35
+parameter.] Moreover, using the construction of a maximal hyperfractal10 carried
+out in [LapRa˘Zu1,2,7] (and alluded to towards the end of Remark 19 above), it is
+shown that the half-plane {Re(s) > D} is optimal, in general; i.e., it cannot usually
+be larger, from the point of view of the meromorphic continuation of the spectral
+zeta function. We note that under suitable assumptions, the Dirichlet Laplacian can
+be replaced by a higher order positive, self-adjoint elliptic operator, with possibly
+variable coefﬁcients and with Dirichlet, Neumann or mixed boundary conditions;
+see [Lap1] and [LapRa˘Zu1,7].
+Extensions of the results of [LapRa˘Zu1–8] to unbounded sets, in particular,
+are provided in [Ra].
+Finally, we note that ζA and eζA remain unchanged if we replace the bounded
+set A ⊂RN by its closure A. As a result, we could have assumed throughout that
+A was a compact subset of RN. Moreover, we point out that fractal tube formu-
+las, signiﬁcantly extending to compact subsets of RN the corresponding (pointwise
+and distributional) tube formulas obtained in [Lap-vFr3, §8.1–8.3] for fractal strings
+(as well as the later tube formulas obtained for fractal sprays in [LapPe2–3] and
+[LapPeWi1–2]), are established in [LapRa˘Zu5–6] and [LapRa˘Zu1, Chapter 5], with-
+out any assumptions of self-similarity and in every dimension N ≥1.
+Remark 22. We close this discussion by mentioning the fact that the higher-
+dimensional theory of fractal zeta functions and the associated complex dimensions
+now enables us to extend to the general (higher-dimensional) setting the deﬁni-
+tion of fractality introduced in [Lap-vFr1–3] (see, especially, [Lap-vFr3, §13.1 and
+§13.2]). Accordingly, a geometric object is said to be “fractal” if it has at least one
+nonreal complex dimension (with a positive real part). In particular, one can now
+precisely talk about the fractality of any bounded subset A (or, more generally, rel-
+ative fractal drum) in RN, with N ≥1 arbitrary. (Compare with Remark 19 above.)
+As an example, the Cantor curve (i.e., the “devil’s staircase” in the termi-
+nology of [Man]) is fractal according to this deﬁnition, whereas it is not fractal
+according to Mandelbrot’s original deﬁnition in [Man] (because its Hausdorff, box
+and topological dimensions coincide and are equal to one). (Recall from Remark 19
+that in [Man], a geometric object is said to be “fractal” if its Hausdorff dimension is
+strictly greater than its topological dimension.) One can also check that most of the
+classic “fractals” (for example, the ternary Cantor set and its generalizations, as
+well as the Sierpinski gasket and carpet and their higher-dimensional counterparts)
+are indeed fractal in this new sense. (See [LapRa ˘Zu1–4,7] for these and many other
+examples.)
+A technical challenge remains to prove this same result for all (suitable) self-
+similar sets (as was done when N = 1 for self-similar strings in [Lap-vFr1–3] and
+when N ≥2 for a large class of self-similar sprays or tilings in [LapPe2–3] and
+10 Recall that in the terminology of [LapRa˘Zu1–8], a “maximal hyperfractal” is a compact subset
+A of RN such that ζA has singularities at every point of the “critical line” {Re(s) = D}; in addition
+to Remark 19, see Remark 22 below.
+
+
+--- PDF page 36 ---
+36
+Contents
+[LapPeWi1–2]),11 as well as for the classic types of fractals occurring in com-
+plex dynamics (Julia sets, the Mandelbrot set and their generalizations; see, e.g.,
+[Man, TanL, Shi]) and in conformal dynamics and/or hyperbolic geometry (for in-
+stance, limit sets of Fuchsian groups and Kleinian groups; see, e.g., [BedKS]), possi-
+bly by using other gauge functions than the usual ones based on the standard power
+laws, as was originally done in [HeLap] and further studied in [LapRa ˘Zu1–8] (from
+the point of view of the new higher-dimensional theory of complex dimensions). It
+may be difﬁcult to do so, but there is no doubt in the author’s mind that all of the
+classic (deterministic) fractals will eventually be found to be “fractal” in the above
+sense or “hyperfractal”, in a sense to be explained next.
+Due in part to the work in [HamLap] on random fractal strings and their com-
+plex dimensions, the notion of fractality was extended as follows (ﬁrst in [Lap-vFr2]
+and [Lap-vFr3, §13.4.3] and then, in any dimension, in [LapRa ˘Zu1–8]). A geometric
+object is said to be “fractal” if it has at least one nonreal complex dimension with
+a positive real part (as above) or else if it is “hyperfractal”; i.e., if the associated
+fractal zeta function has a natural boundary along some suitable contour in C (a
+“screen”, in the sense of [Lap-vFr3, §5.3]). We note that the term “hyperfractal”
+was introduced in [LapRa ˘Zu1–8], in this context.
+Therefore, a “hyperfractal” is such that the associated fractal zeta function
+cannot be meromorphically extended beyond a certain “screen”. Furthermore, in
+[LapRa ˘Zu1–4,7–8]is also introduced the notion of “maximal hyperfractal”, accord-
+ing to which the corresponding fractal zeta function has a singularity at every point
+of the critical line of convergence {Re(s) = D}, where D is the Minkowski dimension
+of A ⊂RN (or its relative counterpart, in the case of an RFD). It is then shown in
+([LapRa ˘Zu2–4,7] or [LapRa ˘Zu1, Chapter 4]) using, in particular, countably many
+suitable fractal strings assembled in an appropriate way, along with Baker’s theo-
+rem from transcendental number theory [Bak], that maximally hyperfractal strings
+(N = 1), as well as maximally hyperfractal compact subsets and RFDs of RN (for
+every N ≥1) can be explicitly constructed. This construction is completely deter-
+ministic. The author conjectures (building on [HamLap] and [Lap-vFr3, §13.4.3])
+that for large classes of random fractals, maximal hyperfractality is an almost sure
+property.
+In closing this remark, we mention that the above deﬁnition of fractality can-
+not just be applied to standard geometric objects embedded in Euclidean spaces
+(or, more generally, in appropriate metric measure spaces) but is also applicable, in
+principle, to ‘virtual’ geometries, spectral geometries, dynamical systems, algebraic
+and noncommutative geometries (not necessarily consisting of ordinary points; see,
+e.g., [Cart] and [Con]), as well as arithmetic geometries. In fact (along with the
+proper notion of zeta function and the associated complex dimensions), it should be
+used as a unifying tool between these apparently vastly different domains of math-
+ematics. This long-term goal has been one of the central motivations of the author
+(and his collaborators) in [Lap1–9, Lap-vFr1–3, LapRa ˘Zu1, LapPom2, LapMai2,
+HeLap, LapLu3, LapNe, LapPeWi1, EllLapMaRo, ChrIvLap, LapSar] (particularly,
+11 Added note: In the case of self-similar sprays, the results of [LapRa˘Zu1,5,6] now enable one to
+recover and signiﬁcantly extend the results of [LapPe2–3] and [LapPeWi1,2].
+
+
+--- PDF page 37 ---
+Contents
+37
+in [Lap3–5] and [Lap8–9], as well as in the books [Lap6] and [Lap-vFr1–3]).
+For instance, the author conjectures that there exists a natural fractal-like ge-
+ometric object whose complex dimensions are precisely the critical (i.e., nontrivial)
+zeros of the Riemann zeta function. Furthermore, the essential “shape” of this object
+should be understood in terms of a yet to be constructed cohomology theory asso-
+ciated with the underlying complex dimensions (and the pole of ζ = ζ(s) at s = 1).
+In particular, connections with Deninger’s work (and conjectures) in [Den1,2] arise
+naturally in this context. (See, especially, [Lap6] and [Lap8–9], along with [Lap-
+vFr3, §12.3 and §12.4].)
+7.4 Quantized number theory, spectral operators and the Riemann
+hypothesis.
+Formula (1), ζν(s) = ζ(s) · ζL (s), which connects the spectral zeta function ζν =
+ζν,L and the geometric zeta function ζL of a fractal string L via the Riemann zeta
+function ζ, has the following counterpart, in terms of the spectral and geometric
+counting functions of L (see [Lap-vFr3, Theorem 1.2]):
+Nν(x) =
+∞
+∑
+n=1
+NL
+x
+n
+
+,
+(45)
+for any x > 0. Note that for a ﬁxed x > 0, only ﬁnitely many terms are nonzero on the
+right-hand side of (45). However, the number of these terms tends to +∞as x →+∞.
+The (heuristic) spectral operator, at the level of the counting functions, is
+then given by the map
+g := NL 7→Nν(g) :=
+∞
+∑
+n=1
+g
+ ·
+n
+
+;
+(46)
+that is, Nν(g)(x) := ∑∞
+n=1 g(x/n), for all x > 0. It can therefore be thought of as the
+map sending the geometry (represented by NL , given by Equation (11)) of a fractal
+string L onto the spectrum (represented by Nν = Nν,L ) of a fractal string L . Here,
+as in the discussion preceding Equation (13),
+Nν(x) = #({ f ∈σ(L ) : f ≤x}),
+(47)
+for any x > 0, where σ(L ) = {n·ℓ−1
+j
+: n ≥1, j ≥1} is the (frequency) spectrum of
+L = (ℓj)∞
+j=1.
+Remark 23. At an even more fundamental level (that of the “density of geometric
+states” η := ∑∞
+j=1δ{ℓ−1
+j } and the “density of spectral states” ν := ∑f∈σ(L ) δ{ f},
+see [Lap-vFr3, §6.3.1]), the spectral operator can be viewed as the map sending
+the geometry (represented by η) of a fractal string L = (ℓj)∞
+j=1 onto its spectrum
+(represented by ν) :
+
+
+--- PDF page 38 ---
+38
+Contents
+η :=
+∞
+∑
+j=1
+δ{ℓ−1
+j } 7→ν = ν(η) =
+∞
+∑
+j,n=1
+δ{n·ℓ−1
+j },
+(48)
+where δ{y} denotes the Dirac point mass at y > 0 and the “generalized frac-
+tal strings” η and ν are viewed as positive (local) measures (or as tempered
+distributions) on (0,+∞); see [Lap-vFr3, §6.3.2]. We also refer to [Lap-vFr3, §6.3.1]
+for explicit formulas expressing η and ν in terms of the underlying complex dimen-
+sions of L , along with [Lap-vFr3, Chapter 4] for the notion of generalized fractal
+string, based on the notion of local measure from [DolFr], [JoLap], [JoLapNie] and
+[LapRa ˘Zu1, Appendix A].
+Viewed additively (that is, after having made the change of variable x =
+et, t = logx, with x > 0 and t ∈R), the (heuristic) spectral operator, denoted by
+a, becomes the following map (where f = f(t) is a suitable function of the new
+variable t ∈R):
+f(t) 7→a(f)(t) :=
+∞
+∑
+n=1
+f(t −logn).
+(49)
+As before, let P denote the set of all prime numbers. Then, given any p ∈P,
+the associated (local) Euler factor ap is given by the operator
+f(t) 7→ap(f) =
+∞
+∑
+m=0
+f(t −mlog p).
+(50)
+The spectral operator a and its (operator-valued) Euler factors ap (with p ∈P) are
+connected via the following (operator-valued) Euler product representation of a:
+a(f)(t) =
+ 
+∏
+p∈P
+ap(f)
+!
+(t),
+(51)
+with ap = (1−p−∂)−1. Here, we have let ∂= d/dt denote the differentiation oper-
+ator (also called the inﬁnitesimal shift of the real line). We have (for any h ∈R)
+(e−h∂)(f)(t) = f(t −h);
+(52)
+in particular, we have
+(n−h)(f)(t) = f(t −logn),
+(53)
+so that we should also expect to be able to obtain the following (operator-valued)
+Dirichlet series representation of a:
+a(f)(t) =
+ 
+∞
+∑
+n=1
+n−∂
+!
+(f)(t).
+(54)
+All of these semi-heuristic formulas and deﬁnitions are given without proper
+mathematical justiﬁcation in [Lap-vFr3, §6.3.2] (and, originally, in [Lap-vFr2,
+
+
+--- PDF page 39 ---
+Contents
+39
+§6.3.2] where the heuristic spectral operator a was ﬁrst introduced). However, in
+[HerLap1–5], Hafedh Herichi and the author have developed a rigorous functional
+analytic framework within which (under suitable assumptions) all of these “deﬁni-
+tions” and formulas are properly justiﬁed and, among many other results, the refor-
+mulation of the Riemann hypothesis obtained in [LapMai2] (see Theorem 15 above)
+can be restated in operator theoretic terms; namely, as the “quasi-invertibility” of the
+spectral operator in all possible dimensions, except in the midfractal case 1/2.
+We refer the interested reader to the forthcoming book [HerLap1], titled
+Quantized Number Theory, Fractal Strings and the Riemann Hypothesis, for a com-
+plete exposition of the theory. We limit ourselves here to a brief exposition and a
+few additional comments.
+For each ﬁxed c ∈R, let Hc = L2(R,e−2ctdt),12 and let ∂= d/dt be the
+unbounded (and densely deﬁned) operator acting on the Hilbert space Hc via ∂(f) =
+f ′, the distributional (or else, the pointwise almost everywhere deﬁned) derivative
+of f, for all f in the domain D(∂) of ∂:
+D(∂) := { f ∈Cabs(R)∩Hc : f ′ ∈Hc},
+(56)
+where Cabs(R) is the space of (locally) absolutely continuous functions on R (see,
+e.g., [Coh, Foll, Ru1]). Then, the inﬁnitesimal shift ∂= ∂c is shown in [HerLap1–3]
+to be an unbounded normal operator on Hc (that is, ∂∗∂= ∂∂∗, where ∂∗denotes the
+adjoint of the closed unbounded operator ∂; see, e.g., [Kat] or [Ru2]), with spectrum
+σ(∂) = {Re(s) = c}. Furthermore, the associated group {e−h∂}h ∈R is shown to
+be the shift group given (for all f ∈Hc) by (52) while n−∂is therefore given by (53).
+Moreover, for every c > 1, the quantized (i.e., operator-valued) Euler product
+and Dirichlet series representations (51) and (54) of a = ac hold, in the following
+strong sense: a = ∑∞
+n=1n−∂and a = Πp∈P(1 −p−∂)−1, where both the series and
+the inﬁnite product converge in B(Hc), the Banach algebra of bounded linear oper-
+ators on the Hilbert space Hc. (See [HerLap5] or [HerLap1, Chapter 7].)
+In addition, for all f in a suitable dense subspace of D(∂) (and hence, of
+Hc), the spectral operator a = ac, now rigorously deﬁned (for every c ∈R) by the
+formula a := ζ(∂), is given (for c > 0) by an appropriate operator-valued version of
+the classic analytic continuation of the Riemann zeta function ζ = ζ(s) to the open
+half-plane {Re(s) > 0}. Namely, formally, we have
+12 Hence, Hc is the complex Hilbert space of (Lebesgue measurable, complex-valued) square in-
+tegrable functions with respect to the absolutely continuous measure e−2ctdt, and is equipped with
+the norm
+|| f ||c :=
+Z
+R | f (t)|2 e−2ct dt
+1/2
+< ∞
+(55)
+and the associated inner product, denoted by (·,·)c.
+
+
+--- PDF page 40 ---
+40
+Contents
+a = ζ(∂) =
+1
+∂−1 +
+∞
+∑
+n=1
+Z n+1
+n
+(n−∂−t−∂)dt.
+(57)
+(Compare, for example, with [Ser, §VI.3] or the proof of Theorem 12 above given
+in [LapPom2].)
+Similarly, the global spectral operator A := ξ(∂), where, as before, ξ(s) :=
+π−s/2Γ (s/2) ζ(s) is the global (or completed) Riemann zeta function, is shown to
+be given by an operator-valued (or quantized) version of the standard analytic con-
+tinuation of ξ = ξ(s) to the entire complex plane (see, e.g., [Ti, §2.6] or [Lap6,
+§2.4]). Again, we refer the interested reader to [HerLap5] or [HerLap1, Chapter 7]
+for the precise statements and many related results.
+We note that the spectral operator a = ac, now deﬁned for any c ∈R by
+a := ζ(∂), is obtained via the functional calculus for unbounded normal operators
+(see [Ru2]); so that, formally, one substitutes the inﬁnitesimal shift ∂for the com-
+plex variable s in the usual deﬁnition of the Riemann zeta function (or, rather, in its
+meromorphic continuation to all of C, still denoted by ζ = ζ(s), for s ∈C).
+As it turns out, according to the celebrated spectral theorem (for unbounded
+normal operators, see [Ru2]), what matters are the values of ζ = ζ(s) along the
+spectrum σ(∂) of ∂; that is, according to a key result of [HerLap1,2], along
+σ(∂) = cℓ(ζ({s ∈C : Re(s) = c}),
+(58)
+where cℓ(G) denotes the closure of G ⊆C in C.
+We point out that for c = 1, the unique (and simple) pole of ζ, we must
+assume that s̸ = 1 on the right-hand side of (58). Alternatively, one views the mero-
+morphic function ζ as a continuous function with values in the Riemann sphere
+eC := C∪{∞}, equipped with the standard chordal metric. (We set ζ(1) = ∞.) Then,
+even for c = 1, the extended spectrum eσ(a) of a is given by the right-hand side
+of (58), but without the closure, where eσ(a) := σ(a) ∪{∞} if a is unbounded and
+eσ(a) := σ(a) if a is bounded; that is, according to [HerLap1–5], if c ≤1 or if c > 1,
+respectively.
+One therefore sees how the properties of the Riemann zeta function ζ = ζ(s)
+(for example, its range along the vertical line {Re(s) = 1} or the existence of a pole
+at s = 1) are reﬂected in the properties of the spectral operator a = ζ(∂) (for ex-
+ample, whether or not a is bounded or invertible or, equivalently, whether or not its
+spectrum σ(a) is compact or does not contain the origin, respectively).
+Formula (58) for σ(a) follows from a suitable version of the spectral map-
+ping theorem (SMT) for unbounded normal operators (see [HerLap1, Appendix
+E]) according to which σ(ζ(∂)) = cℓ(ζ(σ(∂))\{1}) or, equivalently, eσ(ζ(∂)) =
+
+
+--- PDF page 41 ---
+Contents
+41
+ζ(σ(∂)) (where in the latter formula, ζ is viewed as a continuous eC-valued func-
+tion, as explained above). Note that for c̸ = 1, we have that 1 /∈σ(∂), so that
+ζ = ζ(s) is holomorphic and hence, continuous along σ(∂) = {Re(s) = c}, whereas
+for c = 1, ζ = ζ(s) is meromorphic but has a singularity (more speciﬁcally, a simple
+pole) at s = 1 ∈σ(∂). Consequently, we can use the continuous (resp., meromor-
+phic) version of SMT (stated and proved in [HerLap1, Appendix E]) in order to
+deduce that when c̸ = 1 (resp., c = 1), the identity (58) (resp., the counterpart of
+(58) when c = 1) holds.
+Next, given T > 0, one deﬁnes (still via the functional calculus for unbounded
+normal operators) a truncated inﬁnitesimal shift ∂(T) = ∂(T)
+c
+(say, ∂(T) := ϕ(T)(∂),
+where ϕ(T) is a suitable cut-off function), so that (again by the aforementioned spec-
+tral mapping theorem, SMT), σ(∂(T)) = [c−iT,c+iT], where c ∈R and i := √−1.
+(We refer to [HerLap1–3] for the precise deﬁnitions; see also Remark 24 just below.)
+Then, letting a(T) := ζ(∂(T)), we obtain the truncated spectral operator a(T) = a(T)
+c .
+We say that the spectral operator a is quasi-invertible if each of its truncations a(T)
+is invertible (in the usual sense, for bounded operators), for every T > 0. (Note that
+the normal operator ∂(T) is bounded since its spectrum is compact.)
+Remark 24. For c̸ = 1, the cut-off function ϕ(T) : σ(∂) = {Re(s) = c} →C is
+assumed to satisfy the following two conditions: (i) ϕ(T) is continuous and, in ad-
+dition, (ii) cℓ(ϕ(T)({Re(s) = c})) = [c −iT,c + iT]). For c = 1, we replace (i) by
+(i’) : ϕ(T) has a (necessarily unique) meromorphic continuation to a connected
+open neighborhood of {Re(s) = 1}. (Then, condition (i’) and (ii) imply that (i)
+also holds.) Consequently, when c̸ = 1 (resp., c =1), one can use the continuous
+(resp., meromorphic) version of the spectral mapping theorem (SMT, see [HerLap1,
+Appendix E]) in order to deduce that
+σ(∂(T)) = σ(ϕ(T)(∂))
+(59)
+= cℓ(ϕ(T)({Re(s) = c})) = [c−iT,c+ iT],
+and especially, that
+σ(a(T)) = σ(ζ(∂(T)))
+(60)
+= cℓ(ζ(σ(∂(T)))) = cℓ(ζ([c−iT,c+ iT])),
+where for c = 1, one should remove {1} from σ(∂(T)) = [c −iT,c + iT] in the last
+two equalities of (60), while when c̸ = 1, (60) takes the following simpler form (since
+then, ζ is continuous along the vertical line segment [c−iT,c+ iT]) :
+σ(a(T)) = ζ([c−iT,c+ iT]).
+(61)
+When c = 1, (61) can be replaced by the following identity, which is equivalent to
+(60) interpreted as above (since ζ(1) = {∞} and ζ(s)̸ = ∞for all s ∈C,s̸ = 1) :
+
+
+--- PDF page 42 ---
+42
+Contents
+eσ(a(T)) := σ(a(T))∪{∞} = ζ([1 −iT,1 + iT]),
+(62)
+where (as in an earlier comment) the meromorphic function ζ should be viewed as
+a eC-valued continuous function in the right-hand side of (62) and where eσ(a(T))
+denotes the extended spectrum of a(T).
+The full strength of the deﬁnition given in the following remark will be
+needed when we discuss Theorem 29 below. This deﬁnition and the accompany-
+ing property is also used in the statement and the proof of Theorem 26 (and hence,
+of Theorem 27 as well).
+Remark 25. A possibly unbounded linear operator L : D(L) ⊆H →H on a Hilbert
+space H, with domain D(L), is said to be invertible if it is a bijection from D(L) onto
+H and if its inverse, L−1, is bounded. (If L is closed, an assumption which is satisﬁed
+by all of the operators considered in the present subsection (§7.4), then L−1 is au-
+tomatically bounded, by the closed graph theorem [Kat, Foll, Ru1].) Furthermore,
+essentially by deﬁnition of the spectrum, L is invertible if and only if 0 /∈σ(L). (See,
+e.g., [Kat, ReSi1, Ru2, Sc].)
+We can now state the counterparts of Theorem 14 and Theorem 15 (the key
+results from [LapMai2] discussed in §6 above) in this context. (See Remark 28 be-
+low.)
+Theorem 26 (Analog of Theorem 14, [HerLap1, HerLap3]). Given any c ∈R,
+the spectral operator a = ac is quasi-invertible if and only if ζ = ζ(s) does not
+have any zeros along the vertical line {Re(s) = c}; i.e., if and only the “c-partial
+Riemann hypothesis” is true.
+Hence, much as in Corollary 16, a1/2 is not quasi-invertible (since ζ has at
+least one zero along the critical line {Re(s) = 1/2}).13 Furthermore, ac is quasi-
+invertible for every c > 1. Actually, for c > 1, a = ac is invertible (which implies
+that it is quasi-invertible) and its inverse is given by a−1 = ∏p∈P(1 −p−∂), with
+the convergence of the inﬁnite product holding in B(Hc); see [HerLap1,5].
+Just as Theorem 15 is a consequence of Theorem 14, the following key result
+follows from Theorem 26.
+Theorem 27 (Analog of Theorem 15, [HerLap1, HerLap3]). The spectral opera-
+tor is quasi-invertible for every value of c in (0,1) other than in the midfractal case
+when c = 1/2 (or, equivalently, for every c ∈(0,1/2)) if and only if the Riemann
+hypothesis is true.
+Remark 28. Recall from §6 that Theorems 14 and 15 are expressed in terms of the
+solvability of the inverse spectral problem (ISP)D for all fractal strings of Minkowski
+13 In fact, ζ has inﬁnitely many zeros along the critical line, according to Hardy’s theorem (see
+[Edw, Ti]) but this is irrelevant here. We refer to [HerLap1,3] for a version of Theorem 26 for
+which this well-known fact actually matters.
+
+
+--- PDF page 43 ---
+Contents
+43
+dimension D. Here, the role played by the dimension D is now played by the param-
+eter c, while the solvability of (ISP)D is now replaced by the quasi-invertibility of
+ac. In a precise sense, c is the analog of D in the present context; this analogy is
+based in part on some of the results of [LapPom2] which are brieﬂy discussed in §3
+above (see Theorem 3 and the comments following it), provided one thinks of the
+functions f = f(t) as geometric counting functions of fractal strings (modulo the
+change of variable x = et).
+We leave it to the interested reader to state (in the present context) the coun-
+terpart of Theorem 17 (about a mathematical phase transition at c = 1/2).
+Like Theorem 15, Theorem 27 is a symmetric criterion for the Riemann hy-
+pothesis (RH). Indeed, in light of the functional equation (28) for ζ connecting ζ(s)
+and ζ(1 −s), we can replace the open interval (0,1/2) by the symmetric interval
+(1/2,1), with respect to 1/2. (See also Equation (29) above.) In contrast, the author
+has recently discovered the following asymmetric criterion for RH, as we now ex-
+plain. (See [Lap7].)
+Let b = bc be the nonnegative self-adjoint operator deﬁned by b := aa∗= a∗a.
+Note that b is a nonnegative self-adjoint operator because a is normal (see, e.g.,
+[Kat]) and, like a itself, is unbounded for all c ∈(0,1), while it is bounded for all
+c > 1 (see [HerLap1–3]). Then, b is invertible (in the sense of possibly unbounded
+operators, see Remark 25 above) if and only if b is bounded away from zero (i.e.,
+if and only if there exists γ > 0 such that (bf, f)c ≥γ||f||2
+c, for all f ∈D(b)). Fur-
+thermore, b is invertible if and only if a is invertible, which is the case if and only
+0 /∈σ(a) or, equivalently, 0 /∈σ(b).
+Theorem 29 (An asymmetric reformulation of the Riemann hypothesis, [Lap7]).
+The following statements are equivalent:
+(i) The Riemann hypothesis is true.
+(ii) The spectral operator a is invertible for all c ∈(0,1/2).
+(iii) The self-adjoint operator b is invertible for all c ∈(0,1/2).
+(iv) For each c ∈(0,1/2), b is bounded away from zero.
+We know that in part (iv) of Theorem 29, the implicit lower bound γ = γc may
+vary with c and even tend to 0 as c →(1/2)−or c →0+.
+A priori, the phase transition observed at c = 1/2 in Theorem 29 just above
+is of a very different nature from the one observed in Theorem 15 (based on
+[LapMai2], see also Theorem 17) or in Theorem 27 (based on [HerLap1,3], see
+the comment following Remark 28). Indeed, under RH (and, in fact, if and only
+RH holds, by Theorem 29), we have that, for all c ∈(0,1/2), σ(a) is a closed un-
+bounded subset of C not containing 0 and hence, a is invertible. This follows from
+the expression (58) obtained in [HerLap1–3] for σ(a), combined with a conditional
+result (by Garunkˇstis and Steuding; see the proof of Lemma 4 and Proposition 5 in
+
+
+--- PDF page 44 ---
+44
+Contents
+[GarSte]) about the non-universality of ζ in the left critical strip {0 < Re(s) < 1/2}.
+On the other hand, for any c ∈(1/2,1), we have that σ(a) = C and hence, that
+a is not invertible. This follows again from (58), but now combined with the Bohr–
+Courant theorem [BohCou] according to which for every c ∈(1/2,1), the range of
+ζ along any vertical line {Re(s) = c} is dense in C. This latter fact is a consequence
+of the universality of ζ in the right critical strip {1/2 < Re(s) < 1}, as was ﬁrst
+observed and established by Voronin in [Vor1,2].
+Consequently, the (unconditional) universality of the Riemann zeta function
+ζ in the right critical strip {1/2 < Re(s) < 1} and the (conditional) non-universality
+of ζ in the left critical strip {0 < Re(s) < 1/2} are absolutely crucial in order to
+understand the mathematical phase transition occurring in the midfractal case when
+c = 1/2, according to Theorem 29, if and only RH holds.
+We stress that the universality of ζ, initially discovered by Voronin in [Vor2]
+in the mid-1970s after he extended the Bohr–Courant theorem to jets of ζ (con-
+sisting of ζ and its derivatives), in [Vor1], has since been generalized in a number
+of ways; see, e.g., the books [KarVor, Lau, Ste1], along with [Bag1–2, Rei1, Her1,
+Her4, Ste2] and the many relevant references therein.
+Roughly speaking, the universality theorem, as generalized in [Bag1–2, Rei1],
+states that given any compact subset K of the right critical strip {1/2 < Re(s) < 1}
+with connected complement in C, every C-valued continuous function on K which
+is holomorphic and nowhere vanishing on the interior of K can be uniformly ap-
+proximated on K by vertical translates of ζ.
+The universality theorem has been extended to a large class of L-functions
+for which the generalized Riemann hypothesis (GRH) is expected to hold; see, e.g.,
+[Ste1] for an exposition, along with [Ste2] and the relevant appendices of [Her-
+Lap1,4]. Accordingly, Theorem 29 can be extended to many L-functions. Similarly,
+but for different and simpler reasons, after a suitable modiﬁcation in the deﬁnition of
+the truncated inﬁnitesimal shift ∂(T), Theorems 26 and 27 (based on [HerLap1–4])
+can be extended to essentially all of the L-functions (or arithmetic zeta functions) for
+which GRH is expected to hold (independently of whether or not the analog of the
+universality theorem holds for those zeta functions); see, e.g., [ParSh1,2], [Sarn],
+[Lap-vFr3, Appendix A] and [Lap6, Appendices B,C,E].
+Moreover, we point out that a counterpart in the present context (that is, for
+the spectral operator a = ζ(∂)) of the universality of ζ is provided in [HerLap1,4].
+Interestingly, the corresponding “quantized universality” then involves the family
+of truncated spectral operators {a(T) = ζ(∂(T))}T>0; that is, the complex variable
+s is not replaced by the operator ∂, as one might naively expect, but by the family
+of truncated inﬁnitesimal shifts {∂(T)}T>0 discussed earlier in this subsection; see
+
+
+--- PDF page 45 ---
+Contents
+45
+[HerLap4] and [HerLap1].
+In addition, we note that the (conditional) phase transition at c = 1/2 as-
+sociated with Theorem 29 (and also with Theorem 15, from [LapMai1,2], which
+preceded the work in [BosCon1,2]; see also its interpretation given in Theorem 17,
+from [Lap2,3]) is of a very different nature from the one studied by Bost and Connes
+in [BosCon1,2]. (See also [Con, §V.11].) Indeed, the latter phase transition has noth-
+ing to do with the universality or with the critical zeros of ζ but instead, is merely
+connected with the pole of ζ(s) at s = 1.14 However, it is natural to wonder whether
+the conditional phase transition occurring at c = 1/2 in Theorem 29 (if and only
+if RH holds) can be interpreted physically and mathematically (as in [BosCon1,2])
+as some kind of “symmetry breaking” associated with a suitable physical model (in
+quantum statistical physics or quantum ﬁeld theory, for example) as well as cor-
+responding to a change in the nature of an appropriate symmetry group yet to be
+attached to the present situation.
+Remark 30. It is also natural to wonder what is the inverse of the spectral oper-
+ator, when 0 < c < 1/2 and assuming that RH holds. Naturally, according to the
+functional calculus, we must have a−1 = (1/ζ)(∂), even if a−1 is not bounded (i.e.,
+even if D(a−1)̸ = Hc or equivalently, if R(a)̸ = Hc, where R(a) denotes the range of
+a). We conjecture that under RH, we have for all c ∈(0,1/2) and all f ∈D(a−1) =
+Hc, a−1(f) = ∑∞
+n=1 µ(n)n−∂(f), so that a−1(f)(t) = ∑∞
+n=1 µ(n)f(t −logn), both
+for a.e. t ∈R and as an identity between functions in Hc. (Here, µ = µ(n) denotes
+the classic M¨obius function, given by µ(n) = 1 or −1, respectively, if n ≥2 is a
+square-free integer that is a product of an even or odd number of distinct primes,
+respectively, and µ(n) = 0 otherwise; see, e.g., [Edw] or [Ti].) Observe that if that
+were the case, then “quantized Dirichlet series” would behave very differently from
+ordinary (complex-valued) Dirichlet series. In particular, the quantized Riemann
+zeta function a = ζ(∂) would be rather different from its classic counterpart, the
+ordinary Riemann zeta function, ζ = ζ(s) (where s ∈C). Indeed, as is well known,
+even if the Riemann hypothesis is true, the series ∑∞
+n=1 µ(n) n−s cannot converge
+for any value of s := s0 with 0 < Re(s0) < 1/2. Otherwise, it would follow from
+the standard properties of (numerical) Dirichlet series and the M¨obius inversion
+formula (see, e.g., [Edw]) that the sum of the series ∑∞
+n=1 µ(n)n−s would have to
+be holomorphic and to coincide with (1/ζ)(s) in the half-plane {Re(s) > Re(s0)},
+which is, of course, impossible because the meromorphic function 1/ζ must have
+a pole at every zero of ζ along the critical line {Re(s) = 1/2} (of which there are
+inﬁnitely many).
+We close this discussion by a ﬁnal comment related to the operator b (appearing
+in the statement of parts (iii) and (iv) of Theorem 29) and to the possible origin of
+the (conditional) phase transition occurring in the midfractal case c = 1/2.
+14 A similar phase transition (or “symmetry breaking”) is observed at c = 1, as is discussed in
+[HerLap1–4], since a is bounded and invertible for c > 1, unbounded and not invertible for 1/2 ≤
+c ≤1, while, likewise, σ(a) is a compact subset of C not containing the origin for c > 1 and
+σ(a) = C is unbounded and contains the origin if 1/2 < c < 1.
+
+
+--- PDF page 46 ---
+46
+Contents
+Remark 31. The nonnegative self-adjoint operator b = aa∗= a∗a is given by the
+following formula:
+b(f)(t) = ζ(2c) ∑
+(k,n)=1
+f
+
+t −log k
+n
+
+n−2c,
+(63)
+where the sum is taken over all pairs of integers k,n ≥1 without common factor. The
+appearance of the terms n−2c (for n ≥1) and of the factor ζ(2c) are very interesting
+features of this formula (which ﬁrst appeared in [Lap-vFr2–3, §6.3.2] without formal
+justiﬁcation). A priori, the above formula was derived (in [HerLap1,5], motivated in
+part by the new result of [Lap7] described in Theorem 29 above) by assuming that
+c > 1. However, the series ∑∞
+n=1 n−2c is convergent for c > 1/2 and the term ζ(2c)
+is singular only at c = 1/2, due to the pole of ζ(s) at s = 1. This may shed new
+light on the origin of the phase transition occurring at c = 1/2 in the statements of
+Theorem 29.
+Given the reformulation of the Riemann hypothesis provided above in terms
+of the invertibility of the spectral operator b = bc, where b = a∗a = aa∗(see the
+equivalence of (i), (iii) and (iv) in Theorem 29), it is tempting to extend formula
+(63) to a suitable class C of “test functions” f = f(t) (technically, a “core” for the
+operator b, that is, a dense subspace of D(b) in the Hilbert graph norm |||f|||c :=
+(||f||2
+c + ||b f||2
+c)1/2) so that it becomes valid for all c ∈(0,1/2). More speciﬁcally,
+for each c ∈(0,1/2), we would like to show that there exists a constant γ = γc > 0
+(which may depend on the parameter c) such that
+||b f||c ≥γ||f||c,
+(64)
+for all f ∈C . (Compare with part (iv) of Theorem 29 above as well as with the
+comments preceding the statement of Theorem 29.)
+In light of the new asymmetric criterion for RH obtained in [Lap7] (see The-
+orem 29 and, especially, the equivalence of (i) and (iv) in Theorem 29), this con-
+jectured inequality (64) would imply (in fact, would be equivalent to) the Riemann
+hypothesis. Thus far, however, the author has only been able to verify it for a cer-
+tain class of test functions, unfortunately not yet large enough to fulﬁll the required
+conditions.
+A last comment is in order.
+Remark 32. In two works in preparation ([Lap8] and [Lap9]), the author explores
+some of the applications of this new formalism (“quantized number theory” from
+[HerLap1–5] and [Lap7]) to potentially reformulating the Weyl conjectures (for
+curves and higher-dimensional varieties over ﬁnite ﬁelds or, equivalently, for func-
+tion ﬁelds),15 as well as for constructing generalized Polya–Hilbert operators16
+with spectra the Riemann zeros or, in fact, the zeros (and the poles) of general
+L-functions. For this purpose, the author has introduced a related but different
+15 See, e.g., [Lap6, Appendix B] and the references therein.
+16 See, e.g., [Lap6, Chapters 4 and 5], along with the relevant references therein.
+
+
+--- PDF page 47 ---
+Contents
+47
+formalism, in [Lap8,9] associated with harmonic analysis and operator theory in
+weighted Bergman spaces of analytic functions (see, e.g., [HedKorZh],[AtzBri]).17
+On the one hand, this new functional analytic framework offers greater ﬂexibility
+and ease of use, since it only involves bounded operators, albeit of an unusual na-
+ture. On the other hand, the framework (from [HerLap1–5, Lap7]) discussed in this
+section presents the signiﬁcant advantage, in particular, of naturally parametrizing
+the critical strip 0 < Re(s) < 1 by means of the dimension parameter c ∈(0,1). Only
+future research on both approaches will help us to eventually determine whether
+one formalism should be preferred to the other one, or as is more likely to happen,
+whether both formalisms should be used in order to further develop different aspects
+of quantized number theory.
+Acknowledgements This research was partially supported by the US National Science Founda-
+tion (NSF) under the grants DMS-0707524 and DMS-1107750 (as well as by many earlier NSF
+grants since the mid-1980s). Part of this work was completed during several stays of the author as a
+visiting professor at the Institut des Hautes Etudes Scientiﬁques (IHES) in Paris/Bures-sur-Yvette,
+France.
+References
+AtzBri. A. Atzmon and B. Brive, Surjectivity and invariant subspaces of differential operators
+on weighted Bergman spaces of entire functions, in: Bergman Spaces and Related Topics in
+Complex Analysis (A. Borichev, H. Hedenmalm and K. Zhu, eds.), Contemporary Mathe-
+matics, vol. 404, Amer. Math. Soc., Providence, R.I., 2006, pp. 27–39.
+Bag1. B. Bagchi, The statistical behaviour and universality properties of the Riemann zeta-
+function and other allied Dirichlet series, 1981, Ph.D. Thesis, Indian Statistical Institute,
+Calcutta, India.
+Bag2. B. Bagchi, A joint universality theorem for Dirichlet L-functions, Math. Z. 181 (1982),
+319–334.
+Bak. A. Baker, Transcendental Number Theory, Cambridge Univ. Press, Cambridge, 1975.
+BedKS. T. Bedford, M. Keane and C. Series (eds.), Ergodic Theory, Symbolic Dynamics and
+Hyperbolic Spaces, Oxford Univ. Press, Oxford, 1991.
+Berr1. M. V. Berry, Distribution of modes in fractal resonators, in: Structural Stability in Physics
+(W. G¨uttinger and H. Eikemeier, eds.), Graduate Texts in Mathematics, vol. 125, Springer-
+Verlag, Berlin, 1979, pp. 51–53.
+Berr2. M. V. Berry, Some geometric aspects of wave motion: Wavefront dislocations, diffraction
+catastrophes, diffractals, in: Geometry of the Laplace Operator, Proc. Sympos. Pure Math.,
+vol. 36, Amer. Math. Soc., Providence, R.I., 1980, pp. 13–38.
+BesTay. A. S. Besicovitch and S. J. Taylor, On the complementary intervals of a linear closed set
+of zero Lebesgue measure, J. London Math. Soc. 29 (1954), 449–459.
+Boh1. H. Bohr, Zur Theorie der Riemannschen ZetaFunktion im kritischen Streifen, Acta Math.
+40 (1915), 67–100.
+Boh2. H. Bohr, ¨Uber eine quasi-periodische Eigenschaft Dirichletscher Reihen mit Anwendung
+auf die Dirichletschen L-Funktionen, Math. Ann. 85 (1922), 115–122.
+BohCou. H. Bohr and R. Courant, Neue Anwendungen der Theorie der diophantischen Approxi-
+mationen auf die Riemannsche Zetafunktion, J. Reine Angew. Math. 144 (1914), 249–274.
+17 Some of this work may eventually become joint work with one of the author’s current Ph.D.
+students, Tim Cobler.
+
+
+--- PDF page 48 ---
+48
+Contents
+BohLand1. H. Bohr, E. Landau, ¨Uber das Verhalten von ζ(s) und ζ (k)(s) in der N¨ahe der Geraden
+σ = 1, Nachr. Ges. Wiss. G¨ottingen Math. Phys. K1. (1910), 303–330.
+BohLand2. H. Bohr, E. Landau, Ein Satz ¨uber Dirichletsche Reihen mit Anwendung auf die ζ-
+Funktion und die L-Funktionen, Rend. di Palermo 37 (1914), 269–272.
+BosCon1. J.-B. Bost and A. Connes, Produit eul´erien et facteurs de type III, C. R. Acad. Sci. Paris
+S´er. I Math. 315 (1992), 279–284.
+BosCon2. J.-B. Bost and A. Connes, Hecke algebras, type III factors and phase transitions with
+spontaneous symmetry breaking in number theory, Selecta Math. (N.S.) 1 (1995), 411–457.
+Bou. G. Bouligand, Ensembles impropres et nombre dimensionnel, Bull. Sci. Math. (2) 52 (1928),
+320–344 and 361–376.
+Bre. H. Brezis, Analyse Fonctionnelle: Th´eorie et Applications, Masson, Paris, 1983; expanded
+English version: Functional Analysis, Sobolev Spaces and Partial Differential Equations,
+Springer, New York, 2011.
+BroCar. J. Brossard and R. Carmona, Can one hear the dimension of a fractal?, Commun. Math.
+Phys. 104 (1986), 103–122.
+Cart. P. Cartier, A mad day’s work: from Grothendieck to Connes and Kontsevich. The evolution
+of concepts of space and symmetry (English transl. of the French original), Bull. Amer. Math.
+Soc. (N.S.) 38 (2001), 389–408.
+ChrIvLap. E. Christensen, C. Ivan and M. L. Lapidus, Dirac operators and spectral triples for
+some fractal sets built on curves, Adv. in Math. No. 1, 217 (2008), 42–78. (Also: e-print,
+arXiv:math.MG/0610222v2, 2007.)
+Coh. D. L. Cohn, Measure Theory, Birkh¨auser, Boston, 1980.
+Con. A. Connes, Noncommutative Geometry, Academic Press, New York, 1994.
+CouHil. R. Courant and D. Hilbert, Methods of Mathematical Physics I, Interscience Publ. Inc.,
+New York, 1953.
+Den1. C. Deninger, Lefschetz trace formulas and explicit formulas in analytic number theory, J.
+Reine Angew. Math. 441 (1993), 1–15.
+Den2. C. Deninger, Evidence for a cohomological approach to analytic number theory, in: Proc.
+First European Congress of Mathematics (A. Joseph, et al., eds.), vol. I, Paris, July 1992,
+Birkh¨auser-Verlag, Basel and Boston, 1994, pp. 491–510.
+DerGrVo. G. Derfel, P. Grabner and F. Vogl, The zeta function of the Laplacian on certain fractals,
+Trans. Amer. Math. Soc. 360 (2008), 881–897.
+DolFr. J. D. Dollard and C. N. Friedman, Product Integration, with Application to Differential
+Equations, Encyclopedia of Mathematics and Its Applications, vol. 10, Addison-Wesley,
+Reading, 1979.
+DunSch. N. Dunford and J. T. Schwartz, Linear Operators, Parts I–III, Wiley Classics Library,
+John Wiley & Sons, Hoboken, 1971 and 1988.
+Edw. H. M. Edwards, Riemann’s Zeta Function, Academic Press, New York, 1974.
+EllLapMaRo. K. E. Ellis, M. L. Lapidus, M. C. Mackenzie and J. A. Rock, Partition zeta
+functions, multifractal spectra, and tapestries of complex dimensions, in: Benoˆıt Man-
+delbrot: A Life in Many Dimensions (M. Frame and N. Cohen, eds.), The Mandel-
+brot Memorial Volume, World Scientiﬁc, Singapore, 2015, pp. 267–322. (Also: e-print,
+arXiv:1007.1467v2[math-ph], 2011; IHES preprint, IHES/M/12/15, 2012.)
+Fal1. K. J. Falconer, Fractal Geometry: Mathematical Foundations and Applications, third edi-
+tion, John Wiley & Sons, Chichester, 2014. (First and second editions: 1990 and 2003.)
+Fal2. K. J. Falconer, On the Minkowski measurability of fractals, Proc. Amer. Math. Soc. 123
+(1995), 1115–1124.
+Fed. H. Federer, Geometric Measure Theory, Springer-Verlag, New-York, 1969.
+FlVas. J. Fleckinger and D. Vassiliev, An example of a two-term asymptotics for the “counting
+function” of a fractal drum, Trans. Amer. Math. Soc. 337 (1993), 99–116.
+Foll. G. B. Folland, Real Analysis: Modern Techniques and Their Applications, second edition,
+John Wiley & Sons, New York, 1999.
+FukSh. M. Fukushima and T. Shima, On a spectral analysis for the Sierpinski gasket, Potential
+Analysis 1 (1992), 1–35.
+
+
+--- PDF page 49 ---
+Contents
+49
+GarSte. R. Garunk˘stis and J. Steuding, On the roots of the equation ζ(s) = α, Abh. Math. Seminar
+Univ. Hamburg 84 (2014), 1–15. (Also: e-print, arXiv:1011.5339v2 [math.NT],
+2014.)
+Ger. J. Gerling, Untersuchungen zur Theorie von Weyl–Berry–Lapidus, Graduate Thesis (Diplo-
+marbeit), Dept. of Physics, Universit¨at Osnabr¨uck, Germany, 1992.
+GerSchm. J. Gerling and H.-J. Schmidt, Self-similar drums and generalized Weierstrass functions,
+Physica A. Nos. 1–4, 191 (1992), 536–539.
+Gilk. P. B. Gilkey, Invariance Theory, the Heat Equation, and the Atiyah-Singer Index Theorem,
+second edition, Publish or Perish, Wilmington, 1984. (New revised and enlarged edition in
+Studies in Advanced Mathematics, CRC Press, Boca Raton, 1995.)
+Go.
+J. A. Goldstein, Semigroups of Linear Operators and Applications, Oxford Science Publica-
+tions, Oxford Mathematical Monographs, Oxford Univ. Press, Oxford and New York, 1985.
+Ham1. B. M. Hambly, Brownian motion on a random recursive Sierpinski gasket, Ann. Probab.
+25 (1997), 1059–1102.
+Ham2. B. M. Hambly, On the asymptotics of the eigenvalue counting function for random recur-
+sive Sierpinski gaskets, Probab. Theory Related Fields 117 (2000), 221–247.
+HamLap. B. M. Hambly and M. L. Lapidus, Random fractal strings: their zeta functions, complex
+dimensions and spectral asymptotics, Trans. Amer. Math. Soc. No. 1, 358 (2006), 285–314.
+HardWr. G. H. Hardy and E. M. Wright, An Introduction to the Theory of Numbers, sixth edition,
+Oxford Univ. Press, Oxford, 2008.
+HarvPol. R. Harvey and J. Polking, Removable singularities of solutions of linear partial differen-
+tial equations, Acta Math. 125 (1970), 39–56.
+HeLap. C. Q. He and M. L. Lapidus, Generalized Minkowski Content, Spectrum of Fractal Drums,
+Fractal Strings and the Riemann Zeta-Function, Memoirs Amer. Math. Soc. No. 608, 127
+(1997), 1–97.
+HedKorZh. H. Hedenmalm, B. Korenblum and K. Zhu, Theory of Bergman Spaces, Graduate
+Texts in Mathematics, vol. 199, Springer, New York, 2000.
+HerLap1. H. Herichi and M. L. Lapidus, Quantized Number Theory, Fractal Strings and the Rie-
+mann Hypothesis: From Spectral Operators to Phase Transitions and Universality, research
+monograph, World Scientiﬁc Publishers, Singapore, 2016, to appear (approx. 220 pages).
+HerLap2. H. Herichi and M. L. Lapidus, Riemann zeros and phase transitions via the spectral
+operator on fractal strings, J. Phys. A: Math. Theor. 45 (2012) 374005, 23pp. (Also: e-print,
+arXiv:1203.4828v2[math-ph], 2012; IHES preprint, IHES/M/12/09, 2012.)
+HerLap3. H. Herichi and M. L. Lapidus, Fractal complex dimensions, Riemann hypothesis and in-
+vertibility of the spectral operator, in: Fractal Geometry and Dynamical Systems in Pure and
+Applied Mathematics I: Fractals in Pure Mathematics (D. Carﬁ, M. L. Lapidus, E. P. J. Pearse
+and M. van Frankenhuijsen, eds.), Contemporary Mathematics, vol. 600, Amer. Math. Soc.,
+Providence, R. I., 2013, pp. 51–89. (Also: e-print, arXiv:1210.0882v3[math.FA],
+2013; IHES preprint, IHES/M/12/25, 2012.)
+HerLap4. H. Herichi and M. L. Lapidus, Truncated inﬁnitesimal shifts, spectral operators and
+quantized universality of the Riemann zeta function, Annales de la Facult´e des Sciences de
+Toulouse, No. 3, 23 (2014), 621–664. (Speical issue in honor of Christophe Soul´e.) (Also:
+e-print, arXiv:1305.3933v2[math-NT], 2015; IHES preprint, IHES/M/13/12, 2013.)
+HerLap5. H. Herichi and M. L. Lapidus, Quantized Riemann zeta functions: Its operator-valued
+Dirichlet series, Euler product and analytic continuation, in preparation, 2015.
+HiPh. E. Hille and R. S. Phillips, Functional Analysis and Semi-groups, revised edition, Amer.
+Math. Soc. Colloq. Publ., vol. XXXI, Amer. Math. Soc., R. I., 1957.
+Hil. T. Hilberdink, Written personal communication to the author, early 2000 (unpublished).
+H¨o1. L. H¨ormander, The spectral function of an elliptic operator, Acta Math. 121 (1968), 193–218.
+H¨o2. L. H¨ormander, The Analysis of Linear Partial Differential Operators, vol. I, Distribution
+Theory and Fourier Analysis, second edition (of the 1983 edn.), Springer-Verlag, Berlin,
+1990.
+H¨o3. L. H¨ormander, The Analysis of Linear Partial Differential Operators, vols. II–IV, Springer-
+Verlag, Berlin, 1983 & 1985.
+
+
+--- PDF page 50 ---
+50
+Contents
+Ing. A. E. Ingham, The Distribution of Prime Numbers, second edition (reprinted from the 1932
+edn.), Cambridge Univ. Press, Cambridge, 1992.
+Ivi.
+A. Ivic, The Riemann Zeta-Function: The theory of the Riemann zeta- function with applica-
+tions, John Wiley & Sons, New York, 1985.
+Ivr1. V. Ja. Ivrii, Second term of the spectral asymptotic expansion of the Laplace-Beltrami oper-
+ator on manifolds with boundary, Functional Anal. Appl. 14 (1980), 98–106.
+Ivr2. V. Ja. Ivrii, Precise Spectral Asymptotics for Elliptic Operators Acting in Fiberings over
+Manifolds with Boundary, Lecture Notes in Math., vol. 1100, Springer-Verlag, New York,
+1984.
+Ivr3. V. Ja. Ivrii, Microlocal Analysis and Precise Spectral Asymptotics, Springer-Verlag, Berlin,
+1998.
+JoLap. G. W. Johnson and M. L. Lapidus, The Feynman Integral and Feynman’s Operational
+Calculus, Oxford Science Publications, Oxford Mathematical Monographs, Oxford Univ.
+Press, Oxford and New York, 2000. (Corrected printing and paperback edition, 2002.)
+JoLapNie. G. W. Johnson, M. L. Lapidus and L. Nielsen, Feynman’s Operational Calculus and
+Beyond: Noncommutativity and Time-Ordering, Oxford Science Publications, Oxford Math-
+ematical Monographs, Oxford Univ. Press, Oxford and New York, 2015, in press (approx.
+350 pages).
+Kac. M. Kac, Can one hear the shape of a drum?, Amer. Math. Monthly (Slaught Memorial Papers,
+No. 11) (4) 73 (1966), 1–23.
+KarVor. A. A. Karatsuba and S. M. Voronin, The Riemann Zeta-Function, De Gruyter, Expositions
+in Mathematics, Walter de Gruyter, Berlin, 1992.
+Kat. T. Kato, Perturbation Theory for Linear Operators, Springer Verlag, New York, 1995.
+Ki.
+J. Kigami, Analysis on Fractals, Cambridge Univ. Press, Cambridge, 2001.
+KiLap1. J. Kigami and M. L. Lapidus, Weyl’s problem for the spectral distribution of Laplacians
+on p.c.f. self-similar fractals, Commun. Math. Phys. 158 (1993), 93–125.
+KiLap2. J. Kigami and M. L. Lapidus, Self-similarity of volume measures for Laplacians on p.c.f.
+self-similar fractals, Commun. Math. Phys. 217 (2001), 165–180.
+LalLap1. N. Lal and M. L. Lapidus, Hyperfunctions and spectral zeta functions of Laplacians
+on self-similar fractals, J. Phys. A: Math. Theor. 45 (2012), 365205, l4 pp. (Also: e-print,
+arXiv:12O2.4126v2[math-ph], 2012; IHES preprint, IHES/M/12/14, 2012.)
+LalLap2. N. Lal and M. L. Lapidus, The decimation method for Laplacians on fractals: Spectra
+and complex dynamics, in: Fractal Geometry and Dynamical Systems in Pure and Applied
+Mathematics II: Fractals in Applied Mathematics (D. Carﬁ, M. L. Lapidus, E. P. J. Pearse and
+M. van Frankenhuijsen, eds.), Contemporary Mathematics, vol. 601, Amer. Math. Soc., Prov-
+idence, R. I., 2013, pp. 227–249. (Also: e-print, arXiv:1302.4007v2[math-ph],
+2014; IHES preprint, IHES/M/12/31, 2012.)
+Lap1. M. L. Lapidus, Fractal drum, inverse spectral problems for elliptic operators and a partial
+resolution of the Weyl–Berry conjecture, Trans. Amer. Math. Soc. 325 (1991), 465–529.
+Lap2. M. L. Lapidus, Spectral and fractal geometry: From the Weyl–Berry conjecture for the vi-
+brations of fractal drums to the Riemann zeta-function, in: Differential Equations and Mathe-
+matical Physics (C. Bennewitz, ed.), Proc. Fourth UAB Internat. Conf. (Birmingham, March
+1990), Academic Press, New York, 1992, pp. 151–182.
+Lap3. M. L. Lapidus, Vibrations of fractal drums, the Riemann hypothesis, waves in fractal me-
+dia, and the Weyl–Berry conjecture, in: Ordinary and Partial Differential Equations (B. D.
+Sleeman and R. J. Jarvis, eds.), vol. IV, Proc. Twelfth Internat. Conf. (Dundee, Scotland,
+UK, June 1992), Pitman Research Notes in Math. Series, vol. 289, Longman Scientiﬁc and
+Technical, London, 1993, pp. 126–209.
+Lap4. M. L. Lapidus, Analysis on fractals, Laplacians on self-similar sets, noncommutative geom-
+etry and spectral dimensions, Topological Methods in Nonlinear Analysis 4 (1994), 137–195.
+(Special issue dedicated to Jean Leray.)
+Lap5. M. L. Lapidus, Towards a noncommutative fractal geometry? Laplacians and volume mea-
+sures on fractals, in: Harmonic Analysis and Nonlinear Differential Equations (A Volume
+in Honor of Victor L. Shapiro), Contemporary Mathematics, vol. 208, Amer. Math. Soc.,
+Providence, R. I., 1997, pp. 211–252.
+
+
+--- PDF page 51 ---
+Contents
+51
+Lap6. M. L. Lapidus, In Search of the Riemann Zeros: Strings, Fractal Membranes and Noncom-
+mutative Spacetimes, Amer. Math. Soc., Providence, R. I., 2008.
+Lap7. M. L. Lapidus, Towards quantized number theory: Spectral operators and an asymmet-
+ric criterion for the Riemann hypothesis, Philos. Trans. Royal Soc., Ser. A, in press, 2015.
+(Special issue titled “Geometric Concepts in the Foundations of Physics”.) (Also: e-print,
+arXiv:1501.05362v2 [math-ph], 2015.)
+Lap8. M. L. Lapidus, Riemann hypothesis, weighted Bergman spaces and quantized Riemann zeta
+function (tentative title), in preparation, 2015.
+Lap9. M. L. Lapidus, Quantized Weil conjectures, spectral operators and P´olya–Hilbert operators
+(tentative title), in preparation, 2015.
+LapL´eRo. M. L. Lapidus, J. L´evy-V´ehel and J. A. Rock, Fractal strings and multifractal zeta
+functions, Lett. Math. Phys., No. 1, 88 (2009), 101–129. (Springer Open Access: DOI
+10.1007/s1105-009-0302-y.) (Also: e-print, arXiv:math-ph/0610015v3, 2009.)
+LapLu1. M. L. Lapidus and H. Lu, Nonarchimedean Cantor set and string, J. Fixed Point Theory
+and Appl. 3 (2008), 181–190. (Special issue dedicated to the Jubilee of Vladimir I. Arnold,
+vol. I.)
+LapLu2. M. L. Lapidus and H. Lu, Self-similar p-adic fractal strings and their complex di-
+mensions, p-adic Numbers, Ultrametric Analysis and Applications (Springer & Rus-
+sian Academy of Sciences, Moscow), No. 2, 1 (2009), 167–180. (Also: IHES preprint,
+IHES/M/08/42, 2008.)
+LapLu3. M. L. Lapidus and H. Lu, The geometry of p-adic fractal strings: A comparative survey,
+in: Advances in Non-Archimedean Analysis, Proc. 11th Internat. Conference on p-Adic Func-
+tional Analysis (Clermont-Ferrand, France, July 2010), J. Araujo, B. Diarra and A. Escassut,
+eds., Contemporary Mathematics, vol. 551, Amer. Math. Soc., Providence, R. I., 2011, pp.
+163–206. (Also: e-print, arXiv:1105.2966v1 [math.MG], 2011.)
+LapLu-vFr1. M. L. Lapidus, H. Lu and M. van Frankenhuijsen, Minkowski measurability and
+exact fractal tube formulas for p-adic self-similar strings, in: Fractal Geometry and Dy-
+namical Systems in Pure and Applied Mathematics I : Fractals in Pure Mathematics (D.
+Carﬁ, M. L. Lapidus, E. P. J. Pearse and M. van Frankenhuijsen, eds.), Contemporary Math-
+ematics, vol. 600, Amer. Math. Soc., Providence, R. I., 2013, pp. 185–203. (Also: e-print,
+arXiv:1209.6440v1[math.MG], 2012; IHES preprint, IHES/M/12/23, 2012.)
+LapLu-vFr2. M. L. Lapidus, H. Lu and M. van Frankenhuijsen, Minkowski dimension and explicit
+tube formulas for p-adic fractal strings, preprint, 2015.
+LapMai1. M. L. Lapidus and H. Maier, Hypoth`ese de Riemann, cordes fractales vibrantes et con-
+jecture de Weyl–Berry modiﬁ´ee, C. R. Acad. Sci. Paris S´er. I Math. 313 (1991), 19–24.
+LapMai2. M. L. Lapidus and H. Maier, The Riemann hypothesis and inverse spectral problems
+for fractal strings, J. London Math. Soc. (2) 52 (1995), 15–34.
+LapNe. M. L. Lapidus and R. Nest, Fractal membranes as the second quantization of fractal
+strings, (preliminary) preprint, 2015.
+LapNeuReGr. M. L. Lapidus, J. W. Neuberger, R. J. Renka and C. A. Grifﬁth, Snowﬂake harmon-
+ics and computer graphics: Numerical computation of spectra on fractal domains, Internat.
+J. Bifurcation & Chaos 6 (1996), 1185–1210.
+LapPa. M. L. Lapidus and M. M. H. Pang, Eigenfunctions of the Koch snowﬂake drum, Commun.
+Math. Phys. 172 (1995), 359–376.
+LapPe1. M. L. Lapidus and E. P. J. Pearse, A tube formula for the Koch snowﬂake curve, with
+applications to complex dimensions, J. London Math. Soc. No. 2, 74 (2006), 397–414. (Also:
+e-print, arXiv:math-ph/0412029v2, 2005.)
+LapPe2. M. L. Lapidus and E. P. J. Pearse, Tube formulas for self-similar fractals, in:
+Analysis on Graphs and its Applications (P. Exner, et al., eds.), Proc. Symposia Pure
+Math., vol. 77, Amer. Math. Soc., Providence, R. I., 2008, pp. 211–230. (Also: e-print,
+arXiv:math.DS/0711.0173, 2007; IHES preprint, IHES/M/08/28, 2008.)
+LapPe3. M. L. Lapidus and E. P. J. Pearse, Tube formulas and complex dimensions of self-similar
+tilings, Acta Applicandae Mathematicae No. 1, 112 (2010), 91–137. (Springer Open Access:
+DOI 10.1007/S10440-010-9562-x.) (Also: e-print, arXiv:math.DS/0605527v5, 2010;
+IHES preprint, IHES/M/08/27, 2008.)
+
+
+--- PDF page 52 ---
+52
+Contents
+LapPeWi1. M. L. Lapidus, E. P. J. Pearse and S. Winter, Pointwise tube formulas for fractal
+sprays and self-similar tilings with arbitrary generators, Adv. in Math. 227 (2011), 1349–
+1398. (Also: e-print, arXiv:1006.3807v3 [math.MG], 2011.)
+LapPeWi2. M. L. Lapidus, E. P. J. Pearse and S. Winter, Minkowski measurability results for
+self-similar tilings and fractals with monophase generators, in: Fractal Geometry and Dy-
+namical Systems in Pure and Applied Mathematics I: Fractals in Pure Mathematics (D.
+Carﬁ, M. L. Lapidus, E. P. J. Pearse and M. van Frankenhuijsen, eds.), Contemporary Math-
+ematics, vol. 600, Amer. Math. Soc., Providence, R. I., 2013, pp. 185–203. (Also: e-print,
+arXiv:1104.1641v3[math.MG], 2012; IHES preprint, IHES/M/12/33, 2012.)
+LapPom1. M. L. Lapidus and C. Pomerance, Fonction zˆeta de Riemann et conjecture de Weyl–
+Berry pour les tambours fractals, C. R. Acad. Sci. Paris S´er. I Math. 310 (1990), 343–348.
+LapPom2. M. L. Lapidus and C. Pomerance, The Riemann zeta-function and the one-dimensional
+Weyl–Berry conjecture for fractal drums, Proc. London Math. Soc. (3) 66 (1993), No. 1, 41–
+69.
+LapPom3. M. L. Lapidus and C. Pomerance, Counterexamples to the modiﬁed Weyl–Berry con-
+jecture on fractal drums, Math. Proc. Cambridge Philos. Soc. 119 (1996), 167–178.
+LapRa˘Zu1. M. L. Lapidus, G. Radunovi´c and D. ˘Zubrini´c, Fractal Zeta Functions and Fractal
+Drums: Higher-Dimensional Theory of Complex Dimensions, research monograph, Springer,
+New York, 2016, to appear (approx. 460 pages).
+LapRa˘Zu2. M. L. Lapidus, G. Radunovi´c and D. ˘Zubrini´c, Distance and tube zeta functions of
+fractals and arbitrary compact sets, preprint, 2015.
+LapRa˘Zu3. M. L. Lapidus, G. Radunovi´c and D. ˘Zubrini´c, Complex dimensions of fractals and
+meromorphic extensions of fractal zeta functions, preprint, 2015.
+LapRa˘Zu4. M. L. Lapidus, G. Radunovi´c and D. ˘Zubrini´c, Zeta functions and complex dimen-
+sions of relative fractal drums: Theory, examples and applications, preprint, 2015.
+LapRa˘Zu5. M. L. Lapidus, G. Radunovi´c and D. ˘Zubrini´c, Fractal tube formulas and a Minkowski
+measurability criterion for compact subsets of Euclidean spaces, preprint, 2014. (Also: e-
+print, arXiv:1411.5733v2[math-ph], 2014.)
+LapRa˘Zu6. M. L. Lapidus, G. Radunovi´c and D. ˘Zubrini´c, Fractal tube formulas for compact sets
+and relative fractal drums, with application to a Minkowski measurability criterion, preprint,
+2015.
+LapRa˘Zu7. M. L. Lapidus, G. Radunovi´c and D. ˘Zubrini´c, Fractal zeta functions and complex
+dimensions of relative fractal drums, survey article, J. Fixed Point Theory and Appl. No.
+2, 15 (2014), 321–378. Festschrift issue in honor of Haim Brezis’ 70th birthday. (DOI:
+10.1007/s11784-014-0207-y.) (Also: e-print, arXiv:1407.8094v3[math-ph], 2014.)
+LapRa˘Zu8. M. L. Lapidus, G. Radunovi´c and D. ˘Zubrini´c, Fractal zeta functions and complex
+dimensions: A general higher-dimensional theory, survey article, in: Geometry and Stochas-
+tics V (C. Bandt, K. Falconer and M. Z¨ahle, eds.), Proc. Fifth Internat. Conf. (Tabarz, Ger-
+many, March 2014), Progress in Probability, Birkh¨auser, Basel, Boston and Berlin, 2015, in
+press. (Based on a plenary lecture given by the ﬁrst author at that conference.) (Also: e-print,
+arXiv:1502.00878v2[math.CV], 2015.)
+LapRo1. M. L. Lapidus and J. A. Rock, Towards zeta functions and complex dimensions of multi-
+fractals, Complex Variables and Elliptic Equations No. 6, 54 (2009), 545–560. (Also: e-print,
+arXiv:math-ph/0810.0789, 2008.)
+LapRo2. M. L. Lapidus and J. A. Rock, An Invitation to Fractal Geometry: Dimension Theory,
+Zeta Functions and Applications, book in preparation, 2015.
+LapRo˘Zu. M. L. Lapidus, J. A. Rock and D. ˘Zubrini´c, Box-counting fractal strings, zeta functions,
+and equivalent forms of Minkowski dimension, in: Fractal Geometry and Dynamical Systems
+in Pure and Applied Mathematics I: Fractals in Pure Mathematics (D. Carﬁ, M. L. Lapidus,
+E. P. J. Pearse and M. van Frankenhuijsen, eds.), Contemporary Mathematics, vol. 600, Amer.
+Math. Soc., Providence, R. I., 2013, pp. 239–271. (Also: e-print, arXiv:1207.6681v2
+[math-ph], 2013; IHES preprint, IHES/M/12/22, 2012.)
+LapSar. M. L. Lapidus and J. J. Sarhad, Dirac operators and geodesic metric on the harmonic Sier-
+pinski gasket and other fractal sets, Journal of Noncommutative Geometry No. 4, 8 (2014),
+
+
+--- PDF page 53 ---
+Contents
+53
+947–985. (DOI: 10.4171/JNCG/174.) (Also: e-print, arXiv:1212:0878v2[math.MG],
+2014; IHES preprint, IHES/M/12/32, 2012.)
+Lap-vFr1. M. L. Lapidus and M. van Frankenhuijsen, Fractal Geometry and Number Theory:
+Complex Dimensions of Fractal Strings and Zeros of Zeta Functions, Birkh¨auser, Boston,
+2000.
+Lap-vFr2. M. L. Lapidus and M. van Frankenhuijsen, Fractal Geometry, Complex Dimensions and
+Zeta Functions: Geometry and Spectra of Fractal Strings, Springer Monographs in Mathe-
+matics, Springer, New York, 2006.
+Lap-vFr3. M. L. Lapidus and M. van Frankenhuijsen, Fractal Geometry, Complex Dimensions
+and Zeta Functions: Geometry and Spectra of Fractal Strings, second revised and enlarged
+edition (of the 2006 edn., [LapvFr2]), Springer Monographs in Mathematics, Springer, New
+York, 2013.
+Lau. A. Laurincikas, Limit Theorems for the Riemann Zeta-Function, Kluwer Academic Publish-
+ers, Dordrecht, 1996.
+L´eMen. J. L´evy-V´ehel and F. Mendivil, Multifractal and higher-dimensional zeta functions, Non-
+linearity No. 1, 24 (2011), 259–276.
+LioMag. J. L. Lions and E. Magenes, Non-Homogeneous Boundary Value Problems and Applica-
+tions, vol. I, English transl., Springer-Verlag, Berlin, 1972.
+Man. B. B. Mandelbrot, The Fractal Geometry of Nature, revised and enlarged edition (of the
+1977 edn.), W. H. Freeman, New York, 1983.
+Mat. P. Mattila, Geometry of Sets and Measures in Euclidean Spaces: Fractals and Rectiﬁability,
+Cambridge Univ. Press, Cambridge, 1995.
+Maz. V. G. Maz’ja, Sobolev Spaces, Springer-Verlag, Berlin, 1985.
+Mel1. R. B. Melrose, Weyl’s conjecture for manifolds with concave boundary, in: Geometry of the
+Laplace Operator, Proc. Sympos. Pure Math., vol. 36, Amer. Math. Soc., Providence, R. I.,
+1980, pp. 254–274.
+Mel2. R. B. Melrose, The trace of the wave group, Contemporary Mathematics, vol. 27, Amer.
+Math. Soc., Providence, R. I., 1984, pp. 127–167.
+M´et1. G. M´etivier, Th´eorie spectrale d’op´erateurs elliptiques sur des ouverts irr´eguliers,
+S´eminaire Goulaic-Schwartz, No. 21, Ecole Polytechnique, Paris, 1973.
+M´et2. G. M´etivier, Etude asymptotique des valeurs propres et de la fonction spectrale de
+probl`emes aux limites, Th`ese de Doctorat d’Etat, Math´ematiques, Universit´e de Nice, France,
+1976.
+M´et3. G. M´etivier, Valeurs propres de probl`emes aux limites elliptiques irr´eguliers, Bull. Soc.
+Math. France M´em. 51–52 (1977), 125–219.
+MolVai. S. Molchanov and B. Vainberg, On spectral asymptotics for domains with fractal bound-
+aries, Commun. Math. Phys. 183 (1997), 85–117.
+MorSepVi. G. Mora, J. M. Sepulcre and T. Vidal, On the existence of exponential polynomials
+with preﬁxed gaps, Bull. London Math. Soc. No. 6, 45 (2013), 1148–1162.
+ParSh1. A. N. Parshin and I. R. Shafarevich (eds.), Number Theory, vol. I, Introduction to Num-
+ber Theory, Encyclopedia of Mathematical Sciences, vol. 49, Springer-Verlag, Berlin, 1995.
+(Written by Yu. I. Manin and A. A. Panchishkin.)
+ParSh2. A. N. Parshin and I. R. Shafarevich (eds.), Number Theory, vol. II, Algebraic Num-
+ber Fields, Encyclopedia of Mathematical Sciences, vol. 62, Springer-Verlag, Berlin, 1992.
+(Written by H. Koch.)
+Pat.
+S. J. Patterson, An Introduction to the Theory of the Riemann Zeta-Function, Cambridge
+Univ. Press, Cambridge, 1988.
+Pe.
+E. P. J. Pearse, Canonical self-afﬁne tilings by iterated function systems, Indiana Univ. Math.
+J. No. 6, 56 (2007), 3151–3169. (Also: e-print, arXiv:math.MG/0606111, 2006.)
+PeWi. E. P. J. Pearse and S. Winter, Geometry of canonical self-similar tilings, Rocky Mountain
+J. Math. 42 (2012), 1327–1357. (Also: e-print, arXiv:0811.2187, 2009.)
+Ph.
+Pham The Lai, Meilleures estimations asymptotiques des restes de la fonction spectrale et
+des valeurs propres relatifs au laplacien, Math. Scand. 48 (1981), 5–38.
+Pomm. Ch. Pommerenke, Boundary Behavior of Conformal Maps, Springer, New York, 1992.
+
+
+--- PDF page 54 ---
+54
+Contents
+Pos. A. G. Postnikov, Tauberian Theory and its Applications, Proc. Steklov Institute of Mathe-
+matics, vol. 144, 1979 (English transl., issue 2, 1980), Amer. Math. Soc., Providence, R. I.,
+1980.
+Put1. C. R. Putnam, On the non-periodicity of the zeros of the Riemann zeta-function, Amer. J.
+Math. 76 (1954), 97–99.
+Put2. C. R. Putnam, Remarks on periodic sequences and the Riemann zeta-function, Amer. J.
+Math. 76 (1954), 828–830.
+Ra.
+G. Radunovi´c, Fractal analysis of unbounded sets in Euclidean spaces and Lapidus zeta
+functions, Ph.D. Thesis, University of Zagreb, Zagreb, Croatia, 2015.
+Ram. R. Rammal, Spectrum of harmonic excitations on fractals, J. de Physique 45 (1984), 191–
+206.
+RamTo. R. Rammal and G. Toulouse, Random walks on fractal structures and percolation cluster,
+J. Physique Lettres 44 (1983), L13–L22.
+RatWi1. J. Rataj and S. Winter, On volume and surface area of parallel sets, Indiana Univ. Math.
+J. 59 (2010), 1661–1685.
+RatWi2. J.
+Rataj
+and
+S.
+Winter,
+Characterization
+of
+Minkowski
+measurability
+in
+terms of surface area, J. Math. Anal. Appl. 400 (2013), 120–132. (Also: e-print,
+arXiv:1111.1825v2[math.CA], 2012.)
+ReSi1. M. Reed and B. Simon, Methods of Modern Mathematical Physics, vol. I, Functional
+Analysis, revised and enlarged edition (of the 1975 edn.), Academic Press, New York, 1980.
+ReSi2. M. Reed and B. Simon, Methods of Modern Mathematical Physics, vol. II, Fourier Analy-
+sis, Self-Adjointness, Academic Press, New York, 1975.
+ReSi3. M. Reed and B. Simon, Methods of Modern Mathematical Physics, vol. IV, Analysis of
+Operators, Academic Press, New York, 1979.
+Rei1. A. Reich, Universelle Wertevereteilung von Eulerprodukten, Nachr. Akad. Wiss. G¨ottingen
+Math.-Phys. Kl. II (1977), No. 1, 1–17.
+Rei2. A. Reich, Wertverteilung von Zetafunktionen, Arch. Math. 34 (1980), 440–451.
+Rie. B. Riemann, Ueber die Anzahl der Primzahlen unter einer gegebenen Gr¨osse, Monatsb. der
+Berliner Akad. 1858/60, pp. 671–680. (English transl. in [Edw, Appendix, pp. 229–305].)
+Ru1. W. Rudin, Real and Complex Analysis, third edition, McGraw-Hill, New York, 1987.
+Ru2. W. Rudin, Functional Analysis, second edition (of the 1973 edn.), McGraw-Hill, New York,
+1991.
+Sab1. C. Sabot, Integrated density of states of self-similar Sturm-Liouville operators and holo-
+morphic dynamics in higher dimension, Ann. Inst. H. Poincar´e Probab. Statist. 37 (2001),
+275–311.
+Sab2. C. Sabot, Spectral analysis of a self-similar Sturm-Liouville operator, Indiana Univ. Math.
+J. 54 (2005), 645–668.
+Sab3. C. Sabot, Spectral Properties of Self-Similar Lattices and Iteration of Rational Maps,
+M´emoires Soc. Math. France (New Series) No. 92 (2003), 1–104.
+SapGoMar. B. Sapoval, Th. Gobron and A. Margolina, Vibrations of fractal drums, Phys. Rev.
+Lett. 67 (1991), 2974–2977.
+Sarn. P. Sarnak, L-functions, in: Proc. Internat. Congress Math., Berlin, 1998 (G. Fischer and U.
+Rehmann, eds.), vol. I, pp. 453–465. Documenta Math. J. DMV (Extra Volume ICM 98),
+1998.
+Sc.
+M. Schechter, Operator Methods in Quantum Mechanics, Dover Publications, Mineola,
+2003.
+Sch. M. R. Schroeder, Fractal, Chaos, Power Laws: Minutes From an Inﬁnite Paradise, W. H.
+Freeman, 1991.
+Schw1. L. Schwartz, Th´eorie des Distributions, revised and enlarged edition (of the 1951 edn.),
+Hermann, Paris, 1996.
+Schw2. L. Schwartz, M´ethodes Math´ematiques pour les Sciences Physiques, Hermann, Paris,
+1961.
+See1. R. T. Seeley, Complex powers of elliptic operators, Proc. Symp. Pure Math., vol. 10, Amer.
+Math. Soc., Providence, R. I., 1967, pp. 288–307.
+
+
+--- PDF page 55 ---
+Contents
+55
+See2. R. T. Seeley, A sharp asymptotic remainder estimate for the eigenvalues of the Laplacian in
+a domain of R3, Adv. in Math. 29 (1978), 244–269.
+See3. R. T. Seeley, An estimate near the boundary for the spectral counting function of the Laplace
+operator, Amer. J. Math. 102 (1980), 869–902.
+Ser.
+J.-P. Serre, A Course in Arithmetic, English transl., Springer-Verlag, Berlin, 1973.
+Sh.
+T. Shima, On eigenvalue problems for Laplacians on p.c.f. self-similar sets, Japan J. Indust.
+Appl. Math. 13 (1996), 1–23.
+Shi. M. Shishikura, The Hausdorff dimension of the boundary of the Mandelbrot set and Julia
+sets, Ann. of Math. 147 (1998), 225–267.
+Sim. B. Simon, Functional Integration and Quantum Physics, Academic Press, New York, 1979.
+Sta.
+L. L. Stach´o, On the volume function of parallel sets, Acta Sci. Math. 38 (1976), 365–374.
+Ste1. J. Steuding, Value-Distribution and L-Functions, Lecture Notes in Mathematics, vol. 1877,
+Springer, Berlin, 2007.
+Ste2. J. Steuding, Universality in the Selberg class, in: Special Activity in Analytic Number Theory
+and Diophantine Equations, Proceedings of a workshop held at the Max Planck-Institut in
+Bonn, 2002 (R. B. Heath–Brown and B. Moroz, eds.), Bonner Math. Schriften 360, 2003.
+TanL. Tan Lei (ed.), The Mandelbrot Set, Theme and Variations, London Mathematical Society
+Lecture Notes Series, No. 274, Cambridge Univ. Press, Cambridge, 2000.
+Tep1. A. Teplyaev, Spectral zeta functions of symmetric fractals, in: Progress in Probability, vol.
+57, Birkh¨auser-Verlag, Basel, 2004, pp. 245–262.
+Tep2. A. Teplyaev, Spectral zeta functions of fractals and the complex dynamics of
+polynomials,
+Trans.
+Amer.
+Math.
+Soc.
+359
+(2007),
+4339–4358.
+(Also:
+e-print,
+arXiv:math.SP/0505546, 2005.)
+Ti.
+E. C. Titchmarsh, The Theory of the Riemann Zeta-Function, second edition (revised by D. R.
+Heath-Brown), Oxford Univ. Press, Oxford, 1986.
+Tri.
+C. Tricot, Curves and Fractal Dimension, Springer-Verlag, Berlin, 1995.
+Vor1. S. M. Voronin, The distribution of the non-zero values of the Riemann zeta function, Izv.
+Akad. Nauk. Inst. Steklov 128 (1972), 131–150 (Russian).
+Vor2. S. M. Voronin, Theorem on the ‘universality’ of the Riemann zeta-function, Izv. Akad. Nauk.
+SSSR, Ser. Matem. 39 (1975), 475–486 (Russian); Math. USSR Izv. 9 (1975), 443–445.
+vBGilk. M. van den Berg and P. B. Gilkey, A comparison estimate for the heat equation with an
+application to the heat content of the s-adic von Koch snowﬂake, Bull. London Math. Soc.
+No. 4, 30 (1998), 404–412.
+We1. H. Weyl, ¨Uber die Abh¨angigkeit der Eigenschwingungen einer Membran von deren Begren-
+zung, J. Reine Angew. Math. 141 (1912), 1–11. (Reprinted in [We3, vol. I, pp. 431–441].)
+We2. H. Weyl, Das asymptotische Verteilungsgesetz der Eigenwerte linearer partieller Differen-
+tialgleichungen, Math. Ann. 71 (1912), 441–479. (Reprinted in [We3, vol. I, pp. 393–430].)
+We3. H. Weyl, Hermann Weyl: Gesammelte Abhandlungen (Collected Works), Springer-Verlag,
+Berlin and New York, 1968.
+Wil. K. G. Wilson, Renormalization group and critical phenomena, I & II, Phys. Rev. B4 (1971),
+3174–3183 & 3184–3205.
+˘Zu1. D. ˘Zubrini´c, Minkowski content and singular integrals, Chaos, Solitons & Fractals No. 1, 17
+(2003), 169–177.
+˘Zu2. D. ˘Zubrini´c, Analysis of Minkowski contents of fractal sets and applications, Real Anal.
+Exchange No. 2, 31 (2005/2006), 315–354.

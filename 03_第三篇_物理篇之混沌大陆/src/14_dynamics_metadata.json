@@ -1,0 +1,17 @@
+{
+  "zeros": [
+    14.134725141734695,
+    21.022039638771556,
+    25.01085758014569,
+    30.424876125859512,
+    32.93506158773919
+  ],
+  "author_commit": "a8b0b38202d6f330297212f8755c8df04242f9d6",
+  "extra_real_zero": 17.899036199522023,
+  "nmr_theory_max_difference": 1.260130643682343e-15,
+  "nmr_measurement_points": 73,
+  "nmr_beta05_min_measured_modulus": 0.04554655218907975,
+  "derivative_sample_max_error": 2.512242832004131e-11,
+  "ion_model": "ideal effective model only; rescaled time; not measured populations",
+  "optical_model": "first Born only; x0=1 d0=.02; N=32,512"
+}

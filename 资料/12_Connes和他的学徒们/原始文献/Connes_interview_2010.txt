@@ -1,0 +1,1144 @@
+
+--- PDF PAGE 1 ---
+1
+1
+250
+NAW 5/11 nr. 4 december 2010
+The ﬂashes of insight never came for free
+Cornelissen, Landsman, Van Suijlekom
+Gunther Cornelissen
+Mathematisch Instituut
+Universiteit Utrecht
+Postbus 80010
+3508 TA Utrecht
+g.cornelissen@uu.nl
+Klaas Landsman
+IMAPP
+Radboud Universiteit Nijmegen
+Heyendaalseweg 135
+6525 AJ Nijmegen
+landsman@math.ru.nl
+Walter van Suijlekom
+IMAPP
+Radboud Universiteit Nijmegen
+Heyendaalseweg 135
+6525 AJ Nijmegen
+waltervs@math.ru.nl
+Interview Alain Connes
+The ﬂashes of insight
+never came for free
+The ‘Fellowship of Geometry and Quantum Theory’ (GQT), one of the four mathematics clusters
+in the Netherlands, marked the end of its initial four-year funding period with a conference at
+Nijmegen in June. One of the speakers at this conference was Fields Medallist Alain Connes,
+who may be regarded as one of the intellectual fathers of the cluster. GQT-members Gunther
+Cornelissen, Klaas Landsman, and Walter van Suijlekom interviewed Connes on June 29, 2010.
+Alain Connes (1947) is among the few mathe-
+maticians who created an entire area of math-
+Noncommutativity
+The history of noncommutative geometry
+goes back to the period 1900–1930, dur-
+ing which both mathematics and physics
+were revolutionised.
+In the former, func-
+tional analysis emerged (cf. [1, 6]), whilst
+in the latter quantum mechanics was dis-
+covered [12].
+The key idea behind func-
+tional analysis is to look at functions as
+points in some inﬁnite-dimensional (topo-
+logical) vector space, rather than individu-
+ally, as in classical analysis. A sound phys-
+ical principle underlying quantum mechan-
+ics remains to be found, but the two main
+mathematical properties of the new theo-
+ry were as follows. First, in 1925 Heisen-
+berg discovered that whereas in classical
+physics the observables (like position, mo-
+mentum, and energy) are represented by
+functions (on a so-called phase space),
+in quantum mechanics they are (typical-
+ly inﬁnite-dimensional) matrices.
+In par-
+ticular, as Heisenberg observed, quantum-
+mechanical observables no longer com-
+mute (under multiplication).
+Second, in
+1926 Schrödinger proposed that states of
+a physical system (which assign values to
+observables) are (‘wave’) functions (rather
+then points in phase space).
+Heisenberg was a postdoc in Göttingen
+at the time, where Hilbert ran a seminar
+on the mathematical structure of the new
+quantum mechanics.
+In this context, it
+was Hilbert’s assistant von Neumann (orig-
+inally employed to help Hilbert with his
+work on the foundations of mathematics)
+who at one stroke saw the connection be-
+tween functional analysis and quantum me-
+chanics, as well as between Heisenberg’s
+and Schrödinger’s ideas.
+In a nutshell,
+Heisenberg’s matrices were to be regarded
+as linear operators on some vector space,
+whose elements were Schrödinger’s wave-
+functions. The inner product that deﬁnes a
+Hilbert space ultimately yields all probabil-
+ities characteristic of quantum mechanics.
+(At a heuristic level, similar ideas had been
+forwarded by the physicist Dirac [7].)
+In
+honour of his mentor, the speciﬁc topolog-
+ical vector spaces needed in quantum me-
+chanics were called Hilbert spaces by von
+Neumann, whopublishedhisworkonquan-
+tum mechanics in 1932 [13].
+Inspired by this development, Weyl (an-
+other pupil of Hilbert’s) saw that Hilbert
+spaces formed an ideal setting for the the-
+ory of group representations, which turned
+out to play a crucial role in studying sym-
+metries of quantum systems.
+The en-
+suing combination Hilbert space–quantum
+mechanics–group representations (and al-
+so ergodic theory) led von Neumann to
+the theory of operator algebras on Hilbert
+spaces (written down in a series of papers
+published between 1936 and 1949, partly
+with his assistant F.J. Murray). Such alge-
+bras — currently known as von Neumann al-
+gebras — generalize the addition and multi-
+plication of complex matrices to inﬁnite di-
+mension and turn out to have an amazingly
+rich structure.
+An important extension of
+the class of operator algebras deﬁned by
+von Neumann was introduced by Gelfand
+and Naimark in 1943 under the name of C*-
+algebras; the three books of Takesaki [15]
+present an exhaustive survey.
+ematics.
+Roughly speaking, Connes’s non-
+commutative geometry [2, 4] is a synthe-
+sis and generalization of two seemingly un-
+related areas of mathematics, namely opera-
+tor algebras on Hilbert spaces (see box be-
+low) and a branch of differential geometry
+called spin geometry (see box on next page).
+Both topics emerged from a close interaction
+of mathematics and quantum physics, which
+happens to be the central theme of the GQT-
+
+
+--- PDF PAGE 2 ---
+2
+2
+Cornelissen, Landsman, Van Suijlekom
+The ﬂashes of insight never came for free
+NAW 5/11 nr. 4 december 2010
+251
+Spin geometry
+Spin geometry is a reﬁnement of Rieman-
+nian geometry, a subject created by Bern-
+hard Riemann in his (meanwhile) legendary
+Habilitation lecture ‘Über die Hypothesen,
+welchederGeometriezuGrundeliegen’, de-
+livered in Göttingen in 1854. In this lecture,
+Riemann proposed a vast generalization of
+the non-Euclidean geometries that had in-
+dependently been discovered earlier that
+century by Gauss (unpublished), Bolyai,
+and Lobachevsky. Riemann’s concept of ge-
+ometry was based on an inﬁnitesimal ver-
+sion of Pythagoras’s Theorem, so as to pro-
+vide distances between points. Since “a2 =
+b2 + c2”, this had the consequence that
+geometric quantities tend to be quadrat-
+ic in coordinates and/or derivatives.
+For
+example, for any Riemannian geometry
+the Laplacian ∆=
+∂2
+∂x2
+1
++ · · · +
+∂2
+∂x2
+n may
+be intrinsically deﬁned as a second-order
+partial differential operator.
+Through the Laplacian, the Schrödinger
+equationforthequantum-mechanicalwave-
+function contains second-order derivatives
+for the spatial coordinates, but it only in-
+volves a ﬁrst-order derivative in time. This
+unequal treatment of space and time coor-
+dinates bothered various physicists in the
+late 1920’s, because it precludes consisten-
+cy with Einstein’s theory of (special) rela-
+tivity.
+Through sheer guesswork, in 1928
+Paul Dirac found an equation (now named
+after him) that is ﬁrst-order in all coordi-
+nates, at the price of extending (scalar)
+wave-functions to four-component spinors.
+Dirac’s equation turned out to have sen-
+sational consequences in physics (like the
+prediction of antimatter), but it also inter-
+ested mathematicians. Through contribu-
+tions by Hermann Weyl, Charles Ehresmann
+and others, this interest eventually led to
+the discovery of a special class of Rieman-
+nianmanifoldscalledspinmanifolds, which
+admit geometric quantities that are ﬁrst-
+order in the coordinates and/or derivatives.
+In particular, the (generalized) Dirac equa-
+tion for spinors on such manifolds was ﬁrst
+written down in 1963 by Michael Atiyah and
+Isadore Singer. Atiyah and Singer were ac-
+tually unaware of Dirac’s original equation;
+their contribution was made in the (then)
+purely mathematical context of index the-
+ory, for which they would receive the Abel
+Prize in 2004, cf. [10]. In any case, spin ge-
+ometry, the Dirac equation, and index the-
+ory are closely related [11], and it is their
+combination that Connes in turn combined
+with the theory of operator algebras in cre-
+ating noncommutative geometry.
+cluster.
+In order to combine operator algebras and
+spin geometry, Connes invented a whole arse-
+nalofnewtechniquesandideas, drawingalso
+from other areas of mathematics (like homo-
+logical algebra and algebraic topology). An
+important feature of his work is the interplay
+between abstract theory and examples. The
+ensuing theory of ‘noncummutative geome-
+try’ turned out to have a wide range of applica-
+tions, both in mathematics (ranging through
+algebra, analysis, geometry, number theory,
+and stochastics) and physics (especially in
+Foto: Bert Beelen
+Connes during his lecture in Nijmegen, June 29, 2010
+solid state physics and elementary particle
+physics).
+Besides Connes’s own book [2] and his
+book with Marcolli [4], a good place to start
+is [9]. In the Netherlands, so far there have
+been two MRI Master Classes speciﬁcally de-
+voted to teaching noncommutative geometry
+to advanced M.Sc. students: the ﬁrst was in
+2003–2004, and the second took place in
+2009–2010. To the surprise and delight of the
+participants (coming from all over the world),
+the closing dinner of the latter was attended
+by Connes himself!
+Early days
+Connes’s early work, for which he was award-
+ed the Fields Medal in 1982, was concerned
+with the classiﬁcation of von Neumann alge-
+bras.
+This wasn’t a fashionable area at the time.
+One might even say that operator algebras
+formed a rather introverted and isolated area
+of mathematics.
+It would have been more
+natural for a talented young mathematician
+in Paris to go to Grothendieck. Weren’t you
+attracted by him?
+“I started research in 1970 and at that time
+I was actually repelled by the intellectual ar-
+rogance of the followers of Grothendieck. I
+never liked fashionable subjects and tried to
+ﬁnd an area of mathematics as remote as pos-
+sible from algebraic geometry.”
+Decades later, Connes had a change of
+heart towards Grothendieck, both person-
+ally and mathematically.
+Although they
+never met,
+Connes came to appreciate
+Grothendieck’s personality through the lat-
+ter’s autobiographical memoir Récoltes et Se-
+mailles, and in addition noncommutative ge-
+ometry and algebraic geometry turned out to
+have surprising relevance to each other [4].
+Presumably Gelfand must have been one
+of your favourite mathematicians?
+Did you
+have much contact with him?
+“Neither. Sure, we met and discussed
+mathematics a couple of times. But I found
+him difﬁcult to interact with. Of course, math-
+ematically he was a big inﬂuence and quite
+often one step ahead. In operator algebras I
+
+
+--- PDF PAGE 3 ---
+3
+3
+252
+NAW 5/11 nr. 4 december 2010
+The ﬂashes of insight never came for free
+Cornelissen, Landsman, Van Suijlekom
+“Time emerges from noncommutativity”
+Some familiarity with Hilbert spaces (as-
+sumed separable for simplicity) and oper-
+ator theory is assumed in this box.
+If M is some set of bounded operators
+on a Hilbert space H, the commutant M′ of
+M consists of all bounded operators on H
+that commute will all elements of M. We
+say that M is a von Neumann algebra if
+M′′ = M. Indeed, such an M is automati-
+cally closed under addition and multiplica-
+tion of operators, with the further proper-
+ties that A∗∈M whenever A ∈M (where
+A∗is the Hermitian conjugate or adjoint of
+A), and if AnΨ →AΨ for all Ψ ∈H, and
+An ∈M for all n, then A ∈M (in other
+words, M is strongly closed). Conversely, if
+M satisﬁes all these closure properties and
+contains the unit operator, then M′′ = M:
+this bicommutant theorem is the earliest re-
+sult about von Neumann algebras.
+A problem to which Connes made deci-
+sive contributions already in his PhD thesis
+is the classiﬁcation of von Neumann alge-
+bras up to algebraic isomorphism. In that
+context, it may be assumed without loss
+of generality that the Hilbert space H on
+which M acts contains a vector Ωthat is
+cyclic and separating for M, in that MΩ=
+{AΩ, A ∈M} is dense in H, and AΩ= 0
+for A ∈M implies A = 0, respectively. (For
+example, if H = Cn, then Ω= (1, . . . , 1) is
+cyclic and separating for the algebra of all
+diagonal matrices.) In that situation, Tomi-
+ta deﬁned an (unbounded) antilinear oper-
+ator S by SAΩ= A∗Ω(whose closure we
+denote by the same symbol). The (linear)
+operator ∆= S∗S then turns out to be of
+great interest. Since ∆is positive, for each
+t ∈R the operator ∆it is well deﬁned and
+unitary, so that one has a ‘time-evolution’
+σt(A) = ∆itA∆−it (think of ∆= exp(H) and
+σt(A) = A(t), in which case ∆it = exp(itH)
+and A(t) = exp(itH)A exp(−itH), as in
+quantum mechanics).
+One of the main
+theorems of Tomita and Takesaki is that
+σt(A) ∈M whenever A ∈M. Another is
+that σt(A) = A for all A ∈M and t ∈R if M
+is commutative, justifying Connes’s credo
+that “time emerges from noncommutativi-
+ty”.
+In his thesis Connes took this argument
+one step further by analysing the depen-
+dence of this time-evolution on Ω. To state
+the simplest version of his result, assume
+that H contains two different vectors Ω1
+and Ω2, each of which is cyclic and sep-
+arating for M.
+We write σ i
+t (A) for the
+time-evolution derived from Ωi. Connes’s
+Radon–Nikodym Theorem for von Neumann
+algebras then states that there is a family
+U(t) of unitary operators in M, t ∈R, such
+that
+σ 1
+t (A) = U(t)σ 2
+t (A)U(t)∗;
+(1)
+U(t + s) = U(s)σ 2
+s (U(t)).
+(2)
+One symbolically writes U = DΩ1 : DΩ2, in
+terms of which one has the property (DΩ1 :
+DΩ2)∗= DΩ2 : DΩ1, and, in the presence
+of three such vectors Ωi, also (DΩ1 : DΩ2)·
+(DΩ2 : DΩ3) = (DΩ1 : DΩ3).
+The proof of this theorem is based on
+the following idea. Extend M to Mat2(M),
+i.e., the von Neumann algebra of 2 × 2 ma-
+trices with entries in M, and let Mat2(M)
+act on H2 = H ⊕H in the obvious way.
+Subsequently, let Mat2(M) act on H4 =
+H ⊕H ⊕H ⊕H = H2 ⊕H2 by simply
+doubling the action on H2.
+The vector
+(Ω1, 0, 0, Ω2) ∈H4 is then cyclic and sepa-
+rating for Mat2(M), with corresponding op-
+erator ∆= diag(∆1, ∆4, ∆3, ∆2).
+Here ∆1
+and ∆2 are just the operators on H orig-
+inally deﬁned by Ω1 and Ω2, respective-
+ly, and ∆3 and ∆4 are auxiliary operators
+on H. Denoting elements of Mat2(M) by
+A =
+ 
+A11
+A12
+A21
+A22
+!
+, we obtain
+∆it
+ 
+A
+0
+0
+A
+!
+∆−it =
+
+σ (1)
+t (A)
+0
+0
+σ (2)
+t (A)
+
+, (3)
+with
+σ (1)
+t (A) =
+ 
+∆it
+1 A11∆−it
+1
+∆it
+1 A12∆−it
+4
+∆it
+4 A21∆−it
+1
+∆it
+4 A22∆−it
+4
+!
+; (4)
+σ (2)
+t (A) =
+ 
+∆it
+3 A11∆−it
+3
+∆it
+3 A12∆−it
+2
+∆it
+2 A21∆−it
+3
+∆it
+2 A22∆−it
+2
+!
+. (5)
+But by the Tomita–Takesaki theorems, the
+right-hand side of (3) must be of the form
+diag(B, B) for some B ∈Mat2(M), so that
+σ (1)
+t (A) = σ (2)
+t (A). This allows us to replace
+∆it
+4 A22∆−it
+4
+in (4) by ∆it
+2 A22∆−it
+2
+. We then
+put U(t) = ∆it
+1 ∆−it
+4
+, which, unlike either
+∆it
+1 or ∆−it
+4
+, lies in M, because each en-
+try in σ (1)
+t (A) must lie in M if all the Aij
+do, and here we have taken A12 = 1. All
+claims of the theorem may then be veriﬁed
+using elementary computations with 2 × 2
+matrices. For example, combining the iden-
+tity
+ 
+A
+0
+0
+0
+!
+=
+ 
+0
+1
+0
+0
+! 
+0
+0
+0
+A
+! 
+0
+0
+1
+0
+!
+with the property σ (1)
+t (AB) = σ (1)
+t (A)σ (1)
+t (B),
+we recover (1). Using the identity
+ 
+0
+Ut
+0
+0
+!
+=
+ 
+0
+1
+0
+0
+! 
+0
+0
+0
+Ut,
+!
+and evolving each side to time s, we arrive
+at (2).
+A ‘Proof from the Book’!
+Let us mention the main use of this re-
+sult. An automorphism of M is a linear map
+σ : M →M satisfying σ(AB) = σ(A)σ(B)
+and σ(A∗) = σ(A)∗. The set of all automor-
+phisms of M forms a group Aut(M) under
+composition. With Ωﬁxed, σt is an auto-
+morphism of M for each t, and the map
+t 7→σt is a group homomorphism from R
+(as an additive group) to Aut(M). Its im-
+age σR is a subgroup of Aut(M), which de-
+pends on Ω.
+However, call an automor-
+phism σ of M inner if it is of the form
+σ(A) = UAU∗forsomeunitary U ∈M. The
+inner automorphisms of M form a normal
+subgroup Inn(M) of Aut(M), with quotient
+group Out(M) = Aut(M)/Inn(M). Connes’s
+Radon–Nikodym Theorem then implies that
+the subgroup σR/Inn(M) of Out(M) is in-
+dependent of Ω, and hence is an invariant
+of M.
+This insight formed the basis for
+all subsequent progress in the classiﬁca-
+tionproblem(largelyduetoConneshimself,
+Haagerup, and Takesaki); see [2], Chapter v.
+
+
+--- PDF PAGE 4 ---
+4
+4
+Cornelissen, Landsman, Van Suijlekom
+The ﬂashes of insight never came for free
+NAW 5/11 nr. 4 december 2010
+253
+Foto: Bert Beelen
+am too young to have met von Neumann, but I
+was much more inﬂuenced at a personal level
+by the Japanese: Tomita and also Takesaki.”
+Minoru Tomita (1924) is a Japanese mathe-
+matician who became deaf at the age of two
+and, according to Connes, had a mysterious
+and extremely original personality. His work
+on operatoralgebrasin1967wassubsequent-
+ly reﬁned and extended by Masamichi Take-
+saki and is known as Tomita–Takesaki Theory
+(see box on previous page). It formed the es-
+RenormalizationasaBirkhoffdecomposition
+Quantum ﬁeld theory was initially devel-
+oped in the late 1920’s by Dirac, Heisen-
+berg, and Pauli in order to describe electro-
+dynamical processes in a quantum-mecha-
+nical way.
+This turned out to lead to in-
+ﬁnities in the calculations, whose system-
+atic removal was achieved by Feynman,
+Schwinger, Tomonaga, and Dyson in the
+late 1940’s. The procedure they introduced
+is called renormalization; the typical ‘Feyn-
+man diagrams’ displaying particle interac-
+tions have remained an important tool ever
+since. In the early 1970’s, ’t Hooft and Velt-
+man succeeded in extending the Feynman
+diagram technique and ensuing renormal-
+ization procedure to the weak and strong
+nuclear interactions, earning them the No-
+bel Prize for Physics in 1999. A fundamental
+idea they introduced is dimensional regu-
+larization, in which Feynman diagrams are
+computed as a function of z = d −4, where
+d is the dimension of space-time. The in-
+ﬁnities then emerge as singularities in the
+limit d →4, or z →0, and can be removed
+by subtracting the singular terms in a sys-
+tematic way.
+Whilst physicists simply use dimension-
+al regularization and renormalization as a
+recipe, mathematicians continue to look for
+a sound mathematical basis for it. In a col-
+laboration with Dirk Kreimer, Alain Connes
+found a beautiful formulation in terms of a
+Birkhoff decomposition.
+In general, a Birkhoff decomposition of
+a smooth invertible n × n matrix-valued
+function f on the unit sphere (regarded
+as the equator C of the Riemann sphere
+S) is a product f
+= f−· δ · f+.
+Here
+δ(z) = diag(zk1, . . . , zkn) for certain inte-
+gers ki, whereasthe f± areboundaryvalues
+of holomorphic functions deﬁned on the
+complements C± of C in S (i.e., the northern
+and southern hemispheres). In particular,
+f+ is ﬁnite at z = 0.
+In the application to quantum ﬁeld the-
+ory by Connes and Kreimer, the group of
+matrices in which f takes values consists
+of upper-triangular matrices of the form
+In the ﬁrst row one ﬁnds subgraphs of the
+graph in the upper-right corner of the ma-
+trix. Below each graph, one ﬁnds the same
+graph but with its subgraph(s) contracted
+to a vertex. Each matrix entry of f (z) is to
+be read as the numerical value of the corre-
+sponding Feynman diagram (as given by the
+so-calledFeynmanrules), seenasafunction
+of z = d −4. This forms the basis for the
+systematics of renormalization: the physi-
+cally relevant ﬁnite part of the diagrams in
+question is determined by the Birkhoff de-
+composition of f as f+(z = 0).
+sential stepping stone between the ﬁrst steps
+in the classiﬁcation of von Neumann algebras
+taken by Murray and von Neumann, and the
+work of Connes. A key ingredient of Connes’s
+contribution was his cocycle Radon–Nikodym
+Theorem for von Neumann algebras, whose
+proof is based on a trick with 2 × 2 matrices
+(see box on previous page). “This remains
+my favourite result. It is very dear to me. Al-
+though at the end of the day the argument
+was very simple, it followed months of calcu-
+lations and then came to me in a ﬂash.”
+Style of working
+In a ﬂash! Is that the way you typically ar-
+rive at crucial insights, as suggested also by
+Poincaré?
+“Hardly. This happened extremely rarely,
+as it did with my idea that renormalization
+in quantum ﬁeld theory corresponds to the
+Birkhoff decomposition (see box below). But
+even these so-called ﬂashes of insight were
+
+
+--- PDF PAGE 5 ---
+5
+5
+254
+NAW 5/11 nr. 4 december 2010
+The ﬂashes of insight never came for free
+Cornelissen, Landsman, Van Suijlekom
+Foto: Bert Beelen
+Landsman introduces Connes’s lecture in Nijmegen, June 29, 2010
+the culmination of massive computations,
+and never came for free!”
+So what is the goal of these computations?
+Are they at least a path to structure, or to a
+theorem?
+“Long computations are, for me, a way to
+get into a special state of mind, into a particu-
+lar mood, in which a mental picture can slowly
+emerge. As a preparation I go for a long walk
+with a particular problem in mind, and start
+computing in my head, before doing it in a
+notebook.”
+We have never seen you on such a walk
+near Bures [i.e., Bures sur Yvette near Paris,
+site of the IHÉS, where Connes holds his main
+appointment, besides others at the College
+de France in Paris and Vanderbilt University
+in Nashville] . . .
+“I avoid meeting other people during such
+walks, especially mathematicians. I live in a
+remote place where I can go for a walk within
+a radius of 10 km around my house without
+meeting anyone.”
+So you do all your computations in your
+head?
+“No, during such walks the framework of
+the computation is selected. Then I sit down
+and really start to compute. One of the dear-
+est memories I have is a case where, with my
+collaborator and friend Henri Moscovici, we
+had to compute, separately and with a spirit
+of friendly competition, a cocycle which was a
+sum of about a thousand complicated terms.
+It took us three weeks of hard work, but at the
+endofthedayahiddenHopfalgebrastructure
+emerged from behind the scene."
+Elsewhere, Connes describes the way
+he works in more detail [14].
+To his
+amusement (see photo above),
+the fol-
+lowing passage was read aloud by one
+of us as an introduction to Connes as a
+speaker at the GQT-conference; such open-
+ness by a leading mathematician is rare:
+“My impression is that I have never ob-
+tained anything at low cost. All my results
+have been preceded by preparatory ones, set-
+ting up work, a very long experimentation,
+hoping that at the end of this experimenta-
+tion, an incredibly simple idea occurs which
+comes and solves the problem. And then you
+need to go through the checking period, al-
+most intolerable because of the fear you have
+of being mistaken.
+I will never let anyone
+Statistical mechanics and number theory
+In the language of operator algebras, a
+quantum system is described by a C∗-
+algebra A (representing the physical ob-
+servables) endowed with a one-parameter
+group α of automorphisms of A (describ-
+ing time evolution).
+In this context, the
+Gibbs equilibrium states of quantum sta-
+tistical mechanics are described by an
+operator-algebraic condition ﬁrst proposed
+by Haag, Hugenholtz, and Winnink in 1967,
+which replaces the classical notion of a
+partition function counting the energy lev-
+els Ei with the well-known temperature-
+dependent weights exp(−Ei/kBT).
+The
+states selected by this condition are close-
+ly related to the vectors Ωin the Tomita–
+Takesaki theory (see box “Time emerges
+fromnoncommutativity”ononeoftheprevi-
+ous pages); for example, the time-evolution
+σt induced by Ωturns out to coincide with
+the physical time-evolution αt.
+In the 1990’s, Jean-Benoît Bost and Alain
+Connes discovered a quantum statistical
+mechanical system with two interesting
+number theoretical features.
+The ﬁrst is
+that its partition function is the Riemann
+zeta function (see box on next page). The
+second relates to its equilibrium states: in
+the high temperature range, there is a (bor-
+ing) unique equilibrium state for the sys-
+tem, but at a speciﬁc low temperature,
+there is a phase transition at which an in-
+ﬁnite simplex of equilibrium states sudden-
+ly emerges, whose extremal points (physi-
+cally corresponding to pure thermodynam-
+ic phases) are naturally indexed by. . . the
+abelianized Galois group of the rational
+numbers!
+This is an inﬁnite topological
+group that plays a central role in algebra-
+ic number theory (especially in class ﬁeld
+theory); here the relevant property is that
+it controls the ambiguity in distinguishing
+roots of the equation Xn −1 = 0 in purely
+algebraic terms.
+This discovery was followed by a phase
+of intense activity, trying to use the theo-
+ry as a tool for the explicit determination
+of the maximal abelian extension of other
+number ﬁelds, but up to now, all results
+have been reformulations of known (deep)
+number-theoretical descriptions in terms of
+quantum statistical mechanics. In this lan-
+guage, explicit class ﬁeld theory is equiva-
+lent to the description of a suitable set of
+algebraic generators for the C∗-algebra of
+the system.
+believe that you can wait just like this until
+results come all by themselves. I spent the
+whole summer [of 2006] checking a formula
+[. . .] There is always this permanent fear of er-
+ror which doesn’t improve over the years. . ..
+And there is this part of the brain which is per-
+manently checking, and emitting warning sig-
+nals. I have had haunting fears about this. For
+example, some years ago, I visited Joachim
+Cuntz in Germany, and on the return train I
+looked at a somewhat bizarre example of my
+work with Henri Moscovici on the local index
+theorem.
+I had taken a particular value of
+the parameter and I convinced myself on the
+train that the theorem didn’t work. I became
+a wreck — I saw that in the eyes of the peo-
+ple I crossed on the suburban train to go back
+home. I had the impression that they read
+such a despair in me, they wanted to help. . ..
+Back home, I tried to eat, but I couldn’t. At
+last, taking my courage in both hands, I went
+to my ofﬁce and I redid the veriﬁcations. And
+there was a miracle which made the theorem
+work out in this case. . .. I have had several
+very distressing episodes like this.”
+So doing mathematics is largely a strug-
+gle. . .. Your favourite composer must be
+Beethoven, rather than, say, Mozart, to whom
+
+
+--- PDF PAGE 6 ---
+6
+6
+Cornelissen, Landsman, Van Suijlekom
+The ﬂashes of insight never came for free
+NAW 5/11 nr. 4 december 2010
+255
+Noncommutativegeometryandnumbertheory
+How could a theory that has its roots in
+physics and differential geometry have any-
+thing to do with number theory? Historical-
+ly, there have been various attempts at ap-
+plying physical ideas to such elusive num-
+bertheoreticalproblemsastheRiemannhy-
+pothesis, which says that all the zeros of the
+(analytic continuation of) the Riemann zeta
+function ζ(s) =
+P
+n≥1
+1
+ns with real part be-
+tween 0 and 1, actually have real part equal
+to 1/2.
+This seemingly innocuous state-
+ment is vital to many deep number theo-
+retical results.
+As was observed by Pólya already before
+WW1, the Riemann hypothesis would follow
+if the imaginary parts of the zeros of ζ(s)
+would be the eigenvalues of a self-adjoint
+operator.
+But what should this operator
+be, or, why should it even exist?
+In the
+1950’s, Selberg observed that in the theory
+of Riemann surfaces, one can deﬁne a zeta
+function by replacing ‘primes’ by ‘lengths
+of primitive geodesics’ (note that short-
+est paths, like primes, cannot be broken
+up into smaller pieces), and then proved
+the famous trace formula named after him,
+which establishes a relation between this
+zeta function and the Laplace operator on
+the surface. You should get excited now, be-
+cause this Laplace operator is a self-adjoint
+unbounded operator.
+The main contribu-
+tion of Connes from the 1990’s was his use
+of noncommutative geometry to write down
+an analog of the trace formula of Selberg
+that is actually equivalent to the Riemann
+hypothesis. At this point, it was really nec-
+essary to use a noncommutative underly-
+ing space, since Connes’s trace formula can
+never materialize on a usual commutative
+manifold.
+The initial optimism that the Riemann hy-
+pothesis would now soon follow by ‘just’
+proving the Connes trace formula from
+the (noncommutative) geometry of the un-
+derlying space has been converted in-
+to various high-tech long-term programs
+in noncommutative geometry, which in-
+creasingly seem to involve a synthesis
+with the algebraic and arithmetic geome-
+try of Grothendieck and followers, and are
+producing interesting spin-offs–much like
+Kummer’s theory of ideals, which failed to
+directly prove Fermat’s Last Theorem, but
+produced the entire ﬁeld of algebraic num-
+ber theory. So let us wait and see. . ..
+his music apparently appeared from Heaven,
+without any effort?
+“Actually, myfavouritecomposerisChopin.
+One of my ambitions remains to play all
+his Preludes well, especially number 8 these
+days. Each one is a perfectly homogeneous
+world of its own and has a different sound,
+with an implicit idea behind.
+It must have
+been a monumental struggle to manage to
+express these ideas so well into written mu-
+sic. A fascinating aspect of music — not only
+Chopin’s, of course — is that it allows one to
+develop further one’s perception of the pass-
+ing of time.
+This needs to be understood
+much better. Why is time passing? Or bet-
+ter: why do we have the impression that time
+passes?
+Is it because we are immersed in
+the heat bath of the 3K radiation from the big
+bang?”
+Riemann hypothesis
+Connes’s own research area is not as remote
+from such questions as one might think. In-
+deed, an idea he repeatedly expresses is
+that “time emerges from noncommutativity”.
+Even thermodynamics arises from noncom-
+mutative geometry [5]: “Not only do [non-
+commutative algebras] generate their own
+time, but they have features which enable you
+to cool them down or warm them up. You can
+do thermodynamics with them.”
+In the late 1960’s, besides the work of
+Tomita and Takesaki, also the Dutch mathe-
+matical physicists Nico Hugenholtz and Mar-
+inus Winnink (in collaboration with Rudolf
+Haag) played an important role in relating op-
+erator algebras to time and thermodynamics.
+As Connes remarks, the ensuing link between
+Tomita–Taksesaki Theory for von Neumann al-
+gebras and quantum statistical physics “has
+become an indisputable point of interaction
+between theoretical physics and pure math-
+ematics” [2], p. 42.
+See also box “Time
+emerges from noncommutativity” and the box
+on the previous page.
+In your recent book with Matilde Marcolli
+[4] you even develop a thermodynamical ap-
+proach to number theory and the Riemann
+Hypothesis. You seem to have taken up the
+highest challenge in pure mathematics. What
+do you expect?
+“It started with my work with Bost in the
+early 1990’s on phase transitions on Hecke
+algebras. The Riemann zeta function came
+naturally as the partition function. Then in
+1996, I showed that, using a formula due to
+Guillemin for foliations, and using a natural
+noncommutative space coming from the work
+withBost, oneobtainedtheRiemann–Weilex-
+plicit formulas as a trace formula and also a
+spectral realization of the zeros of zeta. The
+explicit formulas show very clearly that due to
+the archimedean places one needs not only
+an analogue of the curve used by Weil in his
+proof in characteristic p but also an ambient
+space, whichintheaboveconstructionisnon-
+commutative. But to transplant the geometric
+ideas of Weil, which we started doing in our
+collaboration with Consani and Marcolli, one
+needs another version of that construction,
+in which the points are concretely realized as
+valuations and the Galois ambiguity is com-
+pletely respected. It is a very difﬁcult prob-
+lem but it has many interesting byproducts as
+shown in the recent work with Consani, which
+was the subject of my talk here.” See also
+boxes on this and previous page.
+Yuri Manin maintains that a proof of the
+Riemann Hypothesis that does not ﬁt into
+some program would not be interesting. . .
+“The hope is that this problem cannot be
+resolved without unfolding the hidden ge-
+ometric structure of the above mysterious
+curveanditsambientspace. Isharethishope
+completely.”
+Platonism
+In your book ‘Triangle of thoughts’ [3] you
+come out as an outspoken Platonist. So you
+think that the kind of structure we just talked
+about is going to be discovered, rather than
+invented?
+“Prime numbers are as real for me as this
+table. For me, mathematical reality is com-
+pletely analogous to physical reality.”
+But we are in Holland now, so we have to
+follow L.E.J. Brouwer in believing that mathe-
+matics is constructed by the human mind. Do
+you have a cogent argument for your Platonic
+position?
+“My position comes from the very impor-
+tant distinction between provability and truth.
+This is very well explained in a book by Jean-
+Yves Girard [8] and it would take too long to
+explain here, but I urge the reader to study
+this book.
+We, mathematicians, are stuck
+in something like a court of justice, making
+deductions with limited information about an
+external reality which I call ‘archaic reality’.
+In this reality, there are facts, true sentences,
+that are not provable in the court of justice,
+as shown by Gödel.
+Gregory Chaitin even
+showed that almost all true statements are
+not provable in the court. Anyway, the point
+is the existence of true — not just undecidable
+
+
+--- PDF PAGE 7 ---
+7
+7
+256
+NAW 5/11 nr. 4 december 2010
+The ﬂashes of insight never came for free
+Cornelissen, Landsman, Van Suijlekom
+Foto: Bert Beelen
+— but unprovable statements. Unless you un-
+derstand that point it is worthless to debate
+about Platonism.”
+Physics
+What is the place of physics in this archaic
+reality? How do you see the relationship be-
+tween physics and mathematics?
+“Thestandardwisdomisthatmathematics
+is the language in which physics is written and
+I certainly agree with that, but my hope is that
+the relation goes much further and that basic
+concepts such as the passing of time will on-
+ly be really understood through the unfolding
+of deeper mathematics. The boundary line
+between physics and mathematics comes ul-
+timately from the motivation of physicists to
+model reality and thus confront their predic-
+tions with experiment.”
+You actually made a physical prediction
+from noncummutative geometry, i.e., the
+mass of the Higgs particle.
+The result was
+slightly off experimental bounds. How are you
+going to keep physicists on board?
+“This prediction was based on the hypo-
+thesis of the ‘big desert’, namely that there
+will be no new physics up to the uniﬁcation
+scale, besides the Standard Model coupled
+to gravity. Thus it was a bit like trying to see a
+ﬂy in a cup of tea by looking at the earth from
+another planetary system. But very strange-
+ly the model also predicted the correct mass
+of the top quark, and a surprising number of
+mechanisms such as the Higgs and the see-
+saw mechanisms. After our work in 1996 with
+Ali Chamseddine we gave up in 1998 because
+of the discovery of neutrino mixing, only to un-
+derstand 8 years later that there was one case
+which we had overlooked, namely allowing
+the KO-theory dimension of the ﬁnite space
+to be 6 modulo 8, and which was giving for
+free the neutrino mixing and much better fea-
+tures for the model. [All this is explained in
+Connes’s book with Marcolli [4].] As it is now,
+I stopped doing such calculations and will just
+wait for the experiments. If supersymmetry is
+going to be found, it will be very hard to con-
+vince the physicists of the noncommutative
+geometry approach.”
+But there is no contradiction between
+supersymmetry and noncommutative geome-
+try.
+“You are right, but string theory would
+claim the ground even more than they are al-
+ready doing now. In any case, the Standard
+Model [of elementary particle physics] is full
+of tricks. What we need is simplicity. I think
+that is what noncommutative geometry pro-
+vides. The inverse line element is an opera-
+tor. Its only invariants [under unitary transfor-
+mations] are the eigenvalues. And these are
+eventually what is observed in Nature. The
+truth is that this simplicity is only a starting
+point and a lot more work would be needed
+to explore the quantum theory.”
+Do you have a preference for mathematics
+over physics?
+“My heart lies with both.”
+At this appropriate point Connes had to
+leave for a dinner appointment with Sir
+Michael Atiyah, another speaker at the GQT-
+conference and a comparable source of inspi-
+ration for our cluster.
+k
+References
+1
+G. Birkhoff and E. Kreyszig, The establishment
+of functional analysis, Historia Mathematica 11,
+pp. 258–321 (1984).
+2
+A. Connes, Noncommutative geometry (Aca-
+demic Press, San Diego, 1994).
+3
+A. Connes, A. Lichnerowicz, and M.P. Schützen-
+berger, Triangle of thoughts (American Mathe-
+matical Society, Providence, 2001).
+4
+A.ConnesandM.Marcolli,Noncommutativege-
+ometry, quantum ﬁelds and motives (American
+Mathematical Society, Providence, 2008).
+5
+M. Cook, Mathematicians (Princeton University
+Press, 2009), p. 130.
+6
+J. Dieudonné, History of functional analysis
+(North-Holland, Amsterdam, 1981).
+7
+P.A.M. Dirac, The principles of quantum me-
+chanics (Clarendon Press, Oxford, 1930).
+8
+J.-Y. Girard, The blind spot: lectures on logic (Eu-
+ropean Mathematical Society, 2011).
+9
+J.M. Gracia-Bondia, J.C. Varilly, H. Figueroa,
+Elements of noncommutative geometry (Birk-
+häuser, 2001). More concise recent introduc-
+tions include J. Varilly, An introduction to
+noncommutative geometry (EMS, 2006) and
+M. Khalkhali, Basic noncommutative geom-
+etry (EMS, 2009). For a brief introduction
+to noncommutative geometry in Dutch see
+also W. van Suijlekom, Niet-commutatieve
+meetkunde niet-communicabel?, Nieuw Archief
+voor Wiskunde 5/7, pp. 27–32 (maart 2006).
+10
+K. Landsman, De indexstelling van Atiyah en
+Singer, Nieuw Archief voor Wiskunde 5/5, pp.
+207-211 (2004). In Dutch.
+11
+H.B. Lawson, Jr. and M.-L. Michelsohn, Spin ge-
+ometry (Princeton University Press, 1989).
+12
+J. Mehra and H. Rechenberg, The historical
+development of quantum theory, Vols. 1–6
+(Springer-Verlag, New York, 1982–2001).
+13
+J. von Neumann, Mathematische grundlagen
+der quantenmechanik (Springer, 1932).
+14
+G. Skandalis and C. Goldstein, Interview with A.
+Connes, Newsletter of the EMS 63, pp. 25–31
+(2007), ibid. 67, pp. 29–33.
+15
+M. Takesaki, Theory of operator algebras, Vols.
+i-iii (Springer, 2003).

@@ -1,0 +1,16 @@
+{
+  "coprime_factors": [
+    8,
+    9,
+    5
+  ],
+  "product": 360,
+  "size_upper_bound": 300,
+  "sqrt3_mod7_coefficient": 6,
+  "nonzero_square_residues_mod7": [
+    1,
+    2,
+    4
+  ],
+  "meaning": "pedagogical arithmetic only; not a verification of the research proof"
+}

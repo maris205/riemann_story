@@ -1,0 +1,839 @@
+
+--- PDF PAGE 1 ---
+Explorer of light, and more: an interview with Sir Michael Berry
+Wei Liua,b,*
+aNational University of Defense Technology, College of Advanced Interdisciplinary Studies, Changsha, China
+bNational University of Defense Technology, Hunan Provincial Key Laboratory of Novel Nano-Optoelectronic Information Materials and
+Devices, Changsha, China
+Wei Liu: Professor Berry, thank you for accepting this interview, which
+is specially arranged for the journal Advanced Photonics. It is a pho-
+tonics journal but we do not have to confine the topics to photonics.
+We can freely talk about anything related to mathematics, physics, and
+other things you like. The editors do hope that this interview can benefit
+readers in other disciplines.
+Now Berry phase is almost everywhere in different branches of
+physics, chemistry, and many other subjects. It becomes impossible
+to overstate its importance. But there is something unfortunate about
+this: Michael Berry has been simplified and stereotyped as a phase.
+While, the fact is, you have absolutely original contributions to many
+fields of physics. It is unknown to many that you have also seminal
+contributions to mathematics, and moreover you have educated strong
+students who contribute significantly to physics and mathematics too.
+For example, your PhD student Jonathan Keating is now Sedleian
+Professor of Mathematics at Oxford University, a fellow of the Royal
+Society, and has been president of the London Mathematical Society.
+My first question is: why didn’t you choose mathematics at the very
+beginning?
+Michael Berry: Because I knew nothing about it. When I started as
+a graduate student, I was largely ignorant of mathematics. I knew
+I liked theoretical physics and I liked the ideas, but I wasn’t very
+knowledgeable about mathematics and it wasn’t my initial enthusiasm.
+I discovered, while I was a graduate student, that I could do calculations
+and I liked some of the concepts in mathematics and found them
+natural. But until now I’ve almost never attended an advanced math-
+ematics course. I still enjoy mathematical ideas, mostly when they
+have some connections with physics. (I don’t mean experimental
+physics; that’s not my main activity, though I’ve done a few experi-
+ments myself.)
+Wei Liu: Then here comes a related question about your work style:
+you are a self-constructed intellectual soliton and you work more like a
+mathematician than a physicist. To explain this, here I have two quo-
+tations, one from the Fields Medalist Alain Connes and the other from
+the inaugural Abel Laureate and also Fields Medalist Jean-Pierre Serre.
+Connes said, “In general mathematicians tend to behave like fermions,
+i.e., avoid working in areas which are too trendy, whereas physicists
+behave a lot more like bosons, which coalesce in large packs and
+are often over-selling their doings, an attitude which mathematicians
+despise.” Jean-Pierre Serre said, “The best ideas in maths are personal
+ones, and I am pretty sure about it.” Would you please comment on
+what they said? To what extent can we say that the best ideas in physics
+must be personal?
+Michael Berry: No, not really. The point about fermions is that they
+avoid each other. I don’t avoid other scientists. I enjoy discussing with
+them, and as you can see from my papers I have occasional collabo-
+rators, though fewer than other physicists. I think science is essentially
+a collective activity, even among people who think they are solitary.
+They’re not. We all build on ideas from other people, so that’s my com-
+ment on Alain Connes, whom I know and respect.
+I do not know Jean-Pierre Serre, but think I understand what he
+means, and I don’t quite agree. We all feel personally engaged in phys-
+ics about things that we discover. But within a few years, somebody
+else will probably have the same idea. Our apparently individual sci-
+ence is part of a developing collective understanding. It’s a communal
+thing. I think science is the closest that we have to what in science
+fiction is called a group mind, in the sense that the huge advances that
+have come over the last centuries have been because we build (con-
+sciously or unconsciously) on what our colleagues and predecessors
+have done.
+And I don’t despise trending topics, as Alain Connes says. I am just
+not so inclined myself to work on subjects which are very popular:
+topological insulators, quantum Hall effect, high-temperature super-
+conductors, string theory…. These are scientifically valid and inter-
+esting topics and it’s good that people are working on them. Probably
+too many work on string theory but this is a minor issue—not the
+fault of creators of that subject. It is simply that my choices are a little
+bit different. Maybe I’m too lazy to read too much of the literature.
+I do read quite a bit actually, but not to systematically scour the liter-
+ature to find every paper on something I’m working on. Occasionally
+that’s a mistake: I discovered, quite recently, that there is already
+a substantial literature I was unaware of, on something I’m thinking
+about.
+Sir Michael Berry, University of Bristol
+*Address all correspondence to Wei Liu, wei.liu.pku@gmail.com
+© The Authors. Published by SPIE and CLP under a Creative Commons Attribution
+4.0 Unported License. Distribution or reproduction of this work in whole or in part
+requires full attribution of the original publication, including its DOI. [DOI: 10.1117/1
+.AP.4.1.010503]
+INTERVIEW
+Advanced Photonics
+010503-1
+Jan∕Feb 2022 • Vol. 4(1)
+
+
+--- PDF PAGE 2 ---
+Wei Liu: You have a kind of cruel comment on many topics. You never
+say it in public, but sometimes say it in private. The comment is: “this
+topic is interesting, but not fundamental.” So I want to know your
+standard by which to judge what is fundamental and what is not.
+Michael Berry: This is not a cruel comment. There’s a great deal of
+physics, including much that I do, that isn’t fundamental. I have had a
+few ideas in my life that in some sense might be considered fundamen-
+tal, though not in the sense of Dirac, or Maxwell, or Galileo…. If one
+develops ideas in a pretty way and which has elegance, then this is
+valid. I’m frequently a referee and, depending on the journal, often
+say, “this is valid work; the calculations are correct. But it’s really more
+suitable for a pedagogical journal than a journal for primary research.”
+This isn’t cruel; people might interpret it so but it is not. I’m just trying
+to be honest and it applies to much of my own work too. I have pub-
+lished quite a lot in European Journal of Physics, which is a journal of
+advanced pedagogy. I have published some work there which, in retro-
+spect, others might have sent to (for example) Physical Review Letters.
+This is not a major concern for me.
+Wei Liu: My feeling is that for something to be appealing to you,
+it would better to have a clear mathematical structure, and then there
+is a better chance for you to judge it as fundamental. Is this correct?
+Michael Berry: Probably, yes.
+Wei Liu: So you like mathematical structures.
+Michael Berry: Well, I think this is how physics is expressed, whether
+people realize it or not. The idea goes back to Galileo: the language of
+science is mathematical. He was thinking of geometry, but it’s of course
+wider than that. And there’s a reason for it which I’ve written about.
+Eugene Wigner had this famous phrase “the unreasonable effectiveness
+of mathematics in the natural sciences,” because he was surprised, as
+we all are, when we suddenly find that some mathematics, developed
+some time ago, completely abstractly, fits directly some physics we’re
+trying to understand. But I don’t agree with him. It is of course a won-
+derful thing, but it isn’t unreasonable at all. We want to understand as-
+pects of the universe which haven’t been understood before. However,
+we understand only those things we are capable of conceptualizing.
+And what are the most sophisticated conceptual structures that we
+humans have developed? Mathematical structures. Sometimes the
+mathematics exists already and sometimes it doesn’t exist, and has
+to be created. I’ve encountered examples of both kinds; that’s a detail.
+As humans, we are limited; we’ve been doing science for a mere few
+hundred years.
+By the way, when people speak about the physics of everything,
+that’s an expression of their enthusiasm, rather than anything that I take
+literally. We know a bit more than dogs. Dogs can’t do quantum cal-
+culations and we can, but there are probably other things as remote
+from our understanding as ours is from that of dogs. We have learned
+to work together as a species and this collectivity enables us to make
+faster and deeper progress. But still we’re limited. (It was pointed
+out to me that there at least one other sophisticated conceptual frame-
+work that human beings have developed that is as elaborate and rich
+as mathematics, namely music. I take that comment seriously but it
+doesn’t affect my view about mathematics and physics.)
+So I am disagreeing with Wigner. I expressed this disagreement
+when I gave the Wigner Lecture in the Oak Ridge Laboratory at
+Tennessee several years ago. I thought there would be a riot and I would
+be thrown out, but neither happened.
+Wei Liu: You have a kind of humble background. Your mother was a
+dressmaker and father a taxi driver. You graduated from University of
+Exeter and University of St Andrews which are not the most prestigious
+ones. In my mind, because of this you don’t like superficially more
+prestigious things. For example, last time you visited Changsha, you
+told me you like narrow streets with people crossing over here and
+there, which are more similar to the places where you grew up. I have
+a feeling that you simply do not like superficially more magnificent
+places. I want to know if this side of your character is related to the
+fact that you turned down the offer from Philp Anderson to join
+him in Princeton University.
+Michael Berry: It wasn’t Philip Anderson’s offer but he knew about it.
+The suggestion originated with Martin Kruskal. Princeton is a wonder-
+ful place and was extremely kind to me; and there have been possibil-
+ities elsewhere. It’s just that, when I thought objectively about the
+conditions of my daily scientific life and how I would live, in every
+case I came down in favor of staying in Bristol; it suits my scientific
+style.
+There is something else. I know that my American colleagues spend
+a long time filing their income tax. In the UK, it takes me about 30
+minutes every year. This is an example of something more general.
+If I had been in the US, I would have had to be much more of a financial
+manager than in the UK. Now it’s a little bit different. In the UK, people
+younger than me who are not retired also have to be more financially
+adept than previously. So this difference has diminished; but it was a
+real difference then. We also had to think whether we wanted our chil-
+dren to be brought up in the US, rather than in the UK. I have nothing
+against the US and I love it. It’s going through a slightly uncomfortable
+period at the moment but it’s a wonderful place. I have many good
+friends there and I enjoy visiting magnificent landscapes and some
+of the beautiful campuses, but that’s different from deciding to spend
+your life there.
+Wei Liu: I would just tell you my feeling, which might be incorrect.
+It appears to me, there are two seemingly contradictory sides of your
+character. In everyday life, you like ordinary things, for example, you
+like narrow streets with people crossing over here and there. But for
+research, I describe you as an extreme elite. For example, you told
+me that science is not democracy and it is decided by the very best.
+These two sides seem to be contradictory and how can you reconcile
+them? Or they are just two sides of the same coin?
+Michael Berry: Elite is not the same as elitist. It is democratic, in the
+sense that people from any background can and should be encouraged
+to do science; the more diversity the better. Nevertheless, as with other
+activities, such as being an accomplished musician or being an accom-
+plished sports person, it’s the elite who are respected. This is natural.
+But there are other subjects I enjoy just like any other human. I like
+cooking. I was spending some time just before this interview deciding
+what I should cook tonight. I had suggested to my wife that we go to
+a restaurant and she said no, because she’s still a bit concerned about
+Covid in public places. I’ve just done some shopping and will cook
+tonight. I enjoy walking and looking around as I walk, or sometimes
+(in non-Covid circumstances) sitting in a cafe and just watching people
+or talking to people I encounter. It is perfectly normal. So I don’t see
+any contradiction at all. Moreover, a major aspect of my science is
+demonstrating how abstract ideas often underlie our explanations of
+everyday phenomena, especially in optics (rainbows, the sun sparkling
+on the sea…); I call this “the arcane in the mundane.”
+Wei Liu: The next question is about your way of thinking. Your sci-
+entific hero Paul Dirac told Abdus Salam that his way of thinking is
+geometric rather than algebraic. You were quite surprised at the begin-
+ning by this. I want to know your way of thinking. Is it more algebraic
+than geometric, despite the fact that many people in Bristol have or had
+a geometric pictorial way of thinking?
+INTERVIEW
+Advanced Photonics
+010503-2
+Jan∕Feb 2022 • Vol. 4(1)
+
+
+--- PDF PAGE 3 ---
+Michael Berry: Like many young theoretical physicists, I started out
+being very algebraic. I still do some long calculations—pages and pa-
+ges of algebra (though uncomfortably aware of what Louis Armstrong
+is reputed to have said, “You can play lots of notes, but it is not mu-
+sic.”). But I soon realized that I am more naturally a visual person. This
+realization came partly because there was a visual/ pictorial tradition in
+Bristol physics. I’m sure it is not the only place but it’s where I was, and
+I learned from listening to my colleagues that by making pictures
+I could understand things much better. You mention Dirac, and I note
+that he said that he was a visual person. Einstein said the same. You
+don’t see pictures in their papers. It’s very interesting. I don’t doubt
+them but I asked Graham Farmelo, who wrote the major biography
+of Dirac: “You looked at Dirac’s papers and his archive. Did you
+see lots of drawings and calculations hidden away?” Farmelo said
+he didn’t. And when Dirac was at school in Bristol, he said one of
+his favorite subjects was technical drawing; there are some pictures
+from those days which recently came to light. What people say isn’t
+always reflected in what they do publicly or even privately, but I don’t
+doubt that Dirac had images in his head. Nowadays, it’s much easier to
+make pictures; we have software that can do it. Even before software
+I made all my own illustrations for my papers, using pens, stencils, and
+drawing instruments. Nowadays we recognize more strongly the value
+of visual representation.
+But we haven’t yet recognized the value of auditory representation,
+and I started something along these lines with my occasional collabo-
+rator Pragya Shukla. We are calling it “Earmath”: representing math-
+ematics in sound. We have ears as well as eyes, and hearing is different
+from seeing. It’s interesting how easy it is to produce qualitatively new
+sounds that no human has heard—representing, for example, random
+matrix eigenvalues, or their characteristic polynomials. At the moment
+this is a bit of a curiosity. As we wrote in a paper, whether it has
+scientific value “remains to be seen, or rather, heard.”
+Wei Liu: Well, you’re very interested in and have made seminal
+contributions to the field of divergent series and asymptotics. I can’t
+imagine how a person can be mainly visual and at the same time
+extremely interested in divergent series. How can divergent series be
+visualized?
+Michael Berry: I regard divergent series as deeply connected with
+some philosophical matters, because divergent series are intimately re-
+lated to the way in which different levels of descriptions arise (in phys-
+ics, that is—I’m not talking about understanding life in terms of the
+Schrödinger equation). If you go from geometric optics to wave optics,
+or quantum to classical, the series you get always diverge. They must
+do so and there’s a reason, related to the fact that these levels of
+description are very different from each other. If series converged,
+it would imply that quantum equals classical, plus a correction in ℏ,
+plus ℏsquared, etc., and that isn’t true. The limits are very singular,
+and one of the signals of a singular limit is that an associated series,
+that would connect one level with another, is divergent.
+In different areas this requires mathematics, different in different
+areas, which sometimes has been developed and sometimes has not.
+Turbulence, for example, is the limit of fluid mechanics as the viscosity
+goes to zero. That’s a singular limit, because if you just switch off the
+viscosity completely, and use the Euler equations, you don’t have tur-
+bulence. As viscosity gets smaller, dissipation diminishes too, but it’s
+distributed on a fractal set. That’s completely different from what you
+get if you just simply write the equation without viscosity at all. This is
+just one example of qualitatively distinct science in the asymptotic
+borderland between theories. It is relevant when you come to consider
+the types of series that you encounter in describing the connections
+between levels, and why such series must diverge
+Coming to your question: there is much visual material associated
+with divergent series. You show the series, first of all converging
+and then diverging. It is very vivid if you represent it pictorially.
+And in the method of stationary phase in the complex plane, for exam-
+ple, there are structures that become much clearer if you draw them:
+connections between different saddle points, Stokes lines between
+them, and so on.
+In a major area of optics, namely geometric optics, the singularities
+are caustics, and caustics are where the series which are supposed to
+connect wave optics and ray optics are most strongly divergent.
+Caustics is a very pictorial subject. Just recently I have explored how
+caustics are central to the description of how you see your reflection
+distorted and topologically disrupted when looking at curved fair-
+ground mirrors, shiny curved metal reflections from cars, or metal
+spoons. These distorted reflections are everywhere, and I am explaining
+something actually seen, so of course it is visual. And connecting this
+with the deeper level of wave physics involves divergent series in an
+essential way. These ideas are very general.
+By the way, going back to this question you asked about visual,
+when I started having independent ideas in physics, these were about
+semiclassical quantum mechanics. But I quickly realized that many of
+the problems are the same in optics, and in optics you have the advan-
+tage that you can see the phenomena you are thinking about. This is a
+different aspect of the visual approach: not that you are using pictures to
+explain mathematical connections, but that you’re describing things
+you see with your eyes.
+Wei Liu: So you believe you are more geometric than algebraic?
+Michael Berry: No, I wouldn’t say that. If you look at my recent pa-
+pers, you see algebraic calculations as well as physics. And “not more”
+doesn’t mean less; I just don’t know how to compare. Here is a story
+about Stokes (one of my intellectual heroes); I’m not sure if I get the
+details right. Stokes was a serious person; only once in his life was he
+heard to laugh. Why? It was at a dinner, where he was sitting next to a
+young woman, and it was her question that provoked him to burst into
+laughter. In those days, it was customary after dinner for all the women
+go to a different room to discuss (I don’t know what), and the men to
+smoke and talk (I also don’t know what about). The women gathered
+around the young woman and asked “What did you say to Sir George to
+make him laugh so?” “I asked him what he did, and he said, ‘I’m a
+mathematician,’ so I asked him: ‘Do you prefer algebra or geometry?’
+He found this amusing.”
+Wei Liu: I have tracked your publications, and it appears to me that you
+got interested in C. V. Raman’s works about sound and light at a very
+early stage of your career. Is this related to that your father stayed in
+India for a period of time? Besides Raman’s works, you also like Indian
+food and culture.
+Michael Berry: No connection. When I started my PhD I had no idea
+what problem I would work on and I asked my supervisor Robert
+Dingle; he had been developing fundamental ideas on divergent series
+(which I extended much later). He gave me a list of problems, where
+“My techniques might be helpful.” The one I chose concerned the dif-
+fraction of light by ultrasound; basically an interaction of one kind of
+wave with another. It turned out that his mathematical techniques didn’t
+help, but I did my PhD anyway. Some of the main papers on the subject
+were by Raman and his colleagues in Bangalore. At that time I had a
+wife and a baby and very little money. To earn some, I managed the
+library of theoretical physics in St Andrews. As the journals came in, I
+would scan them briefly. In almost every issue of the Proceedings of the
+Indian Academy of Science, there was a paper by Raman. So that was
+another connection. Only much later (in 1976, when I first visited India)
+INTERVIEW
+Advanced Photonics
+010503-3
+Jan∕Feb 2022 • Vol. 4(1)
+
+
+--- PDF PAGE 4 ---
+did I learn about his brilliant nephew Pancharatnam and other members
+of his family, strengthening these connections. But I got interested in
+Raman’s works very early because of my PhD thesis and the work that
+he had done with colleagues such as Nagendra Nath in the 1930s. This
+had nothing had to do with my father and his time in India, also in
+the 1930s.
+Wei Liu: In another interview, you mentioned that you believe the
+Indian religion of many gods is healthier than the other one-God reli-
+gion. Some people believe that the grand unified theory of everything,
+such as the string theory, is psychologically the same as the one-God
+religion. Can I infer from your comments on the Indian religion that
+you do not like the grand unified theory.
+Michael Berry: It is not I don’t like it. It is just a term. Any unification
+in physics is wonderful. The theory that would unify gravity with the
+others would be an enormous advance. But I don’t think it would be the
+end of physics. That’s all. I’m not in any way disparaging. And I don’t
+think this has any special connection with Hinduism, one God or
+(in the superficial interpretation) many gods. My remark was not en-
+tirely serious. I’m not religious, certainly not in the sense of following
+an organized religion. So, my comment about Hinduism is simply that
+if forced to choose, it would be a religion with more gods. I certainly
+don’t disparage grand unified theory. It’s just a name, and that might
+mislead people into thinking it’s the theory of everything.
+And actually there’s another reason. Even if there were a theory
+of everything (which I regard as impossible because of our limited
+intellectual capacity, as I’ve said), this wouldn’t be the end of physics,
+because as Philip Anderson pointed out, and I’ve emphasized more
+generally, there’s a different kind of fundamentalness: finding new
+things in old things. There’s a story in one of the novels by Ian
+McEwen: a string theorist’s wife discovers that he’s been seeing an-
+other woman, and he tries to reassure her: “Don’t worry, dear, I can
+explain everything.” This is a perfect illustration of the fact that you
+can have a theory which in some abstract sense encompasses everything
+but doesn’t help you to explain any particular thing. Dirac remarked
+that his equation explains all of chemistry; but it doesn’t help a theo-
+retical chemist wanting to understand the properties of a particular
+molecule. It’s a matter of levels; it’s just as fundamental to find, in
+the theories we already have, concepts that were not appreciated just
+by looking at the formalism. This was described in a beautiful way by
+Ian Percival, another physicist I admire (he was very helpful in the early
+days, by convincing me that there would be the subject we later called
+quantum chaos). He said that understanding the formalism is one thing,
+but understanding the solutions of the formalism is quite a different
+thing. This different kind of fundamentalness has been very influential
+for me.
+Wei Liu: Now we come back to your geometric phase work. As far as
+I know, it’s a byproduct of your some other research activities. Is
+this true?
+Michael Berry: There’s a sense in which everything is a byproduct of
+everything else, and then of course, it can take over one’s life. For me,
+the geometric phase came via aspects of quantum chaos: understanding
+degeneracies. I had discovered something (actually rediscovered, as I
+soon learned): if you have some quantum system, depending on some
+parameters, the simplest case being a real symmetric matrix, and you
+cycle the parameters, then there will be a sign change if the cycle in-
+cludes a degeneracy (where the energy of the state you are transporting
+coincides with the energy of another one). In a talk about this, I said,
+“This doesn’t apply if you have a magnetic field; you need more param-
+eters and the concept of enclosing is different.” Ronald Fox responded,
+“What happens to the sign change then?” I replied, “I suppose there’ll
+be a phase change.” I went home and thought about it for several weeks,
+and talked about it with my colleague John Hannay, and then the geo-
+metric phase came to me.
+But I learned afterwards that there were many anticipations of the
+phase, not exactly the same but with many similar ideas. I already men-
+tioned Pancharatnam, but he wasn’t the only one. Different people
+reached related insights in polarization optics, radio wave propagation,
+chemical reactions… Because the phase is connected with so many dif-
+ferent areas of science, it could have emerged as a byproduct of different
+thoughts in different areas. In my case it happened to be quantum chaos.
+This is a subtle matter, and when I give lectures now on geometric phase I
+often include the timeline, to acknowledge all the predecessors I was
+completely ignorant of when I wrote my paper in 1983. This is true gen-
+erally; if you look at Einstein’s special relativity, Poincaré and Lorentz
+came extremely close shortly before him. Somebody once said to Dirac
+how surprising it is that discoveries occur at almost the same time to
+different people, and it could be that something is already “in the air”;
+Dirac replied “Or maybe in the water.”
+Wei Liu: The Berry phase work is certainly your most famous one. But
+surprisingly you told me that it is not your favorite one. As I try to
+understand why it is so, I come to believe that there must be some
+personal psychological reasons. Your colleague Sandu Popescu said,
+“When he (Michael Berry) sees everybody going in one direction,
+he goes in another.” I have a strange feeling that if many people like
+something, you would not like it anymore. Is this one of the reasons
+why you don’t believe the Berry phase work is your favorite?
+Michael Berry: No. This is a misunderstanding. I don’t dislike some-
+thing just because many other people like it. I already mentioned that
+there are fashionable subjects and I have a great respect for them. I just
+choose not to move in those directions. I’m delighted by the success of
+geometric phase and I don’t dislike it at all. I see the significance of it,
+largely because of the ways other people have developed it. I have six
+children, and if someone asks me who is my favorite, I would never
+answer such a question. My children are different, and I love them
+all for their different aspects.
+Nevertheless, I mention something that gave me immense pleasure.
+It relates to divergent series; understanding something called the Stokes
+phenomenon. It pleased me because it was a discovery in mathematics,
+which as I have said isn’t my main scientific habitat. To understand
+something left open from Stokes 150 years before (the smoothing of
+a discontinuity) was very, very satisfying—a pleasant little thing. As
+you said, this is a psychological matter; I certainly didn’t study the
+Stokes phenomenon because I don’t like things that other people like.
+Let’s not propagate the misunderstanding.
+Wei Liu: The next question might be related. It is striking for me that
+you have never published with the American Physical Society, that is,
+you have never published in the Physical Review journals. What’s the
+reason behind that?
+Michael Berry: No particular reason. I have published in a number of
+different American journals: Annals of Physics, Journal of the Optical
+Society of America, Journal of the Acoustical Society of America,
+PNAS, Physics Today, and also Scientific American. But I am perfectly
+happy with the local, i.e., UK, journals, mainly those published by the
+Institute of Physics, which is the second biggest physics publisher in
+the world. IoP Publishing happens to be based in Bristol, but I don’t
+think that’s significant. I don’t go to their offices very often; they are in
+a different part of town from the university. I have found IoP very re-
+liable and they have high standards.
+When I agreed to be the editor of Proceedings of Royal Society,
+section A, a post I held for six years, I was very proud. It’s almost
+INTERVIEW
+Advanced Photonics
+010503-4
+Jan∕Feb 2022 • Vol. 4(1)
+
+
+--- PDF PAGE 5 ---
+the world’s oldest scientific journal. Many eminent scientists (Dirac,
+Maxwell, Rayleigh, Rutherford, and others) published there; I might
+have published more papers in Proc R. Soc A (including some of my
+best) than anybody else. The Royal Society had very high standards.
+Many years earlier, in connection with a paper in Philosophical
+Transactions of the Royal Society, they telephoned to ask whether a
+symbol, a subscript in one of my handwritten equations, was the num-
+ber “zero” or the letter “o.” I was very impressed by that, but by the time
+I was editor, their methods of production weren’t quite as good as those
+of IoP, so I insisted that some of their production people visit Bristol to
+talk to the IoP, to learn how they did things, and possibly make im-
+provements in London. I’m not quite so happy now with some of
+IoP’s online procedures, proof corrections, and other software, but
+still I like publishing with them. Certainly the quality of refereeing
+is very good, and I have learned much from reports on my papers, even
+(especially) when these are critical.
+Wei Liu: You simply do not care about the rankings of journals. Is this
+a manifestation of your philosophy that science is not democracy; it is
+decided by the very best?
+Michael Berry: I am not sure it is related. People who design journal
+ranking metrics are very emphatic that these metrics provide informa-
+tion useful for editors, but should never be used to assess individuals.
+I strongly agree, and would go further: using journal citation statistics,
+or rankings, to assess an individual, is an intellectual crime analogous
+to racism (though of course far less serious), because it amounts to
+judging individuals by a stereotype of the group to which they are con-
+sidered to belong, rather than by their individual work. In making this
+remark I don’t expect to have any influence, but there are signs that
+this fashion for journal rankings is beginning to diminish (differently
+in different parts of the world). This is not a main concern for me;
+I publish in the journals I like and know.
+Wei Liu: Now we go back to Pancharatnam. Largely due to your
+expositions, Pancharatnam’s work about geometric phase became
+well known among the general researchers. In your paper titled
+“Pancharatnam, virtuoso of the Poincaré sphere: an appreciation,”
+you discussed mainly three papers of Pancharatnam, covering geomet-
+ric phase, mirage, and Pancharatnam phenomenon. Something strange
+to me is that now so many people are working in the field of non-
+Hermitian physics, but very few of them know Pancharatnam phenome-
+non. Do you know what the reason is behind this?
+Michael Berry: I do not know. You ask me why people don’t know
+something; probably you should ask them. In a sense people might
+know Pancharatnam’s phenomenon, but not the name of it. I gave it
+that name out of respect for Pancharatnam, after thinking mathemati-
+cally about an optical phenomenon he described.
+It concerns a system depending on parameters and with two eigen-
+values. This tells you about the time development of something: you get
+exponentials that depend on the time, and they interfere with one an-
+other, and you observe beats. If they are degenerate, then in Hermitian
+physics there are still two separate eigenstates, and the beat frequency is
+zero. But if the system is non-Hermitian (e.g., if there is dissipation or
+gain) the two eigenvectors coincide as well as the eigenvalues. What
+happens, Pancharatnam asked, if you send in a beam of light with the
+wrong (i.e., orthogonal) polarization for the particular parameters of
+which there are degeneracies? Voigt, who in the 1900s did a lot of
+pioneering work on non-Hermitian physics, thought the light would
+be reflected. No. Pancharatnam showed that the polarization slowly
+evolves into the correct eigenvector. This is because, although there
+is one exponential instead of two, there are still two states; one of them
+is multiplied by t (or x if the evolution is in space).
+I called this the ghost of the departed eigenvector, and I named it
+Pancharatnam’s phenomenon because it explains what he did. He
+understood it in his own way, not in the algebraic way, but this doesn’t
+matter. It turned out to explain a number of other things, including
+experiments Anton Zeilinger had done. I was very pleased to find
+Pancharatnam’s paper and I thought his discovery deserved a name.
+Some names catch on and some don’t; I do not feel very strongly about
+this. Pancharatnam was a most original person, who died tragically
+young. His widow still lives in Oxford and I have met her. But I never
+met Pancharatnam and although I knew about Raman I never met him
+either. In the 1960s I had no connection with India and had no reason
+to know about Pancharatnam, because I didn’t know much about po-
+larized light.
+I don’t think my review that you mention is responsible for the post-
+humous appreciation of Pancharatnam. It’s much more the fact that,
+when I visited India for the second time and spoke about the geometric
+phase in 1986, Rajaram Nityananda and also Sivaraj Ramaseshan told
+me about the work of Pancharatnam and which they had remembered
+and just written about in Current Science. But my paper, that I
+wrote on the plane returning from India, “The adiabatic phase and
+Pancharatnam’s phase for polarized light” may have done more to
+revive his reputation, as well as my review in Current Science.
+Wei Liu: Have you discussed this Pancharatnam phenomenon with
+your friend Vladimir Arnold? I think he would be very interested, be-
+cause this belongs to his beloved field of partial differential equations.
+Michael Berry: He would have liked it, but I didn’t discuss with him
+and we didn’t discuss non-Hermitian operators at all. I met him in 1990,
+when he came to Bristol. He stayed in my house for a week and we
+discussed many things. But at that point I had not started thinking
+seriously about non-Hermitian operators. He was concerned mainly
+with Hermitian operators in Hamiltonian systems (he had some work
+on dissipation but nothing quantum). So I don’t think he knew or
+thought much about non-Hermitian degeneracies, which is the heart
+of my own interest in the subject.
+Wei Liu: Have you discussed this phenomenon with Carl Bender, who
+is now famous for PT symmetry?
+Michael Berry: I don’t remember if I did. He might have heard me
+speak about it, but specifically this Pancharatnam phenomenon, con-
+cerning the non-Hermitian degenerate state?—No, I don’t think I
+discussed it with him. Whether he would be interested in it, I am
+not sure. He certainly knew about the degeneracies, more generally
+as well as in the context of PT symmetry. PT has been very popular
+but it’s a small part of non-Hermitian mathematics and physics. Of
+course degeneracies do occur in PT systems, resulting in what Carl
+Bender calls PT symmetry breaking. There is nothing particularly
+different about such degeneracies being PT. So I don’t think we’ve
+specifically discussed this.
+Wei Liu: Here we come to your contributions to singularities, including
+singularities of intensity, caustics; singularities of phase, vortices; and
+singularities of polarization. Who influenced you most on your singu-
+larity works? Is that Vladimir Arnold and René Thom?
+Michael Berry: Neither. It was before interactions with them. Their
+work was a revelation later, when I realized that it was in a sense
+the completion of one aspect of the subject that I will talk about in
+a moment. I was interested in caustics before, from lectures I heard
+in 1964, when I was a graduate student, lectures by J. L. Synge, a bril-
+liant relativist from Dublin. The first lecture course I gave, when I was
+a graduate student (again to earn some money: my supervisor was
+sensitive to the fact that I had a young child), was on general relativity.
+INTERVIEW
+Advanced Photonics
+010503-5
+Jan∕Feb 2022 • Vol. 4(1)
+
+
+--- PDF PAGE 6 ---
+This was very difficult for me; as I told you, I didn’t know much math-
+ematics then. While preparing the course, I read many books, and the
+ones that really impressed me were by Synge. My supervisor, Professor
+Dingle, told me that Synge would be giving some lectures in London,
+and I attended them. But the lectures weren’t about relativity at all.
+They were about the Hamiltonian theory of rays and waves, and caus-
+tics played a role (describing water waves scattered by an island).
+I realized immediately that caustics would be central in combining
+two subjects I was beginning to glimpse as areas for future study:
+the mathematical asymptotics that Dingle was developing, and under-
+standing the connection between classical and quantum. Synge’s
+lectures had a big influence on me. So I like caustics and soon discov-
+ered that you see them not only in quantum physics but also in optics,
+for example on the bottom of swimming pools.
+When I learned about Thom and Arnold, which was 10 years later,
+what was important is that they described the forms of caustics that
+occur naturally, which is the exact opposite of what you have in optical
+instruments. In optical instruments you artificially seek to create
+caustics that are points: nongeneric, unstable. The perfect focus is
+an example; anything else was what in optics is called an aberration.
+The new mathematics, called catastrophe theory, enabled concrete
+statements about caustics that occur naturally. In Bristol we extensively
+developed “catastrophe optics” as a distinct area of physics, culminat-
+ing in my long review with Colin Upstill in 1980, and the masterly book
+by John Nye 20 years later. Already in the 1960s, before I knew about
+Thom and Arnold and catastrophes, I had realized that caustics were the
+singularities of ray optics, places where wave optics is most dramati-
+cally apparent: it smooths the singularities in characteristic ways, and
+decorates them by interference.
+Wei Liu: After caustics, the next question is about phase singularity and
+its difference from orbital angular momentum. Do you think phase
+singularity is more fundamental and generic than orbital angular
+momentum? Phase singularities do not necessarily produce non-zero
+orbital angular momentum, while I believe when there is orbital angular
+momentum, phase singularities have to be present somewhere.
+Michael Berry: Phase singularities are certainly generic, but I cannot
+say if they are more fundamental. They describe different aspects, re-
+lated in some ways, and not others. My own inclination, according to
+my general scientific philosophy, is towards understanding the singu-
+larities, because this is the way in which one regime of physics is related
+to another. Phase singularities (a.k.a. optical vortices, wave disloca-
+tions, or nodal sets) are the singularities of wave optics in the sense that
+caustics are the singularities of ray optics; there is complementarity,
+a perspective I like.
+Orbital angular momentum is very important and fundamental, even
+though the connection with phase singularity is more an overlap than an
+identity. I refer to the fact that orbital angular momentum isn’t directly
+associated with the zeros, because there’s no intensity there. But it’s
+associated with aspects of the wave away from the zeros, and the zeros
+sometimes can organize orbital angular momentum. This is especially
+true in many applications, which is why this myth persists about
+the connection being inevitable. If you are considering eigenstates
+of orbital angular momentum, then the two concepts are connected.
+But you can have superpositions of eigenstates and there, as I showed
+with examples in the 1990s, you can have distributions of singularities
+unrelated to the orbital angular momentum, which is an integral over
+the whole beam.
+Wei Liu: You told me Les Allen discussed with you on a train about his
+work on orbital angular momentum before it was published in Physical
+Review A, which is now a very famous paper. You did not recognize the
+significance of his work at the very beginning, and you have just ex-
+plained why. What surprises me is that Les Allen and others had also
+failed to recognize the significance of your work with Nye about phase
+singularity, as he did not cite your paper in his Physical Review A paper
+anyway. Can you guess the reason why most researchers working on
+orbital angular momentum have failed to appreciate the significance of
+phase singularities?
+Michael Berry: People have different interests, and it’s taken a long
+time for the singularity point of view, if I can put it that way, to become
+popular. It is still not as popular as, for example, mechanical analogies
+like angular momentum. You asked me about the psychology of my
+fellow physicists, who might appreciate one and not the other; you
+should ask them. My guess is that the singularity approach is still
+thought of as something rather slightly eccentric, off the mainstream,
+although it is getting more popular now. Sometimes it takes time for
+ideas to penetrate and become popular. It hasn’t fully happened with
+singularities, to the extent that I have hoped; I’m not complaining.
+Wei Liu: The next question is about polarization singularity. When you
+explain geometric phase, you would refer to Hamilton’s diabolical
+point, conical refraction and the associated half-turn of the polarization.
+Why don’t you interpret this half-turn from the perspective of singular
+optics? You always interpret this from the perspective of geometric
+phase.
+Michael Berry: I don’t. The papers I wrote on conical refraction, start-
+ing in 1994, all emphasized the phenomenon as a singularity. At the
+same time, it illustrates geometric phase in a simple way—something
+I came to appreciate a little later. And it’s a nice way to give a historical
+perspective because it’s the first example known to me of a geometric
+phase in physics. When I give talks, I emphasize the connection with
+conical intersections, and I note that Hamilton understood these
+(implicitly) as singularities in the Fresnel wave surface.
+Wei Liu: You actually wrote a paper with Mark Dennis in 2003, titled
+“The optical singularities of birefringent dichroic chiral crystals,” ex-
+tending the original work on Hamilton’s diabolical point and conical
+refraction. It has been extended into crystals with chirality and loss, and
+then there is non-Hermitian degeneracy. So you remember that work
+with Mark Dennis?
+Michael Berry: I do remember it and I’m very proud of it. But that
+concerned the formalism of crystal optics, and I didn’t quite think
+of it as extending Hamilton; conical refraction is a particular phenome-
+non. You can see some of these structures in crystals by sending a
+beam in, but this was not a major part of the work with Mark Dennis.
+I developed the theory of conical refraction a year or so after the paper
+with Mark Dennis. And I worked on it with my student Mike Jeffrey,
+experimentally and also extending my paper to include chirality and
+dissipation, where some quite different phenomena occur; this culmi-
+nated in our review for Progress in Optics.
+The paper with Mark Dennis recreated crystal optics based on sin-
+gularities, as you know. We dedicated the paper to Sivaraj Ramaseshan
+and John Nye who were both 80 at about that time. This was something
+we were very happy to do, because John Nye wrote his highly influ-
+ential Physical Properties of Crystals, containing much more than
+optics (for example elasticity and symmetry groups), and Ramaseshan
+had written (with Ramachandran) the classic Handbuch der Physik
+article on crystal optics in the 1960s. I knew both, and respected them
+as people as well as scientists. The paper with Dennis considered the
+space of possible crystals in optics, based on the dielectric tensor (also
+the magnetic, but bianisotropy is something that came a little later). The
+dielectric tensor is a 3x3 matrix. If it’s simply birefringent, it’s a real
+symmetric matrix; if chiral, it’s complex Hermitian; if it has loss, it is
+INTERVIEW
+Advanced Photonics
+010503-6
+Jan∕Feb 2022 • Vol. 4(1)
+
+
+--- PDF PAGE 7 ---
+non-Hermitian. There are many parameters; how do you navigate in
+this enormous space? The singularities help greatly, by characterizing
+all the different things that can happen, qualitatively and quantitatively.
+That was our perspective: singularities (three different kinds) as organ-
+izing concepts.
+Wei Liu: You did not discuss geometric phase in that paper with Dennis.
+Michael Berry: We did talk about it because we wanted to define the
+local wavevector, but we didn’t discuss changing parameters, even
+though of course I knew the work of Pancharatnam by then and had
+already written about it. The full understanding of geometric phase
+in a spatially varying field came only relatively recently, in work by
+Dennis, with Konstantin Bliokh and Miguel Alonso, not me.
+Already in the mid-1990s I had worked with Susanne Klein, making
+stacks of crystal plates, enabling us to demonstrate Pancharatnam’s
+geometric phase for circuits on the Poincaré sphere. In the Raman
+Institute, Rajendra Bhandari had written similar papers. His circuits
+all involved arcs of great circles, but we wanted to understand how to
+make general circuits, by using combinations of quarter-wave plates,
+half-wave plates, polarizers, etc., and carry out demonstration ex-
+periments.
+Wei Liu: You have seminal contributions to geometric phase and you
+have seminal contributions to polarization singularities, but you rarely
+discuss them in the same paper. Is that true?
+Michael Berry: Well, no, it’s not true. In my original geometric phase
+paper I emphasized their connection with degeneracies, which are the
+singularities of the spectrum, and the sources of abstract monopoles.
+Wei Liu: I mean connections between geometric phase and polarization
+singularity, not general singularities.
+Michael Berry: My 1987 paper was precisely about the connection
+between Pancharatnam’s phase in crystal optics and the geometric phase
+in quantum mechanics. But you are right: there was no emphasis on the
+Nye-Hajnal polarization C and L line singularities. In a sense those phase
+changes are elementary: π round a C line and 2π round an L line.
+Wei Liu: We are now close to the end of this interview. I know you like
+music such as jazz, you like philosophy, and you like cooking. You
+even write poems. You wrote one about the Stokes phenomenon that
+you love.
+Michael Berry: That was my only poem.
+Wei Liu: Here I have a quotation from Dirac about poems and I would
+like to know what you think about it. Dirac said, “Physics and poems
+are in opposition. In science you want to say something nobody knew
+before, in words which everyone can understand. In poetry you are
+bound to say something that everybody knows already in words that
+nobody can understand.”
+Michael Berry: I’m not sure Dirac was entirely serious. I am not some-
+body who usually understands poetry, but this isn’t because I believe
+that poets deliberately or unconsciously write in ways that are obscure.
+It is that the level of abstraction and connections are often too abstruse
+for me to grasp—just as in some papers on pure mathematics, where the
+levels of abstraction are so general and assume so much that I don’t
+understand. I’m not criticizing poets, and I don’t agree with Dirac.
+There are different ways of hinting at connections that are not captured
+by physics and mathematics.
+Wei Liu: In your recent book, you thanked your children and three
+wives. I can thus believe that there must be turbulent times during your
+life, but this was not reflected at all in your publication list shown on
+your wonderful website. How did you go through those turbulent
+periods?
+Michael Berry: During troubled times in your life, doing science can be
+good therapy. When I was starting out in physics in my late 20s, my
+first wife and I were divorcing (we are good friends now), and doing
+physics enabled me to have some peace of mind during that difficult
+time. But now, thinking back, I would say that my domestic life has
+overall had very little effect on the physics I’ve done. There were times
+when I’ve thought they were more connected. This is a psychological
+matter, and one is unwise to pretend one understands oneself suffi-
+ciently to make reliable comments. Physics has been a constant,
+although my wives will tell you that there have been times when
+I’ve declared, after failing to understand something, that my days
+creating physics were over. But somehow new ideas came, and those
+episodes of disappointment faded.
+Wei Liu: At the end, can you give young researchers some suggestions,
+especially for those in developing countries like India and China.
+Michael Berry: There are plenty of role models. In India for example,
+Raman, and the astonishing mathematician Ramanujan (by the way,
+they came from the same area of Tamil Nadu, very interesting cultur-
+ally). People often ask what they should work on. Successful scientists
+are to some extent role models, but physics has to come from inside.
+You might take a while to find your feet in physics (for me, it was sev-
+eral years), but it’s ok to relax and enjoy exploring possibilities with
+determination and energy.
+There is a subject I’m enthusiastic about but don’t work on: quantum
+information theory. I think it’s enormously important. If I were starting
+afresh, I might choose that area (even though it’s fashionable!). It will
+change civilization, as mechanics, electromagnetism, and in the last
+century ordinary quantum mechanics, have changed civilization, in ways
+much more important than this or that king or queen or emperor or
+revolution or nationalism or whatever. Quantum information technology
+will be distinct from technologies that arose from previous quantum
+mechanics, because it involves the manipulation of individual quantum
+states. It is going to be hugely influential, in ways we can’t predict.
+Wei Liu: Professor Berry, this would be the end of this interview.
+Thank you very much for your suggestion and for all that you said
+in this interview.
+Wei Liu obtained his BSc and PhD degrees, both in physics, from Peking
+University and Australian National University, respectively. He works
+mainly on Mie theory, and its interactions with symmetry, topology, and
+singularity.
+Sir Michael Berry is a theoretical physicist at the University of Bristol,
+where he has been for more than twice as long as he has not. His
+research centers on the relations between physical theories at different
+levels of description (classical and quantum physics, ray optics and wave
+optics…). In addition to these deeply mathematical, often geometric,
+studies, he also delights in finding familiar phenomena illustrating deep
+concepts—the arcane in the mundane: rainbows, the sparkling of the
+sun on the sea, twinkling starlight, polarized light in the sky, tidal bores…
+For more information about Sir Michael Berry, please refer to https://
+michaelberryphysics.wordpress.com.
+INTERVIEW
+Advanced Photonics
+010503-7
+Jan∕Feb 2022 • Vol. 4(1)

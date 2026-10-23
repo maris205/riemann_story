@@ -1,0 +1,43 @@
+[
+  {
+    "file": "OpenAI_QRH_7over8.pdf",
+    "url": "https://raw.githubusercontent.com/openai/math/main/preprints/The-Quasi-Riemann-Hypothesis-September-30-2026/paper.pdf",
+    "sha256": "8fe93046f8cf5ef1ba5969c89addc02d76311adc4ee907509ff9cd96f7ec99e7",
+    "downloaded": "2026-10-23",
+    "pages": 199
+  },
+  {
+    "file": "OpenAI_QRH_11over12.pdf",
+    "url": "https://raw.githubusercontent.com/openai/math/main/preprints/The-Quasi-Riemann-Hypothesis-October-5-2026/paper2.pdf",
+    "sha256": "f919b57829b178c8e60e7c17b018cf773e7907cf642ef5a3347d8a826e8dbf18",
+    "downloaded": "2026-10-23",
+    "pages": 49
+  },
+  {
+    "file": "OpenAI_Uniform_Landau_Siegel.pdf",
+    "url": "https://raw.githubusercontent.com/openai/math/main/preprints/Uniform-exclusion-of-Landau-Siegel-zeros-October-1-2026/paper.pdf",
+    "sha256": "fab9f6e84ece2a37d834b2c031d8eb14e81413d9f6270791e7b5468b295214ef",
+    "downloaded": "2026-10-23",
+    "pages": 9
+  },
+  {
+    "file": "Liu_2610.12234v2.pdf",
+    "url": "https://arxiv.org/pdf/2610.12234v2",
+    "sha256": "5ed4bb381d9721e0e1138600ae95871e27de372b00c434a4ff5a3a9dc600ae6e",
+    "downloaded": "2026-10-23",
+    "pages": 77
+  },
+  {
+    "file": "formal_003.md",
+    "url": "https://raw.githubusercontent.com/openai/math/main/lean/docs/003.md",
+    "sha256": "41e52ed718260e6feb1db218f8e97287e703cb63c6f16e6c36f5563e6e2395ce",
+    "downloaded": "2026-10-23"
+  },
+  {
+    "file": "Dunn_Radziwill_2109.07463.pdf",
+    "url": "https://arxiv.org/pdf/2109.07463v3",
+    "pages": 79,
+    "sha256": "df888f8527b3647a3428d6677a3e3070aab7439f79f737f3e894218fb64cfef0",
+    "downloaded": "2026-10-23"
+  }
+]

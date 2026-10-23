@@ -41,3 +41,28 @@ release/families/coverage使用已注明日期的官方公开计数。certificat
 建议在原始2880×1440分辨率下检查中文字、图例及边界；SVG将字形转路径便于移植。本次PNG已实际查看并调整立方体与文字间距。
 
 validation.json是运行时生成的数值核验记录，不属于书稿资产，不纳入仓库。
+
+## 第16章史料图与算术检查
+
+运行 `python prepare_chapter16_assets.py`，从本地PDF提取标题局部，并从原照片生成正文缩略图；使用PyMuPDF、Pillow、mpmath。脚本复算主常数、短区间常数与正文四数字例子，输出 `16_arithmetic_checks.json`。不联网，不改原件，不执行Lean工程。
+
+## 第17章史料图
+
+运行 `python prepare_chapter17_assets.py`，由本地NS论文提取Figure 1图形部分，并为双人照片生成展示缩略图。依赖PyMuPDF和Pillow；内置的均值与能量指数检查只是科普例子，不是NS模拟或Lean验证。
+
+
+## 第18章图内章号更新（2026-10-23）
+
+在本目录调用`python -c "import render_ai_figures as a; import render_finishing as b; a.regions(); b.envelope(); b.symmetry()"`可只重建本章三幅图，避免改写其他章节输出。所用样式支持Noto Sans CJK或Windows微软雅黑回退；数学内容不变，仅将图内旧章号17更正为18。[来源与解释边界](../../资料/18_被拉直的边界/图片与复现.md)。
+
+## 第19章（2026-10-23）
+
+`render_siegel_exercises.py`生成两幅原创教学图的PNG/SVG，并保存`19_teaching_checks.json`。解释大小/整除冲突与多项式重数，不是研究定理的数值验证。
+
+## 第20章（2026-10-23）
+
+`render_human_math.py`生成立方差分与证明翻译两幅教学图的PNG/SVG，保存`20_teaching_checks.json`。它核对差分和代数关系，不代表执行研究论文中的模型或Lean实验。
+
+## 第21章（2026-10-23）
+
+在本目录调用 `python -c "import render_depth as r; r.epsilon(); r.certificates(); r.constraints()"`，仅重绘本章两幅正文图和一幅留存图。将旧章号20改为21，样式增加Windows微软雅黑字体回退；输出PNG/SVG。数学内容与教学示意身份不变。[研究底稿](../../资料/21_未来之路/README.md)。

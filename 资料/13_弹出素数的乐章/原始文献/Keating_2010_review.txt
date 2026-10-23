@@ -1,0 +1,3400 @@
+
+--- PDF PAGE 1 ---
+S´eminaire Poincar´e XIV (2010) 115 – 153
+S´eminaire Poincar´e
+Quantum chaos, random matrix theory, and the Riemann ζ-function
+Paul Bourgade
+T´el´ecom ParisTech
+23, Avenue d’Italie
+75013 Paris, FR.
+Jonathan P. Keating
+University of Bristol
+University Walk, Clifton
+Bristol BS8 1TW, UK.
+Hilbert and P´olya put forward the idea that the zeros of the Riemann zeta
+function may have a spectral origin : the values of tn such that 1
+2 + itn is a non
+trivial zero of ζ might be the eigenvalues of a self-adjoint operator. This would imply
+the Riemann Hypothesis. From the perspective of Physics one might go further and
+consider the possibility that the operator in question corresponds to the quantization
+of a classical dynamical system.
+The ﬁrst signiﬁcant evidence in support of this spectral interpretation of the
+Riemann zeros emerged in the 1950’s in the form of the resemblance between the
+Selberg trace formula, which relates the eigenvalues of the Laplacian and the closed
+geodesics of a Riemann surface, and the Weil explicit formula in number theory,
+which relates the Riemann zeros to the primes. More generally, the Weil explicit
+formula resembles very closely a general class of Trace Formulae, written down by
+Gutzwiller, that relate quantum energy levels to classical periodic orbits in chaotic
+Hamiltonian systems.
+The second signiﬁcant evidence followed from Montgomery’s calculation of the
+pair correlation of the tn’s (1972) : the zeros exhibit the same repulsion as the eigen-
+values of typical large unitary matrices, as noted by Dyson. Montgomery conjectured
+more general analogies with these random matrices, which were conﬁrmed by Odlyz-
+ko’s numerical experiments in the 80’s.
+Later conjectures relating the statistical distribution of random matrix eigen-
+values to that of the quantum energy levels of classically chaotic systems connect
+these two themes.
+We here review these ideas and recent related developments : at the rigorous
+level strikingly similar results can be independently derived concerning number-
+theoretic L-functions and random operators, and heuristics allow further steps in the
+analogy. For example, the tn’s display Random Matrix Theory statistics in the limit
+as n →∞, while lower order terms describing the approach to the limit are described
+by non-universal (arithmetic) formulae similar to ones that relate to semiclassical
+quantum eigenvalues. In another direction and scale, macroscopic quantities, such
+as the moments of the Riemann zeta function along the critical line on which the
+Riemann Hypothesis places the non-trivial zeros, are also connected with random
+matrix theory.
+1
+First steps in the analogy
+This section describes the fundamental mathematical concepts (i.e. the Riemann
+zeta function and random operators) the connections between which are the focus of
+
+
+--- PDF PAGE 2 ---
+116
+P. Bourgade and J.P. Keating
+S´eminaire Poincar´e
+this survey : linear statistics (trace formulas) and microscopic interactions (fermionic
+repulsion). These statistical connections have since been extended to many other L-
+functions (in the Selberg class [45], over function ﬁelds [39]) : for the sake of brevity
+we only consider the Riemann zeta function.
+1.1
+Basic theory of the Riemann zeta function
+The Riemann zeta function can be deﬁned, for σ = ℜ(s) > 1, as a Dirichlet
+series or an Euler product :
+ζ(s) =
+∞
+X
+n=1
+1
+ns =
+Y
+p∈P
+1
+1 −1
+ps
+,
+where P is the set of all prime numbers. The second equality is a consequence of
+the unique factorization of integers into prime numbers. A remarkable fact about
+this function, proved in Riemann’s original paper, is that it can be meromorphi-
+cally extended to the complex plane, and that this extension satisﬁes a functional
+equation.
+Theorem 1.1. The function ζ admits an analytic extension to C−{1} which satisﬁes
+the equation (writing ξ(s) = π−s/2Γ(s/2)ζ(s))
+ξ(s) = ξ(1 −s).
+Proof. The gamma function is deﬁned for ℜ(s) > 0 by Γ(s) =
+R ∞
+0 e−tts−1dt, hence,
+substituting t = πn2x,
+π−s
+2Γ
+s
+2
+ 1
+ns =
+Z ∞
+0
+x
+s
+2 −1e−n2πxdx.
+If we sum over n, the sum and integral can be exchanged for ℜ(s) > 1 because of
+absolute convergence, hence
+π−s
+2Γ
+s
+2
+
+ζ(s) =
+Z ∞
+0
+x
+s
+2 −1ω(x)dx
+(1)
+for ω(x) = P∞
+n=1 e−n2πx. The Poisson summation formula implies that the Jacobi
+theta function θ(x) = P∞
+n=−∞e−n2πx satisﬁes the functional equation
+θ
+1
+x
+
+= √x θ(x),
+hence 2ω(x)+1 = (2ω(1/x)+1)/√x. Equation (1) therefore yields, by ﬁrst splitting
+the integral at x = 1 and substituting 1/x for x between 0 and 1,
+ξ(s) =
+Z ∞
+1
+x
+s
+2 −1ω(x)dx +
+Z ∞
+1
+x−s
+2 −1ω
+1
+x
+
+dx
+=
+Z ∞
+1
+x
+s
+2 −1ω(x)dx +
+Z ∞
+1
+x−s
+2 −1
+
+−1
+2 +
+√x
+2 + √xω (x)
+
+dx
+ξ(s) =
+1
+s(s −1) +
+Z ∞
+1
+
+x−s
+2 −1
+2 + x
+s
+2 −1
+ω(x)dx,
+
+
+--- PDF PAGE 3 ---
+Vol. XIV, 2010
+Quantum chaos, random matrix theory, and the Riemann ζ-function
+117
+still for ℜ(s) > 1. The right hand side is properly deﬁned on C −{0, 1} (because
+ω(x) = O(e−πx) as x →∞) and invariant under the substitution s →1 −s : the
+expected result follows.
+Fig. 1 – The ﬁrst ζ zeros : 1/|ζ| in the domain
+−2 < σ < 2, 10 < t < 50.
+From the above theorem, the zeta
+function admits trivial zeros at s =
+−2, −4, −6, . . .
+corresponding to the
+poles of Γ(s/2). All all non-trivial zeros
+are conﬁned in the critical strip 0 ≤σ ≤
+1, and they are symmetrically positio-
+ned about the real axis and the critical
+line σ = 1/2. The Riemann hypothesis
+asserts that they all lie on this line.
+One can deﬁne the argument of ζ(s)
+continuously along the line segments
+from 2 to 2+it to 1/2+it. Then the num-
+ber of such zeros ρ counted with multi-
+plicities in 0 < ℑ(ρ) < t is asymptoti-
+cally (as shown by a calculus of residues)
+N(t) = t
+2π log
+t
+2πe + 1
+π arg ζ
+1
+2 + it
+
++ 7
+8 + O
+1
+t
+
+.
+(2)
+In particular, the mean spacing between ζ zeros at height t is is 2π/ log |t|.
+The fact that there are no zeros on σ = 1 led to the proof of the prime number
+theorem, which states that
+π(x) ∼
+x→∞
+x
+log x,
+(3)
+where π(x) = |P ∩J1, xK|. The proof makes use of the Van Mangoldt function,
+Λ(n) = log p if n is a power of a prime p, 0 otherwise : writing ψ(x) = P
+n≤x Λ(n),
+(3) is equivalent to limx→∞Ψ(x)/x = 1, because obviously ψ(x) ≤π(x) log x and, for
+any ε > 0, ψ(x) ≥P
+x1−ε≤p≤x log p ≥(1 −ε)(log x)(π(x) + O(x1−ε)). Diﬀerentiating
+the Euler product for ζ, if ℜ(s) > 1,
+−ζ′
+ζ (s) =
+X
+n≥1
+Λ(n)
+ns ,
+which allows one to transfer the problem of the asymptotics of ψ to analytic pro-
+perties of ζ : for c > 0, by a residues argument
+1
+2πi
+Z c+i∞
+c−i∞
+ys
+s ds = 0 if 0 < y < 1, 1 if y > 1,
+hence
+ψ(x) =
+∞
+X
+n=2
+Λ(n) 1
+2πi
+Z c+i∞
+c−i∞
+(x/n)s
+s
+ds
+=
+1
+2πi
+Z c+it
+c−it
+
+−ζ′
+ζ (s)
+
+dsxs
+s ds + O
+x log2 x
+t
+
+,
+(4)
+
+
+--- PDF PAGE 4 ---
+118
+P. Bourgade and J.P. Keating
+S´eminaire Poincar´e
+where the error term, created by the bounds restriction, is made explicit and small
+by the choice c = 1 + 1/ log x. Assuming the Riemann hypothesis for the moment,
+for any 1/2 < σ < 1, one can change the integral path from c−it, c+it to σ+it, σ−it
+by just crossing the pole at s = 1, with residue x :
+ψ(x) = x + 1
+2πi
+Z σ+it
+σ−it
+
+−ζ′
+ζ (s)
+
+dsxs
+s ds + O
+x log2 x
+t
+
+.
+Independently, still under the Riemann hypothesis, one can show the bound ζ′/ζ(σ+
+it) = O(log t), implying ψ(x) = x+O(xθ) for any θ > 1/2, by choosing t = x. What if
+we do not assume the Riemann hypothesis ? The above reasoning can be reproduced,
+giving a worse error bound, provided that the integration path on the right hand side
+of (4) can be changed crossing only one pole and making ζ′/ζ small by approaching
+suﬃciently the critical axis. This is essentially what was proved independently in
+1896 by Hadamard and La Vall´ee Poussin, who showed that ζ(σ +it) cannot be zero
+for σ > 1 −c/ log t, for some c > 0. This ﬁnally yields
+π(x) = Li(x) + O
+
+xe−c√log x
+, where Li(x) =
+Z x
+0
+ds
+log s,
+while the Riemann hypothesis would imply π(x) = Li(x)+O(√x log x). It would also
+have consequences for the extreme size of the zeta function (the Lindel¨of hypothesis) :
+for any ε > 0
+ζ(1/2 + it) = O(tε),
+which is equivalent to bounds on moments of ζ discussed in Section 3.
+1.2
+The explicit formula
+We now consider the ﬁrst analogy between the zeta zeros and spectral properties
+of operators, by looking at linear statistics. Namely, we state and give key ideas
+underlying the proofs of Weil’s explicit formula concerning the ζ zeros and Selberg’s
+trace formula for the Laplacian on surfaces with constant negative curvature.
+First consider the Riemann zeta function. For a function f : (0, ∞) →C consider
+its Mellin transform F(s) =
+R ∞
+0 f(s)xs−1dx. Then the inversion formula (where σ is
+chosen in the fundamental strip, i.e. where the image function F converges)
+f(x) =
+1
+2πi
+Z σ+i∞
+σ−i∞
+F(s)x−sds
+holds under suitable smoothness assumptions, in a similar way as the inverse Fourier
+transform. Hence, for example,
+∞
+X
+n=2
+Λ(n)f(n) =
+∞
+X
+n=2
+Λ(n) 1
+2πi
+Z 2+i∞
+2−i∞
+F(s)n−sds =
+1
+2πi
+Z 2+i∞
+2−i∞
+
+−ζ′
+ζ
+
+(s)F(s)ds.
+Changing the line of integration from ℜ(s) = 2 to ℜ(s) = −∞, all trivial and non-
+trivial poles (as well as s = 1) are crossed, leading to the following explicit formula
+by Weil.
+
+
+--- PDF PAGE 5 ---
+Vol. XIV, 2010
+Quantum chaos, random matrix theory, and the Riemann ζ-function
+119
+Theorem 1.2. Suppose that f is C 2 on (0, ∞) and compactly supported. Then
+X
+ρ
+F(ρ) +
+X
+n≥0
+F(−2n) = F(1) +
+X
+p∈P,m∈N
+(log p) f(pm),
+where the ﬁrst sum the ﬁrst sum is over non-trivial zeros counted with multiplicities.
+When replacing the Mellin transform by the Fourier transform, the Weil explicit
+formula takes the following form, for an even function h, analytic on |ℑ(z)| < 1/2+δ,
+bounded, and decreasing as h(z) = O(|z|−2−δ) for some δ > 0. Here, the sum is over
+all γn’s such that 1/2 + iγn is a non-trivial zero, and ˆh(x) =
+1
+2π
+R ∞
+−∞h(y)e−ixydy :
+X
+γn
+h(γn) −2h
+ i
+2
+
+= 1
+2π
+Z
+R
+h(r)
+Γ′
+Γ
+1
+4 + i
+2r
+
+−log π
+
+dr
+−2
+X
+p∈Pm∈N
+log p
+pm/2 ˆh(m log p).
+(5)
+Fig. 2 – Geodesics and a fundamental domain (for the modular
+group) in the hyperbolic plane.
+A formally similar re-
+lation holds in a diﬀerent
+context, through Selberg’s
+trace formula. In one of
+its simplest manifestations,
+it can be stated as fol-
+lows. Let Γ\H be an hy-
+perbolic surface, where Γ
+is a subgroup of PSL2(R),
+orientation-preserving iso-
+metries of the hyperbolic
+plane H = {x + iy, y >
+0}, the Poincar´e half-plane
+with metric
+dµ = dxdy
+y2 .
+(6)
+The Laplace-Beltrami operator ∆= y2(∂xx + ∂yy) is self-adjoint with respect to
+the invariant measure (6), i.e.
+R
+v(∆u)dµ =
+R
+(∆v)udµ, so all eigenvalues of ∆are
+real and positive. If Γ\H is compact, the spectrum of ∆restricted to a fundamental
+domain D of representatives of the conjugation classes is discrete, 0 = λ0 < λ1 < . . .
+with associated eigenfunctions u1, u2, . . . :
+
+(∆+ λn)un
+=
+0,
+un(γz)
+=
+un(z) for all γ ∈Γ, z ∈H.
+To state Selberg’s trace formula, we need, as previously, a function h analytic on
+|ℑ(z)| < 1/2 + δ, even, bounded, and decreasing as h(z) = O(|z|−2−δ), for some
+δ > 0.
+Theorem 1.3. Under the above hypotheses, setting λk = sk(1 −sk), sk = 1/2 + irk,
+then
+∞
+X
+k=0
+h(rk) = µ(D)
+2π
+Z ∞
+−∞
+rh(r) tanh(πr)dr +
+X
+p∈P,m∈N∗
+ℓ(p)
+2 sinh
+
+mℓ(p)
+2
+ˆh(mℓ(p)),
+(7)
+
+
+--- PDF PAGE 6 ---
+120
+P. Bourgade and J.P. Keating
+S´eminaire Poincar´e
+where ˆh is the Fourier transform of h (ˆh(x) =
+1
+2π
+R ∞
+−∞h(y)e−ixydy), P is now the set
+of all primitive1 periodic orbits2 and ℓis the geodesic distance for the metric (6).
+Sketch of proof. It is a general fact that the eigenvalue density function d(λ) is linked
+to the Green function associated to λ ((∆+λ)G(λ)(z, z′) = δz−z′, where δ is the Dirac
+distribution at 0) through
+d(λ) = −1
+π
+Z
+D
+ℑ
+ G(λ)(z, z)
+
+dµ.
+To calculate G(λ), we need to sum the Green function associated to the whole Poin-
+car´e half plane over the images of z by elements of Γ (in the same way as the
+transition probability from z′ to z is the sum of all transition probabilities to images
+of z) :
+G(λ)(z, z′) =
+X
+γ∈Γ
+G(λ)
+H (γ(z), z′).
+Thanks to the numerous isometries of H, the geodesic distance for the Poincar´e
+plane is well-known. This yields an explicit form of the Green function, leading to
+d(λ) =
+1
+2
+√
+2π2
+X
+γ∈Γ
+Z
+dµ(z)
+Z ∞
+ℓ(z,γ(z))
+sin(rs)
+p
+cosh s −cosh ℓ(z, γ(z))
+ds,
+with λ = 1/4+r2. The mean density of states corresponds to γ = Id and an explicit
+calculation yields
+⟨d(λ)⟩= µ(D)
+4π
+tanh(πr).
+It is not clear at this point how the primitive periodic orbits appear from the elements
+in Γ. The sum over group elements γ can be written as a sum over conjugacy classes
+γ. This gives
+d(λ) = ⟨d(λ)⟩+
+X
+γ
+dγ(λ)
+where
+dγ(λ) =
+1
+2
+√
+2π2
+Z
+FD(γ)
+dµ(z)
+Z ∞
+ℓ(z,γ(z))
+sin(rs)
+p
+cosh s −cosh ℓ(z, γ(z))
+ds,
+where FD(γ) is the fundamental domain associated to the subgroup Sγ of elements
+commuting with γ (independent of the representant of the conjugacy class). The
+subgroup Sγ is generated by an element γ0 :
+Sγ = {γm
+0 , m ∈Z}.
+Then an explicit (but somewhat tedious) calculation gives
+dγ(λ) =
+ℓ(0)(p)
+4π sinh
+
+sℓ(p)
+2
+ cos(sℓ(p)),
+1i.e. not the repetition of shorter periodic orbits
+2of the geodesic ﬂow on Γ\H
+
+
+--- PDF PAGE 7 ---
+Vol. XIV, 2010
+Quantum chaos, random matrix theory, and the Riemann ζ-function
+121
+where ℓ(0)(p) (resp. ℓ(p)) is deﬁned by 2 cosh ℓ(0)(p) = Tr(γ0) (resp. 2 cosh ℓ(p) =
+Tr(γ)). Independent calculation shows that ℓ(0)(p) (resp. ℓ(p)) is also the length
+between z and γ0(z) (resp. z and γ(z)). Hence they are the lengths of the unique
+(up to conjugation) periodic orbits associated to γ0 (resp. γ). The above proof sketch
+can be made rigorous by integrating d with respect to a suitable test function h.
+The similarity between both explicit formulas (5) and (7) suggests that prime
+numbers may correspond to primitive orbits, with lengths log p, p ∈P. This analogy
+remains when counting primes and primitive orbits. Indeed, as a consequence of
+Selberg’s trace formula, the number of primitive orbits with length less than x is
+|{ℓ(p) < x}| ∼
+x→∞
+ex
+x ,
+and following the prime number theorem (3),
+|{log(p) < x}| ∼
+x→∞
+ex
+x .
+These connections are reviewed at much greater length in [5].
+Finally, note that the signs of the oscillating parts are diﬀerent between equation
+(5) and (7). One explanation by Connes [12] suggests that the ζ zeros may not be in
+the spectrum of an operator but in its absorption : for an Hermitian operator with
+continuous spectrum along the whole real axis, they would be exactly the missing
+points where the eigenfunctions vanish.
+1.3
+Basic theory of random matrices eigenvalues
+As we will see in the next section, the correlations between ζ zeros show striking
+similarities with those known to exist between the eigenvalues of random matrices.
+This adds further weight to the idea that there may be a spectral interpretation of
+the zeros and provides another link with the theory of quantum chaotic systems.
+We need ﬁrst to introduce the matrices we will consider. These have the property
+that their spectrum has an explicit joint distribution, exhibiting a two-point repul-
+sive interaction, like fermions. Importantly, these correlations have a determinantal
+structure.
+If χ = P
+i δXi is a simple point process on a complete separate metric space Λ,
+consider the point process
+Ξ(k) =
+X
+Xi1,...,Xikall distinct
+δ(Xi1,...,Xik)
+(8)
+on Λk. One can deﬁne in this way a measure Mk on Λk by M (k)(A) = E
+ Ξ(k)(A)
+
+for any Borel set A in Λk. Most of the time, there is a natural measure λ on Λ,
+in our cases Λ = R or (0, 2π) and λ is the Lebesgue measure. If M (k) is absolutely
+continuous with respect to λk, there exists a function ρk on Λk such that for any
+Borel sets B1, . . . , Bk in Λ
+M (k)(B1 × · · · × Bk) =
+Z
+B1×···×Bk
+ρk(x1, . . . , xk)dλ(x1) . . . dλ(xk).
+
+
+--- PDF PAGE 8 ---
+122
+P. Bourgade and J.P. Keating
+S´eminaire Poincar´e
+Hence one can think about ρk(x1, . . . , xk) as the asymptotic (normalized) probability
+of having exactly one particle in neighborhoods of the xk’s. More precisely under
+suitable smoothness assumptions, and for distinct points x1, . . . , xk in Λ = R,
+ρk(x1, . . . , xk) = lim
+ε→0
+P (χ(xi, xi + ε) = 1, 1 ≤i ≤k)
+Qk
+j=1 λ(xj, xj + ε)
+.
+This is called the kth-order correlation function of the point process. Note that ρk
+is not a probability density. If χ consists almost surely of n points, it satisﬁes the
+integration property
+(n −k)ρk(x1, . . . , xk) =
+Z
+Λ
+ρk+1(x1, . . . , xk+1)dλ(xk+1).
+(9)
+A particularly interesting class of point processes is the following.
+Deﬁnition 1.4. If there exists a function K : R × R →R such that for all k ≥1 and
+(z1, . . . , zk) ∈Rk
+ρk(z1, . . . , zk) = det
+ K(zi, zj)k
+i,j=1
+
+then χ is said to be a determinantal point process with respect to the underlying
+mesure λ and correlation kernel K.
+The determinantal condition for all correlation functions looks very restrictive,
+but it is not : for example, if the joint density of all n particles can be written as a
+Vandermonde-type determinant, then so can the lower order correlation functions,
+as shown by the following argument, standard in Random Matrix Theory. It shows
+that for a Coulomb gas at a speciﬁc temperature (1/2) in dimension 1 or 2, all
+correlations functions are explicit, a very noteworthy feature.
+Proposition 1.5. Let dλ be a probability measure on C (eventually concentrated on
+a line) such that for the Hermitian product
+(f, g) 7→⟨f, g⟩=
+Z
+fgdλ
+polynomial moments are deﬁned till order at least n −1. Consider the probability
+distribution with density
+F(x1, . . . , xn) = c(n)
+Y
+k<l
+|xl −xk|2
+with respect to Qn
+j=1 dλ(xj), where c(n) is the normalization constant. For this joint
+distribution, {x1, . . . , xn} is a determinantal point process with explicit kernel.
+Proof. Let Pk (0 ≤k ≤n −1) be monic polynomials with degree k. Thanks to
+Vandermonde’s formula and the multilinearity of the determinant
+Y
+k<l
+(xl −xk) =
+n
+v
+u
+u
+t
+n−1
+Y
+k=0
+∥Pk∥L2(λ) det
+ 
+Pk(xj)
+∥Pk∥L2(λ)
+!n
+k,j=1
+.
+Multiplying this identity with itself and using det(AB) = det A det B gives
+F(x1, . . . , xn) = det
+ Kn(xj, xk)n
+j,k=1
+
+
+
+--- PDF PAGE 9 ---
+Vol. XIV, 2010
+Quantum chaos, random matrix theory, and the Riemann ζ-function
+123
+with Kn(x, y) = c Pn−1
+k=0
+Pk(x)Pk(y)
+∥Pk∥2
+L2(λ) , the constant c depending on λ, n and the Pi’s.
+This shows that the correlation ρn has the desired determinantal form. The following
+lemma by Gaudin (see [33]) together with the integration property (9) shows that
+if the polynomials Pk’s are orthogonal in L2(λ), then
+ρl(x1, . . . , xl) = det
+ Kn(xj, xk)l
+j,k=1
+
+for all 1 ≤l ≤n. The probability density condition
+R
+R ρ1(x)dλ(x) = n implies c = 1,
+and ﬁnally the Christoﬀel-Darboux formula for orthogonal polynomials gives
+Kn(x, y) =
+n−1
+X
+k=0
+Pk(x)Pk(y)
+∥Pk∥2
+L2(f)
+=
+1
+∥Pn∥2
+L2(f)
+Pn(x)Pn−1(y) −Pn−1(x)Pn(y)
+x −y
+.
+(10)
+which concludes the proof.
+Lemma 1.6. Suppose that the function K satisﬁes, for some measurable set I, the
+semigroup relation
+R
+I K(x, y)K(y, z)dλ(y) = K(x, z) for all x and z in I, and denote
+n =
+R
+I K(x, x)dλ(x). Then for all k,
+Z
+(k+1)×(k+1)
+det K(xi, xj)dλ(xk+1) = (n −k) det
+k×k K(xi, xj).
+We apply the above discussion to the follo-
+wing examples, which are among the most stu-
+died random matrices. The ﬁrst involves Hermi-
+tian matrices with Gaussian entries ; the second
+relates to a compact group : uniformly distri-
+buted unitary matrices. Their spectrum is a de-
+terminantal point process, which implies a re-
+pulsion between the eigenvalues, similar to that
+between fermions. We illustrate this here with
+one example of determinantal statistics (eigen-
+values of a Haar-distributed unitary matrix, ou-
+ter circle) together with, for comparison, Poisson
+distributed points (uniform independent points, inner circle), in dimension n = 30.
+First, consider the so-called Gaussian unitary ensemble (GUE). This is the
+ensemble of random n × n Hermitian matrices with independent (up to symmetry)
+Gaussian entries : M (n)
+ij
+= M (n)
+ji
+=
+1
+√n(Xij + iYij), 1 ≤i < j ≤n, where the Xij’s
+and Yij’s are independent centered real Gaussians entries with mean 0 and variance
+1/2 and M (n)
+ii
+= Xii/√n with Xii real centered Gaussians with variance 1, still
+independent. For this ensemble, the distribution of the eigenvalues has an explicit
+density
+1
+Zn
+e−n Pn
+i=1 λ2
+i /2
+Y
+1≤i<j≤n
+|λi −λj|2
+(11)
+with respect to the Lebesgue measure. We denote by (hn) the Hermite polynomials,
+more precisely the successive monic polynomials orthogonal with respect to the
+
+
+--- PDF PAGE 10 ---
+124
+P. Bourgade and J.P. Keating
+S´eminaire Poincar´e
+Gaussian weight e−x2/2dx, and the associated normalized functions
+ψk(x) =
+e−x2/4
+p√
+2πk!
+hk(x).
+Then from (10), the set of point {λ1, . . . , λn} with law (11) is a determinantal point
+process with kernel (with respect to the Lebesgue measure on R) given by
+KGUE(n)(x, y) = nψn(x√n)ψn−1(y√n) −ψn−1(x√n)ψn(y√n)
+x −y
+,
+deﬁned by continuity when x = y. The Plancherel-Rotach asymptotics for the Her-
+mite polynomials implies that, as n →∞, KGUE(n)(x, x)/n has a non trivial limit.
+More precisely, the empirical spectral distribution 1
+n
+P δλi converges in probability
+to the semicircle law (see e.g. [1]) with density
+ρsc(x) = 1
+2π
+p
+(4 −x2)+
+with respect to the Lebesgue measure. This is the asymptotic behavior of the spec-
+trum in the macroscopic regime. The microscopic interactions between eigenvalues
+also can be evaluated thanks to asymptotics of the Hermite orthogonal polynomials :
+for any x ∈(−2, 2), u ∈R,
+1
+nρsc(x)KGUE(n)
+
+x, x +
+u
+nρsc(x)
+
+−→
+n→∞K(u) = sin (πu)
+πu
+,
+(12)
+leading to a repulsive correlation structure for the eigenvalues at the scale of the
+average gap : for example the two-point correlation function asymptotics are
+
+1
+nρsc(x)
+2
+ρGUE(n)
+2
+
+x, x +
+u
+nρsc(x)
+
+−→
+n→∞r2(u) = 1 −
+sin (πu)
+πu
+2
+,
+(13)
+which vanishes at u = 0, while for independent points the asymptotic two points
+correlation function would be identically 1. A remarkable fact about the above sine
+kernel is that it appears universally in the limiting correlation functions of random
+Hermitian matrices with independent (up to symmetry) entries (the so-called Wigner
+ensemble). This was proved under very weak conditions on the entries in independent
+and complementary works by Tao-Vu and Erd¨os-Schlein-Yau & al (see [21]). In their
+result, a Wigner matrix is like a matrix from the GUE from the point of view of the
+variance normalization but with no Gaussianity condition. We just assume that the
+entries Xij’s and Yij’s have a subexponential decay : for some constants c and c′,
+P(|Xij| ≤tc) ≤e−t, P(|Yij| ≤tc) ≤e−t, t > c′.
+Theorem 1.7. Under the above hypothesis, denoting by ρWig(n)
+k
+the correlation func-
+tions associated with the eigenvalues of the Wigner matrix, for any u, ε such that
+[u −ε, u + ε] ⊂(−2, 2), and any continuous compactly supported f : Rk →R
+1
+2ε
+Z x+ε
+x−ε
+Z
+Rk
+f(u1, . . . , uk)
+ρsc(x′)k
+ρWig(n)
+k
+
+x′ +
+u1
+nρsc(x′), . . . , x′ +
+uk
+nρsc(x′)
+
+du1 . . . dukdx′
+
+
+--- PDF PAGE 11 ---
+Vol. XIV, 2010
+Quantum chaos, random matrix theory, and the Riemann ζ-function
+125
+converges as n →∞to (K is the above mentioned sine kernel)
+Z
+Rk f(u1, . . . , uk)det
+k×k (K(ui −uj)) du1 . . . duk.
+Note that both works leading to the above result, through very diﬀerent, proceed
+by comparison with the explicit GUE asymptotics.
+The second classical example of a matrix-related determinantal point process
+is that of the eigenvalues of uniformly distributed unitary matrices. For un ∼µU(n)
+(µU(n) is the Haar measure3 on the unitary group) the density of the eigenangles
+0 ≤θ1 < · · · < θn < 2π, with respect to the Lebesgue measure on the corresponding
+simplex is
+1
+(2π)n
+Y
+j<k
+|eiθj −eiθk|2.
+In this case, the polynomials in the recipe from Proposition 1.5 are those orthogonal
+with respect to the Hermitian product on the unit circle
+R
+C pqdz. These are the
+monomials (Xk). Consequently, the correlation functions ρU(n)
+k
+, 1 ≤k ≤n, are
+determinants based on the same kernel :
+ρU(n)
+k
+(θ1, . . . , θn) = det
+k×k
+ KU(n)(θi −θj)
+
+, KU(n)(θ) = 1
+2π
+sin(nθ/2)
+sin(θ/2) .
+In an easier way than for the GUE, the limiting sine kernel again appears
+2π
+n KU(n)
+2πθ
+n
+
+−→
+n→∞K(θ).
+This microscopic description of the fermionic aspect of the eigenvalues also appears
+in a number theoretic context, as considered in the next section.
+1.4
+Repulsion of the zeta zeros
+Being simply the Fourier transform of an interval, the sine kernel (12) appears in
+many diﬀerent contexts in mathematics and physics. However it was a striking result
+when Montgomery discovered in the early 70’s that it describes the pair correlation
+of the zeta zeros. During tea time in Princeton he mentioned his result to Dyson, who
+immediately recognized the limiting pair correlation r2 for eigenvalues of the GUE,
+(13). This unexpected result gave new insight into the Hilbert-P´olya suggestion
+that the zeta zeros might linked to eigenvalues of a self-adjoint operator acting on
+a Hilbert space.
+The Random-Matrix connection was tested numerically by Odlyzko [38] and
+found to provide a remarkably accurate model of the data. For example, supposing
+that all orders correlations of the ζ zeros coincide with determinants of the sine
+kernel, one expects that the histogram of the normalized spacings between zeros
+converge to the distribution function of the same asymptotics related to the eigenva-
+lues
+of
+the
+GUE
+or
+unitary
+group.
+3i.e. the unique left (or right) translation invariant measure on the compact group U(n) : if x has distribution
+µU(n) then for any ﬁxed a ∈U(n)
+ax law
+= x.
+
+
+--- PDF PAGE 12 ---
+126
+P. Bourgade and J.P. Keating
+S´eminaire Poincar´e
+Fig.
+3
+–
+The
+distribution
+function
+of
+asymptotic
+gaps
+between
+eigenvalues
+(∂s det(Id −K(0,s))) compared with the his-
+togram of gaps between normalized ζ zeros,
+based on a billion zeros near #1.3 · 1016 (by
+Odlyzko).
+More precisely, we write as previously 1/2±
+iγn for the zeta zeros counted with multi-
+plicity, assume the Riemann hypothesis and
+the order γ1 ≤γ2 ≤. . . Let ωn = γn
+2π log γn
+2π.
+From (2) we know that δn = ωn+1 −ωn has a
+mean value 1 as n →∞, and its repartition
+function is expected to converge to
+1
+n|{k ≤n : δk < s}|
+−→
+n→∞−∂s det(Id −K(0,s)),
+where K(0,s) is the convolution operator ac-
+ting on L2(0, s) with kernel K. This comes
+from the inclusion-exclusion principle lin-
+king free intervals and correlation functions,
+in which the determinantal structure leads
+to a Fredholm determinant (see e.g. [1]).
+What exactly did Montgomery prove ? Rather than mean spacings, a more
+precise understanding of the zeta zeros interactions relies on the study, as t →∞,
+of the spacings distribution function
+1
+N(t)|{(n, m) ∈J1, N(t)K2 : α < ωn −ωm < β, n̸ = m}|,
+where N(t) is the number of zeros till height t, and more generally the operator
+r2(f, t) =
+1
+N(t)
+X
+1≤j,k≤N(t),j̸=k
+f(ωj −ωk).
+If the ω′
+ks were asymptotically independently distributed (up to ordering), r2(f, x)
+would converge to
+R
+R f(y)dy as x →∞. That this is not the case follows from an
+important theorem due to Montgomery [34] :
+Theorem 1.8. Assume the Riemann hypothesis. Suppose f is a test function with the
+following property : its Fourier transform4 is C ∞and supported in (−1, 1). Then
+r2(f, t) −→
+t→∞
+Z
+R
+f(y)r2(y)dy,
+where r2(y) = 1 −
+
+sin(πy)
+πy
+2
+, as for Wigner or unitary random matrices.
+An important conjecture due to Montgomery asserts that the above result holds
+with no condition on the support of the Fourier transform, but weakening the res-
+triction even to supp ˆf ⊂(−1 −ε, 1 + ε) for some ε > 0 seems out of reach with
+known techniques. The Montgomery conjecture would have important consequences
+for example in terms of second moments of primes in short intervals [35].
+4Contrary to the Weil and Selberg formulas (5) and (7), the chosen normalization here is
+ˆf(x)
+=
+R ∞
+−∞f(y)e−i2πxydy
+
+
+--- PDF PAGE 13 ---
+Vol. XIV, 2010
+Quantum chaos, random matrix theory, and the Riemann ζ-function
+127
+Sketch of proof of Montgomery’s Theorem. Consider the function
+F(α, t) =
+1
+t
+2π log t
+X
+0≤γ,γ′≤t
+tiα(γ−γ′)
+4
+4 + (γ −γ′)2.
+This is the Fourier transform of the normalized spacings, up to the factor 4/(4 +
+(γ −γ′)2). This function naturally appears when counting the second order moments
+Z t
+0
+|G(s, tα)|2ds = F(α, t)t log t + O(log3 t), G(s, x) = 2
+X
+γ
+xiγ
+1 + (s −γ)2.
+(14)
+As G is a linear functional of the zeros, it can be written as a sum over primes by
+an appropriate explicit formula5 like (5) :
+G(s, x) = −√x
+ X
+n≤x
+Λ(n)
+x
+n
+−1
+2 +is
++
+X
+n>x
+Λ(n)
+x
+n
+ 3
+2 +is
+!
++ x−1+is(log(|s| + 2) + O(1)) + O
+ √x
+|s| + 2
+
+,
+a fundamental formula due to Montgomery, which requires the Riemann hypothesis
+to yield the error term quoted. The moment (14) can therefore be expanded as a
+sum over primes, and the Montgomery-Vaughan inequality (Theorem 1.9) leads to
+Z t
+0
+|G(s, tα)|2ds = (t−2α log t + α + o(1))t log t.
+These asymptotics can be proved by the Montgomery Vaughan inequality, but only
+in the range α ∈(0, 1), which explains the support restriction in the hypotheses.
+Gathering both asymptotic expressions for the second moment of G yields F(α, t) =
+t−2α log t + α + o(1). Finally, by the Fourier inverse formula,
+1
+t
+2π log t
+X
+0≤γ,γ′≤t
+f
+
+(γ −γ′)log t
+2π
+
+4
+4 + (γ −γ′) =
+Z
+R
+F(α, t) ˆf(α)dα.
+If supp ˆf ⊂(−1, 1), this is approximately
+Z
+R
+ˆf(α)(t−2|α| + α + o(1))dα =
+Z
+R
+e−2|α| ˆf(α/ log t)dα +
+Z
+R
+α ˆf(α)dα
+= ˆf(0) +
+Z
+R
+α ˆf(α)dα + o(1) =
+Z
+R
+f(x)
+ 
+1 −
+sin πx
+πx
+2!
+dx + o(1)
+by the Plancherel formula.
+Theorem 1.9. Let (ar) be complex numbers, (λr) distinct real numbers and δr =
+mins̸=r |λr −λs|. Then
+1
+t
+Z t
+0
+|
+X
+r
+areiλrs|2ds =
+X
+r
+|ar|2
+
+1 + 3πθ
+tδr
+
+5The factor 4/(4 + (γ −γ′)2) gives convergence properties necessary to the explicit formula.
+
+
+--- PDF PAGE 14 ---
+128
+P. Bourgade and J.P. Keating
+S´eminaire Poincar´e
+for some |θ| < 1. In particular,
+Z t
+0
+
+∞
+X
+n=1
+an
+nis
+
+2
+ds = t
+∞
+X
+n=1
+|an|2 + O
+X
+n|an|2
+.
+Montgomery’s result has been extended in the following directions. Hejhal [27]
+proved that the triple correlations of the zeta zeros coincide with those of large Haar-
+distributed unitary matrices, and Rudnick and Sarnak [42] then showed that all
+correlations agree. These results are all restricted by the condition that the Fourier
+transform of f is supported on some compact set. To state the Rudnick-Saenak
+result, we note as in [42] :
+– Et = {ωi : i ≤N(t)} ;
+– f is a translation invariant function from Rn to R (f(x+t(1, . . . , 1) = f(x))),
+symmetric and rapidly decreasing6 on Pk
+1 xi = 0 ;
+– rn(f, t) =
+n!
+N(t)
+P
+S⊂Et,|S|=n f(S), generalizing the previous deﬁnition of r2(f, t).
+Theorem 1.10. Assume the Riemann hypothesis7 and that the Fourier transform of
+f is supported in Pn
+1 |ξj| < 2. Then
+rn(f, t) −→
+t→∞
+Z
+Rn f(x)det
+n×n
+sin π(xi −xj)
+π(xi −xj)
+
+δx1+···+xndx1 . . . dxn.
+Sketch of proof. The method employed by Rudnik and Sarnak makes use of smoo-
+thed statistics, namely
+cn(f, t, h) =
+X
+j1,...,jn
+h
+γj1
+t
+
+. . . h
+γjn
+t
+
+f
+log t
+2π γj1, . . . , log t
+2π γjn
+
+,
+not assuming here that the indexes are necessarily distinct. This allows the use of
+two important ingredients :
+– a Fourier transform to convert the nth-order statistics to linear ones :
+cn(f, t, h) =
+Z
+Rn
+n
+Y
+k=1
+X
+jk
+h
+γjk
+t
+
+t−iγjkξkdµ(ξ),
+(15)
+where dµ(ξ) = Φ(ξ)δξ1+···+ξndξ1 . . . dξn is the Fourier transform of f ;
+– Weil’s explicit formula (5), or a variant, to transfer linear statistics over zeros
+to linear statistics over primes :
+X
+γ
+h(γ) = h
+ i
+2
+
++h
+
+−i
+2
+
++ 1
+2π
+Z
+R
+h(r)
+Γ′
+Γ
+1
+2 + ir
+
++ Γ′
+Γ
+1
+2 −ir
+
+dr
+−
+X
+n
+Λ(n)
+√n
+ˆh(log n) + Λ(n)
+√n
+ˆh(−log n).
+(16)
+6i.e. faster than any |x|−λ for any λ > 0
+7An unconditional result holds with smoothed test functions.
+
+
+--- PDF PAGE 15 ---
+Vol. XIV, 2010
+Quantum chaos, random matrix theory, and the Riemann ζ-function
+129
+Substituting (16) into (15) and expanding the product, we end up with a sum of
+terms like
+cr,s(t) =
+X
+n
+Λ(n1) . . . Λ(nr+s)
+√n1 . . . nr+s
+tn
+Z
+Rn
+rY
+j=1
+ˆh(t((log t)ξj + log nj))
+r+s
+Y
+j=r+1
+ˆh(t((log t)ξj −log nj))
+Y
+j>r+s
+ˆh(t(log t)ξj)dµ(ξ).
+As P |ξj| < 2, one can use the Montgomery Vaughan inequality Theorem 1.9 to
+get the correct asymptotics : in the above sum the main contribution comes from
+choices of n such that
+n1 . . . nr = nr+1 . . . nr+s,
+(17)
+i.e. the diagonal elements. The Van Mongoldt function being supported on prime
+powers, the main contribution comes from the choice of prime nj’s, which implies
+r = s by (17). We are therefore led to the asymptotics of
+cr,r(t) =
+t
+2π log2r−1 t
+Z
+R
+h(r)ndr
+X
+p1,...,pr≪t
+X
+σ∈Sr
+log2 p1 . . . log2 pr
+p1 . . . pr
+Φ
+
+−log p1
+log t , . . . , log pr
+log t , log pσ(1)
+log t
+, . . . , log pσ(r)
+log t
+, 0, . . . , 0
+
+,
+where Sr is the symmetric group with r elements. The equivalent of the above sum
+can be calculated thanks to the prime number theorem and integration by parts,
+leading to the estimate
+cn(f, t, h) ∼
+t→∞
+t log t
+2π
+Z
+R
+h(r)ndr
+
+Φ(0) +
+⌊n/2⌋
+X
+r=1
+X Z
+|v1| . . . |vr|Φ(v1ei1,j1, . . . , vreir,jr, 0, . . . , 0)dv1 . . . dvr
+
+,
+(18)
+where the sum is over all choices of pairs of disjoint indices in J1, nK and ei,j = ei−ej,
+(ei) being an orthonormal basis of Cn.
+At this point, it is not clear how this is related to determinants of the sine kernel.
+This is a purely combinatorial problem : by inclusion-exclusion the asymptotics of
+rn(f, t, h) can be deduced from those of cm(f, t, h), for all m. Then it turns out that
+when writing
+rn(f, t, h) = t log t
+2π
+Z
+R
+h(r)n
+Z
+Rn r(v)Φ(v)dv(1 + o(1)),
+the function r is exactly the Fourier transform of the determinant of the sine kernel,
+detn×n K(xi −xj).
+For this last step, another way to proceed consists in making the same reasoning
+by replacing the zeta zeros by eigenvalues of a unitary matrix u, and computing
+expectations with respect to the Haar measure. The Fourier transform and explicit
+formula (rewriting linear statistics of eigenvalues as linear sums of (Tr(uk))k) still
+
+
+--- PDF PAGE 16 ---
+130
+P. Bourgade and J.P. Keating
+S´eminaire Poincar´e
+hold. Diaconis and Shahshahani [20] proved that these traces converge in law to
+independent normal complex gaussians as n →∞. This independence is equivalent
+to performing the above diagonal approximation (17) and allows one to get formula
+(18) in the context of random matrices. We independently know that the eigenvalues
+correlations are described by the sine kernel, which completes the proof.
+The scope of this analogy needs to be moderated : following [4, 8, 5], we will
+see in the next section that beyond leading order the two-point correlation function
+depends on the positions of the low ζ zeros, something that clearly contrasts with
+random matrix theory.
+Moreover, Rudnick and Sarnak proved that the same fermionic asymptotics
+hold for any primitive L-function. However, we cannot expect that it holds for any
+L-function, because for example, for distinct primitive characters, the zeros of Lχ
+and Lχ′ have no known link, so for the product of these L-functions, the zeros look
+like the superposition of two independent determinantal point processes. Systems
+with independent versus repelling eigenvalues are discussed in the next section.
+2
+Quantum chaology
+Quantum chaos is concerned with the study the quantum mechanics of classi-
+cally chaotic systems. In reality, a quantum system is much less dependent on the
+initial conditions than a classical chaotic one, where orbits are generally divergent.
+This is the reason why M. Berry proposed the name quantum chaology instead of
+quantum chaos.
+The statistics found for the ζ zeros can, in this context, be seen in a more
+general framework. Indeed, eigenvalue repulsion is conjectured to appear in the
+statistics of generic chaotic systems. In the same way as the appearance of the
+sine kernel in the description of the statistics of the ζ zeros is proved using the
+explicit formula, the Bohigas-Giannoni-Schmidt conjecture is intimately linked to a
+semiclassical asymptotic generalization of Selberg’s trace formula due to Gutzwiller.
+When going from a trace formula to correlations, one deals with diagonal and non-
+diagonal terms (i.e. repeated or distinct orbits), and their relative magnitude is
+crucial. We will discuss below to which extent the diagonal terms dominate, and
+how to estimate the contribution of non-diagonal ones.
+2.1
+The Berry-Tabor and Bohigas-Giannoni-Schmit conjectures
+One of the goals of quantum chaology is to exhibit characteristic properties of
+quantum systems which, in the semiclassical limit8, reﬂect the regular or chaotic
+aspects of the underlying classical dynamics. For example, how does classical me-
+chanics contribute to the distribution of the eigenvalues and the amplitudes of the
+eigenfunctions when the de Broglie wavelength tends to 0 ?
+The examples we consider are two-dimensional quantum billiards9. For some
+billiards, the classical trajectories are integrable (regular) and for others they are
+8The semiclassical limit corresponds to ℏ→0 in the Schr¨odinger equation ; in many cases, including the examples
+considered here, this corresponds to the high-energy limit.
+9A billiard is a compact connected set with nonempty interior, with a generally piecewise regular boundary, so
+that the classical trajectories are straight lines reﬂecting with equal angles of incidence and reﬂection
+
+
+--- PDF PAGE 17 ---
+Vol. XIV, 2010
+Quantum chaos, random matrix theory, and the Riemann ζ-function
+131
+chaotic. On the quantum side, the standing waves are described by the Helmholtz
+equation
+−ℏ2
+2m∆ψn = λnψn,
+where the spectrum is discrete as the domain is compact, with ordered eigenvalues
+0 ≤λ1 ≤λ2 . . . , and appropriate Dirichlet or Neumann boundary conditions. The
+questions about quantum billiards one is interested in include : how does |ψn|2 get
+distributed in the domain and what is the asymptotic distribution of the λn’s as
+n →∞?
+Fig. 4 – Regular (left) and chaotic (right)
+billiards. Upper right : Sinai’s billiard
+One fundamental result due to
+Schnirelman [43] states that the quan-
+tum eigenfunctions become equidistri-
+buted with respect to the Liouville mea-
+sure10 ν, as n →∞, along a subsequence
+(nk)k≥0 of density one : for any measu-
+rable set I in the domain D
+lim
+k→∞
+R
+I |ψnk|2dxdy
+R
+D |ψnk|2dxdy = ν(I)
+ν(D).
+This is referred to as quantum ergo-
+dicity. A stronger equipartition notion,
+quantum unique ergodicity [42], states
+that the above limit holds over N, with
+no exceptional eigenfunctions. This is
+proved in very few cases. The systems
+where it has been proved include holo-
+morphic cusp forms (related to billiards on H), thanks to the work of Holowinsky
+and Soundararajan [28]. To satisfy quantum unique ergodicity, a system needs to
+avoid the problem of scars : for some chaotic systems, some eigenfuntions (a negli-
+gible fraction of them) present an enhanced modulus near the short classical periodic
+orbits.
+In great generality, according to the semiclassical eigenfunction hypothesis, the
+eigenstates should concentrate on those regions explored by a generic orbit as t →
+∞: for integrable systems the motion concentrates onto invariant tori while for the
+ergodic ones the whole energy surface is ﬁlled in a uniform way.
+Concerning eigenvalue statistics, the situation is still complicated and somehow
+mysterious : there is a conjectural dichotomy between the chaotic and integrable
+cases.
+First, in 1977, Berry and Tabor [3] put forward the conjecture that for a generic
+integrable system11 the eigenvalues have the statistics of a Poisson point process, in
+the semiclassical limit. More precisely, by Weyl’s law, we know that the number of
+such eigenvalues up to λ is
+|{i : λi ≤λ}|
+∼
+λ→∞
+area(D)
+4π
+λ.
+(19)
+10i.e. the Lebesgue mesure in our Euclidean case
+11There are exceptions, obvious or less obvious, many of them already known by Berry and Tabor[3], which is the
+reason why one expects the Poissonian behavior for generic systems.
+
+
+--- PDF PAGE 18 ---
+132
+P. Bourgade and J.P. Keating
+S´eminaire Poincar´e
+To analyze the correlations between eigenvalues, consider the point process
+χ(n) = 1
+n
+X
+i≤n
+δ
+4π
+area(D)(λi+1−λi),
+which has an expectation equal to 1 from (19). By the expected limiting Poissonian
+behavior, the spacing distribution converges to an exponential law : for any I ⊂R+
+χ(n)(I) −→
+n→∞
+Z
+I
+e−xdx.
+(20)
+The limiting independence of the λj’s also implies a variance of order n, like for
+any central limit theorem, in the above convergence. Note that the Berry-Tabor
+conjecture was rigorously proved for many integrable systems in the sense of almost
+all systems in certain families. One unconditional result concerns some ﬁxed shifts
+on the torus : Marklof [32] proved that for a free particle on Tk with ﬂux lines of
+strength α = (α1, . . . , αk), if α is diophantine of type κ < (k −1)/(k −2) and the
+components of (α, 1) are linearly independent over Q, then the pair correlation of
+eigenvalues is asymptotically Poissonian.
+In the chaotic case, the situation is radically diﬀerent, the variance when coun-
+ting the energy levels is believed to be of order log n, so much less than in (20) :
+the eigenvalues are supposed to repel each other and their statistics are conjectu-
+red to be similar to those of a random matrix, from an ensemble depending on the
+symmetries properties of the system (e.g. time-reversibility). This is known as the
+Bohigas-Giannoni-Schmidt Conjecture [9] (but see also [3]).
+Fig. 5 – Energy levels for Sinai’s billiard com-
+pared to those of the Gaussian Orthogonal En-
+semble and Poissonian statistics.
+Numerical experiments were per-
+formed in [9] giving a correspondence
+between the eigenvalue spacings statis-
+tics for Sinai’s billiard and those of the
+Gaussian Orthogonal Ensemble12. Dys-
+on’s reaction to these conjecture and ex-
+periments was the following13.
+This is a beautiful piece of work. It
+is extraordinary that such a simple mo-
+del shows the GOE behavior so perfectly.
+I agree completely with your conclu-
+sions. I would say that the result is not
+quite surprising but certainly unexpec-
+ted. . .I once suggested to a student at
+Haverford that he build a microwave ca-
+vity and observe the resonances to see
+whether they follow the GOE distribution. So far as I know, the experiment was
+never done...I always thought the cavity would have to be a complicated shape with
+many angles. I did not imagine that something as simple as the Sinai region would
+work.
+A theoretical understanding of this conjecture proposed in [2] is related to corre-
+lations between classical periodic orbits, via the Gutzwiller trace formula explained
+12i.e. the same eigenvalues spacings as for a random symmetric matrix with gaussian entries.
+13In a letter to O. Bohigas, 1983.
+
+
+--- PDF PAGE 19 ---
+Vol. XIV, 2010
+Quantum chaos, random matrix theory, and the Riemann ζ-function
+133
+in the next section. Our purpose consists in understanding the role of orbits of the
+classical motion to give insight into the derivation of the correlations of the ζ zeros
+[6, 7, 7].
+2.2
+Periodic Orbit Theory
+Consider a set of positive eigenvalues (λn) and the counting function
+N(λ) =
+∞
+X
+n=1
+1λn<λ.
+In typical situations, this can be decomposed into a mean term and ﬂuctuations,
+N(λ) = ⟨N(λ)⟩+ Nﬂ(λ).
+For example, in the case of a quantum billiard on a domain D, as previously discus-
+sed, the mean term is independent of whether the classical dynamics is regular or
+chaotic and is given by
+⟨N(λ)⟩= area(D)
+4π
+λ,
+as shown by (19) and the ﬂuctuating part, with mean zero, encodes independence
+(integrable) or repulsion (chaotic) for the energy levels. In another context, when
+counting the imaginary parts of the non-trivial ζ zeros, formula (2) implies
+⟨N(t)⟩= t
+2π log
+t
+2πe + 7
+8 + O
+1
+t
+
+,
+Nﬂ(t) = 1
+π arg ζ
+1
+2 + it
+
+= 1
+πℑ
+
+log ζ
+1
+2 + it
+
+.
+The fact that this ﬂuctuating part has mean zero can be seen as a byproduct of the
+central limit theorem (38).
+Fig. 6 – Nﬂ(t) (thin line) compared with the trun-
+cated expansion (thick line) from (21) with the
+ﬁrst 50 primes and all m.
+The Euler product expression for ζ
+is not known to hold for σ ∈(1/2, 1)
+(this is related to the Riemann hypo-
+thesis), but we write formally
+Nﬂ(t) = −1
+π
+X
+p
+ℑ
+
+log
+
+1 −e−it log p
+√p
+
+= −1
+π
+X
+P,N∗
+e−1
+2 m log p
+m
+sin(tm log p).
+(21)
+As shown in Figure 6, truncating this
+expansion provides meaningful results.
+We want to place the above ﬂuctua-
+tion formulae in a more general context. Consider a dynamical system with coordi-
+nates q = (q1, . . . , qd) and momenta p = (p1, ˙,pd). The trajectories are generated by
+a Hamiltonian H(q, p). On the quantum side, q and p are operators with commuta-
+tor [q, p] = iℏ, so H is an operator whose eigenvalues are the quantum energy levels.
+
+
+--- PDF PAGE 20 ---
+134
+P. Bourgade and J.P. Keating
+S´eminaire Poincar´e
+For quantum billiards, H is independent of q in D. We are interested in the situation
+where the energy is the only conserved quantity and neighboring trajectories diverge
+exponentially : the system is chaotic.
+As seen in Section 1, the explicit formula (5) states that the ζ zeros have a
+distribution formally similar to the the eigenvalues of the hyperbolic Laplacian,
+through the Selberg trace formula (7). This admits a semiclassical (i.e. asymptotic)
+generalization, originally derived in [36]. For a periodic orbit p, we denote the action
+by Sp(λ) =
+H
+p ·d q and the period by Tp = ∂λ Sp. The monodromy matrix Mp
+describes the exponential divergence of deviations from p of nearby geodesics. The
+Maslov index µp is related to the winding number of the invariant Lagrangian (stable
+and unstable) manifolds around the orbit : it describes the topological stability. The
+Maslov index of the m-repetition of the orbit p is equal to mµp.
+Gutwiler’s trace formula. With the preceding notation,
+Nﬂ(λ)
+∼
+λ→∞
+1
+π
+X
+P,N∗
+sin
+ m Sp(λ) −mπµp
+2
+
+m
+q
+| det(Mm
+p −Id)|
+,
+(22)
+where P is the set of primitive orbits and m is the index of their repetitions.
+To some extent, this formula should be considered as natural.
+– The energy levels counted by N are associated with stationary states, i.e.
+time-independent objects. Their asymptotics correspond to the phase space
+structure invariant under translations along geodesics, by the correspondence
+principle. In our chaotic situation, there are two types of invariant manifolds,
+the whole surface (by ergodicity), leading to the term ⟨N(λ)⟩and the periodic
+orbits which correspond to the ﬂuctuations Nﬂ(λ).
+– The exactness of the trace formula for manifolds of constant negative curva-
+ture (Selberg’s trace formula) is analogous to the exact formula for the heat
+kernel in the Euclidean space. In the more general context of Riemannian
+manifolds, the heat kernel estimates are known only for short times and in
+terms of the geodesic distance : p(x, y, t) ∼
+t→0 c exp(−ℓ(x, y)2/2t)/td/2, where
+the constant c involves the deviations from the geodesic via the Van Vleck-
+Morette determinant, analogously to det(Mm
+p −Id) in the Gutzwiller trace
+formula.
+Sketch of proof. Writing d(λ) = d N(λ)/dλ, we begin in the same way as for the
+Selberg trace formula, writing
+d(λ) = −1
+π
+Z
+ℑ
+ G(λ)(x,x)
+d x,
+where G(λ) is the Green function associated with the energy λ. The mean eigenvalue
+density ⟨d(λ)⟩corresponds to the small (minimal distance) trajectories between x
+and y as y →x, and the ﬂuctuating part dﬂ(λ) is related to all other geodesics bet-
+ween x and itself, for example all repeated maximal circles in the spherical situation.
+A key assumption about the Green function is that it admits the expansion
+G(λ)(x, y) =
+X
+geodesics
+A(x, y)ei S(x,y)/ℏ,
+
+
+--- PDF PAGE 21 ---
+Vol. XIV, 2010
+Quantum chaos, random matrix theory, and the Riemann ζ-function
+135
+where A can be developed as a series in ℏ, the sum is over all geodesics from x to
+y, and S(x, y) =
+R
+p ·d q depends on the trajectory and λ. This formula is justiﬁed
+by inserting A(x, y)ei S(x,y)/ℏinto the Schr¨odinger equation. Consequently,
+dﬂ(λ) = 1
+π
+Z
+ℑ
+ 
+X
+non-trivial geodesics
+A(x, x)ei S(x,x)/ℏ
+!
+d x .
+A saddle point approximation can be performed as ℏ→0. On any critical point,
+(∂x S +∂y S)x=y = 0, but ∂x S = pf and ∂y S = pi, the momenta at the ﬁnal and ini-
+tial points respectively. Consequently, on the saddle, the momenta must be identical
+at the beginning and the end of the geodesic : the trajectory is periodic. The second
+derivatives, leading to the constant coeﬃcients in the saddle point approximation,
+are related to the monodromy matrix, corresponding to the linear approximation
+between initial and ﬁnal perturbations along the periodic orbit p :
+d
+ qf
+pf
+
+= Mp d
+
+qi
+pi
+
+.
+Moreover, when performing the saddle-point method, the Maslov index appears
+because it counts, roughly speaking, the number of caustics along the trajectory. All
+results together, with periodic orbits seen as repetitions of primitive periodic orbits,
+explain the origin of the main terms in (22).
+An approximation of the determinant can be performed for long orbits, in terms
+of the Liapunov (instability) exponent of the orbit, noted λp, and the (large) period
+Tp = ∂λ Sp : det(Mm
+p −Id) ≈emλp Tp, so the Gutzwiller trace formula takes the form
+Nﬂ(λ)
+∼
+λ→∞
+1
+π
+X
+P,N∗
+e−1
+2 mλp Tp
+m
+sin
+
+m Sp(λ) −mπµp
+2
+
+.
+(23)
+A comparison between formulas (21) and (23) yields the following formal deﬁnition
+of action, period and stability in the prime number context [5].
+Eigenvalues
+Quantum energy levels
+Zeta zeros
+Asymptotics
+ℏ→0
+t →∞
+Actions
+m Sp
+ℏ
+mt log p
+Periods
+m Tp
+m log p
+Stabilities
+λp
+1
+2.3
+Diagonal approximation
+The link between the eigenvalue counting functions discussed above and the
+correlation functions is formally given by
+r(λ)
+n (x1, . . . , xn) = ⟨d(· + x1) . . . d(· + xn)⟩
+= ⟨d⟩n + r(λ,diag)
+n
+(x1, . . . , xn) + r(λ,oﬀ)
+n
+(x1, . . . , xn),
+(24)
+where d(λ) = ∂N(λ)
+∂λ
+is the eigenvalues density, r(λ)
+n
+is the correlation function of order
+n when considering eigenvalues up to height λ, and the terms r(λ,diag)
+n
+, r(λ,oﬀ)
+n
+will be
+
+
+--- PDF PAGE 22 ---
+136
+P. Bourgade and J.P. Keating
+S´eminaire Poincar´e
+made explicit in the next few lines. The above formula makes sense once integrated
+with respect to a smooth enough test function, where for convenience no repetition
+between distinct eigenvalues is performed :
+r(λ)
+n (f) :=
+n!
+N(λ)
+X
+S⊂Eλ,|S|=n
+f(S) =
+Z
+r(λ)
+n (x)f(x)dx,
+where Eλ is the set of eigenvalues up to height λ. (24) together with Gutzwiller’s
+trace formula (22) allows one to calculate the correlation functions from the density,
+including for the ζ zeros, as in [6, 7]. We describe this approach, and show how
+it provides a heuristic justiﬁcation for Montgomery’s Conjecture, and also how it
+yields lower order corrections to the random matrix limit for all orders of correlation
+functions. In order to be explicit, we focus on the two-point correlation function,
+n = 2.
+The results from the previous paragraph can be written, with suitable coeﬃ-
+cients Ap,m’s,
+d(λ) = ⟨d(·)⟩+
+X
+p,m
+Ap,meim Sp(λ)/ℏ,
+which yields, once inserted in (24),
+r(λ)
+2 (x1, x2) ≈⟨d(·)⟩2 +
+X
+pi,mi
+Ap1,m1Ap2,m2⟨e
+i
+ℏ(m1 Sp1(·+x1)−m2 Sp2(·+x2))⟩.
+The terms Sp can be expanded in terms of λ, with ﬁrst derivative ∂λ Sp(λ) = Tp, so
+the correlation function takes the form
+r(λ)
+2 (x1, x2) ≈⟨d(·)⟩2 +
+X
+pi,mi
+Ap1,m1Ap2,m2⟨e
+i
+ℏ(m1 Sp1(·)−m2 Sp2(·))⟩.e
+i
+ℏ(m1 Tp1 x1−m2 Tp2 x2).
+(25)
+The main diﬃculty to evaluate this sum consists in an appropriate expectation
+for ⟨e
+i
+ℏ(m1 Sp1(·)−m2 Sp2(·))⟩. A ﬁrst approximation consists in keeping only diagonal
+elements, i.e. orbits with exactly the same action : for distinct trajectories, averaging
+gives a 0 contribution in the large energy limit.
+Let us consider this diagonal approximation in the ζ context (21). The height t
+dependence disappears when averaging and a direct calculation gives
+r(diag)
+2
+(x1, x2) ≈ℜ
+2π2
+X
+P,N∗
+log2 p
+pm ei(x1−x2)m log p.
+The prime number theorem and a series expansion yield
+r(diag)
+2
+(x1, x2)
+∼
+x2→x1 −
+1
+2π2(x1 −x2)2.
+This corresponds to the r(diag)
+2
+part in the following decomposition of the two-point
+limiting correlation function associated to random matrices :
+r2(x) = 1 −
+sin(πx)
+πx
+2
+= ⟨d⟩2 + r(diag)
+2
+(x) + r(oﬀ)
+2
+(x),
+(26)
+⟨d⟩= 1, r(diag)
+2
+(x) = −
+1
+2(πx)2, r(oﬀ)
+2
+(x) = ei2πx + e−i2πx
+4(πx)2
+.
+
+
+--- PDF PAGE 23 ---
+Vol. XIV, 2010
+Quantum chaos, random matrix theory, and the Riemann ζ-function
+137
+Alternatively, the right hand side of the sum over primes can be written exactly in
+terms of the second derivative of log ζ(1 + i(x1 −x2)). The pole of the zeta function
+gives the contribution calculated above from the prime number theorem when x1 −
+x2 →0. The structure around the pole, coming from the ﬁrst few zeros, then gives
+corrections to the random matrix expression. Hence the statistical properties of
+the high-lying zeros show universal random-matrix behaviour, with non-universal
+corrections, which vanish in the appropriate limit, related to the low-lying zeros.
+This important resurgence was discovered in [8] (see also [5] for illustrations and an
+extensive discussion).
+It follows from the fact that the diagonal terms do not give the full expression
+for the two-point correlation function that the non-diagonal terms are important.
+More precisely, such terms make no contribution if
+1
+ℏ(m1 Sp1 −m2 Sp2) ≫1
+(27)
+in the quantum context. The average gap between lengths of periodic orbits around
+ℓis about ℓe−cℓ(the number of orbits grows exponentially with the length). Hence,
+one expects that the diagonal approximation at the energy level λ can be performed,
+in the semiclassical limit, for orbits up to height ℓ≪(log λ)/c. In particular, one sees
+with disappointment that this number grows only logarithmically with the energy.
+In the number theory context, (27) becomes
+(m1 log p1 −m2 log p2)t ≫1,
+and the above discussion shows that we have to tackle the problem of close prime
+powers.
+2.4
+Beyond diagonal approximation
+Keeping all oﬀ-diagonal contributions in (25) for the 2-point correlation of ζ
+yields
+r(t,oﬀ)
+2
+(x1, x2) ≈
+X
+n1̸=n2
+Λ(n1)Λ(n2)
+4π2√n1n2
+⟨eit log(n1/n2)+i(x1 log n1−x2 log n2)⟩,
+where Λ is Van Mangoldt’s function. Setting x = x1 −x2 and n1 = n2 + r, then
+expanding all functions in r yields
+r(t,oﬀ)
+2
+(x) ≈
+1
+4π2
+X
+n,r
+Λ(n)Λ(n + r)
+n
+⟨eit r
+n+ix log n⟩,
+(28)
+and the main diﬃculty therefore becomes the evaluation of the correlations between
+values of the Van Mangoldt function. No unconditional results are known about it.
+We make use of the following conjecture, from [25].
+The Hardy-Littlewood conjecture. For any odd r, 1
+n
+P
+k≤n Λ(k)Λ(k +r) has a limit
+as n →∞, equal to
+α(r) = c
+Y
+p|r
+p −1
+p −2, with c = 2
+Y
+p>2
+
+1 −
+1
+(p −1)2
+
+.
+If r is even, this limit is 0.
+
+
+--- PDF PAGE 24 ---
+138
+P. Bourgade and J.P. Keating
+S´eminaire Poincar´e
+Note that the prime number theorem can be stated as
+lim
+n→∞
+1
+n
+X
+k≤n
+Λ(n) = 1.
+Therefore, if the functions Λ(k) and Λ(k + r) were independent in the large k li-
+mit, α(r) would be 1. The Hardy-Littlewood conjecture states that this asymptotic
+independence holds up to arithmetical constraints. Assuming the accuracy of this
+conjecture yields, from (28),
+r(t,oﬀ)
+2
+(x) ≈
+1
+4π2
+X
+n,r
+α(r)eitr/n+ix log n.
+This expression can be simpliﬁed to get
+r(t,oﬀ)
+2
+(x) ≈
+1
+4π2|ζ(1 + ix)|2
+ t
+2π
+ix Y
+P
+
+1 −1 −pix
+(p −1)2
+
+.
+In the limit of small x, x =
+2πu
+log(t/2π) (consistent with the required normalization in
+Montgomery’s Theorem 1.8), this expression can be shown to become
+ei2πu + e−i2πu
+4(πu)2
+,
+the part that was missing in the decomposition (26). This provides strong heuristic
+support for Montgomery’s conjecture. For more details see [6, 7, 8, 5]. Note that
+once again the approach to the random matrix limit is controlled by ζ(1 + ix).
+Note that the above method, inspired by the periodic orbit theory in quantum
+chaos, allows one to obtain error terms for the asymptotic pair correlation of the ζ
+zeros [10]. Taking into account the second order correction to the sine kernel, one
+gets after scaling
+r(t)
+2 (x) = 1 −
+sin(πx)
+πx
+2
+−
+β
+π2⟨d⟩2 sin2(πx) −
+δ
+2π2⟨d⟩3 sin(2πx) + O(⟨d⟩−4),
+(29)
+where
+⟨d⟩= 1
+2π log
+ t
+2π
+
+,
+and β, δ are numerical constants given by
+β = γ0 + 2γ1 +
+X
+p
+log2 p
+(p −1)2 ≈1.573,
+δ =
+X
+p
+log3 p
+(p −1)2 ≈2.315,
+the γk’s being the Stieljes constants γk = limm→∞
+Pm
+j=1
+logk j
+j
+−logk+1 m
+m+1
+
+. This se-
+cond order formula gives remarkably accurate results, as shown in this joint graph.
+
+
+--- PDF PAGE 25 ---
+Vol. XIV, 2010
+Quantum chaos, random matrix theory, and the Riemann ζ-function
+139
+Fig. 7 – Diﬀerence r(t)
+2 (x) −r2(x), x in (0, 5),
+for 2 · 108 Riemann zeros near the 1023-th zero,
+graph from [10]. Smooth line from formula (29),
+oscillating one from Olyzko’s numerical data.
+Finally, the above discussion can be ap-
+plied to many other ζ statistics. For
+example, the variance saturation of the
+counting function of the eigenvalues
+from the GUE admits a ζ counterpart,
+observed in Berry’s original work [4].
+This variance for N(t+δ)−N(t−δ) has
+a universal behavior when δ is small en-
+ough and an arithmetic inﬂuence other-
+wise.
+3
+Macroscopic statistics
+In the previous sections, the local
+ﬂuctuations of zeros of L-functions were
+shown to be intimately linked to eigen-
+values of quantum chaotic systems via
+random matrix theory. Another type of
+statistic was considered around 2000, providing even more striking evidence of a
+connection : at a macroscopic scale, i.e. statistics over all zeros, one also observes a
+close relationship with Random Matrix Theory. The main example is concerns the
+moments of ζ.
+3.1
+Motivations for moments
+As already mentioned, amongst the many consequences of the Riemann hypo-
+thesis, the Lindel¨of conjecture asserts that ζ has a subpolynomial growth along the
+critical axis : |ζ(1/2+it)| = O(tε) for any ε > 0. One of the number theoretic conse-
+quences of these bounds would be pn+1 −pn = O(p1/2+ε
+n
+) for any ε > 0, where pn
+is the n th prime number. An apparently weaker conjecture (because it deals with
+mean values) concerns the moments of ζ : for any k ∈N and ε > 0,
+Ik(t) = 1
+t
+Z t
+0
+ζ
+1
+2 + is
+
+2k
+ds ≪tε.
+This is actually equivalent to the Lindel¨of hypothesis thanks to a good unconditional
+upper bound on the derivative : ζ′(1/2 + is) = O(s). More precise estimates were
+proved by Heath-Brown [26] for the following lower bound, and by Soundararajan
+[47], conditionally on the Riemann hypothesis, for the upper bound :
+(log t)k2 ≪Ik(t) ≪(log t)k2+ε
+for any ε > 0. Unconditional equivalents are known only for k = 1 and k = 2 :
+Hardy and Littlewood [24] obtained in 1918 that
+I1(t) ∼
+t→∞
+X
+n≤t
+1
+n
+∼
+t→∞log t,
+
+
+--- PDF PAGE 26 ---
+140
+P. Bourgade and J.P. Keating
+S´eminaire Poincar´e
+and Ingham [29] proved the k = 2 case
+I2(t) ∼
+t→∞2
+X
+n≤t
+d2(n)2
+n
+∼
+t→∞
+1
+2π2(log t)4,
+where the coeﬃcients dk(n) are deﬁned by ζ(s)k = P
+n dk(n)/ns, ℜ(s) > 1. Then, a
+precise analysis led Conrey and Ghosh [16] to conjecture
+I3(t) ∼
+t→∞43
+X
+n≤t
+d3(n)2
+n
+and Conrey and Gonek [18] to
+I4(t) ∼
+t→∞24024
+X
+n≤t
+d4(n)2
+n
+.
+Is it true that
+Ik(t) ∼
+t→∞ck
+X
+n≤t
+dk(n)2
+n
+for some integer ck, and what should ck be ? It is known thanks to the behavior of
+ζ at 1 and Tauberian theorems that
+X
+n≤t
+dk(n)2
+n
+∼
+t→∞
+HP(k)
+Γ(k2 + 1)(log t)k2, HP(k) =
+Y
+p∈P
+
+1 −1
+p
+k2
+2 F1
+
+k, k, 1, 1
+p
+
+.
+What ck should be for general k remained mysterious until the idea that such ma-
+croscopic statistics may be related to the corresponding ones for random matrices
+[30]. Searching the limits and deepness of this connection is maybe, more than the
+direct number-theoretic consequences, the main motivation for the study of these
+particular statistics.
+3.2
+The moments conjecture
+The general equivalent for the ζ moments, proposed by Keating and Snaith,
+takes the following form. It coincides with all previous results and conjectures, cor-
+responding to k = 1, 2, 3, 4. Note the diﬃculty to test it numerically, because of the
+log t dependence. However, as we will see later in this section, a complete expan-
+sion in terms of powers of log t was also proposed, which completely agrees with
+numerical experiments, giving strong support for the following asymptotics.
+Conjecture 3.1. For every k ∈N∗
+Ik(t) ∼
+t→∞HMat(k)HP(k)(log t)k2
+with the notation
+HP(k) =
+Y
+p∈P
+
+1 −1
+p
+k2
+2F1
+
+k, k, 1, 1
+p
+
+
+
+--- PDF PAGE 27 ---
+Vol. XIV, 2010
+Quantum chaos, random matrix theory, and the Riemann ζ-function
+141
+for the previously mentioned arithmetic factor, and the matrix factor
+HMat(k) =
+k−1
+Y
+j=0
+j!
+(j + k)!.
+(30)
+Note that the above term makes sense for imaginary k (it can be expressed by
+means of the Barnes G-function) so more generally this conjecture may be stated
+for any ℜk ≥−1/2.
+Let us outline a few of key steps involved in understanding the origins of this
+conjecture. First suppose that σ > 1. Then the absolute convergence of the Euler
+product and the linear independence of the log p’s (p ∈P) over Q make it possible
+to show that
+1
+t
+Z t
+0
+ds |ζ (σ + is)|2k ∼
+t→∞
+Y
+p∈P
+1
+t
+Z t
+0
+ds
+1 −1
+ps
+
+2k −→
+t→∞
+Y
+p∈P
+2F1
+
+k, k, 1, 1
+p2σ
+
+.
+(31)
+This asymptotic independence of the factors corresponding to distinct primes gives
+the intuition underpinning part of the arithmetic factor. Note that this equivalent
+of the k-th moment is guessed to hold also for 1/2 < σ ≤1, which would imply
+the Lindel¨of hypothesis (see Titchmarsh [48]). Moreover, the factor (1 −1/p)k2 in
+HP(k) can be interpreted as a compensator to allow the RHS in (31) to converge on
+σ = 1/2.
+In another direction, when looking at the Dirichlet series instead of the Euler
+product, the Riemann zeta function on the critical axis (ℜ(s) = 1/2, ℑ(s) > 0) is
+the (not absolutely) convergent limit of the partial sums
+ζn(s) =
+n
+X
+k=1
+1
+ks.
+Conrey and Gamburd [17] showed that
+lim
+n→∞lim
+t→∞
+1
+t(log t)k2
+Z t
+0
+ζn
+1
+2 + it
+
+2k
+dt = HSq(k)HP(k),
+where HSq(k) is a factor distinct from HMat(k) and linked to counting magic squares.
+So the arithmetic factor appears when considering the moments of the partial sums,
+and inverting the above limits conjecturally changes HSq(k) to a diﬀerent factor
+HMat(k).
+The matrix factor, which is consistent with numerical experiments, comes from
+the idea [30] (enforced by Montgomery’s theorem) that a good approximation for the
+zeta function is the determinant of a unitary matrix. Thanks to Selberg’s integral14,
+the Mellin-Fourier for the determinant of a n×n random unitary matrix (Zn(u, φ) =
+det(Id −e−iφu)) with respect to the Haar measure µU(n) is
+Pn(s, t) = EµU(n)
+ |Zn(u, φ)|teis arg Zn(u,φ)
+=
+n
+Y
+j=1
+Γ(j)Γ(t + j)
+Γ(j + t+s
+2 )Γ(j + t−s
+2 ).
+(32)
+14More about the Selberg integrals and its numerous applications can be found in [22]
+
+
+--- PDF PAGE 28 ---
+142
+P. Bourgade and J.P. Keating
+S´eminaire Poincar´e
+The closed form (32) implies in particular
+EµU(n)
+ |Zn(u, φ)|2k
+∼
+n→∞HMat(k)nk2.
+This leads one to introduce HMat(k) in the conjectured asymptotics of Ik(T). This
+matrix factor is supposed to be universal : it should for example appear in the
+asymptotic moments of Dirichlet L-functions.
+However, these explanations are not suﬃcient to understand clearly how these
+arithmetic and matrix factors must be combined to get the Keating-Snaith conjec-
+ture. A clariﬁcation of this point is the purpose of the three following paragraphs.
+The hybrid model.
+Gonek, Hughes and Keating [23] gave an explanation for the mo-
+ments conjecture based on a particular factorization of the zeta function.
+Let s = σ+it with σ ≥0 and x a real parameter. Let u(x) be a nonnegative C ∞
+function of mass 1, supported on [e1−1/x, e], and set U(z) =
+R ∞
+0 u(x)E1(z log x)dx,
+where E1(z) is the exponential integral
+R ∞
+z (e−w/w) dw. Let also
+Px(s) = exp
+ X
+n≤x
+Λ(n)
+ns log n
+!
+where Λ is Van Mangoldt’s function (Λ(n) = log p if n is an integral power of a
+prime p, 0 otherwise), and
+Zx(s) = exp
+ 
+−
+X
+ρn
+U ((s −ρn) log x)
+!
+where (ρn, n ≥0) are the non-trivial ζ zeros. Then unconditionally, for any given
+integer m,
+ζ(s) = Px(s)Zx(s)
+
+1 + O
+
+xm+2
+(|s| log x)m
+
++ O
+ x−σ log x
+
+,
+where the constants in front of the O only depend on the function u and m : this
+is a hybrid formula for ζ, with both a Euler and Hadamard product. The Px term
+corresponds to the arithmetic factor of the moments conjecture, while the Zx term
+corresponds to the matrix factor. More precisely, this decomposition suggests a proof
+for Conjecture 3.1 along the following steps.
+First, for a value of the parameter x chosen such that x = O(log(t)2−ε), the
+following splitting conjecture states that the moments of zeta are well approximated
+by the product of the moments of Px and Zx (they are suﬃciently independent) :
+1
+t
+Z t
+0
+ds
+ζ
+1
+2 + is
+
+2k
+∼
+t→∞
+ 
+1
+t
+Z t
+0
+ds
+Px
+1
+2 + is
+
+2k!
+×
+ 
+1
+t
+Z t
+0
+ds
+Zx
+1
+2 + is
+
+2k!
+.
+
+
+--- PDF PAGE 29 ---
+Vol. XIV, 2010
+Quantum chaos, random matrix theory, and the Riemann ζ-function
+143
+Assuming that the above result is true, we then need to approximate the moments
+of Px and Zx. Concerning Px [23] proves that
+1
+t
+Z t
+0
+ds
+Px
+1
+2 + is
+
+2k
+= HP(k) (eγ log x)k2 
+1 + O
+
+1
+log x
+
+.
+Finally, an additional conjecture about the moments of Zx would be the last step in
+the moments conjecture :
+1
+t
+Z t
+0
+ds
+Zx
+1
+2 + is
+
+2k
+∼
+t→∞HMat(k)
+ log t
+eγ log x
+k2
+.
+(33)
+The reasoning which leads to this supposed asymptotic is the following. First of all,
+the function Zx is not as complicated as it seems, because as x tends to ∞, the func-
+tion u tends to the Dirac measure at point e, so Zx
+  1
+2 + is
+
+≈Q
+γn (i(t −γn)eγ log x) .
+The ordinates γn (where ζ vanishes) are supposed to have many statistical properties
+identical to those of the eigenangles of a random element of U(n). In order to make
+an adequate choice for n, we recall that the γn have spacing 2π/ log t on average,
+whereas the eigenangles have mean gap 2π/n : thus n should be chosen to be about
+log t. Then the random matrix moments lead to conjecture (33).
+Multiple Dirichlet series.
+In a completely diﬀerent direction, Diaconu, Goldfeld and
+Hoﬀstein [19] proposed an explanation of the Conjecture 3.1 relying only on a sup-
+posed meromorphy property of the multiple Dirichlet series
+Z ∞
+1
+ζ(s1 + ε1it) . . . ζ(s2m + ε2mit)
+2πe
+t
+kit
+t−wdt,
+with w, sk ∈C, εk = ±1 (1 ≤k ≤2m). They make no use of any analogy with
+random matrices to predict the moments of ζ, and recover the Keating-Snaith conjec-
+ture. Important tools in their method are a group of approximate functional equa-
+tions for such multiple Dirichlet series and a Tauberian theorem to connect the
+asymptotics as w →1+ and the moments
+R t
+1.
+An intriguing question is whether their method applies or not to predict the
+joint moments of ζ,
+1
+t
+Z t
+1
+dt
+ℓY
+j=1
+ζ
+1
+2 + i(t + sj)
+
+2kj
+with kj ∈N∗, (1 ≤j ≤ℓ), the sj’s being distinct elements in R. If such a conjecture
+could be stated, independently of any considerations about random matrices, this
+would be an accurate test for the correspondence between random matrices and L-
+functions. For such a conjecture, one expects that it agrees with the analogous result
+on the unitary group, which is a special case of the Fisher-Hartwig asymptotics of
+
+
+--- PDF PAGE 30 ---
+144
+P. Bourgade and J.P. Keating
+S´eminaire Poincar´e
+Toeplitz determinants ﬁrst proven by Widom [49] :
+EµU(n)
+ ℓY
+j=1
+det(Id −eiφju)
+2kj
+!
+∼
+n→∞
+Y
+1≤i<j≤ℓ
+|eiφi −eiφj|−2kikj
+ℓY
+j=1
+EµU(n)
+det(Id −eiφju)
+2kj
+∼
+n→∞
+Y
+1≤i<j≤ℓ
+|eiφi −eiφj|−2kikj
+ℓY
+j=1
+HMat(kj)nk2
+j ,
+the φj’s being distinct elements modulo 2π.
+Joint moments.
+Strong evidence supporting Conjecture 3.1 was obtained in [15] : an
+extension is given to the joint moments of the Riemann zeta function with entries
+shifted by constants along the critical axis. In particular, this generalized moment
+conjecture gives a complete expansion of Ik(t) in terms of powers of log t which
+agrees remarkably with numerical tests.
+More precisely, we denote brieﬂy z = (z1, . . . , z2k) and introduce the Euler
+product
+ak(z) =
+Y
+p∈P,1≤i,j≤k
+
+1 −
+1
+1 + pzi−zj+k
+ Z 1
+0
+dθ
+k
+Y
+j=1
+1
+
+1 −
+ei2πθ
+p1/2+zj
+ 
+1 −
+e−i2πθ
+p1/2−zj+k
+,
+and g(z) = ak(z) Q
+1≤i,j≤k ζ(1+zi−zj+k). Then we deﬁne Pk(x, (αi)2k
+1 ) as the integral
+(the path of integration being deﬁned as small circles surrounding the poles αi)
+e−x
+2
+Pk
+1(αi−αi+k)
+(−1)k
+(k!)2(i2π)2k
+I
+. . .
+I
+e
+x
+2
+Pk
+1(zi−zi+k)
+g(z)∆2(z)
+Q
+1≤i,j≤2k(zi −αj)dz1 . . . dz2k,
+where ∆is the Vandermonde determinant ∆(z) = Q
+i<j(zj −zi). Then the complete
+moments conjecture from [15] is that, for any ε > 0,
+Z t
+0
+k
+Y
+i=1
+ζ
+1
+2 + is + αi
+
+2k
+Y
+j=k+1
+ζ
+1
+2 + is −αj
+
+ds
+=
+Z t
+0
+Pk
+
+log s
+2π, (αi)2k
+1
+ 
+1 + O
+
+s−1
+2 +ε
+ds.
+(34)
+One can prove that for α1 = · · · = α2k = 0, Pk is polynomial in x with degree k2
+with leading coeﬃcient as expected from Conjecture 3.1. Where does the general
+moments conjecture come from ? A very similar formula was obtained by the same
+authors [14] concerning the characteristic polynomial of a random unitary matrix,
+
+
+--- PDF PAGE 31 ---
+Vol. XIV, 2010
+Quantum chaos, random matrix theory, and the Riemann ζ-function
+145
+noted here Zu(α) = det(Id −e−αu) :
+EµU(n)
+ k
+Y
+i=1
+Zu(αi)
+2k
+Y
+j=k+1
+Zu†(−αj)
+!
+= e−n
+2
+Pk
+i=1(αi−αk+i)
+(−1)k
+(k!)2(i2π)2k
+I
+. . .
+I
+e
+n
+2
+Pk
+i=1(zi−zk+i)
+Y
+1≤i,j≤k
+1
+1 −ezk+j−zi
+∆2(z)
+Q
+1≤i,j≤2k(zi −αj)dz1 . . . dz2k.
+From this formal analogy between the joint moments of unitary matrices and that
+of the Riemann zeta function one gets strikingly accurate numerical results. For
+example, the following numerical data from [15] compare the conjectural moments
+asymptotics when k = 3 (writing P3(x) for P3(x, (0, . . . , 0))), on an interval I
+Z
+I
+P3
+log s
+2π
+
+ds
+(35)
+with the numerical computation for
+Z
+I
+ζ
+1
+2 + is
+
+6
+ds.
+(36)
+Integration domain I
+Full moment conjecture (35)
+Numerics (36)
+Ratio
+[1300000, 1350000]
+80188090542.5
+80320710380.9
+1.001654
+[1350000, 1400000]
+81723770322.2
+80767881132.6
+.988303
+[1400000, 1450000]
+83228956776.3
+83782957374.3
+1.006656
+[0, 2350000]
+3317437762612.4
+3317496016044.9
+1.000017
+3.3
+Gaussianity for ζ and characteristic polynomials
+The explicit computation (32) of the mixed Mellin-Fourier transform of the
+characteristic polynomial allows one to prove the following central limit theorem
+[30] : as n →∞
+log Zn
+√log n
+law
+−→N1 + iN2,
+(37)
+where N1 and N2 are standard independent real Gaussian random variables. A
+similar result holds, unconditionally, for the logarithm of the Riemann zeta function.
+This was shown by Selberg15 [45].
+This
+indicates
+that
+the
+correspondence
+between
+random
+matrices
+and
+L-functions is not uniquely observable through the microscopic repulsion, but also
+at a macroscopic level, like in the moment conjecture.
+Theorem 3.2. Writing ω for a uniform random variable on (0, 1),
+log ζ
+  1
+2 + iωt
+
+q
+1
+2 log log t
+law
+−→
+t→∞N1 + iN2.
+(38)
+It may be of interest, to understand the mixing properties of primes, to give ideas
+of
+the
+proof
+of
+this
+central
+limit
+theorem.
+15Note that it predates the analogous result about random matrices (37), an unusual situation.
+
+
+--- PDF PAGE 32 ---
+146
+P. Bourgade and J.P. Keating
+S´eminaire Poincar´e
+Fig. 8 – Histogram of 105 values of log ζ around
+106.
+Sketch of proof. Suppose the Euler pro-
+duct of ζ holds for 1/2 ≤ℜ(s) ≤1
+(this is a conjecture) : then log ζ(s) =
+−P
+p∈P log(1 −p−s) can be approxima-
+ted by P
+p∈P p−s. Let s = 1/2 + εt + iωt
+with ω uniform on (0, 1). As the log p’s
+are linearly independent over Q, the
+terms {p−iωt | p ∈P} can be viewed as
+independent uniform random variables
+on the unit circle as t →∞, hence it
+is a natural thought that a central limit
+theorem might hold for log ζ(s).
+The crucial point to get such arith-
+metical central limit theorems is the ap-
+proximation by suﬃciently short Diri-
+chlet series. More precisely, the explicit
+formula for ζ′/ζ, by Landau, gives such an approximation (x > 1, s distinct from 1,
+the zeroes ρ and −2n, n ∈N) :
+ζ′
+ζ (s) = −
+X
+n≤x
+Λ(n)
+ns
++ x1−s
+1 −s −
+X
+ρ
+xρ−s
+ρ −s +
+∞
+X
+n=1
+x−2n−s
+2n + s,
+from which we get an approximate formula for log ζ(s) by integration. However, the
+sum over the zeros is not absolutely convergent, hence this formula is not suﬃcient.
+Selberg found a slight change in the above formula, that makes a great diﬀerence
+because all inﬁnite sums are now absolutely convergent : under the above hypotheses,
+if
+Λx(n) =
+(
+Λ(n)
+for 1 ≤n ≤x,
+Λ(n)
+log x2
+n
+log n
+for x ≤n ≤x2,
+then
+ζ′
+ζ (s) = −
+X
+n≤x2
+Λx(n)
+ns
++ x2(1−s) −x1−s
+(1 −s)2 log x +
+1
+log x
+X
+ρ
+xρ−s −x2(ρ−s)
+(ρ −s)2
++
+1
+log x
+∞
+X
+n=1
+x−2n−s −x−2(2n+s)
+(2n + s)2
+.
+Assuming the Riemann hypothesis, the above formulas give a simple expression for
+(ζ′/ζ)(s) for ℜ(s) ≥1/2 : for x →∞, all terms in the inﬁnite sums converge to 0
+because ℜ(ρ −s) < 0. By subtle arguments, Selberg showed that, although RH is
+necessary for the almost sure coincidence between ζ′/ζ and its Dirichlet series, it is
+not required in order to get a good Lk approximation. In particular, for any k ∈N∗,
+0 < a < 1, there is a constant ck,a such that for any 1/2 ≤σ ≤1, ta/k ≤x ≤t1/k,
+1
+t
+Z t
+1
+log ζ(σ + is) −
+X
+p≤x
+p−is
+pσ
+
+2k
+ds ≤ck,a.
+
+
+--- PDF PAGE 33 ---
+Vol. XIV, 2010
+Quantum chaos, random matrix theory, and the Riemann ζ-function
+147
+In the following, we only need the case k = 1 in the above formula : with ω uniform
+on (0, 1), log ζ
+  1
+2 + iωt
+
+−P
+p≤t
+p−iωt
+√p
+is bounded in L2, and after normalization by
+1
+√log log t, it converges in probability to 0. Hence, the central limit theorem for log ζ
+is equivalent to
+1
+√log log t
+X
+p≤t
+p−iωt
+√p
+law
+−→
+t→∞N1 + iN2.
+The proof of the above result proceeds in two steps.
+Firstly, the length of the Dirichlet series can still be decreased, thanks to the
+Montgomery-Vaughan inequality, Theorem 1.9. From the properties of linear inde-
+pendence of primes, there is a constant c > 0 independent of p with minp′̸=p | log p −
+log p′| > c
+p, so for any mt < t
+1
+t
+Z t
+0
+
+X
+mt<p<t
+p−is
+√p log log t
+
+2
+ds ≤
+X
+mt<p<t
+1
+p log log t
+
+1 + 3πcp
+t
+
+.
+By the prime number theorem this goes to 0 provided that, as t →∞, log log mt
+log log t →1.
+If the above condition is satisﬁed, we therefore just need to prove
+X
+p≤mt
+eiωt
+√p log log t
+law
+−→N1 + iN2.
+(39)
+Secondly, the classical central limit theorem states that
+X
+p≤mt
+eiωp
+√p log log t
+law
+−→N1 + iN2,
+(40)
+when the ωp’s are independent uniform random variables on (0, 2π). The log p’s
+being linearly independent over Q, it is well known that as t →∞any given ﬁnite
+number of the piωt’s are asymptotically independent and uniform on the unit circle.
+The problem here is that the number of these random variables increases as they
+become independent. If this number increases suﬃciently slowly (log mt/ log t →0),
+one can show that (40) implies (39). This is a result about the mixing time of T s,
+the translation on the torus Tn with vector s(log p1, . . . , log pn), where both s and
+n go to ∞: the mean in time (39) is very close to the mean in space (40). The
+method to prove it consists in computing the moments of the time average, and
+show that only the diagonal terms contribute (i.e. the terms corresponding to the
+space average).
+A natural attitude in probability, to prove a central limit theorem such as (37),
+consists in identifying independent random variables. However, from the uniform
+(Haar) measure on U(n), such an identiﬁcation is not straightforward.
+To tackle this problem we need to understand how one can generate the Haar
+measure as a product of independent transformations, to deduce identities in law
+concerning the characteristic polynomials of random matrices [11]. Let us take the
+example of a uniformly distributed element of O(3). It seems natural to proceed as
+follows :
+– O(e1) is uniform on the unit sphere ;
+
+
+--- PDF PAGE 34 ---
+148
+P. Bourgade and J.P. Keating
+S´eminaire Poincar´e
+– O(e2) is uniform on the unit circle orthogonal to O(e1) ;
+– O(e3) is uniform on
+{O(e1) ∧O(e2), −O(e1) ∧O(e2)}.
+The lines hereafter are a formalization of the
+above simple idea, written here for the unitary group.
+For any 0 ≤k ≤n, note Hk := {u ∈U(n) | u(ej) =
+ej, 1 ≤j ≤k}, the subgroup of U(n) stabilizing of
+the ﬁrst k basis vectors, and µk its Haar measure (in
+particular µ0 = µU(n)). Moreover, let pk be the pro-
+jection u 7→u(ek). A sequence (ν1, . . . , νn) of pro-
+bability measures on U(n) is said coherent coherent
+with the Haar measure µU(n) if for all 1 ≤k ≤n,
+νk(Hk−1) = 1 and pk(νk) = pk(µk−1).
+A result of [11] asserts that if (ν1, . . . , νn) is co-
+herent with µU(n), then one has the equality of measures
+µU(n) = ν1 × ν2 × · · · × νn,
+(41)
+which means that to generate a uniform unitary matrix, one can proceed by multi-
+plying n independent unitary matrices from the embedded subgroups (Hk), provided
+that their ﬁrst non-trivial row is uniform on spheres of increasing size.
+If one chooses reﬂections16 r1, . . . , rn for
+these independent transformations the projec-
+tion of (41) by the determinant takes a remarka-
+bly easy form, because of the algebraic identity
+det
+
+Id −r
+
+1
+0
+0
+u
+
+= (1−⟨e1, r(e1)⟩) det(Id −u)
+when r is a reﬂection. Iterating this formula in
+(41) yields, for u ∼µU(n),
+det(Id −u)
+law
+=
+n
+Y
+k=1
+
+1 −eiωkp
+β1,k−1
+
+,
+(42)
+where all random variables are independent, ωk
+uniform on (0, 2π), and β a beta random va-
+riable17 with indicated parameters. Indeed, the
+ﬁrst coordinate of a unit complex vector uni-
+formly distributed on a k-dimensional complex
+sphere
+is
+known
+to
+be
+distributed
+like
+eiωkp
+β1,k−1. The decomposition (42) also raises
+the (open) question of an analogue of these
+unexpected independent random variables in a
+number-theoretic context.
+It also gives a direct proof of (32) as well as a derivation of the central limit
+theorem (37), by a simple central limit theorem for sums of independent random
+variables. Moreover, this decomposition yields a speed of convergence, by Berry-
+Esseen type theorems, and that this convergence rate is better for the imaginary
+part than for the real one (because ℑlog
+ 1 −eiωkp
+β1,k−1
+
+has a symmetric density,
+16i.e. rank(rk −Id) = 1 or 0.
+17βa,b is a random variable supported on (0, 1) with measure
+Γ(a+b)
+Γ(a)Γ(b)xa−1(1 −x)b−1dx
+
+
+--- PDF PAGE 35 ---
+Vol. XIV, 2010
+Quantum chaos, random matrix theory, and the Riemann ζ-function
+149
+which is not the case for ℜlog
+ 1 −eiωkp
+β1,k−1
+
+). This can be compared to these
+histograms of log ζ values, around height 1020, from [30] and based on numerical data
+in [38] They illustrate the Selberg limit theorem (38), by comparing ℜ(log ζ) (up)
+and ℑ(log ζ) (down) with the Gaussian distribution and the density of log det(Id −u)
+where u ∼µU(42) (the Circular Unitary Ensemble, CUE). The dimension and height
+are chosen to satisfy n ≈log t. This shows a better agreement between U(42) and ζ
+statistics than with the Gaussian, and a better convergence speed for arg ζ than for
+log |ζ|, like in the unitary case.
+Finally, the correspondence n ↔log t holds not only for the matrix dimension
+compared to the height along the critical axis, but also for small shifts away from
+the unit circle and the critical axis. For example, the same techniques as above yield
+the following phase transition in the normalization, from a constant if suﬃciently
+close to the critical line till a lower one when going further.
+If εn →0, εn ≫1/n, and un ∼µU(n),
+then
+log det(Id −e−εnun)
+q
+−1
+2 log εn
+law
+−→N1 + iN2
+The required normalisation becomes
+q
+1
+2 log n if εn ≪1/n.
+If εt →0, εt ≫1/ log t, and ω is
+uniform on (0, 1), then
+log ζ
+  1
+2 + εt + iωt
+
+q
+−1
+2 log εt
+law
+−→N1 + iN2
+The required normalisation becomes
+q
+1
+2 log log t if εt ≪1/ log t.
+3.4
+Families of L-functions
+Another type of statistics concerns families of L-functions, i.e. averages over a
+set of functions at a speciﬁc point instead of a mean along the critical axis for a
+given L-function. In this context, the limiting statistics are linked to distinct compact
+groups, including :
+– U(n), the group of n × n unitary matrices, involved in many analogies as we
+have seen ;
+– SO(2n), the special orthogonal group, orthogonal 2n × 2n matrices u with
+det(u) = 1 ;
+– USp(2n), the unitary symplectic group, 2n × 2n unitary matrices satisfying
+utJu = J, where J =
+
+0
+Idn
+−Idn
+0
+
+.
+A result by Katz-Sarnak [39] states that, irrespective of the choice of the three
+above groups, for any k the k-th consecutive spacings measures
+µ(u)
+k [a, b] = 1
+n
+
+n
+1 ≤j ≤n : n
+2π(θj+k −θj) ∈[a, b]
+o
+are the same in the limit n →∞, where 0 ≤θ1 ≤. . . are the ordered eigenangles of
+u. These local statistics do not depend on the group in question for large dimensions.
+This corresponds to the universality of the GUE statistics for zeros at large height
+along the critical axis, for example for Dirichlet L-functions or L-functions attached
+to elliptic curves. Consequently, to make a statistical distinction amongst families,
+one needs to look at low-lying zeros, i.e. close to the symmetry point 1/2. They
+correspond to eigenvalues close to 1 on the unit circle.
+
+
+--- PDF PAGE 36 ---
+150
+P. Bourgade and J.P. Keating
+S´eminaire Poincar´e
+One example of a family of L-functions is the following, attached to real qua-
+dratic Dirichlet characters. For a prime p, let χd(p) = 0 if p | d, 1 if p ∤d and d
+is a square modulo p, and −1 otherwise. Then deﬁne the Dirichlet L-function for
+ℜ(s) > 1 by
+L(Dir)(s, χd) =
+Y
+P
+1
+1 −χd(p)
+ps
+=
+∞
+X
+n=1
+χd(n)
+ns
+,
+where the deﬁnition of χd is extended to N and satisﬁes the multiplicative property
+χd(mn) = χd(m)χd(n). Then L(Dir) can be meromorphically extended to C, satisﬁes
+a functional equation, and its central statistics L(Dir)(1/2, χd) are supposedly linked
+to the Haar measure of the unitary symplectic group. For this group, the eigenvalues
+are symmetrically positioned about the real axis (like for the zeros of L(Dir)) and with
+eigenangles density proportional to
+Y
+1≤j<k≤n
+(cos θj −cos θk)2
+n
+Y
+j=1
+sin2 θj.
+(43)
+The conjecture of Conrey-Farmer [13] and Keating-Snaith [31] is that, for any integer
+k (they extend it to real k thanks to the Barnes function),
+1
+D∗
+∗
+X
+|d|≤D
+L(1/2, χd)k
+∼
+D→∞H(USp)
+Mat (k) H(Dir)
+P
+(k)
+1
+2 log D
+ k(k+1)
+2
+,
+where P∗means that the summation is restricted to fundamental discriminants18,
+D∗is the number of terms in the sum, and
+H(USp)
+Mat (k) = lim
+n→∞
+1
+n
+k(k+1)
+2
+EµUSp(k)
+ | det(Id −u)|k
+= 2
+k(k+1)
+2
+k
+Y
+j=1
+j!
+(2j)!,
+(44)
+H(Dir)
+P
+(k) =
+Y
+P
+
+1 −1
+p
+ k(k+1)
+2
+1 + 1
+p
+
+
+
+
+1 −
+1
+√p
+−k
++
+
+1 +
+1
+√p
+−k
+2
++ 1
+p
+
+
+.
+The limit in (44) can be performed either by the Weyl integration formula (43) and
+Selberg integrals asymptotics, or by a decomposition as a product of independent
+random variables like (42).
+Examples of L-functions families featuring orthogonal symmetry and SO(2n)
+statistics can be found in [13]. This includes for example L-functions associated
+with elliptic curves and twisted by Dirichlet characters. For all families, with unitary,
+orthogonal or symplectic type, the conjectured asymptotics of low-lying zeros are
+relevant with numerical calculations [41].
+Citing Katz and Sarnak, we believe that the further understanding of the source
+of such symmetries holds the key to ﬁnding a natural spectral interpretation of the
+zeros.
+18d is a fundamental discriminant if any decomposition d = d0f2, with d0 a discriminant and f ∈N, implies f = 1
+
+
+--- PDF PAGE 37 ---
+Vol. XIV, 2010
+Quantum chaos, random matrix theory, and the Riemann ζ-function
+151
+References
+[1] G.W. Anderson, A. Guionnet, O. Zeitouni, An Introduction to Random Ma-
+trices, Cambridge University Press, 2009.
+[2] N. Argaman, F.M. Dittes, E. Doron, J.P. Keating, A. Kitaev, M. Sieber, U.
+Smilansky, Correlations in the actions of periodic orbits derived from quantum
+chaos, Phys. Rev. Lett. 71 (1993), 4326–4329.
+[3] M.V. Berry, M. Tabor, Level clustering in the regular spectrum, Proc. Roy.
+Soc. Lond. A 356 (1977), 375–394.
+[4] M.V. Berry, Semiclassical formula for the number variance of the Riemann
+zeros, Nonlinearity 1 (1988), 399–407.
+[5] M.V.Berry, J.P. Keating, The Riemann zeros and eigenvalue asymptotics,
+SIAM Review 41 (1999), 236–266.
+[6] E.B Bogomolny, J.P. Keating, Random matrix theory and the Riemann zeros
+I : three and four-point correlations, Nonlinearity 8 (1995), 1115–1131.
+[7] E.B. Bogomolny, J.P. Keating, Random matrix theory and the Riemann zeros
+II : n-point correlations, Nonlinearity 9 (1996), 911–935.
+[8] E.B. Bogomolny, J.P. Keating, Gutzwiller’s trace formula and spectral statis-
+tics : Beyond the diagonal approximation, Phys. Rev. Lett. 77 (1996), 1472–
+1475.
+[9] O. Bohigas, M.-J. Giannoni, C. Schmidt, Characterization of chaoic quantum
+spectra and universality of level ﬂuctuation laws, Phys. Rev. Lett. 52 (1984),
+1–4.
+[10] E. Bogomolny, O. Bohigas, P. Leboeuf, A.G. Monastra, On the spacing dis-
+tribution of the Riemann zeros : corrections to the asymptotic result, J. Phys.
+A : Math. Gen. 39 (2006), 10743–10754.
+[11] P. Bourgade, C.P. Hughes, A. Nikeghbali, M. Yor, The characteristic polyno-
+mial of a random unitary matrix : a probabilistic approach, Duke Mathematical
+Journal 145, 1 (2008), 45–69.
+[12] A. Connes, Trace formula in non-commutative Geometry and the zeros of the
+Riemann zeta function, Selecta Math. (N.S.) 5, no. 1 (1999), 29–106.
+[13] J.B. Conrey, D.W. Farmer, Mean values of L-functions and symmetry, Inter-
+national Mathematics Research Notices, 883–908, 2000.
+[14] J.B. Conrey, D.W. Farmer, J. P. Keating, M. O. Rubinstein, and N. C. Snaith,
+Autocorrelation of random matrix polynomials, Commun. Math. Phys. 237 3
+(2003), 365–395.
+[15] J.B. Conrey, D.W. Farmer, J.P. Keating, M.O. Rubinstein, N.C. Snaith, Inte-
+gral moments of L-functions, Proc. London Math. Soc. 91 (2005), 33–104.
+[16] J.B. Conrey, A. Ghosh, On mean values of the zeta function, iii, Proceedings
+of the AmalﬁConference in Analytic Number Theory, Universit`a di Salerno,
+1992.
+[17] J.B. Conrey, A. Gamburd, Pseudomoments of the Riemann zeta-function and
+pseudomagic squares, Journal of Number Theory 117 (2006), 263–278, Issue 2.
+
+
+--- PDF PAGE 38 ---
+152
+P. Bourgade and J.P. Keating
+S´eminaire Poincar´e
+[18] J.B. Conrey, S. M. Gonek, High moments of the Riemann zeta function, Duke
+Math. J. 107 (2001), 577–604.
+[19] A. Diaconu, D. Goldfeld, J. Hoﬀstein, Multiple Dirichlet Series and Moments of
+Zeta and L-Functions, Compositio Mathematica 139, N. 3, December (2003),
+297–360 (64).
+[20] P. Diaconis, M. Shahshahani, On the eigenvalues of random matrices, Studies
+in applied probability, J. Appl. Probab. 31A (1994), 49–62.
+[21] L. Erd¨os, J. Ramirez, B. Schlein, T. Tao, V. Vu, H.T. Yau, Bulk universality
+for Wigner hermitian matrices with subexponential decay, to appear in Math.
+Res. Lett.
+[22] P.J. Forrester, S. Ole Warnaar, The importance of the Selberg integral, Bull.
+Amer. Math. Soc. 45 (2008), 489–534.
+[23] S.M. Gonek, C.P. Hughes, J.P. Keating, A hybrid Euler-Hadamard product
+formula for the Riemann zeta function, Duke Math. J. 136, 3 (2007), 507–549.
+[24] G.H. Hardy, J.E. Littlewood, Contributions to the theory of the Riemann zeta-
+function and the theory of the distributions of primes, Acta Mathematica 41
+(1918).
+[25] G.H. Hardy, J.E. Littlewood, Some Problems of Partitio Numerorum III, On
+the Expression of a Number as a Sum of Primes, Acta Math. 44 (1923), 1–70.
+[26] D.R. Heath-Brown, Fractional moments of the Riemann zeta-function, J. Lon-
+don Math. Soc. 24 (1981), 65–78.
+[27] D. Hejhal, On the triple correlation of the zeroes of the zeta function, IMRN
+7 (1994), 293–302.
+[28] R. Holowinsky, K. Soundararajan, Mass equidistribution for Hecke eigenforms,
+to appear in Annals of Mathematics.
+[29] A.E. Ingham, Mean-value theorems in the theory of the Riemann zeta-function,
+Proceedings of the London Mathematical Society 27 (1926), 278–290.
+[30] J.P. Keating, N.C. Snaith, Random Matrix Theory and ζ(1/2 + it), Comm.
+Math. Phys. 214 (2000), 57–89.
+[31] J.P. Keating, N.C. Snaith, Random matrix theory and L-functions at s = 1/2,
+Comm. Math. Phys. 214 (2000), 91–110.
+[32] J. Marklof, Pair correlation densities of inhomogeneous quadratic forms II,
+Duke mathematical journal 115, No. 3 (2002), 409–434.
+[33] M. L. Mehta, Random matrices, Third edition, Pure and Applied Mathematics
+Series 142, Elsevier, London, 2004.
+[34] H.L. Montgomery, The pair correlation of zeros of the zeta function, Analy-
+tic number theory (Proceedings of Symposium in Pure Mathemathics 24 (St.
+Louis Univ., St. Louis, Mo., 1972), American Mathematical Society (Provi-
+dence, R.I., 1973), pp. 181–193.
+[35] D.A. Goldston, H.L. Montgomery, Pair correlation of zeroes and primes
+in short intervals, Analytic Number Theory and Diophantine Problems,
+Birkh¨auser, Boston, Mass. 1987, 183–203.
+[36] M/C. Gutzwiller, Periodic orbits and lassical quantization conditions, J. Math.
+Phys. 12 (1971), 343–358.
+
+
+--- PDF PAGE 39 ---
+Vol. XIV, 2010
+Quantum chaos, random matrix theory, and the Riemann ζ-function
+153
+[37] H.L. Montgomery, R.C. Vaughan, Hilbert’s inequality, J. London Math. Soc.
+(2), 8 (1974), 73–82.
+[38] A.M. Odlyzko, On the distribution of spacings between the zeros of the zeta
+function, Math. Comp. 48 (1987), 273–308.
+[39] N.M. Katz, P. Sarnak, Random Matrices, Frobenius Eigenvalues and mono-
+dromy, American Mathematical Society Colloquium Publications, 45. Ameri-
+can Mathematical Society, Providence, Rhode island, 1999.
+[40] B. Riemann, ¨Uber die Anzahl der Primzahlen unter einer gegebenen Gr¨osse,
+Monatsberichte der Berliner Akademie, Gesammelte Werke, Teubner, Leipzig,
+1892.
+[41] M. Rubinstein, Evidence for a spectral interpretation of the zeros of L-
+functions, PhD thesis, Princeon University.
+[42] Z. Rudnick, P. Sarnak, Zeroes of principal L-functions and random matrix
+theory, Duke Math. J. 81 (1996), no. 2, 269–322. A celebration of John F.
+Nash.
+[43] A.I. Schnirelman, Ergodic properties of eigenfunctions, Usp. Math. Nauk 29
+(1974), 181182.
+[44] A. Selberg, Uber einen Satz von A. Gelfond, Arch. Math. Naturvid. 44 (1941),
+159–171.
+[45] A. Selberg, Old and new conjectures and results about a class of Dirichlet
+series, Proceedings of the AmalﬁConference on Analytic Number Theory
+(Maiori, 1989), 367–385, Univerist`a di Salerno, Salerno, 1992.
+[46] A Soshnikov, Determinantal random point ﬁelds, Russ. Math. Surv. 55 (5)
+(2000), 923–975.
+[47] K. Soundararajan, Moments of the Riemann zeta-function, Annals of Mathe-
+matics 170 (2009), 981–993.
+[48] E.C. Titchmarsh, The Theory of the Riemann Zeta Function, London, Oxford
+University Press, 1951.
+[49] H. Widom, Toeplitz determinants with singular generating functions, Amer. J.
+Math. 95 (1973), 333–383.

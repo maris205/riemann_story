@@ -1,0 +1,22 @@
+{
+  "description": "Original teaching calculations; no Connes/RH numerical proof",
+  "zeta_zeros": [
+    14.134725141734695,
+    21.022039638771556,
+    25.01085758014569,
+    30.424876125859512,
+    32.93506158773919,
+    37.586178158825675
+  ],
+  "matrix_eigenvalues": [
+    -1.1102230246251565e-16,
+    3.0,
+    3.0
+  ],
+  "concentration_c": 4,
+  "quadrature_nodes": 200,
+  "concentration_eigenvalue": 0.9958854904296732,
+  "comparison_120_nodes": 0.9958854904296606,
+  "independent_band_energy": 0.995885490429671,
+  "checks": "PSD, kernel, unit-circle roots, complex quadratic identity, normalization, quadrature convergence, band energy"
+}

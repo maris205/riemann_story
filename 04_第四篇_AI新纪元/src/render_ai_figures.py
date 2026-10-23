@@ -9,7 +9,7 @@ matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 from matplotlib.font_manager import FontProperties,fontManager
 from matplotlib.patches import FancyArrowPatch,Rectangle
-FONT='/usr/share/fonts/opentype/noto/NotoSansCJK-Regular.ttc'
+FONT=next(str(p) for p in [Path('/usr/share/fonts/opentype/noto/NotoSansCJK-Regular.ttc'), Path('C:/Windows/Fonts/msyh.ttc')] if p.exists())
 fontManager.addfont(FONT)
 plt.rcParams.update({'font.family':FontProperties(fname=FONT).get_name(),'font.size':15,'axes.unicode_minus':False,'mathtext.fontset':'dejavusans','svg.fonttype':'path'})
 BG='#F7F3E9';NAVY='#173346';TEAL='#178A86';GOLD='#B78734';MUTED='#637782';LIGHT='#D9E6DF'
@@ -24,7 +24,11 @@ def panel(f,rect):
 def txt(a,x,y,s,size=16,c=NAVY,ha='center',**kw): a.text(x,y,s,fontsize=size,color=c,ha=ha,va='center',**kw)
 def arr(a,p,q,c=GOLD,dashed=False): a.add_patch(FancyArrowPatch(p,q,arrowstyle='-|>',mutation_scale=17,lw=2,color=c,linestyle='--' if dashed else '-'))
 def save(f,name):
- for ext in ['png','svg']: f.savefig(IMG/f'{name}.{ext}',dpi=180,facecolor=BG)
+ for ext in ['png','svg']:
+  output=IMG/f'{name}.{ext}'
+  f.savefig(output,dpi=180,facecolor=BG)
+  if ext=='svg':
+   output.write_text('\n'.join(line.rstrip() for line in output.read_text(encoding='utf-8').splitlines())+'\n',encoding='utf-8')
  plt.close(f)
 def budget():
  f=base('两个零点名额，至多一个正方向','第16章 · 有限压缩的记账机制：允许离线配对存在，再用整体信息限制它们的总量')
@@ -48,7 +52,7 @@ def budget():
  f.text(.07,.025,'这是机制示意，非实测零点或矩阵。其余部分未获此定理保证，不等于已发现离线零点。',fontsize=12,color=MUTED)
  save(f,'weil_pair_budget')
 def regions():
- f=base('从随高度收窄，到固定宽度','第17章 · ζ 的非平凡零点位置：7/8 是横坐标，不是“已证明的百分比”')
+ f=base('从随高度收窄，到固定宽度','第18章 · ζ 的非平凡零点位置：7/8 是横坐标，不是“已证明的百分比”')
  axs=[]
  for rect,title in [([.075,.25,.39,.52],'经典曲边：随 |t| 增大收窄'),([.565,.25,.36,.52],'2026 QRH：固定带')]:
   ax=f.add_axes(rect,facecolor=BG);axs.append(ax);ax.set_xlim(0,1);ax.set_ylim(-1.1,1.1)

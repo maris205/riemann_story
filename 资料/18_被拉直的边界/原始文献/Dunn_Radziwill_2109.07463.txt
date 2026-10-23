@@ -1,0 +1,10131 @@
+--- PDF PAGE 1 ---
+arXiv:2109.07463v3  [math.NT]  14 May 2024
+BIAS IN CUBIC GAUSS SUMS: PATTERSON’S CONJECTURE
+ALEXANDER DUNN AND MAKSYM RADZIWI L L
+Abstract. Let W be a smooth test function with compact support in p0, 8q. Con-
+ditional on the Generalized Riemann Hypothesis for Hecke L-functions over Qpωq, we
+prove that
+ÿ
+p”1
+pmod 3q
+1
+2?p ¨
+´
+ÿ
+x
+pmod pq
+e2πix3{p¯
+W
+´ p
+X
+¯
+„ p2πq2{3
+3Γp 2
+3q
+ż 8
+0
+Wpxqx´1{6dx ¨ X5{6
+log X ,
+as X Ñ 8 and p runs over primes. This explains a well-known numerical bias in the
+distribution of cubic Gauss sums ﬁrst observed by Kummer in 1846 and conﬁrms (con-
+ditionally on the Generalized Riemann Hypothesis) a conjecture of Patterson [Pat78b]
+from 1978.
+There are two important byproducts of our proof. The ﬁrst is an explicit level aspect
+Voronoi summation formula for cubic Gauss sums, extending computations of Patterson
+and Yoshimoto. Secondly, we show that Heath-Brown’s cubic large sieve is sharp up to
+factors of Xop1q under the Generalized Riemann Hypothesis. This disproves the popular
+belief that the cubic large sieve can be improved.
+An important ingredient in our proof is a dispersion estimate for cubic Gauss sums.
+It can be interpreted as a cubic large sieve with correction by a non-trivial asymptotic
+main term. This estimate relies on the Generalized Riemann Hypothesis, and is one of
+the fundamental reasons why our result is conditional.
+Contents
+1.
+Introduction
+2
+2.
+Basic facts about Qpωq
+10
+3.
+Notational conventions and deﬁnitions
+11
+4.
+Poisson summation formula
+11
+5.
+Voronoi summation in the level aspect
+16
+6.
+Cancellations in sequences over primes
+35
+7.
+Narrow Type II/III estimates
+39
+8.
+Type I estimates
+44
+9.
+Improved cubic large sieve
+49
+10.
+Broad Type II estimates
+61
+11.
+Average Type-I estimates
+62
+12.
+Combinatorial decompositions
+67
+13.
+Proof of Theorems 1.1 and 1.3
+69
+14.
+Proof of Theorem 1.2
+75
+References
+76
+2020 Mathematics Subject Classiﬁcation. 11F27, 11F30, 11L05, 11L15, 11L20, 11N36.
+Key words and phrases. Patterson’s conjecture, cubic Gauss sums, large sieve, primes, automorphic
+forms.
+1
+
+
+--- PDF PAGE 2 ---
+2
+ALEXANDER DUNN AND MAKSYM RADZIWI L L
+Appendix A.
+Appendix
+77
+1. Introduction
+1.1. Exponential sums over primes. Kummer [Kum75, Paper 16,17] studied the dis-
+tribution of the cubic exponential sums
+Sp “
+pÿ
+n“1
+e
+´n3
+p
+¯
+,
+epxq :“ e2πix,
+with p ” 1 pmod 3q prime. The bound |Sp| ď 2?p is well-known, and we can consequently
+write
+Sp
+2?p “ cosp2πθpq,
+θp P r0, 1s.
+(1.1)
+This speciﬁes the value of θp ´ 1
+2 up to sign. This sign ambiguity can be resolved by
+noticing that (1.1) is the real part of an explicit root of unity deﬁned in (1.7). To probe
+whether θp is equidistributed, Kummer computed the frequency with which cosp2πθpq
+lay in the intervals I1 “ r 1
+2, 1s, I2 “ r´ 1
+2, 1
+2s and I3 “ r´1, ´ 1
+2s, for p ď 500. Kummer
+observed that cosp2πθpq tended to lay more frequently in I1 than in I2 or I3 (the ratio he
+observed was 3 : 2 : 1 respectively). If this bias persisted, then the angles θp would not
+be uniformly distributed. Subsequent calculations by von Neumann-Goldstine [vNG53],
+Lehmer [Leh56] and Cassels [Cas69] cast doubt on the persistence of this observation and
+suggested that cosp2πθpq lay equally frequently in I1, I2 and I3, and that θp was uniformly
+distributed.
+In light of the new numerical evidence, Patterson [Pat78b] enunciated a
+corrected conjecture. This conjecture explained the bias observed by Kummer, and was
+consistent with the numerical data.
+Conjecture 1 (Patterson, 1978). As X Ñ 8,
+ÿ
+pďX
+p”1
+pmod 3q
+Sp
+2?p „ 2p2πq2{3
+5Γp 2
+3q ¨ X5{6
+log X ,
+where p runs through primes.
+Patterson obtained this conjecture by developing Kubota’s theory of metaplectic forms
+[Kub69,Kub71], and by appealing to a heuristic form of the circle method [Pat78b]. Unfor-
+tunately, even under the assumption of the Generalized Riemann Hypothesis, Patterson’s
+heuristic fell short of a proof. This was due to insuﬃcient bounds for the minor arcs. Sub-
+sequently, in 1979, Heath-Brown and Patterson [HBP79] established that θp is uniformly
+distributed in r0, 1s as p varies among primes congruent to 1 modulo 3. This decisively
+disproved Kummer’s guess. A nice summary up to this point can be found in a standard
+text of Davenport [Dav00, Chap. 3]. Some 20 years later, in 2000, Heath-Brown [HB00]
+sharpened his earlier result with Patterson and obtained unconditionally the nearly tight
+upper bound
+ÿ
+pďX
+p”1
+pmod 3q
+Sp
+2?p !ε X5{6`ε,
+(1.2)
+
+
+--- PDF PAGE 3 ---
+BIAS IN CUBIC GAUSS SUMS
+3
+for any given ε ą 0. Heath-Brown [HB00, pg. 99] also stated a reﬁned form of Patterson’s
+conjecture that features an error term capturing square root cancellation1.
+In this paper we conﬁrm Patterson’s conjecture, conditionally on the assumption of the
+Generalized Riemann Hypothesis. This can be also viewed as a conditional sharpening
+of (1.2). We will explain in a later part of the introduction why the assumption of the
+Riemann Hypothesis (or similar unproven hypothesis) appears to be necessary at this
+point.
+Theorem 1.1. Assume the Generalized Riemann Hypothesis for Hecke L-functions over
+Qpωq. Let W be a smooth function that is compactly supported in p0, 8q. Then as X Ñ 8
+we have
+ÿ
+p”1
+pmod 3q
+Sp
+2?p ¨ W
+´ p
+X
+¯
+„ p2πq2{3
+3Γp 2
+3q
+ż 8
+0
+Wpxqx´1{6dx ¨ X5{6
+log X ,
+where p runs through primes.
+Notice that the constant that we get is consistent with Patterson’s [Pat78b] prediction:
+if Wpxq Ñ 1r0,1spxq then,
+p2πq2{3
+3Γp 2
+3q
+ż 8
+0
+Wpxqx´1{6dx Ñ 2p2πq2{3
+5Γp 2
+3q .
+Theorem 1.1 shows that the angles θp cannot be equidistributed with square-root cancel-
+lation in the error term. We make this precise in Theorem 1.2.
+Theorem 1.2. Assume the Generalized Riemann Hypothesis for Hecke L-functions over
+Qpωq. Let f be a smooth 1-periodic function and W be a smooth function that is compactly
+supported in p0, 8q. Then we have
+ÿ
+p”1
+pmod 3q
+fpθpqW
+´ p
+X
+¯
+“
+ż 1
+0
+fpxqdx
+ÿ
+p”1
+pmod 3q
+W
+´ p
+X
+¯
+(1.3)
+` 2
+ż 1
+0
+fpxq cosp2πxqdx ¨ p2πq2{3
+3Γp 2
+3q
+ż 8
+0
+Wpxqx´1{6dx ¨ X5{6
+log X ` o
+´ X5{6
+log X
+¯
+,
+as X Ñ 8.
+It is unlikely that (1.3) can be established unconditionally given the current state of
+knowledge. For instance, with the choice fpxq “ ep3ℓxq, ℓ‰ 0, (1.3) implies a zero-free
+strip for certain L-functions associated to Gr¨oßencharaktern.
+Before proceeding to a high level sketch of the ideas in the paper, we remark that it
+is possible to slightly sharpen the rate of convergence in Theorems 1.1 and 1.2. One can
+save roughly one power of log X.
+1.2. Gauss sums over Eisenstein integers. Let ω “ e2πi{3 and let Zrωs denote the
+ring of Eisenstein integers (in Qpωq). It is well known that any non-zero element of Zrωs
+can be uniquely written as ζλic with ζ P t˘1, ˘ω, ˘ω2u a unit, λ “
+?
+´3 “ 1 ` 2ω
+the unique ramiﬁed prime in Zrωs, i P Zě0, and c P Zrωs satisfying c ” 1 pmod 3q.
+1The constant in Patterson’s conjecture appearing in [HB00] is mistated due to a misprint
+
+
+--- PDF PAGE 4 ---
+4
+ALEXANDER DUNN AND MAKSYM RADZIWI L L
+Furthermore, we have a cubic symbol
+` a̟ ˘
+3 deﬁned for a ” 1 pmod 3q and̟
+” 1 pmod 3q
+prime. This is deﬁned by
+´ a̟ ¯
+3 ” apNp̟
+q´1q{3
+pmod̟
+q,
+and the condition that it takes values in t1, ω, ω2u. It is clearly multiplicative in a and
+can be extended to a multiplicative function in̟
+by setting
+`a
+b
+˘
+3 “
+ź
+i
+` a̟
+i
+˘
+for any b ” 1 pmod 3q with b “ ś
+i̟
+i and̟
+i primes. The cubic symbol obeys cubic
+reciprocity: given a, b ” 1 pmod 3q we have
+´a
+b
+¯
+3 “
+´b
+a
+¯
+3.
+(1.4)
+We also have supplementary laws for units and the ramiﬁed prime. Given d ” 1 ` α2λ2 `
+α3λ3 pmod 9q with α2, α3 P t´1, 0, 1u, then
+´ω
+d
+¯
+3 “ ωα2
+and
+´λ
+d
+¯
+3 “ ω´α3.
+(1.5)
+The cubic exponential sums Sp are intimately connected to cubic Gauss sums over
+Eisenstein integers. For any rational prime p ” 1 pmod 3q, we can write p “̟̟
+with̟
+prime in Zrωs. Then
+Sp
+2?p “ Re ˜gp̟
+q,
+(1.6)
+where the normalised Gauss sum is given by
+˜gpcq “ 1
+|c|
+ÿ
+x
+pmod cq
+´x
+c
+¯
+3ˇe
+´x
+c
+¯
+,
+ˇepzq “ e2πipz`zq,
+(1.7)
+for any c P Zrωs with c ” 1 pmod 3q. Here | ¨ | denotes the Euclidean distance of c from
+the origin. We write gpcq for the unnormalized Gauss sum, namely gpcq :“ |c|˜gpcq. We
+also note that
+˜gpcq3 “ µpcq c
+|c|.
+(1.8)
+Thus ˜gpcq is a cube root of µpcqc{|c| (see [Has50, pp. 443–445]). However, given a prime̟
+” 1 pmod 3q, there is no known formula eﬃciently predicting which cube root ˜gp̟
+q
+corresponds to2.
+Formula (1.6) shows that Patterson’s conjecture is equivalent to the statement
+ÿ
+Np̟
+qďX̟
+prime̟
+”1
+pmod 3q
+˜gp̟
+q „ 2p2πq2{3
+5Γp 2
+3q
+¨ X5{6
+log X .
+2We note that the work of Matthews [Mat79] gives an explicit formula expressing ˜gp̟
+q as a product of
+the Weierstrass ℘-functions evaluated at pNpπq ´ 1q{3 values. Despite the beauty of Matthews’ formula,
+it is not computationally eﬃcient.
+
+
+--- PDF PAGE 5 ---
+BIAS IN CUBIC GAUSS SUMS
+5
+From the point of view of Weyl’s equidistribution criterion it is also natural to ask about
+the behavior of ˜gp̟
+qk with k P Z. Patterson enunciated in [Pat78b] a complementary
+conjecture. It states that for all k R t0, 1, ´1u we have,
+ÿ
+Np̟
+qďX̟
+prime̟
+”1
+pmod 3q
+˜gp̟
+qk “ o
+´ X5{6
+log X
+¯
+(1.9)
+as X Ñ 8. We conditionally establish a version of this conjecture with wide uniformity
+in k.
+Theorem 1.3. Assume the Generalized Riemann Hypothesis for Hecke L-functions over
+Qpωq. Let W be a smooth function compactly supported in p0, 8q. Then as X Ñ 8 we
+have
+ÿ̟
+”1
+pmod 3q̟
+prime
+˜gp̟
+qk ¨ W
+´Np̟
+q
+X
+¯
+“ o
+´ X5{6
+log X
+¯
+,
+uniformly in 1 ă |k| ď X1{100
+Theorem 1.2 is a nearly immediate consequence of Theorem 1.1 and Theorem 1.3.
+Notice that in the case k ” 0 pmod 3q (k ‰ 0), Theorem 1.3 unambiguously requires a
+zero-free strip for L-functions associated to Gr¨oßencharaktern.
+1.3. Cubic Gauss sums and automorphic forms. Developing Kubota’s theory [Kub69,
+Kub71], Patterson [Pat77] established a functional equation for a Dirichlet series of the
+form
+ÿ
+c”1
+pmod 3q
+˜gpµ, cq
+Npcqs ,
+where
+˜gpµ, cq :“ 1
+|c|
+ÿ
+x
+pmod cq
+´x
+c
+¯
+3ˇe
+´µx
+c
+¯
+.
+Subsequently, Yoshimoto [Yos87] followed Patterson’s approach to obtain a functional
+equation for the Dirichlet series
+ÿ
+c”1
+pmod 3q
+˜gpcqψpcq
+Npcqs ,
+where ψ is a primitive Dirichlet character such that ψ3 is not principal.
+Yoshimoto
+speciﬁcally excludes the case when ψ3 is principal to prevent the (Kubota) multiplier
+from interfering with ψ. We develop both of these computations further, obtaining a
+functional equation for the Dirichlet series
+ÿ
+c”1
+pmod 3q
+˜gpcqφpcq
+Npcqs
+and φ a periodic function modulo r with r ” 1 pmod 3q. We specialise our computation
+to the case when φ is the conjugate of a cubic character to modulus r. The result for this
+speciﬁc choice of φ could have been obtained more directly by combining [Pat77, Theorem
+
+
+--- PDF PAGE 6 ---
+6
+ALEXANDER DUNN AND MAKSYM RADZIWI L L
+6.1] and [HB00, Lemma 4.1]. However, we found it advantageous to develop a more general
+approach. First, we believe that the result will be useful in later works. Second, this more
+general approach improved our understanding of (and conﬁdence in) the formula. Third,
+our functional equations explicate the root number. These formulas are too lengthy to be
+introduced here. We refer the reader to Section 5 where they are stated in detail.
+As in earlier works [HB00, HBP79], this Voronoi formula is used to understand the
+so-called Type-I sums
+ÿ
+c,r”1
+pmod 3q
+˜gpcrqαrV
+´Nprq
+R
+¯
+V
+´Npcq
+C
+¯
+,
+CR “ X,
+(1.10)
+with αr arbitrary coeﬃcients bounded in absolute value by 1. A sharp bound for (1.10)
+in the range C ą R2 was established in [HB00]. In the proof of Theorem 1.1 we need an
+asymptotic slightly past this range (with an error term ! X5{6´ε). In Section 8 we use
+the Generalized Riemann Hypothesis (to cancel out the contribution of cubes) to obtain
+adequate pointwise (for a single value of r) Type-I information as long as C ą Nprq1`ε, for
+any given ε ą 0. We also give alternative estimates in Section 11 that use the averaging
+over r in a non-trivial way: we obtain adequate Type-I information on average in the
+range C ą R2´ε, under the Generalized Riemann Hypothesis. For the interested reader
+we note that there are two ways of bypassing the Riemann Hypothesis in this case. One
+is to assume that the sequence αr has a bilinear structure. The second would be to obtain
+“subconvex” bounds in the r aspect for the Dirichlet series ř
+c”1 pmod 3q ˜gpcrqNpcq´s. Since
+a more signiﬁcant bottleneck appears elsewhere we have not endeavoured to make these
+results unconditional.
+1.4. Cubic Gauss sums and the cubic large sieve. In order to obtain the bound
+ÿ
+Np̟
+qďX̟
+prime̟
+”1
+pmod 3q
+˜gp̟
+q !ε X5{6`ε,
+Heath-Brown develops in [HB00, Theorem 2] the so-called “cubic large sieve”. The cubic-
+large sieve states that for any sequence βb supported on squarefree b P Zrωs,
+ÿ
+NpaqďA
+a”1
+pmod 3q
+µ2paq
+ˇˇˇ
+ÿ
+NpbqďB
+b”1
+pmod 3q
+βb
+´b
+a
+¯
+3
+ˇˇˇ
+2
+!ε pABqε¨pA`B`pABq2{3q
+ÿ
+NpbqďB
+b”1
+pmod 3q
+|βb|2. (1.11)
+Immediately after stating (1.11) in [HB00], Heath-Brown writes:
+“It seems possible that the term pABq2{3 could be removed with further
+eﬀort, and the bound would then be essentially best possible. However,
+the above suﬃces for our purposes. It should be noted that if the variables
+are not restricted to be squarefree, a result as sharp as Theorem 2 would
+be impossible. The proof of Theorem 2 is modelled on the corresponding
+argument for sums (over Z) containing the quadratic residue symbol, due
+to the author [3] (local cit. [HB95]). The latter is distinctly unpleasant,
+but fortunately some of the diﬃculties may be reduced in our situation by
+the introduction of the term pABq2{3 in Theorem 2. ”
+
+
+--- PDF PAGE 7 ---
+BIAS IN CUBIC GAUSS SUMS
+7
+This assertion that the term pABq2{3 can be removed is then frequently repeated in sub-
+sequent literature. For example, in [BGL14] it is asserted that
+“As in [12] (local cit. [HB00]), the term pABq2{3 is not optimal and can
+most likely be replaced with pABq1{2.”
+To our great surprise we found that the term pABq2{3 in Heath-Brown’s cubic large sieve
+can’t be removed. We state our optimality result in terms of operator norms. For A, B ě
+10, and pβbqbPZrωs an arbitrary sequence of complex numbers with support contained in
+the set of squarefree elements of Zrωs, let
+ΣpA, B, βq :“
+ÿ
+AăNpaqď2A
+a”1
+pmod 3q
+µ2paq
+ˇˇˇ
+ÿ
+BăNpbqď2B
+b”1
+pmod 3q
+βb
+´ b
+a
+¯
+3
+ˇˇˇ
+2
+.
+For A, B ě 1, consider the operator norm
+BpA, Bq :“ sup
+β
+!
+ΣpA, B, βq :
+ÿ
+b
+|βb|2 “ 1
+)
+.
+(1.12)
+Theorem 1.4. Assume the Generalized Riemann Hypothesis for Hecke L-functions over
+Qpωq. Let A, B ě 10, then for any ε ą 0 we have
+#
+pABq2{3 !ε BpA, Bq !ε pABq2{3`ε
+for A P r
+?
+B, B2szrB1´ε, B1`2εs,
+pABq2{3´3ε !ε BpA, Bq !ε pABq2{3`ε
+for A P rB1´ε, B1`2εs.
+Remark 1.1. Only the lower bounds in Theorem 1.4 are conditional on the Generalized
+Riemann Hypothesis for Hecke L-functions over Qpωq. The upper bounds follow uncondi-
+tionally from Heath-Brown’s cubic large sieve, and are included for the sake of comparison
+with the lower bounds.
+One example establishing optimality in the range A “ B1´ε (for any given small ε ą 0)
+is βb “ ˜gpbq. This follows from applying our Voronoi summation formula in Proposition
+8.1, and then subsequently using the non-trivial main term that arises when summing
+cubic Gauss sums over all elements of Zrωs (see Section 9 for details). This is far from
+the only obstruction.
+Any sequence of the form βb˜gpbq with βb non-negative and not
+correlated with cubic symbols would provide a counterexample.
+To address this limitation of the cubic large sieve we introduce a correction term. This
+allows us to beat the exponent pABq2{3, albeit only for sequences that have substantial
+cancellations against all non-principal cubic characters. We show that there exists a small
+ﬁxed δ ą 0 such that for any sequence β on Zrωs satisfying
+‚ |βb| ď 1 for all b P Zrωs;
+‚ βb supported on square-free w-rough integers (i.e all prime factors of b P Zrωs have
+norm ą w);
+‚ βb supported on b ” 1 pmod 3q with Npbq — B;
+
+
+--- PDF PAGE 8 ---
+8
+ALEXANDER DUNN AND MAKSYM RADZIWI L L
+then
+ÿ
+aPZrωs
+a”1
+pmod 3q
+µ2paqV
+´Npaq
+A
+¯ˇˇˇ
+ÿ
+bPZrωs
+βb˜gpbq
+´ b
+a
+¯
+3 ´ p2πq2{3
+3Γp 2
+3q
+˜gpaq
+Npaq1{6
+ÿ
+bPZrωs
+pb,aq“1
+βb
+Npbq1{6
+ˇˇˇ
+2
+« A
+B
+ÿ
+hPZrωs
+0ă|h|ďB2{A
+h‰
+ˇˇˇ
+ÿ
+b
+βb
+´ b
+h
+¯
+3
+ˇˇˇ
+2
+` O
+´pABq2{3 ¨ B
+w
+` pABq2{3´δ ¨ B
+¯
+,
+(1.13)
+where
+denotes an integer of the form k3 with k P Zrωs. In particular, if the sequence βb
+exhibits square root cancellations against all non-trivial cubic characters and w ą pABqε,
+then (1.13) is ! pABqop1qpAB ` B2 ` pABq2{3´ε ¨ Bq.
+This suggests that in order to
+beat the cubic large sieve, the correction term alone is not enough; we really need to
+know additional information about the sequence βb. It is tempting to try to use Dirichlet
+polynomial techniques to bound (1.13). However, the optimal term pABq2{3 in the cubic
+large sieve adds substantial technical challenges preventing us from being able to use these
+techniques. Precise versions of (1.13) are given in Propositions 9.1 and 9.2.
+Using the above estimates we are able to show in Section 10 that for a broad class of
+sequences we have
+ÿ
+a,b”1
+pmod 3q
+αaβb˜gpabq „ p2πq2{3
+3Γp 2
+3q
+ÿ
+a,b”1
+pmod 3q
+αaβbµ2pabq
+Npabq1{6 .
+(1.14)
+Note that µ2pabq can be inserted at will since b is supported on w-rough integers and
+w ą plog Xq10 is reasonably large. It is perhaps appropriate to call (1.14) a dispersion
+estimate.
+Compared to the usual dispersion estimates we use the assumption of the
+Generalized Riemann Hypothesis instead of the usual Siegel-Walﬁsz assumption, and the
+condition ab ” 1 pmod qq is replaced by the term ˜gpabq.
+The estimate (1.14) will be indispensible in estimating so-called Type-II sums, which
+we discuss in the next section. Our example suggests that the GL3-spectral large sieve
+recently established by Young [You21] might also be optimal. In the same vein, it is also
+interesting to note that Iwaniec and Li found unexpected main terms appearing in the
+spectral large sieve for Γ1pqq [IL07]. Other versions of the cubic large sieve have been
+established by Baier and Young [BY10] in their work on the ﬁrst moment of Dirichlet
+L-functions (over Q) twisted by cubic characters.
+1.5. The overall strategy of the proof. Having explained above the main ingredients
+in our proof we will now explain how they are combined in Sections 13 and 14. It will be
+useful to compare the argument with [HB00]. In order to establish the bound
+ÿ
+Np̟
+qďX
+˜gp̟
+q !ε X5{6`ε
+(1.15)
+
+
+--- PDF PAGE 9 ---
+BIAS IN CUBIC GAUSS SUMS
+9
+in [HB00], Heath-Brown needs to address two types of sums,
+ÿ
+a,b”1
+pmod 3q
+αa˜gpabqV
+´Npaq
+A
+¯
+V
+´Npbq
+B
+¯
+,
+AB “ X;
+(1.16)
+ÿ
+a,b”1
+pmod 3q
+αaβb˜gpabqV
+´Npaq
+A
+¯
+V
+´Npbq
+B
+¯
+,
+AB “ X.
+(1.17)
+The ﬁrst sum is known as a Type-I sum and the second sum as a Type-II sum. If we are
+aiming for a bound of the form X5{6`ε for the sum over primes then we need to bound the
+Type-II sums by ! X5{6`ε in the range A ą X1{3 (since we will apply Cauchy-Schwarz
+on the a-sum and thus we can hope for at most a saving of
+?
+A in the most favourable
+scenario). We also need to bound the Type-I sums by ! X5{6`ε in the range A ď X1{3.
+The main point is that if asymptotic estimates are not sought, then proving bounds with
+an Xε-loss is suﬃcient.
+If we aim to reﬁne Heath-Brown’s bound (1.15) to an asymptotic then ﬁrst we need
+to reﬁne the Type-I estimate to an asymptotic. This can be done simply by a careful
+derivation of Voronoi summation. We also need to push the range slightly past A ą X1{3,
+but this does not present us with any signiﬁcant diﬃculties under the Generalized Riemann
+Hypothesis (other than the tedium of the computations).
+Second, we need to reﬁne Type-II estimates to an asymptotic; this is signiﬁcantly more
+tricky. For this it is necessary to use our version of the cubic large sieve with the correction
+term. Since the error term needs to be smaller than X5{6 we now need to take A ą X1{3`ε
+in the Type-II sums. This however creates a problem since the ranges in which we can
+handle Type-I and Type-II sums are not enough to obtain primes. In fact we now need
+to also bound the contribution of so-called Type-III sums of the form
+ÿ
+a,b,c”1
+pmod 3q
+˜gpabcqV
+´Npaq
+A
+¯
+V
+´Npbq
+B
+¯
+V
+´Npcq
+C
+¯
+,
+ABC “ X.
+with A, B, C “ X1{3`Opεq and a, b, c supported on primes. Bounding these sums with
+a power-saving presents a real challenge that we do not know how to solve. The main
+problem arises when A “ B “ C “ X1{3. In that regime, executing Voronoi summation
+on any single variable produces an essentially self-dual situation. Furthermore, the only
+admissible way of applying Cauchy-Schwarz is by grouping two variables together, and
+this then leads to a very long oﬀ-diagonal that appears even more diﬃcult to handle.
+Instead, we use the Generalized Riemann Hypothesis in Section 7 to reﬁne the large
+sieve bound to a bound that is tight up to constant factors and holds with wider uniformity
+than the Type-II bound stated above. As a consequence we can show that the overall
+contribution of these Type-III sums is only ε times the expected main term. This strategy
+was previously used by Heath-Brown in his work on primes in short intervals [HB88]. Our
+work is the ﬁrst to execute this idea in the context of an oscillating sequence with a main
+term of density X´δ.
+Finally we note that our Type-II bound (as stated) is not able to handle the narrow
+range X1{2´ε ď A, B ď X1{2`ε. So instead in this range we use the same kind of ideas
+that we used to handle Type-III sums. This is not necessary and we could have obtained
+
+
+--- PDF PAGE 10 ---
+10
+ALEXANDER DUNN AND MAKSYM RADZIWI L L
+a power-saving in this range with a little bit more work. However, this wouldn’t have
+made a signiﬁcant diﬀerence so we refrained from this additional work.
+1.6. Acknowledgements. We warmly thank Samuel Patterson for his helpful corre-
+spondence and encouragement, as well as Matthew Young and Scott Ahlgren for their
+helpful feedback on the manuscript. We also thank the referee for their meticulous com-
+ments on the manuscript. M.R. was supported on NSF grant DMS-1902063 and a Sloan
+Fellowship.
+2. Basic facts about Qpωq
+Let Qpωq be the Eisenstein quadratic number ﬁeld, where ω is identiﬁed with e2πi{3 P C.
+It has ring of integers Zrωs, discriminant ´3, and class number 1. It also has six units
+t˘1, ˘ω, ˘ω2u and one ramiﬁed prime λ :“ 1 ` 2ω “ ?´3 dividing 3. Let Npxq :“
+NQpωq{Qpxq “ |x|2 denote the norm form on Qpωq{Q. Each ideal 0 ‰ c ✂Zrωs is principal.
+If pc, 3q “ 1, then c has a unique generator c “ pcq that satisﬁes c ” 1 pmod 3q.
+Whenever we write d|c with c ” 1 pmod 3q, it is our convention that d ” 1 pmod 3q. If
+p ” 1 pmod 3q is a rational prime, then p “̟̟
+in Zrωs with Np̟
+q “ p and̟
+a prime
+in Zrωs. If p ” 2 pmod 3q is a rational prime, then p “̟
+is inert in Zrωs and Np̟
+q “ p2.
+Deﬁne
+ˇepzq :“ e2πiTrC{Rpzq “ e2πipz`zq,
+z P C.
+For c P Zrωs with c ” 1 pmod 3q, the cubic Gauss sum is deﬁned by
+gpcq :“
+ÿ
+d
+pmod cq
+ˆd
+c
+˙
+3
+ˇe
+ˆd
+c
+˙
+.
+(2.1)
+We have the formula [Has50, pp. 443–445]
+gpcq3 “ µpcqc2c,
+(2.2)
+where µ denotes the M¨obius function on Zrωs. Observe that (2.2) implies that gpcq is
+supported on squarefree moduli. We write
+˜gpcq :“ gpcq
+|c| ,
+for the normalised cubic Gauss sum. Note that |˜gpcq| “ µ2pcq for all c P Zrωs.
+An important property of gpcq is twisted multiplicativity [Has50, pp. 443–445]. It states
+that
+˜gpabq “
+´a
+b
+¯
+3˜gpaq˜gpbq
+for
+a, b P Zrωs
+satisfying
+pa, bq “ 1.
+(2.3)
+Both sides of (2.3) are zero when pa, bq ‰ 1, and so (2.3) can be trivially extended to all
+a, b P Zrωs. Recall that cubic reciprocity and a supplement to cubic reciprocity for the
+units/ramiﬁed prime are is given in (1.4) and (1.5) respectively.
+
+
+--- PDF PAGE 11 ---
+BIAS IN CUBIC GAUSS SUMS
+11
+3. Notational conventions and deﬁnitions
+Throughout the paper,̟
+will denote a general prime in Zrωs satisfying p̟
+, 3q “ 1, and
+λ :“ ?´3 is the unique ramiﬁed prime. We also denote by
+an element of the form b3
+with b P Zrωs. For z ě 3, let
+Ppzq :“
+ź
+Np̟
+qďz̟
+”1
+pmod 3q̟
+prime̟
+.
+(3.1)
+For a given w ě 1, we say that a P Zrωs with a ” 1 pmod 3q is w-rough if and only if
+pa, Ppwqq “ 1.
+Unless otherwise speciﬁed, it should be clear from context whether q means modular
+inverse (with respect to an appropriate modulus) or complex conjugation.
+Many estimates in this paper hold for a large class of sequences given in Deﬁnition 3.1
+below.
+Deﬁnition 3.1. Given η ą 0, A ě 1, and w ě 1, let CηpA, wq denote the set of sequences
+α :“ pαaq such that
+(1) |αa| ď 1 for all a P Zrωs;
+(2) αa is supported on squarefree w-rough a P Zrωs with a ” 1 pmod 3q;
+(3) αa “ 0 unless Npaq — A;
+(4) For any ε ą 0, t P R, ℓP Z and k, u P Zrωs with k, u ” 1 pmod 3q, we have
+ÿ
+aPZrωs
+a”1
+pmod 3q
+u|a
+αa
+´ a
+|a|
+¯ℓ
+Npaqit´k
+a
+¯
+3 !ε p1 ` |ℓ|qεNpkqεp1 ` |t|qε´
+A
+Npuq
+¯1{2`η`ε
+,
+(3.2)
+provided that ℓ‰ 0, or if ℓ“ 0, then provided that k ‰
+.
+The Generalized Riemann Hypothesis is used to show that axiom (3.2) above holds
+for sequences of interest to us (i.e. smoothed indicator functions on the set of w-rough
+integers in Zrωs.) See Section 6 for details.
+Where important, the dependence of implied constants on auxiliary parameters will be
+indicated in subscripts i.e. Oε,ξ,A,..., !ε,ξ,A,... and "ε,ξ,A,.... It will be crucial to give the
+implied constants of certain error terms in the proofs of Theorem 1.1 and Theorem 1.3
+explicitly in terms of some of the auxiliary parameters. Such terms are clearly indicated.
+4. Poisson summation formula
+We will need a minor variant of the number ﬁeld Poisson summation formula.
+Lemma 4.1. Let V : R2 Ñ C be a smooth Schwartz function. By an abuse of notation,
+set V px ` iyq :“ V px, yq. Then we have
+ÿ
+mPZrωs
+V pmq “ 2
+?
+3
+ÿ
+kPZrωs
+ż
+R2 V px, yqˇe
+´kpx ` iyq
+λ
+¯
+dxdy.
+(4.1)
+
+
+--- PDF PAGE 12 ---
+12
+ALEXANDER DUNN AND MAKSYM RADZIWI L L
+Proof. Let Λ :“ Zrωs, viewed as a discrete lattice embedded in C. We identify x`iy with
+px, yq P R2. Poisson summation gives
+ÿ
+xPΛ
+V pxq “
+1
+covolpΛq
+ÿ
+xPΛ‹
+pV pxq,
+where Λ‹ “ λ´1Zrωs is the dual lattice to Λ,
+pV pxq :“
+ż
+R2 V pu, vqep2pxu ` vyqqdudv,
+and
+covolpΛq “
+?
+3
+2 .
+Observe that
+Rerpx ` iyqpu ´ ivqs “ xu ` yv.
+Thus Poisson summation for Zrωs is given by
+ÿ
+mPZrωs
+V pmq “ 2
+?
+3
+ÿ
+kPλ´1Zrωs
+ż
+R2 V px, yqep2Repkpx ` iyqqqdxdy.
+(4.2)
+We can replace k by k in (4.2), since λ´1Zrωs is closed under conjugation. Thus (4.1)
+holds, as required.
+■
+Lemma 4.2. Let 0 ‰ q P Zrωs, ψ : Zrωs Ñ C be a q-periodic function, and V : R2 Ñ C
+be a smooth Schwartz function. Then
+ÿ
+mPZrωs
+ψpmqV pmq “
+2
+?
+3Npqq
+ÿ
+kPZrωs
+9ψpkq 9V
+´k
+q
+¯
+,
+where
+9ψpkq :“
+ÿ
+t
+pmod qq
+ψptqˇe
+´
+´ tk
+qλ
+¯
+,
+and
+9V puq :“
+ż
+R2 V px, yqˇe
+´upx ` iyq
+λ
+¯
+dxdy.
+Remark 4.1. For each t P Zrωs, note that the additive character
+k ÞÑ ˇe
+´
+´ tk
+3λq
+¯
+has minimal period 3q (not 3λq).
+Proof. We have
+ÿ
+mPZrωs
+ψpmqV pmq “
+ÿ
+t
+pmod qq
+ψptq
+ÿ
+mPZrωs
+V pmq ` tq
+Application of Lemma 4.1 to the summation over m gives
+ÿ
+mPZrωs
+V pmq ` tq “ 2
+?
+3
+ÿ
+kPZrωs
+ż
+R2 V ppx ` iyqq ` tqˇe
+´kpx ` iyq
+λ
+¯
+dxdy.
+
+
+--- PDF PAGE 13 ---
+BIAS IN CUBIC GAUSS SUMS
+13
+A linear change of variable then shows that
+ÿ
+mPZrωs
+V pmq ` tq “ ˇe
+´
+´ kt
+qλ
+¯
+2
+?
+3Npqq
+ÿ
+kPZrωs
+ż
+R2 V px, yqˇe
+´kpx ` iyq
+qλ
+¯
+dxdy.
+(4.3)
+The result follows upon summing both sides of (4.3) over t pmod qq with the q-periodic
+weights ψptq.
+■
+We will specialise to the case where the test function is radially symmetric.
+Lemma 4.3. Let q P Zrωs with q ” 1 pmod 3q, ψ : Zrωs Ñ C be a q-periodic function,
+and V : R Ñ C be a smooth Schwartz function. Then for any M ą 0 we have
+ÿ
+mPZrωs
+m”1
+pmod 3q
+ψpmqV
+´Npmq
+M
+¯
+“
+4πM
+9
+?
+3Npqq
+ÿ
+kPZrωs
+:ψpkq:V
+´k
+?
+M
+q
+¯
+,
+where
+:ψpkq :“ ˇe
+´
+´ k
+3λ
+¯
+ÿ
+x
+pmod qq
+ψp3λxqˇe
+´
+´kx
+q
+¯
+,
+and :V : C Ñ C is deﬁned by
+:V puq :“
+ż 8
+0
+rV pr2qJ0
+´4πr|u|
+3
+?
+3
+¯
+dr.
+(4.4)
+Proof. Application of Lemma 4.2 gives
+ÿ
+mPZrωs
+m”1
+pmod 3q
+ψpmqV
+´Npmq
+M
+¯
+“
+1
+Np3qq
+2
+?
+3
+ÿ
+kPZrωs
+9ψpkq
+ż
+R2 V
+´x2 ` y2
+M
+¯
+ˇe
+´kpx ` iyq
+3λq
+¯
+dxdy,
+where
+9ψpkq “
+ÿ
+t
+pmod 3qq
+t”1
+pmod 3q
+ψptqˇe
+´
+´ tk
+3λq
+¯
+.
+(4.5)
+We ﬁrst simplify the integral. A change of variable gives
+ż
+R2 V
+´x2 ` y2
+M
+¯
+ˇe
+´kpx ` iyq
+3λq
+¯
+dxdy “ M
+ż
+R2 V px2 ` y2qˇe
+´kpx ` iyq
+?
+M
+3λq
+¯
+dxdy.
+(4.6)
+We change x ` iy to polar coordinates via the substitution x ` iy “ reiϑ. Let κ P r´π, πq
+be a ﬁxed angle (depending on k and q) such that
+e´iκ “
+#
+k
+|k|
+|λq|
+λq
+if
+k ‰ 0
+1
+if
+k “ 0.
+Then (4.6) becomes
+M
+ż 8
+0
+rV pr2q
+ż 2π
+0
+ˇe
+´reiϑ´iκ|k|
+?
+M
+3
+?
+3|q|
+¯
+dϑdr.
+(4.7)
+
+
+--- PDF PAGE 14 ---
+14
+ALEXANDER DUNN AND MAKSYM RADZIWI L L
+We eliminate the translation by κ by a linear change of variable in ϑ and the fact that
+the integrand is periodic with period 2π. Therefore (4.7) becomes
+M
+ż 8
+0
+rV pr2q
+ż 2π
+0
+exp
+´4πir cospϑq|k|
+?
+M
+3
+?
+3|q|
+¯
+dϑdr.
+Observe that by [DLMF, (10.9.2)] and the fact that J0pxq is real-valued we obtain
+J0pxq “ 1
+2π
+ż 2π
+0
+eix cospϑqdϑ.
+Thus (4.7) is equal to
+2πM
+ż 8
+0
+rV pr2qJ0
+´4πr|k|
+?
+M
+3
+?
+3|q|
+¯
+dr.
+It remains to compute 9ψpkq. The Chinese Remainder theorem guarantees that we can
+write any t pmod 3qq as t “ aq ` 3b with a a representative of a residue class
+pmod 3q
+and b a representative of a residue class pmod qq. Necessarily a ” q pmod 3q. Thus (4.5)
+becomes
+9ψpkq :“
+´
+ÿ
+a
+pmod 3q
+a”q
+pmod 3q
+ˇe
+´
+´ak
+3λ
+¯¯´
+ÿ
+b
+pmod qq
+ψp3bqˇe
+´
+´bk
+λq
+¯¯
+“ ˇe
+´
+´ k
+3λ
+¯
+ÿ
+b
+pmod qq
+ψp3λbqˇe
+´
+´bk
+q
+¯
+,
+where the displays followed from the fact that q ” 1 pmod 3q, ψ is periodic modulo q
+with pq, 3q “ 1, and Remark 4.1.
+■
+We now state the ﬁnal version of the Poisson summation formula needed for this paper.
+Corollary 4.1. Let n1, n2 P Zrωs be squarefree and satisfy n1 ” n2 ” 1 pmod 3q. Let
+d :“ pn1, n2q and V : R Ñ C be a smooth Schwartz function. Then for any M ą 0 we
+have
+ÿ
+mPZrωs
+m”1
+pmod 3q
+´ m
+n1
+¯
+3
+´ m
+n2
+¯
+3V
+´Npmq
+M
+¯
+“
+4π
+`
+d
+n1{d
+˘
+3
+`
+d
+n2{d
+˘
+3Mgpn1{dqgpn2{dq
+9
+?
+3N
+`
+n1n2{d
+˘
+ˆ
+ÿ
+kPZrωs
+rcdpkq
+´ k
+n1{d
+¯
+3
+´ k
+n2{d
+¯
+3
+:V
+´kd
+?
+M
+n1n2
+¯
+,
+where
+rcdpkq :“ ˇe
+´
+´ k
+3λ
+¯
+ÿ
+x
+pmod dq
+px,dq“1
+ˇe
+´
+´kx
+d
+¯
+,
+(4.8)
+and :V : r0, 8q Ñ C is given by
+:V puq :“
+ż 8
+0
+rV pr2qJ0
+´4πr|u|
+3
+?
+3
+¯
+dr.
+
+
+--- PDF PAGE 15 ---
+BIAS IN CUBIC GAUSS SUMS
+15
+Proof. We apply Lemma 4.3 to
+ψn1,n2pmq :“
+ˆ m
+n1
+˙
+3
+ˆ m
+n2
+˙
+3
+“
+ˆ m
+n1{d
+˙
+3
+ˆ m
+n2{d
+˙
+3
+1dpmq,
+m P Zrωs,
+where 1d denotes the principal character modulo d. Observe that ψn1,n2 is n1n2{d periodic.
+All that remains to do is to compute :ψn1,n2. We have
+:ψn1,n2pkq “ ˇe
+´
+´ k
+3λ
+¯
+ÿ
+x
+pmod n1n2{dq
+px,dq“1
+´ 3λx
+n1{d
+¯
+3
+´ 3λx
+n2{d
+¯
+3ˇe
+´
+´
+kx
+pn1n2{dq
+¯
+.
+(4.9)
+Observe that 3λ “ p´λq3 and pn1n2{d, 3q “ 1, so (4.9) becomes
+:ψn1,n2pkq “ ˇe
+´
+´ k
+3λ
+¯
+ÿ
+x
+pmod n1n2{dq
+px,dq“1
+´ x
+n1{d
+¯
+3
+´ x
+n2{d
+¯
+3ˇe
+´
+´
+kx
+pn1n2{dq
+¯
+.
+Since n1 and n2 are squarefree we have pn1n2{d2, dq “ 1. We use the Chinese remainder
+theorem to write x “ apn1n2{d2q ` bd. We ﬁnd that
+:ψn1,n2pkq “ ˇe
+´
+´ k
+3λ
+¯
+ÿ
+x
+pmod n1n2{dq
+px,dq“1
+´ x
+n1{d
+¯
+3
+´ x
+n2{d
+¯
+3ˇe
+´
+´
+kx
+pn1n2{dq
+¯
+“
+´
+ˇe
+´
+´ k
+3λ
+¯
+ÿ
+a
+pmod dq
+pa,dq“1
+ˇe
+´
+´ak
+d
+¯¯´
+ÿ
+b
+pmod n1n2{d2q
+´ bd
+n1{d
+¯
+3
+´ bd
+n2{d
+¯
+3ˇe
+´
+´
+kb
+pn1n2{d2q
+¯¯
+.
+Observe that pn1{d, n2{dq “ 1. To evaluate the sum over b we use the Chinese remainder
+theorem again. Writing b “ tpn1{dq ` upn2{dq gives
+:ψn1,n2pkq “ rcdpkq
+´
+ÿ
+t
+pmod n2{dq
+´ tn1
+n2{d
+¯
+3ˇe
+´
+´ tk
+n2{d
+¯¯´
+ÿ
+u
+pmod n1{dq
+´ un2
+n1{d
+¯
+3ˇe
+´
+´ uk
+n1{d
+¯¯
+“ rcdpkq
+´ k
+n2{d
+¯
+3
+´ k
+n1{d
+¯
+3
+´ n2
+n1{d
+¯
+3
+´ n1
+n2{d
+¯
+3 ¨ gpn1{dqgpn2{dq,
+where the last display follows from the primitivity of characters
+´
+¨
+n1{d
+¯
+3 and
+´
+¨
+n2{d
+¯
+3.
+Finally,
+´ n2
+n1{d
+¯
+3
+´ n1
+n2{d
+¯
+3 “
+ˆn2{d
+n1{d
+˙
+3
+ˆ
+d
+n1{d
+˙
+3
+ˆn1{d
+n2{d
+˙
+3
+ˆ d
+n2{d
+˙
+3
+“
+´ d
+n1{d
+¯
+3
+´ d
+n2{d
+¯
+3,
+where the last equality follows from cubic reciprocity. This completes the proof.
+■
+We close this section with standard estimate for :V .
+Lemma 4.4. Let V : R Ñ C be a smooth compactly supported function. Then for any
+integer k ě 0,
+|:V puq| !k,V p1 ` |u|q´k,
+u P C.
+(4.10)
+
+
+--- PDF PAGE 16 ---
+16
+ALEXANDER DUNN AND MAKSYM RADZIWI L L
+Proof. Integrating (4.4) by parts k P Zě0 times using [DLMF, (10.22.1)] gives
+:V puq “ p´1qk´3
+?
+3
+2π
+¯k 1
+|u|k
+ż 8
+0
+V pkqpr2q ¨ rk`1Jk
+´4πr|u|
+3
+?
+3
+¯
+dr.
+(4.11)
+The claim immediately follows.
+■
+5. Voronoi summation in the level aspect
+The Fourier coeﬃcients of the cubic theta function essentially sample cubic Gauss sums.
+Naturally, automorphy of the theta function is a key input in the proof of our level aspect
+Voronoi summation formula.
+5.1. Geometry, groups, and the cubic theta function at cusps. Let H3 denote
+the hyperbolic 3-space C ˆ R`. We embed H3 in the Hamilton quaternions by identifying
+i “ ?´1 with ˆi and w “ pz, vq “ px ` iy, vq P H3 with x ` yˆi ` vˆk, where 1,ˆi, ˆj, ˆk denote
+the unit quaternions. In terms of quaternion arithmetic, the group action of SL2pCq on
+H3 is given by
+γw “ paw ` bqpcw ` dq´1,
+γ “
+ˆ
+a
+b
+c
+d
+˙
+P SL2pCq
+and
+w P H3.
+In terms of coordinates,
+γw “
+ˆpaz ` bqpcz ` dq ` acv2
+|cz ` d|2 ` |c|2v2
+,
+v
+|cz ` d|2 ` |c|2v2
+˙
+,
+w “ pz, vq P H3.
+(5.1)
+Let Γ :“ SL2pZrωsq. It is a standard fact that Γ is generated by the elements
+P :“
+ˆ
+ω
+0
+0
+ω2
+˙
+,
+T :“
+ˆ
+1
+1
+0
+1
+˙
+,
+and
+E :“
+ˆ
+0
+´1
+1
+0
+˙
+.
+Let A P Zrωs satisfy A ” 0 pmod 3q, and
+Γ1pAq :“ tγ P Γ : γ ” I
+pmod Aqu.
+Observe that Γ1pAq is a normal subgroup of Γ since it is the kernel of the reduction modulo
+A map. Let
+Γ2 :“ xSL2pZq, Γ1p3qy “ SL2pZqΓ1p3q “ Γ1p3q SL2pZq,
+(5.2)
+where the last two equalities follow because Γ1p3q is normal in Γ. We also have rΓ : Γ2s “
+27 (see [Pat77, §2] for the calculation). We also observe the trivial (but useful) fact that
+for any g, g1 P Γ we have that
+Γ1p3qg “ Γ1p3qg1 ðñ g ” g1
+pmod 3q.
+Furthermore, for any g, g1 P Γ we have that
+g ” g1
+pmod 3q ùñ Γ2g “ Γ2g1.
+(5.3)
+More properties of these groups can be found in [Pat77, §2].
+Let
+χ : Γ1p3q Ñ t1, ω, ω2u
+
+
+--- PDF PAGE 17 ---
+BIAS IN CUBIC GAUSS SUMS
+17
+be the famous cubic Kubota character [Kub66,Kub69], given by
+χpγq :“
+#` c
+a
+˘
+3
+if
+γ “ p a b
+c d q P Γ1p3q
+and
+c ‰ 0,
+1
+otherwise.
+(5.4)
+It was shown by Patterson [Pat77, §2] that χ extends to a well-deﬁned homomorphism
+χ : Γ2 Ñ t1, ω, ω2u,
+when one deﬁnes χ|SL2pZq” 1.
+Remark 5.1. There is a useful alternative expression for χpγq to the one given in (5.4).
+For γ “ p a b
+c d q P Γ1p3q, we have the determinant equation ad ´ bc “ 1 with 1 ` bc ” 1
+pmod 9q. Given 0 ‰ c P Zrωs we write c “ ˘λkωjc1 where k ě 2, 0 ď j ď 2 are integers,
+and c1 P Zrωs is such that c1 ” 1 pmod 3q. Thus
+´ c
+ad
+¯
+3 “
+´
+c
+1 ` bc
+¯
+3 “
+´
+λ
+1 ` bc
+¯k
+3
+´
+ω
+1 ` bc
+¯j
+3
+´
+c1
+1 ` bc
+¯
+3 “ 1,
+where the last equality follows from 1 ` bc ” 1 pmod 9q, (1.4), and (1.5). Hence
+´ c
+a
+¯
+3 “
+´c
+d
+¯
+3 “
+´b
+d
+¯
+3,
+and we obtain
+χpγq “
+#` b
+d
+˘
+3
+if
+γ “ p a b
+c d q P Γ1p3q
+and
+c ‰ 0,
+1
+otherwise.
+(5.5)
+Let θpwq denote the cubic metaplectic theta function of Kubota on H3. It is automor-
+phic on Γ2 with multiplier χ. It has Fourier expansion (at 8) given by
+θpwq “ σv2{3 `
+ÿ
+µPλ´3Zrωs
+τpµqvK 1
+3p4π|µ|vqˇepµzq,
+w P H3,
+where
+σ :“ 35{2{2,
+(5.6)
+and the other Fourier coeﬃcients were computed by Patterson [Pat77, Theorem 8.1]. They
+are
+τpµq “
+$
+’
+’
+’
+’
+’
+&
+’
+’
+’
+’
+’
+%
+gpλ2, cq
+ˇˇd
+c
+ˇˇ3n{2`2
+if
+µ “ ˘λ3n´4cd3,
+n ě 1
+e´ 2πi
+9 gpωλ2, cq
+ˇˇd
+c
+ˇˇ3n{2`2
+if
+µ “ ˘ωλ3n´4cd3,
+n ě 1
+e
+2πi
+9 gpω2λ2, cq
+ˇˇ d
+c
+ˇˇ3n{2`2
+if
+µ “ ˘ω2λ3n´4cd3,
+n ě 1
+gp1, cq
+ˇˇ d
+c
+ˇˇ3n{2`5{2
+if
+µ “ ˘λ3n´3cd3,
+n ě 0
+0
+otherwise,
+(5.7)
+where
+c, d P Zrωs,
+c, d ” 1
+pmod 3q,
+and
+µ2pcq “ 1.
+(5.8)
+It follows from (5.7) that τp¨q is an even function.
+Implicit in [Pat77, §7 and §8] is a careful study of θpwq at various cusps of Γ2. We
+extract the information that will be of use to us. Let tγj : j “ 1, . . . 27u be the complete
+
+
+--- PDF PAGE 18 ---
+18
+ALEXANDER DUNN AND MAKSYM RADZIWI L L
+set of inequivalent representatives for Γ2zΓ given in [Pat77, Table II pg. 129]. Particular
+coset representatives γj of Γ2zΓ of importance to us are
+γ1 “ I, γ2 “
+ˆ
+1
+ω
+0
+1
+˙
+, γ3 “
+ˆ
+1
+´ω
+0
+1
+˙
+, γ10 “
+ˆ
+1
+0
+ω
+1
+˙
+, and γ19 “
+ˆ
+1
+0
+ω2
+1
+˙
+.
+For each j “ 1, 2, . . . , 27, let
+Fjpwq :“ θpγjpwqq,
+w P H3.
+(5.9)
+If g P Γ, then
+γjg “ gjpgqγkjpgq,
+for some
+gjpgq P Γ2
+and
+1 ď kjpgq ď 27.
+(5.10)
+Thus
+Fjpgpwqq “ χpgjpgqqFkjpgqpwq
+for all
+w P H3.
+(5.11)
+Each Fj is automorphic on Γ1p9q with multiplier χ by [Pat78a, Lemma 2.1]. Following
+Patterson, we deﬁne
+F ‹
+j pwq :“
+ÿ
+µ
+djpµqvK1{3p4π|µ|vqˇepµzq,
+w P H3,
+(5.12)
+where the djpµq have support contained in λ´4Zrωszt0u, and have expressions in terms
+of τpµq, τ1pµq [Pat77, (8.8)] and τ2pµq [Pat77, (8.9)], see Appendix A. For the reader’s
+convenience we state formulae for τ1pµq and τ2pµq here. They are given by
+τ1pµq “
+$
+’
+’
+’
+&
+’
+’
+’
+%
+9ωgpλ2, cq
+ˇˇ d
+c
+ˇˇ
+if
+µ “ λ´4cd3
+9e´ 2πi
+9 ω2gpωλ2, cq
+ˇˇ d
+c
+ˇˇ
+if
+µ “ ωλ´4cd3
+9e
+2πi
+9 gpω2λ2, cq
+ˇˇd
+c
+ˇˇ
+if
+µ “ ω2λ´4cd3
+0
+otherwise,
+(5.13)
+and
+τ2pµq “
+$
+’
+’
+’
+&
+’
+’
+’
+%
+9ω2gpλ2, cq
+ˇˇ d
+c
+ˇˇ
+if
+µ “ ´λ´4cd3
+9e´ 2πi
+9 gpωλ2, cq
+ˇˇd
+c
+ˇˇ
+if
+µ “ ´λ´4ωcd3
+9ωe
+2πi
+9 gpω2λ2, cq
+ˇˇd
+c
+ˇˇ
+if
+µ “ ´λ´4ω2cd3
+0
+otherwise,
+(5.14)
+where c and d are as in (5.8). The formulas for the djpµq are given in [Pat77, Table III
+pg. 151]. We have also included them in Appendix A. We have the Fourier expansions
+(at 8) [Pat77, pg. 148],
+Fjpwq “
+#
+σvpwq2{3 ` F ‹
+j pwq
+if
+1 ď j ď 9,
+F ‹
+j pwq
+if
+10 ď j ď 27 ,
+w P H3.
+(5.15)
+To understand the maps j ÞÑ gjp¨q, j ÞÑ kjp¨q and j ÞÑ χpgjp¨qq occurring in (5.10) and
+(5.11), it suﬃces to compute them on the generators of Γ “ SL2pZrωsq: P, T, and E. The
+values of kjpEq appear in [Pat77, Table III]. We have included the kj values on all three
+generators in Appendix A.
+
+
+--- PDF PAGE 19 ---
+BIAS IN CUBIC GAUSS SUMS
+19
+5.2. Conjugation and coeﬃcient sieving. It is more convenient for us to work with
+the Fjpwq. It follows from (5.15) that they each have Fourier expansion (at 8) given by
+Fjpwq “
+#
+σv2{3 ` ř
+µ djp´µqvK 1
+3p4π|µ|vqˇepµzq
+if
+1 ď j ď 9
+ř
+µ djp´µqvK 1
+3p4π|µ|vqˇepµzq
+if
+10 ď j ď 27 ,
+w P H3,
+(5.16)
+since K1{3pxq P R for x ą 0.
+The Fourier coeﬃcients of F1pwq are given by
+d1p´µq “ τp´µq “ τpµq,
+where the last equality follows from the fact that τp¨q is even. Let
+S :“ tλ´3cd3 P Qpωq : c, d P Zrωs,
+c, d ” 1 pmod 3q
+and
+µ2pcq “ 1u,
+(5.17)
+and
+F1pwqS :“
+ÿ
+µPS
+τpµqvK 1
+3p4π|µ|vqˇepµzq,
+w P H3.
+Remark 5.2. We study the function F1pwqS because its Fourier coeﬃcients are supported
+on S and the µ “ λ´3cd3th coeﬃcient is rgpcq|d| up to an absolute constant (cf. (5.7)).
+These are the coeﬃcients (up to twisting) we want to appear in our Voronoi formula (cf.
+Proposition 5.3).
+Lemma 5.1. Let F1pwqS be as above. Then
+F1pwqS “ 1
+3
+´
+F1pwq ` ωF2pwq ` ω2F3pwq
+¯
+,
+and F1pwqS is automorphic under Γ1p9q with multiplier χ.
+Proof. Following [Pat78a, Theorem 5.2], we detect µ P S additively. From (5.7), we have
+tµ P λ´3Zrωs : ˇepωµq “ ω2
+and
+τpµq ‰ 0u “ S.
+Thus
+F1pwqS “ 1
+3σv2{3p1 ` ω ` ω2q
+` 1
+3
+ÿ
+µPλ´3Zrωs
+τpµqvK 1
+3p4π|µ|vqˇepµzq
+`
+1 ` ωˇepωµq ` ω2ˇep2ωµq
+˘
+“ 1
+3
+´
+F1pwq ` ωF2pwq ` ω2F3pwq
+¯
+,
+(5.18)
+where the last term in (5.18) was obtained by writing p 1 2ω
+0 1 q “ p 1 3ω
+0 1 q p 1 ´ω
+0
+1 q and using
+automorphy of F1pwq “ θpwq on Γ2 with multiplier χ. This proves the ﬁrst claim. Each
+Fj is automorphic on Γ1p9q with multiplier χ, and so the second claim follows.
+■
+
+
+--- PDF PAGE 20 ---
+20
+ALEXANDER DUNN AND MAKSYM RADZIWI L L
+5.3. Twists. Let r P Zrωs with r ” 1 pmod 3q, and ψ be a function on Zrωs that is
+periodic modulo r. In view of (5.12), the ψ-twist of F ‹
+j pwq is deﬁned by
+F ‹
+j pw; ψq :“
+ÿ
+µ
+djp´µqψpλ4µqvK 1
+3p4π|µ|vqˇepµzq,
+w P H3.
+(5.19)
+In view of (5.16), the ψ-twist of Fjpwq is
+Fjpw; ψq :“
+#
+σψp0qv2{3 ` F ‹
+j pw; ψq
+1 ď j ď 9
+F ‹
+j pw; ψq
+10 ď j ď 27 ,
+w P H3.
+(5.20)
+Remark 5.3. The Fourier coeﬃcients of all the Fj have support contained in λ´4Zrωs.
+This explains why we deﬁne a general twist by ψpλ4p¨qq in (5.20). In the special case
+F1 “ θ, (5.7) tells us that the Fourier coeﬃcients have support contained in λ´3Zrωs.
+Thus our twisting deﬁnition produces an extraneous ψpλq factor in this case. This will be
+immaterial in our ﬁnal results.
+Deﬁne the Fourier transform
+pψpuq :“
+ÿ
+x
+pmod rq
+ψpxqˇe
+´ux
+r
+¯
+,
+u P Zrωs.
+(5.21)
+Fourier inversion tells us that
+ψpxq “
+1
+Nprq
+ÿ
+u
+pmod rq
+pψpuqˇe
+´
+´ux
+r
+¯
+,
+x P Zrωs.
+We also deﬁne the following non-Archimedean analogue of a Bessel K1{3–transform,
+rψpuq :“
+ÿ
+x
+pmod rq
+ψpxqS1{3px, u; rq,
+u P Zrωs,
+(5.22)
+where
+S1{3px, u; rq :“
+ˆλ
+r
+˙
+3
+ÿ
+d
+pmod rq
+pd,rq“1
+pλ4dqpλ4aq”1
+pmod rq
+´a
+r
+¯
+3ˇe
+´xd ` ua
+r
+¯
+,
+(5.23)
+is the cubic Kloosterman sum. Note that it is convenient for us to have the λ4 “ 9 factors
+built into the congruence in the cubic Kloosterman sum. These factors naturally appear
+when we use the automorphy of the F j (with multiplier χ) on the group Γ1pλ4q in the
+proof of the following result.
+To isolate twists of the cubic Gauss sums, we need to analyse
+F1pw; ψqS :“
+ÿ
+µPS
+τpµqψpλ4µqvK 1
+3p4π|µ|vqˇepµzq,
+w P H3.
+(5.24)
+Lemma 5.2. Suppose r P Zrωs with r ” 1 pmod 3q, and ψ is a sequence on Zrωs that is
+periodic modulo r. Suppose that pψ is supported only on residue classes coprime to r. For
+w “ pz, vq P H3, we have
+F1pw; ψqS “
+1
+3Nprq
+!
+F1 ` ωF ‹
+19 ` ω2F ‹
+10
+)´´
+´
+z
+r2p|z|2 ` v2q,
+v
+|r|2p|z|2 ` v2q
+¯
+; rψ
+¯
+. (5.25)
+
+
+--- PDF PAGE 21 ---
+BIAS IN CUBIC GAUSS SUMS
+21
+Proof. Fourier inversion and Lemma 5.1 imply that
+F1pw; ψqS “
+1
+Nprq
+ÿ
+d
+pmod rq
+pd,rq“1
+pψpdqF1
+´
+z ´ λ4d
+r , v
+¯
+S
+“
+1
+3Nprq
+ÿ
+d
+pmod rq
+pd,rq“1
+pψpdq
+´
+F1
+´
+z ´ λ4d
+r , v
+¯
+` ωF2
+´
+z ´ λ4d
+r , v
+¯
+` ω2F3
+´
+z ´ λ4d
+r , v
+¯¯
+.
+(5.26)
+Given our r ” 1 pmod 3q, and each d in (5.26), we have pr, λ4dq “ 1. Thus there exists
+ˆ
+r
+´λ4a
+λ4d
+b
+˙
+P Γ1p3q,
+and hence there exists
+γ :“
+ˆ
+0
+1
+´1
+0
+˙ ˆ
+r
+´λ4a
+λ4d
+b
+˙
+“
+ˆ
+λ4d
+b
+´r
+λ4a
+˙
+P Γ2.
+(5.27)
+Note that we also used (5.2) implicitly in the above display.
+A direct computation shows that
+γ
+´λ4a
+r
+´
+z
+r2p|z|2 ` v2q,
+v
+|r|2p|z|2 ` v2q
+¯
+“
+´
+z ´ λ4d
+r , v
+¯
+.
+(5.28)
+We now carefully factorise the γ in (5.27) as a word in P, E and T so that (5.28) and
+automorphy can be used in (5.26). For each κ “ m ` nω P Zrωs, m, n P Z, let
+Apκq :“ PT ´mPT ´m`nP “
+ˆ
+1
+κ
+0
+1
+˙
+.
+For each r, b P Zrωs occurring in (5.27), let
+Wpr, bq :“ E3AprqEApbqEAprq “
+ˆ
+b
+´1 ` br
+1 ´ br
+2r ´ br2
+˙
+.
+Then
+Wpr, bqEγ “
+ˆ
+´9d ` br ` 9bdr
+´b ´ 9ab ` b2r
+r ` 18dr ´ br2 ´ 9bdr2
+´9a ` 2br ` 9abr ´ b2r2
+˙
+“: rγ P Γ1p9q. (5.29)
+Equivalently,
+γ “ E3Wpr, bq´1rγ.
+(5.30)
+To obtain (5.31) immediately below we use (5.28), (5.30), (5.10), (5.11), and the fact that
+each Fj is automorphic on Γ1p9q with multiplier χ. For each j “ 1, 2, 3,
+Fj
+´
+z ´ λ4d
+r , v
+¯
+“ χpgjpE3Wpr, bq´1qq ¨ χprγq
+ˆ FkjpE3W pr,bq´1q
+´λ4a
+r
+´
+z
+r2p|z|2 ` v2q,
+v
+|r|2p|z|2 ` v2q
+¯
+.
+(5.31)
+
+
+--- PDF PAGE 22 ---
+22
+ALEXANDER DUNN AND MAKSYM RADZIWI L L
+We claim that
+k1
+`
+E3Wpr, bq´1˘
+“ 1;
+(5.32)
+k2
+`
+E3Wpr, bq´1˘
+“ 19;
+(5.33)
+k3
+`
+E3Wpr, bq´1˘
+“ 10.
+(5.34)
+We will use (5.3) and the computations below to establish (5.32)–(5.34). Observe that
+γ1E3Wpr, bq´1γ´1
+1
+“
+ˆ
+´1 ` br
+b
+´2r ` br2
+´1 ` br
+˙
+” E3
+pmod 3q.
+(5.35)
+Thus γ1E3Wpr, bq´1γ´1
+1
+P Γ2, and (5.32) follows. Note that (5.33) (resp. (5.34)) follow
+similarly from
+γ2E3Wpr, bq´1γ´1
+19 “
+ˆ
+pω ` 1qb ´ 2ωr ` ωbr2
+´ω ` b ` ωbr
+´pω ` 1q ´ 2r ` pω ` 1qbr ` br2
+´1 ` br
+˙
+” T ´1E3
+pmod 3q,
+(5.36)
+(resp.)
+γ3E3Wpr, bq´1γ´1
+10 “
+ˆ
+ω ´ ωb ` 2ωr ´ ωbr ´ ωbr2
+ω ` b ´ ωbr
+ω ´ 2r ´ ωbr ` br2
+´1 ` br
+˙
+” E3
+pmod 3q.
+(5.37)
+We now compute the automorphy factor χpgjpE3Wpr, bq´1qq ¨ χprγq for each j “ 1, 2, 3
+in (5.31). The displays (5.35)–(5.37) prove that
+g1pE3Wpr, bq´1q “ E3Wpr, bq´1;
+g2pE3Wpr, bq´1q “ γ2E3Wpr, bq´1γ´1
+19 ;
+g3pE3Wpr, bq´1q “ γ3E3Wpr, bq´1γ´1
+10 ,
+respectively. In order to use either (5.4) or (5.5) to compute χpgjpE3Wpr, bq´1qq we note
+that χ|SL2pZq “ 1 and Eg1pE3Wpr, bq´1q, ETg2pE3Wpr, bq´1q, Eg3pE3Wpr, bq´1q P Γ1p3q
+(cf. (5.35)–(5.37)). We also repeatedly use the determinant equation 81ad ` br “ 1 from
+(5.27). Now,
+χpg1pE3Wpr, bq´1qq “ χpEg1pE3Wpr, bq´1qq
+“
+#`1´br
+b
+˘
+3
+if
+´ 1 ` br ‰ 0
+1
+otherwise
+“ 1.
+(5.38)
+Similar computations yield
+χpg3pE3Wpr, bq´1qq “ χpEg3pE3Wpr, bq´1qq
+“
+#`
+1´br
+ω`b´ωbr
+˘
+3
+if
+ωp1 ´ b ` 2r ´ br ´ br2q ‰ 0
+1
+otherwise
+“ 1,
+(5.39)
+
+
+--- PDF PAGE 23 ---
+BIAS IN CUBIC GAUSS SUMS
+23
+and
+χpg2pE3Wpr, bq´1qq
+“ χpETg2pE3Wpr, bq´1qq
+“
+$
+’
+&
+’
+%
+`
+1´br
+´ω`b`ωbr`br´1
+˘
+3
+if
+pω ` 1qb ´ 2ωr ` ωbr2
+´pω ` 1q ´ 2r ` pω ` 1qbr ` br2 ‰ 0
+1
+otherwise
+“ 1.
+(5.40)
+We also have
+χprγq “
+ˆr ` 18dr ´ br2 ´ 9bdr2
+´9d ` br ` 9bdr
+˙
+3
+“
+ˆ81adr ` 18dr ´ 9bdr2
+´9d ` br ` 9bdr
+˙
+3
+“
+ˆ
+9d
+´9d ` br ` 9bdr
+˙
+3
+¨
+ˆ 9ar ` 2r ´ br2
+´9d ` br ` 9bdr
+˙
+3
+“
+ˆ9d
+1
+˙
+3
+¨
+ˆ´9d ` br ` 9bdr
+9ar ` 2r ´ br2
+˙
+3
+(by cubic reciprocity)
+“
+ˆ´9d ` br ` 9bdr
+r
+˙
+¨
+ˆ´9d ` br ` 9bdr
+9a ` 2 ´ br
+˙
+3
+“
+ˆ9d
+r
+˙
+3
+¨
+ˆ1 ´ 81ad ´ 729ad2
+9a ` 1 ` 81ad
+˙
+3
+“
+ˆ9a
+r
+˙
+3
+¨
+ˆ
+9d ` 1
+9a ` 1 ` 81ad
+˙
+3
+“
+ˆ9a
+r
+˙
+3
+¨
+ˆ9d ` 1
+1
+˙
+3
+“
+ˆλ4a
+r
+˙
+3
+.
+(5.41)
+We combine (5.31)–(5.41) in (5.26). Note that F19 “ F ‹
+19 and F10 “ F ‹
+10 by (5.15). We
+then use the Fourier expansions (5.16) to open F1, F ‹
+19 and F ‹
+10, and assembling the sum
+over d (equivalently a) shows that
+F 1pw; ψqS “
+1
+3Nprq
+´
+F1 ` ωF ‹
+19 ` ω2F ‹
+10
+¯´
+´
+z
+r2p|z|2 ` v2q,
+v
+|r|2p|z|2 ` v2q; Ψ
+¯
+,
+where
+Ψpuq :“
+ÿ
+d
+pmod rq
+pd,rq“1
+pλ4dqpλ4aq”1
+pmod rq
+pψpdq
+´λ4a
+r
+¯
+3ˇe
+´au
+r
+¯
+,
+u P Zrωs.
+(5.42)
+After opening pψpdq using the deﬁnition (5.21), and interchanging the order of summation,
+we readily see that Ψpuq “ rψpuq for all u P Zrωs.
+■
+For the coming lemma it will be instructive to open the deﬁnition of ˇep¨q,
+ˇepµzq “ epµz ` µzq,
+z P C.
+
+
+--- PDF PAGE 24 ---
+24
+ALEXANDER DUNN AND MAKSYM RADZIWI L L
+For ℓP Zzt0u and 1 ď j ď 27, let
+Fjpw; ψ, ℓq “ F ‹
+j pw; ψ, ℓq :“
+$
+&
+%
+ř
+µ djp´µqψpλ4µqµℓvK 1
+3
+p4π|µ|vqepµz ` µzq,
+if ℓą 0
+ř
+µ djp´µqψpλ4µqµ|ℓ|vK 1
+3
+p4π|µ|vqepµz ` µzq,
+if ℓă 0 .
+For ℓ“ 0, Fjpw; ψ, 0q :“ Fjpw; ψq from before. We have
+Fjpw; ψ, ℓq “
+1
+p2πiq|ℓ|
+#` B
+Bz
+˘ℓFjpw; ψq,
+if
+ℓą 0
+` B
+Bz
+˘|ℓ|Fjpw; ψq,
+if
+ℓă 0,
+w “ pz, vq P H3.
+(5.43)
+We apply diﬀerential operators in the proof of the next lemma. Thus we remind the
+reader that Fjpw; ψ, ℓq “ Gjpz, z, v; ψ, ℓq is a function of z, z and v, although the Fj
+notation suppresses this.
+With these observations in mind we deduce the following Corollary.
+Corollary 5.1. Suppose r P Zrωs with r ” 1 pmod 3q, and ψ is a sequence on Zrωs that
+is periodic modulo r. Suppose that pψ is supported only on residue classes coprime to r.
+By abuse of notation, write Fjpp0, vq; ψ, ℓq as Fjpv; ψ, ℓq for all v ą 0, 1 ď j ď 27 and
+ℓP Z. Then we have
+F1pv; ψ, ℓqS “
+p´1qℓ
+3Nprq1`|ℓ|v2|ℓ|
+´r
+r
+¯´ℓ´
+δℓ‰0F ‹
+1 ` δℓ“0F1 ` ωF ‹
+19 ` ω2F ‹
+10
+¯´
+1
+|r|2v; rψ, ´ℓ
+¯
+,
+or equivalently,
+´
+F ‹
+1 δℓ‰0 ` F1δℓ“0 ` ωF ‹
+19 ` ω2F ‹
+10
+¯
+pv; rψ, ´ℓq “
+3 ¨ p´1qℓ
+Nprq|ℓ|´1v2|ℓ|
+´r
+r
+¯ℓ
+F1
+´
+1
+|r|2v; ψ, ℓ
+¯
+.
+Proof. Setting z “ 0 in (5.25) gives the claim when ℓ“ 0. If ℓą 0, we write |z|2 “ zz and
+apply the operator
+1
+p2πiqℓ
+` B
+Bz
+˘ℓˇˇ
+z“0 to both sides of (5.25). A computation with the chain
+rule yields
+F1pp0, vq; ψ, ℓqS “
+p´1qℓ
+3Nprq1`ℓv2ℓ
+´r
+r
+¯´ℓ
+¨
+´
+F ‹
+1 ` ωF ‹
+19 ` ω2F ‹
+10
+¯´´
+0,
+1
+|r|2v
+¯
+; rψ, ´ℓ
+¯
+.
+When ℓă 0 a similar argument with the operator
+1
+p2πiq|ℓ|
+` B
+Bz
+˘|ℓ|ˇˇˇ
+z“0 yields the analogous
+result.
+■
+5.4. Poles and Dirichlet series. Let ψ be as in Corollary 5.1. For Repsq ą 1, ℓP Z
+and 1 ď j ď 27, consider the family of Dirichlet series
+Dps, F ‹
+j ; ψ, ℓq :“
+ÿ
+µ
+djp´µqψpλ4µq
+` µ
+|µ|
+˘ℓ
+Npµqs
+;
+Dps, F1; ψ, ℓqS :“
+ÿ
+µPS
+τpµqψpλ4µq
+` µ
+|µ|
+˘ℓ
+Npµqs
+.
+(5.44)
+
+
+--- PDF PAGE 25 ---
+BIAS IN CUBIC GAUSS SUMS
+25
+For Repsq ą 1, we introduce the integral transforms
+Λps, F ‹
+j ; ψ, ℓq :“
+ż 8
+0
+F ‹
+j pv; ψ, ℓqv2s`|ℓ|´2dv;
+Λps, F1; ψ, ℓqS :“
+ż 8
+0
+F 1pv; ψ, ℓqSv2s`|ℓ|´2dv,
+where by abuse of notation we wrote Fipv; ψ, ℓq “ Fipp0, vq; ψ, ℓq. In the case ℓ“ 0 we
+will omit the index ℓfrom the notation.
+Lemma 5.3. For Repsq ą 1 we have
+Λps, F ‹
+j ; ψ, ℓq “ 1
+4p2πq´2s´|ℓ|Γ
+´
+s ` |ℓ|
+2 ´ 1
+6
+¯
+Γ
+´
+s ` |ℓ|
+2 ` 1
+6
+¯
+Dps, F ‹
+j ; ψ, ℓq;
+Λps, F1; ψ, ℓqS “ 1
+4p2πq´2s´|ℓ|Γ
+´
+s ` |ℓ|
+2 ´ 1
+6
+¯
+Γ
+´
+s ` |ℓ|
+2 ` 1
+6
+¯
+Dps, F1; ψ, ℓqS.
+Proof. The proofs of both identities are virtually identical, so we prove the latter, with
+ℓă 0. For Repsq ą 1 we have
+Λps, F 1; ψ, ℓqS “
+ż 8
+0
+ÿ
+µPS
+τpµqψpλ4µqµ|ℓ|K 1
+3p4π|µ|vqv2s`|ℓ|´1dv
+“
+1
+p4πq2s`|ℓ|
+ÿ
+µPS
+τpµqψpλ4µq
+` µ
+|µ|
+˘|ℓ|
+Npµqs
+ż 8
+0
+K 1
+3pTqT 2s`|ℓ|´1dT
+“ 1
+4p2πq´2s´|ℓ|Γ
+´
+s ` |ℓ|
+2 ´ 1
+6
+¯
+Γ
+´
+s ` |ℓ|
+2 ` 1
+6
+¯ ÿ
+µPS
+τpµqψpλ4µq
+` µ
+|µ|
+˘ℓ
+Npµqs
+.
+(5.45)
+The interchange of summation and integration above for Repsq ą 1 is justiﬁed by absolute
+convergence (cf. [DLMF, (10.25.3),(10.30.2)]). Furthermore, (5.45) follows from [DLMF,
+(10.43.19)].
+■
+Proposition 5.1. The completed Dirichlet series ΛpF1, s; ψqS admits a meromorphic con-
+tinuation to the whole complex plane C. It has a unique pole (that is simple) at s “ 5{6,
+with residue
+Res
+s“ 5
+6
+Λps, F1; ψqS “
+σ rψp0q
+6Nprq5{3,
+(5.46)
+where σ “ 35{2{2 is as in (5.6). In particular,
+Res
+s“ 5
+6
+Dps, F1; ψqS “ 2p2πq5{3σ rψp0q
+3Γp 2
+3qNprq5{3 .
+(5.47)
+For ℓ‰ 0 the Dirichlet series ΛpF1, s; ψ, ℓqS is entire. Moreover, for all ℓP Z we have the
+functional equation
+3p´1qℓNprq2s´r
+r
+¯ℓ
+Λps, F1; ψ, ℓqS “ Λp1 ´ s, F ‹
+1 ` ωF ‹
+19 ` ω2F ‹
+10; rψ, ´ℓq.
+(5.48)
+This functional equation also determines the poles of Λps, F ‹
+1 ` ωF ‹
+19 ` ω2F ‹
+10; rψq.
+
+
+--- PDF PAGE 26 ---
+26
+ALEXANDER DUNN AND MAKSYM RADZIWI L L
+Proof. For Re s ą 1 we have
+Λps, F1; ψ, ℓqS “
+ż Nprq´1
+0
+F1pv; ψ, ℓqSv2s`|ℓ|´2dv `
+ż 8
+Nprq´1 F1pv; ψ, ℓqSv2s`|ℓ|´2dv.
+(5.49)
+When ℓ“ 0 observe that F1pv; ψ, ℓqS has exponential decay at 8 by (5.17) and (5.24).
+The same claim holds when ℓ‰ 0 using (5.43) (termwise diﬀerentiation of the Fourier
+series) and the same reasoning as before. Thus the second integral in (5.49) has analytic
+continuation to an entire function.
+Let
+Gpw; rψ, ℓq :“
+#
+pF1 ` ωF ‹
+19 ` ω2F ‹
+10qpw; ˜ψ, ℓq
+if ℓ“ 0
+pF ‹
+1 ` ωF ‹
+19 ` ω2F ‹
+10qpw; ˜ψ, ℓq
+if ℓ‰ 0 ,
+w P H3.
+(5.50)
+Using (5.50) and Corollary 5.1 gives
+ż Nprq´1
+0
+F1pv; ψ, ℓqSv2s`|ℓ|´2dv
+“
+p´1qℓ
+3Nprq1`|ℓ|
+´r
+r
+¯´ℓż Nprq´1
+0
+G
+´
+1
+v|r|2; ˜ψ, ´ℓ
+¯
+v2s´|ℓ|´2dv
+(5.51)
+“ σ rψp0qNprq´2s
+6
+¨ δℓ“0
+s ´ 5
+6
+` p´1qℓNprq´2s
+3
+´r
+r
+¯´ℓż 8
+1
+´
+F ‹
+1 ` ωF ‹
+19 ` ω2F ‹
+10
+¯
+pv; rψ, ´ℓqv|ℓ|´2sdv.
+(5.52)
+When ℓ“ 0 observe that pF ‹
+1 ` ωF ‹
+19 ` ω2F ‹
+10qp¨, rψ, ´ℓq has exponential decay at 8 by
+(5.19), Appendix A (the expressions for djpµq), (5.7), (5.13), and (5.14). The same claim
+holds when ℓ‰ 0 using (5.43) (termwise diﬀerentiation of the Fourier series) and the
+same reasoning as before. Thus the integral in (5.52) has analytic continuation to an
+entire function. This gives the meromorphicity and entirety claims in the Proposition, as
+well as (5.46). Observe that (5.47) follows from (5.46) and Lemma 5.3.
+We now prove the functional equation (5.48). From (5.49) and (5.51) we found that
+Λps, F1; ψ, ℓqS “ p´1qℓNprq´2s
+3
+´r
+r
+¯´ℓż 8
+1
+Gpv; rψ, ´ℓqv|ℓ|´2sdv `
+ż 8
+Nprq´1 F1pv; ψ, ℓqSv2s`|ℓ|´2dv.
+(5.53)
+We now repeat a similar argument, but instead start with
+G‹pw; rψ, ℓq “ pF ‹
+1 ` ωF ‹
+19 ` ω2F ‹
+10qpw; rψ, ℓq,
+for all
+w P H3
+and
+ℓP Z.
+(5.54)
+For Re s ą 1 we have
+Λps, G‹; rψ, ´ℓq “
+ż 1
+0
+G‹pv; rψ, ´ℓqv2s`|ℓ|´2dv `
+ż 8
+1
+G‹pv; rψ, ´ℓqv2s`|ℓ|´2dv.
+(5.55)
+For Re s ą 1 we have
+ż 1
+0
+G‹pv; rψ, ´ℓqv2s`|ℓ|´2dv “
+ż 1
+0
+Gpv; rψ, ´ℓqv2s`|ℓ|´2dv ´ δℓ“0 ¨ 3σ rψp0q
+6s ´ 1 .
+(5.56)
+
+
+--- PDF PAGE 27 ---
+BIAS IN CUBIC GAUSS SUMS
+27
+Then (5.56) holds for all s P C by meromorphic continuation. Similarly, for Re s ă ´1,
+we have
+ż 8
+1
+G‹pv; rψ, ´ℓqv2s`|ℓ|´2dv “
+ż 8
+1
+Gpv; rψ, ´ℓqv2s`|ℓ|´2dv ` δℓ“0
+3σ rψp0q
+6s ´ 1 .
+(5.57)
+Then (5.57) holds for all s P C by meromorphic continuation. Insertion of (5.56) and
+(5.57) into (5.55) gives
+Λps, G‹; rψ, ´ℓq “
+ż 1
+0
+Gpv; rψ, ´ℓqv2s`|ℓ|´2dv `
+ż 8
+1
+Gpv; rψ, ´ℓqv2s`|ℓ|´2dv,
+(5.58)
+where both integrals are to be interpreted as the meromorphic continuations of the original
+integrals. Using Corollary 5.1 we obtain
+ż 1
+0
+Gpv; rψ, ´ℓqv2s`|ℓ|´2dv “ 3p´1qℓNprq1´|ℓ|´r
+r
+¯ℓż 1
+0
+F1
+´
+1
+|r|2v; ψ, ℓ
+¯
+Sv2s´|ℓ|´2dv
+“ 3p´1qℓNprq2´2s´r
+r
+¯ℓż 8
+Nprq´1 F1pv; ψ, ℓqSv|ℓ|´2sdv.
+(5.59)
+Substitution of (5.59) into (5.58) gives
+Λps, G‹; rψ, ´ℓq “ 3p´1qℓNprq2´2s´r
+r
+¯ℓż 8
+Nprq´1 F1pv; ψ, ℓqSv|ℓ|´2sdv`
+ż 8
+1
+Gpv; rψ, ´ℓqv2s`|ℓ|´2dv.
+Equivalently,
+Λp1´s, G‹; rψ, ´ℓq “ 3p´1qℓNprq2s´r
+r
+¯ℓż 8
+Nprq´1 F1pv; ψ, ℓqSv2s`|ℓ|´2dv`
+ż 8
+1
+Gpv; rψ, ´ℓqv|ℓ|´2sdv.
+(5.60)
+After combining (5.53) and (5.60) we obtain
+3p´1qℓNprq2s´r
+r
+¯ℓ
+Λps, F1; ψ, ℓqS “ Λp1 ´ s, G‹; rψ, ´ℓq,
+as required.
+■
+5.5. Sieving for ˜gpcq. Let r P Zrωs satisfy r ” 1 pmod 3q, ψ be a primitive character
+to modulus r, and ℓP Z. Then let
+ζQpωqps; ψ, ℓq :“
+ÿ
+d”1
+pmod 3q
+ψpdq
+` d
+|d|
+˘ℓ
+Npdqs
+,
+Repsq ą 1.
+In the case ℓ“ 0 we omit ℓfrom the notation and write ζQpωqps; ψq. We denote the
+principal character modulo r by 1r. Any J ✂Zrωs with pJ, 3q “ 1 has a unique generator
+d ” 1 pmod 3q. Thus when ℓ“ 0 and ψ “ 1r, the above L-function coincides with the
+Dedekind ζ-function of Qpωq, except at the local factors of primes dividing pλrq. Note
+that ζQpωqps; ψ, ℓq has standard meromorphic continuation to all of C; the only case when
+this function is not holomorphic is when ψ “ 1r is the principal character and ℓ“ 0, in
+that case there is a unique simple pole at s “ 1. Standard functional equations for these
+L-functions can be found in [Miy89, §3.3].
+
+
+--- PDF PAGE 28 ---
+28
+ALEXANDER DUNN AND MAKSYM RADZIWI L L
+Lemma 5.4. Let r P Zrωs with r ” 1 pmod 3q, and ψ be a primitive cubic Dirichlet
+character on Zrωs to modulus r. For ℓP Z and Re s ą 1 we have
+p´1qℓi´ℓ
+ÿ
+c”1
+pmod 3q
+˜gpcqψpλcq
+` c
+|c|
+˘ℓ
+Npcqs
+“ 3´5{2´3s ¨ Dps, F1; ψ, ℓqS
+ζQpωqp3s ´ 1
+2; 1r, 3ℓq
+,
+(5.61)
+where Dps, F1; ψ, ℓqS is as in (5.44).
+Remark 5.4. Note that we have abused notation in the results and proofs that follow:
+µ P Qpωq is used to index Fourier coeﬃcients of various automorphic forms, and µp¨q
+denotes the M¨obius function on Zrωs. Meanings should be clear from context.
+Proof. The Dirichlet coeﬃcients on the right side on (5.61) have support contained in
+Zrωszt0u since 3´3s “ Npλ3q´s. The νth Dirichlet coeﬃcient on the right side of (5.61)
+is given by
+1
+35{2
+´ ν{λ3
+|ν{λ3|
+¯ℓ
+ÿ
+µPS
+d”1
+pmod 3q
+pd,rq“1
+ν“λ3µd3
+τpµqψpλ4µqµpdq|d|.
+(5.62)
+Recall the deﬁnition of S in (5.17). If ν R λ3S, then (5.62) is zero. Therefore we can
+assume that ν P λ3S. If µ P S and τpµq ‰ 0, then by (5.7) we must have
+τpµq “ 35{2˜gpeq|f|,
+where
+µ “ λ´3ef 3
+for some
+e, f ” 1
+pmod 3q
+and
+µ2peq “ 1.
+Thus (5.62) is equal to
+p´1qℓi´ℓ´ ν
+|ν|
+¯ℓ
+ÿ
+e,f,d”1
+pmod 3q
+pd,rq“1
+ν“epdfq3
+˜gpeqψpλef 3qµpdq|d||f|
+“ p´1qℓi´ℓ´ ν
+|ν|
+¯ℓ
+ÿ
+e,f,d”1
+pmod 3q
+pdf,rq“1
+ν“epdfq3
+˜gpeqψpλeqµpdq|d||f|,
+(5.63)
+where the last display follows from the assumption that ψ is a primitive cubic character
+to modulus r. Note that it is redundant to have µ2peq “ 1 in (5.63) because this condition
+is automatically captured by (2.2). M¨obius inversion then tells us that the right side of
+(5.63) is equal to
+p´1qℓi´ℓ´ ν
+|ν|
+¯ℓ
+ÿ
+e,u”1
+pmod 3q
+pu,rq“1
+ν“eu3
+˜gpeqψpλeq|u|
+´
+ÿ
+d|u
+d”1
+pmod 3q
+µpdq
+¯
+“ p´1qℓi´ℓ´ e
+|e|
+¯ℓ
+˜gpeqψpλeq,
+as required.
+■
+
+
+--- PDF PAGE 29 ---
+BIAS IN CUBIC GAUSS SUMS
+29
+The following lemma records the standard evaluation of Ramanujan sums over Zrωs.
+The lemma follows from the evaluation
+c̟ puq “
+#
+ϕp̟
+q
+if
+u ” 0
+pmod̟
+q
+´1
+otherwise
+,
+for̟
+” 1
+pmod 3q
+prime
+and
+u P Zrωs,
+and the multiplicativity of Ramanujan sums i.e.
+cmnpuq “ cmpuqcnpuq
+for
+u, m, n P Zrωs
+with
+m, n ” 1
+pmod 3q
+and
+pm, nq “ 1.
+Lemma 5.5. Let m P Zrωs be squarefree and satisfy m ” 1 pmod 3q. Then for u P Zrωs,
+cmpuq :“
+ÿ
+x
+pmod mq
+px,mq“1
+ˇe
+´ux
+m
+¯
+“ µ
+´
+m
+pm, uq
+¯ ϕpmq
+ϕ
+`
+m
+pm,uq
+˘,
+where ϕp¨q is the Euler phi function on Zrωs.
+Let r P Zrωs be squarefree and satisfy r ” 1 pmod 3q. We are now able to study the
+the analytic properties of the Dirichlet series
+ÿ
+c”1
+pmod 3q
+˜gpcq
+` c
+r
+˘
+3
+` c
+|c|
+˘ℓ
+Npcqs
+,
+Repsq ą 1.
+(5.64)
+The following result records a level aspect (i.e. in the conductor of the cubic twist in
+(5.64)) functional equation for (5.64) that generalises [Pat77, Theorem 6.1]. It explicates
+the root number and level, and is crucial to our paper. Yoshimoto [Yos87] established level
+aspect analogues of [Pat77, Theorem 6.1] for twists of Gauss sums by arbitrary non-cubic
+Dirichlet characters. Clearly, Yoshimoto’s results do not cover the case we need.
+Remark 5.5. The functional equation in [Pat77, Theorem 6.1] could be potentially used
+to obtain a functional equation for (5.64) similar to the one presented below in Proposition
+5.2 (at least when pr, cq “ 1). Patterson exploited the fact that (5.64) (and its variants)
+are the Fourier coeﬃcients of cubic metaplectic Eisenstein series attached to the essential
+cusps of Γ1p3q with respect to χ. The drawback of the functional equation in [Pat77,
+Theorem 6.1] is that the dual side of is a linear combination of variants of Dirichlet series
+of twisted cubic Gauss sums that involve the ramiﬁed prime, and this obscures the root
+number. We found it advantageous to work directly with the automorphy of the cubic
+theta function (this is a more advanced starting point since the purpose of [Pat77] was to
+compute the Fourier coeﬃcients of the cubic theta function).
+Proposition 5.2. Let r P Zrωs be squarefree and satisfy r ” 1 pmod 3q, and ψ :“
+` ¨
+r
+˘
+3.
+Let ℓP Z. Then the Dirichlet series
+Rps; ψ, ℓq :“
+ÿ
+c”1
+pmod 3q
+˜gpcq
+` c
+r
+˘
+3
+` c
+|c|
+˘ℓ
+Npcqs
+,
+Repsq ą 1,
+(5.65)
+
+
+--- PDF PAGE 30 ---
+30
+ALEXANDER DUNN AND MAKSYM RADZIWI L L
+admits meromorphic continuation to all of C. If ℓ“ 0, the Dirichlet series
+ζQpωqp3s ´ 1
+2; 1r, 3ℓqRps; ψ, ℓq
+(5.66)
+has a unique pole located at s “ 5
+6, and it is simple. If ℓ‰ 0 the Dirichlet series (5.66)
+deﬁnes an entire function. We have
+Ress“ 5
+6
+`
+ζQpωqp3s ´ 1
+2; 1rqRps; ψq
+˘
+“ p2πq5{3gprqϕprq
+Γp 2
+3q37{2Nprq5{3,
+and for ℓP Z we have the functional equation
+ζQpωqp3s ´ 1
+2; 1r, 3ℓqRps; ψ, ℓq
+“ gprq
+´r
+r
+¯´ℓ
+¨ iℓp2πq4s´2
+37{2Nprq2s
+Γp 5
+6 ` |ℓ|
+2 ´ sqΓp 7
+6 ` |ℓ|
+2 ´ sq
+Γps ` |ℓ|
+2 ´ 1
+6qΓps ` |ℓ|
+2 ` 1
+6q
+ˆ ζQpωqp 5
+2 ´ 3s; 1r, ´3ℓqR:
+rp1 ´ s; ´ℓq,
+where
+R:
+rps; ℓq :“ p´1qℓi´ℓ
+ÿ
+νPλ´1Zrωs
+a:pνqb:
+rpνq
+` ν
+|ν|
+˘ℓ
+Npνqs
+,
+Repsq ą 1,
+ℓP Z,
+for some Dirichlet coeﬃcients a:pνq. The coeﬃcients a:pνq have support contained in the
+set
+Q: :“
+␣
+ν “ λLζhwh13 : L P Zě´1,
+ζ P t˘1, ˘ω, ˘ω2u,
+h, h1, w ” 1
+pmod 3q,
+h, h1 | r8,
+pw, rq “ 1
+and
+µ2phwq “ 1
+(
+,
+and for ν P Q:,
+a:pνq “
+$
+’
+&
+’
+%
+τp´λL´3νq
+if
+L ě 0
+ω2τ1p´λL´3ω2νqˇepλL´3νq
+if
+L “ ´1,
+ζ P t´1, ´ω, ´ω2u
+ωτ2p´λL´3ωνqˇepλL´3νq
+if
+L “ ´1,
+ζ P t1, ω, ω2u
+,
+(5.67)
+and
+b:
+rpνq “ µ
+´
+r
+pλν, rq
+¯
+ϕprq
+ϕ
+`
+r
+pλν,rq
+˘.
+(5.68)
+Remark 5.6. Recall that τp¨q, τ1p¨q and τ2p¨q are given in (5.7), (5.13) and (5.14) respec-
+tively.
+Proof. Meromorphic continuation of ζQpωqp3s ´ 1
+2; 1r, 3ℓqRps; ψ, ℓq to all of C follows from
+Lemma 5.3, Proposition 5.1 and Lemma 5.4. If ℓ‰ 0, then it is entire. If ℓ“ 0 , then it
+has a unique simple pole at s “ 5{6 with residue
+Ress“ 5
+6
+`
+ζQpωqp3s ´ 1
+2; 1rqRps; ψq
+˘
+“
+ˆλ
+r
+˙
+3
+p2πq5{3 rψp0q
+37{2Γp 2
+3qNprq5{3.
+
+
+--- PDF PAGE 31 ---
+BIAS IN CUBIC GAUSS SUMS
+31
+We now evaluate rψpuq (deﬁned in (5.22)). Recall from (5.42) and the argument following
+it that we have
+rψpuq “
+ˆλ
+r
+˙
+3
+ÿ
+d
+pmod rq
+pd,rq“1
+pλ4dqpλ4aq”1
+pmod rq
+pψpdq
+´a
+r
+¯
+3ˇe
+´au
+r
+¯
+,
+u P Zrωs.
+(5.69)
+Moreover, using the deﬁnition (5.21) and the fact that ψ is primitive gives us
+pψpdq “
+´d
+r
+¯
+3gprq.
+We have ad ” λ8 pmod rq in (5.69). Therefore
+rψpuq “
+´λ2
+r
+¯
+3gprqcrpuq,
+(5.70)
+where crp¨q denotes the usual Ramanujan sum. In particular,
+rψp0q “
+ˆλ2
+r
+˙
+3
+gprqϕprq.
+Lemma 5.4 tells us that
+ζQpωqp3s ´ 1
+2; 1r, 3ℓqRps; ψ, ℓq “ p´1qℓiℓ
+ˆλ
+r
+˙
+3
+3´5{2´3sDps, F1; ψ, ℓqS.
+Thus Lemma 5.3 and Proposition 5.1 imply that
+ζQpωqp3s ´ 1
+2; 1r, 3ℓqRps; ψ, ℓq
+“
+´r
+r
+¯´ℓiℓp2πq4s´2
+37{2Nprq2s
+Γp 5
+6 ` |ℓ|
+2 ´ sqΓp 7
+6 ` |ℓ|
+2 ´ sq
+Γps ` |ℓ|
+2 ´ 1
+6qΓps ` |ℓ|
+2 ` 1
+6q
+ζQpωq
+` 5
+2 ´ 3s; 1r, ´3ℓ
+˘
+ˆ
+ˆλ
+r
+˙
+3
+3´3s Dp1 ´ s, G‹; rψ, ´ℓq
+ζQpωqp 5
+2 ´ 3s; 1r, ´3ℓq,
+(5.71)
+where G‹pw; rψ, ℓq is as in (5.54). Observe that (5.70) gives
+ˆλ
+r
+˙
+3
+3´3s
+Dps, G‹; rψ, ´ℓq
+ζQpωqp3s ´ 1
+2; 1r, ´3ℓq “ gprqR:
+rps, ´ℓq,
+where
+R:
+rps; ℓq :“ 3´3s
+Dps, G‹; crp¨q, ℓq
+ζQpωqp3s ´ 1
+2; 1r, 3ℓq,
+ℓP Z.
+(5.72)
+We now analyse the Dirichlet coeﬃcients of R:
+rps; ´ℓq. Let a:
+´ℓpνq and a‹
+´ℓpνq be the
+Fourier coeﬃcients of R:
+rps; ´ℓq and Dps, G‹; ´ℓq respectively.
+Using the deﬁnition of
+G‹pw; rψ, ℓq in (5.54) and Appendix A for the closed form expressions for d1pµq, d19pµq,
+
+
+--- PDF PAGE 32 ---
+32
+ALEXANDER DUNN AND MAKSYM RADZIWI L L
+and d10pµq gives
+a‹
+´ℓpµq “
+´ µ
+|µ|
+¯´ℓ`
+d1p´µq ` ωd19p´µq ` ω2d10p´µq
+˘
+“
+´ µ
+|µ|
+¯´ℓ´
+τp´µq ` ω2τ1p´ω2µqˇepµq ` ωτ2p´ωµqˇepµq
+¯
+.
+(5.73)
+Consultation with (5.7), (5.13) and (5.14) shows that the a‹pµq have support contained
+in the set
+U :“
+␣
+µ “ λkζcj3 : k P Zě´4,
+ζ P t˘1, ˘ω, ˘ω2u,
+c, j ” 1
+pmod 3q
+and
+µ2pcq “ 1
+(
+.
+Each of the three terms in (5.73) have disjoint support. In particular,
+a‹
+´ℓpµq “
+´ µ
+|µ|
+¯´ℓ
+¨
+$
+’
+&
+’
+%
+τp´µq
+if
+k ě ´3
+ω2τ1p´ω2µqˇepµq
+if
+k “ ´4,
+ζ P t´1, ´ω, ´ω2u
+ωτ2p´ωµqˇepµq
+if
+k “ ´4,
+ζ P t1, ω, ω2u
+“:
+´ µ
+|µ|
+¯´ℓ
+a‹pµq.
+(5.74)
+Observe that (5.72) and (5.73) imply that the coeﬃcients a:p¨q have support contained in
+λ3U Ă λ´1Zrωszt0u. Then
+a:
+´ℓpνq “
+´ ν{λ3
+|ν{λ3|
+¯´ℓ
+ÿ
+ν“λ3µd3
+µPU
+pd,rq“1
+d”1
+pmod 3q
+a‹pµqcrpλ4µqµpdq|d|
+“ p´1qℓiℓ´ ν
+|ν|
+¯´ℓ
+ÿ
+ν“λ3µd3
+µPU
+pd,rq“1
+d”1
+pmod 3q
+a‹pµqcrpλ4µqµpdq|d|.
+Evaluation of the Ramanujan sum using Lemma 5.5 gives
+a:
+´ℓpνq “ p´1qℓiℓ´ ν
+|ν|
+¯´ℓ
+ÿ
+ν“λ3µd3
+µPU
+pd,rq“1
+d”1
+pmod 3q
+a‹pµqµ
+´
+r
+pλ4µ, rq
+¯
+ϕprq
+ϕ
+`
+r
+pλ4µ,rq
+˘µpdq|d|.
+(5.75)
+To continue the evaluation of a:pνq in (5.75), we write each µ P U occurring on the right
+side uniquely as
+λ4µ “ λk`4ζhwph1w1q3
+with
+ζ P t˘1, ˘ω, ˘ω2u,
+h, h1 | r8,
+pww1, rq “ 1,
+h, h1, w, w1 ” 1
+pmod 3q
+and
+µ2phwq “ 1.
+
+
+--- PDF PAGE 33 ---
+BIAS IN CUBIC GAUSS SUMS
+33
+Then
+a:
+´ℓpνq “ p´1qℓiℓ´ ν
+|ν|
+¯´ℓ
+ÿ
+ν“λk`3ζhwph1w1dq3
+h,h1,w,w1,d”1
+pmod 3q
+µ2phwq“1
+h,h1|r8
+pdww1,rq“1
+a‹`
+λkζhwph1w1q3˘
+µ
+´
+r
+phh13, rq
+¯
+ϕprq
+ϕ
+`
+r
+phh13,rq
+˘µpdq|d|.
+(5.76)
+Furthermore, (5.74) tells us that
+a‹`
+λkζhwph1w1q3˘
+“
+$
+’
+&
+’
+%
+τ
+`
+´λkζhwph1w1q3˘
+if
+k ě ´3
+ω2τ1
+`
+´λkω2ζhwph1w1q3˘
+ˇe
+`
+λkζhwph1w1q3˘
+if
+k “ ´4,
+ζ P t´1, ´ω, ´ω2u
+ωτ2
+`
+´λkωζhwph1w1q3˘
+ˇe
+`
+λkζhwph1w1q3˘
+if
+k “ ´4,
+ζ P t1, ω, ω2u
+.
+Further consultation with (5.7), (5.13) and (5.14) shows that
+a‹`
+λkζhwph1w1q3˘
+“ b‹
+k,ζphwq|h1w1|
+|hw| ,
+(5.77)
+for some sequence of coeﬃcients b‹
+k,ζp¨q on squarefree elements of Zrωs that are congruent
+to 1 (the sequence depends only on k and ζ). Using (5.77) in (5.76), we obtain
+a:
+´ℓpνq “ p´1qℓiℓ´ ν
+|ν|
+¯´ℓ
+ÿ
+ν“λk`3ζhwph1uq3
+h,h1,w,u”1
+pmod 3q
+µ2phwq“1
+h,h1|r8
+puw,rq“1
+b‹
+k,ζphwq
+|hw|
+|h1u|µ
+´
+r
+phh13, rq
+¯
+ϕprq
+ϕ
+`
+r
+phh13,rq
+˘
+(5.78)
+ˆ
+´
+ÿ
+d|u
+d”1
+pmod 3q
+µpdq
+¯
+.
+M¨obius inversion tells us that u “ 1 in (5.78). Subsequent use of (5.77) (in reverse) gives
+a:
+´ℓpνq “ p´1qℓiℓ´ ν
+|ν|
+¯´ℓ
+ÿ
+ν“λk`3ζhwh13
+h,h1,w”1
+pmod 3q
+µ2phwq“1
+h,h1|r8
+pw,rq“1
+a‹pλkζhwh13qµ
+´
+r
+phh13, rq
+¯
+ϕprq
+ϕ
+`
+r
+phh13,rq
+˘.
+(5.79)
+For a given ν, there is at most one summand on the right side on (5.79). This completes
+the proof.
+■
+5.6. Voronoi formula. We are ﬁnally able to prove a variant of the Voronoi summation
+formula.
+
+
+--- PDF PAGE 34 ---
+34
+ALEXANDER DUNN AND MAKSYM RADZIWI L L
+Proposition 5.3. Let W be a smooth Schwartz function, compactly supported in p0, 8q.
+Let ℓP Z. Then for X ą 0 we have
+ÿ
+c,d”1
+pmod 3q
+pd,rq“1
+|d|˜gpcq
+´ cd3
+|cd3|
+¯ℓ
+¨
+´c
+r
+¯
+3W
+´Npcd3q
+X
+¯
+“ δℓ“0 ¨ X5{6Ă
+W
+´5
+6
+¯ p2πq5{3ϕprqgprq
+37{2Γp 2
+3qNprq5{3
+`
+gprq
+37{2p2πq2
+´r
+r
+¯´ℓ
+ÿ
+νPλ´1Zrωs
+d”1
+pmod 3q
+pd,rq“1
+a:pνqb:
+rpνq
+NpνqNpdq5{2
+´ d3ν
+|d3ν|
+¯´ℓ
+¨ |
+Wℓ
+´p2πq4Npd3νqX
+Nprq2
+¯
+,
+(5.80)
+where the a:p¨q and b:
+rp¨q are as in (5.67) and (5.68) respectively, and |
+Wℓ: Rą0 Ñ C is
+deﬁned by
+|
+Wℓpuq :“
+1
+2πi
+ż ´ε`i8
+´ε´i8
+usΓp 5
+6 ` |ℓ|
+2 ´ sqΓp 7
+6 ` |ℓ|
+2 ´ sq
+Γps ` |ℓ|
+2 ´ 1
+6qΓps ` |ℓ|
+2 ` 1
+6q
+Ă
+Wpsqds,
+(5.81)
+for ε P p0,
+1
+10000q. For any A ą 0 we have
+|
+Wℓpuq !W,A p1 ` |ℓ|q2 ¨
+#
+pu{p1 ` ℓ4qq5{6
+if |u| ď p1 ` ℓ4q
+pu{p1 ` ℓ4qq´A
+if |u| ą p1 ` ℓ4q.
+(5.82)
+Proof. We have
+ÿ
+d,c”1
+pmod 3q
+pd,rq“1
+|d|˜gpcq
+´c
+r
+¯
+3
+´ cd3
+|cd3|
+¯ℓ
+W
+´Npcd3q
+X
+¯
+“
+1
+2πi
+ż 2`i8
+2´i8
+ζQpωqp3s ´ 1
+2; 1r, 3ℓqRps; ψ, ℓqXsĂ
+Wpsqds,
+(5.83)
+where Rps; ψ, ℓq is given in (5.65). We shift the contour to Re s “ ´ε. Proposition 5.2
+tells us that we collect a pole at s “ 5
+6 when ℓ“ 0. Thus (5.83) is equal to
+δℓ“0 ¨ X5{6Ă
+W
+´5
+6
+¯ p2πq5{3gprqϕprq
+37{2Γp 2
+3qNprq5{3 ` 1
+2πi
+ż ´ε`i8
+´ε´i8
+ζQpωqp3s ´ 1
+2; 1r, 3ℓqRps; ψ, ℓqXsĂ
+Wpsqds.
+(5.84)
+We evaluate the integral in (5.84) by applying the functional equation in Proposition 5.2.
+We obtain
+1
+2πi
+ż ´ε`i8
+´ε´i8
+ζQpωqp3s ´ 1
+2; 1r, 3ℓqRps; ψ, ℓqXsĂ
+Wpsqds
+“
+1
+2πi ¨ iℓgprq
+37{2
+´r
+r
+¯´ℓż ´ε`i8
+´ε´i8
+p2πq4s´2
+Nprq2s
+Γp 5
+6 ` |ℓ|
+2 ´ sqΓp 7
+6 ` |ℓ|
+2 ´ sq
+Γps ` |ℓ|
+2 ´ 1
+6qΓps ` |ℓ|
+2 ` 1
+6q
+ˆ ζQpωqp 5
+2 ´ 3s; 1r, ´3ℓqR:
+rp1 ´ s, ´ℓqXsĂ
+Wpsqds.
+(5.85)
+
+
+--- PDF PAGE 35 ---
+BIAS IN CUBIC GAUSS SUMS
+35
+Expanding the absolutely convergent series we see that (5.85) is equal to
+gprq
+37{2p2πq2
+´r
+r
+¯´ℓ
+ÿ
+νPλ´1Zrωs
+d”1
+pmod 3q
+pd,rq“1
+a:pνqb:
+rpνq
+` d3ν
+|d3ν|
+˘´ℓ
+NpνqNpdq5{2
+ˆ 1
+2πi
+ż ´ε`i8
+´ε´i8
+´p2πq4Npd3νqX
+Nprq2
+¯sΓp 5
+6 ` |ℓ|
+2 ´ sqΓp 7
+6 ` |ℓ|
+2 ´ sq
+Γps ` |ℓ|
+2 ´ 1
+6qΓps ` |ℓ|
+2 ` 1
+6q
+¨ Ă
+Wpsqds.
+The above display can be expressed as
+gprq
+37{2p2πq2
+´r
+r
+¯´ℓ
+ÿ
+νPλ´1Zrωs
+d”1
+pmod 3q
+pd,rq“1
+a:pνqb:
+rpνq
+` d3ν
+|d3ν|
+˘´ℓ
+NpνqNpdq5{2
+¨ |
+Wℓ
+´p2πq4Npd3νqX
+Nprq2
+¯
+.
+This establishes (5.80). The decay bound (5.82) follows from a direct computation with
+Stirling’s asymptotic [DLMF, (5.11.1)].
+■
+6. Cancellations in sequences over primes
+We begin with a remark about ordering integral ideals in number ﬁelds.
+Remark 6.1. Let K be an algebraic number ﬁeld of degree n, and let a and b denote
+integral ideals of K. The order on integral ideals of K, ăK, will essentially be given by
+the norm NK{Q. That is, NK{Qpaq ă NK{Qpbq implies a ăK b. For ideals with equal norm
+the ordering can be arbitrary. For instance, if NK{Qpaq “ NK{Qpbq and ˜a and ˜b are some
+ﬁxed choice of ideal numbers of a and b respectively, then one could declare that a ăK b
+if and only if arg ˜a ă arg˜b. We will abuse notation and denote ăQpωq by ă when the
+meaning is clear from context
+Lemma 6.1. Assume the Generalized Riemann Hypothesis for the Dedekind zeta function
+attached to Qpωq twisted by Gr¨oßencharaktern. Let W be a smooth test function with
+compact support in p0, 8q and mW :“ maxt1, maxxPp0,8q |Wpxq|u. Let B ě 10, 10 ď w ď
+M ď N ! B, and π P Zrωs satisfy π ” 1 pmod 3q be a prime or 1. If R ď
+log B
+K log log B with
+K ą 1000, then the sequence
+βb “
+1
+mW
+W
+´Npbq
+B
+¯
+ÿ
+b“śR
+j“1̟
+j̟
+j”1
+pmod 3q̟
+1ă̟
+2ă...ă̟
+R
+MďNp̟
+jqďN
+pb,πq“1
+1
+belongs to CηpB, wq (given in Deﬁnition 3.1) for all η ą 100
+K .
+Remark 6.2. Note that scaling mW is a minor technicality introduced so that the given
+β satisﬁes the ﬁrst axiom of Deﬁnition 3.1.
+
+
+--- PDF PAGE 36 ---
+36
+ALEXANDER DUNN AND MAKSYM RADZIWI L L
+Proof. It is clear the ﬁrst three properties in Deﬁnition 3.1 follow from deﬁnition of β.
+After Mellin inversion of W,
+βb :“
+1
+2πi
+1
+mW
+ż 2`i8
+2´i8
+Ă
+WpvqBv
+ÿ
+b“śR
+j“1̟
+j
+Mď̟
+1ă̟
+2ă...ă̟
+RďN̟
+j”1
+pmod 3q̟
+j‰π
+R
+ź
+j“1
+1
+Np̟
+jqv dv,
+it suﬃces to check the fourth property of Deﬁnition 3.1 for all η " 1{K. For t P R, ℓP Z
+and k, u P Zrωs with k, u ” 1 pmod 3q, it suﬃces to estimate
+ÿ
+bPZrωs
+u|b
+βb
+´ b
+|b|
+¯ℓ´k
+b
+¯
+3Npbqit,
+(6.1)
+provided that ℓ‰ 0, or if ℓ“ 0, then provided that k ‰
+. Without loss of generality we
+can take u “ 1 since the case u ‰ 1 reduces to this case after combinatorial manipulations.
+Thus (6.1) (with u “ 1) is equal to
+1
+2πi
+1
+mW
+ż 2`i8
+2´i8
+Ă
+WpvqBv
+ÿ
+Mď̟
+1ă̟
+2ă...ă̟
+RďN̟
+j”1
+pmod 3q̟
+j‰π
+R
+ź
+j“1
+` k̟
+j
+˘
+3
+`̟
+j
+|̟
+j|
+˘ℓ
+Np̟
+jqv´it dv.
+(6.2)
+The Newton-Girard identity [Mac95, p2.141q] implies that
+ÿ
+Mď̟
+1ă̟
+2ă...ă̟
+RďN̟
+j”1
+pmod 3q̟
+j‰π
+R
+ź
+j“1
+` k̟
+j
+˘
+3
+`̟
+j
+|̟
+j|
+˘ℓ
+Np̟
+jqv´it
+“ p´1qR
+ÿ
+m1,...,mRě0
+m1`2m2`¨¨¨`RmR“R
+R
+ź
+j“1
+p´1qmj
+mj!jmj
+´
+ÿ
+MďNp̟
+qďN̟
+”1
+pmod 3q̟
+‰π
+` k̟ ˘j
+3
+`̟
+|̟
+|
+˘jℓ
+Np̟
+qjpv´itq
+¯mj.
+(6.3)
+We can assume without loss of generality that M and N are half-integers. Using [Dav00,
+pg. 105] each sharp cut-oﬀcan be written as
+ÿ
+MďNp̟
+qďN̟
+”1
+pmod 3q̟
+‰π
+` k̟ ˘j
+3
+`̟
+|̟
+|
+˘jℓ
+Np̟
+qjpv´itq “
+1
+p2πiq2
+1{ log B`iB100
+ĳ
+1{ log B´iB100
+D
+`
+jpv ´ itq ` s ´ w;
+´k
+¨
+¯j
+31π, jℓ
+˘
+NsM´w dsdw
+sw
+` OpB´50q
+say,
+Repvq “ 2,
+(6.4)
+where (for Repsq ą 1{2) we have
+D
+´
+s;
+´k
+¨
+¯j
+31π, jℓ
+¯
+:“ log ζQpωqps;
+´k
+¨
+¯j
+31π, jℓq ´
+ÿ
+mě2
+ÿ̟
+”1
+pmod 3q̟
+‰π
+` k̟ ˘mj
+3
+`̟
+|̟
+|
+˘mjℓ
+mNp̟
+qms
+.
+
+
+--- PDF PAGE 37 ---
+BIAS IN CUBIC GAUSS SUMS
+37
+We shift the v-contour in (6.2) to Repvq “ 1{2 ` 1{ log B. From (6.4), the Riemann
+hypothesis, and [IK04, Theorem 5.19], we deduce that (uniformly in j ě 1)
+ÿ
+MďNp̟
+qďN̟
+”1
+pmod 3q̟
+‰π
+` k̟ ˘j
+3
+`̟
+|̟
+|
+˘jℓ
+Np̟
+qjpv´itq ! plog2 Bq¨log2 ´
+2`p1`|v|`|t|qp1`|ℓ|qNpkqB
+¯
+, Re v ě 1
+2`
+1
+log B .
+Substitution of this bound into (6.3) shows that for Repvq ě 1{2 ` 1{ log B we have
+ÿ
+Mď̟
+1ă̟
+2ă...ă̟
+RďN̟
+j”1
+pmod 3q̟
+j‰π
+R
+ź
+j“1
+` k̟
+j
+˘
+3
+`̟
+j
+|̟
+j|
+˘ℓ
+Np̟
+jqv´it
+! CRplog2R Bq ¨ log2R ´
+2 ` p1 ` |v| ` |t|qp1 ` |ℓ|qNpkqB
+¯
+! pC{ε4qRplog2R Bεq ¨ log2R ´
+2 `
+`
+p1 ` |v| ` |t|qp1 ` |ℓ|qNpkqB
+˘ε¯
+,
+for some absolute constant C ą 1 and any ﬁxed ε ą 0. Returning to (6.2) (and recalling
+that we shifted the contour to Repvq “ 1{2 ` 1{ log B) we see that (6.1) is
+! pC{ε4qRB1{2`1{ log Bplog2R Bεq ¨ log2R `
+2 `
+`
+p1 ` |t|qp1 ` |ℓ|qNpkqB
+˘ε˘
+.
+(6.5)
+We use the hypothesis 1 ď R ď log B{pK log log Bq, the inequality
+plog xqL ď L!x,
+x ě 1,
+L ě 1,
+and Stirling’s asymptotic formula [DLMF, (5.11.1)] to conclude that (6.5) is
+!ε B1{2`100{K`3εp1 ` |t|qεp1 ` |ℓ|qεNpkqε,
+say. This concludes the proof.
+■
+A minor variation of the above proof gives a smoothed version of the Lemma.
+Lemma 6.2. Assume the Generalized Riemann Hypothesis for the Dedekind zeta function
+attached to Qpωq twisted by Gr¨oßencharaktern. Let V and W be a smooth test functions
+with compact support in p0, 8q, and let mV and mW be as in Lemma 6.1. Let R P N,
+B ě 10, 10 ď w ď M ď N ! B, and P1, . . . , PR ą 1 be such that P1 ¨ ¨ ¨ PR — B. If
+R ď
+log B
+K log log B with K ą 1000, then the sequence
+βb “
+1
+mW
+W
+´Npbq
+B
+¯
+ÿ
+b“śR
+j“1̟
+j̟
+j”1
+pmod 3q̟
+1ă̟
+2ă...ă̟
+R
+MďNp̟
+jqďN
+R
+ź
+j“1
+´ 1
+mV
+V
+´Np̟
+jq
+Pj
+¯¯
+,
+belongs to CηpB, wq (given in Deﬁnition 3.1) for all η ą 100
+K .
+Remark 6.3. A sum over R running through any subset of r1, log B{pK log log Bqs can
+be introduced in the deﬁnition of β occurring in both Lemma 6.1 and Lemma 6.2 with
+no change to the conclusions.
+
+
+--- PDF PAGE 38 ---
+38
+ALEXANDER DUNN AND MAKSYM RADZIWI L L
+Lemma 6.3. Suppose A, B ě 10, X :“ AB, 0 ă η1, η2 ď 1{4 and w1 ą w2 ě 10. Let
+α “ pαaq P Cη1pA, w1q, and β “ pβbq P Cη2pB, w2q be such that
+βb ‰ 0 ùñ p̟
+| b ùñ w2 ă Np̟
+q ď w1q.
+(6.6)
+Let 10 ď M ď N and γ :“ pγcq be given by
+γc :“
+ÿ
+MďNpcqďN
+a,bPZrωs
+a,b”1
+pmod 3q
+ab“c
+αaβb.
+Then γ “ pγcq P Cmaxtη1,η2upX, w2q.
+Remark 6.4. It will be helpful to recall the deﬁnition of Ppzq in (3.1).
+Proof. Observe that the hypotheses (6.6) and w2 ă w1 imply that γ “ pγcq is supported
+on squarefree w2-rough integers. We also have γc ‰ 0 ùñ Npcq — X from the supports
+of α “ pαaq and β “ pβbq. Each c P Zrωs with c ” 1 pmod 3q has a unique factorisation
+c “ ab with pa, Ppw1qq “ 1 and b | Ppw1q. Thus hypothesis (6.6) implies that |γc| “
+|αaβb| ď 1.
+It only remains to prove inequality (3.2) in Deﬁnition 3.1 for γ “ pγcq. Without loss of
+generality we can assume that M and N are half-integers and that M — X (resp. N — X),
+otherwise δMďNpcq (resp. δNpcqďN) is a redundant condition. Using [Dav00, pg. 105], the
+sharp cut-oﬀcan be written as
+δMďNpcqďN “
+1
+p2πiq2
+1{ log X`iX100
+ĳ
+1{ log X´iX100
+NsM´w
+Npcqs´w
+dsdw
+sw
+` OpX´50q,
+say. The integrals incur an acceptable loss of Opplog Xq2q. Thus it suﬃces to show that
+˜γc :“
+ÿ
+a,bPZrωs
+a,b”1
+pmod 3q
+ab“c
+αaβb
+satisﬁes (3.2). In other words, for t P R, ℓP Z and k, u P Zrωs with k, u ” 1 pmod 3q, we
+need to estimate
+ÿ
+cPZrωs
+u|c
+˜γc
+´ c
+|c|
+¯ℓ´k
+c
+¯
+3Npcqit,
+(6.7)
+provided that ℓ‰ 0, or if ℓ“ 0, then provided that k ‰
+. Observe u has a unique
+factorisation u “ u1u2 such that pu1, Ppw1qq “ 1 and u2 | Ppw1q. Hypothesis (6.6)
+implies that that (6.7) is equal to
+´ ÿ
+a
+u1|a
+αa
+´ a
+|a|
+¯ℓ´k
+a
+¯
+3Npaqit¯´ ÿ
+b
+u2|b
+βb
+´ b
+|b|
+¯ℓ´k
+b
+¯
+3Npbqit¯
+.
+(6.8)
+
+
+--- PDF PAGE 39 ---
+BIAS IN CUBIC GAUSS SUMS
+39
+Since α “ pαaq P Cη1pA, w1q and β “ pβbq P Cη2pB, w2q, we see that (6.8) is
+!ε p1 ` |ℓ|qεNpkqεp1 ` |t|qε´
+A
+Npu1q
+¯1{2`η1`ε´
+B
+Npu2q
+¯1{2`η2`ε
+!ε p1 ` |ℓ|qεNpkqεp1 ` |t|qε´ X
+Npuq
+¯1{2`maxtη1,η2u`ε
+,
+as required.
+■
+7. Narrow Type II/III estimates
+We establish estimates for type-II/III sums that are useful in narrow ranges correspond-
+ing to two or three variables of equal size respectively. In the three variable case, two
+variables are clumped together to reduce to a type-II analysis. These estimates will be in
+ranges where sharp bounds are required (but not asymptotics).
+7.1. Sieve weights. We will need to use auxiliary sieve weights in the proof of our
+narrow range bounds.
+Lemma 7.1. Given w ě y2 ą 1, there exists coeﬃcients pλdqdPZrωs such that
+(1) λ1 “ 1 and |λd| !ε Npdqε for all d P Zrωs and all ε ą 0;
+(2) λd “ 0 if Npdq ą y2 or d ı 1 pmod 3q;
+(3) For all n P Zrωs we have
+δpn,Ppwqq“1 ď
+ÿ
+d|n
+d|Ppwq
+Npdqďy2
+λd;
+(7.1)
+(4) They satisfy
+ÿ
+dPZrωs
+λd
+Npdq !
+1
+log y.
+(7.2)
+Proof. Given d ” 1 pmod 3q, deﬁne
+λd :“
+ÿ
+Npeq,Npfqďy
+e,f”1
+pmod 3q
+d“re,fs
+µpeqµpfq
+´
+1 ´ log Npeq
+log y
+¯´
+1 ´ log Npfq
+log y
+¯
+.
+Properties (1) and (2) are immediate from the deﬁnition. Property (3) follows from
+ÿ
+d|n
+d|Ppwq
+Npdqďy2
+λd “
+´
+ÿ
+Npeqďy
+e|pn,Ppwqq
+e”1
+pmod 3q
+µpeq
+´
+1 ´ log Npeq
+log y
+¯¯2
+.
+(7.3)
+
+
+--- PDF PAGE 40 ---
+40
+ALEXANDER DUNN AND MAKSYM RADZIWI L L
+It remains to check property (4). Observe that
+ÿ
+dPZrωs
+λd
+Npdq “
+ÿ
+Npeq,Npfqďy
+e,f”1
+pmod 3q
+µpeqµpfq
+Npre, fsq
+´
+1 ´ log Npeq
+log y
+¯´
+1 ´ log Npfq
+log y
+¯
+“
+1
+p2πiq2
+1{ log y`i8
+ĳ
+1{ log y´i8
+Hps, wqζQpωqp1 ` s ` wq
+ζQpωqp1 ` sqζQpωqp1 ` wq ¨ ys`w
+s2w2 ¨ dsdw
+plog yq2,
+(7.4)
+where Hps, wq is an analytic and absolutely convergent Euler product for Re s, Re w ą
+´1{4. One can conclude that the display in (7.4) is ! 1{ log y by shifting contours or by
+carefully bounding the integral using a Taylor expansion around the pole.
+■
+7.2. Narrow Type-II/III bound. We are now ready to state the main result of this
+section.
+Proposition 7.1. Let ε P p0,
+1
+10000q, A, B ě 10, X :“ AB, 10 ď w ă Xε, and η ą 0.
+Suppose that α “ pαaq is a sequence supported on squarefree w-rough a P Zrωs with a ” 1
+pmod 3q and Npaq P rA{10, 10As. Suppose that β “ pβbq P CηpB, wq. Then
+ˇˇˇ
+ÿ
+a,bPZrωs
+αaβb˜gpabq
+ˇˇˇ ď
+K
+?log w}α}2
+´
+A1{2}β}2 ` A1{3´ ÿ
+bPZrωs
+|βb|
+Npbq1{6
+¯¯
+(7.5)
+` Oε
+´
+Bη ¨ X1`ε´ 1
+A1{2 ` 1
+B
+¯¯
+` OεpX1`ε ¨ pA{wq´1000q.
+with K ą 1 an absolute constant.
+Proof. Without loss of generality we can include the condition pa, bq “ 1 on the left side
+(7.5) by (2.2). Application of (2.3) and Cauchy-Schwarz gives
+ˇˇˇ
+ÿ
+a,bPZrωs
+αaβb˜gpabq
+ˇˇˇ ď }α}2
+´
+ÿ
+aPZrωs
+pa,Ppwqq“1
+a”1
+pmod 3q
+ˇˇˇ
+ÿ
+b
+βb˜gpbq
+´a
+b
+¯
+3
+ˇˇˇ
+2¯1{2
+.
+(7.6)
+Let V : R Ñ R be a ﬁxed smooth positive function with compact support in r1{100, 100s.
+We also stipulate that it satisﬁes V ě δr1{10,10s. By positivity of the right side of (7.6), we
+introduce both the smooth function V and the sieve weight (7.1) on the a-sum. Thus the
+right side of (7.6) is
+ď }α}2
+´
+ÿ
+aPZrωs
+a”1
+pmod 3q
+V
+´Npaq
+A
+¯ˇˇˇ
+ÿ
+b
+βb˜gpbq
+´a
+b
+¯
+3
+ˇˇˇ
+2
+ÿ
+d|a
+d|Ppwq
+Npdqďy2
+λd
+¯1{2
+,
+(7.7)
+where y2 :“ w. Expansion of the bracketed sum in (7.7) gives
+ÿ
+d|Ppwq
+Npdqďy2
+λd
+ÿ
+b1,b2PZrωs
+βb1βb2˜gpb1q˜gpb2q
+ÿ
+aPZrωs , d|a
+a”1
+pmod 3q
+V
+´Npaq
+A
+¯´ a
+b1
+¯
+3
+´ a
+b2
+¯
+3.
+(7.8)
+
+
+--- PDF PAGE 41 ---
+BIAS IN CUBIC GAUSS SUMS
+41
+Diagonal contribution to (7.8). The diagonal contribution b1 “ b2 “: b to (7.8) is
+ÿ
+aPZrωs
+a”1
+pmod 3q
+V
+´Npaq
+A
+¯ ÿ
+bPZrωs
+pa,bq“1
+|βb|2´
+ÿ
+d|a
+d|Ppwq
+Npdqďy2
+λd
+¯
+.
+(7.9)
+We can drop the condition pa, bq “ 1 by non-negativity of (7.9) (the bracketed sieve weight
+divisor sum is non-negative by (7.1)). Thus
+(7.9) ď
+ÿ
+d|Ppwq
+Npdqďy2
+λd
+ÿ
+bPZrωs
+|βb|2
+ÿ
+aPZrωs
+a”1
+pmod 3q
+V
+´NpaqNpdq
+A
+¯
+“ 4πA
+9
+?
+3}β}2
+2
+´
+ÿ
+d|Ppwq
+Npdqďy2
+λd
+Npdq
+¯ ÿ
+kPZrωs
+ˇe
+´
+´ k
+3λ
+¯
+:V
+`
+k
+a
+A{Npdq
+˘
+“: D,
+(7.10)
+where (7.10) follows from Poisson summation (in the form of Lemma 4.3).
+Non-diagonal contribution to (7.8). The non-diagonal b1 ‰ b2 contribution to (7.8) is
+ÿ
+d|Ppwq
+Npdqďy2
+λd
+ÿ
+b1,b2PZrωs
+b1‰b2
+βb1βb2˜gpb1q˜gpb2q
+´ d
+b1
+¯
+3
+´ d
+b2
+¯
+3
+ÿ
+aPZrωs
+a”1
+pmod 3q
+V
+´NpaqNpdq
+A
+¯´ a
+b1
+¯
+3
+´ a
+b2
+¯
+3.
+(7.11)
+For each ﬁxed b1, b2 P Zrωs occurring in (7.11), let e :“ pb1, b2q. Poisson summation (in
+the form of Corollary 4.1) tells us that
+ÿ
+aPZrωs
+a”1
+pmod 3q
+V
+´NpaqNpdq
+A
+¯´ a
+b1
+¯
+3
+´ a
+b2
+¯
+3
+“
+4π
+`
+e
+b1{e
+˘
+3
+`
+e
+b2{e
+˘
+3Agpb1{eqgpb2{eq
+9
+?
+3NpdqNpb1b2{eq
+ÿ
+kPZrωs
+rcepkq
+´ k
+b1{e
+¯
+3
+´ k
+b2{e
+¯
+3
+:V
+´
+ke
+?
+A
+a
+Npdqb1b2
+¯
+.
+(7.12)
+Remark 7.1. Since b1 ‰ b2, the character
+`
+¨
+b1{e
+˘
+3
+`
+¨
+b2{e
+˘
+3 in (7.12) has conductor with
+norm ą 1. Hence the dual frequency k “ 0 contributes zero to (7.12).
+Observe that (2.3) and the squarefree property of b1 and b2 imply that
+˜gpb1q˜gpb2q “ ˜gpb1{eq˜gpeq
+´ e
+b1{e
+¯
+3˜gpb2{eq ¨ ˜gpeq
+´ e
+b2{e
+¯
+3
+“ ˜gpb1{eq˜gpb2{eq
+´ e
+b1{e
+¯
+3
+´ e
+b2{e
+¯
+3.
+(7.13)
+
+
+--- PDF PAGE 42 ---
+42
+ALEXANDER DUNN AND MAKSYM RADZIWI L L
+Upon insertion of (7.12) and (7.13) into (7.11), we see that (7.11) becomes
+N :“ 4πA
+9
+?
+3
+ÿ
+d|Ppwq
+Npdqďy2
+λd
+Npdq
+ÿ
+ePZrωs
+e”1
+pmod 3q
+ÿ
+b1‰b2PZrωs
+pb1,b2q“e
+βb1βb2
+a
+Npb1b2q
+ˆ
+ÿ
+kPZrωs
+rcepkq
+´d2ek
+b1{e
+¯
+3
+´d2ek
+b2{e
+¯
+3
+:V
+´
+ke
+?
+A
+a
+Npdqb1b2
+¯
+.
+(7.14)
+Remark 7.2. Note that Poisson summation constitutes a key step in the proof - the dual
+side (7.14) has no Gauss sum weights.
+Estimates for D and N . We estimate D and N displayed in (7.10) and (7.14) respec-
+tively.
+Consider D. Lemma 4.4 tells us that
+D “ 4πA
+9
+?
+3}β}2
+2
+´
+ÿ
+d|Ppwq
+Npdqďy2
+λd
+Npdq
+¯
+:V p0q ` OεpX1`ε ¨ pA{wq´2000q.
+Application of (7.2) gives
+D !
+A
+log w}β}2
+2 ` OεpX1`ε ¨ pA{wq´2000q.
+(7.15)
+Consider N . For a given d, e P Zrωs in (7.14), we split the k ‰ 0 sum into two subsums:
+‚ 0 ‰ k P Zrωs such that d2ek “
+;
+‚ 0 ‰ k P Zrωs such that d2ek ‰
+.
+Denote the contributions to N by each of these two cases by N1 and N2 respectively.
+Thus N “ N1 ` N2.
+Since µ2pdq “ µ2peq “ 1 and pd, eq “ 1, we deduce that d2ek “
+iﬀk “ de2h3 for some
+h P Zrωs. Notice that (4.8) and Lemma 5.5 imply that
+rcepde2h3q “ ˇe
+´
+´de2h3
+3λ
+¯
+ϕpeq “ ˇe
+´
+´ h3
+3λ
+¯
+ϕpeq,
+where the last equality follows from the fact that d ” e ” 1 pmod 3q and Remark 4.1.
+Thus
+N1 “ 4πA
+33?
+3
+ÿ
+ePZrωs
+e”1
+pmod 3q
+ϕpeq
+ÿ
+b1‰b2PZrωs
+pb1,b2q“e
+βb1βb2
+a
+Npb1b2q
+ˆ
+ÿ
+hPZrωs
+ph,b1b2{e2q“1
+ˇe
+´
+´ h3
+3λ
+¯
+:V
+´e3h3?
+A
+b1b2
+¯´
+ÿ
+d|Ppwq
+Npdqďy2
+λd
+Npdq
+¯
+.
+(7.16)
+Note that the extra factor of 1{3 in the above display for N1 accounts for the fact that
+pωihq3 “ h3 for i P t0, 1, 2u and 0 ‰ h P Zrωs. Using Lemma 4.4 and recalling (7.2), we
+see that all this leads to
+N1 !
+1
+log w
+´
+A2{3´ ÿ
+bPZrωs
+|βb|
+Npbq1{6
+¯2
+` A}β}2
+2
+¯
+.
+(7.17)
+
+
+--- PDF PAGE 43 ---
+BIAS IN CUBIC GAUSS SUMS
+43
+We now focus on N2. We have
+N2 :“ 4πA
+9
+?
+3
+ÿ
+d|Ppwq
+Npdqďy2
+λd
+Npdq
+ÿ
+ePZrωs
+e”1
+pmod 3q
+ÿ
+b1‰b2PZrωs
+pb1,b2q“e
+βb1βb2
+a
+Npb1b2q
+ˆ
+ÿ
+kPZrωs
+d2ek‰
+rcepkq
+´d2ek
+b1{e
+¯
+3
+´d2ek
+b2{e
+¯
+3
+:V
+´
+ke
+?
+A
+a
+Npdqb1b2
+¯
+.
+The term N2 is small because the characters
+` d2ek
+¨
+˘
+3 and
+`d2ek
+¨
+˘
+3 are both non-principal.
+Using Lemma 4.4 and Lemma 5.5, we re-install the diagonal b1 “ b2 in N2 with acceptable
+error OpXεpA`Bqq. After rescaling the variables b1 Ñ eb1 and b2 Ñ eb2 and using Lemma
+4.4, we obtain
+N2 “ 4πA
+9
+?
+3
+ÿ
+d|Ppwq
+Npdqďy2
+λd
+Npdq
+ÿ
+ePZrωs
+e”1
+pmod 3q
+1
+Npeq
+ÿ
+b1,b2PZrωs
+pb1,b2q“1
+βeb1βeb2
+a
+Npb1b2q
+ˆ
+ÿ
+kPZrωs
+d2ek‰
+Npkq!Xεp1`NpdqB2{pNpeqAqq
+rcepkq
+´d2ek
+b1
+¯
+3
+´d2ek
+b2
+¯
+3
+:V
+´
+k
+?
+A
+a
+Npdqeb1b2
+¯
+` OpXεpA ` Bqq.
+After combining (4.11) and the Mellin–Barnes integral representation [DLMF, (10.9.22)]
+for the J-Bessel function, we obtain
+:V puq “ p´1qL
+2πi
+ż 8
+0
+ż ´ε`8
+´ε´i8
+V pLqpr2qr2L`1
+Γp´sq
+ΓpL ` s ` 1q
+´2πr|u|
+3
+?
+3
+¯2s
+dsdr,
+(7.18)
+for u ‰ 0, L P Zě1. For L P Zě1 suﬃciently large and ﬁxed depending on ε ą 0, Stirling’s
+asymptotic formula [DLMF, (5.11.9)] implies that
+:V puq “ p´1qL
+2πi
+ż 8
+0
+ż ´ε`iXε
+´ε´iXε V pLqpr2qr2L`1
+Γp´sq
+ΓpL ` s ` 1q
+´2πr|u|
+3
+?
+3
+¯2s
+dsdr ` OεpX´2000q,
+(7.19)
+for u ‰ 0.
+We M¨obius invert the condition pb1, b2q “ 1 in the expression for N2 above, and then
+separate variables using (7.19). A subsequent interchange of the absolutely convergent
+ﬁnite (recall that V pLq is compactly supported) sums and integrations by Fubini’s Theorem
+
+
+--- PDF PAGE 44 ---
+44
+ALEXANDER DUNN AND MAKSYM RADZIWI L L
+gives
+N2 “ p´1qL ¨ 2A
+9
+?
+3i
+ż 8
+0
+ż ´ε`iXε
+´ε´iXε V pLqpr2qr2L`1
+Γp´sq
+ΓpL ` s ` 1q
+´2πr
+?
+A
+3
+?
+3
+¯2s
+ˆ
+´
+ÿ
+d|Ppwq
+Npdqďy2
+λd
+Npdq1`s
+ÿ
+fPZrωs
+f”1
+pmod 3q
+µpfq
+Npfq1`2s
+ˆ
+ÿ
+ePZrωs
+e”1
+pmod 3q
+ÿ
+kPZrωs
+d2ek‰
+Npkq!Xεp1`NpdqB2{pNpeqAqq
+rcepkqNpkqs
+Npeq1`s
+´d2ek
+f
+¯
+3
+´d2ek
+f
+¯
+3
+ˆ
+´
+ÿ
+b1PZrωs
+βefb1
+a
+Npb1q
+´d2ek
+b1
+¯
+3Npb1q´s¯´
+ÿ
+b2PZrωs
+βefb2
+a
+Npb2q
+´d2ek
+b2
+¯
+3Npb2q´s¯¯
+dsdr
+` OpXεpA ` Bqq.
+We use Axiom 4 of Deﬁnition 3.1 to estimate the sum over b1 and b2 (square root cancel-
+lation), and then estimate the remaining sums trivially using Lemma 5.5. We obtain
+N2 ! AB2ηXε´
+ÿ
+d|Ppwq
+Npdqďy2
+1
+Npdq
+ÿ
+fPZrωs
+1ďNpfq!B
+µ2pfq
+Npfq
+ÿ
+ePZrωs
+1ďNpeq!B
+µ2peq
+Npeq
+ˆ
+ÿ
+g|e
+ÿ
+kPZrωs
+pk,eq“g
+Npkq!Xεp1`NpdqB2{pNpeqAqq
+ϕpeq
+ϕpe{gq
+¯
+` XεpA ` Bq
+! XεB2ηpA ` B2q.
+(7.20)
+7.2.1. Conclusion. Combining (7.15), (7.17) and (7.20) tells us that
+(7.8) ď
+K
+log w
+´
+A2{3´ ÿ
+bPZrωs
+|βb|
+Npbq1{6
+¯2
+`A}β}2
+2
+¯
+`OεpB2ηpA`B2qXεq`OεpX1`ε¨pA{wq´2000q,
+for some absolute constant K ą 1. Chasing this bound through (7.7) and (7.6) gives the
+result.
+■
+8. Type I estimates
+We now establish Type-I estimates.
+In the Proposition below we use the Riemann
+Hypothesis for the Dedekind zeta function attached to Qpωq in order to restrict the sum
+to squarefree numbers.
+Proposition 8.1. Assume the Riemann Hypothesis for the family of Dedekind zeta func-
+tions attached to Qpωq twisted by Gr¨oßencharaktern. Let r P Zrωs be squarefree and satisfy
+r ” 1 pmod 3q. Let ε P p0,
+1
+10000q, and W : R Ñ R be a smooth function with compact
+
+
+--- PDF PAGE 45 ---
+BIAS IN CUBIC GAUSS SUMS
+45
+support contained in r1, 2s. Then there exists ρpεq P p0,
+1
+10000q such that
+ÿ
+uPZrωs
+u”1
+pmod 3q
+˜gpurq
+´ u
+|u|
+¯ℓ
+¨ W
+´Npuq
+U
+¯
+“ δℓ“0 ¨ Ă
+W
+´5
+6
+¯
+¨
+p2πq5{3U5{6
+37{2Γp 2
+3qζQpωqp2; 1rq
+ϕprq
+Nprq7{6
+` Oε
+´
+p1 ` |ℓ|qε ¨
+´ U5{6´ρpεq
+Nprq1{6`ρpεq ` U1{12`εNprq7{12`ε ¨ p1 ` ℓ6q
+¯¯
+,
+for all ℓP Z and U ě 1.
+Remark 8.1. The function ρpεq is somewhat arbitrary. For instance, it follows from (8.6)
+that ρpεq “ 11
+12ε ´ 1
+2ε2 is an acceptable choice.
+Remark 8.2. Mellin inversion of the smooth function, the Class number formula [Lan94,
+Chapter VIII, §2, Theorem 5], and a contour shift together imply that
+p2πq2{3
+3Γp 2
+3q
+ÿ
+u”1
+pmod 3q
+pu,rq“1
+µ2puq
+Npuq1{6W
+´Npuq
+U
+¯
+¨
+1
+Nprq1{6
+(8.1)
+“ Ă
+W
+´5
+6
+¯
+p2πq5{3U5{6
+37{2Γp 2
+3qζQpωqp2; 1rq
+ϕprq
+Nprq7{6 ` Oε
+´ U1{3`ε
+Nprq1{6
+¯
+.
+Thus when ℓ“ 0, we can use the main term in (8.1) in Proposition 8.1 at negligible cost.
+Proof. M¨obius inversion implies that
+ÿ
+uPZrωs
+u”1
+pmod 3q
+˜gpurq
+´ u
+|u|
+¯ℓ
+W
+´Npuq
+U
+¯
+“
+ÿ
+u,ePZrωs
+u,e”1
+pmod 3q
+pe,rq“1
+˜gpurq|e|
+´ e3u
+|e3u|
+¯ℓ
+W
+´Npeq3Npuq
+X
+¯´
+ÿ
+e“cd
+c,d”1
+pmod 3q
+µpcq
+¯
+.
+(8.2)
+Remark 8.3. Note that the factor of |e| in (8.2) reﬂects the periodicity property possessed
+by the coeﬃcients of the cubic theta function on cubes. See Remark 5.2.
+On the right side of (8.2) we introduce a smooth partition of unity in the c variable.
+Let V : R Ñ R be a ﬁxed smooth function with compact support contained in r1, 2s such
+that
+ÿ
+C dyadic
+V
+´Npcq
+C
+¯
+“ 1
+for all
+0 ‰ c P Zrωs.
+(8.3)
+Insertion of (8.3) into (8.2) yields
+ÿ
+uPZrωs
+u”1
+pmod 3q
+˜gpurq
+´ u
+|u|
+¯ℓ
+W
+´Npuq
+U
+¯
+“
+ÿ
+C dyadic
+M pC, Uq,
+(8.4)
+
+
+--- PDF PAGE 46 ---
+46
+ALEXANDER DUNN AND MAKSYM RADZIWI L L
+where
+M pC, Uq :“
+ÿ
+u,dPZrωs
+u,d”1
+pmod 3q
+pd,rq“1
+˜gpurq|d|
+´ u
+|u|
+¯ℓ
+ÿ
+cPZrωs
+c”1
+pmod 3q
+pc,rq“1
+µpcq|c|
+ˆ
+´ cd
+|cd|
+¯3ℓ
+V
+´Npcq
+C
+¯
+W
+´Npcdq3Npuq
+U
+¯
+.
+(8.5)
+We have suppressed the dependence of M pC, Uq on the smooth functions V and W in
+the notation.
+Large dyadic C. We estimate the contribution to the right side of (8.4) from all dyadic
+values of C satisfying
+C ě pUNprqq1{12`ε{2.
+We Mellin invert the smooth functions V and W in (8.5). We then use the rapid decay of
+their holomorphic Mellin transforms Ă
+W and rV in vertical strips to truncate the integra-
+tions appropriately. A subsequent interchange of the order of absolutely convergent ﬁnite
+sums and integrations by Fubini’s Theorem gives
+M pC, Uq :“
+1
+p2πiq2
+ż ipCp1`|ℓ|qqε{1000
+´ipCp1`|ℓ|qqε{1000
+ż ipCp1`|ℓ|qqε{1000
+´ipCp1`|ℓ|qqε{1000
+rV psqĂ
+WpwqCsUw
+ˆ
+´
+ÿ
+u,dPZrωs
+U{p100C3qďNpud3qď100U{C3
+u,d”1
+pmod 3q
+pd,rq“1
+˜gpurqNpdq1{2´3w´ ud3
+|ud3|
+¯ℓ
+Npuq´w
+ˆ
+ÿ
+cPZrωs
+CďNpcqď2C
+c”1
+pmod 3q
+pc,rq“1
+µpcq
+´ c
+|c|
+¯3ℓ
+Npcq1{2´s´3w¯
+dsdw ` Oε
+`
+pCp1 ` |ℓ|qq´2000˘
+.
+To bound the sum over c we appeal to the Riemann Hypothesis for the Dedekind zeta
+function attached to Qpωq twisted by a Gr¨oßencharakter. Estimating the other summa-
+tions trivially, we obtain
+ÿ
+C dyadic
+CěpUNprqq1{12`ε{2
+M pC, Uq !ε
+´ U
+C3
+¯
+C1`εp1 ` |ℓ|qε !ε p1 ` |ℓ|qε
+U5{6´ρpεq
+Nprq1{6`ρpεq,
+(8.6)
+for some ρpεq P p0,
+1
+10000q. See also Remark 8.1.
+Small dyadic C. It remains to estimate
+ÿ
+C dyadic
+1{2ďCďpUNprqq1{12`ε{2
+M pC, Uq.
+
+
+--- PDF PAGE 47 ---
+BIAS IN CUBIC GAUSS SUMS
+47
+Rearranging the sums in (8.5), and then using (2.3), we obtain
+M pC, Uq “ ˜gprq
+ÿ
+cPZrωs
+c”1
+pmod 3q
+pc,rq“1
+|c|
+´ c
+|c|
+¯3ℓ
+µpcqV
+´Npcq
+C
+¯
+ˆ
+ÿ
+d,uPZrωs
+d,u”1
+pmod 3q
+pd,rq“1
+|d|˜gpuq
+´u
+r
+¯
+3
+´ ud3
+|ud3|
+¯ℓ
+W
+´ Npud3q
+U{Npcq3
+¯
+.
+(8.7)
+Application of Voronoi summation (in the form of Proposition 5.3) gives
+ÿ
+d,uPZrωs
+d,u”1
+pmod 3q
+pd,rq“1
+|d|˜gpuq
+´u
+r
+¯
+3
+´ ud3
+|ud3|
+¯ℓ
+W
+´ Npud3q
+U{Npcq3
+¯
+“ δℓ“0
+U5{6
+Npcq5{2 Ă
+W
+´5
+6
+¯ p2πq5{3ϕprqgprq
+37{2Γp 2
+3qNprq5{3
+`
+gprq
+37{2p2πq2
+´r
+r
+¯´ℓ
+ÿ
+νPλ´1Zrωs
+d”1
+pmod 3q
+pd,rq“1
+a:pνqb:
+rpνq
+` νd3
+|νd3|
+˘´ℓ
+NpνqNpdq5{2
+|
+Wℓ
+´p2πq4Npd3νqU
+Npc3r2q
+¯
+,
+where the a:p¨q and b:
+rp¨q are given by (5.67) and (5.68) respectively. Insertion of the above
+display into (8.7) gives
+M pC, Uq “ T pC, Uq ` E pC, Uq,
+(8.8)
+where
+T pC, Uq :“ δℓ“0
+p2πq5{3
+37{2Γp 2
+3q
+Ă
+W
+´5
+6
+¯ ϕprq
+Nprq7{6U5{6
+ÿ
+cPZrωs
+c”1
+pmod 3q
+pc,rq“1
+µpcq
+Npcq2V
+´Npcq
+C
+¯
+,
+and
+E pC, Uq :“ Nprq1{2
+37{2p2πq2
+´r
+r
+¯´ℓ
+ÿ
+νPλ´1Zrωs
+d”1
+pmod 3q
+pd,rq“1
+a:pνqb:
+rpνq
+NpνqNpdq5{2
+´ d3ν
+|d3ν|
+¯´ℓ
+ˆ
+ÿ
+cPZrωs
+c”1
+pmod 3q
+pc,rq“1
+|c|µpcq
+´ c
+|c|
+¯3ℓ
+V
+´Npcq
+C
+¯
+|
+Wℓ
+´p2πq4Npd3νqU
+Npc3r2q
+¯
+.
+
+
+--- PDF PAGE 48 ---
+48
+ALEXANDER DUNN AND MAKSYM RADZIWI L L
+We now collect the main term from the various T pC, Uq. We have
+ÿ
+C dyadic
+1{2ďCďpUNprqq1{12`ε
+T pC, Uq “
+ÿ
+C dyadic
+T pC, Uq ` Oε
+´ U3{4
+Nprq1{4
+¯
+“ δℓ“0Ă
+W
+´5
+6
+¯
+p2πq5{3U5{6
+37{2Γp 2
+3qζQpωqp2; 1rq
+ϕprq
+Nprq7{6 ` Oε
+´ U3{4
+Nprq1{4
+¯
+,
+(8.9)
+where the error term follows from a trivial estimation of the tail of ζQpωq.
+The various E pC, Uq contribute the error term in the statement of the result. By the
+rapid decay of |
+W in (5.82), we truncate the d and ν sums in E pC, Uq to
+Npd3νq ! pUNprqp1 ` |ℓ|qqε{1000p1 ` ℓ4q ¨
+´
+1 ` C3Nprq2
+U
+¯
+“: Z,
+with negligible error. To separate variables, we subsequently use the deﬁnition (5.81)
+of |
+W and Mellin inversion on V . We truncate the resulting integrations appropriately
+using the rapid decay of rV and Ă
+W. A subsequent interchange of the order of absolutely
+convergent ﬁnite sums and integrations by Fubini’s Theorem gives
+E pC, Uq “ Nprq1{2
+37{2p2πq4
+´r
+r
+¯´ℓż ipUNprqp1`|ℓ|qqε{1000
+´ipUNprqp1`|ℓ|qqε{1000
+ż ipUNprqp1`|ℓ|qqε{1000
+´ipUNprqp1`|ℓ|qqε{1000
+Γp 5
+6 ` |ℓ|
+2 ´ wqΓp 7
+6 ` |ℓ|
+2 ´ wq
+Γpw ` |ℓ|
+2 ´ 1
+6qΓpw ` |ℓ|
+2 ` 1
+6q
+ˆ
+´p2πq4U
+Nprq2
+¯w
+Cs rV psqĂ
+Wpwq
+ˆ
+´
+ÿ
+νPλ´1Zrωs
+d”1
+pmod 3q
+pd,rq“1
+Npd3νq!Z
+a:pνqb:
+rpνq
+Npνq1´wNpdq5{2´3w
+´ d3ν
+|d3ν|
+¯´ℓ
+ÿ
+cPZrωs
+c”1
+pmod 3q
+pc,rq“1
+CďNpcqď2C
+Npcq1{2´s´3wµpcq
+´ c
+|c|
+¯3ℓ¯
+dsdw
+` Oε
+`
+pUNprqp1 ` |ℓ|qq´1000˘
+.
+We estimate the sum over c using the Riemann hypothesis for the Dedekind zeta function
+attached to Qpωq, and the quotient of Gamma factors using Stirling’s asymptotic [DLMF,
+(5.11.1)] The other sums are estimated trivially using (5.67), (5.68), (5.7), (5.13) and
+(5.14). We obtain
+E pC, Uq !ε Nprq1{2`ε{10 ¨ p1 ` ℓ2q
+ˆ
+ÿ
+e|r
+ÿ
+νPλ´1Zrωs
+d”1
+pmod 3q
+pd,rq“1
+pλν,rq“e
+Npd3νq!Z
+|a:pνq|
+NpνqNpdq5{2
+ϕprq
+ϕpr{eqC1`ε{10p1 ` |ℓ|qε{10,
+! Nprq1{2`ε{4Uε{4p1 ` ℓ6qC1`ε{4p1 ` |ℓ|qε{4,
+
+
+--- PDF PAGE 49 ---
+BIAS IN CUBIC GAUSS SUMS
+49
+and so
+ÿ
+C dyadic
+1{2ďCďpUNprqq1{12`ε{2
+E pC, Uq !ε U1{12`εNprq7{12`ε ¨ p1 ` ℓ6qp1 ` |ℓ|qε.
+(8.10)
+After combining (8.6), (8.9) and (8.10), we obtain the result.
+■
+We also record the following nearly immediate Corollary.
+Corollary 8.1. Assume the Riemann Hypothesis for the family of Dedekind zeta functions
+attached to Qpωq twisted by Gr¨oßencharaktern. Let r P Zrωs be squarefree and satisfy
+r ” 1 pmod 3q. Let ε P p0,
+1
+10000q, and V, W : R Ñ R be smooth functions with compact
+support contained in r 1
+4, 4s. Then there exists ρpεq P p0,
+1
+10000q such that
+ÿ
+uPZrωs
+u”1
+pmod 3q
+˜gpurq
+´ u
+|u|
+¯ℓ
+¨ V
+´Npuq
+U
+¯
+W
+´Npurq
+X
+¯
+“ δℓ“0 ¨ p2πq2{3
+3Γp 2
+3q
+ÿ
+u”1
+pmod 3q
+pu,rq“1
+µ2puq
+Npuq1{6V
+´Npuq
+U
+¯
+W
+´Npurq
+X
+¯
+¨
+1
+Nprq1{6
+` Oε
+´
+p1 ` |ℓ|qε ¨
+´ U5{6´ρpεq
+Nprq1{6`ρpεq ` U1{12`εNprq7{12`εp1 ` ℓ6q
+¯
+` U1{3`ε
+Nprq1{6
+¯
+,
+for all ℓP Z and X ě U ě 1.
+Proof. If UNprq — X then we simply apply the previous result with a diﬀerent weight
+function and use the Remark 8.2. If UNprq is not of the order of magnitude of X then
+both main terms are zero.
+■
+Remark 8.4. The main term in Corollary 8.1 is larger than the error term when U ě
+pNprqp1 ` ℓ6qq1`op1q.
+9. Improved cubic large sieve
+The cubic large sieve of Heath–Brown is as follows.
+Theorem 9.1.
+[HB00, Theorem 2] Let A, B ě 1, ε ą 0, and pβbqbPZrωs be an arbitrary
+sequence of complex numbers with support contained in the set of squarefree elements of
+Zrωs. Then
+ÿ
+NpaqďA
+a”1
+pmod 3q
+µ2paq
+ˇˇˇ
+ÿ
+NpbqďB
+b”1
+pmod 3q
+βb
+´b
+a
+¯
+3
+ˇˇˇ
+2
+!ε
+`
+A ` B ` pABq2{3˘
+pABqε ÿ
+bPZrωs
+|βb|2.
+(9.1)
+Recall the operator norm BpA, Bq deﬁned in (1.12). The Duality Principle [IK04, (7.9)–
+(7.11)] and cubic reciprocity imply that
+BpA, Bq “ BpB, Aq.
+(9.2)
+See also [HB00, Lemma 4]. We also have the following simple monotonicity property.
+
+
+--- PDF PAGE 50 ---
+50
+ALEXANDER DUNN AND MAKSYM RADZIWI L L
+Lemma 9.1. [HB00, Lemma 5] There exists an absolute constant C ě 1 as follows. Let
+A, B1, B2 " 1 and B2 ě CB1 logp2AB1q. Then,
+BpA, B1q ! BpA, B2q.
+We now prove that Heath-Brown’s cubic large sieve is optimal under the Generalized
+Riemann Hypothesis for Hecke L-functions over Qpωq.
+Proof of Theorem 1.4. The upper bounds in the given ranges follow from the cubic large
+sieve Theorem 9.1, and are unconditional.
+We now focus on the conditional lower bounds. Let ξ ą 0 be small and ﬁxed, A, B ě 10,
+X :“ AB and A P r10, X1{2´ξs. Consider the sequence
+βb “ ˜gpbqW
+´Npbq
+B
+¯
+,
+(9.3)
+where W is a smooth compactly supported function in p1, 2q. It is supported only on
+squarefree elements by (2.2). Then
+ÿ
+AăNpaqď2A
+a”1
+pmod 3q
+µ2paq
+ˇˇˇ
+ÿ
+BăNpbqď2B
+b”1
+pmod 3q
+˜gpbqW
+´Npbq
+B
+¯´b
+a
+¯
+3
+ˇˇˇ
+2
+“
+ÿ
+AăNpaqď2A
+a”1
+pmod 3q
+µ2paq
+ˇˇˇ
+ÿ
+b”1
+pmod 3q
+W
+´Npbq
+B
+¯
+˜gpabq
+ˇˇˇ
+2
+pby (2.2) and (2.3)q
+" A
+´B5{6
+A1{6
+¯2
+` O
+`
+Xop1qpA17{12B11{12 ` A13{6B1{6q
+˘
+(9.4)
+"ξ,W A2{3B5{3,
+(9.5)
+where display (9.4) follows from Voronoi summation (Proposition 8.1) and the GRH
+hypothesis, and (9.5) follows from the fact that we are in the range A ! pABq1{2´ξ.
+Thus BpA, Bq "ξ pABq2{3 " A ` B for A ! pABq1{2´ξ and A P rX1{3, X1{2s. Combining
+this result with (9.2) then gives the claim when A P r
+?
+B, B2szrB1´ξ, B1`2ξs. The result
+in the range A P rB1´ξ, B1`2ξs then follows from (9.2) and Lemma 9.1, so BpA, Bq "
+BpAX´3ξ, Bq " pABq2{3´3ξ.
+■
+In light of the proof of Theorem 1.4, we renormalise the sequences we consider in the
+cubic large sieve by setting cb :“ ˜gpbqβb where β :“ pβbqbPZrωs is a sequence supported on
+squarefree b ” 1 pmod 3q. Note that |cb| “ |βb| on squarefree b ” 1 pmod 3q by (2.2). We
+are able to reﬁne Theorem 9.1 in a special case by:
+(1) Introducing a non-trivial asymptotic main term;
+(2) Assuming additional cancellations/density restrictions for the sequence β “ pβbq.
+Proposition 9.1. Let V : p0, 8q Ñ Rě0 be a smooth compactly supported function,
+0 ă η ď 1{4, A, B, w ě 10 and X :“ AB. Suppose that w ą plog Xq10 and β “ pβbq P
+CηpB, wq.
+Let ε P p0,
+1
+10000q and π ” 1 pmod 3q be a prime or 1.
+Then there exists
+
+
+--- PDF PAGE 51 ---
+BIAS IN CUBIC GAUSS SUMS
+51
+ρpεq P p0,
+1
+10000q such that uniformly in 1 ď Npπq ă w we have
+ÿ
+aPZrωs
+a”1
+pmod 3q
+π|a
+µ2paqV
+´Npaq
+A
+¯ˇˇˇ
+ÿ
+bPZrωs
+pb,aq“1
+βb˜gpbq
+´a
+b
+¯
+3 ´ p2πq2{3
+3Γp 2
+3q
+˜gpaq
+Npaq1{6
+ÿ
+bPZrωs
+pb,aq“1
+βb
+Npbq1{6
+ˇˇˇ
+2
+!ε
+A2{3B5{3
+Npπq
+´
+1
+w9{10 ` δπ‰1
+Npπq
+¯
+` A2{3´ρpεqB5{3´ρpεq
+Npπq
+` A1{6`εB5{3
+Npπq1{2`ε
+` pNpπqXqε´
+Npπq1{2B29{12A´1{12 ` B2`2η `
+X
+Npπq
+´
+1 ` pB2{Aq´1000¯¯
+.
+Proposition 9.1 will follow from a modiﬁcation of the proof of Proposition 9.2 using
+sieve weights, and from Lemma 9.2 below. At the close of this section we sketch how
+Proposition 9.1 follows.
+Proposition 9.2. Let V : p0, 8q Ñ Rě0 be a smooth compactly supported function,
+0 ă η ď 1{4, A, B, w ě 10 and X :“ AB. Suppose that w ą plog Xq10 and β “ pβbq P
+CηpB, wq. Let ε P p0,
+1
+10000q, ∆ě 1, π ” 1 pmod 3q be a prime or 1, and γ ” 1 pmod 3q
+be squarefree such that pπ, γq “ 1. Then there exists ρpεq P p0,
+1
+10000q such that uniformly
+in 1 ď Npγq ď ∆and 1 ď Npπq ă w we have
+ÿ
+aPZrωs
+a”1
+pmod 3q
+πγ2|a
+V
+´Npaq
+A
+¯ˇˇˇ
+ÿ
+bPZrωs
+pb,aq“1
+βb˜gpbq
+´ b
+a
+¯
+3 ´ p2πq2{3
+3Γp 2
+3q
+˜gpaq
+Npaq1{6
+ÿ
+bPZrωs
+pb,aq“1
+βb
+Npbq1{6
+ˇˇˇ
+2
+(9.6)
+ď 2
+´
+1
+Npγq2 ´
+δγ“1
+ζQpωqp2; 1πq
+¯
+rV
+´2
+3
+¯ 2π
+9
+?
+3
+´p2πq2{3
+3Γp 2
+3q
+¯3 A2{3
+Npπq
+ˇˇˇ
+ÿ
+bPZrωs
+βb
+Npbq1{6
+ˇˇˇ
+2
+` Oε
+´
+1
+Npπγ2q
+´A2{3B5{3
+w9{10
+` p∆NpπqXqε´
+B2`2ηNpπq∆2 ` X
+´
+1 ` pB2{Aq´1000¯¯¯¯
+` δγ“1 ¨
+´
+Oε
+´A2{3´ρpεqB5{3´ρpεq
+Npπq
+` A2{3B5{3
+Npπq
+´
+1
+w9{10 ` δπ‰1
+Npπq
+¯
+` XεNpπq1{2B29{12A´1{12 ` A1{6`εB5{3
+Npπq1{2`ε
+¯¯
+.
+Proof. Using (2.2) and inclusion-exclusion with the condition pa, bq “ 1, we see that the
+expression in (9.6) is equal to
+ÿ
+aPZrωs
+a”1
+pmod 3q
+πγ2|a
+V
+´Npaq
+A
+¯ˇˇˇ
+´
+ÿ
+bPZrωs
+pb,γaq“1
+βb˜gpbq
+´ b
+a
+¯
+3 ´ p2πq2{3
+3Γp 2
+3q
+δγ“1˜gpaq
+Npaq1{6
+ÿ
+bPZrωs
+βb
+Npbq1{6
+¯
+`
+´p2πq2{3
+3Γp 2
+3q
+δγ“1˜gpaq
+Npaq1{6
+ÿ
+bPZrωs
+pb,aq‰1
+βb
+Npbq1{6
+¯ˇˇˇ
+2
+.
+(9.7)
+
+
+--- PDF PAGE 52 ---
+52
+ALEXANDER DUNN AND MAKSYM RADZIWI L L
+Since V is non-negative we can apply the parallelogram identity
+|X ` Y |2 ď 2p|X|2 ` |Y |2q
+for all
+X, Y P C,
+(9.8)
+to the display above. This shows that (9.7) is
+ď 2
+´
+ÿ
+aPZrωs
+a”1
+pmod 3q
+πγ2|a
+V
+´Npaq
+A
+¯ˇˇˇ
+ÿ
+bPZrωs
+pb,γaq“1
+βb˜gpbq
+´ b
+a
+¯
+3 ´ p2πq2{3
+3Γp 2
+3q
+δγ“1˜gpaq
+Npaq1{6
+ÿ
+bPZrωs
+βb
+Npbq1{6
+ˇˇˇ
+2
+(9.9)
+` δγ“1
+p2πq4{3
+9Γp 2
+3q2
+ÿ
+aPZrωs
+a”1
+pmod 3q
+π|a
+µ2paq
+Npaq1{3V
+´Npaq
+A
+¯ˇˇˇ
+ÿ
+bPZrωs
+pb,aq‰1
+βb
+Npbq1{6
+ˇˇˇ
+2¯
+,
+(9.10)
+where we used (2.2) to obtain the last display. The term in (9.10) is equal to
+δγ“1
+p2πq4{3
+9Γp 2
+3q2
+ÿ
+b1,b2PZrωs
+βb1βb2
+Npb1b2q1{6
+ÿ
+aPZrωs
+a”1
+pmod 3q
+π|a
+pa,b1q‰1
+pa,b2q‰1
+µ2paq
+Npaq1{3V
+´Npaq
+A
+¯
+“ δγ“1O
+´ A2{3B5{3
+Npπqw9{10
+¯
+.
+(9.11)
+The estimate in (9.11) follows from the triangle inequality, the fact pb1b2, πq “ 1 (b1b2 is
+w-rough and π is w-smooth) and
+ÿ̟
+|b1b2̟
+prime
+1
+Np̟
+q !
+log B2
+log log B2
+1
+w !
+1
+w9{10,
+for
+w ą plog Xq10
+say.
+We repeatedly use this w-roughness argument in the course of the proof.
+It suﬃces to compute the term in (9.9). We make the change of variable a ÞÑ πγ2a.
+After using cubic reciprocity and (2.2), it suﬃces to compute
+ÿ
+aPZrωs
+a”1
+pmod 3q
+V
+´Npπγ2qNpaq
+A
+¯ˇˇˇ
+ÿ
+bPZrωs
+pb,πγaq“1
+βb˜gpbq
+´a
+b
+¯
+3
+´π2γ
+b
+¯
+3 ´ p2πq2{3
+3Γp 2
+3q
+δγ“1˜gpaπq
+Npaπq1{6
+ÿ
+bPZrωs
+βb
+Npbq1{6
+ˇˇˇ
+2
+.
+(9.12)
+Expansion of the square in (9.12) shows that we need to evaluate the diagonal term
+D :“
+ÿ
+aPZrωs
+a”1
+pmod 3q
+V
+´Npπγ2qNpaq
+A
+¯ˇˇˇ
+ÿ
+bPZrωs
+pb,πγaq“1
+βb˜gpbq
+´a
+b
+¯
+3
+´π2γ
+b
+¯
+3
+ˇˇˇ
+2
+;
+(9.13)
+
+
+--- PDF PAGE 53 ---
+BIAS IN CUBIC GAUSS SUMS
+53
+the cross term
+C :“ ´2p2πq2{3
+3Γp 2
+3q δγ“1Re
+´
+ÿ
+b1,b2PZrωs
+βb1˜gpb1qβb2
+Npb2q1{6
+ˆ
+ÿ
+aPZrωs
+a”1
+pmod 3q
+paπ,b1q“1
+V
+´NpaqNpπq
+A
+¯´ a
+b1
+¯
+3
+´π2
+b1
+¯
+3
+˜gpaπq
+Npaπq1{6
+¯
+;
+(9.14)
+and the trivial term,
+T :“
+´p2πq2{3
+3Γp 2
+3q
+¯2
+δγ“1
+ÿ
+aPZrωs
+a”1
+pmod 3q
+V
+´NpaqNpπq
+A
+¯ µ2paπq
+Npaπq1{3
+ˇˇˇ
+ÿ
+bPZrωs
+βb
+Npbq1{6
+ˇˇˇ
+2
+.
+(9.15)
+The appearance of µ2paπq in T is due to |rgpaπq|2 “ µ2paπq (a consequence of (2.2)).
+In the course of this proof we will establish the three asymptotic estimates:
+D “ 2π
+9
+?
+3
+´p2πq2{3
+3Γp 2
+3q
+¯2 rV
+´2
+3
+¯
+A2{3
+Npπγ2q
+ˇˇˇ
+ÿ
+bPZrωs
+βb
+Npbq1{6
+ˇˇˇ
+2
+` O
+´
+A2{3B5{3
+Npπγ2qw9{10
+¯
+` Oε
+´
+p∆NpπqXqε´B2`2ηNpπq∆2
+Npπγ2q
+`
+X
+Npπγ2q
+`
+1 ` pB2{Aq´1000˘¯¯
+,
+(9.16)
+C “ ´2rV
+´2
+3
+¯
+δγ“1
+2π
+9
+?
+3ζQpωqp2; 1πq
+´p2πq2{3
+3Γp 2
+3q
+¯2 A2{3
+Npπq
+ˇˇˇ
+ÿ
+bPZrωs
+βb
+Npbq1{6
+ˇˇˇ
+2
+` δγ“1
+´
+Oε
+´A2{3´ρpεqB5{3´ρpεq
+Npπq
+¯
+` OεpXεNpπq1{2B29{12A´1{12q
+` O
+´A2{3B5{3
+Npπq
+´
+1
+w9{10 ` δπ‰1
+Npπq
+¯¯¯
+,
+(9.17)
+and
+T “ δγ“1 rV
+´2
+3
+¯
+2π
+9
+?
+3ζQpωqp2; 1πq
+´p2πq2{3
+3Γp 2
+3q
+¯2 A2{3
+Npπq
+ˇˇˇ
+ÿ
+bPZrωs
+βb
+Npbq1{6
+ˇˇˇ
+2
+` δγ“1 ¨ δπ‰1 ¨ O
+´A2{3B5{3
+Npπq2
+¯
+` δγ“1Oε
+´A1{6`εB5{3
+Npπq1{2`ε
+¯
+.
+(9.18)
+Thus D ` C ` T using the asymptotics (9.16), (9.17) and (9.18) respectively gives an
+asymptotic expression for (9.12). Substitution of this asymptotic expression into (9.9),
+and subsititution of (9.11) into (9.10), will give the result.
+We now turn our attention to proving (9.16)–(9.18).
+The diagonal term D. After expansion of the square in (9.13), we obtain
+D “
+ÿ
+b1,b2PZrωs
+pb1b2,πγq“1
+βb1˜gpb1qβb2˜gpb2q
+´π2γ
+b1
+¯
+3
+´π2γ
+b2
+¯
+3
+ÿ
+aPZrωs
+a”1
+pmod 3q
+V
+´Npπγ2qNpaq
+A
+¯´ a
+b1
+¯
+3
+´ a
+b2
+¯
+3.
+
+
+--- PDF PAGE 54 ---
+54
+ALEXANDER DUNN AND MAKSYM RADZIWI L L
+If pb1, b2q “ d, then recall that (7.13) tells us that
+˜gpb1q˜gpb2q “ ˜gpb1{dq˜gpb2{dq
+´ d
+b1{d
+¯
+3
+´ d
+b2{d
+¯
+3.
+Thus an application of Poisson summation (in the form of Corollary 4.1) on the a sum
+shows that
+D “
+4πA
+9
+?
+3Npπγ2q
+ÿ
+dPZrωs
+d”1
+pmod 3q
+pd,πγq“1
+ÿ
+b1,b2PZrωs
+pb1,b2q“d
+βb1βb2
+a
+Npb1b2q
+ˆ
+ÿ
+kPZrωs
+rcdpkq
+´dπ2γk
+b1{d
+¯
+3
+´dπ2γk
+b2{d
+¯
+3
+:V
+´
+kd
+?
+A
+b1b2Npπγ2q1{2
+¯
+.
+(9.19)
+For a given d, π, γ P Zrωs in (9.19), we split the k sum into two subsums:
+‚ k P Zrωs such that dπ2γk “
+;
+‚ k P Zrωs such that dπ2γk ‰
+.
+Denote the contributions to D from each of these two cases by D1 and D2 respectively.
+Thus D “ D1 ` D2.
+Consider D1.
+Since µ2pdπγq “ 1, we deduce that dπ2γk “
+if and only if k “
+pdγq2πH for some H P Zrωs with H “
+. Observe that (4.8) and Lemma 5.5 imply that
+rcd
+`
+pdγq2πH
+˘
+“ ˇe
+`
+´ pdγq2πH
+3λ
+˘
+ϕpdq. Thus
+D1 “
+4πA
+9
+?
+3Npπγ2q
+ÿ
+dPZrωs
+d”1
+pmod 3q
+pd,πγq“1
+ϕpdq
+ÿ
+b1,b2PZrωs
+pb1,b2q“d
+pb1b2{d2,πγq“1
+βb1βb2
+a
+Npb1b2q
+ˆ
+ÿ
+HPZrωs
+H“
+pH,b1b2{d2q“1
+ˇe
+´
+´pdγq2πH
+3λ
+¯
+:V
+´d3H
+?
+A
+b1b2
+¯
+.
+(9.20)
+We further write D1 “ D‹
+1 ` D˛
+1, where D‹
+1 denotes the sum in (9.20) restricted to d “ 1,
+and D˛
+1 denotes the sum in (9.20) restricted to d ‰ 1. The support of β guarantees that
+d ‰ 1 implies that Npdq ą w. Thus by Lemma 4.4 we have
+D˛
+1 !
+A
+Npπγ2q
+ÿ
+dPZrωs
+pd,πγq“1
+d”1
+pmod 3q
+Npdqąw
+ϕpdq
+ÿ
+b1,b2PZrωs
+pb1,b2q“d
+pb1b2{d2,πγq“1
+|βb1βb2|
+a
+Npb1qNpb2q
+´Npb1b2q1{3
+NpdqA1{3 ` 1
+¯
+!ε
+A2{3B5{3
+wNpπγ2q ` ABXε
+Npπγ2q !ε
+A2{3B5{3
+wNpπγ2q `
+X1`ε
+Npπγ2q.
+(9.21)
+We now consider D‹
+1. We write H “ h3 with 0 ‰ h P Zrωs (h is necessarily non-zero in
+this case). We have
+ˇe
+´
+´γ2πh3
+3λ
+¯
+“ ˇe
+´
+´ h3
+3λ
+¯
+“ 1.
+(9.22)
+
+
+--- PDF PAGE 55 ---
+BIAS IN CUBIC GAUSS SUMS
+55
+This can be seen by writing h “ ζλiu with u ” 1 pmod 3q, ζ P t˘1, ˘ω, ˘ω2u, and
+i P Zě0. Then the last equality in (9.22) follows from
+ˇe
+´
+´pζλiuq3
+3λ
+¯
+“ ˇe
+´
+˘ λ3i
+3λ
+¯
+“ 1.
+Thus
+D‹
+1 “
+A
+Npπγ2q
+ÿ
+b1,b2PZrωs
+pb1,b2q“1
+pb1b2,πγq“1
+βb1βb2
+a
+Npb1qNpb2q
+¨
+4π
+33?
+3
+ÿ
+hPZrωs
+ph,b1b2q“1
+:V
+´h3?
+A
+b1b2
+¯
+.
+(9.23)
+Note that the extra factor of 1{3 in the above display accounts for the fact that pωihq3 “ h3
+for i P t0, 1, 2u and 0 ‰ h P Zrωs. We remove the condition ph, b1b2q “ 1 at negligible cost
+since β is supported on w-rough squarefree integers in Zrωs with w ą plog Xq10. Thus
+D‹
+1 “
+A
+Npπγ2q
+ÿ
+b1,b2PZrωs
+pb1,b2q“1
+pb1b2,πγq“1
+βb1βb2
+a
+Npb1qNpb2q
+¨
+4π
+33?
+3
+ÿ
+hPZrωs
+:V
+´h3?
+A
+b1b2
+¯
+` O
+´
+A2{3B5{3
+Npπγ2qw9{10
+¯
+` O
+´
+AB
+Npπγ2qw9{10
+¯
+.
+(9.24)
+Observe that :V puq “ :V p|u|q is a Schwarz function by Lemma 4.4. Application of Poisson
+summation (in the form of Lemma 4.1) to the sum over h P Zrωs yields
+4π
+33?
+3
+ÿ
+hPZrωs
+:V
+´h3?
+A
+b1b2
+¯
+“ 8π
+34
+ÿ
+mPZrωs
+ż
+R2
+:V
+´px ` iyq3?
+A
+b1b2
+¯
+ˇe
+´mpx ` iyq
+λ
+¯
+dxdy.
+(9.25)
+We simplify the right side of (9.25). Recall that :V puq “ :V p|u|q is radial. After changing
+x ` iy into polar coordinates reiϑ, the right side of (9.25) becomes
+8π
+34
+ÿ
+mPZrωs
+ż 2π
+0
+ż 8
+0
+:V
+´
+r3?
+A
+a
+Npb1b2q
+¯
+ˇe
+´mreiϑ
+λ
+¯
+rdrdϑ
+“ 8π
+34
+Npb1b2q1{3
+A1{3
+ÿ
+mPZrωs
+ż 2π
+0
+ż 8
+0
+:V pr3qˇe
+´mreiϑ
+λ
+Npb1b2q1{6
+A1{6
+¯
+rdrdϑ.
+(9.26)
+For all m P Zrωs, Lemma 4.4 implies that
+ż 2π
+0
+ż 8
+0
+:V pr3qˇe
+´mreiϑ
+λ
+Npb1b2q1{6
+A1{6
+¯
+rdrdϑ
+“
+ż 2π
+0
+ż 8
+0
+:V pr3qδr0,Xεsprqˇe
+´mreiϑ
+λ
+Npb1b2q1{6
+A1{6
+¯
+rdrdϑ ` OεpX´2000q.
+(9.27)
+For 0 ‰ m P Zrωs, repeated integration by parts on the right side of (9.27) shows that
+ż 2π
+0
+ż 8
+0
+:V pr3qδr0,Xεsprqˇe
+´mreiϑ
+λ
+Npb1b2q1{6
+A1{6
+¯
+rdrdϑ !ε XεpB2{Aq´1000Npmq´1000.
+(9.28)
+
+
+--- PDF PAGE 56 ---
+56
+ALEXANDER DUNN AND MAKSYM RADZIWI L L
+We substitute (9.27) and (9.28) into (9.26), and then sum trivially over 0 ‰ m P Zrωs.
+Chasing the result through (9.25) gives
+4π
+33?
+3
+ÿ
+hPZrωs
+:V
+´h3?
+A
+b1b2
+¯
+“ 16π2
+34
+Npb1b2q1{3
+A1{3
+ż 8
+0
+:V pr3qrdr ` Oε
+`
+XεpB2{Aq´1000˘
+.
+(9.29)
+We now evaluate the main term on the right side of (9.29). We open :V using the deﬁnition
+(4.4), and ﬁnd that the main term is
+16π2
+34
+Npb1b2q1{3
+A1{3
+ż 8
+0
+uV pu2q
+ż 8
+0
+J0
+´4πr3u
+3
+?
+3
+¯
+rdrdu.
+(9.30)
+For each ﬁxed u P p0, 8q, we make the change of variable w “ 4πr3u{p3
+?
+3q in the
+r-integral. Thus (9.30) becomes
+p4πq4{3
+34
+Npb1b2q1{3
+A1{3
+ż 8
+0
+u1{3V pu2qdu
+ż 8
+0
+J0pwqw´1{3dw.
+(9.31)
+A change of variable shows that
+ż 8
+0
+us´1V pu2qdu “ 1
+2
+rV
+´s
+2
+¯
+,
+for
+s P C,
+(9.32)
+and [DLMF, (10.22.43)] implies that
+ż 8
+0
+ws´1J0pwqdw “ 2s´1Γp s
+2q
+Γp1 ´ s
+2q,
+for ´ 1 ă Reps ´ 1q ă 1{2.
+(9.33)
+Using (9.32), (9.33) and Euler’s reﬂection formula [DLMF, (5.5.3)], we see that (9.31)
+becomes
+2π
+9
+?
+3
+´p2πq2{3
+3Γp 2
+3q
+¯2 rV
+´2
+3
+¯Npb1b2q1{3
+A1{3
+.
+(9.34)
+After retracing (9.29) (9.30), (9.31) and (9.34), we obtain
+4π
+33?
+3
+ÿ
+hPZrωs
+:V
+´h3?
+A
+b1b2
+¯
+“ 2π
+9
+?
+3
+´p2πq2{3
+3Γp 2
+3q
+¯2 rV
+´2
+3
+¯Npb1b2q1{3
+A1{3
+`Oε
+`
+XεpB2{Aq´1000˘
+. (9.35)
+Substitution of (9.35) into (9.24) gives
+D‹
+1 “ 2π
+9
+?
+3
+´p2πq2{3
+3Γp 2
+3q
+¯2 rV
+´2
+3
+¯
+A2{3
+Npπγ2q
+ÿ
+b1,b2PZrωs
+pb1,b2q“1
+pb1b2,πγq“1
+βb1βb2
+Npb1q1{6Npb2q1{6
+` O
+´
+A2{3B5{3
+Npπγ2qw9{10
+¯
+` O
+´
+AB
+Npπγ2qw9{10
+¯
+` Oε
+´ X1`ε
+Npπγ2qpB2{Aq´1000¯
+.
+(9.36)
+Using w-roughness of the support of β, we drop the conditions pb1, b2q “ 1 and pb1b2, πγq “
+1 at the expense of the error term of the same order of magnitude of that occurring in
+
+
+--- PDF PAGE 57 ---
+BIAS IN CUBIC GAUSS SUMS
+57
+(9.36). After recalling that D1 “ D‹
+1 ` D˛
+1, (9.21), and (9.36), we obtain
+D1 “ 2π
+9
+?
+3
+´p2πq2{3
+3Γp 2
+3q
+¯2 rV
+´2
+3
+¯
+A2{3
+Npπγ2q
+ˇˇˇ
+ÿ
+bPZrωs
+βb
+Npbq1{6
+ˇˇˇ
+2
+` O
+´
+A2{3B5{3
+Npπγ2qw9{10
+¯
+` Oε
+´ X1`ε
+Npπγ2q
+`
+1 ` pB2{Aq´1000˘¯
+.
+(9.37)
+We now consider D2,
+D2 “
+4πA
+9
+?
+3Npπγ2q
+ÿ
+dPZrωs
+d”1
+pmod 3q
+pd,πγq“1
+ÿ
+b1,b2PZrωs
+pb1,b2q“d
+βb1βb2
+a
+Npb1b2q
+ˆ
+ÿ
+kPZrωs
+dπ2γk‰
+rcdpkq
+´dπ2γk
+b1{d
+¯
+3
+´dπ2γk
+b2{d
+¯
+3
+:V
+´
+kd
+?
+A
+b1b2Npπγ2q1{2
+¯
+.
+(9.38)
+We rescale b1 Ñ db1 and b2 Ñ db2 and use Lemma 4.4 in (9.38). We obtain
+D2 “
+4πA
+9
+?
+3Npπγ2q
+ÿ
+dPZrωs
+d”1
+pmod 3q
+pd,πγq“1
+1
+Npdq
+ÿ
+b1,b2PZrωs
+pb1b2,πγq“1
+pb1,b2q“1
+βdb1βdb2
+a
+Npb1qNpb2q
+ˆ
+ÿ
+kPZrωs
+dπ2γk‰
+Npkq!Z
+rcdpkq
+´dπ2γk
+b1
+¯
+3
+´dπ2γk
+b2
+¯
+3
+:V
+´
+k
+?
+A
+db1b2Npπγ2q1{2
+¯
+` OεppNpπq∆Xq´1000q,
+(9.39)
+where
+Z :“ p∆NpπqXqε´
+1 ` B2Npπq∆2
+NpdqA
+¯
+.
+We M¨obius invert pb1, b2q “ 1 and separate variables by opening :V using (7.18) and (7.19).
+Rearranging the absolutely convergent ﬁnite sums and integrals by Fubini’s theorem gives
+D2 “
+2Ap´1qL
+9i
+?
+3Npπγ2q
+ż 8
+0
+ż ´ε`iXε
+´ε´iXε V pLqpr2qr2L`1
+Γp´sq
+ΓpL ` s ` 1q
+´
+2π
+?
+A
+3
+?
+3Npπq1{2Npγq
+¯2s
+ˆ
+ÿ
+fPZrωs
+f”1
+pmod 3q
+pf,πγq“1
+µpfq
+Npfq1`2s
+ÿ
+dPZrωs
+d”1
+pmod 3q
+pd,πγq“1
+1
+Npdq1`s
+ÿ
+kPZrωs
+dπ2γk‰
+Npkq!Z
+rcdpkq
+´dπ2γk
+f
+¯
+3
+´dπ2γk
+f
+¯
+3Npkqs
+ˆ
+´
+ÿ
+b1PZrωs
+pb1,πγq“1
+βfdb1
+a
+Npb1q
+´dπ2γk
+b1
+¯
+3Npb1q´s¯´
+ÿ
+b2PZrωs
+pb2,πγq“1
+βfdb2
+a
+Npb2q
+´dπ2γk
+b2
+¯
+3Npb2q´s¯
+dsdr
+` OεppNpπq∆Xq´1000q,
+
+
+--- PDF PAGE 58 ---
+58
+ALEXANDER DUNN AND MAKSYM RADZIWI L L
+for any ﬁxed L P Zě1. We use Axiom 4 of Deﬁnition 3.1 to estimate the sum over b1 and
+b2, and then estimate the remaining sums trivially using Lemma 5.5. We obtain
+D2 !ε p∆NpπqXqε´ AB2η
+Npπγ2q ` B2`2ηNpπq∆2
+Npπγ2q
+¯
+.
+(9.40)
+Since η ď 1
+4 we have AB2η ď X. After recalling (9.37), (9.40) and the fact that D “
+D1 ` D2, we obtain (9.16).
+The cross terms C . Recall that (9.14) records the cross term. Observe that (2.3) tells us
+that
+˜gpb1q˜gpaπq
+´ a
+b1
+¯
+3
+´π2
+b1
+¯
+3 “ ˜gpaπb1q.
+(9.41)
+Substituting (9.41) into (9.14) gives
+C :“ ´2p2πq2{3
+3Γp 2
+3q δγ“1Re
+´
+ÿ
+b1,b2PZrωs
+βb1βb2
+Npb2q1{6
+ÿ
+aPZrωs
+a”1
+pmod 3q
+paπ,b1q“1
+V
+´NpaqNpπq
+A
+¯ ˜gpaπb1q
+Npaπq1{6
+¯
+. (9.42)
+We now evaluate the sum over a P Zrωs in (9.42) using our asymptotic formula for
+type-I sums in Proposition 8.1 (for level πb1). Thus there exists ρpεq P p0,
+1
+10000q such that
+ÿ
+b1PZrωs
+βb1
+ÿ
+aPZrωs
+a”1
+pmod 3q
+V
+´NpaqNpπq
+A
+¯ ˜gpaπb1q
+Npaπq1{6
+“ rV
+´2
+3
+¯
+p2πq5{3A2{3
+37{2Γp 2
+3qNpπq5{6
+ÿ
+b1PZrωs
+βb1ϕpπb1q
+ζQpωqp2; 1πb1qNpπb1q7{6
+` Oε
+´A2{3´ρpεqB5{6´ρpεq
+Npπq
+¯
+` Oε
+`
+XεNpπq1{2B19{12A´1{12˘
+.
+(9.43)
+We now use the fact that β is supported on w-rough squarefree elements of Zrωs that are
+congruent to 1 modulo 3. We have
+log
+´ ϕpπb1q
+Npπb1q
+¯
+“
+ÿ̟
+|πb1̟
+prime
+log
+`
+1 ´ Np̟
+q´1˘
+“ ´
+ÿ̟
+|πb1̟
+prime
+8
+ÿ
+L“1
+1
+LNp̟
+qL “ O
+´
+1
+w9{10 ` δπ‰1
+Npπq
+¯
+.
+Thus
+ϕpπb1q
+Npπb1q “ 1 ` O
+´
+1
+w9{10 ` δπ‰1
+Npπq
+¯
+.
+(9.44)
+Similarly, we also have
+1
+ζQpωqp2; 1πb1q “
+1
+ζQpωqp2; 1πq ` O
+´
+1
+w19{10
+¯
+.
+(9.45)
+
+
+--- PDF PAGE 59 ---
+BIAS IN CUBIC GAUSS SUMS
+59
+Insertion of (9.44) and (9.45) into (9.43) gives
+ÿ
+b1PZrωs
+βb1
+ÿ
+aPZrωs
+a”1
+pmod 3q
+V
+´NpaqNpπq
+A
+¯ ˜gpaπb1q
+Npaπq1{6
+“ rV
+´2
+3
+¯
+p2πq5{3A2{3
+37{2Γp 2
+3qζQpωqp2; 1πqNpπq
+ÿ
+b1PZrωs
+βb1
+Npb1q1{6 ` Oε
+´A2{3´ρpεqB5{6´ρpεq
+Npπq
+¯
+` OεpXεNpπq1{2B19{12A´1{12q ` O
+´A2{3B5{6
+Npπq
+´
+1
+w9{10 ` δπ‰1
+Npπq
+¯¯
+.
+(9.46)
+Insertion of (9.46) into (9.42) gives (9.17).
+The trivial term T . Recall that (9.15) records
+T “
+´p2πq2{3
+3Γp 2
+3q
+¯2
+δγ“1
+ÿ
+aPZrωs
+a”1
+pmod 3q
+V
+´NpaqNpπq
+A
+¯ µ2paπq
+Npaπq1{3
+ˇˇˇ
+ÿ
+bPZrωs
+βb
+Npbq1{6
+ˇˇˇ
+2
+.
+(9.47)
+Mellin inversion of the smooth function, the Class number formula [Lan94, Chapter VIII,
+§2, Theorem 5] and subsequent contour shift to the right of the 1{6-line (in the s-variable)
+gives
+ÿ
+aPZrωs
+a”1
+pmod 3q
+V
+´NpaqNpπq
+A
+¯ µ2paπq
+Npaπq1{3
+“
+1
+2πi
+ż
+p2q
+rV psq ζQpωqps ` 1{3; 1πq
+ζQpωqp2s ` 2{3; 1πq
+As
+Npπqs`1{3ds
+“ rV
+´2
+3
+¯
+p1 ´ δπ‰1 ¨ Npπq´1q
+2πA2{3
+9
+?
+3ζQpωqp2; 1πqNpπq ` Oε
+´
+A1{6`ε
+Npπq1{2`ε
+¯
+“ rV
+´2
+3
+¯
+2πA2{3
+9
+?
+3ζQpωqp2; 1πqNpπq ` δπ‰1O
+´ A2{3
+Npπq2
+¯
+` Oε
+´
+A1{6`ε
+Npπq1{2`ε
+¯
+.
+(9.48)
+Insertion of (9.48) into (9.47) gives (9.18).
+■
+Lemma 9.2. Given y ě 1, there exists coeﬃcients pλdqdPZrωs such that
+(1) λ1 “ 1 and |λd| !ε Npdqε for all d P Zrωs and all ε ą 0;
+(2) λd “ 0 if Npdq ą y2 or d ı 1 pmod 3q;
+(3) For all n P Zrωs we have
+µ2pnq ď
+ÿ
+d2|n
+λd;
+(9.49)
+(4) For any ε ą 0 and π P Zrωs a prime π ” 1 pmod 3q (or 1) we have
+ÿ
+dPZrωs
+pd,πq“1
+λd
+Npdq2 “
+1
+ζQpωqp2; 1πq ` Oεpy´1{2`εq.
+(9.50)
+
+
+--- PDF PAGE 60 ---
+60
+ALEXANDER DUNN AND MAKSYM RADZIWI L L
+Proof. Given d ” 1 pmod 3q, let
+λd :“
+ÿ
+Npeq,Npfqďy
+e,f”1
+pmod 3q
+d“re,fs
+µpeqµpfq
+Properties (1) and (2) are immediate from the deﬁnition. Property (3) follows from
+ÿ
+d2|n
+λd “
+´
+ÿ
+Npeqďy
+e2|n
+µpeq
+¯2
+.
+It remains to check property (4). We have
+ÿ
+dPZrωs
+pd,πq“1
+λd
+Npdq2 “
+ÿ
+Npeq,Npfqďy
+e,f”1
+pmod 3q
+pef,πq“1
+µpeqµpfq
+Npre, fsq2 “
+ÿ
+e,f”1
+pmod 3q
+pef,πq“1
+µpeqµpfq
+Npre, fsq2 ` Opy´1{2`εq.
+(9.51)
+The main term in (9.51) is equal to
+ź̟
+”1
+pmod 3q̟
+‰π
+´
+1 `
+1
+Np̟
+q2p´2 ` 1q
+¯
+“
+ź̟
+”1
+pmod 3q̟
+‰π
+´
+1 ´
+1
+Np̟
+q2
+¯
+“
+1
+ζQpωqp2; 1πq,
+as required.
+■
+Proof of Proposition 9.1. In the ﬁrst display of the statement of Proposition 9.1 we use
+property (3) in Lemma 9.2 with y “ Xε with ε ą 0 small and ﬁxed, and inclusion-
+exclusion on the condition pa, bq “ 1. We see that the ﬁrst display in Proposition 9.1
+is
+ď
+ÿ
+aPZrωs
+a”1
+pmod 3q
+π|a
+V
+´Npaq
+A
+¯ˇˇˇ
+´
+ÿ
+bPZrωs
+pb,γaq“1
+βb˜gpbq
+´ b
+a
+¯
+3 ´ p2πq2{3
+3Γp 2
+3q
+˜gpaq
+Npaq1{6
+ÿ
+bPZrωs
+βb
+Npbq1{6
+¯
+`
+´p2πq2{3
+3Γp 2
+3q
+˜gpaq
+Npaq1{6
+ÿ
+bPZrωs
+pb,aq‰1
+βb
+Npbq1{6
+¯ˇˇˇ
+2´ ÿ
+γ2|a
+λγ
+¯
+.
+(9.52)
+Since V is non-negative and ř
+γ2|a λγ ě 0, we can apply the parallelogram inequality (9.8)
+to (9.52). We see that the right side of (9.52) is
+ď 2
+ÿ
+aPZrωs
+a”1
+pmod 3q
+π|a
+V
+´Npaq
+A
+¯´ˇˇˇ
+ÿ
+bPZrωs
+pb,γaq“1
+βb˜gpbq
+´ b
+a
+¯
+3 ´ p2πq2{3
+3Γp 2
+3q
+˜gpaq
+Npaq1{6
+ÿ
+bPZrωs
+βb
+Npbq1{6
+ˇˇˇ
+2
+` p2πq4{3
+9Γp 2
+3q2
+ÿ
+aPZrωs
+a”1
+pmod 3q
+π|a
+µ2paq
+Npaq1{3V
+´Npaq
+A
+¯ˇˇˇ
+ÿ
+bPZrωs
+pb,aq‰1
+βb
+Npbq1{6
+ˇˇˇ
+2¯´ ÿ
+γ2|a
+λγ
+¯
+. (9.53)
+
+
+--- PDF PAGE 61 ---
+BIAS IN CUBIC GAUSS SUMS
+61
+We interchange the order of summation and use (2.2) in (9.53). We see that the right
+side of (9.53) is equal to
+2
+´
+ÿ
+γ”1
+pmod 3q
+λγ
+ˆ
+´
+ÿ
+aPZrωs
+a”1
+pmod 3q
+π|a,γ2|a
+V
+´Npaq
+A
+¯ˇˇˇ
+ÿ
+bPZrωs
+pb,γaq“1
+βb˜gpbq
+´ b
+a
+¯
+3 ´ p2πq2{3
+3Γp 2
+3q
+δγ“1˜gpaq
+Npaq1{6
+ÿ
+bPZrωs
+βb
+Npbq1{6
+ˇˇˇ
+2
+(9.54)
+` δγ“1
+p2πq4{3
+9Γp 2
+3q2
+ÿ
+aPZrωs
+a”1
+pmod 3q
+π|a
+µ2paq
+Npaq1{3V
+´Npaq
+A
+¯ˇˇˇ
+ÿ
+bPZrωs
+pb,aq‰1
+βb
+Npbq1{6
+ˇˇˇ
+2¯¯
+.
+(9.55)
+Observe that (9.55) matches (9.10), and is estimated by (9.11). If pπ, γq “ 1, then the
+divisibility condition in (9.54) becomes πγ2 | a. Thus (9.54) in this case matches (9.9),
+and is estimated asymptotically by by D ` C ` T , where D, C and T have asymptotic
+expressions given by (9.16), (9.17), and (9.18) respectively.
+Summing the asymptotic
+expression for D ` C ` T over γ with pγ, πq “ 1 (with sieve weights λγ) using properties
+(1), (2), and (4) of Lemma 9.2 yields the bound stated in Proposition 9.1. If pπ, γq ‰ 1,
+then the divisibility condition in (9.54) becomes γ2 | a with π | γ and π ‰ 1. Performing
+a similar computation to the previous case gives the result.
+■
+10. Broad Type II estimates
+We prove the following type-II estimates for sequences in Cηp¨, wq.
+Proposition 10.1. Let W be a smooth function compactly supported in r1, 2s, 0 ă η ď
+1{4, A, B ě 10 and set X :“ AB. Let α be a sequence supported in Npaq P rA{10, 10As
+with a ” 1 pmod 3q squarefree.
+Suppose that w ą plog Xq10, β “ pβbq P CηpB, wq,
+ε P p0,
+1
+10000q and π ” 1 pmod 3q a prime or 1 satisfying 1 ď Npπq ă w. Then there exists
+ρpεq P p0,
+1
+10000q such that
+ÿ
+a,bPZrωs
+π|a
+αaβb˜gpabqW
+´Npabq
+X
+¯
+“ p2πq2{3
+3Γp 2
+3q
+ÿ
+a,bPZrωs
+π|a
+αaβbµ2pabq
+Npabq1{6 W
+´Npabq
+X
+¯
+` Oε
+´´ ÿ
+aPZrωs
+π|a
+|αa|2¯1{2
+¨
+´A1{3B5{6
+Npπq1{2
+´
+1
+w9{20 `
+δπ‰1
+Npπq1{2
+¯
+` A1{3´ρpεq{2B5{6´ρpεq{2
+Npπq1{2
+` A1{12`ε{2B5{6
+Npπq1{4`ε{2 ` pXNpπqqε{2´
+Npπq1{4B29{24A´1{24 ` B1`η `
+X1{2
+Npπq1{2
+´
+1 ` pB2{Aq´500¯¯¯¯
+.
+Remark 10.1. Suppose π “ 1 say. Then for dense sequences α, β and given ξ ą 0, the
+result is non-trivial in the range X1{3`ξ ď B ď X1{2´ξ, for some appropriate choice of ε, η
+and w.
+
+
+--- PDF PAGE 62 ---
+62
+ALEXANDER DUNN AND MAKSYM RADZIWI L L
+Proof. Observe that (2.3) gives
+ÿ
+a,bPZrωs
+π|a
+αaβb
+´
+˜gpabq ´ p2πq2{3
+3Γp 2
+3q
+µ2pabq
+Npabq1{6
+¯
+W
+´Npabq
+X
+¯
+“
+ÿ
+a,bPZrωs
+π|a
+pa,bq“1
+αaβb
+´
+˜gpabq ´ p2πq2{3
+3Γp 2
+3q
+1
+Npabq1{6
+¯
+W
+´Npabq
+X
+¯
+“
+1
+2πi
+ż i8
+´i8
+Ă
+WpsqXs ÿ
+aPZrωs
+π|a
+αa˜gpaq
+Npaqs
+´ ÿ
+bPZrωs
+pb,aq“1
+βb˜gpbq
+Npbqs
+´a
+b
+¯
+3 ´ p2πq2{3
+3Γp 2
+3q
+˜gpaq
+Npaq1{6
+ÿ
+bPZrωs
+pb,aq“1
+βb
+Npbq1{6`s
+¯
+ds.
+(10.1)
+Application of triangle inequality and then Cauchy-Schwarz to the a-sum shows that
+|(10.1)|2 !
+´
+ÿ
+aPZrωs
+a”1
+pmod 3q
+π|a
+|αa|2¯ ż 8
+´8
+|Ă
+Wpitq|
+´ ÿ
+aPZrωs
+π|a
+µ2paqV
+´Npaq
+A
+¯
+ˆ
+ˇˇˇ
+ÿ
+bPZrωs
+pb,aq“1
+βb˜gpbq
+Npbqit
+´a
+b
+¯
+3 ´ p2πq2{3
+3Γp 2
+3q
+˜gpaq
+Npaq1{6
+ÿ
+bPZrωs
+pb,aq“1
+βb
+Npbq1{6`it
+ˇˇˇ
+2¯
+dt,
+where V : R Ñ R a smooth compactly supported function such that V ě 1r1{10,10s. Using
+Proposition 9.1 gives the result.
+■
+11. Average Type-I estimates
+In this section we prove an average Type-I estimate. This average Type-I estimate will
+be more directly useful to us than the pointwise Type-I estimate proved in Section 8.
+Recall that ℓP Z, c ” 1 pmod 3q, and
+gℓpcq :“ ˜gpcq
+´ c
+|c|
+¯ℓ
+.
+Proposition 11.1. Assume the Generalized Riemann Hypothesis for the Dedekind zeta
+function attached to Qpωq twisted by Gr¨oßencharaktern. Let ℓP Z, ε P p0,
+1
+1000000q, A ą
+1000 be large and ﬁxed, and plog XqA ď w ď Xε. Let V, W be smooth functions, compactly
+supported in r 1
+2, 4s. Let 0 ă η ă 100{A and α “ pαrq P CηpX, wq. Then uniformly for
+C ą X2{3´ε and |ℓ| ď X1{100 we have
+ÿ
+rPZrωs
+c”1
+pmod 3q̟
+|c ùñ Np̟
+qąw
+αr˜gℓpcrqV
+´Npcq
+C
+¯
+W
+´Npcrq
+X
+¯
+“ p2πq2{3
+3Γp 2
+3q
+ÿ
+rPZrωs
+c”1
+pmod 3q̟
+|c ùñ Np̟
+qąw
+αrµ2pcrq
+` cr
+|cr|
+˘ℓ
+Npcrq1{6
+` Oε,A
+´
+X5{6
+plog Xq
+9
+20 A´10
+¯
+.
+(11.1)
+
+
+--- PDF PAGE 63 ---
+BIAS IN CUBIC GAUSS SUMS
+63
+Proof of Proposition 11.1. M¨obius inversion asserts that
+δ̟
+|c ùñ Np̟
+qąw “
+ÿ
+u|c
+u”1
+pmod 3q̟
+|u ùñ Np̟
+qďw
+µpuq.
+(11.2)
+Using (11.2), we express the left side of (11.1) as
+ÿ
+kě0
+p´1qk
+ÿ
+N dyadic
+Bk,ℓpNq,
+(11.3)
+where
+Bk,ℓpNq :“
+ÿ
+r,u,nPZrωs
+u,n”1
+pmod 3q
+αr˜gℓpnruq
+´
+δ
+ωpuq“k̟
+|u ùñ Np̟
+qďw
+¯
+V
+´Npnq
+N
+¯
+V
+´Npnuq
+C
+¯
+W
+´Npnruq
+X
+¯
+.
+(11.4)
+Case 1:
+N ě X1{2`1{20. Consulting Remark 8.4 we see that we in the range where
+Corollary 8.1 is non-trivial. Thus Corollary 8.1 and Remark 8.1 guarantee a small ﬁxed
+δ0 ą 0 such that we have (uniformly in |ℓ| ď X1{100),
+Bk,ℓpNq :“ δℓ“0 ¨ p2πq2{3
+3Γp 2
+3q
+ÿ
+r,u,nPZrωs
+u,n”1
+pmod 3q
+αrµ2pnruq
+` nru
+|nru|
+˘ℓ
+Npnruq1{6
+´
+δ
+ωpuq“k̟
+|u ùñ Np̟
+qďw
+¯
+ˆ V
+´Npnq
+N
+¯
+V
+´Npnuq
+C
+¯
+W
+´Npnruq
+X
+¯
+` OεpX5{6´δ0q.
+(11.5)
+We can drop the condition δℓ“0 since if ℓ‰ 0 then the sum over n majorised by the error
+term in the above display.
+Case 2: N ă X1{2`1{20. Suppose we are given a squarefree 1 ‰ u P Zrωs satisfying
+u ” 1 pmod 3q, and such that all prime factors of u have norm ď w. Then, given a prime
+π|u, there is a unique factorisation u “ bπd such that all the prime factors of d (resp.
+b) satisfy ă π (resp. satisfy ą πq. See Remark 6.1 for the ordering ă on ideals. Since
+Nprq — X{C ! X1{3`ε and Npruq — X{N " X1{2´1{20, we are guaranteed a unique prime
+π P Zrωs such that u “ bπd with Nprbq ă X13{30 and Nprbπq ě X13{30. Hence
+Bk,ℓpNq :“
+ÿ
+r,nPZrωs
+n”1
+pmod 3q
+αrV
+´Npnq
+N
+¯
+ÿ
+uPZrωs
+u”1
+pmod 3q
+˜gℓpnruqV
+´Npnuq
+C
+¯
+W
+´Npnruq
+X
+¯
+ˆ
+´
+ÿ
+πPZrωs
+π prime
+Npπqďw
+π”1
+pmod 3q
+ÿ
+u“bπd
+ωpuq“k
+b,d”1
+pmod 3q
+NprbqăX13{30,NprbπqěX13{30̟
+|b ùñ wěNp̟
+qěNpπq̟
+|d ùñ Np̟
+qăNpπq
+1
+¯
+.
+(11.6)
+
+
+--- PDF PAGE 64 ---
+64
+ALEXANDER DUNN AND MAKSYM RADZIWI L L
+We introduce smooth partitions of unity in the Nprq, Npbq and Npdq in (11.6). Then (2.3)
+and Mellin inversion imply that
+Bk,ℓpNq “
+ÿ
+D,R,B dyadic
+ÿ
+pk1,k2qPpZě0q2
+k1`k2“k´1
+Bpk1,k2q,ℓpN, D, R, Bq,
+(11.7)
+where
+Bpk1,k2q,ℓpN, D, R, Bq “
+1
+p2πiq2
+ż i8
+´i8
+ż i8
+´i8
+CsXv rV psqĂ
+Wpvq
+ˆ
+ÿ
+πPZrωs,π prime
+Npπqďw,π”1
+pmod 3q
+˜gℓpπq
+Npπqs`v
+´
+ÿ
+j,hPZrωs
+j,h”1
+pmod 3q
+βjpπ, k1; s, v, ℓqγhpπ, k2; s, v, ℓq˜gpjhq
+¯
+dsdv,
+(11.8)
+and
+βjpπ, k1; s, v, ℓq :“ µ2pjq
+Npjqv
+´π
+j
+¯
+3
+´ j
+|j|
+¯ℓ
+ÿ
+j“rb
+ωpbq“k1
+r,b”1
+pmod 3q,pj,πq“1
+NpjqăX13{30,NpjπqěX13{30̟
+|b ùñ wěNp̟
+qěNpπq
+αrV
+´Nprq
+R
+¯
+V
+´Npbq
+B
+¯
+Npbq´s;
+(11.9)
+γhpπ, k2; s, v, ℓq :“
+µ2phq
+Nphqs`v
+´π
+h
+¯
+3
+´ h
+|h|
+¯ℓ
+ÿ
+h“nd
+ωpdq“k2
+n,d”1
+pmod 3q,ph,πq“1̟
+|d ùñ Np̟
+qăNpπq
+V
+´Npnq
+N
+¯
+V
+´Npdq
+D
+¯
+.
+We write
+βjpB, R, π, k1; s, v, ℓq :“ βjpπ, k1; s, v, ℓq
+and
+γhpN, D, k2, π; s, v, ℓq :“ γhpπ, k2; s, v, ℓq,
+(11.10)
+when we care to emphasise the dyadic ranges B, R and N, D that are present in the
+deﬁnitions of β and γ respectively.
+For each given π P Zrωs prime, the sum over j and h in (11.8) is empty unless
+X13{30{p1000Npπqq ď RB ď 1000X13{30,
+(11.11)
+and NDRB — X{Npπq.
+Thus ND " X17{30.
+Since N ă X1{2`1{20, we must have
+D " X1{15´1{20 whenever the sum over j, h in (11.8) is non-zero. We now write
+Bpk1,k2q,ℓpN, D, R, Bq “ B:
+pk1,k2q,ℓpN, D, R, Bq ` B‹
+pk1,k2q,ℓpN, D, R, Bq,
+(11.12)
+where B:
+pk1,k2q,ℓcorresponds the part of (11.8) with Npπq ď plog DqA, and B‹
+pk1,k2q,ℓcor-
+responds to plog DqA ă Npπq ď w.
+Treatment of B:
+pk1,k2q,ℓpN, D, R, Bq. Since pαrq is supported only on w-rough elements of
+Zrωs, the factorisation j “ rb occurring in the deﬁnition of the sequence βj is unique.
+Thus |βjpπ, k1; s, v, ℓq| ď 1 for Re s, Re v “ 0.
+On the other hand, the sequence γhpN, D, π, k2; s, v, ℓq is sparse when Npπq is on log-
+power scales. We pause the proof to illustrate this in the following Lemma. We also
+
+
+--- PDF PAGE 65 ---
+BIAS IN CUBIC GAUSS SUMS
+65
+make the crude observations that γh is supported on h P Zrωs with Nphq — ND, and also
+satisﬁes |γhpπ, k2; s, v, ℓq| ď 2ωphq for Re s, Re v “ 0.
+Lemma 11.1. Let N, D, A ě 10, k2 P Zě0, and let π P Zrωs be a prime that satisﬁes
+π ” 1 pmod 3q and Npπq ď plog DqA. Then
+ÿ
+hPZrωs
+|γhpN, D, π, k2; s, v, ℓq|2 !A pNDqop1q ¨ ND1´K{A,
+with K ą 0 a small absolute constant.
+Proof of Lemma 11.1. We ﬁrst reﬁne our bound for }γ}8. We have
+|γhpπ, k2; s, v, ℓq| ď 2ωphq ¨ 1hPUπ ! 2
+2 log Nphq
+log log Nphq ¨ 1hPUπ,
+where Uπ is the set of squarefree integers of the form nd with n, d ” 1 pmod 3q, pnd, πq “
+1, Npnq — N, Npdq — D, and such that all of the prime factors of d have norm ă Npπq.
+Observe that d has necessarily ě
+log D
+100 log Npπq (say) prime factors. Therefore
+ÿ
+hPZrωs
+|γhpN, D, π, k2; s, v, ℓq|2 ! pNDq
+4
+log logpNDq ¨ |Uπ|.
+(11.13)
+Let ρ ą 0 be chosen later. We have
+|Uπ| ! pNDq
+ÿ
+d”1
+pmod 3q̟
+|d ùñ Np̟
+qăNpπq
+ωpdqě
+log D
+100 log Npπq
+µ2pdq
+Npdq
+ď pNDq ¨ exp
+´
+´
+ρ log D
+100 log Npπq
+¯
+ÿ
+d”1
+pmod 3q̟
+|d ùñ Np̟
+qăNpπq
+µ2pdqeρωpdq
+Npdq
+ď pNDq ¨ exp
+´
+´
+ρ log D
+100 log Npπq
+¯
+ź
+Np̟
+qăNpπq
+´
+1 `
+eρ
+Np̟
+q
+¯
+! pNDq ¨ exp
+´
+2eρ log log Npπq ´
+ρ log D
+100 log Npπq
+¯
+! pNDq ¨ exp
+´
+2eρ log Npπq ´
+ρ log D
+100 log Npπq
+¯
+! pNDq ¨ exp
+´
+2Aeρ log log D ´
+ρ log D
+100A log log D
+¯
+.
+(11.14)
+We choose
+ρ :“ log log D ´ 1000 log log log D.
+Thus (11.14) implies that
+|Uπ| !A ND1´1{p1000Aq
+(11.15)
+for all D (hence X) suﬃciently large. Thus (11.13) now implies the Lemma.
+■
+
+
+--- PDF PAGE 66 ---
+66
+ALEXANDER DUNN AND MAKSYM RADZIWI L L
+We now resume the proof of Proposition 11.1. We now use (2.3), the Cauchy-Schwarz
+inequality, Heath-Brown’s cubic large sieve (Theorem 9.1) Lemma 11.1, and the conditions
+(11.11), NDRB — X{Npπq and D " X1{15´1{20 to obtain
+|B:
+pk1,k2q,ℓpN, D, R, Bq|
+!A Xop1q
+ÿ
+πPZrωs
+π prime
+Npπqďplog DqA
+π”1
+pmod 3q
+´
+pRBq1{2´
+RB ` ND ` pRBNDq2{3¯1{2
+N1{2D1{2´1{p500Aq¯
+!A X5{6´1{p1000000Aq,
+say. We include a redundant main term of size that is absorbed by the error term i.e. we
+can write
+B:
+pk1,k2q,ℓpN, D, R, Bq
+“ p2πq2{3
+3Γp 2
+3q
+ÿ
+r,u,nPZrωs
+n”1
+pmod 3q
+αrµ2pnruqp nru
+|nru|qℓ
+Npnruq1{6
+V
+´Nprq
+R
+¯
+V
+´Npnq
+N
+¯
+V
+´Npnuq
+C
+¯
+W
+´Npnruq
+X
+¯
+ˆ
+´
+ÿ
+πPZrωs
+π prime
+Npπqďplog DqA
+π”1
+pmod 3q
+ÿ
+u“bπd
+ωpbq“k1,ωpdq“k2
+b,d”1
+pmod 3q
+NprbqăX13{30
+NprbπqěX13{30̟
+|b ùñ wěNp̟
+qěNpπq̟
+|d ùñ Np̟
+qăNpπq
+V
+´Npbq
+B
+¯
+V
+´Npdq
+D
+¯¯
+` OApX5{6´1{p1000000Aqq.
+(11.16)
+Treatment of B‹
+k,ℓp¨ ¨ ¨ q. Recall that plog XqA ď w ď Xε, and that plog XqA ă Npπq ď w.
+We reassemble the integral in the v-variable in (11.8), and recover the smooth weight
+WpNpjhπq{Xq. By Lemma 6.1 and Lemma 6.3 we have βpR, B; π; s, ℓq P CηpRB, Npπqq
+(from (11.9)) (after re-scaling by an appropriate absolute non-zero constant) for all η ą
+100{A. We then apply Proposition 10.1 and see that there is a ρpεq P p0,
+1
+10000q such that
+B‹
+pk1,k2q,ℓpN, D, R, Bq
+“ p2πq2{3
+3Γp 2
+3q
+ÿ
+r,u,nPZrωs
+n”1
+pmod 3q
+αrµ2pnruqp nru
+|nru|qℓ
+Npnruq1{6
+V
+´Nprq
+R
+¯
+V
+´Npnq
+N
+¯
+V
+´Npnuq
+C
+¯
+W
+´Npnruq
+X
+¯
+ˆ
+´
+ÿ
+πPZrωs
+π prime
+plog DqAăNpπqďw
+π”1
+pmod 3q
+ÿ
+u“bπd
+ωpbq“k1,ωpdq“k2
+b,d”1
+pmod 3q
+NprbqăX13{30
+NprbπqěX13{30̟
+|b ùñ wěNp̟
+qěNpπq̟
+|d ùñ Np̟
+qăNpπq
+V
+´Npbq
+B
+¯
+V
+´Npdq
+D
+¯¯
+` E,
+(11.17)
+
+
+--- PDF PAGE 67 ---
+BIAS IN CUBIC GAUSS SUMS
+67
+where
+E “ OA,ε
+´
+log log w
+´ X5{6
+w9{20 ` X5{6´ρpεq¯
+`
+X5{6
+plog XqA{2
+` X83{120`op1qw1{4 ` X47{60`op1qw3{4 ` X17{60`p13{30qp1`100{Aq`op1qw1{2¯
+.
+Note that both the error terms in (11.16) and (11.17) are uniform with respect to ℓ, k1
+and k2.
+Conclusion. After combining (11.16) and (11.17) in (11.12), we obtain an asymptotic
+expression for Bpk1,k2q,ℓpN, D, R, Bq for each dyadic value of N satisfying N ă X1{2`1{20.
+We reassemble the sum over pk1, k2q P pZě0q2 (satisfying k1 ` k2 “ k ´ 1), as well as the
+partitions of unity in Npbq, Npdq and Nprq in (11.7). We then collapse the weights in
+the main term back to
+`
+δ
+ωpuq“k̟
+|u ùñ Np̟
+qďw
+˘
+, and obtain an asymptotic expression for Bk,ℓpNq
+for each dyadic value N satisfying N ă X1{2`1{20. Recall that (11.5) gives an asymptotic
+expression for Bk,ℓpNq for each dyadic value N satisfying N ě X1{2`1{20. We combine
+these two results in (11.3), and reassemble the partition of unity over Npnq. Note that
+the reassembly of partitions of unity and the sums over ki do not overwhelm the error
+terms (one only has losses of Opplog Xq10q say. Inserting this asymptotic expression into
+(11.3), and noting that
+ÿ
+kě0
+p´1qk´
+δ
+ωpuq“k̟
+|u ùñ Np̟
+qďw
+¯
+µ2pnruq “ µ2pnruq
+´
+δ̟
+|u ùñ Np̟
+qďw
+¯
+µpuq,
+as well as (11.2), we obtain the result.
+■
+12. Combinatorial decompositions
+We will use the following combinatorial decomposition.
+Lemma 12.1. Let W : R Ñ R be a smooth function compactly supported in p0, Cq. Let
+pspnqqnPZrωs be a sequence satisfying |spnq| ď 1 and have support on squarefree n satisfying
+n ” 1 pmod 3q. Then for 2 ď w ď CX1{3 ď z we have
+ÿ̟
+”1
+pmod 3q
+Np̟
+qąz
+sp̟
+qW
+´Np̟
+q
+X
+¯
+“ ´1
+2
+ÿ̟
+1,̟
+2”1
+pmod 3q
+Np̟
+1q,Np̟
+2qąz
+sp̟
+1̟
+2qW
+´Np̟
+1̟
+2q
+X
+¯
+`
+ÿ
+kě0
+p´1qk
+k!
+ÿ
+wăNp̟
+1q,...,Np̟
+kqďz
+@i:̟
+i”1
+pmod 3q
+c”1
+pmod 3q
+k“0 ùñ c‰1̟
+|c ùñ Np̟
+qąw
+spc̟
+1 . . .̟
+kqW
+´Npc̟
+1 . . .̟
+kq
+X
+¯
+` Op
+?
+Xq.
+Proof. We assume that Re s ą 1 throughout this proof. We have
+ζązpsq :“
+ź
+Np̟
+qąz̟
+”1
+pmod 3q
+´
+1 ´
+1
+Np̟
+qs
+¯´1
+,
+
+
+--- PDF PAGE 68 ---
+68
+ALEXANDER DUNN AND MAKSYM RADZIWI L L
+and
+ÿ
+Lě1
+1
+L
+ÿ
+Np̟
+qąz̟
+”1
+pmod 3q
+1
+Np̟
+qLs “ log ζązpsq “ logp1 ` pζązpsq ´ 1qq
+“ pζązpsq ´ 1q ´ 1
+2 ¨ pζązpsq ´ 1q2 `
+ÿ
+jě3
+p´1qj`1
+j
+¨ pζązpsq ´ 1qj.
+(12.1)
+Furthermore,
+ζązpsq “ ζąwpsq
+ź
+wăNp̟
+qďz̟
+”1
+pmod 3q
+´
+1 ´
+1
+Np̟
+qs
+¯
+,
+where
+ζąwpsq :“
+ź
+Np̟
+qąw̟
+”1
+pmod 3q
+´
+1 ´
+1
+Np̟
+qs
+¯´1
+“
+ÿ
+c”1
+pmod 3q̟
+|c ùñ Np̟
+qąw
+1
+Npcqs.
+(12.2)
+The equation (12.2) is valid since every c ” 1 pmod 3q has a unique factorisation c “̟
+1 . . .̟
+k with̟
+i ” 1 pmod 3q for i “ 1, . . . , k. Expand the product
+ź
+wăNp̟
+qďz̟
+”1
+pmod 3q
+´
+1 ´
+1
+Np̟
+qs
+¯
+“ 1 `
+ÿ
+kě1
+p´1qk
+k!
+ÿ
+wăNp̟
+1q,...,Np̟
+kqďz
+@i:̟
+i”1
+pmod 3q̟
+i all distinct
+1
+Np̟
+1 . . .̟
+kqs.
+Therefore
+ζązpsq ´ 1 “
+ÿ
+kě0
+p´1qk
+k!
+ÿ
+wăNp̟
+1q,...,Np̟
+kqďz
+@̟
+i”1
+pmod 3q̟
+i all distinct
+c”1
+pmod 3q
+k“0 ùñ c‰1̟
+|c ùñ Np̟
+qąw
+1
+Npc̟
+1 . . .̟
+kqs.
+(12.3)
+Substitution of (12.3) into (12.1) gives
+ÿ
+Lě1
+1
+L
+ÿ
+Np̟
+qąz̟
+”1
+pmod 3q
+1
+Np̟
+qLs “
+ÿ
+kě0
+p´1qk
+k!
+ÿ
+wăNp̟
+1q,...,Np̟
+kqďz
+@̟
+i”1
+pmod 3q̟
+i all distinct
+c”1
+pmod 3q
+k“0 ùñ c‰1̟
+|c ùñ Np̟
+qąw
+1
+Npc̟
+1 . . .̟
+kqs
+(12.4)
+´ 1
+2 ¨ pζązpsq ´ 1q2 `
+ÿ
+jě3
+p´1qj`1
+j
+¨ pζązpsq ´ 1qj.
+The result follows from a comparison of coeﬃcients. Observe that that the total contri-
+bution from terms Np̟
+qk ď X with k ě 2 on the left side of (12.4) is Op
+?
+Xq. Since
+z ą CX1{3 and W is compactly supported in p0, Cq, we see that the contribution from all
+terms pζązpsq´1qj with j ě 3 is zero. Notice that spc̟
+1 . . .̟
+kq is zero if c̟
+1 . . .̟
+k is not
+squarefree by hypothesis, so we can drop the requirement that the̟
+i are all distinct.
+■
+
+
+--- PDF PAGE 69 ---
+BIAS IN CUBIC GAUSS SUMS
+69
+13. Proof of Theorems 1.1 and 1.3
+We ﬁrst record a useful Lemma due to Polymath that classiﬁes the Type-I, Type-II and
+Type-III information that occurs in the proof of our main theorems.
+Lemma 13.1. [Pol14, Lemma 3.1] Given an integer n ě 1 and
+1
+10 ď σ ă 1
+2, let t1, . . . , tn
+be non-negative real numbers such that t1 `. . .`tn “ 1. Then at least one of the following
+three statement holds:
+(Type-I) There is an i P r1, ns such that ti ě 1
+2 ` σ;
+(Type-II) There is a partition t1, . . . , nu “ S Y T such that
+1
+2 ´ σ ă
+ÿ
+iPS
+ti ď
+ÿ
+iPT
+ti ă 1
+2 ` σ;
+(Type-III) There exists distinct i, j, v P r1, ns such that 2σ ď ti ď tj ď tv ď 1
+2 ´ σ and
+ti ` tj, tj ` tv, tv ` ti ě 1
+2 ` σ.
+Furthermore, if σ ą 1{6, then the Type-III alternative can’t occur.
+Proof of Theorems 1.1 and 1.3. We ﬁrst explain some initial manipulations.
+Initial reduction. For any rational prime p ” 1 pmod 3q we have
+Sp
+2?p “ Re ˜gp̟
+q,
+where̟
+P Zrωs is a prime such that̟
+” 1 pmod 3q and p “̟̟
+. The number of primes̟
+” 1 pmod 3q for which Np̟
+q is not prime is Op
+?
+Xq. Such primes are those that lie
+over rational primes p ” 2 pmod 3q. To prove Theorem 1.1 it suﬃces to estimate the
+quantity
+ÿ̟
+”1
+pmod 3q
+˜gp̟
+qW
+´Np̟
+q
+X
+¯
+.
+Observe that (2.2) implies that
+˜gp̟
+q3 “ ´̟|̟
+|.
+Thus
+˜gp̟
+qk “ p´1qℓ´̟
+|̟
+|
+¯ℓ
+ˆ
+$
+’
+&
+’
+%
+˜gp̟
+q
+if k ” 1
+pmod 3q with ℓ“ k´1
+3
+˜gp̟
+q
+if k ” 2
+pmod 3q with ℓ“ k`1
+3
+1
+if k ” 0
+pmod 3q with ℓ“ k
+3
+.
+In particular, Theorem 1.3 with k ” 0 pmod 3q follows directly from the assumption of
+the Generalized Riemann Hypothesis.
+To establish Theorem 1.3, it suﬃces to show that
+ÿ̟
+”1
+pmod 3q
+˜gp̟
+q
+´̟
+|̟
+|
+¯ℓ
+W
+´Np̟
+q
+X
+¯
+“ o
+´ X5{6
+log X
+¯
+,
+
+
+--- PDF PAGE 70 ---
+70
+ALEXANDER DUNN AND MAKSYM RADZIWI L L
+as X Ñ 8 and uniformly in 0 ă |ℓ| ď X1{100. To prove both Theorem 1.1 and Theorem
+1.3 simultaneously it is enough to estimate
+ÿ̟
+”1
+pmod 3q
+˜gp̟
+q
+´̟
+|̟
+|
+¯ℓ
+W
+´Np̟
+q
+X
+¯
+,
+to a precision better than opX5{6{ log Xq. For c ” 1 pmod 3q deﬁne
+˜gℓpcq :“ ˜gpcq
+´ c
+|c|
+¯ℓ
+.
+Let ε P p0, 10´6q be ﬁxed. Let
+w :“ Xε
+and
+z :“ X1{3`ε.
+By Lemma 12.1 we have
+ÿ̟
+”1
+pmod 3q
+˜gℓp̟
+qW
+´Np̟
+q
+X
+¯
+“ ´1
+2
+ÿ̟
+1,̟
+2”1
+pmod 3q
+Np̟
+1q,Np̟
+2qąz
+˜gℓp̟
+1̟
+2qW
+´Np̟
+1̟
+2q
+X
+¯
+(13.1)
+`
+ÿ
+kě0
+p´1qk
+k!
+ÿ
+p̟
+1,...,̟
+k,cqPSpw,zq
+˜gℓp̟
+1 . . .̟
+kcqW
+´Np̟
+1 . . .̟
+kcq
+X
+¯
+` Op
+?
+Xq,
+(13.2)
+where Spw, zq denotes the set of tuples p̟
+1, . . . ,̟
+k, cq with k ě 0 such that
+‚̟
+1, . . . ,̟
+k are primes congruent to 1 pmod 3q (when k ě 1);
+‚ For all 1 ď i ď k we have w ă Np̟
+iq ď z (when k ě 1);
+‚ c is w-rough, c ” 1 pmod 3q, and k “ 0 ùñ c ‰ 1.
+When k “ 0, the sum is understood just to be over the variable c.
+Let ξ P p0, 10´6q be a small ﬁxed quantity to be decided at a later point in the proof
+(it will ultimately depend on ε).
+Remark 13.1. Uniformity of error terms in ℓis not an issue when deploying Type II/III
+estimates (i.e. Proposition 7.1 and Proposition 10.1). This is because (2.3) is applied to
+˜gℓpabq, and the dependence on ℓis absorbed into the coeﬃcients α and β that satisfy
+}α}8, }β}8 ď 1. The dependence on ℓissue emanates from the application of the average
+Type-I estimate in Proposition 11.1.
+Sum on the right side side of (13.1). We introduce a smooth partition of unity on
+each of the Np̟
+iq to evaluate the (Type-II) sum over Np̟
+1q, Np̟
+2q ą z. Thus it is
+suﬃcient to estimate
+FℓpX, P1, P2; zq :“
+ÿ̟
+1,̟
+2”1
+pmod 3q
+Np̟
+1q,Np̟
+2qąz
+˜gℓp̟
+1̟
+2qW
+´Np̟
+1̟
+2q
+X
+¯
+V
+´Np̟
+1q
+P1
+¯
+V
+´Np̟
+2q
+P2
+¯
+,
+(13.3)
+for all dyadic partitions pP1, P2q that satisfy z{2 ď P1, P2 ď 2X and P1P2 — X. When
+z{2 ď mintP1, P2u ď X1{2´ξ we can apply Proposition 10.1 with π “ 1, and η ą 0 arbitrar-
+ily small and ﬁxed by Lemma 6.2 (the only requirement is that η ą 100 log log X{ log X).
+
+
+--- PDF PAGE 71 ---
+BIAS IN CUBIC GAUSS SUMS
+71
+Thus there exists δ0pξ, εq ą 0 such that
+TℓpX, P1, P2, zq “ p2πq2{3
+3Γp 2
+3q
+ÿ
+Np̟
+1q,Np̟
+2qąz
+µ2p̟
+1̟
+2q
+`̟
+1̟
+2
+|̟
+1̟
+2|
+˘ℓ
+Np̟
+1̟
+2q1{6
+V
+´Np̟
+1q
+P1
+¯
+V
+´Np̟
+2q
+P2
+¯
+ˆ W
+´Np̟
+1̟
+2q
+X
+¯
+` Oξ,εpX5{6´δ0pξ,εqq,
+when
+z{2 ď mintP1, P2u ď X1{2´ξ.
+(13.4)
+When X1{2´ξ ď P1, P2 ď X1{2`ξ, we appeal to Proposition 7.1.
+In particular, the
+smooth coeﬃcients here are supported on z “ X1{3`ε ą Xε -rough integers. We obtain
+FℓpX, P1, P2; zq !
+X
+pε log Xq3{2
+1
+a
+minpP1, P2q
+`
+X5{6
+pε log Xq2,
+when
+X1{2´ξ ď P1, P2 ď X1{2`ξ,
+where the implied constant is absolute. We can include a redundant main term that is
+majorised by the error term i.e.
+FℓpX, P1, P2; zq “ p2πq2{3
+3Γp 2
+3q
+ÿ
+Np̟
+1q,Np̟
+2qąz
+µ2p̟
+1̟
+2q
+`̟
+1̟
+2
+|̟
+1̟
+2|
+˘ℓ
+Np̟
+1̟
+2q1{6
+V
+´Np̟
+1q
+P1
+¯
+V
+´Np̟
+2q
+P2
+¯
+W
+´Np̟
+1̟
+2q
+X
+¯
+` O
+´
+X
+pε log Xq3{2 ¨
+1
+a
+minpP1, P2q
+¯
+` O
+´
+X5{6
+pε log Xq2
+¯
+,
+when
+X1{2´ξ ď P1, P2 ď X1{2`ξ.
+(13.5)
+Since P1P2 — X there are Opξ log Xq choices of P1, P2 in the narrow range X1{2´ξ ď
+P1, P2 ď X1{2`ξ. Summing (13.4) and (13.5) over all possible dyadic tuples pP1, P2q gives
+ÿ̟
+1,̟
+2”1
+pmod 3q
+Np̟
+1q,Np̟
+2qąz
+˜gℓp̟
+1̟
+2qW
+´Np̟
+1̟
+2q
+X
+¯
+“ p2πq2{3
+3Γp 2
+3q
+ÿ̟
+1,̟
+2”1
+pmod 3q
+Np̟
+1q,Np̟
+2qąz
+µ2p̟
+1̟
+2q
+`̟
+1̟
+2
+|̟
+1̟
+2|
+˘ℓ
+Np̟
+1̟
+2q1{6
+W
+´Np̟
+1̟
+2q
+X
+¯
+` O
+´ X3{4`ξ{2
+pε log Xq3{2
+¯
+` O
+´ ξX5{6
+ε2 log X
+¯
+` Oξ,εpX5{6´δ1pξ,εqq,
+(13.6)
+for any ﬁxed 0 ă δ1pξ, εq ă δ0pξ, εq.
+Sum in (13.2). For each 0 ď k ď 1{ε, we analyse the sum
+ÿ
+p̟
+1,...,̟
+k,cqPSpw,zq
+˜gℓp̟
+1 . . .̟
+kcqW
+´Np̟
+1 . . .̟
+kcq
+X
+¯
+.
+(13.7)
+
+
+--- PDF PAGE 72 ---
+72
+ALEXANDER DUNN AND MAKSYM RADZIWI L L
+We insert a smooth partition of unity in Npcq and each Np̟
+iq for i “ 1, . . . , k in (13.7).
+Thus its suﬃces to estimate
+SℓpP1, . . . , Pk`1q :“
+ÿ
+p̟
+1,...,̟
+k,cqPSpw,zq
+˜gℓp̟
+1 . . .̟
+kcqW
+´Np̟
+1 . . .̟
+kcq
+X
+¯
+V
+´Npcq
+Pk`1
+¯
+k
+ź
+i“1
+V
+´Npπiq
+Pi
+¯
+,
+(13.8)
+for all dyadic partitions H “ pP1, . . . , Pk`1q satisfying P1 . . . Pk`1 — X, w{2 ď Pi ď 2z
+for all i “ 1, . . . , k, and Pk`1 ě 1{2. Our goal will be to show that S pP1, . . . , Pk`1q is
+asymptotically equal to (either for individual tuples pP1, . . . , Pk`1q or on average)
+MℓpP1, . . . , Pk`1q
+“ p2πq2{3
+3Γp 2
+3q
+ÿ
+p̟
+1,...,̟
+k,cqPSpw,zq
+µ2p̟
+1 . . .̟
+kcq
+`̟
+1...̟
+kc
+|̟
+1...̟
+kc|
+˘ℓ
+Np̟
+1 . . .̟
+kcq1{6
+W
+´Np̟
+1 . . .̟
+kcq
+X
+¯
+V
+´Npcq
+Pk`1
+¯
+k
+ź
+i“1
+V
+´Np̟
+iq
+Pi
+¯
+.
+For a given pP1, . . . , Pk`1q, let
+ti :“
+log Pi
+logpP1 . . . Pk`1q ě 0
+for
+i “ 1, . . . , k ` 1.
+(13.9)
+We necessarily have
+t1 ` . . . ` tk`1 “ 1;
+(13.10)
+log w
+log X ď ti ď log z
+log X
+for
+i “ 1, . . . , k.
+(13.11)
+We now apply Lemma 13.1 with choice σ :“ 1{6 ´ ξ to decompose the proof into cases.
+Narrow Type-III sums. In this case we necessarily have k ě 2, and
+D three distinct indices i, j, ℓP t1, . . . , k ` 1u such that ti, tj, tℓP p 1
+3 ´ 2ξ, 1
+3 ` ξq. (13.12)
+In particular, either
+(1) D an index i such that ti P r 1
+3, 1
+3 ` ξq, or
+(2) we have ti, tj, tℓP p 1
+3 ´ 2ξ, 1
+3q.
+The sum over all dyadic partitions pP1, . . . , Pk`1q for which there exists an index i such
+that ti P r 1
+3, 1
+3 ` ξq (and two additional indices j, ℓsuch that tj, tℓP p 1
+3 ´ 2ξ, 1
+3 ` ξq) is
+ď pk ` 1q! ¨
+ÿ
+X1{3ďP ďX1{3`ξ
+P dyadic
+sup
+}α}8,}β}8ď1
+βPCηpP,wq
+ˇˇˇ
+ÿ
+a,b”1
+pmod 3q
+π|a ùñ Npπqąw
+π|b ùñ Npπqąw
+Npaq—X{P,Npbq—P
+αaβb˜gℓpabqW
+´Npabq
+X
+¯ˇˇˇ,
+(13.13)
+where η ą 0 is arbitrarily small and ﬁxed by Lemma 6.2 (the only requirement is that
+η ą 100 log log X{pε log Xq). Notice that the factor pk ` 1q! “ k! ¨ pk ` 1q arises from the
+fact that there are k ` 1 ways of choosing the ﬁrst index i for which Pi P r 1
+3, 1
+3 ` ξq (and
+
+
+--- PDF PAGE 73 ---
+BIAS IN CUBIC GAUSS SUMS
+73
+this index becomes our P) and there are k! ways of representing a as a product of the
+remaining k variables. Application of Proposition 7.1 shows that (13.13) is
+! pk ` 1q!
+ÿ
+X1{3ďP ďX1{3`ξ
+P dyadic
+´
+1
+pε log Xq3{2 ¨ X
+?
+P `
+X5{6
+pε log Xq2
+¯
+! pk ` 1q!
+´
+X5{6
+pε log Xq3{2 ` ξX5{6
+ε2 log X
+¯
+,
+where the implied constants are absolute.
+We now handle the remaining case in which ti, tj, tℓP p 1
+3 ´ 2ξ, 1
+3q. We group together
+two variables coming from the indices i and j say. We sum over all dyadic partitions
+pP1, . . . , Pk`1q for which ti, tj, tℓP p 1
+3 ´ 2ξ, 1
+3q. This sum is
+ď pk ` 1q! ¨
+ÿ
+X2{3´4ξďUďX2{3
+U dyadic
+sup
+}α}8,}β}8ď1
+βPCηpX{U,wq
+ˇˇˇ
+ÿ
+a,b”1
+pmod 3q
+π|a ùñ Npπqąw
+π|b ùñ Npπqąw
+Npaq—U,Npbq—X{U
+αaβb˜gℓpabqW
+´Npabq
+X
+¯ˇˇˇ,
+(13.14)
+where η ą 0 is arbitrarily small and ﬁxed by Lemma 6.2 (the only requirement is that
+η ą 100 log log X{pε log Xq). The factor pk`1q! “ pk´1q!¨2
+`k`1
+2
+˘
+arises from the fact that
+there are 2
+`k`1
+2
+˘
+ordered choices of i and j such that ti, tj P p 1
+3 ´ 2ξ, 1
+3q, and pk ´ 1q! ways
+of representing a as the product of the remaining k ´ 1 variables. Applying Proposition
+7.1 and arguing in a similar way to the above shows that (13.14) is
+! pk ` 1q!
+´
+X5{6
+pε log Xq3{2 ` ξX5{6
+ε2 log X
+¯
+,
+where the implied constant is absolute.
+Combining the two cases we conclude that
+ÿ
+pP1,...,Pk`1q
+(13.12) holds
+S pP1, . . . , Pk`1q “
+ÿ
+pP1,...,Pk`1q
+(13.12) holds
+M pP1, . . . , Pk`1q ` O
+´pk ` 1q!X5{6
+pε log Xq3{2
+¯
+` O
+´pk ` 1q!ξX5{6
+ε2 log X
+¯
+.
+Notice that the main term is absorbed by the error term in this case.
+Narrow Type-II sums. In this case we necessarily have k ě 1, and
+D a partition S Y T “ t1, . . . , k ` 1u such that 1
+2 ´ ξ ă
+ÿ
+iPS
+ti ď
+ÿ
+jPT
+tj ă 1
+2 ` ξ.
+(13.15)
+The contribution of all such pP1, . . . , Pk`1q is
+ď pk ` 1q!
+ÿ
+X1{2´ξďUďX1{2
+U dyadic
+sup
+}α}8,}β}8ď1
+βPCηpU,wq
+ˇˇˇ
+ÿ
+a,b”1
+pmod 3q
+π|a ùñ Npπqąw
+π|b ùñ Npπqąw
+Npaq—X{U,Npbq—U
+αaβb˜gℓpabqW
+´Npabq
+X
+¯ˇˇˇ,
+(13.16)
+
+
+--- PDF PAGE 74 ---
+74
+ALEXANDER DUNN AND MAKSYM RADZIWI L L
+where η ą 0 is arbitrarily small and ﬁxed by Lemma 6.2 (the only requirement is that
+η ą 100 log log X{pε log Xq). The term pk`1q! arises from the fact that for each 1 ď i ď k,
+there are i!
+`k`1
+i
+˘
+ordered choices for the set S containing i elements, and there are pk`1´iq!
+ways of representing b as a product of the remaining k ` 1 ´ i variables indicated by the
+set T. Applying Proposition 7.1, we see that (13.16) is
+! pk ` 1q!
+ÿ
+X1{2´ξďUďX1{2
+U dyadic
+´
+1
+pε log Xq3{2 ¨ X
+?
+U `
+X5{6
+pε log Xq2
+¯
+! pk ` 1q!
+´ X3{4`ξ{2
+pε log Xq3{2 ` ξX5{6
+ε2 log X
+¯
+,
+where the implied constants are absolute.
+In particular,
+ÿ
+pP1,...,Pk`1q
+(13.15) holds
+S pP1, . . . , Pk`1q “
+ÿ
+pP1,...,Pk`1q
+(13.15) holds
+M pP1, . . . , Pk`1q ` O
+´pk ` 1q!X3{4`ξ{2
+pε log Xq3{2
+¯
+` O
+´pk ` 1q!ξX5{6
+ε2 log X
+¯
+,
+where the main term is absorbed by the error term.
+Remaining ranges. We now consider all of the remaining dyadic partitions pP1, . . . , Pk`1q
+one by one. For each remaining tuple pP1, . . . , Pk`1q we will show that
+SℓpP1, . . . , Pk`1q “ MℓpP1, . . . , Pk`1q ` OA,ξ,ε
+´ X5{6
+logA X
+¯
+,
+(13.17)
+for any given A ą 10 (depending on ε ą 0). Recall that k ď 1{ε. Since there are at
+most plog Xqk dyadic partitions pP1, . . . , Pk`1q satisfying P1 ¨ ¨ ¨ Pk`1 — X, we can sum
+over the error term in (13.17) without overwhelming the main term. Notice that each of
+the remaining conﬁgurations of pP1, . . . , Pk`1q now fall into either of two cases:
+(1) Di P t1, . . . , k ` 1u such that ti ě 2
+3 ´ ξ;
+(2) Or D a partition S Y T “ t1, . . . , k ` 1u such that
+1
+3 ` ξ ď
+ÿ
+iPS
+ti ď 1
+2 ´ ξ ď 1
+2 ` ξ ď
+ÿ
+jPT
+tj ď 2
+3 ´ ξ.
+(13.18)
+If Di P t1, . . . , k ` 1u such that ti ě 2
+3 ´ ξ, then i “ k ` 1 by (13.11). This corresponds
+to the c variable appearing in SℓpP1, . . . , Pk`1q in (13.8). After applying Proposition 11.1
+(average Type-I estimate) we obtain (13.17) uniformly in |ℓ| ď X1{100.
+If the second
+alternative holds, then (13.17) follows from Proposition 10.1 (broad Type-II estimate).
+
+
+--- PDF PAGE 75 ---
+BIAS IN CUBIC GAUSS SUMS
+75
+Assembly. Summing over all dyadic partitions pP1, . . . , Pk`1q we obtain
+ÿ
+0ďkď1{ε
+p´1qk
+k!
+ÿ
+p̟
+1,...,̟
+k,cqPSpw,zq
+˜gℓp̟
+1 . . .̟
+kcqW
+´Np̟
+1 . . .̟
+kcq
+X
+¯
+“
+ÿ
+0ďkď1{ε
+p´1qk
+k!
+ÿ
+p̟
+1,...,̟
+k,cqPSpw,zq
+µ2p̟
+1 . . .̟
+kcq
+`̟
+1...̟
+kc
+|̟
+1...̟
+kc|
+˘ℓ
+Np̟
+1 . . .̟
+kcq1{6
+W
+´Np̟
+1 . . .̟
+kcq
+X
+¯
+` O
+´ ξX5{6
+ε4 log X
+¯
+` O
+´
+X5{6
+ε7{2plog Xq3{2
+¯
+` O
+´
+X3{4`ξ{2
+ε7{2plog Xq3{2
+¯
+` OA,ξ,ε
+´
+X5{6
+logA´ε´1 X
+¯
+,
+(13.19)
+uniformly in |ℓ| ď X1{100. We now drop the third error term in (13.19) because it is
+majorised by the second one. Combining (13.19) and (13.6) in (13.1)–(13.2), and then
+applying Lemma 12.1 (in the reverse direction, and to the symbol µ2p¨qp¨¨qℓ) gives
+ÿ̟
+”1
+pmod 3q
+˜gℓp̟
+qW
+´Np̟
+q
+X
+¯
+“ p2πq2{3
+3Γp 2
+3q
+ÿ̟
+”1
+pmod 3q
+`̟
+|̟
+|
+˘ℓ
+Np̟
+q1{6W
+´Np̟
+q
+X
+¯
+` O
+´ ξX5{6
+ε4 log X
+¯
+` O
+´
+X5{6
+ε7{2plog Xq3{2
+¯
+` OA,ξ,ε
+´
+X5{6
+logA´ε´1 X
+¯
+. ` Oξ,εpX5{6´δ1pξ,εqq,
+(13.20)
+uniformly in |ℓ| ď X1{100. After choosing ξ “ ε1000 and A “ ε´1000 (say), the error terms
+in (13.20) are O
+`εX5{6
+log X
+˘
+as X Ñ 8. We conclude by noticing that
+ÿ̟
+”1
+pmod 3q
+1
+Np̟
+q1{6W
+´Np̟
+q
+X
+¯
+„
+ż 8
+0
+Wpxqx´1{6dx ¨ X5{6
+log X
+as
+X Ñ 8,
+and for ℓ‰ 0,
+ÿ̟
+”1
+pmod 3q
+`̟
+|̟
+|
+˘ℓ
+Np̟
+q1{6W
+´Np̟
+q
+X
+¯
+“ o
+´ X5{6
+log X
+¯
+as
+X Ñ 8,
+uniformly in |ℓ| ď X1{100. This proves Theorem 1.1 and Theorem 1.3.
+■
+14. Proof of Theorem 1.2
+Proof of Theorem 1.2. We expand f in a Fourier series
+fpxq “
+ÿ
+kPZ
+pfpkqepkxq.
+For p ” 1 pmod 3q,
+fpθpq “
+ÿ
+kPZ
+pfpkqepkθpq “
+ÿ
+kPZ
+pfpkq˜gp̟
+qk,
+where̟
+is a prime in Zrωs such that p “̟̟
+. Therefore
+ÿ
+p”1
+pmod 3q
+fpθpqW
+´ p
+X
+¯
+
+
+--- PDF PAGE 76 ---
+76
+ALEXANDER DUNN AND MAKSYM RADZIWI L L
+is equal to
+pfp0q
+ÿ
+p”1
+pmod 3q
+W
+´ p
+X
+¯
+`
+ÿ
+0ă|k|ďX1{100
+pfpkq
+´
+ÿ̟
+”1
+pmod 3q
+˜gp̟
+qkW
+´Np̟
+q
+X
+¯
+`Op
+?
+Xq
+¯
+`OApX´Aq
+for any given A ą 10. We now appeal to Theorem 1.1 and Theorem 1.3 to see that the
+sum over k ‰ 0 is equal to
+p pfp1q ` pfp´1qq ¨ p2πq2{3
+3Γp 2
+3q ¨
+ż 8
+0
+Wpxqx´1{6dx ¨ X5{6
+log X ` o
+´ X5{6
+log X
+¯
+,
+as claimed.
+■
+References
+[BGL14] V. Blomer, L. Goldmakher, and B. Louvel, L-functions with n-th-order twists, Int. Math. Res.
+Not. IMRN (2014), no. 7, 1925–1955. MR 3190355
+[BY10]
+S. Baier and M. P. Young, Mean values with cubic characters, J. Number Theory 130 (2010),
+no. 4, 879–903. MR 2600408
+[Cas69]
+J. W. S. Cassels, On the determination of generalized Gauss sums, Arch. Math. (Brno) 5 (1969),
+79–84. MR 294266
+[Dav00]
+H. Davenport, Multiplicative number theory, third ed., Graduate Texts in Mathematics, vol. 74,
+Springer-Verlag, New York, 2000, Revised and with a preface by Hugh L. Montgomery.
+MR 1790423
+[DLMF] NIST Digital Library of Mathematical Functions, http://dlmf.nist.gov/, Release 1.0.18 of 2018-
+03-27, F. W. J. Olver, A. B. Olde Daalhuis, D. W. Lozier, B. I. Schneider, R. F. Boisvert, C. W.
+Clark, B. R. Miller and B. V. Saunders, eds.
+[Has50]
+H. Hasse,
+Vorlesungen ¨uber Zahlentheorie,
+Die Grundlehren der mathematischen Wis-
+senschaften in Einzeldarstellungen mit besonderer Ber¨ucksightigung der Anwendungsgebiete.
+Band LIX, Springer-Verlag, Berlin-G¨ottingen-Heidelberg, 1950. MR 0051844
+[HB88]
+D. R. Heath-Brown, The number of primes in a short interval, J. Reine Angew. Math. 389
+(1988), 22–63. MR 953665
+[HB95]
+, A mean value estimate for real character sums, Acta Arith. 72 (1995), no. 3, 235–275.
+MR 1347489
+[HB00]
+, Kummer’s conjecture for cubic Gauss sums, Israel J. Math. 120 (2000), no. part A,
+97–124. MR 1815372
+[HBP79] D. R. Heath-Brown and S. J. Patterson, The distribution of Kummer sums at prime arguments,
+J. Reine Angew. Math. 310 (1979), 111–130. MR 546667
+[IK04]
+H. Iwaniec and E. Kowalski, Analytic number theory, American Mathematical Society
+Colloquium Publications, vol. 53, American Mathematical Society, Providence, RI, 2004.
+MR 2061214
+[IL07]
+H. Iwaniec and X. Li, The orthogonality of Hecke eigenvalues, Compos. Math. 143 (2007), no. 3,
+541–565. MR 2330439
+[Kub66] T. Kubota, Ein arithmetischer Satz ¨uber eine Matrizengruppe, J. Reine Angew. Math. 222
+(1966), 55–57. MR 188194
+[Kub69]
+, On automorphic functions and the reciprocity law in a number ﬁeld, Lectures in Math-
+ematics, Department of Mathematics, Kyoto University, No. 2, Kinokuniya Book-Store Co.,
+Ltd., Tokyo, 1969. MR 0255490
+[Kub71]
+, Some number-theoretical results on real analytic automorphic forms, Several Complex
+Variables, II (Proc. Internat. Conf., Univ. Maryland, College Park, Md., 1970), 1971, pp. 87–96.
+Lecture Notes in Math., Vol. 185. MR 0314768
+[Kum75] E. E. Kummer, Collected papers, Springer-Verlag, Berlin-New York, 1975, Volume I: Contribu-
+tions to number theory, Edited and with an introduction by Andr´e Weil. MR 0465760
+
+
+--- PDF PAGE 77 ---
+BIAS IN CUBIC GAUSS SUMS
+77
+[Lan94]
+S. Lang, Algebraic number theory, second ed., Graduate Texts in Mathematics, vol. 110,
+Springer-Verlag, New York, 1994. MR 1282723
+[Leh56]
+E. Lehmer, On the location of Gauss sums, Math. Tables Aids Comput. 10 (1956), 194–202.
+MR 86092
+[Mac95] I. G. Macdonald, Symmetric functions and Hall polynomials, second ed., Oxford Mathematical
+Monographs, The Clarendon Press, Oxford University Press, New York, 1995, With contribu-
+tions by A. Zelevinsky, Oxford Science Publications. MR 1354144
+[Mat79]
+C. R. Matthews, Gauss sums and elliptic functions. I. The Kummer sum, Invent. Math. 52
+(1979), no. 2, 163–185. MR 536079
+[Miy89]
+T. Miyake, Modular forms, Springer-Verlag, Berlin, 1989, Translated from the Japanese by
+Yoshitaka Maeda. MR 1021004
+[Pat77]
+S. J. Patterson, A cubic analogue of the theta series, J. Reine Angew. Math. 296 (1977), 125–
+161. MR 563068
+[Pat78a]
+, On Dirichlet series associated with cubic Gauss sums, J. Reine Angew. Math. 303(304)
+(1978), 102–125. MR 514675
+[Pat78b]
+, On the distribution of Kummer sums, J. Reine Angew. Math. 303(304) (1978), 126–
+143. MR 514676
+[Pol14]
+D. H. J. Polymath, New equidistribution estimates of Zhang type, Algebra Number Theory 8
+(2014), no. 9, 2067–2199. MR 3294387
+[vNG53] J. von Neumann and H. H. Goldstine, A numerical study of a conjecture of Kummer, Math.
+Tables Aids Comput. 7 (1953), 133–134. MR 55784
+[Yos87]
+A. Yoshimoto, On the cubic theta function, Nagoya Math. J. 105 (1987), 153–167. MR 881014
+[You21]
+M. P. Young, An improved spectral large sieve inequality for SL3pZq, 2021.
+Appendix A. Appendix
+This table completes the computation in [Pat77, Table III] where the values kjpEq were
+computed for all 1 ď j ď 27. We supplement [Pat77, Table III] by also computing kjpTq
+and kjpPq for all 1 ď j ď 27. We do not require these computations in any of our proofs.
+
+
+--- PDF PAGE 78 ---
+78
+ALEXANDER DUNN AND MAKSYM RADZIWI L L
+j
+djpµq
+kjpEq
+kjpPq
+kjpTq
+1
+τpµq
+1
+4
+1
+2
+τpµqˇepωµq
+19
+5
+2
+3
+τpµqˇep´ωµq
+10
+6
+3
+4
+τpωµq
+7
+7
+6
+5
+τpωµqˇep´µq
+23
+9
+4
+6
+τpωµqˇepµq
+13
+8
+5
+7
+τpω2µq
+4
+1
+9
+8
+τpω2µqˇep´µq
+14
+3
+7
+9
+τpω2µqˇepµq
+22
+2
+8
+10
+ωτ2pωµqˇepµq
+3
+14
+11
+11
+ωτ2pω2µq
+12
+17
+12
+12
+ωτ2pωµq
+11
+11
+10
+13
+ωτ2pµqˇepω2µq
+6
+10
+14
+14
+ωτ2pµqˇep´ωµq
+8
+13
+15
+15
+τ2pω2µqˇep´ω2µq
+24
+16
+13
+16
+τ2pµqˇep´µq
+25
+18
+17
+17
+τ2pµq
+17
+12
+18
+18
+τ2pµqˇepµq
+27
+15
+16
+19
+ω2τ1pω2µqˇepµq
+2
+22
+20
+20
+ω2τ1pωµq
+21
+21
+21
+21
+ω2τ1pω2µq
+20
+26
+19
+22
+ω2τ1pµqˇepωµq
+9
+23
+23
+23
+ω2τ1pωµqˇepω2µq
+5
+19
+24
+24
+ω2τ1pω2µqˇepω2µq
+15
+27
+22
+25
+τ1pµqˇep´µq
+16
+24
+26
+26
+τ1pµq
+26
+20
+27
+27
+τ1pµqˇepµq
+18
+25
+25
+We note that,
+xtpj, kjpEqq : 1 ď j ď 27uy » C12
+2
+xtpj, kjpPqq : 1 ď j ď 27uy » C9
+3
+xtpj, kjpTqq : 1 ď j ď 27uy » C8
+3.
+These isomorphisms are easily seen from the table by following the cycle structure. The
+exponents 12 in C12
+2
+be explained by noticing that the forms j “ 1, 17, 26 are invariant
+under E and all the other elements are of order two, giving us
+27´3
+2
+“ 12 generators.
+Likewise the exponent 8 in C8
+3 can be explained by noticing that the forms with j “ 1, 2, 3
+are invariant and there are 27´3
+3
+“ 8 remaining generators all of order 3. Finally the
+
+
+--- PDF PAGE 79 ---
+BIAS IN CUBIC GAUSS SUMS
+79
+exponent 9 appears in the case of kjpPq because no forms is left invariant by P and P is
+of order three.
+School of Mathematics, Georgia Institute of Technology, Atlanta, USA
+Email address: adunn61@gatech.edu
+Department of Mathematics, Northwestern University Evanston, USA
+Email address: maksym.radziwill@gmail.com

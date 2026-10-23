@@ -1,0 +1,2413 @@
+=== PAGE 1 ===
+Regularity of asymptotically axisymmetric solutions to the 3D
+Navier-Stokes equations with analytic forcing
+Peter Constantin, Mihaela Ignatova, and Vlad Vicol
+Abstract. OpenAI [43] has recently announced a proof of finite time singularity formation for
+the 3D Navier-Stokes equations, in the presence of a C∞-smooth body force.
+The construction
+in [43] has a few key features, among which we single out: (i) the angular mean of the solution
+satisfies specific Type II bounds which are anisotropic; (ii) the solution is exactly axisymmetric in
+a collapsing core region. In this paper we consider solutions of the 3D Navier-Stokes equations in
+the presence of a real-analytic body force, and assume that these solutions satisfy properties (i) and
+(ii) above. We prove that such solutions are in fact regular at the putative singular point. As a
+consequence, in the construction of [43], and in any construction with properties (i) and (ii) whose
+force remains bounded in C2 up to the singular time, the force can neither vanish identically near
+the singular point, nor be real analytic in the space variables, locally uniformly in time. The main
+idea of the proof is inspired by our earlier work [13] and the companion paper [14]: zooming-in
+at the putative singularity using the anisotropic length scales provided by the a priori bounds, we
+arrive at ancient limits whose PDE evolution imposes additional rigidity.
+1. Introduction
+In a recent manuscript [43], OpenAI has announced a proof of finite time singularity formation
+for the 3D Navier-Stokes equations in the presence of a C∞-smooth forcing. The main theorem
+of the manuscript [43, Theorem 1.1] asserts that for every viscosity ν > 0 there exists a force
+f ∈C∞
+c (R3 × (0, ∞)) and a smooth solution (u, π) of the 3D Navier-Stokes equations on R3 × [0, 1)
+∂tu + (u · ∇)u −ν∆u + ∇π = f ,
+div u = 0 ,
+u(·, 0) = 0 ,
+which has a fixed compact spatial support, finite kinetic energy sup0≤t<1 ∥u(·, t)∥L2 < ∞, and the
+solution blows up as t ↑1:
+lim sup
+t↑1
+∥u(·, t)∥L∞= ∞.
+We refer to the solution built in [43] as the OpenAI construction. The singular point is (x, t) = (0, 1),
+and it is isolated: the velocity diverges along points converging to the origin [43, equations (10.20)–
+(10.21)], while every space-time derivative of the velocity has a one-sided limit at the blowup time,
+on compact sets avoiding the origin; see [43, Theorem 3.1(ii), equation (3.5), and the proof of
+Lemma 10.2]. The force f, in turn, is defined as the residual of the momentum equation, left over
+after the construction’s ansatz, and it is C∞smooth but not real analytic: neither on R3, because it
+is compactly supported, nor in the vicinity of the singular point (see Section A.6). In Appendix A
+2020 Mathematics Subject Classification. Primary 35Q30; Secondary 35B44, 35Q31.
+Key words and phrases. Navier-Stokes equations, local regularity, axial symmetry, analytic forcing.
+1
+arXiv:2609.20803v2  [math.AP]  29 Sep 2026
+
+=== PAGE 2 ===
+2
+PETER CONSTANTIN, MIHAELA IGNATOVA, AND VLAD VICOL
+we record those properties of the OpenAI construction which are relevant to this paper; they are
+deduced from statements of [43], which we cite with their locations.
+Of the many features of the solution constructed in [43], we single out the two which enter the
+hypotheses of our main theorem:
+(i) Near the singular point the angular mean v = Pu of the velocity, defined in (1.4) below, satisfies
+Type II bounds which are anisotropic: its radial component vr is bounded by (1 −t)−1/2,
+while its axial and azimuthal components vz and vθ are bounded by (1 −t)−1/2−h for some
+0 < h < 1/100. Moreover, each r-derivative costs a factor of (1−t)−1/2, while each z-derivative
+costs only a factor of (1 −t)−1/2+h.
+(ii) The full velocity field u is exactly axisymmetric on a collapsing core region B(c√1 −t), for
+some c > 0 fixed.
+We do not claim to have verified the correctness of the construction in [43]: Appendix A records
+the statements of that manuscript on which we rely, with their locations, and deduces from them
+the properties used in this paper.
+1.1. Problem setup. The solution constructed in [43] is defined for t ∈[0, 1) and becomes
+singular as t ↑1. Since the equations are invariant under translations in time, we place the singular
+time at t = 0, which is more convenient: we replace the triple (u, π, f) of the manuscript [43] by
+the shifted functions
+(u, π, f)(x, t) 7−→(u, π, f)(x, t + 1) ,
+−1 ≤t < 0 .
+(1.1)
+We denote the shifted triple again by (u, π, f). The singular point is then (x, t) = (0, 0), and the
+time to the singularity is −t, replacing the 1 −t in the time variable of [43]. In particular, the
+factor (1 −t) of item (i) becomes (−t), and the core of item (ii) becomes B(c√−t). From here on,
+every statement of this paper is in the shifted time coordinate of (1.1).
+The goal of this paper is to analyze solutions of the 3D Navier-Stokes equations which are a
+priori assumed to obey properties (i) and (ii) above. We prove that if such solutions were to arise
+from the forced problem with a body force which is real analytic in the space variables, in the sense
+made precise in Theorem 1.1 below, then (x, t) = (0, 0) is a regular point.1
+Throughout the paper we consider suitable weak solutions, in the sense of Caffarelli, Kohn, and
+Nirenberg [6], of the forced 3D Navier-Stokes equations
+∂tu + (u · ∇)u −∆u + ∇π = f ,
+(1.2a)
+div u = 0 ,
+(1.2b)
+where u: Q →R3 is the velocity, π: Q →R is the pressure, and f : Q →R3 is the force.2 Here
+Q := B(1) × (−1, 0) is the unit parabolic cylinder,3 whose upper time endpoint t = 0 is the blowup
+time of the construction.
+1Recall that a point (x0, t0) with x0 ∈B(1) and −1 < t0 ≤0 is called regular if ess supB(x0,ρ)×(t0−ρ2,t0) |u| < ∞
+for some ρ > 0 with B(x0, ρ) × (t0 −ρ2, t0) ⊂B(0, 1) × (−1, 0), and singular otherwise. Here and throughout this
+paper, we use the notation B(x, ρ) = {y ∈R3 : |y −x| < ρ} and B(ρ) = B(0, ρ).
+2The partial regularity results of [6] are stated for a divergence-free force. We apply them to (u, π −πf) with
+the force f −∇πf, where ∆πf = div f on B(1) with zero Dirichlet data. The function ∇πf is bounded on B(1)
+uniformly in time, so that f −∇πf is bounded and divergence free, and the local energy inequality is unchanged, since
+R
+u · ∇(πfφ) dx = 0 for φ ∈C∞
+0 (B(1)). Since curl(f −∇πf) = curl f, and since πf is axisymmetric whenever f is, so
+that (f −∇πf)θ = fθ, the derivative estimates, the circulation equation, and the vorticity equations of Sections 3–5,
+which are where the C2 bound (1.5) on the force enters, are written with f itself.
+3The properties of the construction in [43] are supplied on a cylinder B(R) × (−δ, 0) for some R, δ > 0; see
+Appendix A. Upon decreasing R or δ we may take δ = R2 ≤1, and the scaling u 7→Ru(R ·, R2 ·), π 7→R2π(R ·, R2 ·),
+f 7→R3f(R ·, R2 ·) carries the hypotheses of Theorem 1.1 from B(R) × (−R2, 0) to the unit parabolic cylinder Q,
+with constants changed by fixed powers of R.
+
+=== PAGE 3 ===
+ASYMPTOTICALLY AXISYMMETRIC NAVIER-STOKES WITH ANALYTIC FORCING
+3
+Unless stated otherwise, we take (u, π) to be a suitable weak solution of (1.2) which is smooth
+on compact subsets of Q, and hence f is smooth there as well. Note that the definition of a suitable
+weak solution on Q in the sense of [6], as written in [40, 37], includes the integrability requirement
+u ∈L∞
+t L2
+x(Q) ∩L2
+t H1
+x(Q) ,
+π ∈L3/2
+x,t (Q) .
+(1.3)
+We assume no regularity of the solution (u, π) at time t = 0.
+1.2. Notation. The solutions of (1.2) need not be axisymmetric, but it is convenient to in-
+troduce the notation attached to the cylindrical coordinate system on R3. For φ ∈[0, 2π), denote
+by Qφ the rotation through angle φ about the z-axis. For a solution u: Q →R3 of (1.2) we define
+the rotation and the projection operators4
+(Rφu)(x, t) = Qφu(Q−1
+φ x, t) ,
+Pu = 1
+2π
+Z 2π
+0
+Rφu dφ ,
+(1.4a)
+and denote
+v = Pu ,
+w = u −v ,
+Pw = 0 .
+(1.4b)
+We call v the angular mean, or the axisymmetric part, of u, and we refer to w as the non-
+axisymmetric part. The field u is axisymmetric if w = 0. With x = (x′, z), r = |x′|, and the
+usual cylindrical frame (er, eθ, ez), an axisymmetric field has the form u = urer + uθeθ + uzez,
+where ur, uθ, uz depend only on (r, z, t). For a general field u, the cylindrical coefficients ur, uθ, uz
+depend on θ as well, and the cylindrical coefficients of its angular mean v = Pu are their averages
+in θ, that is, v◦=
+1
+2π
+R 2π
+0
+u◦dθ for ◦∈{r, θ, z}.
+1.3. Main result. Our main result is the following.
+Theorem 1.1 (Regularity under anisotropic Type II bounds and analytic forcing).
+Let (u, π) be a suitable weak solution of (1.2) on Q, smooth on compact subsets of Q, and let
+0 < h < 1/2. Assume that the force is bounded in C2 up to the blowup time,
+Mf :=
+sup
+−1<t<0
+∥f(·, t)∥C2x(B(1)) < ∞.
+(1.5)
+Assume that the force is real analytic in the space variables, locally uniformly on cylinders compactly
+contained in Q: for every R < 1 and every compact interval J ⊂(−1, 0) there are MR,J < ∞and
+aR,J > 0 such that
+sup
+t∈J
+∥∂α
+x f(·, t)∥L∞(B(R)) ≤MR,Ja−|α|
+R,J |α|!
+for all α ∈N3
+0 .
+(1.6)
+Assume that the velocity has the following two properties.
+(i) Its angular mean v := Pu satisfies, on the fixed Euclidean ball B(1), for −1 < t < 0, and all
+nonnegative integers a, b with a + b ≤2,
+∥∂a
+r ∂b
+zvr(·, t)∥L∞(B(1)) ≤Caxi(−t)−1/2−a/2−(1/2−h)b ,
+(1.7a)
+∥∂a
+r ∂b
+zvz(·, t)∥L∞(B(1)) + ∥∂a
+r ∂b
+zvθ(·, t)∥L∞(B(1)) ≤Caxi(−t)−1/2−h−a/2−(1/2−h)b ,
+(1.7b)
+for a constant Caxi > 0 which is independent of t.
+(ii) For each t ∈(−1, 0) there is a radius ρ(t) ∈(0, 1) such that the solution u(·, t) is exactly
+axisymmetric on the ball of radius ρ(t); equivalently,
+w(·, t) = 0
+on B(ρ(t)) .
+(1.8)
+No regularity or quantitative lower bound is assumed on ρ; we only need that ρ(t) > 0 at all
+t ∈(−1, 0).
+4Since rotations about the z-axis preserve B(1), the angular mean projection operator P is well defined on Q.
+
+=== PAGE 4 ===
+4
+PETER CONSTANTIN, MIHAELA IGNATOVA, AND VLAD VICOL
+Then u = v on Q, and (0, 0) is a regular point: there exist r∗, δ∗> 0 such that
+sup
+B(r∗)×(−δ∗,0)
+|u| < ∞.
+(1.9)
+Remark 1.2. A few comments on the hypotheses of Theorem 1.1 are in order:
+(a) The force assumptions (1.5) and (1.6) have distinct roles. Spatial analyticity (1.6) is used at
+each fixed time before the blowup time, so the analyticity radius aR,J is allowed to tend to zero
+as J approaches time 0.5 The regularity argument of Sections 3–5, which proves Theorem 1.3,
+uses instead the uniform spatial C2 bound (1.5). A force which is real analytic in (x, t) on
+a neighborhood of B(1) × [−1, 0] satisfies both conditions, and so does f = 0. No symmetry
+of f is assumed, although, together with (1.8), the hypothesis (1.6) does make curl f rotation
+invariant on all of Q; see Remark 2.5.
+(b) The bounds (1.7) concern only the angular mean of the solution. Apart from the L∞
+t L2
+x ∩
+L2
+t H1
+x(Q) regularity implicit in the definition of a suitable weak solution, no bound on w or
+its derivatives is assumed outside the core. The OpenAI construction does satisfy the bounds
+in (1.7); see Section A.3.
+(c) The OpenAI construction satisfies (1.8) with ρ(t) = c√−t, for c > 0 a constant such that
+c < √2Xa; see Section A.2.
+(d) The force used in [43] does not satisfy (1.6). This is consistent with the construction, whose
+force is built from compactly supported cutoffs.
+(e) Exact axisymmetry on the core (1.8) and analyticity of the force (1.6) may be traded for
+an upper bound on the non-axisymmetric part of the velocity field.
+If ∥w(·, t)∥C3(B(1)) is
+bounded uniformly in t ∈(−1, 0), then (0, 0) is regular. This statement requires no analyticity
+assumption at all; see Remark 2.4. The OpenAI construction does not satisfy such a bound
+on w; see Section A.6.
+1.4. From analytic forcing and axisymmetric core to an axisymmetric problem.
+Our first observation is that the analyticity assumption (1.6) on the force makes u(·, t) real analytic
+on B(1), for every fixed t ∈(−1, 0). This follows from the classical interior analyticity theorem
+for the Navier-Stokes system, due to Kahane [32, Theorem 1.2 and p. 387]; we recall this result as
+Theorem 2.1, and Corollary 2.2 is the form in which we apply it. Combined with the axisymmetric
+core assumption (1.8), this makes u axisymmetric on all of Q: for every rotation Qφ about the
+z-axis, the analytic field u−Rφu vanishes on the core, hence on all of B(1) by the identity theorem;
+these details are given in Section 2.2. Thus u = v, and the bounds on the angular mean in (1.7)
+become bounds on the full velocity field. Once u is known to be axisymmetric, we average (1.2)
+over the rotations Rφ, which leaves the velocity terms unchanged and replaces only the pressure
+and the force by their angular means. By (1.5), the angle-averaged force Pf remains bounded in
+C2.
+This reduces Theorem 1.1 to the regularity of axisymmetric solutions of the 3D Navier-Stokes
+equations with C2 forcing, under the anisotropic bounds inherited from (1.7). That result is Theo-
+rem 1.3 below, which is of independent interest. In order to state it, we fix the standing assumptions
+of Sections 3–5: (u, π) is an axisymmetric suitable weak solution of the forced equations (1.2) on
+Q, which is smooth on compact subsets of Q,6 in the class described in Section 1.1, and whose force
+satisfies (1.5). For 0 < h < 1/2 we define the radial and axial lengths as in [43]:
+ℓr(t) = (−t)1/2 ,
+ℓz(t) = (−t)1/2−h .
+(1.10)
+The range 0 < h < 1/2 ensures that both lengths tend to zero as t ↑0. The bounds in (1.11) below
+are imposed on the scalar cylindrical coefficients of u and on their derivatives through total order
+5Condition (1.6) holds if and only if, for every R < 1 and every compact J ⊂(−1, 0), each f(·, t) with t ∈J is
+the restriction of a holomorphic function on a fixed complex neighborhood of B(R), bounded uniformly in t ∈J.
+6Smoothness in Cartesian coordinates gives ur = uθ = ∂ruz = 0 at r = 0, for all t < 0.
+
+=== PAGE 5 ===
+ASYMPTOTICALLY AXISYMMETRIC NAVIER-STOKES WITH ANALYTIC FORCING
+5
+two, with each radial derivative costing a factor of ℓ−1
+r , and each axial derivative costing a factor
+of ℓ−1
+z . The following theorem is the anisotropic counterpart of the main result of [14]:
+Theorem 1.3 (Regularity of axisymmetric solutions under anisotropic bounds). Let
+(u, π) be an axisymmetric suitable weak solution of (1.2) in Q, which is smooth on compact subsets
+of Q, with a force satisfying (1.5). Let 0 < h < 1/2. Suppose that there exists a constant Caxi > 0
+such that
+|∂a
+r ∂b
+zur(r, z, t)| ≤Caxi (−t)−1/2−a/2−(1/2−h)b ,
+(1.11a)
+|∂a
+r ∂b
+zuz(r, z, t)| + |∂a
+r ∂b
+zuθ(r, z, t)| ≤Caxi (−t)−1/2−h−a/2−(1/2−h)b ,
+(1.11b)
+on Q, for all nonnegative integers a, b with a + b ≤2. Then, (0, 0) is a regular point.
+Remark 1.4. We make a few comments on the hypotheses of Theorem 1.3.
+(a) The bounds in (1.11) say that the rescaled fields (−t)1/2ur, (−t)1/2+huz, and (−t)1/2+huθ,
+regarded as functions of (r/ℓr(t), z/ℓz(t)), are bounded in C2 uniformly in t; see (4.6) below.
+(b) Neither (1.11) nor the Type I bound |u| ≤C(−t)−1/2 implies the other: at a = b = 0 the
+bounds on uz and uθ in (1.11) are weaker by the factor (−t)−h, while at every b ≥1 the bound
+imposed on ur is smaller by the factor (−t)hb than the bound (−t)−1/2−(a+b)/2 which the
+parabolic scaling attaches to a Type I velocity bound. Theorem 1.3 is therefore not contained
+in the Type I results of Chen, Strain, Yau, and Tsai [7], Chen, Strain, Tsai, and Yau [8], Koch,
+Nadirashvili, Seregin, and ˇSver´ak [33], Seregin and ˇSver´ak [54], or Zhang [65], nor are those
+results contained in it.
+(c) The proof of Theorem 1.3 may be completed using only the bounds on ur and uz from (1.11),
+with the assumptions on uθ dropped altogether; see Remark 5.2. For cosmetic reasons, we
+nevertheless state (1.11) for the three components alike, and do not pursue the minimal hy-
+pothesis.
+Next, we outline the proof of Theorem 1.3; the estimates and the full proof are postponed to
+Sections 3–5. The strategy is that of the companion paper [14], whose steps are as follows. In [14]
+we consider unforced axisymmetric solutions which are bounded in C2 after rescaling isotropically
+at a single vanishing length scale ℓ(t), for which (−t)/ℓ(t)2 tends to zero. Using this length scale
+we zoom in, along times and points at which the gradient of the meridional velocity is not small
+compared with (−t)−1. Since the pressure is not controlled after such a zoom, the limit is taken in
+the vorticity equations rather than in the momentum equation. Partial regularity and the maximum
+principle bound the circulation ruθ on a ball of fixed radius, and the rescaling multiplies it by a
+factor which vanishes, so that the swirl source of the potential vorticity equation disappears in
+the limit. The scalar carried into the limit is then either the potential vorticity or the azimuthal
+vorticity, depending on whether the rescaled axis stays at finite distance or recedes to infinity, and
+in both cases we prove that the limiting scalar vanishes at the upper endpoint of the rescaled time
+interval.
+The limiting rescaled meridional field is therefore bounded, with vanishing azimuthal
+vorticity and vanishing divergence; hence its gradient vanishes, which contradicts the selection of
+the points at which we zoomed in. The elimination of the circulation first, and of the potential
+vorticity second, is also the mechanism of the Euler rigidity theorem in [13, Theorem 4.5]; what [14]
+adds is that this argument survives the passage to an ancient limit, in which the transporting field
+is only a weak-∗limit.
+The anisotropy inherent in the lengths (1.10) forces the proof in this paper to depart from [14].
+To see this, note that after the zoom-in, the radial diffusion coefficient is (−t)/ℓr(t)2 = 1, the axial
+one is (−t)/ℓz(t)2 = (−t)2h, and the rescaling multiplies the circulation by (−t)/(ℓr(t)ℓz(t)) =
+(−t)h. In the isotropic case all three of these quantities are of size (−t)/ℓ(t)2 →0 as t ↑0, and
+thus all three terms vanish in the zoom-in limit. Here the last two vanish, but the first one does
+not. The first difficulty is therefore that radial diffusion survives in the limit, which is no longer
+
+=== PAGE 6 ===
+6
+PETER CONSTANTIN, MIHAELA IGNATOVA, AND VLAD VICOL
+governed by a transport equation: the step which eliminates the potential vorticity in [13, 14],
+its conservation along backward meridional trajectories, is unavailable. In place of an argument
+based on backward characteristics, we use Lemma 3.3, which is a comparison principle for bounded
+distributional solutions of a drift-diffusion equation whose diffusion acts in a (strict) subset of the
+variables.
+As in [14], the zoom-in limit need not be a solution of (1.2), so we take the curl of (1.2) first,
+which removes the pressure, and carry only the vorticity equations (3.3) and (3.4) into the limit.
+Whether the rescaled axis stays at finite distance or recedes, the limiting scalar is bounded, solves
+a homogeneous equation on the whole space, and tends uniformly to zero in the remote past; the
+comparison principle then implies that it vanishes. Incompressibility and the boundedness of the
+limiting velocity then give smallness of (−t)∂rur and (−t)∂zuz, and, when the rescaled axis stays
+at finite distance, of (−t)ur/r; when it recedes, that quotient is small by (1.11) alone. Lastly, the
+bound (−t)|∂zur| ≤C(−t)h is immediate from (1.11), and it gives the relative smallness of this
+term as well.
+The second difficulty is that ∂ruz may be as large as C(−t)−1−h, so that an o((−t)−1) bound
+on the full gradient of the meridional velocity b = urer + uzez is unavailable at any stage of the
+argument. We therefore track only the four quantities in
+Gρ(t) :=
+|∂rur(·, t)| + |ur(·, t)/r| + |∂zuz(·, t)| + |∂zur(·, t)|
+
+L∞(B(ρ)) ,
+(1.12)
+where ur/r is extended continuously across the axis. The second quantity is dominated by the first
+in the supremum over B(ρ), since ur vanishes on the axis and the radial segment to the axis stays
+in B(ρ); we keep it because Section 5 uses ur/r as the coefficient of uθ in (3.1c) and of ω2
+θ in (5.7).
+The relative smallness result, which replaces [14, Proposition 3.1], is as follows:
+Proposition 1.5 (Smallness of the meridional quantities). Under the hypotheses of The-
+orem 1.3, for every fixed 0 < ρ < 1 we have
+lim
+t↑0 (−t)Gρ(t) = 0 .
+(1.13)
+To deduce regularity at (0, 0) from (1.13), we first show that for every η > 0 the bound
+∥uθ(·, t)∥L∞≤Cη(−t)−η holds on an interior ball, at all sufficiently late times; we obtain this
+bound by applying the maximum principle in the swirl equation to the function (−t)ηuθ.
+We
+then consider the local enstrophy balance, which contains the nonlinear term (∂ruz)ωrωz, whose
+coefficient ∂ruz may be of size (−t)−1−h, too large to be placed in L∞and fed to Gr¨onwall’s
+inequality. Appealing instead to the identity ωr = −∂zuθ, we integrate by parts in z, which moves
+the derivative from the swirl onto the product (∂ruz)ωz. As a consequence, the swirl enters only
+through its supremum, and the two factors of the product are controlled by the enstrophy and
+the enstrophy dissipation through local div-curl estimates. The resulting enstrophy estimate then
+closes and gives a Ladyzhenskaya-Prodi-Serrin bound up to time zero, as we show in Section 5.
+1.5. Prior results on axisymmetric Navier-Stokes. Without swirl, axisymmetric solu-
+tions of 3D Navier-Stokes are globally regular; see Ladyzhenskaya [36] and also Ukhovskii and
+Yudovich [62]. With swirl, the global regularity question is open and only conditional results are
+available. Singularities which obey a scale-invariant (so-called Type I) pointwise bound are ex-
+cluded: |u| ≤C(r2 −t)−1/2 by Chen, Strain, Yau, and Tsai [7]; r|u| ≤C by Koch, Nadirashvili,
+Seregin, and ˇSver´ak [33], and |u| ≤C(−t)−1/2 by Chen, Strain, Tsai, and Yau [8]. Seregin and
+ˇSver´ak [54] proved a local Type I regularity criterion which imposes the bound ≤C(−t)−1/2 only on
+the meridional part of the velocity. Zhang [65] recently proved regularity under the one-component
+one-sided Type I assumption: ur ≥−C(−t)−1/2 for some C > 0, with ruθ bounded. For a detailed
+account of the many other conditional results available for axisymmetric Navier-Stokes, we refer to
+the book of Tsai [61, Chapter 10].
+
+=== PAGE 7 ===
+ASYMPTOTICALLY AXISYMMETRIC NAVIER-STOKES WITH ANALYTIC FORCING
+7
+Past the Type I threshold, singularities are constrained by the growth of critical norms: the
+L∞
+t L3
+x theorem of Escauriaza, Seregin, and ˇSver´ak [24] was made quantitative by Tao [59], and
+was adapted to the axisymmetric class, with quantitative improvements, by Palasek [46] and by
+O˙za´nski and Palasek [45].
+Closer to the hypotheses of this paper, Seregin [49] showed that an axisymmetric singularity
+must be of Type II, in the sense of local scale-invariant integral quantities. Moreover, in [50, 51,
+52, 53] he reduced the Type II blowup scenario to a Liouville problem for ancient Euler solutions,
+which may be ruled out in special cases.
+1.6. Research context for the OpenAI construction. The problem of spontaneous gen-
+eration of singularities in incompressible fluids has a long history and a strong scientific motivation.
+Research in this area has produced a vast literature which forms the fertile environment surround-
+ing the OpenAI construction. We do not have space here to do justice to the numerous ideas and
+results in this area, but it would not be amiss to mention some of the important developments
+which are relevant to [43].
+For the incompressible 3D Euler equations, Elgindi [22] proved finite time singularity forma-
+tion for axisymmetric solutions without swirl, with a velocity of class C1,α for α > 0 sufficiently
+small; see also the finite energy version in Elgindi, Ghoul, and Masmoudi [23]. Earlier this year,
+blowup constructions in the swirl-free axisymmetric setting were obtained for the entire permissi-
+ble range α ∈(0, 1/3), independently, by Shkoller [57], Chen [10, 11], and Shao, Wei, Zhang, and
+Zhang [56]. For smooth initial data in the presence of a solid boundary, Chen and Hou [9] proved
+finite time blowup for 3D Euler using modulated self-similar analysis and a computer-assisted argu-
+ment. Closer to the Navier-Stokes equations, Tao [58] constructed finite time blowup for an “aver-
+aged” Navier-Stokes equation, whose modified nonlinearity retains the scaling and energy structure
+of the original PDE. Numerical and machine-guided searches for a self-similar blowup profile for
+3D Euler and other incompressible fluid models were performed in [29, 30, 63, 64, 26, 21]. These
+computations have shaped the expectations for a rigorous construction: which scenarios are worth
+pursuing, and at which regularity a singularity should be looked for. All results mentioned in this
+paragraph consider the classical, unforced, problem.7
+A different route to blowup for the 3D Euler equations (and related models), in the presence
+of a body force, was opened by C´ordoba and Mart´ınez-Zoroa. The force injects, at a sequence
+of times accumulating at the blowup time, small perturbations at ever higher frequencies, which
+the nonlinearity amplifies.
+The question is then how smooth and how small the force can be
+made. We refer to [15] for the 3D Euler result, with a force which lies in C1,1/2−ε ∩L2 uniformly
+in time, and to [16] for the 2D incompressible porous media result, with a source which is C∞
+smooth in space, uniformly in time. In this direction, Alp¨oge and Buckmaster have reached a force
+which is C∞in both space and time. Very recently they announced finite time blowup for the
+3D Euler equations [2], for the inviscid 2D Boussinesq system [1], and, with Coiculescu, for the
+2D incompressible porous media equation [3]. Each of these three papers considers a C∞
+x,t smooth
+force.
+At the technical level, the OpenAI manuscript names two additional research programs whose
+ideas have influenced its construction. For the evolution of the wavevectors and of the velocity
+polarizations of the oscillatory pulses along the background flow, [43] records the methods of
+Lifschitz and Hameiri [39] and of Friedlander and Vishik [25], which detect the instability of an
+inviscid flow under short wavelength perturbations. For the realization of a prescribed stress by
+the addition of high frequency oscillations, [43] records the use of ideas from the convex integration
+program for incompressible fluid equations, introduced by De Lellis and Sz´ekelyhidi [18, 19], and
+then further developed in [17, 31, 5] and many others.
+7We note that recently OpenAI has also claimed to prove finite time blowup for the 3D Euler equations, from
+smooth compactly supported initial data [44].
+
+=== PAGE 8 ===
+8
+PETER CONSTANTIN, MIHAELA IGNATOVA, AND VLAD VICOL
+We emphasize that several decades of conditional regularity results restrict the form that a
+putative 3D Navier-Stokes singularity may take; this helps tremendously if one tries to narrow
+the search space for a blowing up solution. For a suitable weak solution whose force is bounded,
+the partial regularity theory of Caffarelli, Kohn, and Nirenberg [6] forces the singular set to have
+vanishing one-dimensional parabolic Hausdorff measure. The singularity, moreover, cannot be of
+the backward self-similar form proposed by Leray, cf. Neˇcas, R˚uˇziˇcka, and ˇSver´ak [42] for L3
+profiles, Tsai [60] for Lp profiles with 3 < p < ∞under local energy assumptions, and Pineau and
+Vicol [48] for rotated self-similar profiles which obey a Type I bound, at small or large rotation
+speeds. Nor can the direction of the vorticity stay coherent, by the alignment criterion of Constantin
+and Fefferman [12]. In the axisymmetric class, the Type I bounds recalled in Section 1.5 likewise
+exclude singularities. Self-similar Euler profiles with similarity exponent below 1/2, which is the
+range that a Navier-Stokes zoom at an Euler length would require, are also excluded when the
+profile is smooth and satisfies an outgoing property [13]. Note that apart from the partial regularity
+theory, these results consider the unforced Navier-Stokes problem. The above list is far from being
+complete; we refer to the book of Lemari´e-Rieusset [38] for an excellent recent survey.
+Remark 1.6 (Forced singularity constructions for shell models). Returning to the forced
+constructions, we draw an analogy with the finite time singularities constructed for model equations
+motivated by Navier-Stokes. Palasek [47, Theorem 1.3 and Remark 1.5] recently proved finite time
+blowup in the energy supercritical range for a viscous shell model of Obukhov type, with super-
+exponentially separated frequencies. His initial data is smooth, and the smooth force he considers
+is such that its norms all tend to zero at the blowup time [47, Remark 1.4]. The force is nonzero at
+every time before the blowup, so it vanishes identically on no time interval ending at the singularity.
+The force is a residual, as in [43]: here it is the dissipation of each mode, switched off until that
+mode is activated [47, Section 3.3]. Interestingly, Palasek notes that the force cannot be dropped
+in the parameter range he associates to three dimensions [47, Remark 1.4 and Section 1.3.2]; this
+statement is offered without proof, and is attributed to forthcoming work of Looi.
+1.7. Organization of the paper. Section 2 proves the analytic symmetry reduction, deduces
+Theorem 1.1 from Theorem 1.3, and records the consequences for the force. Sections 3–5 prove
+Theorem 1.3. Appendix A records the properties claimed for the OpenAI construction which enter
+the hypotheses of our results, and what those results give for it.
+2. Reduction to the axisymmetric problem
+In this section we deduce Theorem 1.1 from Theorem 1.3. Throughout this section v = Pu
+and w = u −v are as in (1.4), Q = B(1) × (−1, 0), and (u, π) is smooth on compact subsets of the
+cylinder on which it is given, so that f is smooth there as well.
+2.1. Spatial analyticity at a fixed time before blowup. That u(·, t) is real analytic in
+space at each fixed t < 0 is classical. We recall the statement in the form in which it is used here
+and in Remark 2.6. No analyticity in time is assumed.
+Theorem 2.1 (Interior spatial analyticity [32, Theorem 1.2]). Let R > 0, t1 < t2, and
+let (u, π) be a solution of (1.2) on the cylinder B(R) × (t1, t2), smooth on compact subsets of that
+cylinder. Assume that the force is real analytic in the space variables, locally uniformly on cylinders
+compactly contained in B(R) × (t1, t2): for every R′ < R and every compact interval J ⊂(t1, t2)
+there are M < ∞and a > 0 such that8
+sup
+t∈J
+∥∂α
+x f(·, t)∥L∞(B(R′)) ≤Ma−|α||α|!
+for all α ∈N3
+0 .
+(2.1)
+8Since k! ≤kk ≤ekk! for k ≥1, the hypothesis (2.1) is unchanged if |α|! is replaced by |α||α|, which is the form
+in which Kahane states it on p. 387 of [32].
+
+=== PAGE 9 ===
+ASYMPTOTICALLY AXISYMMETRIC NAVIER-STOKES WITH ANALYTIC FORCING
+9
+Then, the velocity obeys a bound of the same form: for every R′ < R and every compact interval
+J ⊂(t1, t2) there are M′ < ∞and a′ > 0 such that
+sup
+t∈J
+∥∂α
+x u(·, t)∥L∞(B(R′)) ≤M′(a′)−|α||α|!
+for all α ∈N3
+0 .
+(2.2)
+In particular, u(·, t) is real analytic on B(R) for every t ∈(t1, t2). The constants M′ and a′ depend
+on R′ and J, and they need not be uniform up to the parabolic boundary: a′ may tend to zero as J
+approaches an endpoint of (t1, t2).
+For a conservative force this is Kahane’s theorem [32, Theorem 1.2], proved there for weak
+solutions, under the hypotheses of Serrin’s interior regularity theorem [55, Section 3]. For a non-
+conservative force, Kahane states on p. 387 of [32] that the conclusion of [32, Theorem 1.2] persists
+once f obeys (2.1) in its |α||α| form, with analyticity understood as the bound [32, equation (1.5)],
+which is (2.2) above. The point is not taken up again in that paper, so we indicate why the proof
+goes through. First, the spatial derivatives are estimated in [32] through the representation for-
+mulas of Serrin [55, equations (18) and (20)]. With a force, the heat potential for the vorticity
+carries f at order zero, in the slot of the bilinear term [55, Section 4, equation (23) and the display
+which follows it]. Second, adjoining f to the unknown (u, ω) of the abstract integral system of [32,
+Theorem 1.3] makes the force one more component of the inhomogeneity, in rows whose two ker-
+nel blocks vanish. Third, the two hypotheses of that theorem hold: the unknown, now the triple
+(u, ω, f), is bounded on every compact cylinder, by smoothness here and by [32, Theorem 1.1]
+in [32]; and the inhomogeneity obeys [32, equation (1.5)], which for f is the bound (2.1). The
+inductive estimates of [32, Section 4] then apply without change.
+The hypothesis (1.6) of Theorem 1.1 is (2.1) on the unit parabolic cylinder. In this paper we
+apply Theorem 2.1 in the following form.
+Corollary 2.2 (Spatial analyticity at a fixed time before blowup). Let R, δ > 0, and
+let (u, π) be a solution of (1.2) on B(R) × (−δ, 0), smooth on compact subsets of that cylinder.
+Suppose that for some 0 < R′ ≤R, some −δ < t1 < t2 < 0, and some M < ∞and a > 0,
+sup
+t∈[t1,t2]
+∥∂α
+x f(·, t)∥L∞(B(R′)) ≤Ma−|α||α|!
+for all α ∈N3
+0 .
+(2.3)
+Then, for every t ∈(t1, t2), the velocity u(·, t) is real analytic on B(R′).
+This is Theorem 2.1 on the cylinder B(R′) × (t1, t2), on which (2.3) gives (2.1) with the same
+M and a. Since the zero force satisfies (2.3) on every cylinder, for the unforced equations u(·, t) is
+real analytic on B(R) at every t ∈(−δ, 0).
+We note that analyticity in space and time for the Navier-Stokes equations was proved by
+Masuda [41]; this result was extended to uniform analyticity up to an analytic boundary by Ko-
+matsu [34]. Quantitative lower bounds on the radius of spatial analyticity are due to Gruji´c and
+Kukavica [27], in terms of Lp norms of the initial datum. At interior points, and for a divergence-
+free force analytic on a ball, this result is due to Bradshaw, Gruji´c, and Kukavica [4].
+2.2. Axisymmetry on a fixed ball, and the proof of Theorem 1.1.
+Proof of Theorem 1.1. By Corollary 2.2 on Q, applied to each cylinder B(R) × J in (1.6),
+the velocity u(·, t) is real analytic on B(1) for every t ∈(−1, 0). We fix such a t and an angle
+φ ∈[0, 2π). With the notation in (1.4), we define
+Fφ(x) = u(x, t) −(Rφu)(x, t) = u(x, t) −Qφu(Q−1
+φ x, t) .
+(2.4)
+Since Qφ preserves B(1), the field Fφ is real analytic on B(1). Since Qφ also preserves the core ball
+B(ρ(t)), on which u = v by (1.8), and since v = Pu is invariant under Rφ, we have Fφ = v−Rφv = 0
+on B(ρ(t)). The identity theorem on the connected set B(1) then gives Fφ ≡0 on B(1). This holds
+
+=== PAGE 10 ===
+10
+PETER CONSTANTIN, MIHAELA IGNATOVA, AND VLAD VICOL
+for every φ ∈[0, 2π) and every t ∈(−1, 0). Averaging the identity u = Rφu over φ, and recalling
+the definition (1.4) of P, we obtain u = Pu, that is,
+u = v ,
+w = 0
+on Q .
+(2.5)
+Note that this argument is made at each fixed time, so that the core radius ρ(t) and the analyticity
+radii may tend to zero as t ↑0, at unrelated rates.
+Next, we average the Navier-Stokes momentum equation (1.2) with respect to the azimuthal
+angle. Since, by (2.5), u is fixed by every Rφ, and since Rφ commutes with ∂t, with ∆, and with
+u 7→(u · ∇)u, applying P to (1.2) leaves the three velocity terms unchanged and replaces only the
+pressure and the force by their angular means
+¯π(x, t) = 1
+2π
+Z 2π
+0
+π(Q−1
+φ x, t) dφ ,
+¯f = Pf .
+The averaged pressure remains in L3/2
+x,t (see (1.3)), and (1.5) gives ∥¯f∥L∞
+t C2x ≤CMf. The pair (u, ¯π)
+is suitable with the force ¯f: it is smooth on compact subsets of Q and solves the averaged equation
+classically, so the local energy inequality is an identity, with ¯π ∈L3/2
+x,t (Q) and ¯f bounded.
+Thus (u, ¯π, ¯f) is an axisymmetric suitable weak solution of (1.2) on Q, in the class of Section 1.4,
+whose force obeys (1.5) with CMf in place of Mf. Moreover, by (2.5) the bounds (1.7) on the
+angular mean are the bounds (1.11) on u itself, with the same exponent h and the same constant
+Caxi. Theorem 1.3 makes (0, 0) a regular point, which is (1.9).
+□
+2.3. Consequences for the force. The analyticity of the force enters the proof of The-
+orem 1.1 at exactly one point, the passage from symmetry on the shrinking core (1.8), to the
+symmetry (2.5) on the fixed ball; for a merely smooth force we do not know how to make that
+passage. At a singular point, we may restate Theorem 1.1 as a statement about the force alone.
+Corollary 2.3 (The force under an axisymmetric core). Let (u, π) be a suitable weak
+solution of (1.2) on Q, smooth on compact subsets of Q, with a force f satisfying (1.5), assume (1.7)
+for some 0 < h < 1/2 and Caxi < ∞, and assume (1.8). If (0, 0) is a singular point, then f
+violates (1.6), and in particular f̸ ≡0 there. Moreover, f then does not vanish identically on any
+cylinder B(R′) × (−δ′, 0) with 0 < R′ ≤1 and 0 < δ′ ≤1.
+Proof of Corollary 2.3. The first assertion is the contrapositive of Theorem 1.1, and f = 0
+satisfies (1.6). For the second, were f to vanish identically on such a cylinder, the hypotheses of
+Theorem 1.1 would hold there with ρ(t) replaced by min{ρ(t), R′/2}, and the Navier-Stokes scaling
+would make (0, 0) regular.
+□
+Remark 2.4 (Upper bounds in place of exact vanishing). We note that exact axisym-
+metry on the core may be replaced by a bound on the non-axisymmetric part w of the velocity, on
+a fixed ball. That is, if in Theorem 1.1 we drop (1.8) and (1.6) and assume instead that
+Mw :=
+sup
+−1<t<0
+∥w(·, t)∥C3x(B(1)) < ∞,
+(2.6)
+then (0, 0) is still regular. No smallness of Mw is required, and analyticity plays no role. Indeed,
+averaging (1.2) over rotations kills the mixed terms (v · ∇)w and (w · ∇)v, since v is invariant and
+Pw = 0, and gives
+∂tv + (v · ∇)v −∆v + ∇¯π = F + ¯f ,
+(2.7a)
+div v = 0 ,
+(2.7b)
+F = −P
+ (w · ∇)w
+
+,
+(2.7c)
+sup
+−1<t<0
+∥F(·, t)∥C2x(B(1)) ≤CM2
+w ,
+(2.7d)
+
+=== PAGE 11 ===
+ASYMPTOTICALLY AXISYMMETRIC NAVIER-STOKES WITH ANALYTIC FORCING
+11
+where C is a universal constant, and ¯f = Pf. Averaging does not increase the norms in (1.3),
+and (v, ¯π) is smooth on compact subsets of Q, so it is a suitable weak solution of (2.7) with the
+force F + ¯f, whose C2 norm is at most CM2
+w + CMf. Theorem 1.3 makes v bounded near (0, 0),
+and (2.6) makes u = v + w bounded there as well. We emphasize that the identity theorem uses
+the exact vanishing in (1.8), and that we do not know how to replace it by an algebraic rate of
+smallness. Section A.6 shows that (2.6) fails for the OpenAI construction.
+Remark 2.5 (The symmetry of the curl of the force). No symmetry of f is assumed in
+Theorem 1.1, but the hypotheses (1.8) and (1.6) together imply one: for every φ ∈[0, 2π),
+Rφ(curl f) = curl f ,
+on Q .
+(2.8)
+Indeed, once Rφu = u is known from the proof of Theorem 1.1, applying Rφ to the momentum
+equation gives f −Rφf = ∇(π −π ◦Q−1
+φ ), and (2.8) follows upon taking the curl. It would be
+interesting to decide whether in Theorem 1.1 assumption (1.6) may be replaced by the rotation
+invariance (2.8) of curl f.
+Remark 2.6 (Exterior vanishing and analyticity). A second obstruction to the analyticity
+of the force uses neither (1.7) nor (1.8), only an open set off the axis on which the meridional velocity
+vanishes. Let (u, π) be a solution of (1.2) on B(R) × (−δ, 0), smooth on compact subsets of that
+cylinder, and let E ⊂B(R) ∩{r > 0} be a nonempty open set such that
+ur = uz = 0
+on E × (−δ, 0) .
+(2.9)
+Suppose that uz(0, t0)̸ = 0 for some t0 ∈(−δ, 0).9 Then, on every ball B(R′) with 0 < R′ ≤R
+which meets E, and for every t1 ∈(−δ, t0), there are no constants M < ∞and a > 0 such that
+sup
+t∈[t1,t0]
+∥∂α
+x f(·, t)∥L∞(B(R′)) ≤Ma−|α||α|!
+for all α ∈N3
+0 .
+(2.10)
+In particular, f does not vanish identically on B(R′) × (t1, t0), since the zero force satisfies (2.10).
+The proof is short. Suppose that (2.10) holds for some M and a. By Corollary 2.2, u(·, t) is then
+real analytic on B(R′) for every t ∈(t1, t0). At each such t, the scalar uz(·, t) vanishes on the
+nonempty open set E ∩B(R′) by (2.9), hence on all of B(R′) by the identity theorem, and in
+particular uz(0, t) = 0. Letting t ↑t0 and using the continuity of uz(0, ·), we obtain uz(0, t0) = 0,
+a contradiction.
+3. Axisymmetric identities and auxiliary results
+We now turn to the proof of Theorem 1.3. Throughout Sections 3–5, (u, π) is an axisymmetric
+suitable weak solution of (1.2) on Q, in the class of Section 1.4, with a force satisfying (1.5);
+averaging over rotations as in Section 2.2, we may (and do) take π and f axisymmetric as well.
+This section records a few of the auxiliary results that the proof needs: the equations in cylindrical
+variables, a maximum principle for functions vanishing on the axis (Lemma 3.1), a regular annulus
+with a bounded circulation (Lemma 3.2), and a comparison principle for the bounded scalars
+produced by the ancient limits of Section 4 (Lemma 3.3). Apart from the force, the identities and
+Lemma 3.2 are the same as those of the companion paper [14]; the force enters as (curl f)θ in (3.3),
+as g = (curl f)θ/r in (3.4), and as rfθ in (3.5), and (1.5) bounds all three. We denote by C a
+constant which may depend on h, Mf, the constant Caxi of (1.11), and fixed interior radii, but
+never on a sequence of rescaling times.
+9For the OpenAI construction this holds at every time sufficiently close to the blowup time, where uz(0, t) =
+j0(−t)−1/2−h̸ = 0 by (A.12). The remark thus says that a flow which is pure swirl on an open set off the axis, and
+has nonzero axial velocity at a point of the axis, cannot arise from a spatially analytic force: analyticity would carry
+the exterior vanishing of uz to the axis.
+
+=== PAGE 12 ===
+12
+PETER CONSTANTIN, MIHAELA IGNATOVA, AND VLAD VICOL
+3.1. Axisymmetric identities. In the cylindrical frame (er, eθ, ez), and with π and f ax-
+isymmetric, the system (1.2) reads as
+∂tur + ur∂rur + uz∂zur −u2
+θ
+r =
+
+∂2
+r + 1
+r∂r + ∂2
+z −1
+r2
+
+ur −∂rπ + fr ,
+(3.1a)
+∂tuz + ur∂ruz + uz∂zuz =
+
+∂2
+r + 1
+r∂r + ∂2
+z
+
+uz −∂zπ + fz ,
+(3.1b)
+∂tuθ + ur∂ruθ + uz∂zuθ + ur
+r uθ =
+
+∂2
+r + 1
+r∂r + ∂2
+z −1
+r2
+
+uθ + fθ ,
+(3.1c)
+∂rur + ur
+r + ∂zuz = 0 .
+(3.1d)
+We call b = urer + uzez the meridional velocity and uθeθ the swirl, and we write the vorticity
+components, the circulation, and the potential vorticity as
+ωr = −∂zuθ ,
+ωθ = ∂zur −∂ruz ,
+ωz = ∂ruθ + uθ
+r ,
+Γ = ruθ ,
+Ω= ωθ
+r .
+(3.2)
+Applying ∂z to (3.1a) and ∂r to (3.1b) and subtracting, we eliminate the pressure and obtain
+∂tωθ + ur∂rωθ + uz∂zωθ = ur
+r ωθ + 1
+r∂z(u2
+θ) +
+
+∂2
+r + 1
+r∂r + ∂2
+z −1
+r2
+
+ωθ + (curl f)θ ,
+(3.3)
+where (curl f)θ = ∂zfr −∂rfz.
+Dividing (3.3) by r, and using the identity r−1(∂2
+r + r−1∂r −
+r−2)(rΩ) = (∂2
+r + 3r−1∂r)Ω, we also obtain
+∂tΩ+ ur∂rΩ+ uz∂zΩ=
+
+∂2
+r + 3
+r∂r + ∂2
+z
+
+Ω+ ∂z
+u2
+θ
+r2
+
++ g ,
+g := (curl f)θ
+r
+.
+(3.4)
+Lastly, upon multiplying the swirl equation (3.1c) by r, we obtain
+∂tΓ + ur∂rΓ + uz∂zΓ =
+
+∂2
+r −1
+r∂r + ∂2
+z
+
+Γ + rfθ .
+(3.5)
+Near the axis, a smooth axisymmetric field has components ur = r a(r2, z, t), uθ = r c(r2, z, t),
+and uz = d(r2, z, t), with a, c, and d smooth; thus Ω, uθ/r, and g are smooth functions of (r2, z, t),
+and (3.4) holds across the axis once its radial operator ∂2
+r +3r−1∂r is read as the radial Laplacian of
+R4, as in [33]. Since ur, ∂zur, ∂ruz, ∂zfr, and ∂rfz vanish on the axis, the quotients ur/r, ∂zur/r,
+∂ruz/r, and g are bounded, along the radial segment to the axis, by the suprema of ∂rur, ∂r∂zur,
+∂2
+ruz, ∂r∂zfr, and ∂2
+rfz on B(1); in particular
+|g| ≤CMf
+on Q .
+(3.6)
+3.2. A maximum principle for functions vanishing on the axis. The swirl equa-
+tion (3.1c) and the circulation equation (3.5) have coefficients which are singular on the axis, and,
+unlike (3.4), they are not lifted to a higher dimension. The proofs of Lemmas 3.2 and 5.1, and
+Remark 5.2, apply the maximum principle to them in the following form.
+Lemma 3.1 (Maximum principle for functions vanishing on the axis). Let R > 0,
+t1 < s, k ∈R, and M ≥0, and define the set D = {(x, t): x ∈B(R), r = |x′| > 0, t1 < t ≤s}.
+Let ϕ = ϕ(r, z, t) be continuous on B(R) × [t1, s], with ϕ(0, z, t) = 0 for |z| ≤R and t1 ≤t ≤s.
+Assume that ϕ is of class C2 in x and C1 in t on D, and satisfies
+∂tϕ + br∂rϕ + bz∂zϕ + γϕ =
+
+∂2
+r + k
+r ∂r + ∂2
+z
+
+ϕ + F ,
+(3.7)
+there. Here br, bz, γ, and F are real-valued functions on D, with γ ≥0 and |F| ≤M; no bound is
+assumed on br, bz, or γ, which may be unbounded as r →0. Then
+|ϕ(x, t)| ≤max
+Σ
+|ϕ| + M(t −t1)
+on B(R) × [t1, s] ,
+(3.8)
+
+=== PAGE 13 ===
+ASYMPTOTICALLY AXISYMMETRIC NAVIER-STOKES WITH ANALYTIC FORCING
+13
+where Σ =
+ B(R) × {t1}
+
+∪
+ ∂B(R) × [t1, s]
+
+is the parabolic boundary of B(R) × (t1, s].
+The proof of this lemma is elementary; we present it for the convenience of the reader.
+Proof of Lemma 3.1. Since −ϕ satisfies the same assumptions, with −F in place of F, it
+suffices to bound ϕ from above. Let m = maxΣ |ϕ| ≥0 and ε > 0. Define ϕε = ϕ−(M+ε)(t−t1), and
+let (¯x, ¯t) be a maximum point of the continuous function ϕε on the compact set K = B(R) × [t1, s].
+Suppose that ϕε(¯x, ¯t) > m. On Σ we have ϕε ≤ϕ ≤m, and on the axis we have ϕε ≤ϕ = 0 ≤m.
+The maximum point (¯x, ¯t) therefore lies neither on Σ nor on the axis, that is, (¯x, ¯t) ∈D.
+At
+time ¯t the functions ϕ and ϕε differ by a constant, so that (r, z) 7→ϕ(r, z, ¯t) achieves its maximum
+on the open half-disc {r > 0, r2 + z2 < R2} at ¯x. Therefore, ∂rϕ = ∂zϕ = 0, ∂2
+rϕ ≤0, and
+∂2
+zϕ ≤0 there. Moreover, γϕ ≥0 at (¯x, ¯t) because ϕ(¯x, ¯t) ≥ϕε(¯x, ¯t) > m ≥0, and ∂tϕε ≥0
+there because ϕε(¯x, t) ≤ϕε(¯x, ¯t) for t1 ≤t < ¯t bounds the left derivative from below. At (¯x, ¯t) the
+coefficients br, bz, and k/r are finite, and they multiply first derivatives which vanish. Thus (3.7)
+gives ∂tϕε = ∂tϕ−M −ε ≤F −M −ε ≤−ε there, a contradiction. Therefore ϕ ≤m+(M +ε)(t−t1)
+on K, and (3.8) follows by letting ε →0.
+□
+3.3. The regular annulus. Lemma 3.2 below is used twice in the proof of Theorem 1.3:
+its circulation bound (3.9) removes the swirl source in the zoom of Section 4, and its derivative
+bounds on the annulus, which hold up to the blowup time, control the cutoff errors of the enstrophy
+estimate of Section 5, which are supported in that annulus.
+Lemma 3.2 (A regular annulus and bounded circulation). Let 0 ≤R1 < R0 < 1. There
+are radii R1 < R−< R+ < R0 and a time t0 ∈(−1, 0) with the following property. The velocity u,
+together with ∇u and ∇2u, is bounded on the cylindrical annulus {R−< |x| < R+} × (t0, 0), and,
+for each R∗∈(R−, R+), there is a finite constant CΓ such that
+∥Γ∥L∞(B(R∗)×(t0,0)) ≤CΓ .
+(3.9)
+Proof of Lemma 3.2. Let S0 ⊂B(R0) be the set of x for which (x, 0) is a singular point.
+Applied to the pair with the divergence-free force of footnote 2, partial regularity gives H1(S0) = 0.
+Indeed, the ε-regularity criterion of Gustafson, Kang, and Tsai [28, Theorem 1.1(ii)], with (p, q) =
+(2, 2) and the force in the parabolic Morrey space M2,2 of [28, Equation (6)], applies at the points
+(x, 0) of the top boundary of Q.10 The covering argument of [6] (see also [40, 37, 35]) is unchanged,
+since
+R
+B(1)×(−δ,0) |∇u|2 →0 as δ →0 by (1.3). We may therefore choose R ∈(R1, R0) such that
+∂B(R) carries no point of S0, and by compactness there are δ > 0, with R1 < R −δ < R + δ < R0,
+and t0 ∈(−1, 0) such that u is bounded on {R −δ < |x| < R + δ} × (t0, 0). We fix any R−and R+
+such that R −δ < R−< R+ < R + δ.
+Since u is bounded on this cylindrical annulus and f is bounded in C2
+x, the interior estimates
+of Serrin [55, Section 4, with m = 1] bound ∇u and ∇2u on compact subsets of {R −δ < |x| <
+R+δ}×(t0, 0), by constants which depend only on the subset, on Mf, on sup |u| over the cylindrical
+annulus, and on ∥∇u∥L2(Q). These bounds are uniform up to t = 0, because Serrin’s representation
+formulas [55, Equation (18), Equation (20), and the display after Equation (23)] are one-sided in
+time: the vorticity at a point (x, s) is the sum of a heat potential of ω ∧u and of the force, and of
+a solution of the heat equation, each bounded at (x, s) in terms of the solution on the backward
+cylinder B(x, ϱ) × (s −ϱ2, s), so that the estimate at (x, s) depends on s only through the norms
+above. Fixing a small ϱ, with ϱ2 < −t0, and replacing t0 by t0 + ϱ2 gives the first assertion.
+10In [28] the criterion is stated for points in the interior of the space-time domain, whereas here it is applied at
+points of the top boundary, at the blowup time. This is legitimate for two reasons. First, the proof in [28] uses the
+solution only on the backward cylinders B(x, ϱ) × (−ϱ2, 0), which lie inside Q, and only through the equations and
+the local energy inequality on them. Second, the local energy inequality at a time s < 0 involves the test function
+only on (−1, s], so it holds for test functions which do not vanish at t = 0; for a pair smooth on compact subsets of
+Q it is in fact an identity at every s < 0.
+
+=== PAGE 14 ===
+14
+PETER CONSTANTIN, MIHAELA IGNATOVA, AND VLAD VICOL
+We fix R∗∈(R−, R+). For s ∈(t0, 0), the set B(R∗) × [t0, s] is a compact subset of Q, so that
+u is smooth there; the circulation Γ = ruθ is therefore continuous on this set, smooth off the axis,
+and, since |Γ| ≤r|u|, it vanishes on the axis. The circulation equation (3.5) is of the form (3.7),
+with k = −1, with no zeroth order term, and with a source which obeys |rfθ| ≤Mf. Lemma 3.1
+therefore bounds |Γ| on B(R∗) × [t0, s] by its values at time t0 and on ∂B(R∗) × [t0, s], plus Mf|t0|.
+The former are bounded since u is smooth at time t0, the latter by R∗times the bound on u on
+the cylindrical annulus; neither depends on s and letting s ↑0 gives (3.9).
+□
+3.4. A comparison principle with diffusion in fewer variables. In the ancient limits
+of Section 4 the radial diffusion survives the zoom-in procedure, so that the potential vorticity is
+no longer conserved along backward meridional trajectories, as it is in [13] and [14]. A compar-
+ison principle is instead used to make the limiting scalar vanish. That scalar, however, is merely
+bounded, it solves its equation only in the sense of distributions, and it comes with no bound on
+its derivatives and no initial trace. Moreover, the diffusion acts in a subset of the variables only (it
+does not act in the axial variable), so Lemma 3.3 is stated in the generality in which it is used.
+Lemma 3.3 (Comparison for a bounded distributional solution). Let 1 ≤d ≤m, let
+I ⊂R be an open interval, and denote x = (X, Z) ∈Rd × Rm−d. Suppose that B : Rm × I →Rm
+is measurable, that B(·, τ) ∈W 1,∞(Rm; Rm) for almost every τ ∈I, and that
+ΛJ := ess sup
+τ∈J
+ ∥B(·, τ)∥L∞(Rm) + ∥∇B(·, τ)∥L∞(Rm)
+
+< ∞,
+(3.10)
+for every compact interval J ⊂I. Let q ∈L∞
+loc(I; L∞(Rm)) satisfy
+∂τq + B · ∇q = ∆Xq
+on Rm × I ,
+(3.11)
+in the sense of distributions.11 Then, for almost every τ0 ∈I and almost every τ ∈I with τ > τ0,
+∥q(·, τ)∥L∞(Rm) ≤∥q(·, τ0)∥L∞(Rm) .
+(3.12)
+If in addition I = (−∞, T) and, for some C < ∞and κ > 0,
+∥q(·, τ)∥L∞(Rm) ≤C|τ|−κ ,
+(3.13)
+for almost every τ < min{−1, T}, then q = 0 almost everywhere on Rm × I. A continuous rep-
+resentative of q on an open subset vanishes there, and so does any continuous trace at the upper
+endpoint obtained from that representative.
+Proof of Lemma 3.3. The argument is standard: we mollify in space, control the commu-
+tator as in [20], and compare with a barrier which grows linearly at infinity. We fix a compact
+interval J = [τ−, τ+] ⊂I, set M∞= ∥q∥L∞(Rm×J), and mollify in space, qε = ηε ∗q with a standard
+mollifier ηε = ε−mη(·/ε) with η supported in B(1). Convolving (3.11) with ηε, we obtain
+∂τqε + B · ∇qε = ∆Xqε + Rε ,
+Rε = B · ∇(ηε ∗q) −ηε ∗(B · ∇q) .
+(3.14)
+Here Rε is the commutator of DiPerna and Lions, bounded in the usual way: |Rε| ≤C(m, η)ΛJM∞
+by (3.10). Moreover, Rε(·, τ) →0 in L2
+loc(Rm) for almost every τ ∈J by [20, Lemma II.1], hence
+Rε →0 in L2(B(R) × J) for every R > 0 by dominated convergence. For a fixed ε > 0, every
+term of (3.14) other than ∂τqε is bounded, so qε has a representative which is Lipschitz in time
+with values in L∞(Rm); from now on qε denotes this representative. If τ0 is a Lebesgue point of
+τ 7→q(·, τ) ∈L1
+loc(Rm), which is the case for almost every τ0, then qε(·, τ0) = ηε ∗q(·, τ0) for every
+ε. We fix such a τ0 ∈(τ−, τ+) and set M = ∥q(·, τ0)∥L∞(Rm), so that qε(·, τ0) ≤M.
+With ⟨x⟩= (1 + |x|2)1/2 we have |∇⟨x⟩| ≤1 and ∆X⟨x⟩≤d. Upon defining K = ΛJ + d, the
+function
+Ψσ(x, τ) = M + σ
+ ⟨x⟩+ K(τ −τ0)
+
+,
+σ > 0 ,
+(3.15)
+11Here B · ∇q really means div(Bq) −(div B)q.
+
+=== PAGE 15 ===
+ASYMPTOTICALLY AXISYMMETRIC NAVIER-STOKES WITH ANALYTIC FORCING
+15
+satisfies ∂τΨσ + B · ∇Ψσ −∆XΨσ ≥σ(K −ΛJ −d) = 0 almost everywhere on Rm × J, and
+Ψσ ≥M + σ|x| for τ ≥τ0.
+Hence vε = (qε −Ψσ)+ vanishes at τ = τ0; for τ ∈[τ0, τ+] it
+also vanishes on the complement of B(Rσ) for Rσ = 1 + M∞/σ. Subtracting the supersolution
+inequality from (3.14), multiplying by vε, and integrating over Rm, we obtain
+1
+2
+d
+dτ
+Z
+v2
+ε +
+Z
+|∇Xvε|2 ≤1
+2
+Z
+(div B)v2
+ε +
+Z
+Rεvε .
+(3.16)
+Appealing to Gr¨onwall’s inequality we obtain supτ∈[τ0,τ+] ∥vε(·, τ)∥2
+L2 ≤CJ∥Rε∥2
+L2(B(Rσ)×J) →0
+as ε ↓0. Since qε →q in L2
+loc, letting ε ↓0 and then σ ↓0 gives q ≤M almost everywhere on
+Rm ×(τ0, τ+). The same argument for −q, and an exhaustion of I by compact intervals, give (3.12).
+For the last assertion, we apply (3.12) at times τj →−∞at which (3.13) holds, and obtain
+∥q(·, τ)∥L∞(Rm) ≤C|τj|−κ for almost every τ > τj; thus q = 0 almost everywhere, and a continuous
+representative, together with its trace at the upper endpoint, vanishes identically.
+□
+4. Ancient limits and smallness of the meridional quantities
+The goal of this section is to prove Proposition 1.5. We argue by contradiction, zooming in
+where (1.13) fails, at the radial length ℓr and the axial length ℓz. Two cases then arise, according
+to whether the rescaled axis stays at finite distance, or recedes to infinity. Since the pressure is
+not controlled after the zoom, we pass to the limit in the vorticity equations (3.3) and (3.4), not
+in the momentum equation. In both cases the rescaling makes the bounded circulation subcritical,
+and this removes the swirl source. The radial diffusion, however, survives the rescaling, so that
+the limiting vorticity vanishes by the comparison principle of Lemma 3.3, not by transport along
+characteristics.
+Incompressibility and the boundedness of the limiting meridional velocity then
+make the selected quantities vanish in the limit, and this contradicts the choice of the points at
+which we zoom in.
+Proof of Proposition 1.5. Fix an arbitrary 0 < ρ < 1. By (1.11) the fourth term in (1.12)
+is bounded as (−t)|∂zur| ≤Caxi(−t)h, and thus tends to zero in the limit.
+Suppose by contradiction that (1.13) fails. Then there exist c0 > 0, times tn ↑0, and points
+xn ∈B(ρ) at which the other three terms satisfy
+(−tn)
+
+|∂rur| +
+ur
+r
+ + |∂zuz|
+
+(xn, tn) ≥c0 .
+(4.1)
+By rotation invariance we may without loss of generality take xn = (rn, 0, zn), where rn = |x′
+n| ≥0.
+By Lemma 3.2, applied with R1 = ρ and some R0 ∈(ρ, 1), there are ρ < R∗< 1, t∗∈(−1, 0), and
+CΓ < ∞such that
+|ruθ(x, t)| ≤CΓ
+on
+B(R∗) × (t∗, 0) .
+(4.2)
+Throughout the proof, C denotes a constant which may depend on h, Mf, Caxi, ρ, R∗, CΓ, and on
+the compact time interval under consideration, but never on n.
+Step 1: the rescaling. We define
+λn = (−tn)1/2 ,
+δn = (−tn)h = λ2h
+n ,
+µn = λn
+δn
+= (−tn)1/2−h = λ1−2h
+n
+.
+(4.3)
+That is, λn = ℓr(tn) and µn = ℓz(tn) are the lengths (1.10), and both vanish as n →∞since
+0 < h < 1/2. Their ratio is δn = λn/µn →0. Upon passing to a subsequence, we have that
+rn/λn either stays bounded or tends to infinity. Every subsequence extracted in this proof refines
+the previous ones, and we do not relabel it; since (4.1) holds for every n, it holds along every
+subsequence. We first zoom in about the point (0, zn) on the axis, in the variables
+R = r
+λn
+,
+Z = z −zn
+µn
+,
+τ =
+t
+(−tn) ,
+(4.4)
+
+=== PAGE 16 ===
+16
+PETER CONSTANTIN, MIHAELA IGNATOVA, AND VLAD VICOL
+so that τ = −1 is the selected time tn and τ ≤−1 is its past. We then define
+Vn(R, Z, τ) = λn ur
+ λnR, zn + µnZ, (−tn)τ
+
+,
+(4.5a)
+Wn(R, Z, τ) = λnδn uz
+ λnR, zn + µnZ, (−tn)τ
+
+,
+(4.5b)
+Sn(R, Z, τ) = λnδn uθ
+ λnR, zn + µnZ, (−tn)τ
+
+,
+(4.5c)
+Ωn(R, Z, τ) = λ3
+nδn Ω
+ λnR, zn + µnZ, (−tn)τ
+
+,
+(4.5d)
+where the cylindrical components on the right are written as functions of (r, z, t). In these variables
+the bounds (1.11) read as
+|∂a
+R∂b
+ZVn| ≤Caxi|τ|−(1+a)/2−(1/2−h)b ,
+(4.6a)
+|∂a
+R∂b
+ZWn| + |∂a
+R∂b
+ZSn| ≤Caxi|τ|−1/2−h−a/2−(1/2−h)b ,
+(4.6b)
+for all a + b ≤2.
+These bounds hold at every (R, Z, τ) for which the point (λnR, zn + µnZ, (−tn)τ) lies in Q,
+and we call the set of such (R, Z, τ) the preimage of Q under the zoom-in (4.4). The circulation
+bound (4.2) holds on the preimage of the smaller set B(R∗) × (t∗, 0). Since the lengths (4.3) vanish
+and |zn| < ρ < R∗, both preimages contain any given compact subset of [0, ∞) × R × (−∞, 0) for
+all n large depending on that subset.
+Changing variables in the divergence equation (3.1d), in the definitions (3.2), and in the poten-
+tial vorticity equation (3.4), we obtain the identities
+∂RVn + Vn
+R + ∂ZWn = 0 ,
+Ωn = δ2
+n∂ZVn −∂RWn
+R
+,
+(4.7a)
+∂τΩn + Vn∂RΩn + Wn∂ZΩn =
+
+∂RR + 3
+R∂R + δ2
+n∂ZZ
+
+Ωn + ∂ZFn + Gn ,
+Fn = S2
+n
+R2 ,
+(4.7b)
+at every point of the preimage of Q, with R > 0. Note that the radial diffusion has coefficient one,
+while the axial diffusion carries the factor δ2
+n →0.
+We record both force terms at once: the force enters (4.7b) through Gn, and the azimuthal
+vorticity equation (4.19b) of Step 3 through Hn, where
+Gn(R, Z, τ) = λ5
+nδn g
+ λnR, zn + µnZ, (−tn)τ
+
+,
+(4.8a)
+Hn(R, Z, τ) = λ4
+nδn (curl f)θ
+ rn + λnR, zn + µnZ, (−tn)τ
+
+.
+(4.8b)
+The prefactors are the normalizations λ3
+nδn of Ωin (4.5) and λ2
+nδn of ωθ in (4.18), multiplied by
+the time factor (−tn) = λ2
+n. Since |g| ≤CMf on Q by (3.6) and |(curl f)θ| ≤CMf by (1.5), both
+terms tend to zero uniformly: Gn on the preimage of Q under (4.4), up to the axis, and Hn on the
+preimage of Q under (4.17).
+Since ∂ZVn and ∂RWn vanish at R = 0, as ∂zur and ∂ruz do on the axis (Section 3.1), the
+quotients ∂ZVn/R and ∂RWn/R are bounded by the suprema of ∂RZVn and ∂RRWn on the radial
+segment which joins (0, Z, τ) to (R, Z, τ); this segment again lies in the preimage of Q, since B(1)
+is convex. Thus (4.7a) and (4.6) give, on the preimage of Q with R > 0,
+|Ωn| ≤Caxi
+
+δ2
+n|τ|−3/2+h + |τ|−3/2−h
+.
+(4.9)
+The bound holds at R = 0 as well, since Ωn is continuous across the axis. Note that the constant
+Caxi in (4.9) is the one of (4.6), which depends neither on n nor on a time interval; this is what the
+decay hypothesis (3.13) of Lemma 3.3 requires in Step 2.
+Next, we turn to the swirl, which enters (4.7b) through the source Fn = S2
+n/R2. Since RSn =
+δn ruθ, the circulation bound (4.2) gives
+|RSn| ≤CΓδn ,
+(4.10a)
+
+=== PAGE 17 ===
+ASYMPTOTICALLY AXISYMMETRIC NAVIER-STOKES WITH ANALYTIC FORCING
+17
+wherever the point (4.4) lies in B(R∗) × (t∗, 0). Since Sn vanishes at R = 0, as uθ does, |Sn|/R is
+bounded by the supremum of |∂RSn| along the radial segment to the axis, and in turn (4.6) bounds
+|∂RSn| by Caxi|τ|−1−h ≤Caxi for τ ≤−1. We thus arrive at
+|Sn/R| ≤C ,
+(4.10b)
+at every point of the preimage of Q with τ ≤−1. Since the passage to the limit in Step 2 is carried
+out in the sense of distributions, what is needed of the swirl source ∂ZFn in (4.7b) is that Fn →0
+in L1
+loc on {τ ≤−1}, up to the axis. Away from the axis we write Fn = (RSn)2/R4, and (4.10a)
+gives Fn ≤C2
+Γδ2
+nε−4 →0 as n →∞, uniformly on compact subsets of {R ≥ε}, for every ε > 0.
+Near the axis we write Fn = (Sn/R)2, and (4.10b) gives Fn ≤C2 for τ ≤−1, up to R = 0. Since
+{R < ε} has small measure within any compact set, and ε is arbitrary, the two bounds together
+give this convergence, and the swirl source ∂ZFn disappears in the distributional limit.
+B(ρ)
+r = 0
+xn
+(0, zn)
+2λn
+2µn
+(a) rn/λn bounded
+B(ρ)
+r = 0
+xn
+rn
+(b) rn/λn →∞
+the zoom box: radial half-width λn = (−tn)1/2, axial half-width µn = (−tn)1/2−h ≫λn
+Figure 1. The anisotropic zoom of Step 1, drawn in the plane through the axis. The box is long
+along the axis and short across it, since h > 0. In (a) the box is centered at the axis point (0, zn),
+the selected point xn lies at bounded rescaled distance from the axis, and the limit is an equation
+for the potential vorticity, with the Laplacian of R4 acting on radial functions; in (b) the box is
+centered at xn, as in the variables (4.17) of Step 3, the axis recedes, and the limit is an equation
+for the azimuthal vorticity on R2, with diffusion in the radial variable alone.
+Step 2: the finite-axis case. Suppose that rn/λn ≤A for some fixed A, as in Figure 1(a). In
+this step we prove that ∂RVn, ∂ZWn, and Vn/R tend to zero at τ = −1, uniformly on compact sets,
+and we derive from this a contradiction with (4.1).
+The radial operator ∂RR + 3R−1∂R in (4.7b) is the Laplacian of R4 acting on radial functions.
+As in [33], we therefore regard Ωn as a function of X ∈R4 with |X| = R, so that (4.7b) holds across
+the axis. These lifted variables are used only where the axis must be crossed, in the distributional
+form of the equation and in the weak-∗limits; the compactness argument for Ωn takes place in the
+(R, Z) half-plane. We define the drift
+Bn(X, Z, τ) =
+X
+R Vn(R, Z, τ), Wn(R, Z, τ)
+
+.
+(4.11)
+By the radial expansions recorded in Section 3.1, Ωn, Fn, Vn/R, and Wn are smooth functions of
+(R2, Z, τ), so that Bn is smooth in (X, Z) across X = 0. We record the identity
+∇X
+
+Vn
+X
+R
+
+= Vn
+R
+
+Id −X ⊗X
+R2
+
++ ∂RVn
+X ⊗X
+R2
+,
+
+=== PAGE 18 ===
+18
+PETER CONSTANTIN, MIHAELA IGNATOVA, AND VLAD VICOL
+and note that its trace is equal to ∂RVn + 3Vn/R. Since Vn vanishes at R = 0, we have |Vn/R| ≤
+sup |∂RVn|; combined with (4.6), this estimate shows that the drifts Bn are uniformly bounded and
+uniformly Lipschitz in space on compact time intervals,12 as Lemma 3.3 requires of the limiting
+drift. Together with the divergence identity in (4.7a), the trace gives
+divX,Z Bn = 2
+RVn .
+Since {X = 0} is a null set, and since every term of (4.7b) which carries a derivative is smooth
+across it, the equation
+∂τΩn + divX,Z(BnΩn) = ∆XΩn + δ2
+n∂ZZΩn + 2Vn
+R Ωn + ∂ZFn + Gn
+(4.12)
+holds almost everywhere in the lifted variables, on the preimage of Q under (4.4), hence also in
+the sense of distributions there. Note that the force term Gn = Gn(|X|, Z, τ) in (4.12) enters only
+through its supremum, and satisfies |Gn| ≤CMfλ5
+nδn →0 on that set, as recorded after (4.8).
+Let K ⊂{R > 0} be a closed rectangle in the half-plane. The second identity in (4.7a) and the
+bounds in (4.6) may be used to estimate the first spatial derivatives of Ωn in L∞(K), uniformly in
+n on compact time intervals within (−∞, −1]. Using (4.7b), we may bound ∂τΩn in W −2,p(int K),
+uniformly on compact time intervals, for any p ∈[1, ∞), since every term in (4.7b) other than ∂τΩn
+is at most two derivatives of a function bounded on K uniformly in n.13 A standard compactness
+argument then gives, for every η > 0, a constant Cη (which depends also on K and p) such that
+∥F∥C0(K) ≤η ∥F∥C0,1(K) + Cη ∥F∥W −2,p(int K) ,
+for all F ∈C0,1(K). Applying this inequality to Ωn(τ)−Ωn(τ ′), we deduce that the maps τ 7→Ωn(τ)
+are equicontinuous with values in C0(K). By Arzel`a-Ascoli and a diagonal extraction, we arrive at
+Ωn →Ω∞
+locally uniformly on {R > 0, τ ≤−1} .
+(4.13)
+The endpoint τ = −1 is included because every estimate above holds on each closed interval
+[−T, −1].
+Next, we extend Ω∞by zero to the null set {X = 0}, and claim that the convergence also holds
+across the axis, in the sense that
+Ωn →Ω∞
+in Lp
+loc
+ R4 × R × (−∞, −1]
+
+for every 1 ≤p < ∞.
+(4.14)
+Indeed, for τ ≤−1 the bound (4.9) gives |Ωn| ≤C uniformly in n, up to the axis, and hence
+|Ω∞| ≤C as well by (4.13), so that the tube {|X| < ε}, whose measure is of order ε4 (at fixed Z
+and τ), contributes little to the Lp norm of Ωn −Ω∞on any compact set, uniformly in n; off the
+tube, the convergence (4.13) is uniform on compact sets. We used the same reasoning in Step 1,
+for the convergence Fn →0 in L1
+loc.
+We next pass to the limit in (4.12), and show that Ω∞solves (4.15) below in the weak sense.
+For this purpose, the bounds (4.6) allow us to extract weak-∗limits V and W of Vn and Wn, on
+compact subsets of the lifted space-time domain. Since X/R is a bounded function independent of
+n, the drifts Bn defined in (4.11) converge weakly-∗to B = (V X/R, W). These drifts are uniformly
+Lipschitz in space on compact time intervals, so that we simultaneously extract the weak-∗limit
+of the gradients ∇Bn, which is the distributional gradient of B. The constants in (4.6) do not
+depend on the compact spatial set, so that |B| + |∇B| ≤CJ almost everywhere on R4 × R × J,
+for every compact J ⊂(−∞, −1). By Fubini, B(·, τ) ∈W 1,∞(R4 × R) for almost every τ, with
+the same bound, so that (3.10) holds with ΛJ ≤CJ. Moreover, since |X|−1 is locally integrable
+in four dimensions, φ/R is integrable for every φ ∈C∞
+c (R4 × R × (−∞, −1)), so that the weak-∗
+12The bound we obtain is |Bn| + |∇Bn| ≤C|τ|−1/2 for τ ≤−1.
+13Here we use the bounds (4.6), (4.9), the first derivative bounds on Ωn just established, the estimate (4.10a),
+and the uniform vanishing of Gn.
+
+=== PAGE 19 ===
+ASYMPTOTICALLY AXISYMMETRIC NAVIER-STOKES WITH ANALYTIC FORCING
+19
+convergence of Vn gives Vn/R →V/R in distributions. Passing to the limit in divX,Z Bn = 2Vn/R
+yields divX,Z B = 2V/R. The weak-∗convergence of Bn against the strong convergence (4.14) of
+Ωn, together with the uniform bound |Vn/R| ≤sup |∂RVn|, allows us to pass to the limit in the
+products in (4.12), while δn →0, Gn →0 uniformly, and Fn →0 in L1
+loc remove the remaining
+terms. In view of divX,Z B = 2V/R, the limit is the equation of Lemma 3.3, in the divergence form
+of its footnote, namely
+∂τΩ∞+ B · ∇Ω∞= ∆XΩ∞
+on R4 × R × (−∞, −1) .
+(4.15)
+Since δ2
+n|τ|−3/2+h ≤δ2
+n for τ ≤−1, the bound (4.9) implies
+|Ω∞(X, Z, τ)| ≤Caxi|τ|−3/2−h .
+Thus Ω∞is bounded on R4 × R× J for every compact J ⊂(−∞, −1), solves (4.15) in distributions
+with a drift satisfying (3.10), and obeys (3.13) with κ = 3/2 + h. The last assertion of Lemma 3.3,
+with (m, d) = (5, 4), gives
+Ω∞= 0 .
+By (4.13), Ω∞is continuous on {R > 0, τ ≤−1}, so that it vanishes at every point of this set, the
+endpoint τ = −1 being included.
+At τ = −1, the bounds (4.6) make Vn(·, −1) and Wn(·, −1) bounded in C2 on every compact
+subset of the closed half-plane, with a constant which does not depend on the compact set. Passing
+to a further subsequence, we obtain Vn(·, −1) →V 0 and Wn(·, −1) →W 0 in C1 on compact
+subsets, with V 0 and W 0 bounded on the entire half-plane. Passing to the limit in the first identity
+in (4.7a), we obtain
+∂RV 0 + V 0
+R + ∂ZW 0 = 0 ,
+on {R > 0}. Since Ωn(·, −1) →0 off the axis, by (4.13) and Ω∞= 0, and since δn →0 while
+∂ZVn(·, −1) is bounded, the second identity in (4.7a) gives
+∂RW 0 = 0 ,
+on {R > 0}. In contrast to [14], the vorticity identity yields only ∂RW 0 = 0, not a curl free limit;
+instead, the boundedness of V 0 replaces Liouville’s theorem. Since W 0 does not depend on R, we
+may rewrite the divergence identity for (V 0, W 0) as ∂R(RV 0) = −R ∂ZW 0(Z). Integrating this
+from the axis, where RV 0 vanishes because V 0 is bounded, we obtain
+V 0(R, Z) = −R
+2 ∂ZW 0(Z) .
+The boundedness of V 0 for all R ≥0 forces ∂ZW 0 = 0, and then also V 0 = 0, on {R > 0}, hence on
+the closed half-plane by continuity. Since the convergence to V 0 and W 0 holds in C1 on compact
+subsets of the closed half-plane, we conclude that, uniformly on every such compact subset,
+∂RVn(·, −1) →0 ,
+∂ZWn(·, −1) →0 ,
+Vn(·, −1)/R →0 .
+(4.16)
+The convergences hold up to the axis; for the last one this is because Vn(R, Z, −1)/R =
+R 1
+0 ∂RVn(σR, Z, −1) dσ for R > 0, with the right side continuous at R = 0.
+With (4.16) in hand, we return to the points xn selected in (4.1). In the variables (4.4), the
+point (xn, tn) has coordinates (R, Z, τ) = (rn/λn, 0, −1), and (rn/λn, 0) lies in the compact set
+[0, A] × {0} for every n. Since ∂R = λn∂r, ∂Z = µn∂z, R = r/λn, and λ2
+n = λnδnµn = (−tn), the
+definitions (4.5) and the chain rule show that the left side of (4.1) equals
+(−tn)
+
+|∂rur| +
+ur
+r
+ + |∂zuz|
+
+(xn, tn) =
+
+|∂RVn| +
+Vn
+R
+ + |∂ZWn|
+ rn
+λn
+, 0, −1
+
+,
+
+=== PAGE 20 ===
+20
+PETER CONSTANTIN, MIHAELA IGNATOVA, AND VLAD VICOL
+with both quotients extended continuously to the axis. Since the convergence (4.16) is uniform on
+[0, A] × {0}, the right side of the last display tends to zero along the subsequence, while its left side
+is bounded from below by c0 > 0. The contradiction ansatz (4.1) thus fails in the finite-axis case.
+Step 3: the receding-axis case. We now turn to the other alternative of Step 1: suppose that
+An = rn/λn →∞, as in Figure 1(b). In this step we prove that ∂RVn and ∂ZWn, now taken in
+the recentered variables (4.17), tend to zero at the selected point, and that the remaining term
+(−tn)ur/r is small there by (1.11) alone; we derive from this a contradiction with (4.1).
+The argument follows Step 2, with the azimuthal vorticity in place of the potential vorticity
+and no axis to cross. We now zoom in about the selected point xn itself, in the variables (R, Z, τ)
+defined by
+r = rn + λnR = λn(An + R) ,
+z = zn + µnZ ,
+t = (−tn)τ .
+(4.17)
+We define Vn, Wn, Sn as in (4.5), with the same prefactors and with the point in (4.17) as argument.
+The rescaled azimuthal vorticity is
+Θn(R, Z, τ) = λ2
+nδn ωθ(r, z, t) = δ2
+n∂ZVn(R, Z, τ) −∂RWn(R, Z, τ) ,
+(4.18)
+where (r, z, t) is the point (4.17).
+Since λn, µn →0 by (4.3), An →∞by assumption, and
+|xn| < ρ < R∗, the preimage of Q under (4.17), whose axis sits at R = −An, contains any given
+compact subset of R2 × (−∞, −1] for all n large depending on that subset; so does the preimage
+of B(R∗) × (t∗, 0), on which (4.2) holds. The bounds (4.6) are unchanged, since ∂R = λn∂r and
+∂Z = µn∂z as in (4.4), and since (1.11) holds at every point of Q. The divergence equation (3.1d)
+and the azimuthal vorticity equation (3.3) become
+∂RVn +
+Vn
+An + R + ∂ZWn = 0 ,
+(4.19a)
+and
+∂τΘn + Vn∂RΘn + Wn∂ZΘn −
+Vn
+An + RΘn
+=
+
+∂RR +
+1
+An + R∂R + δ2
+n∂ZZ −
+1
+(An + R)2
+
+Θn +
+1
+An + R∂Z(S2
+n) + Hn ,
+(4.19b)
+at every point of the preimage of Q under (4.17) with An + R > 0, and with Hn given by (4.8b).
+By (4.18) and (4.6), on the preimage of Q under (4.17),
+|Θn| ≤Caxi
+
+δ2
+n|τ|−1+h + |τ|−1−h
+.
+(4.20)
+This plays the role of (4.9) in Step 2.
+Since (An + R)Sn = δn ruθ (see (4.5c) and (4.17)), the circulation bound (4.2) gives
+|Sn| ≤CΓ
+δn
+An + R
+wherever the point defined in (4.17) lies in B(R∗) × (t∗, 0), and An + R > 0.14
+Let K ⊂R2 be a closed rectangle. The identity (4.18) and the bounds in (4.6) may be used
+to estimate the first spatial derivatives of Θn in L∞(K), uniformly in n on compact time intervals
+within (−∞, −1]. Using (4.19b), we may bound ∂τΘn in W −2,p(int K), uniformly on compact time
+intervals, for any p ∈[1, ∞), since every term in (4.19b) other than ∂τΘn is at most two derivatives
+of a function bounded on K uniformly in n.15 The compactness argument of Step 2, with no axis
+14We appeal here to the circulation bound rather than to the Sn estimate in (4.6), so that the bounds on uθ
+enter this section in one place only; see Remark 5.2.
+15Here we use the bounds (4.6) and (4.20), the first derivative bounds on Θn just established, the uniform
+vanishing of Hn, and the bound on Sn just obtained, applied to the swirl source written as ∂Z(S2
+n/(An + R)), which
+is possible since An + R does not depend on Z.
+
+=== PAGE 21 ===
+ASYMPTOTICALLY AXISYMMETRIC NAVIER-STOKES WITH ANALYTIC FORCING
+21
+to cross, then gives
+Θn →Θ
+locally uniformly on R2 × (−∞, −1] .
+Our next goal is to pass to the limit n →∞in (4.19) and (4.20), and to show that Θ solves
+the limiting equation (4.21a) below. For this purpose, since by (4.6) the fields Vn and Wn are
+uniformly bounded and uniformly Lipschitz in space on compact time intervals, we extract weak-∗
+limits V, W of Vn, Wn on compact subsets of R2 × (−∞, −1], together with the weak-∗limits of
+their spatial gradients, which are the distributional gradients of V and W. Three terms of (4.19b)
+disappear in the limit because the axis recedes. On a compact spatial set the factors (An+R)−1 and
+(An + R)−2 tend uniformly to zero as An →∞, while Θn and ∂RΘn are bounded there, uniformly
+in n on compact time intervals; hence the viscous terms (An + R)−1∂RΘn and (An + R)−2Θn tend
+uniformly to zero. The swirl source, written as ∂Z(S2
+n/(An + R)), tends to zero in distributions,
+since S2
+n/(An + R) ≤C2
+Γδ2
+n/(An + R)3 by the bound on Sn above, and the right side vanishes
+uniformly as n →∞. The term δ2
+n∂ZZΘn likewise tends to zero in distributions because δn →0.
+Recall from the discussion after (4.8) that the force term Hn →0 uniformly. The stretching term
+−(An + R)−1VnΘn on the left side of (4.19b) is not discarded in the limit. By (4.19a) it equals
+Θn divR,Z(Vn, Wn), so that on the left side of (4.19b) we have a perfect divergence
+Vn∂RΘn + Wn∂ZΘn −
+Vn
+An + RΘn = divR,Z
+ (Vn, Wn)Θn
+
+.
+Passing to the limit, using the weak-∗convergence of (Vn, Wn) together with the strong con-
+vergence of Θn, and with Vn bounded and An →∞in (4.19a), we obtain
+∂τΘ + V ∂RΘ + W∂ZΘ = ∂RRΘ ,
+(4.21a)
+∂RV + ∂ZW = 0 ,
+(4.21b)
+on R2 × (−∞, −1). For τ ≤−1, the bound
+|Θ(R, Z, τ)| ≤Caxi|τ|−1−h
+(4.21c)
+is inherited from (4.20), since δ2
+n|τ|−1+h ≤δ2
+n in that range. The terms other than ∂τΘn on the left
+side of (4.19b) converge in distributions to divR,Z
+ (V, W)Θ
+
+, and the limiting drift is divergence
+free, so that the transport term in (4.21a) is the one of the footnote of Lemma 3.3.
+We are now in a position to apply Lemma 3.3. The limiting field Θ is continuous on R2 ×
+(−∞, −1], being a locally uniform limit, and is bounded on R2×J for every compact J ⊂(−∞, −1).
+Since the bounds in (4.6) do not depend on the compact spatial set, the limiting drift (V, W) lies,
+as in Step 2, in W 1,∞(R2) for almost every τ, and satisfies (3.10) on every compact time interval.
+The last assertion of Lemma 3.3, applied to (4.21) with (m, d) = (2, 1) and κ = 1 + h, therefore
+gives
+Θ = 0
+on R2 × (−∞, −1], by continuity. In particular, Θ(·, −1) = 0.
+At τ = −1, the bounds (4.6) make Vn(·, −1) and Wn(·, −1) bounded in C2 on every compact
+subset of R2. Passing to a further subsequence, we obtain Vn(·, −1) →V 0 and Wn(·, −1) →W 0 in
+C1 on compact subsets. The limits V 0 and W 0 are bounded on R2 by the constant Caxi of (4.6),
+which does not depend on the compact set. Passing to the limit in the divergence identity (4.19a),
+in which Vn/(An +R) →0 uniformly on compact sets since Vn is bounded and An →∞, we obtain
+∂RV 0 + ∂ZW 0 = 0 .
+Since Θn(·, −1) →Θ(·, −1) = 0 locally uniformly, and since δn →0 while ∂ZVn is bounded, the
+identity (4.18) gives
+∂RW 0 = 0 ,
+
+=== PAGE 22 ===
+22
+PETER CONSTANTIN, MIHAELA IGNATOVA, AND VLAD VICOL
+so that W 0 = W 0(Z). Integrating the divergence identity ∂RV 0 + ∂ZW 0 = 0 in R, we obtain
+V 0(R, Z) = −R ∂ZW 0(Z) + V 0(0, Z) .
+As in Step 2, the boundedness of V 0 for all R ∈R forces ∂ZW 0 = ∂RV 0 = 0. Since the convergence
+at τ = −1 holds in C1 on compact subsets, we obtain
+∂RVn(0, 0, −1) →0 ,
+∂ZWn(0, 0, −1) →0 .
+(4.22)
+To conclude, we compare (4.22) with the selection (4.1). In the variables of (4.17) the point
+(xn, tn) is (0, 0, −1), and the chain rule gives
+(−tn) ∂rur(xn, tn) = ∂RVn(0, 0, −1) ,
+(−tn) ∂zuz(xn, tn) = ∂ZWn(0, 0, −1) .
+Thus, the first and the third term on the left side of (4.1) tend to zero by (4.22). For the second
+term no limiting argument is needed: since An →∞, we have rn > 0 for all n large, and (1.11)
+gives
+(−tn)
+
+ur(xn, tn)
+rn
+ ≤C λn
+rn
+= C
+An
+→0 .
+(4.23)
+The left side of (4.1) thus tends to zero along the subsequence, which contradicts the lower bound
+c0 > 0 in the receding-axis case as well, thereby concluding the proof of (1.13).
+□
+5. The local regularity criterion
+In this section we show that the relative smallness provided by Proposition 1.5, together with
+the regular annulus of Lemma 3.2, makes (0, 0) a regular point, which proves Theorem 1.3.
+Lemma 5.1 (Smallness of the meridional quantities implies regularity). Let (u, π) be
+an axisymmetric suitable weak solution of (1.2) on Q, smooth on compact subsets of Q, with an
+axisymmetric force satisfying (1.5); the bounds (1.11) are not assumed. Suppose that
+lim
+t↑0 (−t)Gρ0(t) = 0
+(5.1)
+holds for some ρ0 ∈(0, 1), with Gρ0 defined as in (1.12). Then (0, 0) is a regular point.
+Proof of Lemma 5.1. We fix a regular annulus for u inside B(ρ0), as in Lemma 3.2 applied
+with R1 = 0 and R0 = ρ0: on the cylindrical annulus {R−< |x| < R+} × (t0, 0) the velocity u,
+together with ∇u and ∇2u, is bounded. We then fix radii R−< ρ < R∗< R+ and a smooth
+radial cutoff χ supported in B(R∗), equal to one on B(ρ), whose derivatives are supported in the
+cylindrical annulus. Throughout the proof, C denotes a constant which depends only on χ, on Mf,
+on the u bounds on the cylindrical annulus, but never on the parameter η chosen at the end of the
+proof. In particular, every term in which a derivative falls on χ is bounded by such a constant,
+since it is supported in the cylindrical annulus. Lastly, norms without a specified domain are taken
+on R3, the localized fields being extended by zero.
+We write G(t) = Gρ0(t), and for each η > 0 we fix tη ∈(t0, 0) so close to zero that
+G(t) ≤
+η
+(−t)
+on (tη, 0) .
+(5.2)
+Since B(R∗) ⊂B(ρ0), the four quantities in (1.12) are bounded by G on B(R∗); in particular
+|ur/r| ≤G there. The azimuthal velocity uθ, moreover, vanishes on the axis, and is bounded on
+∂B(R∗) × (t0, 0) and also on the initial time slice B(R∗) × {tη}. By the swirl equation (3.1c), the
+function ψ = (−t)ηuθ satisfies
+∂tψ + b · ∇ψ −∆ψ +
+
+r−2 + ur
+r +
+η
+(−t)
+
+ψ = (−t)ηfθ ,
+where b = urer + uzez is the meridional velocity. By (5.2), the zeroth order coefficient is therefore
+at least r−2 ≥0 on B(R∗)×(tη, 0), and the source is bounded by Mf. Since ∆= ∂2
+r +r−1∂r +∂2
+z on
+
+=== PAGE 23 ===
+ASYMPTOTICALLY AXISYMMETRIC NAVIER-STOKES WITH ANALYTIC FORCING
+23
+axisymmetric scalars, this equation is of the form (3.7) with k = 1. The coefficient r−2 is singular
+on the axis, but ψ vanishes there, and for every s ∈(tη, 0) it is continuous on B(R∗) × [tη, s] and
+smooth off the axis. As in the proof of Lemma 3.2, appealing to Lemma 3.1 we obtain a bound for
+|ψ|, uniformly in s, by its values at time tη and on ∂B(R∗) × [tη, 0), plus Mf|tη|. That is, there is
+a constant Cη > 0 such that |ψ| ≤Cη on B(R∗) × (tη, 0), and
+W(t) := ∥uθ(·, t)∥L∞(B(R∗)) ≤Cη(−t)−η ,
+tη < t < 0 .
+(5.3)
+We let
+Y (t) = ∥χ ω(·, t)∥2
+L2 ,
+M(t) = ∥χ ∇ω(·, t)∥2
+L2 ,
+where ω = curl u. Taking the curl of (1.2), we obtain
+∂tω + u · ∇ω −∆ω = ω · ∇u + curl f ,
+and we test this equation against χ2ω.
+The transport and diffusion terms then produce 1
+2
+d
+dtY
+and M, up to cutoff errors which are bounded by C.
+The force term, in turn, is bounded by
+C ∥curl f∥L∞Y 1/2 ≤C(Y + 1), and we arrive at
+1
+2
+d
+dtY + M ≤
+Z
+χ2(ω · ∇u) · ω dx + C(Y + 1) .
+(5.4)
+Bounding the stretching term requires two elliptic bounds, which we record next. Since div b = 0
+and curl b = ωθeθ, the identities ∥∇v∥2
+L2 = ∥curl v∥2
+L2 + ∥div v∥2
+L2 and ∥∇2v∥2
+L2 = ∥∇curl v∥2
+L2 +
+∥∇div v∥2
+L2, valid for smooth compactly supported v, applied to χu and to χb, give
+∥∇(χu)∥L2 + ∥χ∇b∥L2 ≤C(Y + 1)1/2 ,
+(5.5a)
+χ∇2b
+
+L2 ≤C(M + 1)1/2 .
+(5.5b)
+The second inequality also uses |∇(ωθeθ)| ≤|∇ω|, which follows from the Cartesian gradient identity
+for an axisymmetric vector field,
+|∇ω|2 =
+X
+◦∈{r,θ,z}
+ |∂rω◦|2 + |∂zω◦|2
++ ω2
+r + ω2
+θ
+r2
+.
+(5.6)
+In particular, we note that the axis terms ω2
+r/r2 and ω2
+θ/r2 are part of the dissipation.
+In the cylindrical frame, with ωr = −∂zuθ and ωz = ∂ruθ + uθ/r, the stretching term reads
+(ω · ∇u) · ω = (∂rur)ω2
+r + ur
+r ω2
+θ + (∂zuz)ω2
+z + (∂zur + ∂ruz)ωrωz −2uθ
+r ωrωθ .
+(5.7)
+After multiplication by χ2 and integration, the first three terms on the right side of (5.7), and the
+term containing ∂zur, are all bounded by C G Y , their coefficients being the four quantities in the
+definition in (1.12). For the term containing ∂ruz we integrate by parts in z using that ωr = −∂zuθ,
+and arrive at
+I :=
+Z
+χ2(∂ruz)ωrωz dx = −
+Z
+χ2(∂ruz)(∂zuθ)ωz dx =
+Z
+uθ ∂z
+ χ2(∂ruz)ωz
+
+dx .
+(5.8)
+The bound (5.3) allows us to estimate the swirl in L∞. The term containing ∂zχ is bounded by C,
+as noted at the start of the proof, while for the other two terms, (5.5) together with |∂z∂ruz| ≤|∇2b|
+and |∂ruz| ≤|∇b| gives
+|I| ≤C + W ∥χ∂z∂ruz∥L2 ∥χωz∥L2 + W ∥χ∂ruz∥L2 ∥χ∂zωz∥L2
+≤C + CW(M + 1)1/2Y 1/2 + CW(Y + 1)1/2M1/2
+≤1
+4M + C(W 2 + 1)(Y + 1) .
+(5.9)
+
+=== PAGE 24 ===
+24
+PETER CONSTANTIN, MIHAELA IGNATOVA, AND VLAD VICOL
+Returning to (5.7), it thus remains to bound the last term, which contains ωr/r. Using (5.6) we
+get
+2
+
+Z
+χ2 uθ
+r ωrωθ dx
+ ≤2W ∥χωr/r∥L2 ∥χωθ∥L2 ≤2WM1/2Y 1/2 ≤1
+4M + 4W 2Y .
+(5.10)
+Inserting (5.9) and (5.10) in (5.4), absorbing 1
+2M into the left side, we have thus shown that there
+exists C∗≥1, which depends only on χ, on Mf, and on the bounds for u on the cylindrical annulus,
+such that
+d
+dtY + M ≤C∗
+ G + W 2 + 1
+
+(Y + 1) .
+(5.11)
+At this point we fix η = 1/(16C∗) ≤1/16; this choice is permissible because C∗was fixed before
+η was chosen. Combining (5.11) with the bounds (5.2) and (5.3), Gr¨onwall’s inequality gives
+Y (t) + 1 ≤
+ Y (tη) + 1
+
+exp
+ Z t
+tη
+ C∗η
+(−s) + C∗C2
+η
+(−s)2η + C∗
+
+ds
+!
+≤C′
+η(−t)−C∗η
+for all t ∈(tη, 0), for a suitable constant C′
+η > 0. Note that Y (tη) is finite since u is smooth at time
+tη. The first inequality in (5.5) and the Sobolev inequality then give
+∥u(·, t)∥L6(B(ρ)) ≤∥χu(·, t)∥L6(R3) ≤C ∥∇(χu)(·, t)∥L2 ≤C′′
+η(−t)−C∗η/2
+for all t ∈(tη, 0). Since 2C∗η = 1/8 < 1, this bound implies the local Ladyzhenskaya-Prodi-Serrin
+condition
+u ∈L4(tη, 0; L6(B(ρ))) ,
+at the borderline exponent pair 3/6 + 2/4 = 1. Consequently ∥u∥L4(−r2,0;L6(B(r))) tends to zero
+as r ↓0, for r ≤min{ρ, (−tη)1/2}.
+The interior criterion of Gustafson, Kang, and Tsai [28,
+Theorem 1.1(i), with p∗= 6 and q = 4], applied, as in the proof of Lemma 3.2, at the top center
+point (0, 0) to the pair of footnote 2, whose bounded force lies in the parabolic Morrey space M2,2
+of [28, Equation (6)], therefore bounds u on a backward cylinder at the origin: (0, 0) is a regular
+point.
+□
+Proof of Theorem 1.3. Proposition 1.5 with ρ = 1/2 gives (5.1) with ρ0 = 1/2, and
+Lemma 5.1 makes (0, 0) a regular point.
+□
+Lastly, we make precise a comment that we alluded to in Remark 1.4(c).
+Remark 5.2 (The meridional bounds suffice). Theorem 1.3 remains valid if (1.11) is
+imposed on ur and uz only, with no bound on uθ or on its derivatives. Indeed, Lemma 5.1 does
+not use (1.11), and Section 4 uses the bounds on uθ in one place only, the estimate (4.10b), whose
+role is to bound the swirl source Fn = S2
+n/R2 near the axis; the Sn summand of (4.6) is used
+nowhere else. We replace it as follows. Since ur vanishes on the axis, the bound on ∂rur in (1.11)
+gives |ur/r| ≤Caxi(−t)−1 on B(1), so that for a fixed N ≥Caxi the function (−t)Nuθ solves the
+equation displayed in the proof of Lemma 5.1, with N in place of η, in which the zeroth order
+coefficient r−2 + ur/r + N(−t)−1 is at least r−2, and the source is bounded by Mf. Moreover,
+u is bounded on ∂B(R∗) × (t∗, 0), since the radius R∗and the time t∗of Section 4 are those of
+Lemma 3.2. Then, Lemma 3.1, applied as in the proof of Lemma 5.1 with t∗in place of tη, gives
+|uθ| ≤CN(−t)−N on B(R∗) × (t∗, 0), with R∗and t∗as in Section 4. In the variables of Step 1 this
+reads |Sn| ≤Kn := CN(−tn)1/2+h−N on compact subsets of the slab −T ≤τ ≤−1, for n large,
+and together with (4.10a), |RSn| ≤Dn := CΓδn, it gives, for every L > 0,
+Z L
+0
+FnR3 dR ≤
+Z L
+0
+min{K2
+nR, D2
+n/R} dR ≤D2
+n
+
+1
+2 + log+
+LKn
+Dn
+
+≤CL,N(−tn)2h 1 + | log(−tn)|
+
+→0 ,
+(5.12)
+
+=== PAGE 25 ===
+ASYMPTOTICALLY AXISYMMETRIC NAVIER-STOKES WITH ANALYTIC FORCING
+25
+where log+ a = max{0, log a} and CL,N depends also on CΓ. Thus Fn →0 in L1
+loc of the lifted
+variables of (4.12), which is all that the passage to the limit in ∂ZFn requires, while the compactness
+argument for Ωn in Step 2 is carried out off the axis, where Fn ≤D2
+n/R4 is bounded. The rest of
+the proof is unchanged.
+Appendix A. Properties of the OpenAI construction
+The OpenAI manuscript [43] constructs a solution of the forced Navier-Stokes equations which
+it asserts to be singular at (x, t) = (0, 1) in its own time variable; that is, at (0, 0) after the time shift
+in this paper (1.1). We do not verify the construction in [43]. Instead, this appendix deduces, from
+statements printed in the OpenAI manuscript, three properties of the velocity field of the OpenAI
+construction. Claim A.1 is the exact axisymmetry of the velocity on a shrinking core, which is
+hypothesis (1.8) of Theorem 1.1. Claim A.2 is the set of anisotropic bounds on the angular mean,
+which is hypothesis (1.7). Claim A.3 is the exact vanishing of the meridional velocity on a fixed
+open set together with the values on the axis, the two properties Remark 2.6 asks of a solution.
+None of these claims is printed in the OpenAI manuscript in the form in which we state it: each is
+deduced from definitions and statements printed there, and the justification following each claim
+gives that deduction, citing every ingredient used. We write that the manuscript states a fact only
+when it is printed at the place cited, and that a fact follows when we deduce it.
+A.1. Coordinates, notation, and the decomposition of the velocity. Time, the expo-
+nents, and the similarity coordinates. The OpenAI manuscript writes τ = 1 −t for the time to the
+singularity in its own time variable. After the shift (1.1) the time to the singularity is −t, and with
+x written in the cylindrical coordinates of Section 1.2 we set
+τ := −t ,
+x = (r cos θ, r sin θ, z) ,
+A := 1
+2 + h ,
+D := 1
+2 −h ,
+A + D = 1 ,
+0 < h <
+1
+100 .
+(A.1a)
+Every formula written in τ below therefore reads the same in the time variable of the paper and
+in that of the manuscript, whereas statements quoted from the manuscript are in its own time
+variable. The exponent h is fixed by the construction, and A, D, and the bound on h are the
+notation of [43, p. 7, Theorem 3.1, p. 15, and Theorem 4.6, p. 32]. The manuscript works in the
+similarity coordinates
+q −z2q2h = τ ,
+η = z
+qD ,
+X = r2
+2q ,
+q > 0 ,
+−1 < η < 1 ,
+(A.1b)
+which satisfy, with a constant C0 depending only on the parameters of the construction,
+τ ≤q ≤C0
+ τ + |z|1/D
+,
+q ≍τ + |z|1/D .
+(A.1c)
+The manuscript states τ = q(1 −η2), z = qDη, and X = r2/(2q) at [43, equation (4.1), p. 24],
+with the ranges q > 0 and −1 < η < 1 at [43, equation (3.2), p. 7]; it states at [43, p. 7] that
+q −z2q2h = τ, that this equation determines q = q(z, τ) uniquely, and that q ≍τ + |z|1/D; and
+it states the upper bound of (A.1c) with the constant C0 at [43, equation (10.3), p. 118]. Since
+|η| < 1, the relation τ = q(1 −η2) gives q ≥τ; this inequality is printed at [43, p. 114, Step 1].
+Note that q and η do not depend on r. We write Cτ for the region which the manuscript calls its
+core, that is, the set of points whose similarity coordinates at the time −τ satisfy 0 ≤X ≤Xc and
+|η| ≤ηc, with the constants Xc > 0 and 0 < ηc < 1 fixed at [43, p. 8].
+The local field and the final field. The OpenAI manuscript first constructs a local velocity uloc and
+a local pressure πloc on the domain Ω∗, in the form
+Ω∗:= {(x, t): τ > 0 , q < q∗} ,
+uloc = curl A + Beθ
+on Ω∗,
+(A.2)
+
+=== PAGE 26 ===
+26
+PETER CONSTANTIN, MIHAELA IGNATOVA, AND VLAD VICOL
+where q∗> 0 is a constant of the construction, A is a vector potential, and B is a scalar independent
+of θ [43, Theorem 3.1 and its part (i) with equation (3.3), p. 15, and equation (9.21), p. 115]. The
+manuscript writes these two fields as A and B, and the second of those letters is the drift of Section 4
+in the paper. The final velocity and pressure are
+u = curl(χxχtA) + χxχtBeθ = χxχtuloc + ∇(χxχt) × A ,
+π = χxχtπloc ,
+(A.3)
+where χx is an axisymmetric cutoff in space and χt is a cutoff in time, both equal to one near
+(0, 1) [43, equation (10.4) and the display below it, p. 118, and Section 3.5, p. 16]. Accordingly, we
+fix once and for all R0 > 0 and τ0 > 0 such that
+χx = 1
+on B(R0) ,
+χt = 1
+for 0 < τ < τ0 ,
+C0
+ τ0 + R1/D
+0
+
+< q∗
+2 .
+(A.4)
+Since χxχt is then identically one on B(R0) × (−τ0, 0), its gradient vanishes there, so that the final
+fields agree with the local ones by (A.3): (u, π) = (uloc, πloc) on B(R0) × (−τ0, 0). By (A.1c) that
+cylinder lies in {q < q∗/2}, hence in Ω∗. Such a choice is possible: the manuscript states at [43,
+p. 118] that χx = 1 for r ≤r0/2 and |z| ≤z0/2, that χt = 1 for 0 ≤1 −t ≤τ∗/2, and that
+C0(τ∗+ z1/D
+0
+) < q∗/2, where r0, z0, and τ∗are the positive constants chosen on that page, the
+manuscript writing τ0 for the one we call τ∗; any R0 ≤min{r0, z0}/2 and any τ0 ≤τ∗/2 will then
+do, since 1/D > 0. All the norms below are spatial L∞norms over B(R0) of the final fields at time
+−τ, with 0 < τ < τ0, and constants may depend on R0 and τ0.
+The three radial regions. The radial thresholds of the OpenAI construction are
+0 < Xa < Xb ,
+0 < Xa < Xext < ∞,
+(A.5)
+the first pair produced in [43, Theorem 4.6, pp. 32–33], whose part (ii) states that the stress profile
+T0 vanishes for X ≤Xa and for X ≥Xb and is nonzero at every Xa < X < Xb, and the second
+pair in [43, Theorem 3.1, p. 15], with Xext fixed beyond the supports of all the corrections in [43,
+p. 116, Step 4]. We write exterior region for {X ≥Xext}. The manuscript states that in the
+exterior region the momentum residual of the local pair (uloc, πloc) vanishes identically and that
+A = 0 ,
+B = K(r, τ) ,
+K(r, τ) = r−1−2hHext(τ/r2) ,
+(A.6)
+where K solves the radial swirl heat equation and Hext is smooth on [0, ∞) with every fixed
+derivative bounded [43, equation (3.5), p. 15]; the same two identities are stated at [43, p. 116,
+Step 4]. Since A vanishes on the open set {X > Xext}, it follows from (A.2) that uloc = K(r, τ)eθ
+there; the manuscript states as much in words at [43, p. 119].
+The decomposition of the velocity. We write P for the angular mean of (1.4), which averages the
+cylindrical coefficients in θ; it is the operator ⟨·⟩θ of the OpenAI manuscript [43, equation (3.7),
+p. 17], which commutes with the evaluation of the auxiliary variable because that evaluation depends
+on (r, t) alone [43, equation (6.3), p. 63, and p. 117]. Let uB denote the background velocity of the
+OpenAI construction, which the manuscript states to be part of a pair of “smooth axisymmetric
+fields” (uB, pB) with div uB = 0 [43, Proposition 5.5, p. 60], and let
+v := Pu ,
+w := u −v ,
+m := v −uB ,
+so that
+u = uB + m + w ,
+Pw = 0 .
+(A.7)
+Thus v and w are the angular mean and the non-axisymmetric part of Section 1.2, and m is the
+correction which separates the angular mean from the background.
+Since uB is axisymmetric,
+PuB = uB and Pm = m. The manuscript builds uloc from uB and corrections of two kinds, and
+we use its names for them: the mean corrections, whose cylindrical coefficients are independent
+of θ [43, Definition 6.4, p. 69], and the wave corrections, which carry the oscillatory phases [43,
+equation (6.27) and Definition 6.5, p. 70] and whose angular mean vanishes [43, equation (9.7),
+p. 106]. Both are supported in the closed annulus Xa ≤X ≤Xb of (A.5), and the manuscript calls
+them annular [43, pp. 115 and 117].
+
+=== PAGE 27 ===
+ASYMPTOTICALLY AXISYMMETRIC NAVIER-STOKES WITH ANALYTIC FORCING
+27
+A.2. Exact axisymmetry on a shrinking core. The first claim is hypothesis (1.8) of The-
+orem 1.1, with ρ(t) = c√−t; see item (c) of Remark 1.2.
+Claim A.1 (Exact axisymmetry on a shrinking core). Let R0, τ0 be as in (A.4), let Xa
+be as in (A.5), and let
+0 < c <
+p
+2Xa ,
+τ0(c) := min{τ0, R2
+0/c2} .
+(A.8)
+Then the velocity u of the OpenAI construction, its angular mean v, and the background velocity
+uB of (A.7) satisfy
+u = v = uB
+on B(c√τ) × {−τ} ,
+0 < τ < τ0(c) .
+(A.9)
+Moreover w(·, t) = 0 on B(c√−t) for every t ∈(−1, 0), which is (1.8) with ρ(t) = c√−t.
+Justification of Claim A.1. The ingredients are the following statements of the OpenAI
+manuscript: the mean coefficients are independent of θ and are supported in Xa ≤X ≤Xb [43,
+Definition 6.4 and equation (6.24), p. 69]; the wave amplitudes are independent of θ and are
+supported in the same shell [43, equations (6.28)–(6.29) and Definition 6.5, p. 70]; the wave velocity
+increments are curls of potentials supported in that shell, and the mean velocity correction is the
+sum of a curl of an azimuthal potential, built through the compactly supported radial primitive Ic
+of [43, equation (8.4) with Lemma 8.2, p. 90], which vanishes for X ≤Xa and for X ≥Xb, and
+of a direct azimuthal field whose coefficient is supported in the same shell [43, Definition 9.4 and
+equation (9.9), p. 106], so that “all annular representatives vanish in a neighborhood of the axis at
+each t < 1” [43, p. 115]; and the background (uB, pB) is a pair of smooth axisymmetric fields [43,
+Proposition 5.5, p. 60].
+Let 0 < τ < τ0(c) and |x| < c√τ. Since τ < R2
+0/c2 we have c√τ < R0, so that x ∈B(R0) and
+u = uloc at (x, −τ) by (A.4). Moreover r ≤|x| < c√τ, and q ≥τ by (A.1c), so that
+X = r2
+2q < c2τ
+2q ≤c2
+2 < Xa ,
+the last inequality by (A.8).
+At such points every mean correction and every wave correction
+vanishes, hence m = w = 0 in (A.7) and the velocity is the background uB, which is axisymmetric.
+This proves (A.9).
+The restriction τ < τ0(c) enters only through the equality u = uloc, and the vanishing of w does
+not need it. Let t ∈(−1, 0) and τ = −t. The computation above gives X < Xa on B(c√τ) for
+every such τ, so that at the points of that ball which lie in Ω∗the potentials A and B are those
+of the background and are independent of θ. By (A.3) the final velocity on that ball is the curl of
+χxχtA plus χxχtBeθ, where χx is axisymmetric, being a smooth function of r2 and z [43, p. 118],
+χt is a function of t, and the support of χxχt lies in Ω∗[43, p. 118]; a curl of an axisymmetric
+field is axisymmetric, and the final velocity vanishes off the support of χxχt. Hence w(·, t) = 0 on
+B(c√−t) at every t ∈(−1, 0).
+The OpenAI manuscript states “all the annular corrections vanish near the axis for each fixed
+t < 1” [43, p. 117], “the annular corrections vanish in the fixed inner similarity region” [43, p. 124],
+and, at one fixed radius Xin ∈(0, Xa), “All annular corrections vanish there” [43, p. 116, Step 5].
+The vanishing on the whole set {X < Xa}, and with it the axisymmetry of the final velocity on
+the core, is what we deduce above.
+□
+A.3. The anisotropic bounds on the angular mean. The second claim is hypothesis (1.7)
+of Theorem 1.1, with the exponent h of the OpenAI construction; see item (b) of Remark 1.2.
+Theorem 1.1 allows 0 < h < 1/2, so the range 0 < h < 1/100 of (A.1a) is admissible in Theorem 1.1.
+Claim A.2 (Anisotropic bounds on the angular mean). Let A, D, h be as in (A.1a), let
+R0, τ0 be as in (A.4), and let βr = 1
+2 and βθ = βz = A. There is a constant C > 0, depending
+
+=== PAGE 28 ===
+28
+PETER CONSTANTIN, MIHAELA IGNATOVA, AND VLAD VICOL
+on R0, on τ0, and on the parameters of the OpenAI construction (but not on τ), such that the
+cylindrical components vj of the angular mean v = Pu of the velocity constructed in [43] satisfy
+∂a
+r ∂b
+zvj(·, −τ)
+
+L∞(B(R0)) ≤Cτ −βj−a/2−bD ,
+j ∈{r, θ, z} ,
+a + b ≤2 ,
+0 < τ < τ0 .
+(A.10)
+Since D = 1
+2 −h, these are the bounds (1.7) on the cylinder B(R0) × (−τ0, 0) (and hence on Q
+after the scaling of Section A.6), with the lengths ℓr = τ 1/2 and ℓz = τ 1/2−h of (1.10).
+Justification of Claim A.2. The OpenAI manuscript states its bounds separately for the
+background and for the corrections of each stage, and we assemble from them a bound on the
+angular mean of the final velocity. By (A.4) we have u = uloc on B(R0) × (−τ0, 0), and by (A.7)
+we have v = uB + m there; we bound uB and m in turn. Two reductions serve both steps.
+First, where the Cartesian derivatives of a field are bounded uniformly in τ, so are the cylindrical
+derivatives in (A.10). The frame (er, eθ, ez) depends on θ alone, hence is constant along radial rays,
+so that (er · ∇)ej = 0 and
+∂a
+r ∂b
+zgj =
+ (er · ∇)a∂b
+zg
+
+· ej
+at every point with r > 0
+for every smooth vector field g and every j ∈{r, θ, z}.
+The right side is a combination, with
+coefficients the components of the unit vector er, of the Cartesian derivatives of g of order a + b;
+since the axis is a null set, this gives ∥∂a
+r ∂b
+zgj∥L∞(S) ≲∥g∥Ca+b(S), the axis included, on every set
+S ⊂B(R0) which is invariant under rotations about the axis. The same bound holds for ∂a
+r ∂b
+z(Pg)j,
+since (Pg)j is the average of gj in θ (see Section 1.2), and this average commutes with ∂r and ∂z.
+Since q is a function of (z, τ) alone, the sets B(R0) ∩{q < c} and B(R0) ∩{q ≥c}, c > 0, to which
+we apply this below, are of that kind. Since the norm of Ca+b does not distinguish ∂r from ∂z,
+and since a Cartesian component mixes gr with gθ, whose exponents βr and βθ differ, the rates
+of (A.10) do not pass through this reduction: we use it only for fields whose Cartesian derivatives
+of order at most two are bounded uniformly in τ, and we obtain the bounds with rates in Steps 1
+and 2 directly for the cylindrical components of uB and of m.
+Second, the bounds quoted below are stated in the OpenAI manuscript as q ↓0, and we must
+cover the whole cylinder. By (A.4) we have q < q∗/2 on B(R0)×(−τ0, 0), and for every q1 ∈(0, q∗/2)
+the manuscript states that every Cartesian space-time derivative of A, Beθ, and πloc is bounded
+up to the blowup time on compact spatial subsets with q1 ≤q ≤q∗/2 [43, Theorem 3.1(ii), p. 15],
+hence so is every such derivative of u by (A.2) and (A.4), and therefore, by the first reduction, so is
+every ∂a
+r ∂b
+zvj. Since τ −βj−a/2−bD ≥τ −βj−a/2−bD
+0
+for 0 < τ < τ0, a bounded quantity obeys (A.10),
+so that (A.10) holds where q ≥q1. Only the region q < q1 remains, and Step 2 fixes the value of
+q1.
+Step 1: the background. The OpenAI manuscript states the rates of its leading field u(0) on the
+region Cτ, ∥u(0)
+θ ∥≍∥u(0)
+z ∥≍τ −A and ∥u(0)
+r ∥= O(τ −1/2) [43, p. 8], and, on a fixed radial en-
+largement of the closed annulus Xa ≤X ≤Xb and as q ↓0, that the cylindrical components
+ur,B, uθ,B, uz,B of uB are such that qAuθ,B, qAuz,B, and q1/2ur,B differ from their leading profiles by
+O(q2h) in every fixed composition of the derivatives q∂q, ∂X, ∂η [43, equation (5.42), p. 60], those
+profiles being bounded on that enlargement together with every fixed derivative in (X, η) [43, The-
+orem 4.6(i), p. 33]. For the radial component we use only the last line of [43, equation (5.42), p. 60],
+qAur,B = O(qh) in the same sense, which gives βr = 1
+2 since A −h = 1
+2. By (A.1b), on functions
+of (q, X, η) we have ∂r = (2X/q)1/2∂X and ∂z = q−DL−1 2ηq∂q −2ηX∂X + (1 −η2)∂η
+
+, where
+L = 1 −2hη2 ≥1 −2h, so that the conversion to physical derivatives of a cylindrical component
+costs q−1/2 for each ∂r and q−D for each ∂z [43, equation (5.26), p. 55]. Between the axis and the
+enlarged annulus the same bounds follow, upon using r2 = 2Xq, from the expansion [43, equa-
+tion (5.1), p. 46], in whose term of order n each of qA−2nhuz,n, qA+1/2−2nhuθ,n/r, and q1−2nhur,n/r
+is a profile smooth in (X, η) up to X = 0 [43, Theorem 4.6(i), p. 33, and equation (5.17), p. 52], and
+
+=== PAGE 29 ===
+ASYMPTOTICALLY AXISYMMETRIC NAVIER-STOKES WITH ANALYTIC FORCING
+29
+from the tail [43, equations (5.34)–(5.35), pp. 57–58], which past a large enough order is bounded
+in every Cartesian derivative of order at most two and is covered by the first reduction. In the
+exterior region X ≥Xext the corrections vanish, since Xext lies beyond their supports, so that
+uB = uloc = K(r, τ)eθ by (A.6), and the bounds follow from [43, equation (3.5), p. 15] with [43,
+equations (10.7)–(10.8), p. 119], the radial derivatives of K coming from (10.7), ∂zK being zero,
+and r2 ≥2Xextq there. In [43, Proposition 5.5, p. 60] the outer endpoint of the enlargement is
+arbitrary, the constants there depending on it, and we fix it beyond Xext; the three regions then
+cover every point of B(R0). Every power of q so produced has exponent at least −βj −a/2−bD < 0.
+Since τ ≤q < q1 ≤1 by (A.1c), each such power is at most τ −βj−a/2−bD, and these statements
+together give (A.10) for uB on {q < q1}.
+Step 2: the correction. The OpenAI manuscript builds its local field by an induction whose steps
+it calls stages, and it states that at each finite stage the normalized velocity is the sum of the
+background of [43, Proposition 5.5, p. 60], held fixed throughout the construction [43, p. 62], of
+a mean correction whose coefficients are independent of θ, and of a wave whose angular mean
+vanishes [43, equation (9.7) and Definition 9.4, p. 106, with Definition 6.4, p. 69]. The stages are
+summed in [43, Lemma 5.4 and equations (5.34)–(5.35), pp. 57–58], as applied in [43, Proposi-
+tion 9.9, p. 114]. The summation cutoffs are of the form χ(ajq), functions of q(z, τ) alone, with χ
+equal to one on [0, 1/2] and aj+1 ≥2aj [43, equation (9.21), p. 115, and Lemma 5.4, p. 57], so that
+for each stage J there is qJ > 0 with χ(ajq) = 1 for every j ≤J and every 0 < q < qJ; the single
+cutoff applied to the fields with which the summation starts likewise equals one near q = 0 [43,
+p. 114, Step 1, and p. 115]. The tail estimate [43, equation (5.35), p. 58] then gives, in every fixed
+order of Cartesian derivatives, that on {q < qJ} the summed field differs from the stage-J field by
+O(qNJ), with NJ →∞as J →∞. We now fix J so large that NJ ≥0 for every derivative order at
+most two, and we set q1 = qJ, decreased if necessary so that q1 < min{1, q∗/2}, so that the single
+cutoff above equals one on {q < q1}, and so that the statements quoted in Step 1, which hold for
+small q, hold on {q < q1}. Applying P to the stage-J field, and using PuB = uB from (A.7), we
+obtain that on {q < q1} the correction m is the mean correction of that stage, up to the angular
+mean of an error whose Cartesian derivatives of order at most two are O(qNJ), hence bounded; by
+the first reduction, this term obeys (A.10).
+It remains to bound the mean correction of a fixed stage. The OpenAI manuscript works on
+dyadic regions indexed by an integer ℓ, with
+Q = 2−ℓ,
+ε = Qh ,
+S∗= ℓ2 ,
+κs = 10−5 ,
+on each of which a physical velocity is Q−A times its representative in the rescaled coordinates
+of [43, equation (6.1), p. 62, and the text following it and equation (6.2), p. 63], and q ≍Q on the
+supports of the corrections [43, pp. 62 and 113]. The manuscript states that the radial component
+of the mean correction carries a factor ε1.9 and its azimuthal and axial components a factor ε0.9,
+in every coefficient derivative, times a power of S∗and a weight which is bounded on the annulus
+Xa < X < Xb [43, equation (9.9), p. 106, with Definition 6.4 and equations (6.23)–(6.24), p. 69],
+and that a radial physical derivative loses a factor Q−1/2−hκs and an axial one a factor Q−D [43,
+equation (9.19), p. 113]. With the bounded error of the previous paragraph, it follows that on
+{q < q1}, on the annulus and trivially off it since the mean coefficients vanish there,
+∂a
+r ∂b
+zmj
+ ≤Cq−A−a/2−bD+(αj−aκs)h 1 + |log q|
+P ,
+αr = 1.9 ,
+αθ = αz = 0.9 ,
+a + b ≤2 ,
+(A.11)
+where P depends on a + b and on the stage J fixed above. The radial row of (A.11) carries βr = 1
+2
+because −A + (1.9 −aκs)h = −1
+2 + (0.9 −aκs)h. In every row the exponent of q in (A.11) is
+negative, and it exceeds −βj −a/2 −bD by (0.9 −aκs)h > 0; since τ ≤q < q∗/2, the powers of q
+become powers of τ and the logarithm is absorbed. Thus m satisfies (A.10) on {q < q1}, and with
+
+=== PAGE 30 ===
+30
+PETER CONSTANTIN, MIHAELA IGNATOVA, AND VLAD VICOL
+Step 1 so does v = uB + m. Together with the second reduction above, which covers {q ≥q1}, this
+proves (A.10) on B(R0) × (−τ0, 0).
+□
+A.4. Exact vanishing of the meridional velocity, and the values on the axis. Re-
+mark 2.6 asks two things of a solution: the exact vanishing (2.9) of the meridional components ur
+and uz on one open set off the axis which does not depend on time, and a time at which uz does
+not vanish at the origin. The third claim supplies both.
+Claim A.3 (Vanishing of the meridional velocity on a fixed open set, and the values
+on the axis). Let R0, τ0 be as in (A.4), and let u be the velocity of the OpenAI construction.
+(a) Let 0 < r−< r+ < R0. There exist z∗> 0 and 0 < δ∗≤τ0 such that the open set
+E := {x ∈R3 : r−< r < r+ , |z| < z∗}
+is contained in B(R0) ∩{r > 0}, and such that
+u = K(r, τ)eθ ,
+and in particular
+ur = uz = 0 ,
+on E × (−δ∗, 0) ,
+where K is the function in (A.6). This is (2.9) with R = R0 and δ = δ∗.
+(b) There is a constant j0 with 0 < j0 ≤1
+20 such that
+uz(0, −τ) = j0τ −A ,
+∂zuz(0, −τ) = 4
+τ ,
+0 < τ < τ0 .
+(A.12)
+In particular uz(0, t)̸ = 0 for every t ∈(−τ0, 0).
+Justification of Claim A.3. Part (a). By (A.6) and (A.2) we have uloc = K(r, τ)eθ, and in
+particular uloc,r = uloc,z = 0, on the open set {X > Xext}. Given 0 < r−< r+ < R0, we choose
+z∗> 0 and 0 < δ∗≤τ0 so small that
+E ⊂B(R0) ,
+C0
+ δ∗+ z1/D
+∗
+
+<
+r2
+−
+2Xext
+,
+which is possible since r+ < R0 and 1/D > 0. By the upper bound in (A.1c), every point of
+E × (−δ∗, 0) has q < r2
+−/(2Xext), and hence X = r2/(2q) > r2
+−/(2q) > Xext. Since δ∗≤τ0 and
+E ⊂B(R0), we have u = uloc there by (A.4), and part (a) follows.
+Part (b). The OpenAI manuscript states u(0)
+θ
+= 0 on the axis and ∥u(0)
+z ∥L∞≍τ −A on Cτ, the lower
+bound being attributed in the manuscript to the nonzero axis datum [43, pp. 7–8]; the manuscript
+does not state the pointwise axial value or its axial derivative on the axis. It chooses the axis datum
+U∗= 4η + j0, with 0 < j0 ≤.05, as the value at the axis of the axial profile U [43, Section B.1 and
+equation (B.1), p. 144], this being one of the axis parameters of [43, Proposition 4.10, pp. 36–37],
+and it states that the analytic profile realizing that datum has U −U∗vanishing at the axis [43,
+Proposition B.2 and equation (B.12), pp. 146–147]; that the axial coefficients of the expansion are
+uz,n = q−A+2nhUn [43, equation (5.1), p. 46], that these enter the background with the cutoffs
+of [43, equation (5.45), p. 61] as q−A+2nhχ(cnq)Un, the axial coefficient carrying no derivative of
+its cutoff because q does not depend on r [43, equation (10.1), p. 117], and that Un(0, η) = 0 for
+every n ≥1 [43, Lemma 5.1, p. 47]; and that q = τ and η = 0 at z = 0 [43, p. 116, Step 5]. Every
+term with n ≥1 in the sum of the axial coefficients therefore vanishes at X = 0, so that
+uz,B = q−AU(0, η) = q−A(4η + j0)
+on the axis .
+Since X = 0 < Xa on the axis, m = w = 0 there as in the justification of Claim A.1, and
+u = uloc by (A.4); hence uz = q−A(4η + j0) on the segment {r = 0, |z| < R0} of the axis, for
+0 < τ < τ0. Evaluating at z = 0, where q = τ and η = 0, gives the first identity in (A.12). For the
+second, differentiating in z and using η = zq−D together with the identity ∂zq = 2ηq1−D/L, where
+L = 1 −2hη2 [43, equation (4.1), p. 24, and the proof of Lemma 4.1, p. 25], so that ∂zq = 0 at
+η = 0, we obtain ∂zuz(0, −τ) = 4τ −Aτ −D, which is 4/τ by (A.1a).
+□
+
+=== PAGE 31 ===
+ASYMPTOTICALLY AXISYMMETRIC NAVIER-STOKES WITH ANALYTIC FORCING
+31
+A.5. The blowup and the non-axisymmetric part. The blowup. The OpenAI manuscript
+asserts that, along the points
+xτ = (
+p
+2Xinτ, 0, 0) ,
+uθ(xτ, −τ) = τ −A e0 + O(τ 2h)
+
+−→+∞,
+(A.13)
+where z = 0, q = τ, and both cutoffs equal one for all sufficiently small τ > 0 [43, equations (10.20)–
+(10.21), p. 124], with Xin ∈(0, Xa) and e0 > 0 produced at [43, Theorem 3.1(iv) and equation (3.6),
+p. 16]. Since |xτ| →0, the point (0, 0) is then singular for the construction.
+The non-axisymmetric part. In chart variables the amplitudes of the wave corrections carry a factor
+ε1/2 relative to the background [43, equation (9.9), p. 106, with Definition 6.5 and equation (6.29),
+p. 70]. We do not convert this into a bound for w in physical variables: Theorem 1.1 uses only the
+exact axisymmetry on the core of Claim A.1 and the bounds on the angular mean of Claim A.2.
+It is in this sense, exact axisymmetry on a core which collapses at the parabolic rate as t ↑0, that
+we call such solutions asymptotically axisymmetric.
+A.6. What the results of the paper give for the OpenAI construction. The OpenAI
+manuscript states that its velocity and pressure are smooth on R3 × [0, 1), divergence free, both
+of fixed compact spatial support [43, Proposition 10.1, p. 117], that its force, the momentum
+residual [43, equation (10.5), p. 118], lies in C∞
+c (R3 × (0, ∞); R3) [43, Lemma 10.3, p. 120], which
+gives (1.5), and that its kinetic energy is bounded on [0, 1) and its total dissipation on [0, 1) is
+finite [43, Lemma 10.4 and equation (10.13), p. 121], the velocity part of (1.3). Since u and π are
+compactly supported, π is the decaying solution of the pressure equation −∆π = ∂i∂j(uiuj)−div f
+of [43, p. 118], so that ∥π(·, t)∥L3/2(B(1)) ≲∥u(·, t)∥2
+L3 + 1 by the Calderon-Zygmund inequality
+and the boundedness of f; interpolation places u in L3
+x,t, and the pressure part of (1.3) follows.
+Smoothness on R3 × [−1, 0) makes the local energy inequality an equality, upon testing (1.2)
+against 2uφ, every term being finite by (1.3); the construction is thus a suitable weak solution on
+the cylinder B(R0) × (−τ0(c), 0) of Claim A.1, carried onto Q by the scaling in the footnote of
+Section 1.1. Claims A.2 and A.1 supply (1.7) and (1.8), so Corollary 2.3 applies: conditionally on
+the blowup (A.13), the force violates (1.6) and vanishes identically on no cylinder around (0, 0).
+Claim A.3 gives the same failure through Remark 2.6, on every ball B(R′) with 0 < R′ ≤R0 which
+meets its set E, using neither (1.7) nor (1.8) nor the blowup. Were (2.6) to hold on a cylinder
+B(R′)×(−δ′, 0) with 0 < R′ ≤R0 and 0 < δ′ ≤τ0(c), Remark 2.4 would make (0, 0) a regular point,
+which would contradict (A.13); hence the non-axisymmetric part of the velocity is not bounded in
+C3 uniformly in time on any such cylinder.
+Acknowledgments
+The work of P.C. was partially supported by NSF grant DMS-2606072. The work of M.I. was
+partially supported by NSF grant DMS-2204614. The work of V.V. was partially supported by the
+Collaborative NSF grant DMS-2307681 and by a Simons Investigator Award.
+We are grateful to Scott Armstrong and Tuomo Kuusi for comparing the properties of the
+OpenAI construction recorded in Appendix A against the Lean code released by OpenAI.
+Disclaimer on the use of AI systems
+Publicly available versions of Claude (Opus 5 and Fable 5.1, within Claude Code) and ChatGPT
+(Sol and Astra, within Codex) were used in the preparation of this manuscript. By far the heaviest
+use of these AI systems was in deciphering the statements of the OpenAI paper [43]. Claude and
+ChatGPT were used to analyze that manuscript, and over the course of several interactive sessions
+the main properties of the solutions in the OpenAI construction were extracted; see Appendix A.
+These properties were subsequently cross-checked against the publicly available PDF version of [43]
+and the Lean code released by OpenAI. The AI systems were given access to our paper [13] and to
+
+=== PAGE 32 ===
+32
+PETER CONSTANTIN, MIHAELA IGNATOVA, AND VLAD VICOL
+a nearly completed version of the paper [14], from which the core idea of this proof is taken. The AI
+systems were also provided with an early draft of this manuscript, written entirely by the authors,
+which contained the entire proof of Theorem 1.3 in the form of a six-page sketch, and a half-page
+explanation of how the analyticity reduction to the axisymmetric case should work. Claude and
+ChatGPT were used to turn this early draft into a manuscript which contained complete proofs of all
+statements. The AI systems also produced the figure and searched the relevant bibliography. Over
+the course of a few interactive sessions of Claude Code, the manuscript was then rewritten under the
+close guidance and supervision of the authors; this included not just the polishing of the exposition,
+but also the verification of all mathematical computations. Every suggestion, computation, and
+reference produced by the AI systems was independently verified and, where necessary, corrected
+or reformulated by the authors, who take full responsibility for the manuscript as it is presently
+written.
+References
+[1] L. Alp¨oge and T. Buckmaster, Blowup for the Boussinesq equations with smooth forcing, Preprint (2026),
+https://cims.nyu.edu/∼tristanb/boussinesq.pdf.
+[2] L. Alp¨oge and T. Buckmaster, Blowup for the Euler equations with smooth forcing, Preprint (2026), https:
+//cims.nyu.edu/∼tristanb/euler.pdf.
+[3] L. Alp¨oge, T. Buckmaster, and M. P. Coiculescu, Extending the C´ordoba-Mart´ınez-Zoroa IPM blow-up to
+uniformly space-time smooth forcing, arXiv:2609.16470 (2026).
+[4] Z. Bradshaw, Z. Gruji´c, and I. Kukavica, Local analyticity radii of solutions to the 3D Navier-Stokes equations
+with locally analytic forcing, J. Differential Equations 259 (2015), no. 8, 3955–3975. doi:10.1016/j.jde.2015.05.
+009.
+[5] T. Buckmaster and V. Vicol, Nonuniqueness of weak solutions to the Navier-Stokes equation, Ann. of Math. (2)
+189 (2019), no. 1, 101–144. doi:10.4007/annals.2019.189.1.3.
+[6] L. Caffarelli, R. Kohn, and L. Nirenberg, Partial regularity of suitable weak solutions of the Navier-Stokes
+equations, Comm. Pure Appl. Math. 35 (1982), no. 6, 771–831. doi:10.1002/cpa.3160350604.
+[7] C.-C. Chen, R. M. Strain, H.-T. Yau, and T.-P. Tsai, Lower bound on the blow-up rate of the ax-
+isymmetric Navier-Stokes equations, Int. Math. Res. Not. IMRN (2008), no. 9, Art. ID rnn016, 31 pp.
+doi:10.1093/imrn/rnn016.
+[8] C.-C. Chen, R. M. Strain, T.-P. Tsai, and H.-T. Yau, Lower bounds on the blow-up rate of the ax-
+isymmetric Navier-Stokes equations II, Comm. Partial Differential Equations 34 (2009), no. 3, 203–232.
+doi:10.1080/03605300902793956.
+[9] J. Chen and T. Y. Hou, Singularity formation in 3D Euler equations with smooth initial data and boundary,
+Proc. Natl. Acad. Sci. USA 122 (2025), no. 27, Paper No. e2500940122. doi:10.1073/pnas.2500940122.
+[10] J. Chen, Asymptotically self-similar blowup for 3D incompressible Euler with C1,1/3−velocity I: C∞1D limiting
+profiles, arXiv:2605.15149 (2026).
+[11] J. Chen, Asymptotically self-similar blowup for 3D incompressible Euler with C1,1/3−velocity II: 3D profiles,
+blowup, and limiting behavior, arXiv:2605.15130 (2026).
+[12] P. Constantin and C. Fefferman, Direction of vorticity and the problem of global regularity for the Navier-Stokes
+equations, Indiana Univ. Math. J. 42 (1993), no. 3, 775–789. doi:10.1512/iumj.1993.42.42034.
+[13] P. Constantin, M. Ignatova, and V. Vicol, On putative self-similarity for incompressible 3D Euler, Courant
+Journal of Pure and Applied Mathematics, Accepted, 2026. arXiv:2602.17570v3.
+[14] P. Constantin, M. Ignatova, and V. Vicol, Regularity for axisymmetric Navier-Stokes with an Euler length,
+arXiv:2609.20762 (2026).
+[15] D. C´ordoba and L. Mart´ınez-Zoroa, Blow-up for the incompressible 3D-Euler equations with uniform C1, 1
+2 −ε∩L2
+force, arXiv:2309.08495 (2023).
+[16] D. C´ordoba and L. Mart´ınez-Zoroa, Finite time singularities of smooth solutions for the 2D incompressible porous
+media (IPM) equation with a smooth source, arXiv:2410.22920 (2024).
+[17] S. Daneri and L. Sz´ekelyhidi, Jr., Non-uniqueness and h-principle for H¨older-continuous weak solutions of the
+Euler equations, Arch. Ration. Mech. Anal. 224 (2017), no. 2, 471–514. doi:10.1007/s00205-017-1081-8.
+[18] C. De Lellis and L. Sz´ekelyhidi, Jr., The Euler equations as a differential inclusion, Ann. of Math. (2) 170 (2009),
+no. 3, 1417–1436. doi:10.4007/annals.2009.170.1417.
+[19] C. De Lellis and L. Sz´ekelyhidi, Jr., Dissipative continuous Euler flows, Invent. Math. 193 (2013), no. 2, 377–407.
+doi:10.1007/s00222-012-0429-9.
+
+=== PAGE 33 ===
+ASYMPTOTICALLY AXISYMMETRIC NAVIER-STOKES WITH ANALYTIC FORCING
+33
+[20] R. J. DiPerna and P.-L. Lions, Ordinary differential equations, transport theory and Sobolev spaces, Invent.
+Math. 98 (1989), no. 3, 511–547. doi:10.1007/BF01393835.
+[21] V. Duruisseaux, A. Ganeshram, R. J. George, and A. Anandkumar, Stability framework for the singularity of
+the Euler equations on R3, arXiv:2609.10860 (2026).
+[22] T. M. Elgindi, Finite-time singularity formation for C1,α solutions to the incompressible Euler equations on R3,
+Ann. of Math. (2) 194 (2021), no. 3, 647–727. doi:10.4007/annals.2021.194.3.2.
+[23] T. M. Elgindi, T.-E. Ghoul, and N. Masmoudi, On the stability of self-similar blow-up for C1,α solutions to the
+incompressible Euler equations on R3, Camb. J. Math. 9 (2021), no. 4, 1035–1075. doi:10.4310/cjm.2021.v9.n4.a4.
+[24] L. Escauriaza, G. A. Seregin, and V. ˇSver´ak, L3,∞-solutions of the Navier-Stokes equations and backward
+uniqueness, Uspekhi Mat. Nauk 58 (2003), no. 2, 3–44; English transl. in Russian Math. Surveys 58 (2003),
+no. 2, 211–250. doi:10.1070/RM2003v058n02ABEH000609.
+[25] S. Friedlander and M. M. Vishik, Instability criteria for the flow of an inviscid incompressible fluid, Phys. Rev.
+Lett. 66 (1991), no. 17, 2204–2206. doi:10.1103/PhysRevLett.66.2204.
+[26] A. Ganeshram, V. Duruisseaux, and A. Anandkumar, Stable singularity of the Euler equations on R3,
+arXiv:2609.10867 (2026).
+[27] Z. Gruji´c and I. Kukavica, Space analyticity for the Navier-Stokes and related equations with initial data in Lp,
+J. Funct. Anal. 152 (1998), no. 2, 447–466. doi:10.1006/jfan.1997.3167.
+[28] S. Gustafson, K. Kang, and T.-P. Tsai, Interior regularity criteria for suitable weak solutions of the Navier-Stokes
+equations, Comm. Math. Phys. 273 (2007), no. 1, 161–176. doi:10.1007/s00220-007-0214-6.
+[29] T. Y. Hou and D. Huang, A potential two-scale traveling wave singularity for 3D incompressible Euler equations,
+Phys. D 435 (2022), Paper No. 133257. doi:10.1016/j.physd.2022.133257.
+[30] T. Y. Hou, Potential singularity of the 3D Euler equations in the interior domain, Found. Comput. Math. 23
+(2023), no. 6, 2203–2249. doi:10.1007/s10208-022-09585-5.
+[31] P. Isett, A proof of Onsager’s conjecture, Ann. of Math. (2) 188 (2018), no. 3, 871–963. doi:10.4007/
+annals.2018.188.3.4.
+[32] C. Kahane, On the spatial analyticity of solutions of the Navier-Stokes equations, Arch. Rational Mech. Anal.
+33 (1969), no. 5, 386–405. doi:10.1007/BF00247697.
+[33] G. Koch, N. Nadirashvili, G. A. Seregin, and V. ˇSver´ak, Liouville theorems for the Navier-Stokes equations and
+applications, Acta Math. 203 (2009), no. 1, 83–105. doi:10.1007/s11511-009-0039-6.
+[34] G. Komatsu, Global analyticity up to the boundary of solutions of the Navier-Stokes equation, Comm. Pure
+Appl. Math. 33 (1980), no. 4, 545–566. doi:10.1002/cpa.3160330405.
+[35] I. Kukavica, On partial regularity for the Navier-Stokes equations, Discrete Contin. Dyn. Syst. 21 (2008), no. 3,
+717–728. doi:10.3934/dcds.2008.21.717.
+[36] O. A. Ladyzhenskaya, On unique solvability “in the large” of three-dimensional Cauchy problem for Navier-
+Stokes equations with axial symmetry, Zap. Nauchn. Sem. LOMI 7 (1968), 155–177 (Russian); English transl.
+in Sem. Math. V. A. Steklov Math. Inst. Leningrad 7 (1970), 70–79. Math-Net.Ru: znsl2240.
+[37] O. A. Ladyzhenskaya and G. A. Seregin, On partial regularity of suitable weak solutions to the three-dimensional
+Navier-Stokes equations, J. Math. Fluid Mech. 1 (1999), no. 4, 356–387. doi:10.1007/s000210050015.
+[38] P. G. Lemari´e-Rieusset, The Navier-Stokes problem in the 21st century, CRC Press, Boca Raton, FL, 2016.
+doi:10.1201/b19556.
+[39] A. Lifschitz and E. Hameiri, Local stability conditions in fluid dynamics, Phys. Fluids A 3 (1991), no. 11,
+2644–2651. doi:10.1063/1.858153.
+[40] F.-H. Lin, A new proof of the Caffarelli-Kohn-Nirenberg theorem, Comm. Pure Appl. Math. 51 (1998), no. 3,
+241–257. Publisher’s version.
+[41] K. Masuda, On the analyticity and the unique continuation theorem for solutions of the Navier-Stokes equation,
+Proc. Japan Acad. 43 (1967), no. 9, 827–832. doi:10.3792/pja/1195521421.
+[42] J. Neˇcas, M. R˚uˇziˇcka, and V. ˇSver´ak, On Leray’s self-similar solutions of the Navier-Stokes equations, Acta
+Math. 176 (1996), no. 2, 283–294. doi:10.1007/BF02551584.
+[43] OpenAI, Finite time blowup for Navier-Stokes, manuscript, 166 pp., posted September 8, 2026, https://openai.
+com/index/navier-stokes-solution/.
+[44] OpenAI, Finite time blowup for the Euler equation, manuscript, 57 pp., posted September 8, 2026, https://cdn.
+openai.com/pdf/315b36cd-ec98-4023-8342-93345194ece1/euler.pdf.
+[45] W. S. O˙za´nski and S. Palasek, Quantitative control of solutions to the axisymmetric Navier-Stokes equations in
+terms of the weak L3 norm, Ann. PDE 9 (2023), no. 2, Paper No. 15. doi:10.1007/s40818-023-00156-7.
+[46] S. Palasek, Improved quantitative regularity for the Navier-Stokes equations in a scale of critical spaces, Arch.
+Ration. Mech. Anal. 242 (2021), no. 3, 1479–1531. doi:10.1007/s00205-021-01709-5.
+[47] S. Palasek, Finite-time blow-up in an elementary model of the 3D Navier-Stokes equations, arXiv:2605.13827
+(2026).
+
+=== PAGE 34 ===
+34
+PETER CONSTANTIN, MIHAELA IGNATOVA, AND VLAD VICOL
+[48] B. Pineau and V. Vicol, On rotated backwards self-similar solutions of the incompressible 3D Navier-Stokes
+equations, arXiv:2607.09619 (2026).
+[49] G. Seregin, Local regularity of axisymmetric solutions to the Navier-Stokes equations, Anal. Math. Phys. 10
+(2020), no. 4, Paper No. 46. doi:10.1007/s13324-020-00392-1.
+[50] G. Seregin, Remarks on Type II blowups of solutions to the Navier-Stokes equations, Commun. Pure Appl. Anal.
+23 (2024), no. 10, 1389–1406. doi:10.3934/cpaa.2023108.
+[51] G. Seregin, A note on potential Type II blowups of axisymmetric solutions to the Navier-Stokes equations,
+arXiv:2402.13229 (2024).
+[52] G. Seregin, A note on certain scenarios of Type II blowups of suitable weak solutions to the Navier-Stokes
+equations, arXiv:2507.08733 (2025).
+[53] G. Seregin, On potential Type II blowups for the Navier-Stokes equations, arXiv:2606.29468 (2026).
+[54] G. Seregin and V. ˇSver´ak, On Type I singularities of the local axi-symmetric solutions of the Navier-Stokes
+equations, Comm. Partial Differential Equations 34 (2009), no. 2, 171–201. doi:10.1080/03605300802683687.
+[55] J. Serrin, On the interior regularity of weak solutions of the Navier-Stokes equations, Arch. Ration. Mech. Anal.
+9 (1962), 187–195. doi:10.1007/BF00253344.
+[56] F. Shao, D. Wei, P. Zhang, and Z. Zhang, Self-similar blow-up solutions of d-dimensional incompressible Euler
+equations with C1,(1−2/d)−velocity, arXiv:2605.19716 (2026).
+[57] S. Shkoller, Incompressible Euler blowup at the C1, 1
+3 threshold, arXiv:2603.10945 (2026).
+[58] T. Tao, Finite time blowup for an averaged three-dimensional Navier-Stokes equation, J. Amer. Math. Soc. 29
+(2016), no. 3, 601–674. doi:10.1090/jams/838.
+[59] T. Tao, Quantitative bounds for critically bounded solutions to the Navier-Stokes equations, in Nine mathe-
+matical challenges, Proc. Sympos. Pure Math., vol. 104, Amer. Math. Soc., Providence, RI, 2021, pp. 149–193.
+doi:10.1090/pspum/104/01874.
+[60] T.-P. Tsai, On Leray’s self-similar solutions of the Navier-Stokes equations satisfying local energy estimates,
+Arch. Ration. Mech. Anal. 143 (1998), no. 1, 29–51. doi:10.1007/s002050050099.
+[61] T.-P. Tsai, Lectures on Navier-Stokes equations, Graduate Studies in Mathematics, vol. 192, American Mathe-
+matical Society, Providence, RI, 2018, xii+224 pp. doi:10.1090/gsm/192.
+[62] M. R. Ukhovskii and V. I. Yudovich, Axially symmetric flows of ideal and viscous fluids filling the whole space,
+J. Appl. Math. Mech. 32 (1968), no. 1, 52–62. doi:10.1016/0021-8928(68)90147-0.
+[63] Y. Wang, C.-Y. Lai, J. G´omez-Serrano, and T. Buckmaster, Asymptotic self-similar blow-up profile for three-
+dimensional axisymmetric Euler equations using neural networks, Phys. Rev. Lett. 130 (2023), no. 24, Paper
+No. 244002. doi:10.1103/PhysRevLett.130.244002.
+[64] Y. Wang, M. Bennani, J. Martens, et al., Discovery of unstable singularities, arXiv:2509.14185 (2025).
+[65] Q.S.
+Zhang,
+On
+partial
+type
+I
+solutions
+to
+the
+Axially
+symmetric
+Navier-Stokes
+equations,
+arXiv:arXiv:2604.07785 (2026).
+Department of Mathematics, Princeton University, Princeton, NJ 08540
+Email address: const@math.princeton.edu
+URL: https://web.math.princeton.edu/~const/
+Department of Mathematics, Temple University, Philadelphia, PA 19122
+Email address: ignatova@temple.edu
+URL: https://sites.temple.edu/ignatova/
+Department of Mathematics, Courant Institute, New York University, New York, NY, 10012
+Email address: vicol@cims.nyu.edu
+URL: https://cims.nyu.edu/~vicol/

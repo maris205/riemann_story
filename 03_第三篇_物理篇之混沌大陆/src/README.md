@@ -48,3 +48,27 @@ python "render_spectral_figures.py"
 ## 第10节：真实素数散射图
 
 [render_prime_diffraction.py](render_prime_diffraction.py)以分段筛取一百亿附近5221颗素数，再按Torquato等论文定义计算散射强度。输出[配图](../img/10_prime_diffraction.png)、[数据](10_prime_diffraction_data.npz)与[核验记录](10_prime_diffraction_metadata.json)。依赖NumPy、Matplotlib；中文字体为微软雅黑。
+
+## 第11节：素数与分形（2026-10-22）
+
+[render_prime_fractals.py](render_prime_fractals.py)计算乌拉姆螺旋及欧拉40素数对角线、素数连分数柱区间、由v₂(n)编码的龙形折线，生成四幅PNG及[NPZ数据](11_prime_fractals_data.npz)、[核验记录](11_prime_fractals_metadata.json)。依赖NumPy、Matplotlib与微软雅黑，无网络和随机输入。按脚本位置定位输出，从任意目录可运行。具体解释和截断范围见[图片底稿](../../资料/11_素数与分形/04_图片与视频素材.md)。
+
+## 第12节：孔涅路线的三幅解释图（2026-10-22）
+
+[render_connes.py](render_connes.py)生成吸收谱示意、三阶托普利茨矩阵与单位圆、标准时间频率浓缩图。依赖NumPy、Matplotlib、mpmath与Windows微软雅黑；从任意目录运行。输出三张2520×1440 PNG、[NPZ数据](12_connes_data.npz)及[JSON核验](12_connes_metadata.json)。检查矩阵结构、根、归一化、120/200点求积及独立频带积分。它们是教学计算，不是孔涅55位零点实验的复现。详见[素材底稿](../../资料/12_Connes和他的学徒们/04_图片与视频素材.md)。
+
+## 第13节：真实零点统计与闭合轨道（2026-10-23）
+
+[render_prime_music.py](render_prime_music.py)读取已落地的Odlyzko一万颗高位零点，计算9999个展开间距，并绘制两能级避交和2011年紧化模型等值线。输出两幅PNG/SVG、[间距CSV](13_zero_spacings.csv)与[核验JSON](13_prime_music_metadata.json)。依赖NumPy、Matplotlib及Windows微软雅黑，从任意目录离线运行。原表偏移量直接差分，避免巨大高度浮点消减；GUE/GOE为Wigner近似，不称精确分布。
+
+## 第14节：在动力学系统中寻找零点
+
+[render_zero_dynamics.py](render_zero_dynamics.py)生成4组PNG/SVG、[中间数据](14_dynamics_data.npz)及[核验记录](14_dynamics_metadata.json)。依赖numpy、mpmath、matplotlib与Windows微软雅黑字体。运行：`python 03_第三篇_物理篇之混沌大陆/src/render_zero_dynamics.py`，可从项目根目录执行。
+
+输入为[归档的Wei2026实验与理论数据](../../资料/14_在动力学系统中寻找零点/原始代码/README.md)。核磁共振数组对应遵循原Fig4.py，其余图按论文公式独立计算。代码内含理论复数求和值、数组坐标与导数样点校验；完整光学多次散射、原实验硬件与全部论文结论不在复现范围。
+
+### 第14节：作者notebook增补图
+
+[compute_wang_gap.py](compute_wang_gap.py)按原参数复算五亿素数范围与五亿步固定参数映射，使用numpy、numba；输出[计数数据](14_wang_gap_data.npz)及[参数记录](14_wang_gap_metadata.json)。流式计算省去4GB轨道数组，并与100000步字面Python递推核对。
+
+[render_wang_examples.py](render_wang_examples.py)使用上述计数、原notebook保存的85项残差，以及核对原论文后的USTC表格，生成3组PNG/SVG、[谱绘图CSV](14_wang_spectral_plot.csv)与[核验记录](14_wang_examples_metadata.json)。依赖numpy、mpmath、matplotlib。完整非自治矩阵演化及20次求谱未重跑；图中标注保存结果身份与筛选条件。[详细记录](../../资料/14_在动力学系统中寻找零点/05_映射图与算力转场.md)。

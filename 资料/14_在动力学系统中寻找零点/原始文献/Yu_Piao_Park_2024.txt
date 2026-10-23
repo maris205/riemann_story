@@ -1,0 +1,1991 @@
+1 
+ 
+Computing Riemann zeros with light scattering 
+ 
+Sunkyu Yu1†, Xianji Piao2§, and Namkyoo Park3* 
+ 
+1Intelligent Wave Systems Laboratory, Department of Electrical and Computer Engineering, 
+Seoul National University, Seoul 08826, Korea 
+2Wave Engineering Laboratory, School of Electrical and Computer Engineering, University of 
+Seoul, Seoul 02504, Korea 
+3Photonic Systems Laboratory, Department of Electrical and Computer Engineering, Seoul 
+National University, Seoul 08826, Korea 
+E-mail address for correspondence: †sunkyu.yu@snu.ac.kr, §piao@uos.ac.kr, *nkpark@snu.ac.kr 
+Abstract 
+Finding hidden order within disorder is a common interest in material science1,2, wave physics3,4, 
+and mathematics5. The Riemann hypothesis, stating the locations of nontrivial zeros of the Riemann 
+zeta function6, tentatively characterizes statistical order in the seemingly random distribution of 
+prime numbers. This famous conjecture has inspired various connections with different branches of 
+physics7, recently with non-Hermitian physics8,9, quantum field theory10, trapped-ion qubits11, and 
+hyperuniformity12,13. Here we develop the computing platform for the Riemann zeta function by 
+employing classical scattering of light. We show that the Riemann hypothesis suggests the landscape 
+of semi-infinite optical scatterers for the perfect reflectionless condition under the Born 
+approximation. To examine the validity of the scattering-based computation, we investigate the 
+asymptotic behaviours of suppressed reflections with the increasing number of scatterers and the 
+
+2 
+ 
+emergence of multiple scattering. The result provides another bridge between classical physics and 
+the Riemann zeros, exhibiting the design of wave devices inspired by number theory. 
+
+3 
+ 
+Introduction 
+As an abstract language of physics, mathematics allows for linking seemingly unrelated 
+phenomena in different domains of physics. For example, the mathematical similarity in governing 
+equations enables analogies between classical and quantum phenomena14-16. Statistical measures 
+classify distinctly disordered materials into the same material phase1-4. The concept of topology 
+provides a common design strategy for implementing robust systems across different domains17-
+19. Similarly, the Riemann hypothesis6 is a representative example that bridges classical, quantum, 
+and relativistic physics through number theory7.  
+For the Riemann zeta function ζ(s) = ∑
+1
+ns
+∞
+n=1 with a complex variable s = σ + it, where σ 
+and t are real, this cornerstone conjecture claims that the locations of the nontrivial zeros for t ≠ 0 
+are restricted to σ = 1/2. The most important result of understanding the locations of the nontrivial 
+Riemann zeros would be the quantification of prime number distribution due to its relationship 
+with the prime counting function, which forms the basis for number theory5,20. Efforts to connect 
+the conjecture to physics problems have been focused on finding ζ(s) in various systems: chaotic 
+resonators7, parity-time-symmetric Hamiltonians8,9, relativistic scattering10, and trapped-ion 
+qubits11. The most famous approach is the Hilbert-Pólya conjecture21, which suggests that the 
+nontrivial Riemann zeros correspond to real eigenvalues of a Hermitian operator. 
+Material science is another branch exploring the implications of the Riemann hypothesis. 
+Due to the similarity between material classification and number theory in discovering hidden 
+order within highly randomized patterns, the intermediate regime between order and uncorrelated 
+disorder has attracted substantial attention in exploring the hypothesis. For example, there has been 
+an attempt to understand the locations of the Riemann zeros using quasicrystal patterns22,23. The 
+
+4 
+ 
+distribution of prime numbers has also been examined through the concept of hyperuniformity24-
+26, which reveals the suppression of long-range fluctuations in the pattern of prime numbers12,13. 
+Here, we revisit the classical theory of light scattering to develop wave-based computing 
+platforms for the Riemann zeta function through engineered scatterers. We propose the concept of 
+the σ-Riemann scatterer, which is composed of the logarithmically spaced one-dimensional (1D) 
+semi-infinite scatterers with σ-power-law-decayed scattering amplitudes. We demonstrate that the 
+Riemann hypothesis corresponds to the complete reflectionless condition only at the (1/2)-
+Riemann scatterer under the first-order Born approximation, where the locations of the Riemann 
+zeros denote the zero-reflection wavelength of light. To exploit this reflectionless condition for 
+optical devices, we estimate the valid range of highly suppressed reflection at the Riemann-zero 
+wavelengths, by examining a finite number of scatterers and multiple scattering beyond the Born 
+approximation. The result offers insights into the non-Hermitian generalization of the Hilbert-
+Pólya conjecture and the design of reflectionless optical structures using the hyperuniformity with 
+reciprocal-space shifts. 
+ 
+Results 
+Riemann zeta functions in light scattering 
+To investigate the relationship between light scattering and the Riemann zeta function, we review 
+1D multiple scattering theory27. Consider a wave equation d2ψ/dx2 + [V0 + V(x)]ψ = 0, where ψ is 
+a wavefunction, and V0 and V(x) are a constant and a spatially-varying potential, respectively. 
+Although the potentials in our example correspond to the landscape of permittivity in nonmagnetic 
+optical media15,28, the equation is applicable to describe quantum states under the single-particle 
+
+5 
+ 
+approximation29, and classical oscillations of matter, such as acoustic30 and elastic31 waves. The 
+profile of V(x) determines material inhomogeneity. 
+Motivated by the semi-infinite summation of ζ(s) = ∑
+1
+ns
+∞
+n=1 , we consider a material that is 
+asymptotically homogeneous as x approaches negative infinity: V(x→–∞) = 0. Scattering from the 
+material is examined with the planewave incidence from x→–∞, ψI = ψ0exp(ik0x), which is the 
+solution of the Helmholtz equation d2ψ/dx2 + V0ψ = 0, where V0 = k02 and k0 = 2π/λ ≥ 0 for the 
+wavelength λ. With the scattering wavefunction ψS, the total wavefunction ψ is determined by the 
+1D Lippmann-Schwinger equation27, as ψ = ψI + ψS = ψI + 
+1
+4π ∫
+V(x')ψ(x')G(x,x')dx'
++∞
+–∞
+, where G(x,x') 
+= (2πi/k0)exp(ik0|x–x'|) is the 1D Green’s function satisfying d2G(x,x')/dx2 + V0G(x,x') = –4πδ(x–x') 
+for the Dirac delta function δ(x). By defining the scattering operator M as 
+(
+)
+0
+'
+0
+( )
+( ') ( ')
+',
+2
+ik x x
+i
+M
+x
+V x
+x e
+dx
+k
+ϕ
+ϕ
++∞
+−
+−∞
+=
+∫
+  
+                                (1) 
+for an arbitrary wavefunction φ(x), ψ can be expressed as the Born series27, ψ = ψI + ∑
+ψ
+S,m
+∞
+m=1
+, 
+where ψS,m ≜ MmψI is the mth-order scattering wavefunction. 
+From the above review of the 1D scattering theory, we derive the Riemann zeta function 
+ζ(s) in the first-order scattering ψS,1, by tailoring the spatial inhomogeneity of the potential V(x). 
+The inhomogeneous potential is implemented with an array of N point scatterers, as V(x) = VN(x) 
+≜ ∑
+dnδ(x – xn)
+N
+n=1
+, where dn and xn are the scattering amplitude and position of the nth scatterer, 
+respectively, N is the number of scatterers, and xn ≤ xn+1 for all n. Among the multifaceted forms 
+of ζ(s), we focus on implementing the following form obtained from the Dirichlet eta function32,33: 
+1
+1
+1
+1
+( 1)
+( )
+,
+1 2
+n
+s
+s
+n
+s
+n
+ζ
++
+∞
+−
+=
+−
+= −
+∑
+  
+                                           (2) 
+
+6 
+ 
+to guarantee numerical convergence in the critical strip {s∈ℂ: 0 < Re[s] = σ < 1}, which was 
+already proved to possess all the nontrivial zeros20. To derive Eq. (2) in the 1D scattering 
+formulation, we define the σ-Riemann scatterer (Fig. 1a)—an array of N scatterers having the 
+logarithmically spaced distribution xn = x0log(n) and the alternating σ-power-law scattering 
+amplitudes dn = (–1)n+1d0n–σ, as 
+(
+)
+1
+0
+0
+1
+( 1)
+( )
+log( ) ,
+n
+N
+n
+V x
+d
+x
+x
+n
+nσ
+δ
++
+=
+−
+=
+−
+∑
+  
+                            (3) 
+where x0 and d0 are real- and complex-valued coefficients, respectively. The resulting first-order 
+scattering in the region between the pth and (p+1)th scatterers is obtained with Eq. (1), as follows 
+(Supplementary Note S1): 
+0
+0
+0 0
+1
+1
+0
+0
+S,1
+1
+2
+1
+1
+0
+( 1)
+( 1)
+( ;
+)
+.
+2
+n
+n
+p
+N
+ik x
+ik x
+p
+p
+ik x
+n
+n p
+id
+x x
+x
+x
+e
+e
+k
+n
+nσ
+σ
+ψ
+ψ
++
++
++
+−
++
+−
+=
+= +
+
+
+
+
+
+
+−
+−
+≤
+<
+=
++
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+∑
+∑
+            (4) 
+The comparison between the first-order scattering ψS,1 and multiple scattering ψS is shown in Figs. 
+1b and 1c for small and large values of d0, respectively, which exhibit the validity of Eq. (4) for 
+small d0 (Supplementary Note S2 for the calculation of multiple scattering). 
+Equation (4) provides insight into the connection between the first-order scattering and the 
+Riemann zeta function, leading to the following transmitted (p→∞) and reflected (p = 0) waves 
+from the semi-infinite (N→∞) σ-Riemann scatterer: 
+(
+)
+(
+)
+0
+0
+0 0
+1
+0
+0
+T
+S,1
+0
+1
+2
+0
+0
+R
+1
+S,1
+1
+0
+0
+0
+( ;
+)
+lim
+( ;
+)
+1 2
+( ),
+2
+( ;
+)
+( ;
+)
+1 2
+(
+2
+).
+2
+ik x
+p
+p
+ik x
+ik x
+id
+e
+x x
+x x
+x
+k
+id
+e
+x x
+x
+x x
+x
+ik x
+k
+σ
+σ
+ψ
+ψ
+ψ
+ζ σ
+ψ
+ψ
+ψ
+ζ σ
++
+−
+→∞
+−
+−+
+→∞=
+≥
+=
+−
+<
+=
+<
+=
+−
+−
+          (5) 
+Equation (5) demonstrates that both the transmitted and reflected waves from the semi-infinite σ-
+Riemann scatterer are proportional to the Riemann zeta function ζ(s) under the first-order Born 
+
+7 
+ 
+approximation. When considering a practical measurement setup and the exploration of nontrivial 
+Riemann zeros with s∈ℂ, the measurement of the reflected wave is suitable for light-based 
+computation of the Riemann zeta function. Notably, Im[s] = –2k0x0 can be controlled by the optical 
+wavelength λ = 2π/k0. Figures 1d and 1e describe the λ-dependent amplitude and phase of the 
+Riemann zeta function ζ(σ – 4πix0/λ), respectively, within the critical strip 0 < σ < 1, exhibiting the 
+Riemann-zero wavelengths (‘×’ symbols). 
+ 
+Fig. 1. σ-Riemann scatterer. a, A schematic of the σ-Riemann scatterer: a semi-infinite array of 
+logarithmically spaced scatterers with a σ-power-law distribution of sign-alternating scattering 
+amplitudes. The Riemann zeta function in the critical strip can be computed with the scattering 
+wave ψS for the incidence ψI. Red and blue curved arrows at each scatterer denote the scattering 
+waves defined by the Green’s function. b,c, Examples of scattering from the (1/2)-Riemann 
+scatterer for d0 = 0.001 (b) and d0 = 10 (c). The arrows illustrate point scatterers. Red solid lines 
+denote the multiple scattering ψS calculated by the scattering matrix method34 (Supplementary 
+Note S2). Orange circles denote the first-order scattering ψS,1 obtained from Eq. (4). N = 1000, x0 
+= 1 and ψ0 = 1. d,e, The Riemann zeta function ζ(σ – 4πix0/λ) in the critical strip: amplitude (d) 
+and phase (e) of ζ(σ – 4πix0/λ). The symbols ‘×’ denote the first seven nontrivial Riemann zeros. 
+ 
+
+8 
+ 
+Optically computed Riemann zeros 
+Using the design of the Riemann scatterer, we revisit the Riemann hypothesis, which states that 
+the nontrivial zeros of ζ(s) exist only at Re[s] = σ = 1/2. Because ζ(s*) = [ζ(s)]*, it is well known20 
+that the nontrivial zeros s0 = 1/2 + it0 lead to the other zeros s0 = 1/2 – it0, which can be directly 
+compared with s = σ – 4πix0/λ in ψR(x) ~ ζ(s). Therefore, the Riemann hypothesis claims that the 
+complete suppression of the first-order scattering from the σ-Riemann scatterer can be achieved 
+only with the (1/2)-Riemann scatterer, which requires the scattering amplitudes dn = (–1)n+1d0n–1/2 
+(σ row in Table 1). The location of the nontrivial Riemann zeros t0 determines the perfect 
+reflectionless wavelength λ0 = 4πx0/t0 (t row in Table 1). The conjugate relation ζ(s*) = [ζ(s)]* 
+corresponds to electromagnetic reciprocity in light scattering, achieving the reflectionless 
+condition for the incidence with the opposite-directional wavevector –2π/λ0 (s* row in Table 1). 
+We emphasize that higher-order scatterings ψS,m(x) = Mm–1ψS,1(x) = 0 (m = 2, 3, …, ∞) are not 
+completely suppressed because the complete suppression of ψS,1(x) occurs only in the range of x < 
+0, and thus, nonzero ψS,1(x ≥ 0) with the integral operator M leads to higher-order scattering with 
+Eq. (1). 
+ 
+Table. 1. Correspondence between the Riemann hypothesis and the first-order scattering. 
+The rows of the table indicate the comparison in terms of the real and imaginary parts of the 
+variable s and its conjugate s*.   
+ 
+Riemann hypothesis 
+First-order scattering from the σ-Riemann scatterer 
+σ = Re[s] σ = 1/2 for ζ(s) = 0 
+Scattering amplitudes |dn| = d0/n1/2 for ψR(x) = 0 
+t = Im[s] 
+t = t0 for ζ(s) = 0 
+Incident wavelength λ0 = 4πx0/t0 for ψR(x) = 0 
+s* 
+ζ(s0*) = 0 when ζ(s0) = 0  
+Wavevector reciprocity (±2π/λ0) for ψR(x) = 0 
+ 
+
+9 
+ 
+Interpreting nontrivial Riemann zeros with the (1/2)-Riemann scatterer presents a unique 
+approach to the Hilbert-Pólya conjecture21 and its generalization into non-Hermitian physics8,9. 
+Consider the decomposition of the Hermitian Hamiltonian H for the (1/2)-Riemann scatterer into 
+two subsystem Hamiltonians, which separate the forward (HF) and backward (HB) paths in the 
+region where x < 0. Due to scattering, HF and HB are generally coupled, and therefore, each 
+Hamiltonian itself is non-Hermitian with complex eigenvalues. However, under the first-order 
+Born approximation, HF (and HB) can exhibit real eigenvalues without the coupling to HB at the 
+reflectionless wavelengths λ0. Therefore, HF could serve as the non-Hermitian Hamiltonian for the 
+generalized Hilbert-Pólya conjecture. The Riemann hypothesis states that such decomposition 
+with real eigenvalues is possible only with the potential landscape of the (1/2)-Riemann scatterer. 
+The condition of nontrivial Riemann zeros with the (1/2)-Riemann scatterer also exhibits 
+an intriguing connection to the concept of hyperuniformity3,24-26,35, allowing for interpreting the 
+(1/2)-Riemann scatterer as correlated disorder. For a 1D inhomogeneous material composed of 
+point particles, V(x) = VN(x) ≜ ∑
+dnδ(x – xn)
+N
+n=1
+, the structure factor S(k) is given by S(k) = 
+ห∑
+dnexp(–ikxn)
+N
+n=1
+ห
+2. Hyperuniformity is defined by the asymptotic behaviour of the structure 
+factor, S(k → 0) → 0 in the thermodynamic limit, which corresponds to the suppression of infinite-
+wavelength density fluctuations3,24,26. For the Riemann scatterer, the above definition of the 
+structure factor leads to S(k) = d0
+2ห∑
+(–1)n+1n–(σ+ikx0)
+N
+n=1
+ห
+2, which approaches S(k) = d02|ζ(σ + ikx0)|2 
+at N → ∞ in the critical strip. Therefore, each nontrivial Riemann zero in the Riemann scatterer 
+corresponds to the complete halt of the density fluctuation exactly at the wavelength determined 
+by λ0 = 4πx0/t0, which can be considered the reciprocal-space translation of the perfect 
+hyperuniformity from the infinity to 2k0. 
+ 
+
+10 
+ 
+Evolving Riemann scatterer 
+Although the correspondence between the Riemann zeta function and the σ-Riemann scatterer is 
+achieved with a semi-infinite (N → ∞) array of weak (d0 → 0) and point-particle (δ(x – x0log(n)) 
+scatterers, its measurable implementation requires breaking such ideal constraints. First, we 
+investigate the effect of N on the reflectance by multiple scattering, R = |ψS(x<0)|2/|ψ0|2, which is 
+an experimentally measurable quantity. Figure 2a shows the reflectance map R(N,λ) under the 
+weak scattering condition (d0 = 0.001), which exhibits converging behaviours with increasing N. 
+The result in Fig. 2b demonstrates the successful observation of the first 40 nontrivial Riemann-
+zero wavelengths λ0,p (p = 1, 2, … 40) with the scatterer number N = 1000, where λ0,p = 4πx0/t0,p is 
+obtained from the pth nontrivial zeros t0,p. 
+The increase in N can be considered the evolution of a material resulting from the addition 
+of a series of particles, which leads to subsequent changes in scattering35. Such an evolving model 
+reveals a unique nature of nontrivial Riemann zeros: non-oscillatory suppression of the reflectance. 
+Figure 2c illustrates the evolutions of the reflectance R for different wavelengths near the second 
+nontrivial Riemann-zero wavelength λ0,2. The result shows that the reflectance decreases 
+monotonically with increasing N exactly at the wavelength of a nontrivial Riemann zero, which is 
+further confirmed with the evolution of R at other nontrivial zeros (Fig. 2d for λ0,p with p = 1, 2, 
+… 40). On the other hand, the evolution of R oscillates with N at other wavelengths. In terms of 
+the evolving scattering model35, the monotonic decrease of R corresponds to the optimal 
+suppression of the density fluctuation at a given k of S(k). Similar to the design of stealthy 
+hyperuniformity using the evolving model35 that suppresses the density fluctuation in the certain 
+range of |k| < K, the (1/2)-Riemann scatterer provides the optimal suppression of the density 
+fluctuation at a set of k defined by the nontrivial Riemann zeros.  
+
+11 
+ 
+ 
+Fig. 2. Evolution of the (1/2)-Riemann scatterer. a, The multiple scattering reflectance R as a 
+function of the particle number N and the wavelength λ. b, The multiple scattering reflectance R 
+(black solid line) as a function of λ at N = 1000. Empty circles denote the reflectance from the 
+first-order scattering. Red dashed lines indicate the wavelengths corresponding to nontrivial 
+Riemann zeros λ0,p (p = 1, 2, … 40). c, The evolutions of R with respect to N at the second nontrivial 
+Riemann-zero wavelength λ0,2 ~ 0.59777 and its neighbouring wavelengths (λ = 0.593, 0.596, 
+0.599, and 0.602). d, The evolutions of R with respect to N at the nontrivial Riemann-zero 
+wavelengths λ0,p (p = 1, 2, … 40). The solid lines highlight the cases of p = 1 and 40. x0 = 1, d0 = 
+0.001, and ψ0 = 1. 
+ 
+Beyond the Born approximation 
+Another important restriction in guaranteeing the validity of the measurement of Eq. (5) is the 
+Born approximation. It is well known that the convergence of the Born series is valid when the 
+spectral radius of the operator M is less than unity, which can be achieved with weak scattering 
+potentials36. This condition is determined by d0, N, and the size of each scatterer27. While 
+preserving the point-particle scatterer configuration, Fig. 3 illustrates the effect of d0 and N on the 
+
+12 
+ 
+multiple scattering reflection for different Riemann-zero wavelengths. We note that the linear 
+response between log(d0) and log(R) guarantees the validity of the first-order Born approximation, 
+which enables the light-based computing of nontrivial Riemann zeros. The increase of d0 and N 
+breaks this approximation as widely examined in scattering theory27,36. Notably, the breaking 
+occurs more rapidly at the lower-p nontrivial Riemann zero with a larger λ. It is because an array 
+of scatterers seems to be more clustered for the incidence of a larger λ, which breaks the constraint 
+on the scatterer size despite the point shape of each scatterer.  
+ 
+Fig. 3. Beyond the Born approximation. a,b, The multiple scattering reflectance R as a function 
+of d0 at the wavelengths corresponding to nontrivial Riemann zeros λ0,p (p = 1, 2, … 40): N = 10 
+(a) and N = 1000 (b). All the other parameters are the same as those in Fig. 2. 
+ 
+
+13 
+ 
+Extending the discussion on multiple scattering, we lift another critical restriction for 
+practical implementation—the point particle condition. We replace each point particle of the σ-
+Riemann scatterer (Fig. 4a) with the corresponding layer of finite thickness (Fig. 4b), where the 
+center of the layer is xn = x0log(n). The array of these layers is embedded in a homogeneous 
+material of the potential V0 = k02. To reproduce the scattering from the ideal σ-Riemann scatterer, 
+the thickness and potential of the nth layer are set to be ln = l0n–σ and Vn = [1 + (–1)n+1ρ]2V0, 
+respectively, where l0 is the thickness of the first layer and ρ is the coefficient of material 
+inhomogeneity for two-phase multilayers (Fig. 4b). The designed layer corresponds to the effective 
+realization of the point particle dnδ(x – xn), where d0 ~ (2k02ρ)l0 for dn = (–1)n+1d0n–σ under weak 
+scattering assumption (Supplementary Note S3). 
+Figure 4c shows the multiple-scattering reflectance from the multilayered Riemann 
+scatterer with increasing N at the wavelengths of nontrivial Riemann zeros (p = 1, 5, 15, and 30). 
+Notably, due to the breaking of the first-order Born approximation with d0 ~ (2k02ρ)l0, the 
+suppression of reflectance is weakened at shorter wavelengths, which correspond to higher-p 
+Riemann zeros. However, the relative suppression of reflectance at the Riemann-zero wavelengths 
+compared to their nearby wavelengths significantly increases at higher p, as shown in the 
+exemplified comparison among p = 2, 15, and 30 in Supplementary Note S4. This observation is 
+confirmed with the wavelength dependency of the discrepancy ΔR = R – |ψR|2 in Fig. 4d, which 
+quantifies the contribution from higher-order scattering to the reflectance. As shown, the 
+magnitude of ΔR maintains a relatively very low value at each Riemann-zero wavelength (red 
+circles) when compared with the values of its nearby wavelengths. This result demonstrates that 
+the ratio of higher-order scattering originating from the broken Born approximation is sufficiently 
+small at the Riemann zeros, enabling the identification of the Riemann zeros even at higher p. 
+
+14 
+ 
+ 
+Fig. 4. Multilayered Riemann scatterer. a,b, Reproduction of the point-particle Riemann 
+scatterer (a) with the multilayered one (b). c, The evolution of reflectance with respect to N for the 
+Riemann-zero wavelengths of λ0,1, λ0,5, λ0,15, and λ0,30. d, The difference between the multiple-
+scattering reflection and the first-order reflection, ΔR = R – |ψR|2, as a function of the wavelength 
+λ. The red circles highlight the Riemann-zero wavelengths. The inset emphasizes a narrower range 
+of ΔR for better visibility. The thickness coefficient and material inhomogeneity are set to be l0 = 
+0.01 and ρ = 10–3, respectively. All the other parameters are the same as those in Fig. 2. 
+ 
+Discussion 
+The correspondence between the first-order scattering and the Riemann zeta function belongs to 
+the class of wave-based mathematical operations, such as Fourier transforms using diffraction37, 
+matrix multiplications via interferometry38, and integral equation solvers employing 
+metamaterials39. Significantly, the relationship exp(2ik0xn) = n2ik0x0 for xn = x0log(n) demonstrates 
+that logarithmically-spaced scatterers pave the way to the wave-based computing of other special 
+functions, especially including variations of the Riemann zeta function involving complex 
+variables.  For example, the prime zeta function P(s) = ∑
+1
+ps
+p∈primes can be implemented in the same 
+manner with the designed scatterers deposited only at the prime numbers p. The Hurwitz zeta 
+function ζ(s,a) = ∑
+1
+(n+a)s
+∞
+n=0
+  requires the shifted positions of the particles xn = x0log(n+a) with the 
+modified scattering amplitudes dn ~ (n+a)–σ. The reciprocal of the Riemann zeta function can also 
+
+15 
+ 
+be realized with the designed scatterers in our approach, while the scattering amplitudes are 
+modified according to the Möbius function μ(n). Such design freedom extends the application of 
+wave-based computing into number theory. 
+According to our analysis of the broken Born approximation in the Riemann scatterer, 
+maintaining dominant first-order scattering is critical. Although the straightforward approach 
+involves weak perturbation and subwavelength design as we demonstrated, additional design 
+flexibility still remains in the layer design using unnatural material parameters with metamaterials 
+and  some mathematical modifications such as using a suitable preconditioner36. Because the 
+designed preconditioner provides the convergent form of the Born series even under large and 
+strong perturbations, the stable calculation of multiple scattering with the modified Born series 
+may reveal an intriguing connection to the infinite series of the Riemann zeta function. 
+In the realm of disordered photonics, the Riemann scatterer extends hyperuniformity with 
+reciprocal-space shifts forms a class of logarithmically-spaced correlated disorder toward 
+reflectionless design. Especially, the semi-infinite form of the Riemann scatterer introduces a 
+unique mechanism for scattering suppression, distinct from antireflection coating, reflectionless 
+potential profiles40, reflectionless scattering modes41, all of which primarily focus on finite-size 
+scatterers. A comparable case would be parity-time-symmetric crystals for unidirectional 
+transport42, because nonuniform scattering amplitudes dn can be replaced with complex-valued 
+wavenumbers k0. The complete suppression of reflection in the (1/2)-Riemann scatterer with 
+logarithmically-spaced scatterers also offers insights into the design of log-periodic antennas with 
+directional radiation43.  
+In conclusion, we developed the concept of the Riemann scatterer, which results in the 
+scattering quantified by the Riemann zeta function under the first-order Born approximation. The 
+
+16 
+ 
+Riemann hypothesis claims that completely zero reflection from the scatterer can be achieved only 
+with a (1/2)-power-law distribution of scattering amplitudes. We examined the valid range of our 
+theory by numerically investigating multiple scattering cases under the broken Born approximation. 
+Further research is highly desirable to develop subsystem Hilbert-Pólya Hamiltonians for the 
+Riemann scatterer, design other special functions, explore much higher zeros, and extend the 
+theory to multiple scattering regimes, thereby bridging physics and number theory. 
+ 
+Data availability 
+The data that support the plots and other findings of this study are available from the corresponding 
+author upon request. 
+ 
+Code availability 
+All code developed in this work will be made available upon request. 
+ 
+References 
+1. 
+Keen, D. A. & Goodwin, A. L. The crystallography of correlated disorder. Nature 521, 303-
+309 (2015). 
+2. 
+Simonov, A. & Goodwin, A. L. Designing disorder into crystalline materials. Nat. Rev. 
+Chem. 4, 657-673 (2020). 
+3. 
+Yu, S., Qiu, C.-W., Chong, Y., Torquato, S. & Park, N. Engineered disorder in photonics. 
+Nat. Rev. Mater. 6, 226-243 (2021). 
+4. 
+Vynck, K., Pierrat, R., Carminati, R., Froufe-Pérez, L. S., Scheffold, F., Sapienza, R., 
+Vignolini, S. & Sáenz, J. J. Light in correlated disordered media. Rev. Mod. Phys. 95, 
+
+17 
+ 
+045003 (2023). 
+5. 
+Goldstein, L. J. A history of the prime number theorem. Am. Math. Mon. 80, 599-615 
+(1973). 
+6. 
+Riemann, B. Ueber die Anzahl der Primzahlen unter einer gegebenen Grosse. Ges. Math. 
+Werke 2, 2 (1859). 
+7. 
+Schumayer, D. & Hutchinson, D. A. Colloquium: Physics of the Riemann hypothesis. Rev. 
+Mod. Phys. 83, 307-330 (2011). 
+8. 
+Sierra, G. & Rodríguez-Laguna, J. H= xp model revisited and the Riemann zeros. Phys. 
+Rev. Lett. 106, 200201 (2011). 
+9. 
+Bender, C. M., Brody, D. C. & Müller, M. P. Hamiltonian for the zeros of the Riemann zeta 
+function. Phys. Rev. Lett. 118, 130201 (2017). 
+10. 
+Remmen, G. N. Amplitudes and the Riemann zeta function. Phys. Rev. Lett. 127, 241602 
+(2021). 
+11. 
+He, R., Ai, M.-Z., Cui, J.-M., Huang, Y.-F., Han, Y.-J., Li, C.-F., Guo, G.-C., Sierra, G. & 
+Creffield, C. E. Riemann zeros from Floquet engineering a trapped-ion qubit. npj Quantum 
+Inf. 7, 109 (2021). 
+12. 
+Torquato, S., Zhang, G. & de Courcy-Ireland, M. Uncovering multiscale order in the prime 
+numbers via scattering. Jour. Stat. Mech. 2018, 093401 (2018). 
+13. 
+Torquato, S., Zhang, G. & De Courcy-Ireland, M. Hidden multiscale order in the primes. 
+J. Phys. A: Math. Theor. 52, 135002 (2019). 
+14. 
+Dragoman, D. & Dragoman, M. Quantum-classical analogies (Springer, 2004). 
+15. 
+Longhi, S. Quantum‐optical analogies using photonic structures. Laser Photonics Rev. 3, 
+243-261 (2009). 
+
+18 
+ 
+16. 
+Jarzynski, C., Quan, H. & Rahav, S. Quantum-classical correspondence principle for work 
+distributions. Phys. Rev. X 5, 031038 (2015). 
+17. 
+Hasan, M. Z. & Kane, C. L. Colloquium: Topological insulators. Rev. Mod. Phys. 82, 3045-
+3067 (2010). 
+18. 
+Ozawa, T., Price, H. M., Amo, A., Goldman, N., Hafezi, M., Lu, L., Rechtsman, M. C., 
+Schuster, D., Simon, J. & Zilberberg, O. Topological photonics. Rev. Mod. Phys. 91, 
+015006 (2019). 
+19. 
+Xue, H., Yang, Y. & Zhang, B. Topological acoustics. Nat. Rev. Mater. 7, 974-990 (2022). 
+20. 
+Edwards, H. M. Riemann's zeta function (Courier Corporation, 2001). 
+21. 
+Derbyshire, J. Prime obsession: Bernhard Riemann and the greatest unsolved problem in 
+mathematics (Joseph Henry Press, 2003). 
+22. 
+Dyson, F. Birds and frogs. Notices of the AMS 56, 212-223 (2009). 
+23. 
+Dal Negro, L. Optics of aperiodic structures: fundamentals and device applications (CRC 
+press, 2013). 
+24. 
+Torquato, S. & Stillinger, F. H. Local density fluctuations, hyperuniformity, and order 
+metrics. Phys. Rev. E 68, 041113 (2003). 
+25. 
+Torquato, S. Hyperuniformity and its generalizations. Phys. Rev. E 94, 022122 (2016). 
+26. 
+Torquato, S. Hyperuniform states of matter. Phys. Rep. 745, 1-95 (2018). 
+27. 
+Gonis, A. & Butler, W. H. Multiple scattering in solids (Springer Science & Business 
+Media, 1999). 
+28. 
+Jackson, J. D.     (American Association of Physics Teachers, 1999). 
+29. 
+Sakurai, J. J. & Commins, E. D.     (American Association of Physics Teachers, 1995). 
+30. 
+Auld, B. A. Acoustic fields and waves in solids (Рипол Классик, 1973). 
+
+19 
+ 
+31. 
+Cho, C., Yu, S. & Park, N. Elastic Hamiltonians for quantum analog applications. Phys. 
+Rev. B 101, 134107 (2020). 
+32. 
+Sergeyev, Y. D. On accuracy of mathematical languages used to deal with the Riemann 
+zeta function and the Dirichlet eta function. P-Aic Numbers Ultra. 3, 129-148 (2011). 
+33. 
+Milgram, M. S. Integral and Series Representations of Riemann′ s Zeta Function and 
+Dirichlet′ s Eta Function and a Medley of Related Results. J. Math. 2013, 181724 (2013). 
+34. 
+Tikhodeev, S. G., Yablonskii, A., Muljarov, E., Gippius, N. A. & Ishihara, T. Quasiguided 
+modes and optical properties of photonic crystal slabs. Phys. Rev. B 66, 045102 (2002). 
+35. 
+Yu, S. Evolving scattering networks for engineering disorder. Nat. Comput. Sci. 3, 128-138 
+(2023). 
+36. 
+Osnabrugge, G., Leedumrongwatthanakun, S. & Vellekoop, I. M. A convergent Born series 
+for solving the inhomogeneous Helmholtz equation in arbitrarily large media. J. Comput. 
+Phys. 322, 113-124 (2016). 
+37. 
+Goodman, J. W. Introduction to Fourier optics (Roberts and Company publishers, 2005). 
+38. 
+Zhou, H., Dong, J., Cheng, J., Dong, W., Huang, C., Shen, Y., Zhang, Q., Gu, M., Qian, C. 
+& Chen, H. Photonic matrix multiplication lights up photonic accelerator and beyond. Light 
+Sci. Appl. 11, 30 (2022). 
+39. 
+Mohammadi Estakhri, N., Edwards, B. & Engheta, N. Inverse-designed metastructures that 
+solve equations. Science 363, 1333-1338 (2019). 
+40. 
+Lekner, J. Reflectionless eigenstates of the sech2 potential. Am. J. Phys. 75, 1151-1157 
+(2007). 
+41. 
+Stone, A. D., Sweeney, W. R., Hsu, C. W., Wisal, K. & Wang, Z. Reflectionless excitation 
+of arbitrary photonic structures: A general theory. Nanophotonics 10, 343-360 (2020). 
+
+20 
+ 
+42. 
+Lin, Z., Ramezani, H., Eichelkraut, T., Kottos, T., Cao, H. & Christodoulides, D. N. 
+Unidirectional invisibility induced by PT-symmetric periodic structures. Phys. Rev. Lett. 
+106, 213901 (2011). 
+43. 
+Carrel, R. The design of log-periodic dipole antennas. In 1958 IRE International 
+Convention Record   9, 61-75 (1966). 
+ 
+Acknowledgements 
+We acknowledge financial support from the National Research Foundation of Korea (NRF) 
+through the Basic Research Laboratory (No. RS-2024-00397664), Young Researcher Program (No. 
+2021R1C1C1005031), and Midcareer Researcher Program (No. RS-2023-00274348), all funded 
+by the Korean government. This work was supported by Creative-Pioneering Researchers Program 
+and the BK21 FOUR program of the Education and Research Program for Future ICT Pioneers in 
+2024, through Seoul National University. We also acknowledge an administrative support from 
+SOFT foundry institute. 
+ 
+Author contributions 
+All the authors conceived the idea, discussed the results, and contributed to the final manuscript. 
+ 
+Competing interests 
+The authors have no conflicts of interest to declare. 
+ 
+Additional information 
+Correspondence and requests for materials should be addressed to S.Y., X.P., or N.P.  
+
+21 
+ 
+Figure Legends 
+Fig. 1. σ-Riemann scatterer. a, A schematic of the σ-Riemann scatterer: a semi-infinite array of 
+logarithmically spaced scatterers with a σ-power-law distribution of sign-alternating scattering 
+amplitudes. The Riemann zeta function in the critical strip can be computed with the scattering 
+wave ψS for the incidence ψI. Red and blue curved arrows at each scatterer denote the scattering 
+waves defined by the Green’s function. b,c, Examples of scattering from the (1/2)-Riemann 
+scatterer for d0 = 0.001 (b) and d0 = 10 (c). The arrows illustrate point scatterers. Red solid lines 
+denote the multiple scattering ψS calculated by the scattering matrix method34 (Supplementary 
+Note S2). Orange circles denote the first-order scattering ψS,1 obtained from Eq. (4). N = 1000, x0 
+= 1 and ψ0 = 1. d,e, The Riemann zeta function ζ(σ – 4πix0/λ) in the critical strip: amplitude (d) 
+and phase (e) of ζ(σ – 4πix0/λ). The symbols ‘×’ denote the first seven nontrivial Riemann zeros. 
+ 
+Fig. 2. Evolution of the (1/2)-Riemann scatterer. a, The multiple scattering reflectance R as a 
+function of the particle number N and the wavelength λ. b, The multiple scattering reflectance R 
+(black solid line) as a function of λ at N = 1000. Empty circles denote the reflectance from the 
+first-order scattering. Red dashed lines indicate the wavelengths corresponding to nontrivial 
+Riemann zeros λ0,p (p = 1, 2, … 40). c, The evolutions of R with respect to N at the second nontrivial 
+Riemann-zero wavelength λ0,2 ~ 0.59777 and its neighbouring wavelengths (λ = 0.593, 0.596, 
+0.599, and 0.602). d, The evolutions of R with respect to N at the nontrivial Riemann-zero 
+wavelengths λ0,p (p = 1, 2, … 40). The solid lines highlight the cases of p = 1 and 40. x0 = 1, d0 = 
+0.001, and ψ0 = 1. 
+ 
+Fig. 3. Beyond the Born approximation. a,b, The multiple scattering reflectance R as a function 
+of d0 at the wavelengths corresponding to nontrivial Riemann zeros λ0,p (p = 1, 2, … 40): N = 10 
+(a) and N = 1000 (b). All the other parameters are the same as those in Fig. 2. 
+ 
+Fig. 4. Multilayered Riemann scatterer. a,b, Reproduction of the point-particle Riemann 
+scatterer (a) with the multilayered one (b). c, The evolution of reflectance with respect to N for the 
+Riemann-zero wavelengths of λ0,1, λ0,5, λ0,15, and λ0,30. d, The difference between the multiple-
+scattering reflection and the first-order reflection, ΔR = R – |ψR|2, as a function of the wavelength 
+λ. The red circles highlight the Riemann-zero wavelengths. The inset emphasizes a narrower range 
+
+22 
+ 
+of ΔR for better visibility. The thickness coefficient and material inhomogeneity are set to be l0 = 
+0.01 and ρ = 10–3, respectively. All the other parameters are the same as those in Fig. 2. 
+ 
+
+1 
+ 
+Supplementary Information for “Computing Riemann zeros with 
+light scattering” 
+ 
+Sunkyu Yu1†, Xianji Piao2§, and Namkyoo Park3* 
+ 
+1Intelligent Wave Systems Laboratory, Department of Electrical and Computer Engineering, 
+Seoul National University, Seoul 08826, Korea 
+2Wave Engineering Laboratory, School of Electrical and Computer Engineering, University of 
+Seoul, Seoul 08826, Korea 
+3Photonic Systems Laboratory, Department of Electrical and Computer Engineering, Seoul 
+National University, Seoul 08826, Korea 
+E-mail address for correspondence: †sunkyu.yu@snu.ac.kr, §piao@uos.ac.kr, *nkpark@snu.ac.kr  
+Note S1. Derivation of the first-order scattering 
+Note S2. Multiple scattering from the point-particle Riemann scatterer 
+Note S3. Multiple scattering from the multilayered Riemann scatterer 
+Note S4. Suppressed Riemann-zero reflection in multilayered Riemann scatterers 
+
+2 
+ 
+Note S1. Derivation of the first-order scattering 
+When applying Eq. (3) to Eq. (1) in the main text, the first-order scattering for the incidence ψI = 
+ψ0exp(ik0x) is obtained as follows: 
+(
+)
+0
+0
+0
+0
+1
+'
+'
+0
+0
+S,1
+1
+0
+1
+0
+0
+1
+0
+( 1)
+( )
+'
+'
+2
+( 1)
+           
+,
+2
+n
+n
+n
+N
+ik x x
+ik x
+n
+n
+n
+N
+ik x x
+ik x
+n
+id
+x
+x
+x e
+e
+dx
+k
+n
+id
+e
+e
+k
+n
+σ
+σ
+ψ
+ψ
+δ
+ψ
++
++∞
+−
+−∞
+=
++
+−
+=
+−
+=
+−
+−
+=
+∑
+∫
+∑
+           (S1) 
+where xn = x0log(n). In the region between the pth and (p+1)th scatterers, xp ≤ x < xp+1, Eq. (S1) is 
+expressed as: 
+0
+0
+0
+1
+1
+2
+0
+0
+S,1
+1
+1
+0
+( 1)
+( 1)
+( )
+.
+2
+n
+n
+n
+p
+N
+ik x
+ik x
+ik x
+n
+n p
+id
+x
+e
+e
+e
+k
+n
+n
+σ
+σ
+ψ
+ψ
++
++
++
+−
+=
+= +
+
+
+
+
+
+
+−
+−
+=
++
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+∑
+∑
+         (S2) 
+Notably, exp(2ik0xn) = exp(2ik0x0log(n)) = n2ik0x0, which leads to Eq. (4) in the main text. 
+ 
+
+3 
+ 
+Note S2. Multiple scattering from the point-particle Riemann scatterer 
+To analyse multiple scattering from the Riemann scatterer composed of point particles, we utilize 
+the scattering matrix method1. For the nth point particle located at xn = x0log(n) with the scattering 
+amplitude dn = (–1)n+1d0n–σ, we define the waves around the particle, as ψnL+, ψnR+, ψnL–, ψnR–, 
+where ‘+’ and ‘–’ denote the forward and backward propagating directions, respectively, while ‘L’ 
+and ‘R’ represent the left- and right-side of the scatterer, respectively (Fig. S1a). When the particle 
+is embedded in a homogeneous material governed by the Helmholtz equation d2ψ/dx2 + V0ψ = 0, 
+where V0 = k02, the waves are connected through the following interface transfer matrix: 
+R
+L
+0
+0
+R
+L
+0
+0
+1
+2
+2
+,
+1
+2
+2
+n
+n
+n
+n
+n
+n
+n
+n
+d
+d
+i
+i
+k
+k
+d
+d
+i
+i
+k
+k
+ψ
+ψ
+ψ
+ψ
++
++
+−
+−
+
+
++
+
+
+
+
+
+
+
+
+=
+
+
+
+
+
+
+
+
+
+
+−
+−
+
+
+
+
+                   (S3) 
+which characterizes the boundary condition between the waves around the dn-weighted one-
+dimensional (1D) delta function potential. The relationship between the waves around 
+neighbouring particles is characterized by the following propagation transfer matrix: 
+0
+1
+0
+1
+L
+R
+(
+)
+1
+L
+R
+(
+)
+1
+0
+.
+0
+n
+n
+n
+n
+ik
+x
+x
+n
+n
+ik
+x
+x
+n
+n
+e
+e
+ψ
+ψ
+ψ
+ψ
++
++
++
++
+−
++
+−
+−
+−
+−
++
+
+
+
+
+
+
+=
+
+
+
+
+
+
+
+
+
+
+
+
+                (S4) 
+The stable calculation of the total scattering matrix for a finite number of particles is 
+achieved through iterative multiplications of the reformulated interface and propagation transfer 
+matrices1. With the boundary condition defined by the incident waves ψI and ψIR in Fig. S1b, the 
+total scattering matrix leads to the scattering waves ψS and ψSR in Fig. S1b for the finite-size 
+Riemann scatterer. When assigning ψIR = 0 and employing the semi-infinite condition N→∞, the 
+resulting ψS corresponds to the multiple scattering generalization of ψS,1(x;x<x1) in Eq. (5) in the 
+main text. 
+
+4 
+ 
+ 
+Fig. S1. Multiple scattering from the point-particle Riemann scatterer. a, Waves around the 
+nth point particle, which is modelled by the weighted delta function potential. b, An array of point 
+particles embedded in a homogeneous material. The incident waves are ψI and ψIR, and the 
+scattering waves are ψS and ψSR. By setting ψIR = 0, ψS corresponds to multiple scattering reflection. 
+
+5 
+ 
+Note S3. Multiple scattering from the multilayered Riemann scatterer 
+To practically implement the suppressed reflection from the point-particle Riemann scatterer, we 
+develop its approximated realization. Figure S2 illustrates the multilayer realization of the 
+Riemann scatterer, which includes the unit layer design (Fig. S2a) and the multilayered structure 
+(Fig. S2b). The nth point particle is approximately modelled with the nth layer that supports the 
+potential Vn = (k0 + δkn)2 and has a finite thickness ln, which is embedded in the background 
+material of the potential V0 = k02. Because Vn is determined by the material parameter of the nth 
+layer—for example, the permittivity of a simple medium—we focus on minimizing the number of 
+values that δkn can take to decrease the number of necessary material phases.  
+While the center of the layer is xn = x0log(n), the waves around the nth scattering layer in 
+Fig. S2a are connected through the transfer matrix, as follows: 
+(
+)
+(
+)
+(
+)
+(
+)
+0
+0
+2
+(
+)
+0
+0
+0
+R
+L
+0
+0
+0
+0
+R
+L
+2
+(
+)
+0
+0
+0
+0
+0
+0
+0
+sin (
+)
+(2
+)
+sin (
+)
+2
+(
+)
+2
+(
+)
+sin (
+)
+(2
+)
+sin (
+)
+2
+(
+)
+2
+(
+)
+n
+n
+n
+n
+i k
+k
+l
+n
+n
+n
+n
+n
+n
+n
+n
+n
+n
+n
+n
+n
+i k
+k
+l
+n
+n
+n
+n
+n
+n
+n
+n
+n
+k
+k
+k l
+k
+k
+k
+e
+i
+i
+k
+k l
+k k
+k
+k k
+k
+k
+k
+k l
+k
+k
+k
+i
+k
+k l
+e
+i
+k k
+k
+k k
+k
+δ
+δ
+δ
+δ
+δ
+δ
+δ
+δ
+δ
+ψ
+ψ
+ψ
+ψ
+δ
+δ
+δ
+δ
+δ
+δ
+δ
++
++
++
+−
+−
+−
++
+
+
++
++
++
++
+
+
++
++
+
+
+
+
+
+=
+
+
+
+
+
++
++
+
+
+
+
+
+−
++
+−
++
++
+
+
+
+
+.
+
+
+(S5) 
+The relationship between the waves around neighbouring layers is determined by the following 
+propagation transfer matrix: 
+[
+]
+[
+]
+0
+1
+1
+0
+1
+1
+(
+) (
+)
+L
+R
+1
+L
+R
+(
+) (
+)
+1
+0
+.
+0
+n
+n
+n
+n
+n
+n
+n
+n
+ik
+x
+x
+l
+l
+n
+n
+ik
+x
+x
+l
+l
+n
+n
+e
+e
+ψ
+ψ
+ψ
+ψ
++
++
++
++
+−
+−
+−
++
++
++
+−
+−
+−
+−
+−
+−
++
+
+
+
+
+
+
+= 
+
+
+
+
+
+
+
+
+
+
+
+
+
+         (S6) 
+In calculating the multiple scattering from the multilayered Riemann scatterer, we employ 
+Eqs. (S5) and (S6) directly to obtain rigorous solutions. However, to achieve scattering analogous 
+to that from the point-particle Riemann scatterer, we need to design the parameters ln and δkn to 
+derive the scattering analogous to that from a delta function potential. This design is achieved by 
+comparing Eqs. (S3,S4) and (S5,S6) under suitable assumptions.  
+
+6 
+ 
+First, we neglect higher-order terms of δkn/k0 of second order or above by assuming the 
+weak perturbation δkn/k0 << 1. The transfer-matrix equation in Eq. (S5), which will be compared 
+with the interface transfer matrix in Eq. (S3), is then approximated as follows: 
+(
+)
+(
+)
+0
+0
+(
+)
+0
+R
+L
+0
+R
+L
+(
+)
+0
+0
+sin (
+)
+~
+.
+sin (
+)
+n
+n
+n
+n
+i k
+k
+l
+n
+n
+n
+n
+n
+i k
+k
+l
+n
+n
+n
+n
+n
+k
+e
+i
+k
+k l
+k
+k
+i
+k
+k l
+e
+k
+δ
+δ
+δ
+δ
+ψ
+ψ
+δ
+ψ
+ψ
+δ
++
++
++
+−
+−
+−
++
+
+
++
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+−
++
+
+
+
+
+    (S7) 
+Equation (S7) can be transformed into the following scattering matrix formalism: 
+(
+)
+(
+)
+(
+)
+0
+0
+2
+2
+R
+L
+0
+0
+(
+)
+0
+0
+L
+R
+0
+0
+0
+L
+0
+R
+0
+0
+1
+sin
+(
+)
+sin (
+)
+~
+sin (
+)
+1
+1
+sin(
+)
+          ~
+,
+sin(
+)
+1
+n
+n
+n
+n
+n
+n
+n
+n
+n
+i k
+k
+l
+n
+n
+n
+n
+n
+n
+n
+n
+n
+ik l
+n
+n
+n
+n
+k
+k
+k
+k l
+i
+k
+k l
+k
+k
+e
+k
+i
+k
+k l
+k
+k
+i
+k l
+k
+e
+k
+i
+k l
+k
+δ
+δ
+δ
+δ
+δ
+ψ
+ψ
+ψ
+ψ
+δ
+δ
+δ
+ψ
+δ
+ψ
++
++
++
+−
+−
++
+−
+
+
+
+
+
+
+−
++
++
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
++
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  (S8) 
+according to the condition δkn/k0 << 1. We also transform Eq. (S3) of a point-particle scatterer into 
+the scattering matrix formalism, as follows: 
+R
+L
+0
+L
+R
+0
+0
+1
+2
+1
+.
+1
+1
+2
+2
+n
+n
+n
+n
+n
+n
+n
+d
+i k
+d
+d
+i
+i
+k
+k
+ψ
+ψ
+ψ
+ψ
++
++
+−
+−
+
+
+
+
+
+
+
+
+
+
+=
+
+
+
+
+
+
+
+
+
+
+−
+
+
+
+
+                (S9) 
+We assume the subwavelength condition for the layers, which allows for sin(k0ln) ~ k0ln. The 
+comparison between Eqs. (S8) and (S9) then leads to the relationship ln ~ dn/(2k0δkn). Because dn 
+= (–1)n+1d0n–σ, the multilayered Riemann scatterer requires the power-law distribution of the 
+thickness ln = l0n–σ with the relation l0 = (–1)n+1d0/(2k0δkn). To obtain the positive-valued thickness 
+ln > 0, we utilize two-phase multilayers δkn = (–1)n+1ρk0, where ρ is the constant coefficient for 
+
+7 
+ 
+material inhomogeneity. The designed multilayer leads to the relationship between the effective 
+weighting of the point particle d0 and the initial thickness of the layer l0: d0 = (2k02ρ)l0. 
+Due to the relationship d0 = (2k02ρ)l0, the effective weighting for a given l0 depends on the 
+wavelength of light λ = 2π/k0. Because d0 increases with a shorter wavelength λ, the Born 
+approximation becomes more fragile for lower λ, which degrades the accuracy of light computing 
+for higher nontrivial Riemann zeros, as shown in Fig. 4c,d in the main text. 
+The designed ln leads to the convergence of Eq. (S6) to the propagation transfer matrix in 
+Eq. (S4). In the region between the nth and (n+1)th layers, the discrepancy between Eq. (S4) and 
+Eq. (S6) is determined by: 
+0
+1
+2
+1
+0
+0
+(
+1)
+.
+1
+2
+log
+n
+n
+n
+n
+d
+n
+n
+l
+l
+n
+x
+x
+k
+x
+n
+σ
+σ
+ρ
+−
+−
++
++
+
+
++
+−
+−
+
+
+=
++
+−
+
+
+
+
+
+
+                 (S10) 
+The Taylor expansion shows that Eq. (S10) asymptotically vanishes as n increases, as follows: 
+1
+1
+0
+0
+2
+2
+1
+0
+0
+0
+0
+1
+lim
+lim
+lim
+0,
+1
+2
+2
+n
+n
+n
+n
+n
+n
+n
+l
+l
+d
+n
+d
+x
+x
+k
+x n
+k
+x n
+σ
+σ
+σ
+σ
+ρ
+ρ
+−
+−
++
+→∞
+→∞
+→∞
++
+−
+−
+=
+= −
+=
+−
+          (S11) 
+for the values of σ in the critical strip (0 < σ < 1). Therefore, the multilayered Riemann scatterer 
+with ln = l0n–σ and δkn = (–1)n+1ρk0 successfully provides the asymptotic matching between Eqs. 
+(S3,S4) and (S5,S6). 
+ 
+
+8 
+ 
+ 
+Fig. S2. Multiple scattering from the multilayered Riemann scatterer. a, Waves around the nth 
+layer. b, An array of layers embedded in a homogeneous material. A scattering layer and a 
+background material are characterized by their distinct optical wavenumbers, k0 + δkn and k0, 
+respectively. The thickness of the nth layer is ln. The incident waves are ψI and ψIR, and the 
+scattering waves are ψS and ψSR. By setting ψIR = 0, ψS corresponds to multiple scattering reflection. 
+
+9 
+ 
+Note S4. Suppressed Riemann-zero reflection in multilayered Riemann scatterers 
+Figure S3 illustrates the evolutions of the reflectance R for different wavelengths near the 
+nontrivial Riemann-zero wavelengths λ0,2 (Fig. S3a), λ0,15 (Fig. S3b), and λ0,30 (Fig. S3c). While 
+Fig. S3a is very similar to the point-particle case (Fig. 2c in the main text), the reflectance R 
+increases at higher p due to the breaking of the first-order Born approximation according to the 
+relation d0 = (2k02ρ)l0 (Fig. S3b,c). However, the discrepancy among the reflections at the 
+Riemann-zero wavelength and its nearby wavelengths maintains large enough to identify the 
+Riemann zeros, λ0,15 and λ0,30. 
+ 
+Fig. S3. Riemann-zero reflections from multilayered Riemann scatterers. a-c, The evolutions 
+of R with respect to N at λ0,2 (a), λ0,15 (b), and λ0,30 (c) and their neighbouring wavelengths. All the 
+other parameters are the same as those in Fig. 4 in the main text. 
+ 
+
+10 
+ 
+Supplementary References 
+1. Tikhodeev, S. G., Yablonskii, A., Muljarov, E., Gippius, N. A. & Ishihara, T. Quasiguided modes 
+and optical properties of photonic crystal slabs. Phys. Rev. B 66, 045102 (2002). 
+ 

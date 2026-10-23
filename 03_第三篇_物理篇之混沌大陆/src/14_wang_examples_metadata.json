@@ -1,0 +1,11 @@
+{
+  "spectral_source": "saved notebook output cell7; not rerun ARPACK",
+  "spectral_first6_MAE": 0.29116178963333333,
+  "spectral_7to25_MAE": 11.519052142210526,
+  "spectral_26to85_MAE": 64.95876663,
+  "selected_n20_error": 16.4849602,
+  "ustc_rows_verified": 20,
+  "ustc_values_verified": 80,
+  "ustc_points_drawn": 60,
+  "gap_counts_source": "full-scale recomputation with 100000-step equality check"
+}

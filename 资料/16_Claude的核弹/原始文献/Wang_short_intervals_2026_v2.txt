@@ -1,0 +1,1607 @@
+=== PAGE 1 ===
+SIMPLE CRITICAL ZEROS AND DISTINCT ZEROS OF THE RIEMANN
+ZETA FUNCTION IN SHORT INTERVALS
+BIAO WANG
+Abstract. Recently, on the non-trivial zeros of the Riemann zeta function, it is obtained
+by Alpöge and Furman that more than 67.25% of the zeros are simple and on the critical
+line, and more than 83.62% are distinct. Later, Lamzouri gave a different and more direct
+proof. In this article, we will use the method of Lamzouri to give lower bounds on the
+number of the non-trivial zeros of the Riemann zeta function in short intervals. To prove the
+main result, we establish Montgomery’s theorem on the pair correlation of zeros of the zeta
+function in short intervals by following the approach of Baluyot, Goldston, Suriajaya and
+Turnage-Butterbaugh, and then use Lamzouri’s inequality on any finite multiset of complex
+numbers which is invariant under complex conjugation.
+1. Introduction
+Let ζ(s) be the Riemann zeta function. In 1859, Riemann conjectured that all the non-trivial
+zeros of ζ(s) lie on the critical line ℜ(s) = 1/2. In 1914, Hardy [9] proved that infinitely many
+zeros lie on the critical line, and in 1942 Selberg [20] proved that a positive proportion of
+the zeros lie on the critical line. In 1947, Min [15] obtained an explicit lower bound for this
+proportion. In 1974, Levinson [14] introduced a new mollifier method and proved that more
+than one third lie on the line. In 1989, Conrey [5] raised this proportion to more than two
+fifths. Subsequent developments of the mollifier method include the work of [8, 22, 19, 6].
+Besides the mollifier method, a complementary approach uses pair correlation and inequalities
+for finite collections of zeros. In 1973, Montgomery [16] initiated this approach and proved,
+under the Riemann hypothesis, that at least two thirds of the zeros are simple. Montgomery
+and Taylor [17] subsequently obtained the following larger proportion
+(1.1)
+2 −CMT = 3
+2 −1
+√
+2 cot
+ 1
+√
+2
+
+= 0.6725 . . . .
+Baluyot, Goldston, Suriajaya and Turnage-Butterbaugh [3, 4] established an unconditional
+pair-correlation formula. Recently, this formula was used to obtain an unconditional proof
+of Montgomery’s result by Alpöge and Furman [2]. Moreover, they showed that more than
+83.62% of the nontrivial zeros of ζ(s) are distinct. Later, Lamzouri [13] gave a different and
+more direct proof. In the proof, he established an inequality on the number of real simple
+elements in any finite multiset invariant under complex conjugation. In this article, we consider
+the simple critical zeros and distinct zeros of the Riemann zeta function in short intervals.
+Let N(T) denote the number of nontrivial zeros ρ = β + iγ of ζ(s) with 0 < γ ≤T, counted
+with multiplicity, and let N0(T) count those on the critical line β = 1/2, also with multiplicity.
+Write Ns
+0(T) for the number of simple zeros on that line up to height T. Let Nd(T) denote
+the number of distinct nontrivial zeros with 0 < γ ≤T, each counted once regardless of its
+Date: October 8, 2026.
+2020 Mathematics Subject Classification. Primary 11M26, 11M06.
+Key words and phrases. Riemann zeta function, non-trivial zeros, short intervals, pair correlation.
+1
+arXiv:2609.07918v2  [math.NT]  6 Oct 2026
+
+
+=== PAGE 2 ===
+multiplicity or real part. For H > 0 put
+N(T, H) = N(T + H) −N(T),
+N0(T, H) = N0(T + H) −N0(T),
+Ns
+0(T, H) = Ns
+0(T + H) −Ns
+0(T),
+Nd(T, H) = Nd(T + H) −Nd(T).
+By the Riemann–von Mangoldt formula
+(1.2)
+N(T) = T
+2π log T
+2π −T
+2π + O(log T),
+see [7, Chapter 8], we have
+(1.3)
+N(T, H) = H log T
+2π
++ O(H + log T)
+(1 ≤H ≤T).
+A natural problem is to estimate the proportions Ns
+0(T, H)/N(T, H) and Nd(T, H)/N(T, H)
+for H = T θ, with 0 < θ < 1 fixed. If all non-trivial zeros are simple and lie on the critical
+line, then both ratios are equal to 1. The history of unconditional results on this problem
+involves both the length of the interval and the type of zeros detected. Let Nodd(T) count
+distinct critical-line zeros of odd multiplicity. In the formulations recalled by Karatsuba [12,
+pp. 523–524], Hardy and Littlewood [10] proved
+Nodd(T + H) −Nodd(T) ≫ε H,
+H = T 1/2+ε,
+for fixed sufficiently small ε > 0. Selberg [20] obtained the additional logarithmic factor,
+(1.4)
+Nodd(T + H) −Nodd(T) ≫ε H log T,
+H = T 1/2+ε.
+By (1.3), this gives a positive proportion of all zeros in each such interval. Karatsuba [12], in
+a paper published in Russian in 1984 and in English in 1985, shortened the interval to
+(1.5)
+Nodd(T + H) −Nodd(T) ≫ε H log T,
+H = T 27/82+ε.
+These estimates are stated with an unspecified positive constant. As for explicit proportions,
+Levinson [14] already proved in 1974 that more than one third of the zeros are on the critical
+line in intervals of length T/(log(T/(2π)))10. This length is larger than T θ for every fixed
+θ < 1 as T →∞. For smaller θ, Steuding [21] proved in 2002 that
+(1.6)
+Ns
+0(T, H) ≫H log T,
+T 0.552 ≤H ≤T.
+His argument combines Levinson’s method with a mollified mean-square estimate. In our first
+main result, we will apply Lamzouri’s method in [13] to improve the range of H in (1.6). Let
+c(θ) = 2 −θ
+2 −1
+√
+2 cot
+ θ
+√
+2
+
+,
+0 < θ < 1.
+Since c′(θ) = 1
+2 cot2(θ/
+√
+2) > 0, the function c is strictly increasing on (0, 1). It has a unique
+zero in this interval given by
+θ0 = 0.5501 . . . .
+Theorem 1.1. For every fixed θ0 < θ < 1, we have
+(1.7)
+lim inf
+T→∞
+Ns
+0(T, T θ)
+N(T, T θ) ≥c(θ) > 0.
+For example, taking θ = 3/4 in Theorem 1.1, we find that, for all sufficiently large T, more
+than 41.9% of the zeros in (T, T + T 3/4], counted with multiplicity, are simple and lie on the
+critical line. For θ ≤θ0, that lower bound is nonpositive and gives no improvement on the
+trivial bound. Regarding the proportion of distinct zeros of ζ(s) in (T, T + T θ], by extending
+Lamzouri’s inequality, we can get an explicit positive lower bound for every fixed 0 < θ < 1.
+2
+
+
+=== PAGE 3 ===
+Theorem 1.2. For any 0 < θ < 1, set
+Cθ = θ
+2 + 1
+√
+2 cot
+ θ
+√
+2
+
+.
+For C ≥1, define
+(1.8)
+D(C) = 2q + 1 −C
+q(q + 1) ,
+q = ⌊C⌋,
+where ⌊C⌋:= max{n ∈Z : n ≤C}. Then, unconditionally, we have
+(1.9)
+lim inf
+T→∞
+Nd(T, T θ)
+N(T, T θ) ≥D(Cθ) > 0
+for any 0 < θ < 1.
+For example, taking θ = 1/4 in Theorem 1.2, we obtain Nd(T, T 1/4) > 0.2458 N(T, T 1/4)
+for all sufficiently large T. Moreover, by
+2q + 1 −C
+q(q + 1)
+−1
+C = (C −q)(q + 1 −C)
+Cq(q + 1)
+≥0
+for C −1 < q = ⌊C⌋≤C, we get a simpler, though generally weaker, lower bound
+(1.10)
+lim inf
+T→∞
+Nd(T, T θ)
+N(T, T θ) ≥1
+Cθ
+> 0.
+To prove Theorem 1.1, in Section 2 we will cite Lamzouri’s inequality on finite multisets
+invariant under complex conjugation, and prove Montgomery’s pair correlation formula in
+short intervals. Then to apply Lamzouri’s inequality, in Section 3 we will show how to remove
+the rational weight in the pair correlation formula. Finally, in Section 4 we will complete
+the proof of Theorem 1.1 by minimizing a functional coming from the removing process. To
+prove Theorem 1.2, in Section 5 we extend Lamzouri’s inequality by introducing an integer
+parameter q ≥1 and then use the argument in the proof of Theorem 1.1.
+Notation. Throughout the proof, we fix
+0 < λ < θ < 1,
+H = T θ,
+L = log T,
+I = (T, T + H].
+Unless explicitly stated otherwise, zero sums count multiplicity. Write ρ = 1/2 + δ + iγ, so
+|δ| < 1/2 by the prime number theorem. For a compactly supported integrable function f, we
+define the Fourier transform by
+bf(z) =
+Z
+R
+f(u)e−2πizu du,
+z ∈C.
+The constants in asymptotic estimates may depend on the fixed parameters λ, θ and on the
+indicated test functions. We use N(I) = N(T, H), Ns
+0(I) = Ns
+0(T, H) and Nd(I) = Nd(T, H)
+when convenient.
+2. Pair correlation formula in short intervals
+Let Z be a finite multiset. For an element z of Z, we denote by mz its multiplicity. We say
+that Z is invariant under complex conjugation if for all z ∈Z we have z ∈Z and mz = mz.
+We cite an inequality of Lamzouri on such invariant multisets.
+Proposition 2.1 ([13, Proposition 2.1]). Let λ > 0 and let η ∈L2(R) be real and even, with
+supp(η) ⊂(−λ, λ) and c
+η2(0) = 1. Let Z be a non-empty finite multiset of complex numbers
+invariant under complex conjugation. For the kernel K(ξ) := c
+η2(ξ), we have
+(2.1)
+X
+z∈Z∩R
+mz=1
+1 ≥2
+X
+z∈Z
+1 −
+X
+z,s∈Z
+K(z −s)2.
+3
+
+
+=== PAGE 4 ===
+Moreover, the number of distinct elements of Z is at least
+(2.2)
+3
+2
+X
+z∈Z
+1 −1
+2
+X
+z,s∈Z
+K(z −s)2.
+Put
+(2.3)
+w(z) =
+4
+4 −z2 ,
+FI(x) =
+X
+γ,γ′∈I
+xρ−ρ′w(ρ −ρ′),
+x > 0
+for I = (T, T + H] and H = T θ, 0 < θ < 1. Then
+(2.4)
+FI(x−1) = FI(x).
+To apply Proposition 2.1 in the proof of Theorem 1.1, in this section we mainly prove the
+following short-interval version of Montgomery’s theorem on the pair correlation of zeros of
+the zeta function.
+Theorem 2.2. Let 0 < λ < θ < 1 be fixed, and let g ∈C∞
+c (R) be a fixed real even function
+with supp g ⊂[−λ, λ]. Then
+(2.5)
+X
+γ,γ′∈I
+bg
+i(ρ −ρ′)L
+2π
+
+w(ρ −ρ′) = HL
+2π
+
+g(0) +
+Z
+R
+|α|g(α) dα
+
++ Og(H + T λL2).
+Theorem 2.2 is a short-interval analogue of Lemma 5 of Baluyot, Goldston, Suriajaya
+and Turnage-Butterbaugh’s work [3]. Its proof uses corresponding short-interval versions of
+Lemmas 3 and 4 of that paper.
+Write ρ = 1/2 + δ + iγ and define
+(2.6)
+A(x, t) =
+X
+ρ
+2xδ+i(γ−t)
+1 + ((t −γ) + iδ)2 .
+It is absolutely convergent for each fixed x ≥1 and real t. Indeed, by [3, (2.14)], we have
+|A(x, t)| ≪x1/2 log(|t| + 2). Let AI(x, t) be the sum restricted to γ ∈I. The unconditional
+explicit formula in [3, Lemma 1], originating in [16], implies that for x ≥1 and t ∈I,
+(2.7)
+A(x, t) = −Dx(t) + Bx(t) + Ex(t),
+where
+(2.8)
+Dx(t) =
+X
+n≥2
+ann−it,
+an = Λ(n)
+√n min
+n
+x, x
+n
+
+,
+Bx(t) = log(t + 2)
+x
+,
+and
+(2.9)
+Ex(t) ≪1
+x + x1/2
+T 2 + x−5/2
+T
+≪1
+x
+(1 ≤x ≤T λ).
+The last inequality uses x < T.
+Lemma 2.3. We have
+(2.10)
+2πFI(x) =
+Z
+R
+|AI(x, t)|2 dt.
+Proof. By [3, (2.7)], we have
+Z
+R
+du
+(1 + u2)(1 + (u + a)2) =
+2π
+4 + a2
+for a ∈C and | Im a| < 1. For ρ = 1/2 + δ + iγ and ρ′ = 1/2 + δ′ + iγ′, let d = ρ + ¯ρ′ −1. Set
+u = t −γ + iδ and a = γ −γ′ −i(δ + δ′) = −id, | Im a| = |δ + δ′| < 1. It follows by the above
+integral that
+Z
+R
+dt
+(1 + ((t −γ) + iδ)2)(1 + ((t −γ′) −iδ′)2) =
+2π
+4 −d2 .
+4
+
+
+=== PAGE 5 ===
+Then
+Z
+R
+|AI(x, t)|2 dt =
+X
+ρ,ρ′
+γ,γ′∈I
+4xd
+Z
+R
+dt
+(1 + ((t −γ) + iδ)2)(1 + ((t −γ′) −iδ′)2)
+= 2π
+X
+ρ,ρ′
+γ,γ′∈I
+xdw(d) = 2πFI(x).
+The last line follows by replacing 1 −¯ρ′ by ρ′.
+□
+By Lemma 2.3, we get that FI(x) is real and nonnegative. Recall that L = log T.
+Lemma 2.4. Uniformly for 1 ≤x ≤T λ,
+(2.11)
+2πFI(x) =
+Z
+I
+|A(x, t)|2 dt + O(xL3).
+Proof. By (1.2), we have
+(2.12)
+X
+t<γ≤t+1
+1 ≪log(|t| + 3)
+(t ∈R).
+By |δ| < 1/2, we have
+(2.13)
+1
+|1 + ((t −γ) + iδ)2| ≤
+1
+(t −γ)2 + 3/4 ≪
+1
+1 + (t −γ)2 .
+It follows by [7, Lemma, Chapter 15] that for t ∈I, we have
+(2.14)
+|A(x, t)| + |AI(x, t)| ≪√x L.
+Moreover, for t ∈I = (T, T + H] we have
+(2.15)
+|A(x, t) −AI(x, t)| ≪√x L
+
+1
+1 + t −T +
+1
+1 + T + H −t
+
+.
+Indeed, put a = t −T,
+b = T + H −t, then a, b ≥0 and a + b = H. By (2.13),
+|A(x, t) −AI(x, t)| ≪√x
+X
+γ /∈I
+1
+1 + (t −γ)2 .
+First consider zeros with γ ≤T and |γ| ≤3T. Partition their ordinates into the intervals
+(T −j −1, T −j],
+j = 0, 1, 2, . . . .
+By (2.12), each interval meeting [−3T, 3T] contains O(L) zeros. For an ordinate in the jth
+interval,
+t −γ ≥t −(T −j) = a + j.
+It follows that
+X
+γ≤T
+|γ|≤3T
+1
+1 + (t −γ)2 =
+∞
+X
+j=0
+X
+γ≤T,|γ|≤3T
+γ∈(T−j−1,T−j]
+1
+1 + (t −γ)2
+≪L
+∞
+X
+j=0
+1
+1 + (a + j)2
+≪
+L
+1 + a.
+Similarly, partition the ordinates with γ > T + H and |γ| ≤3T into
+(T + H + j, T + H + j + 1],
+j = 0, 1, 2, . . . .
+For an ordinate in the jth interval,
+γ −t ≥b + j.
+5
+
+
+=== PAGE 6 ===
+The same unit-interval estimate therefore yields
+X
+γ>T+H
+|γ|≤3T
+1
+1 + (t −γ)2 ≪L
+∞
+X
+j=0
+1
+1 + (b + j)2 ≪
+L
+1 + b.
+It remains to control the zeros with |γ| > 3T. Since T < t ≤T + H ≤2T, these ordinates
+satisfy
+|t −γ| ≥|γ|
+3 .
+Applying the unit-interval estimate (2.12) again, we obtain
+X
+|γ|>3T
+1
+1 + (t −γ)2 ≪
+X
+|γ|>3T
+1
+γ2 ≪
+X
+n≥3T
+log(n + 3)
+n2
+≪L
+T .
+Combining these estimates gives
+|A(x, t) −AI(x, t)| ≪√x L
+
+1
+1 + a +
+1
+1 + b + 1
+T
+
+.
+Finally, since a, b ≤H ≤T,
+1
+1 + a +
+1
+1 + b ≥
+2
+1 + H ≥
+2
+1 + T ≥1
+T .
+Thus the last term is absorbed, and we conclude that (2.15) holds.
+For t /∈I, similar to the proof of (2.15), we have
+(2.16)
+|AI(x, t)| ≪
+√x L
+1 + dist(t, I).
+Equations (2.14) and (2.15) imply
+Z
+I
+|A(x, t)|2 −|AI(x, t)|2 dt ≪xL2 log(2 + H) ≪xL3.
+Equation (2.16) gives
+Z
+R\I
+|AI(x, t)|2 dt ≪xL2
+ Z T
+−∞
+dt
+(1 + T −t)2 +
+Z ∞
+T+H
+dt
+(1 + t −T −H)2
+!
+≪xL2.
+Then the conclusion follows from (2.10).
+□
+Lemma 2.5. For the coefficients in (2.8), uniformly for x ≥1,
+(2.17)
+X
+n≥2
+a2
+n = log x + O(1),
+X
+n≥2
+na2
+n ≪x log2(2x).
+Proof. By the prime number theorem,
+X
+n≤u
+Λ(n)2 = u log u + O(u)
+(u ≥2).
+By the partial summation the two parts of the first sum in (2.17) are
+1
+x2
+X
+n≤x
+nΛ(n)2 = 1
+2 log x + O(1),
+x2 X
+n>x
+Λ(n)2
+n3
+= 1
+2 log x + O(1).
+For the second sum, the estimate Λ(n) ≤log n gives
+1
+x2
+X
+n≤x
+n2Λ(n)2 + x2 X
+n>x
+Λ(n)2
+n2
+≪x log2(2x).
+This proves (2.17).
+□
+6
+
+
+=== PAGE 7 ===
+Proposition 2.6. Uniformly for 1 ≤x ≤T λ,
+(2.18)
+FI(x) = H
+2π
+ 
+L2
+x2 + log x
+!
++ O
+ 
+H + HL
+x2 + H
+√
+L
+x
++ xL3 + L
+√x
+!
+.
+Proof. We use (2.7) and Lemma 2.4 to prove (2.18). By Lemma 2.5 and Montgomery–Vaughan’s
+mean-value theorem in [18, Corollary 3], we have
+(2.19)
+Z
+I
+|Dx(t)|2 dt = H
+X
+n≥2
+a2
+n + O
+
+X
+n≥2
+na2
+n
+
+= H log x + O
+ H + x log2(2x)
+.
+For the other main term,
+(2.20)
+Z
+I
+|Bx(t)|2 dt = HL2
+x2
++ O
+HL
+x2
+
+,
+since log(t + 2) = L + O(1) on I. For the cross term with Dx, integration by parts gives
+
+Z
+I
+log(t + 2)n−it dt
+ ≪
+L
+log n.
+Also, Λ(n)/ log n ≤1 implies
+X
+n≥2
+an
+log n ≤1
+x
+X
+n≤x
+√n + x
+X
+n>x
+n−3/2 ≪√x.
+Consequently,
+
+Z
+I
+Bx(t)Dx(t) dt
+ = 1
+x
+
+X
+n≥2
+an
+Z
+I
+log(t + 2)n−it dt
+
+≪L
+x
+X
+n≥2
+an
+log n ≪L
+√x.
+(2.21)
+Equation (2.9) gives ∥Ex∥L2(I) ≪
+√
+H/x, and (2.19) implies ∥Dx∥L2(I) ≪
+√
+HL for all
+sufficiently large T, uniformly over 1 ≤x ≤T λ. Cauchy–Schwarz therefore bounds the Dx, Ex
+cross term by O(H
+√
+L/x), the Bx, Ex cross term by O(HL/x2). Combining these estimates
+yields
+Z
+I
+|A(x, t)|2 dt = HL2
+x2
++ H log x + O
+ 
+H + HL
+x2 + H
+√
+L
+x
++ xL2 + L
+√x
+!
+.
+Then (2.18) follows by Lemma 2.4.
+□
+Proof of Theorem 2.2. Recall that
+0 < λ < θ < 1,
+H = T θ,
+L = log T,
+I = (T, T + H],
+where λ and θ are fixed. By the definition of the Fourier transform,
+bg(z) =
+Z
+R
+g(α)e−2πiαz dα.
+Then
+bg
+i(ρ −ρ′)L
+2π
+
+=
+Z λ
+−λ
+g(α)eα(ρ−ρ′)L dα =
+Z λ
+−λ
+g(α)T α(ρ−ρ′) dα
+for each pair of zeros ρ, ρ′ with ordinates in I. Interchanging the finite sum and the integral,
+by (2.4), we obtain an exact identity
+(2.22)
+X
+γ,γ′∈I
+bg
+i(ρ −ρ′)L
+2π
+
+w(ρ −ρ′) =
+Z λ
+−λ
+g(α)FI(T α) dα = 2
+Z λ
+0
+g(α)FI(T α) dα.
+7
+
+
+=== PAGE 8 ===
+We now apply Proposition 2.6. Substituting x = T α = eLα into (2.18), we obtain, uniformly
+for 0 ≤α ≤λ,
+FI(T α) = H
+2π
+
+L2e−2Lα + Lα
+
++ O
+
+H + HLe−2Lα + H
+√
+L e−Lα + L3eLα + Le−Lα/2
+.
+We evaluate the two main terms and then estimate the integrated error.
+The first main term contributes
+M0 = H
+2π
+ 
+2L2
+Z λ
+0
+g(α)e−2Lα dα
+!
+.
+Since g(α) = 0 for α > λ,
+2L2
+Z λ
+0
+g(α)e−2Lα dα = 2L2g(0)
+Z ∞
+0
+e−2Lα dα + 2L2
+Z ∞
+0
+ g(α) −g(0)
+e−2Lα dα
+= Lg(0) + 2L2
+Z ∞
+0
+ g(α) −g(0)
+e−2Lα dα.
+By the mean value theorem,
+|g(α) −g(0)| ≤∥g′∥∞α,
+α ≥0.
+Hence the absolute value of the second term is at most
+2L2∥g′∥∞
+Z ∞
+0
+αe−2Lα dα = 1
+2∥g′∥∞.
+It follows that
+2L2
+Z λ
+0
+g(α)e−2Lα dα = Lg(0) + Og(1),
+and therefore
+M0 = HL
+2π g(0) + Og(H).
+The second main term contributes
+M1 = HL
+π
+Z λ
+0
+αg(α) dα.
+Using the evenness and support of g, we have
+2
+Z λ
+0
+αg(α) dα =
+Z
+R
+|α|g(α) dα.
+Thus
+M1 = HL
+2π
+Z
+R
+|α|g(α) dα.
+To estimate the error, we take absolute values and use |g(α)| ≤∥g∥∞. The five terms above
+satisfy
+Z λ
+0
+H dα ≪H,
+Z λ
+0
+HLe−2Lα dα ≤H
+2 ,
+Z λ
+0
+H
+√
+L e−Lα dα ≤H
+√
+L
+,
+Z λ
+0
+L3eLα dα = L2(T λ −1) ≪T λL2,
+Z λ
+0
+Le−Lα/2 dα ≤2.
+Consequently, their total contribution is
+Og
+
+H + H
+√
+L
++ T λL2 + 1
+
+= Og(H + T λL2).
+8
+
+
+=== PAGE 9 ===
+Combining the evaluations of M0 and M1 with the error estimate gives (2.5), as desired.
+□
+3. Removing the rational weight
+Choose a fixed real even function
+(3.1)
+η ∈C∞
+c ((−λ/2, λ/2)),
+Z
+R
+η(u)2 du = 1,
+and put
+f = η2,
+K = bf,
+Q = f ∗f.
+Both Q and Q′′ are real even smooth functions supported in [−λ, λ], and bQ = K2. Integration
+by parts gives c
+Q′′(z) = −4π2z2K(z)2. For z = i(ρ −ρ′)L/(2π), it follows that
+(3.2)
+K(z)2 =
+ 
+bQ(z) −
+c
+Q′′(z)
+4L2
+!
+w(ρ −ρ′).
+Let
+SK(I) :=
+X
+γ,γ′∈I
+K
+i(ρ −ρ′)L
+2π
+2
+.
+Following the proof of [13, Lemma 3.2], we apply Theorem 2.2 separately to the fixed test
+functions Q and Q′′. This yields an asymptotic formula for SK(I) without the rational weight
+w(ρ −ρ′).
+Lemma 3.1. We have
+(3.3)
+SK(I) =
+ C(f) + of(1)
+HL
+2π ,
+where
+(3.4)
+C(f) =
+Z
+R
+f(u)2 du +
+ZZ
+R2 |u −v|f(u)f(v) du dv.
+Proof. For a real even test function g, write
+WI(g) =
+X
+γ,γ′∈I
+bg
+i(ρ −ρ′)L
+2π
+
+w(ρ −ρ′),
+and put
+M(g) = g(0) +
+Z
+R
+|α|g(α) dα.
+Theorem 2.2 states that, for each fixed g ∈C∞
+c (R) supported in [−λ, λ],
+WI(g) = HL
+2π M(g) + Og(H + T λL2).
+Both Q and Q′′ are real, even, smooth functions supported in [−λ, λ]. Summing (3.2) over
+all pairs of zeros with ordinates in I gives
+SK(I) = WI(Q) −
+1
+4L2 WI(Q′′).
+We apply Theorem 2.2 separately to the two fixed functions Q and Q′′. We obtain
+(3.5)
+SK(I) = HL
+2π M(Q) −H
+8πLM(Q′′) + Of(H + T λL2).
+We first calculate M(Q). By the evenness of f,
+Q(0) =
+Z
+R
+f(u)f(−u) du =
+Z
+R
+f(u)2 du.
+9
+
+
+=== PAGE 10 ===
+Moreover, Fubini’s theorem and the substitution v = α −u yield
+Z
+R
+|α|Q(α) dα =
+Z
+R
+Z
+R
+|α|f(u)f(α −u) du dα
+=
+Z
+R
+Z
+R
+|u + v|f(u)f(v) du dv
+=
+Z
+R
+Z
+R
+|u −v|f(u)f(v) du dv.
+The last equality follows by replacing v with −v and using f(−v) = f(v). Therefore,
+M(Q) =
+Z
+R
+f(u)2 du +
+ZZ
+R2 |u −v|f(u)f(v) du dv = C(f).
+Since Q′′ is fixed, we have M(Q′′) = Of(1). More explicitly, we have
+M(Q′′) = −
+Z
+R
+f′(u)2 du + 2
+Z
+R
+f(u)2 du.
+Combining these estimates, by (3.5) we find
+SK(I) = HL
+2π C(f) + Of(H + T λL2),
+which proves (3.3), since H = T θ, 0 < λ < θ < 1 and L = log T.
+□
+Apply Proposition 2.1 to the multiset
+(3.6)
+Z =
+i(ρ −1/2)L
+2π
+: γ ∈I
+
+,
+where mz is the multiplicity of the corresponding zero ρ. Then
+X
+z∈Z
+1 = N(I),
+X
+z∈Z∩R
+mz=1
+1 = Ns
+0(I),
+X
+z,s∈Z
+K(z −s)2 = SK(I),
+and the number of distinct elements of Z is exactly Nd(I). Both parts of Proposition 2.1
+therefore give
+(3.7)
+Ns
+0(I) ≥2N(I) −SK(I),
+Nd(I) ≥3
+2N(I) −1
+2SK(I).
+Using (1.3) and (3.3), we conclude that for every fixed f = η2 with η satisfying (3.1),
+(3.8)
+lim inf
+T→∞
+Ns
+0(T, T θ)
+N(T, T θ) ≥2 −C(f).
+The lower bound is maximized by minimizing the functional C(f).
+4. Proof of Theorem 1.1
+We now minimize the functional C(f) defined by (3.4).
+Proposition 4.1. Let 0 < λ ≤1 and J = [−λ/2, λ/2]. Among real functions f ∈L2(J) with
+R
+J f = 1, the functional
+C(f) =
+Z
+R
+f(u)2 du +
+ZZ
+R2 |u −v|f(u)f(v) du dv.
+defined by (3.4), with f extended by zero, has the unique minimizer
+(4.1)
+fλ(u) =
+cos(
+√
+2u)
+√
+2 sin(λ/
+√
+2)1J(u).
+Its value is
+(4.2)
+Cλ = C(fλ) := λ
+2 + 1
+√
+2 cot
+ λ
+√
+2
+
+.
+The same infimum is obtained in the smaller class f = η2 from (3.1).
+10
+
+
+=== PAGE 11 ===
+Proof. Put a = λ/2. The function fλ is even and positive on J, and direct integration gives
+R
+J fλ = 1. For |u| < a, set
+G(u) = fλ(u) +
+Z a
+−a
+|u −v|fλ(v) dv.
+Since G′′ = f′′
+λ + 2fλ = 0 and G is even, G is constant. At the right endpoint, taking the
+interior limit and using the zero first moment of fλ, we obtain
+G = fλ(a−) + a =
+1
+√
+2 cot
+ λ
+√
+2
+
++ λ
+2 .
+Integration against fλ(u) du proves (4.2).
+We next prove global minimality and uniqueness. Let f ∈L2(J) be any real function
+satisfying
+R
+J f = 1, and put
+h = f −fλ.
+Then
+R
+J h = 0. Expanding the quadratic functional and using the symmetry of the kernel gives
+C(f) −C(fλ) = 2
+Z
+J
+h(u)
+
+fλ(u) +
+Z
+J
+|u −v|fλ(v) dv
+
+du
++
+Z
+J
+h(u)2 du +
+ZZ
+J2 |u −v|h(u)h(v) du dv.
+The expression in parentheses is the constant Cλ. Therefore the linear term vanishes, and
+C(f) −Cλ =
+Z
+J
+h(u)2 du +
+ZZ
+J2 |u −v|h(u)h(v) du dv.
+To evaluate the second term, define
+P(u) =
+Z u
+−a
+h(v) dv.
+Since h ∈L2(J), the function P is absolutely continuous, with P ′ = h almost everywhere.
+Moreover,
+P(−a) = 0,
+P(a) =
+Z
+J
+h(v) dv = 0.
+Thus P ∈H1
+0((−a, a)), the Sobolev space with zero boundary values.
+Set
+Vh(u) =
+Z
+J
+|u −v|h(v) dv.
+Then
+V ′
+h(u) =
+Z u
+−a
+h(v) dv −
+Z a
+u
+h(v) dv.
+Since
+R
+J h = 0, this simplifies to
+V ′
+h(u) = 2P(u).
+Integration by parts, using the vanishing boundary values of P, yields
+ZZ
+J2 |u −v|h(u)h(v) du dv =
+Z
+J
+h(u)Vh(u) du
+=
+Z
+J
+P ′(u)Vh(u) du
+= [P(u)Vh(u)]a
+−a −
+Z
+J
+P(u)V ′
+h(u) du
+= −2
+Z
+J
+P(u)2 du.
+We have therefore proved the following identity
+C(f) −Cλ =
+Z
+J
+h(u)2 du −2
+Z
+J
+P(u)2 du.
+11
+
+
+=== PAGE 12 ===
+The Dirichlet Poincaré inequality on an interval of length λ (see [11, Theorem 257, p. 185])
+gives
+Z
+J
+P(u)2 du ≤λ2
+π2
+Z
+J
+P ′(u)2 du = λ2
+π2
+Z
+J
+h(u)2 du.
+Consequently,
+C(f) −Cλ ≥
+ 
+1 −2λ2
+π2
+!
+∥f −fλ∥2
+L2(J).
+Since 0 < λ ≤1, the coefficient is strictly positive. Thus C(f) ≥Cλ, with equality only when
+f = fλ almost everywhere.
+Finally, we show that the same infimum is obtained in the smaller class specified in (3.1).
+Choose real even functions
+χε ∈C∞
+c ((−a, a)),
+0 ≤χε ≤1,
+such that χε = 1 on [−a + ε, a −ε], where 0 < ε < a. Put
+bε =
+Z
+J
+χε(u)2fλ(u) du,
+and define
+ηε(u) = χε(u)
+p
+fλ(u)
+√bε
+,
+fε = η2
+ε.
+The square root is smooth on (−a, a) because fλ is strictly positive there. Hence ηε, extended
+by zero, is real, even, and belongs to C∞
+c ((−a, a)). Its normalization gives
+Z
+J
+ηε(u)2 du = 1.
+By dominated convergence, bε →1, fε →fλ in L1(J) and L2(J). In particular,
+Z
+J
+fε(u)2 du −→
+Z
+J
+fλ(u)2 du.
+For the double integral, the bound |u −v| ≤λ on J2 gives
+
+ZZ
+J2 |u −v|
+ fε(u)fε(v) −fλ(u)fλ(v)
+ du dv
+
+≤λ∥fε −fλ∥L1(J)
+
+∥fε∥L1(J) + ∥fλ∥L1(J)
+
+= 2λ∥fε −fλ∥L1(J) −→0.
+Therefore, C(fε) →C(fλ) = Cλ, as ε →0. This shows that the infimum in the smaller class
+specified in (3.1) is exactly Cλ.
+□
+Proof of Theorem 1.1. Fix λ < θ and a sufficiently small positive ε > 0 as in the last proof.
+Apply (3.8) to fε and first let T →∞, with both parameters fixed. Next let ε →0. We obtain
+lim inf
+T→∞
+Ns
+0(T, T θ)
+N(T, T θ) ≥2 −Cλ.
+Finally let λ →θ and use (4.2). This proves (1.7).
+□
+5. Proof of Theorem 1.2
+We extend the distinct-element inequality (2.2) in Proposition 2.1 to Proposition 5.1 as
+follows. The q = 1 case in Proposition 5.1 recovers (2.2).
+Let η ∈L2(R) be real, even and compactly supported, with
+R
+R η(u)2 du = 1, and put K = c
+η2.
+Let Z be a non-empty finite multiset invariant under complex conjugation. Write N for its
+total multiplicity, D for its number of distinct elements. Throughout this section, set
+S =
+X
+z,s∈Z
+K(z −s)2.
+12
+
+
+=== PAGE 13 ===
+For z ∈C, define
+fz(u) := η(u)e−2πiuz,
+gz(u) := fz(u) + f¯z(u)
+2
+,
+hz(u) := fz(u) −f¯z(u)
+2i
+.
+Let L2(R, C) denote the space of complex-valued square-integrable functions on R. Define the
+inner product on L2(R, C) by ⟨f, g⟩=
+R λ
+−λ f(u)g(u) du. Then by [13, (2.9)-(2.11)], we have
+(5.1)
+⟨fz, fs⟩= K(z −¯s),
+∥fx∥2 = 1 (x ∈R),
+∥gz∥2 −∥hz∥2 = 1.
+Let R be the set of distinct real elements of Z, and write its set of distinct non-real elements
+as
+S = {z1, ¯z1, . . . , zk, ¯zk}.
+On the finite-dimensional complex space
+W = SpanC
+ {fx : x ∈R} ∪{gzj, hzj : 1 ≤j ≤k}
+,
+define the self-adjoint operator
+(5.2)
+A =
+X
+x∈R
+mxfx ⊗fx + 2
+k
+X
+j=1
+mzj(gzj ⊗gzj −hzj ⊗hzj),
+where v ⊗w maps ξ to ⟨ξ, w⟩v for v, w, ξ ∈W. Conjugation invariance of Z then gives
+A =
+X
+z∈R∪S
+mzfz ⊗f¯z.
+Notice that for rank-one operators v ⊗w, we have
+tr(v ⊗w) = ⟨v, w⟩,
+tr
+ (v ⊗w)(v′ ⊗w′)
+ = ⟨v′, w⟩⟨v, w′⟩.
+Consequently, by (5.1) each term of tr A equals mzK(0) = mz, and the (z, s) term of tr(A2)
+equals mzmsK(s −z)K(z −s) = mzmsK(z −s)2. Here evenness of η2 implies evenness of K.
+Thus, we obtain
+(5.3)
+tr A = N,
+tr(A2) = S.
+In particular, S is real and nonnegative, since A is self-adjoint.
+By the classical trace–rank inequality (e.g., see [1, Lemma 2.2]), we have
+(tr A)2 ≤rank(A) tr(A2).
+Clearly, rank(A) ≤D. Thus, by (5.3), we get that
+(5.4)
+N2 ≤DS.
+By the argument in the proof of [13, Theorem 1.1], we obtain a weaker but positive result
+than 83.62%:
+(5.5)
+lim inf
+T→∞
+Nd(T)
+N(T) ≥1
+C1
+= 0.7532 . . . .
+Moreover, by (1.3) and (3.3), it follows from (5.4) that
+lim inf
+T→∞
+Nd(T, T θ)
+N(T, T θ) ≥1
+Cθ
+.
+This gives a short and direct proof of (1.10), which suffices to deduce that Nd(T, T θ) ≫
+N(T, T θ) for any 0 < θ < 1. To prove the better estimate (1.9), we prove a better inequality
+than (5.4).
+Proposition 5.1. For every integer q ≥1, we have
+(5.6)
+D ≥2q + 1
+q(q + 1)N −
+1
+q(q + 1)S.
+13
+
+
+=== PAGE 14 ===
+Proof. Fix an integer q ≥1. Split R into
+R1 := {x ∈R : mx ≤q},
+R2 := {x ∈R : mx ≥q + 1},
+and write n = |R1|, r = |R2|. Within this proof, put
+L :=
+X
+x∈R1
+mx,
+H :=
+X
+x∈R2
+mx,
+M := 2
+k
+X
+j=1
+mzj.
+Thus N = L + H + M and D = n + r + 2k.
+Consider the nested complex subspaces U ⊆V of W
+U := SpanC
+ {gzj : 1 ≤j ≤k} ∪{fx : x ∈R2}
+,
+V := SpanC
+ U ∪{fx : x ∈R1}
+,
+and denote their orthogonal projections by PU and PV .
+First, we estimate tr(PUA) for the operator A defined by (5.2). By the definition of the
+operator v ⊗w, (v ⊗w)ξ = ⟨ξ, w⟩v, for any v ∈W we have
+(PU(v ⊗v))ξ = PU((v ⊗v)ξ) = PU(⟨ξ, v⟩v) = ⟨ξ, v⟩PUv = ((PUv) ⊗v)ξ,
+so PU(v ⊗v) = (PUv) ⊗v. Therefore,
+(5.7)
+tr
+ PU(v ⊗v)
+ = ⟨PUv, v⟩= ∥PUv∥2.
+By (5.7), we have tr(PU(fx ⊗fx)) ≥0 for x ∈R1. For x ∈R2, we have PUfx = fx and
+∥fx∥2 = 1 by (5.1), so tr(PU(fx ⊗fx)) = ∥PUfx∥2 = ∥fx∥2 = 1. For the conjugate pair zj, ¯zj,
+let
+Aj = 2mzj
+ gzj ⊗gzj −hzj ⊗hzj
+.
+Then
+tr(PUAj) = 2mzj
+
+tr
+ PU(gzj ⊗gzj)
+ −tr
+ PU(hzj ⊗hzj)
+
+= 2mzj
+ ∥PUgzj∥2 −∥PUhzj∥2.
+For gzj ∈U, we have PUgzj = gzj. Also, ∥PUhzj∥2 ≤∥hzj∥2. By (5.1), we have ∥gzj∥2 −
+∥hzj∥2 = 1. Consequently,
+tr(PUAj) ≥2mzj
+ ∥gzj∥2 −∥hzj∥2 = 2mzj.
+Thus, the above estimates yield
+(5.8)
+tr(PUA) ≥H + M.
+Second, we estimate tr(PV A). Let V ⊥be the orthogonal complement of V in W. Let
+PV ⊥:= IW −PV be the orthogonal projection onto V ⊥, where IW is the identity map. Then
+PV ⊥fx = 0, PV ⊥gzj = 0 for x ∈R and 1 ≤j ≤k. Notice that for any orthogonal projection P
+and any vector v ∈W, self-adjointness of P gives
+(P(v ⊗v)P) ξ = P((v ⊗v)(P ξ) = P(⟨Pξ, v⟩v) = ⟨Pξ, v⟩Pv = ⟨ξ, Pv⟩Pv = ((Pv) ⊗(Pv))ξ.
+So P(v ⊗v)P = (Pv) ⊗(Pv). Applying this identity to each term of A, we obtain
+PV ⊥APV ⊥= −2
+k
+X
+j=1
+mzj(PV ⊥hzj) ⊗(PV ⊥hzj).
+Similar to (5.7), we have tr
+ PV (v ⊗v)
+ = ∥PV v∥2, so
+tr
+ PV ⊥APV ⊥
+ = −2
+k
+X
+j=1
+mzj∥PV ⊥hzj∥2.
+Since P 2
+V ⊥= PV ⊥, we have tr(PV ⊥A) = tr
+ PV ⊥APV ⊥
+ ≤0. Using PV + PV ⊥= IW and
+tr A = N, we therefore obtain
+(5.9)
+tr(PV A) = tr A −tr(PV ⊥A) ≥N.
+14
+
+
+=== PAGE 15 ===
+Third, for q ≥1, define the self-adjoint operator B := qPV + PU. By (5.8) and (5.9), we
+have
+(5.10)
+tr(AB) ≥qN + H + M.
+Let ∥B∥2
+HS be the Hilbert–Schmidt norm of B. Since U ⊂V , we have the orthogonal
+decomposition
+W = U ⊕(V ∩U⊥) ⊕V ⊥.
+If ξ ∈U, then PUξ = PV ξ = ξ, and hence Bξ = (q + 1)ξ. If ξ ∈V ∩U⊥, then PV ξ = ξ and
+PUξ = 0, so Bξ = qξ. Finally, if ξ ∈V ⊥, then ξ ∈U⊥as well, and therefore Bξ = 0. Choose
+an orthonormal basis {ej}dim W
+j=1
+adapted to this orthogonal decomposition, then
+∥B∥2
+HS =
+dim W
+X
+j=1
+∥Bej∥2 = (q + 1)2 dim U + q2 dim(V ∩U⊥).
+By dim U ≤r + k and dim(V ∩U⊥) = dim V −dim U ≤n, it follows that
+(5.11)
+∥B∥2
+HS ≤(q + 1)2(r + k) + q2n.
+Since A and B are self-adjoint, so is A −B. Then by tr(BA) = tr(AB),
+∥A −B∥2
+HS = tr
+ (A −B)2 = tr(A2) −2 tr(AB) + tr(B2) ≥0.
+Using tr(A2) = S from (5.3) and tr(B2) = ∥B∥2
+HS, we therefore obtain
+S ≥2 tr(AB) −∥B∥2
+HS.
+By (5.10) and (5.11),
+S ≥2(qN + H + M) −∥B∥2
+HS
+≥2qN + 2(H + M) −(q + 1)2(r + k) −q2n.
+Using N = L + H + M, D = n + r + 2k and the choice of R1 and R2, subtracting
+(2q + 1)N −q(q + 1)D from the previous lower bound for S, we obtain
+2qN + 2(H + M) −(q + 1)2(r + k) −q2n
+ −
+(2q + 1)N −q(q + 1)D
+
+= M + (q2 −1)k +
+ H −(q + 1)r
+ + (qn −L)
+= M + (q2 −1)k +
+X
+x∈R2
+(mx −q −1) +
+X
+x∈R1
+(q −mx) ≥0.
+Consequently,
+S ≥(2q + 1)N −q(q + 1)D,
+which gives (5.6), as desired.
+□
+Remark 5.2. In [6], Conrey et al. proved that a short mollifier suffices to establish a positive
+proportion of the number of critical zeros of ζ(s). In this remark, we show an inequality
+weaker than (2.1) that can be used to obtain a positive proportion. With the notation of
+Proposition 5.1, let n := #{x ∈R : mx = 1} be the number of simple real elements of Z.
+Take q = 1 in the proof of Proposition 5.1. Then by (5.9), we have N ≤tr(PV A). Clearly,
+dim V ≤n + r + k. Applying the Cauchy–Schwarz inequality to PV and A, we have
+N2 ≤
+tr(PV A)
+2 ≤tr(P ∗
+V PV ) tr(A∗A) = tr(PV ) tr(A2) = (dim V )S ≤(n + r + k)S.
+By N = n + P
+x∈R2 mx + 2 Pk
+j=1 mzj ≥n + 2r + 2k, we get that n + r + k ≤N+n
+2
+. Theorefore,
+we get that N2 ≤N+n
+2
+S, which is an analogue of the inequality (5.4) for simple real elements
+of Z. That is,
+(5.12)
+n
+N ≥2N
+S −1.
+15
+
+
+=== PAGE 16 ===
+Using (5.12) and the proof of [13, Theorem 1.1], we obtain that
+(5.13)
+lim inf
+T→∞
+Ns
+0(T)
+N(T) ≥
+2
+CMT
+−1 = 0.5065 . . . .
+Since Lamzouri’s inequality (2.1) is better than (5.12), the lower bound of (5.13) is weaker
+than (1.1).
+Proof of Theorem 1.2. Fix 0 < θ < 1, an integer q ≥1, a parameter 0 < λ < θ, and a smooth
+function f = η2 with η satisfying (3.1). Apply Proposition 5.1 to the zero multiset (3.6).
+This multiset is invariant under complex conjugation by the symmetry ρ 7→1 −¯ρ of the
+zeros. Its total multiplicity and distinct count are N(T, T θ) and Nd(T, T θ), respectively, while
+S = SK(I). By (1.3) and (3.3),
+lim inf
+T→∞
+Nd(T, T θ)
+N(T, T θ) ≥2q + 1 −C(f)
+q(q + 1)
+.
+Use the smooth approximations to fλ constructed in Proposition 4.1, first keeping each
+approximation fixed as T →∞. Then let λ →θ. This gives
+(5.14)
+lim inf
+T→∞
+Nd(T, T θ)
+N(T, T θ) ≥2q + 1 −Cθ
+q(q + 1)
+(q ≥1).
+To optimize, put Lq(C) = (2q + 1 −C)/(q(q + 1)). A direct calculation gives
+Lq(C) −Lq+1(C) =
+2(q + 1 −C)
+q(q + 1)(q + 2).
+Thus the sequence increases until q = ⌊C⌋and decreases thereafter. Since Cθ > 1, its maximum
+over integers q ≥1 is precisely D(Cθ) in (1.8). This proves (1.9).
+Indeed, Cθ > C1 > 1 for 0 < θ < 1, since C′
+θ = −1
+2 cot2(θ/
+√
+2) < 0 and C1 = 1.3274 . . .. For
+q = ⌊Cθ⌋, we have q ≤Cθ < q + 1, and hence 2q + 1 −Cθ > q > 0. Thus D(Cθ) > 0.
+□
+Remark 5.3. In [13], Lamzouri also proved that more than 88.76% of the non-trivial zeros
+of the zeta function are either simple or lie on the critical line (or both), and the average of
+the proportions of simple zeros and of zeros on the critical line is at least 83.62%. One may
+combine his arguments with the results in this article to obtain the short-interval analogues.
+Acknowledgments
+AI tools were used to explore some of the proof strategies and calculations. The author
+takes full responsibility for human verifications and the content.
+References
+[1] N. Alon, Perturbed identity matrices have high rank: Proof and applications, Combin. Probab. Comput. 18
+(2009), no. 1–2, 3–15.
+[2] L. Alpöge and R. Furman, More than two thirds of the zeta zeros are simple and on the critical line,
+preprint (2026), arXiv:2608.13637v2.
+[3] S. A. C. Baluyot, D. A. Goldston, A. I. Suriajaya, and C. L. Turnage-Butterbaugh, An unconditional
+Montgomery theorem for pair correlation of zeros of the Riemann zeta-function, Acta Arith. 214 (2024),
+357–376. doi:10.4064/aa230612-20-3. arXiv:2306.04799.
+[4] S. A. C. Baluyot, D. A. Goldston, A. I. Suriajaya, and C. L. Turnage-Butterbaugh, Pair correlation of
+zeros of the Riemann zeta function I: Proportions of simple zeros and critical zeros, preprint (2025), revised
+September 2026, arXiv:2501.14545v3.
+[5] J. B. Conrey, More than two fifths of the zeros of the Riemann zeta function are on the critical line, J.
+Reine Angew. Math. 399 (1989), 1–26. doi:10.1515/crll.1989.399.1.
+[6] J. B. Conrey, D. W. Farmer, C.-H. Kwan, Y. Lin and C. L. Turnage-Butterbaugh, Short mollifiers of the
+Riemann zeta-function, arXiv: 2508.11108 (2025), https://arxiv.org/abs/2508.11108.
+[7] H. Davenport, Multiplicative Number Theory, 3rd ed., revised by H. L. Montgomery, Graduate Texts in
+Mathematics 74, Springer, New York, 2000.
+[8] S. Feng, Zeros of the Riemann zeta function on the critical line, J. Number Theory 132 (2012), no. 4,
+511–542.
+[9] G. H. Hardy, Sur les zéros de la fonction ζ(s) de Riemann, C. R. Acad. Sci. Paris 158 (1914), 1012–1014.
+16
+
+
+=== PAGE 17 ===
+[10] G. H. Hardy and J. E. Littlewood, The zeros of Riemann’s zeta-function on the critical line, Math. Z. 10
+(1921), 283–317. doi:10.1007/BF01211614.
+[11] G. H. Hardy, J. E. Littlewood, and G. Pólya, Inequalities, 2nd ed., Cambridge University Press, Cambridge,
+1952.
+[12] A. A. Karatsuba, On the zeros of the function ζ(s) on short intervals of the critical line, Math. USSR-Izv.
+24 (1985), no. 3, 523–537; Russian original, Izv. Akad. Nauk SSSR Ser. Mat. 48 (1984), no. 3, 569–584.
+doi:10.1070/IM1985v024n03ABEH001246.
+[13] Y. Lamzouri, A new proof that more than 2/3 of the zeros of the Riemann zeta function are simple and on
+the critical line, preprint (2026), arXiv:2609.02882v2.
+[14] N. Levinson, More than one third of zeros of Riemann’s zeta-function are on σ = 1/2, Adv. Math. 13
+(1974), 383–436. doi:10.1016/0001-8708(74)90074-7.
+[15] S.-H. Min, On the zeros and the order of the Riemann zeta-function on the critical line, PhD thesis,
+University of Oxford, 1947.
+[16] H. L. Montgomery, The pair correlation of zeros of the zeta function, in Analytic Number Theory (St. Louis,
+1972), Proc. Sympos. Pure Math., vol. 24, Amer. Math. Soc., Providence, RI, 1973, pp. 181–193.
+[17] H. L. Montgomery, Distribution of the zeros of the Riemann zeta function, in Proceedings of the International
+Congress of Mathematicians (Vancouver, 1974), vol. 1, Canad. Math. Congress, 1975, pp. 379–381.
+[18] H. L. Montgomery and R. C. Vaughan, Hilbert’s inequality, J. London Math. Soc. (2) 8 (1974), 73–82.
+[19] K. Pratt, N. Robles, A. Zaharescu, and D. Zeindler, More than five-twelfths of the zeros of ζ are on the
+critical line, Res. Math. Sci. 7 (2020), Paper No. 2, 74 pp.
+[20] A. Selberg, On the zeros of Riemann’s zeta-function, Skr. Norske Vid. Akad. Oslo I (1942), no. 10, 59 pp.
+[21] J. Steuding, On simple zeros of the Reimann zeta-function in short intervals on the critical line, Acta
+Math. Hungar. 96 (2002), no. 4, 259–308. doi:10.1023/A:1019767816190.
+[22] X. Wu, The twisted mean square and critical zeros of Dirichlet L-functions, Math. Z. 293 (2019), 825–865.
+School of Mathematics and Statistics, Yunnan University, Kunming, Yunnan 650500, China
+Email address: bwang@ynu.edu.cn
+17

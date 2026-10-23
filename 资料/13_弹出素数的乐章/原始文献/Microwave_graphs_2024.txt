@@ -1,0 +1,1471 @@
+
+--- PDF PAGE 1 ---
+Coupled unidirectional chaotic microwave graphs
+Omer Farooq, Afshin Akhshani, Micha l Lawniczak, Ma lgorzata Bia lous, and Leszek Sirko
+Institute of Physics,
+Polish Academy of Sciences,
+Aleja Lotnik´ow 32/46,
+02-668 Warszawa, Poland
+(Dated: September 6, 2024)
+Abstract
+We investigate experimentally the undirected open microwave network Γ with internal absorption
+composed of two coupled directed halves, unidirectional networks Γ+ and Γ−, corresponding to
+two possible directions of motion on their edges. The two-port scattering matrix of the network
+Γ is measured and the spectral statistics and the elastic enhancement factor of the network are
+evaluated. The comparison of the number of experimental resonances with the theoretical one
+predicted by the Weyl’s law shows that within the experimental resolution the resonances are
+doubly degenerate. This conclusion was also corroborated by the numerical calculations. Though
+the network is characterized by the time reversal symmetry the missing level spectral statistics and
+the elastic enhancement factor are rather close to the Gaussian unitary ensemble predictions in
+random matrix theory. We used numerical calculations for the open non-dissipative quantum graph
+possessing the same structure as the microwave network Γ to investigate the doublet structures in
+the spectrum which otherwise would not be experimentally resolved. We show that the doublet
+size distribution is close to the Poisson distribution.
+1
+arXiv:2409.03493v1  [quant-ph]  5 Sep 2024
+
+
+--- PDF PAGE 2 ---
+I.
+INTRODUCTION
+From mathematical point of view a quantum graph is a one-dimensional complex system
+with the Laplace operator L(Γ) = −d2
+dx2 defined in the Hilbert space of square integrable
+functions [1–5]. The concept of quantum graphs was introduced by Pauling [6] to model
+organic molecules. Later, quantum graphs were applied in modelling and studying a large
+variety of different systems and theories such as quantum chaos, dynamical system theory,
+photonics crystals, superconductivity theory, microelectronics, etc [7–10].
+A quantum graph consists of one-dimensional edges ei which are connected at the vertices
+vi. The propagation of a wave along an edge of the graph is described by the one-dimensional
+Schr¨odinger equation. The boundary conditions are implemented on the wave functions
+entering and leaving the vertices. Commonly the Neumann (N) and Dirichlet (D) vertex
+boundary conditions are applied. The Neumann boundary condition imposes the continuity
+of waves propagating in the edges meeting at the vertex vi and vanishing of the sum of
+outgoing derivatives at vi. The Dirichlet boundary condition demands vanishing of the waves
+at the vertex.
+According to Bohigas-Giannoni-Schmit conjecture [2, 11–16] the spectral
+properties of quantum systems underlying classically chaotic dynamics can be modelled
+by appropriate Gaussian ensembles of the random matrix theory (RMT). In this approach
+three main symmetry classes are distinguished: the Gaussian orthogonal ensemble (GOE)
+and the Gaussian symplectic ensemble (GSE) with time-reversal invariance (T -invariance),
+characterized respectively by the symmetry indices β = 1 and β = 4, and the Gaussian
+unitary ensemble (GUE) with broken time-reversal invariance, β = 2. The Gaussian unitary
+ensemble characterizes chaotic systems with any spin, while the Gaussian orthogonal and
+symplectic ensembles describe quantum and wave-dynamical chaos in systems with integer
+and half-integer spins, respectively.
+The experimental studies of complex quantum systems are in general very complicated
+and challenging. This problem, for a wide class of such systems, has been effectively re-
+solved with the help of microwave networks. The one-to-one equivalence of the stationary
+Schr¨odinger equation describing quantum graphs and the telegraph equation describing mi-
+crowave networks allows to simulate quantum graphs through the use of microwave networks
+[15, 17].
+A unique versatility of microwave networks as wave simulators stems from their being the
+2
+
+
+--- PDF PAGE 3 ---
+only systems which allow for simulation of quantum graphs whose properties are described
+by all three symmetry classes GOE [15, 16, 18–24], GUE [15, 17, 25–28] and GSE [29–31]
+in the framework of RMT. The GSE systems can only be experimentally investigated using
+microwave networks.
+The other complex quantum systems can be simulated by microwave flat billiards [32–50]
+and atoms excited in strong microwave fields [51–61].
+Quantum graphs with GUE properties can be simulated experimentally by microwave net-
+works with microwave circulators [17, 28]. Recently, Akila and Gutkin [62] have theoretically
+and numerically considered an undirected quantum graph Γ composed of two unidirectional
+ones Γ+ and Γ−in which the nearest-neighbor spacing distribution of the eigenvalues shows
+close to GUE statistics. An experimental realization of a single unidirectional graph has
+been recently presented in Ref. [63]. The direction of the wave propagating through the
+unidirectional network was controlled by applying microwave hybrid couplers and isolators
+[63]. Though the paper was mainly focused on the spectral statistics of the unidirectional
+network some other characteristics of the network such as, e.g., correlation functions and
+the distribution of the reflection amplitude were also analyzed.
+In this article we present the results of an experimental study of the coupled unidirec-
+tional systems Γ+ and Γ−corresponding to the networks with two opposite directions of
+wave motion on their edges which together form the undirected microwave network Γ. The
+network Γ is open and characterized by internal absorption. The two-port scattering matri-
+ces of different realizations of the network are measured to evaluate the spectral statistics,
+the reflection coefficient, the imaginary part of the Wigner reaction matrix, and the elastic
+enhancement factor of the network.
+The comparison of the number of experimentally observed resonances with the theoret-
+ical one predicted by the Weyl’s law shows that approximately only half of the resonances
+have been experimentally identified. Because the graphs Γ+ and Γ−, for symmetry reasons,
+are closely doubly degenerate, the resonances within the spectral resolution of the measure-
+ments should be doubly degenerate. This conclusion was also corroborated by the numerical
+calculations which will be discussed in detail in Subsection C of the article.
+Though the networks are characterized by the time reversal symmetry their missing level
+spectral statistics and the enhancement factor obey closer the Gaussian unitary ensemble
+predictions than the GOE ones. We performed the numerical calculations for open quantum
+3
+
+
+--- PDF PAGE 4 ---
+graphs simulating microwave networks with no internal absorption to investigate the dou-
+blets which were not experimentally resolved. We show that the doublet size distribution is
+close to the Poisson distribution.
+One should point out that the previous experimental studies, in which microwave simula-
+tors were applied, were devoted to chaotic networks with the level spacing statistics belonging
+either to GOE, GUE or GSE statistics. In this article the networks and graphs character-
+ized by the structure of nearly degenerate doublets are for the first time experimentally and
+numerically studied.
+II.
+UNIDIRECTIONAL QUANTUM GRAPHS
+In Ref. [62] the undirected quantum graph Γ composed of two unidirectional graphs
+Γ+ and Γ−has been theoretically and numerically considered. In this realization of the
+unidirectional graphs the following structure of the vertex scattering matrices ˆσi has been
+proposed
+ˆσi =
+
+ˆ0 ˆUi
+ˆU †
+i ˆ0
+
+with ˆUi ˆU †
+i = ˆU †
+i ˆUi = 1,
+(1)
+where ˆ0 is the zero matrix with all the entries equal zero and ˆUi is a square unitary matrix.
+Due to the off-diagonal structure of ˆσi the transition from the graph Γ+ to Γ−and vice versa
+is impossible and dynamics on Γ+ and Γ−are completely decoupled. The splitting of Γ into
+Γ+ and Γ−is only possible if the vertices have even degree, e.g., in Ref. [62] the vertices ˆσi
+with the valency vi = 4 have been considered.
+The theoretical investigations of unidirectional quantum graphs [62] dealt only with close
+nondissipative systems. However, the real experimental systems are open and characterized
+by internal absorption. In this work we use microwave networks simulating quantum graphs
+to investigate properties of coupled unidirectional graphs Γ+ and Γ−. The internal coupling
+of the unidirectional graphs was enforced by the T-junctions, vertices with the valency
+vT = 3, which were introduced to couple the microwave analyzer via the external leads with
+the investigated network. Details of the experimental setup will be given in the next section.
+4
+
+
+--- PDF PAGE 5 ---
+III.
+COUPLED UNIDIRECTIONAL MICROWAVE NETWORKS
+The properties of the coupled unidirectional quantum graphs were investigated experi-
+mentally using microwave networks [15]. The scheme of an undirected microwave network
+simulating an undirected quantum graph Γ composed of two coupled unidirectional graphs
+Γ+ and Γ−is shown in Fig. 1.
+The network is constructed of SMA microwave cables and microwave joints that act as
+edges and vertices of the simulated quantum graph. A microwave cable consists of outer
+and inner conductors of radius r1 = 0.15 cm and r2 = 0.05 cm, respectively. The separation
+between two conductors is filled with Teflon having the dielectric constant ϵ = 2.06. Five
+microwave hybrid couplers (RF-Lambda RFHB02G08GPI), vertices ˆσi with vi = 4, are used
+to obtain the undirected network Γ with the coupled unidirectional networks Γ+ and Γ−,
+denoted in Fig. 1 by red and blue arrows, respectively.
+The T-junctions play a double role. They couple the network to the measuring system
+via HP 85133-616 and HP 85133-617 flexible microwave cables (leads L∞
+1
+and L∞
+2 ) and
+additionally, because they are undirected, the unidirectional networks Γ+ and Γ−with each
+other.
+The properties of the T-junction with Neumann boundary conditions are described by
+its scattering matrix
+ˆσT = 1
+3
+
+
+−1 2
+2
+2 −1 2
+2
+2 −1
+
+.
+(2)
+The coupling between the unidirectional networks Γ+ and Γ−is possible because of
+backscattering, represented by the diagonal elements in ˆσT scattering matrix.
+In the case of unidirectional vertices ˆσi (couplers RF-Lambda RFHB02G08GPI) their
+scattering matrices in the operating frequency range ν ∈[2, 8] GHz are the following
+ˆσi = 1
+√
+2
+
+
+0 0
+1 1
+0 0 −1 1
+1 −1 0 0
+1 1
+0 0
+
+
+.
+(3)
+5
+
+
+--- PDF PAGE 6 ---
+The diagonal elements of ˆσi matrices are zeros preventing from backscattering and there-
+fore also from coupling of the unidirectional networks Γ+ and Γ−. The scattering matrix ˆσi
+has a form of the scattering matrix presented in Definition (1) with the unitary matrix ˆUi
+defined as follows
+ˆUi = 1
+√
+2
+
+1 1
+−1 1
+
+.
+(4)
+In order to keep a one-to-one quantum-microwave vertex analogy the microwave ver-
+tex scattering matrices ˆσv(ν) and ˆσv(ν0) at frequencies ν and ν0 for Neumann boundary
+conditions [64] should be related by the equation [4, 28, 65–67]:
+ˆσv(ν) = (ν + ν0)ˆσv(ν0) + (ν −ν0)ˆI
+(ν + ν0)ˆI + (ν −ν0)ˆσv(ν0)
+.
+(5)
+Here, the matrix ˆI denotes the identity matrix of the dimension of the vertex scattering
+matrices ˆσv(ν) and ˆσv(ν0).
+It can be easily checked that for the components of the microwave network presented in
+Fig. 1, namely microwave T-junctions and couplers, the scattering matrices ˆσT and ˆσi are
+unitary and Hermitian, fulfilling Eq. (5).
+The lengths of edges of the quantum graph are equivalent to the optical lengths of the
+edges of the microwave network, i.e., lopt = √ϵlph, where lph is the physical length of a
+network edge. The total optical length Ltot of the network was 7.955±0.012 m. The optical
+lengths of the edges of the network are the following: l1 = 0.649±0.001 m, l2 = 0.788±0.001
+m, l3 = 1.142 ± 0.001 m, l4 = 0.382 ± 0.001 m, l5 = 0.513 ± 0.001 m, l6 = 0.435 ± 0.001 m,
+l7 = 0.787 ± 0.001 m, l8 = 0.480 ± 0.001 m, l9 = 0.760 ± 0.001 m, l10 = 0.897 ± 0.001 m,
+l11 = 0.657 ± 0.001 m, l12 = 0.465 ± 0.001 m.
+In order to obtain an ensemble of coupled unidirectional networks Γ+ and Γ−the lengths
+of two bonds of the undirected Γ network were changed by using the phase shifters PS1 and
+PS2 in such a way that the total optical length Ltot of the network was kept constant. Due
+to couplers’ frequency characteristics, the experiment was performed within the frequency
+range ν ∈[2, 8] GHz. In this interval according to the Weyl’s law in each spectrum one should
+expect ∼318 resonances, however, due to the doublet structure of very closely degenerate
+resonances induced by the coupled unidirectional networks Γ+ and Γ−in the experiment we
+6
+
+
+--- PDF PAGE 7 ---
+observed at most half of them. In practice, in each of applied 50 network realizations about
+4% of resonances (not resolved doublets) were not detected.
+In Fig. 2 we show a photograph of the experimental setup. It consists the microwave
+undirected network Γ connected via HP 85133-616 and HP 85133-617 flexible microwave
+cables to a vector network analyzer (VNA), Agilent E8364B, to measure the two-port scat-
+tering matrix ˆS(ν) of the network.
+The inset shows an example of the modulus of the
+diagonal scattering matrix element |S11(ν)| of the network measured in the frequency range
+5.24 −5.74 GHz. Despite of the coupled unidirectional networks Γ+ and Γ−experimental
+resonances (local minima in |S11(ν)|, marked by vertical lines) remain doubly degenerate
+within the experimental resolution.
+A.
+Spectral statistics of the undirected microwave network Γ
+The spectral properties of the undirected microwave network Γ were investigated using
+the most common measures of the short- and long-range spectral correlations: the nearest-
+neighbor spacing distribution P(s) and the spectral rigidity ∆3(L). In order to perform these
+analyses the resonance frequencies νi of the network were rescaled (unfolded) to eliminate
+system specific properties. Since experimental resonances are doubly degenerate this can be
+done using the Weyl’s formula for the network with the total optical length L′
+tot = Ltot/2.
+Then, the unfolded eigenvalues determined from the resonance frequencies νi are given by
+ϵi = Ltotνi/c, where c is the speed of light in the vacuum.
+The nearest-neighbor spacing distribution (NNSD) P(s) describes the distribution of the
+spacings between adjacent eigenvalues si = ϵi+1−ϵi in terms of their mean value ⟨s⟩, while the
+spectral rigidity ∆3(L) corresponds to the least square deviation of the integrated spectral
+density of the unfolded ϵi from the straight line best fitting it in an interval of length L [14].
+The nearest-neighbor spacing distribution P(s) which takes into account the incomplete-
+ness of a level sequence (missing levels) is given by [68]
+P(s) =
+∞
+X
+n=0
+(1 −ϕ)np(n, s
+ϕ).
+(6)
+For complete sequences, ϕ = 1, P(s) = p(0, s), which for GUE systems is well approximated
+by the Wigner surmise:
+P(s) = 32
+π2s2 exp(−4
+πs2).
+(7)
+7
+
+
+--- PDF PAGE 8 ---
+For the fraction of observed levels ϕ < 1 the following expression was used P(s) ≃p( s
+ϕ) +
+(1 −ϕ)p(1, s
+ϕ) + (1 −ϕ)2p(2, s
+ϕ), where [69]
+p(n, s
+ϕ) = γ( s
+ϕ)µ exp(−κ( s
+ϕ)2),
+(8)
+with µ = 7, 14 for n= 1, 2, respectively, and γ and κ determined from the normalization
+conditions:
+Z
+p(n, s
+ϕ)ds = ϕ,
+Z
+sp(n, s
+ϕ)ds = ϕ2(n + 1).
+(9)
+The spectral rigidity δ3(L) in the case of ϕ < 1 [68] is given by
+δ3(L) = (1 −ϕ) L
+15 + ϕ2∆3(L
+ϕ),
+(10)
+where for ϕ = 1 the spectral rigidity ∆3(L) is defined by
+∆3(L) = L
+15 −
+1
+15L4
+Z L
+0
+(L −x)3(2L2 −9xL −3x2)Y2(x)dx.
+(11)
+For GUE systems the two-point cluster function Y2(x) = (sin πx
+πx )2 [14].
+The results for the discussed spectral measures are presented in Fig. 3. The NNSD and
+the spectral rigidity ∆3(L) for the undirected microwave network Γ is displayed in the pan-
+els (a) and (b), respectively. In Fig. 3(a) the experimental NNSD obtained using 7488 level
+spacings is presented by the green histogram. The experimental results are compared with
+the theoretical ones based on random matrix theory (RMT) for complete series of resonances
+ϕ = 1 (GOE - black solid line, GUE - blue solid line) and the incomplete GUE one, with
+the fraction of observed levels ϕ = 0.96, 4% of missing resonances, (red broken line), re-
+spectively. Fig. 3(a) shows that the experimental NNSD is shifted towards larger parameter
+s in relation to the GUE distributions. The numerical analysis of a single unidirectional
+graph presented in Ref. [63] showed that the departure of its spectral characteristics from
+the GUE predictions was caused by not sufficiently complex wave dynamics in this graph.
+Therefore, also in our case the observed spectral deviation maybe attributed to not suffi-
+ciently complex wave dynamics in the coupled unidirectional graphs Γ+ and Γ−. In Fig. 3(b)
+the spectral rigidity ∆3(L) for the microwave network Γ is presented by green circles. The
+experimental results are compared with the theoretical ones based on RMT for complete
+series of resonances ϕ = 1, GOE - black solid line, GUE - blue solid line, and the incomplete
+series ϕ = 0.96 for GUE, red broken line, respectively. The inspection of the results reveals
+8
+
+
+--- PDF PAGE 9 ---
+that the experimental results are close to the GUE missing level statistics with the fraction
+ϕ = 0.96 of observed levels.
+B.
+The elastic enhacement factor of the microwave network Γ
+The measurement of the two-port scattering matix ˆS of the undirected network Γ allows
+for the evaluation of the elastic enhancement factor [70, 71]
+WS =
+p
+var(S11)var(S22)
+var(S12)
+,
+(12)
+where, e.g., var(S12) ≡⟨|S12|2⟩−|⟨S12⟩|2 stands for the variance of the matrix element S12.
+The diagonal elements of the scattering matrix ˆS can be parameterized as Sii = √Rieiθi,
+where Ri and θi are the reflection coefficient and the phase measured at the ith port of the
+network.
+The elastic enhancement factor WS is parametrized by the dimensionless parameter γ =
+2πΓW/∆S, characterizing the absorption strength [70, 71], where ΓW and ∆S are the width
+of resonances and the mean level spacing, respectively. It is important to point out that
+system characteristics defined by the scattering matrix are not sensitive on missing levels.
+It was established for GOE (β = 1) and GUE (β = 2) systems that the elastic enhancement
+factor for weak absorption γ ≪1 approaches the limit of WS = 2/β + 1, while in the case
+of strong absorption γ ≫1 the limit is WS = 2/β.
+Because the properties of the elastic enhancement factor WS strongly depend on T -
+symmetry of the system it can be used as a sensitive measure of time invariance violation.
+In such a situation the effective parameter γ can be evaluated using the distribution
+P(R) of the reflection coefficient R. For systems without T -invariance (β = 2), the analytic
+expression for the distribution of the reflection coefficient R is given by [71, 72]
+P(R) =
+2
+(1 −R)2P0
+1 + R
+1 −R
+
+,
+(13)
+where P0(x) is the probability distribution defined by
+P0(x) = 1
+2
+h
+A
+α(x + 1)
+2
+β/2
++ B
+i
+exp
+
+−α(x + 1)
+2
+
+,
+(14)
+where α = γβ/2, A = eα −1 and B = 1 + α −eα.
+9
+
+
+--- PDF PAGE 10 ---
+The probability distribution P0(x) can be also applied for calculating the distribution of
+the imaginary part P(v) of the diagonal elements of the Wigner’s ˆK matrix [70]
+P(v) =
+√
+2
+πv3/2
+Z ∞
+0
+dqP0
+h
+q2 + 1
+2
+
+v + 1
+v
+i
+.
+(15)
+The distribution P(v) is known in solid-state physics as the local density of states (LDoS)
+[70].
+For each realization of the network Γ the absorption strength γ = 1
+2
+P2
+i=1 γi was experi-
+mentally evaluated by adjusting the theoretical mean reflection coefficient
+⟨R⟩th =
+Z 1
+0
+dRRP(R),
+(16)
+to the experimental one ⟨Ri⟩obtained after eliminating the direct processes [46, 73, 74].
+Here the index i = 1, 2 denotes the port 1 or 2.
+In Fig. 4 we show the experimental distributions P(R) of the reflection coefficient R for
+the microwave network Γ at three values of the absorption strength γ = 3.6 ± 0.6, 4.6 ± 0.3,
+and 6.4 ± 0.3. They are marked by black, red, and green open circles, respectively. The
+measurements were done in the frequency ranges ν ∈[2, 4], [4, 6], and [6, 8] GHz, respectively,
+and were averaged over 500 microwave network realizations. The values of the absorption
+strength γ were assigned to the experimental curves by fitting the theoretical distributions
+P(R) calculated from Eq. (13) with the absorption coefficients γ = 3.6, 4.6, and 6.4, marked
+by black, red, and green solid lines, respectively.
+Fig. 5 shows the elastic enhancement factor WS (black open circles) evaluated experi-
+mentally for the undirected mirowave network Γ in the frequency range ν ∈[2, 8] GHz. The
+experimental results were averaged in 1 GHz window over 300 microwave network realiza-
+tions. In this frequency range the averaged absorption strength parameter γ = 4.9 ± 0.4.
+The experimental results are compared to the expected theoretical values of WS for GUE
+systems which are marked by red solid line. The experimental elastic enhancement factor
+is on average slightly higher that the theoretical one predicted for GUE systems. Also this
+discrepancy is probably caused by not sufficiently complex wave dynamics in the microwave
+network Γ. The black broken lines in Fig. 5 show the lowest WS = 1 and the highest WS = 2
+theoretical limits of the elastic enhancement factor predicted for GUE systems.
+In Fig. 6 we show the experimental distribution P(v) of the imaginary part of the diagonal
+elements of the Wigner’s ˆK matrix for the microwave undirected network Γ at γ = 4.9 (black
+10
+
+
+--- PDF PAGE 11 ---
+open circles), averaged over 500 microwave network realizations, for the frequency range
+ν ∈[2, 8] GHz. The experimental results are compared with the theoretical distribution
+P(v) evaluated from Eq. (15) for γ = 4.9 (red solid line).
+The agreement between the
+experimental and theoretical results is good.
+C.
+Numerical analysis of doublets properties
+To investigate numerically the properties of doublets, which were not experimentally
+resolved, the microwave undirected network Γ was simulated in the calculations by the open,
+dissipationless quantum graph Γ. The secular function ξ, whose zeros define the spectrum
+of the graph was expressed by using the method of pseudo-orbits [23, 75–77]
+ξ = det
+h
+ˆI2N −ˆL ˆSG
+i
+,
+(17)
+where ˆI2N is 2N × 2N identity matrix, N is the number of the internal edges of the graph
+and ˆL = diag [exp(ikl1), ..., exp(iklN), exp(ikl1), ..., exp(iklN)], l1...lN are the lengths of the
+respective edges of the graph. The ˆSG matrix, called the bond-scattering matrix [75], con-
+tains scattering conditions at the graph vertices. The full form of the ˆSG matrix is specified
+in the Appendix.
+The nearest-neighbor spacing distribution P(s) and the spectral rigidity ∆3(L) of the
+graph Γ consisting of the coupled unidirectional graphs Γ+ and Γ−are shown in Fig. 7(a)
+and Fig. 7(b), respectively. In this case the unfolded eigenvalues were determined from the
+resonance frequencies νi applying the Weyl’s formula ϵi = 2Ltotνi/c, where Ltot is the total
+optical length of the graph. The numerical calculations were performed in the frequency
+range ν = [2, 8] GHz and were averaged over 50 configurations of the graph Γ.
+Because of the doublet structure of the spectra the nearest-neighbor spacing distribution
+P(s), prepared using 15850 level spacings (green histogram), displays a large peak at small
+values of the parameter s and is significantly different from the Poisson (red dotted-dashed
+line), GOE (black dotted line), and GUE (blue dashed line) distributions, respectively.
+The inset in Fig. 7(a) shows an example of the spectrum of the undirected graph Γ
+(coupled unidirectional graphs Γ+ and Γ−) calculated in the frequency range 3.0 −3.3 GHz.
+Because the size of the doublets are very small, between 0.3−3.9 MHz, they are not resolved
+within the experimental resolution (15 MHz) and are not observed experimentally.
+11
+
+
+--- PDF PAGE 12 ---
+The spectral rigidity ∆3(L) of the graph Γ (green circles) presented in Fig. 7(b) due to
+the presence of doublets increases faster for small L than the Poisson one (red dotted-dashed
+line) and only for L > 8 slowly saturates at the value ∆3(L) ≈0.5 which is significantly
+higher than the GUE (blue dashed line) and GOE (black dotted line) predictions for the
+presented range of L ≤20.
+In Fig. 8(a) and Fig. 8(b) we show the nearest-neighbor spacing distribution P(s) and
+the spectral rigidity ∆3(L) of the graph Γ obtained under the assumption that the doublets
+are not resolved and are treated as singlet states. In this case, similarly to the experimental
+situation, we assumed that the unfolded resonances were determined from the Weyl’s formula
+ϵi = Ltotνi/c.
+In Fig. 8(a) the numerical distribution P(s) obtained for the graph Γ (green histogram) is
+compared with the distribution P(s) evaluated for the simplified, closed graph Γ′, composed
+of 10 edges and 5 couplers (red histogram). Both distributions were made using 7900 level
+spacings. The graph Γ′ was obtained from the graph Γ, presented in Fig. 1, by removing
+of two T-junctions.
+The quantum graph Γ′ is characterized by the spectrum of exactly
+doubly degenerate states. The two mentioned above distributions P(s) are compared with
+the Poisson (red dotted-dashed line), GOE (black dotted line), and GUE (blue dashed
+line) distributions, respectively. Both numerical distibutions P(s) are close to the GUE
+distribution, however, they are slightly shifted towards larger values of the level spacing s.
+Moreover, the distribution P(s) of the simplified graph Γ′ is more localized around the center
+of the GUE distribution than the one for the graph Γ, suggesting that backscattering present
+at T-junctions of the graph Γ causes some additional deviations from the GUE distribution.
+The spectral rigidity ∆3(L) presented in Fig. 8(b) shows a significant deviation from
+the GUE prediction. Our results corroborate the observation reported in Ref. [63] that
+the unidirectional graphs may not generate a wave dynamics of sufficient complexity to
+accurately reproduce RMT predictions.
+In Fig. 9 we show the doublet size distribution P(∆) (blue histogram) of the graph Γ
+consisting of the coupled unidirectional graphs Γ+ and Γ−(see Fig. 1). The doublet size
+was normalized to the mean value ⟨∆⟩= 1. In the calculation of the distribution P(∆)
+7900 doublets were used. The distribution P(∆) is compared to the Poisson distribution
+PPoisson = exp(−∆) (red solid line). Fig. 9 demonstrates that the distribution P(∆) is close
+to the Poisson one.
+12
+
+
+--- PDF PAGE 13 ---
+IV.
+SUMMARY AND CONCLUSIONS
+We investigated experimentally undirected open microwave network Γ with internal ab-
+sorption composed of two coupled unidirectional networks Γ+ and Γ−corresponding to two
+possible directions of motion on their edges. The two-port scattering matrices of the network
+were measured. The comparison of the number of experimental resonances with the theo-
+retical one predicted by the Weyl’s law showed that the resonances are doubly degenerate.
+Though the networks are characterized by the time reversal symmetry their missing level
+nearest-neighbor spacing distribution P(s) and the spectral rigidity ∆3(L) (ϕ = 0.96) do not
+obey the GOE predictions. The missing level NNSD P(s) reminds shifted towards larger
+values of mean level spacing s GUE distribution while the missing level spectral rigidity
+∆3(L) is in good agreement with the missing level prediction for GUE. Furthermore, the
+distributions of the reflection coefficient and the imaginary part of the Wigner’s reaction
+matrix as well as the enhancement factor of the networks were evaluated. The aforemen-
+tioned characteristics of chaotic systems are defined by the scattering matrix of the network.
+Therefore, they are not sensitive on missing levels. The obtained results are close to the
+GUE prediction, though the experimental enhancement factor appears to be slightly above
+it. We used the numerical calculations for open quantum graphs simulating microwave net-
+works with no internal absorption to investigate their spectral statistics and doublets which
+were not experimentally resolved. The numerically obtained spectral characteristics show
+significant deviations from the GUE predictions. We show that the doublet size distribu-
+tion is close to the Poisson distribution. Reported in this paper discrepancies between the
+experimental results and the GUE ones as well as between the numerical results simulat-
+ing the experimental ones and the GUE predictions maybe associated with the presence of
+backscattering and not sufficiently complex wave dynamics on the coupled unidirectional
+networks and graphs Γ+ and Γ−.
+V.
+ACKNOWLEDGMENTS
+This work was supported in part by the National Science Centre, Poland, Grant No.
+2018/30/Q/ST2/00324. We are grateful to S. Bauch for critical reading of the manuscript.
+13
+
+
+--- PDF PAGE 14 ---
+VI.
+APPENDIX
+Numerical calculations
+The resonance conditions for the unidirectional graphs can be expressed using the method
+of pseudo-orbits [23, 75–77], by solving the equation:
+det
+h
+ˆI2N −ˆL ˆSG
+i
+= 0,
+(18)
+where ˆI2N is 2Nx2N identity matrix, N is the number of the internal edges of the
+graph (N = 12) and ˆL = diag [exp(ikl1), ..., exp(ikl12), exp(ikl1), ..., exp(ikl12)], l1...l12 are
+the lengths of the respective arms, according to figure 1 in the paper. The ˆSG matrix, called
+the bond-scattering matrix [75], contains scattering conditions at the network vertices (see
+Fig. 1), i.e., five vertices with the valency vT = 4 and the Neumann boundary conditions,
+ensuring that the graph Γ contains two unidirectional graphs Γ+ and Γ−,
+ˆσi = 1
+√
+2
+
+
+0 0
+1 1
+0 0 −1 1
+1 −1 0 0
+1 1
+0 0
+
+
+,
+(19)
+and two T-junction vertices with the valency vT = 3 and with the Neumann boundary
+conditions:
+ˆσT = 1
+3
+
+
+−1 2
+2
+2 −1 2
+2
+2 −1
+
+.
+(20)
+The backscattering introduced by the T-junctions (presence of the diagonal elements in
+ˆσT) causes that the resonances of the graphs Γ+ and Γ−are not doubly degenerate.
+The matrix ˆSG has a form:
+14
+
+
+--- PDF PAGE 15 ---
+ˆSG =
+
+
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+2
+3
+0
+−1
+3
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1
+√
+2 0
+0
+0
+0
+0
+0
+1
+√
+2 0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1
+√
+2 0
+0
+0
+0
+0
+0
+1
+√
+2 0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+2
+3
+0
+0
+0
+−1
+3
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1
+√
+2 0
+0
+1
+√
+2 0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+−1
+√
+2
+1
+√
+2 0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1
+√
+2 0
+0
+0
+0
+0
+0
+−1
+√
+2 0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1
+√
+2
+1
+√
+2 0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1
+√
+2
+1
+√
+2 0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+−1
+√
+2 0
+0
+0
+0
+0
+0
+1
+√
+2 0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1
+√
+2
+−1
+√
+2 0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1
+√
+2 0
+0
+1
+√
+2 0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1
+√
+2 0
+0
+0
+0
+1
+√
+2 0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1
+√
+2 0
+0
+0
+0
+0
+0
+−1
+√
+2 0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+−1
+√
+2 0
+1
+√
+2 0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1
+√
+2 0
+1
+√
+2 0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1
+√
+2 0
+1
+√
+2 0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1
+√
+2 0
+−1
+√
+2 0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1
+√
+2 0
+0
+0
+0
+0
+0
+1
+√
+2
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1
+√
+2 0
+0
+0
+0
+−1
+√
+2 0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1
+√
+2 0
+0
+0
+0
+0
+0
+1
+√
+2 0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+−1
+√
+2 0
+0
+0
+0
+0
+0
+1
+√
+2
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+−1
+3
+0
+2
+3
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+−1
+3
+0
+0
+0
+2
+3
+0
+0
+0
+0
+0
+0
+0
+0
+
+
+(21)
+VII.
+REFERENCES
+[1] E. P. Wigner, Ann. Math. 53, 36 (1951).
+[2] F. Haake, S. Gnutzmann, and M. Ku´s, Quantum Signatures of Chaos (Springer Cham, 2018).
+15
+
+
+--- PDF PAGE 16 ---
+[3] H. A. Weidenm¨uller and G. E. Mitchell, Rev. Mod. Phys. 81, 539 (2009).
+[4] G. Berkolaiko and P. Kuchment, Introduction to Quantum Graphs (Mathematical Surveys
+and Monographs, 2013).
+[5] P. Kurasov, Spectral Geometry of Graphs (Springer Berlin Heidelberg, 2024).
+[6] L. Pauling, J. Chem. Phys. 4, 673 (1936).
+[7] D. Kowal, U. Sivan, O. Entin-Wohlman, and Y. Imry, Phys. Rev. B 42, 9009 (1990).
+[8] Y. Imry, Introduction to Mesoscopic Physics (Oxford University Press, 1996).
+[9] P. P. Rohde, A. Schreiber, M. ˇStefaˇn´ak, I. Jex, and C. Silberhorn, New J. Phys. 13, 013001
+(2011).
+[10] F. Elster, S. Barkhofen, T. Nitsche, J. Novotn´y, A. G´abris, I. Jex, and C. Silberhorn, Sci.
+Rep. 5, 1 (2015).
+[11] O. Bohigas, M. J. Giannoni, and C. Schmit, Phys. Rev. Lett. 52, 1 (1984).
+[12] T. Guhr, A. M¨uller-Groeling, and H. A. Weidenm¨uller, Phys. Rep. 299, 189 (1998).
+[13] S. Heusler, S. M¨uller, A. Altland, P. Braun, and F. Haake, Phys. Rev. Lett. 98, 044103 (2007).
+[14] M. L. Mehta, Random Matrices (Academic Press, 1991).
+[15] O. Hul, S. Bauch, P. Pako´nski, N. Savytskyy, K. ˙Zyczkowski, and L. Sirko, Phys. Rev. E 69,
+7 (2004).
+[16] M. Lawniczak, O. Hul, S. Bauch, P. ˇSeba, and L. Sirko, Phys. Rev. E 77, 056210 (2008).
+[17] M. Lawniczak, S. Bauch, O. Hul, and L. Sirko, Phys. Rev. E 81, 046204 (2010).
+[18] O. Hul, P. ˇSeba, and L. Sirko, Phys. Rev. E 79 (2009).
+[19] O. Hul, M. Lawniczak, S. Bauch, A. Sawicki, M. Ku´s, and L. Sirko, Phys. Rev. Lett. 109,
+040402 (2012).
+[20] M. Lawniczak, S. Bauch, O. Hul, and L. Sirko, Phys. Scr. T147, 014018 (2012).
+[21] M. Lawniczak, S. Bauch, and L. Sirko, in Handb. Appl. Chaos Theory (Chapman and
+Hall/CRC, 2016), pp. 559–584.
+[22] B. Dietz, V. Yunko, M. Bia lous, S. Bauch, M. Lawniczak, and L. Sirko, Phys. Rev. E 95,
+052202 (2017).
+[23] M. Lawniczak, J. Lipovsk´y, and L. Sirko, Phys. Rev. Lett. 122, 140503 (2019).
+[24] M. Lawniczak, P. Kurasov, S. Bauch, M. Bia lous, V. Yunko, and L. Sirko, Phys. Rev. E 101,
+052320 (2020).
+[25] M. Lawniczak, S. Bauch, O. Hul, and L. Sirko, Phys. Scr. T143, 014014 (2011).
+16
+
+
+--- PDF PAGE 17 ---
+[26] M. Lawniczak and L. Sirko, Sci. Rep. 9, 5630 (2019).
+[27] M. Bia lous, V. Yunko, S. Bauch, M. Lawniczak, B. Dietz, and L. Sirko, Phys. Rev. Lett. 117,
+144101 (2016).
+[28] M. Lawniczak, B. van Tiggelen, and L. Sirko, Phys. Rev. E 102, 052214 (2020).
+[29] A. Rehemanjiang, M. Allgaier, C. H. Joyner, S. M¨uller, M. Sieber, U. Kuhl, and H. J.
+St¨ockmann, Phys. Rev. Lett. 117, 064101 (2016).
+[30] J. Lu, J. Che, X. Zhang, and B. Dietz, Phys. Rev. E 102, 022309 (2020).
+[31] M. Lawniczak, A. Akhshani, O. Farooq, M. Bia lous, S. Bauch, B. Dietz, and L. Sirko, Phys.
+Rev. E 107, 024203 (2023).
+[32] B. Dietz, T. Friedrich, H. L. Harney, M. Miski-Oglu, A. Richter, F. Sch¨afer, and H. A.
+Weidenm¨uller, Phys. Rev. E 81, 036205 (2010).
+[33] J.-H. Yeh, Z. Drikas, J. Gil Gil, S. Hong, B. Taddese, E. Ott, T. Antonsen, T. Andreadis, and
+S. Anlage, Acta Phys. Pol. A 124, 1045 (2013).
+[34] X. Zheng, S. Hemmady, T. M. Antonsen, S. M. Anlage, and E. Ott, Phys. Rev. E 73, 046208
+(2006).
+[35] H. J. St¨ockmann and J. Stein, Phys. Rev. Lett. 64, 2215 (1990).
+[36] S. Sridhar and A. Kudrolli, Phys. Rev. Lett. 72, 2175 (1994).
+[37] L. Sirko, P. M. Koch, and R. Bl¨umel, Phys. Rev. Lett. 78, 2940 (1997).
+[38] S. Bauch, A. B l¸edowski, L. Sirko, P. M. Koch, and R. Bl¨umel, Phys. Rev. E 57, 304 (1998).
+[39] Y. Hlushchuk, A. Kohler, S. Bauch, L. Sirko, R. Bl¨umel, M. Barth, and H. J. St¨ockmann,
+Phys. Rev. E 61, 366 (2000).
+[40] R. Bl¨umel, P. M. Koch, and L. Sirko, Found. Phys. 31, 269 (2001).
+[41] Y. Hlushchuk, A. B l¸edowski, N. Savytskyy, and L. Sirko, Phys. Scr. 64, 192 (2001).
+[42] Y. Hlushchuk, L. Sirko, U. Kuhl, M. Barth, and H. J. St¨ockmann, Phys. Rev. E 63, 046208
+(2001).
+[43] A. Dhar, D. Madhusudhana Rao, U. Shankar, and S. Sridhar, Phys. Rev. E 68, 5 (2003).
+[44] N. Savytskyy, O. Hul, and L. Sirko, Phys. Rev. E 70, 6 (2004).
+[45] S. Hemmady, X. Zheng, E. Ott, T. M. Antonsen, and S. M. Anlage, Phys. Rev. Lett. 94,
+014102 (2005).
+[46] O. Hul, O. Tymoshchuk, S. Bauch, P. M. Koch, and L. Sirko, J. Phys. Math. Gen. 38, 10489
+(2005).
+17
+
+
+--- PDF PAGE 18 ---
+[47] O. Hul, N. Savytskyy, O. Tymoshchuk, S. Bauch, and L. Sirko, Phys. Rev. E 72, 066212
+(2005).
+[48] B. Dietz and A. Richter, Chaos 25, 97601 (2015).
+[49] B. Dietz, T. Klaus, M. Miski-Oglu, A. Richter, and M. Wunderle, Phys. Rev. Lett. 123,
+174101 (2019).
+[50] M. Bia lous, B. Dietz, and L. Sirko, Phys. Rev. E 100, 012210 (2019).
+[51] R. V. Jensen, S. M. Susskind, and M. M. Sanders, Phys. Rep. 201, 1 (1991).
+[52] R. Bl¨umel, A. Buchleitner, R. Graham, L. Sirko, U. Smilansky, and H. Walther, Phys. Rev.
+A 44, 4521 (1991).
+[53] M. Bellermann, T. Bergeman, A. Haffmans, P. M. Koch, and L. Sirko, Phys. Rev. A 46, 5836
+(1992).
+[54] A. Buchleitner and D. Delande, Phys. Rev. Lett. 71, 3633 (1993).
+[55] L. Sirko, M. R. Bellermann, A. Haffmans, P. M. Koch, and D. Richards, Phys. Rev. Lett. 71,
+2895 (1993).
+[56] J. E. Bayfield, S. Y. Luie, L. C. Perotti, and M. P. Skrzypkowski, Phys. D 83, 46 (1995).
+[57] L. Sirko and P. M. Koch, Appl. Phys. B 60, S195 (1995).
+[58] L. Sirko, A. Haffmans, M. R. W. Bellermann, and P. M. Koch, EPL 33, 181 (1996).
+[59] J. E. Bayfield and L. A. Pinnaduwage, J. Phys. B At. Mol. Opt. Phys. 18, L49 (1985).
+[60] L. Sirko, S. A. Zelazny, and P. M. Koch, Phys. Rev. Lett. 87, 43002 (2001).
+[61] A. Arakelyan, J. Nunkaew, and T. F. Gallagher, Phys. Rev. A 94, 053416 (2016).
+[62] M. Akila and B. Gutkin, J. Phys. A Math. Theor. 48, 345101 (2015).
+[63] J. Che, X. Zhang, W. Zhang, B. Dietz, and G. Chai, Phys. Rev. E 106, 014211 (2022).
+[64] P. Exner and P. ˇSeba, Rep. Math. Phys. 28, 7 (1989).
+[65] V. Kostrykin and R. Schrader, J. Phys. Math. Gen. 32, 595 (1999).
+[66] P. Kurasov and M. Nowaczyk, Opusc. Math. 30, 295 (2010).
+[67] P. Exner and M. Tater, Phys. Lett. A 382, 283 (2018).
+[68] O. Bohigas and M. P. Pato, Phys. Lett. B 595, 171 (2004).
+[69] U. Stoffregen, J. Stein, H. J. Stockmann, M. Ku´s, and F. Haake, Phys. Rev. Lett. 74, 2666
+(1995).
+[70] Y. V. Fyodorov and D. V. Savin, JETP Lett. 80, 725 (2004).
+[71] D. V. Savin, H. J. Sommers, and Y. V. Fyodorov, JETP Lett. 82, 544 (2005).
+18
+
+
+--- PDF PAGE 19 ---
+[72] C. W. Beenakker and P. W. Brouwer, Phys. E 9, 463 (2001).
+[73] Y. V. Fyodorov, D. V. Savin, and H.-J. Sommers, J. Phys. Math. Gen. 38, 10731 (2005).
+[74] U. Kuhl, M. Mart´ınez-Mares, R. A. M´endez-S´anchez, and H. J. St¨ockmann, Phys. Rev. Lett.
+94, 144101 (2005).
+[75] R. Band, J. M. Harrison, and C. H. Joyner, J. Phys. A Math. Theor. 45, 325204 (2012).
+[76] J. Lipovsk´y, Acta Phys. Pol. A 128, 968 (2015).
+[77] J. Lipovsk´y, J. Phys. Math. 49, 375202 (2016).
+19
+
+
+--- PDF PAGE 20 ---
+FIG. 1: The scheme of an undirected microwave network Γ simulating an undirected quantum
+graph possessing two coupled unidirectional graphs Γ+ (red arrows) and Γ−(blue arrows). The
+network contains two T-junctions (vertices 6 and 7), five microwave hybrid couples (vertices Nos.
+1-5) and two phase shifters: PS1 and PS2. The network Γ was connected at T-junctions via HP
+85133-616 and HP 85133-617 flexible microwave cables (leads L∞
+1
+and L∞
+2 ) to the ports of the
+vector network analyzer Agilent E8364B in order to measure the two-port scattering matrix ˆS(ν)
+of the network.
+20
+
+
+--- PDF PAGE 21 ---
+FIG. 2: A photograph of the experimental setup. It consists the microwave undirected network
+Γ connected via HP 85133-616 and HP 85133-617 flexible microwave cables to a vector network
+analyzer (VNA), Agilent E8364B, to measure the two-port scattering matrix ˆS(ν) of the network.
+The inset shows an example of the modulus of the diagonal scattering matrix element |S11(ν)| of
+the network measured in the frequency range 5.24 −5.74 GHz. Due to the coupled unidirectional
+networks Γ+ and Γ−every experimental resonance (marked by vertical lines) remains doubly
+degenerate within the experimental resolution.
+21
+
+
+--- PDF PAGE 22 ---
+FIG. 3: (a) Experimental nearest-neighbor spacing distribution (green histogram) obtained for the
+undirected microwave networks Γ (see Fig. 1). The experimental results are compared with the
+theoretical ones based on RMT for complete series of resonances ϕ = 1 (GOE - black solid line,
+GUE - blue solid line) and the incomplete one ϕ = 0.96, 4% of missing resonances, for GUE (red
+broken line), respectively. (b) The spectral rigidity for the microwave network Γ is presented by
+green circles. The experimental results are compared with the theoretical ones based on RMT
+for complete series of resonances ϕ = 1, GOE - black solid line, GUE - blue solid line, and the
+incomplete series ϕ = 0.96 for GUE, red broken line, respectively.
+22
+
+
+--- PDF PAGE 23 ---
+FIG. 4: Experimental distributions P(R) of the reflection coefficient R for the microwave network
+Γ at γ = 3.6 ± 0.6 (black open circles, frequency range ν ∈[2, 4] GHz), γ = 4.6 ± 0.3 (red open
+circles, ν ∈[4, 6] GHz) and γ = 6.4 ± 0.3 (green open circles, ν ∈[6, 8] GHz) . The theoretical
+distributions P(R) calculated from the Eq. (13) are marked by black (γ = 3.6), red (γ = 4.6), and
+green (γ = 6.4) solid lines, respectively.
+23
+
+
+--- PDF PAGE 24 ---
+FIG. 5: The elastic enhancement factor WS (black open circles) evaluated experimentally for the
+undirected mirowave network Γ in the frequency range ν ∈[2, 8] GHz. In this frequency range the
+averaged absorption strength parameter γ = 4.9 ± 0.4. The expected theoretical values for GUE
+systems are marked by red solid line. The black broken lines show the lowest WS = 1 and the
+highest WS = 2 theoretical limits of the elastic enhancement factor predicted for GUE systems.
+24
+
+
+--- PDF PAGE 25 ---
+FIG. 6: Experimental distribution P(v) of the imaginary part of the diagonal elements of the
+Wigner’s ˆK matrix for the microwave undirected network Γ at γ = 4.9 ± 0.5 (black open circles,
+frequency range ν ∈[2, 8] GHz). The theoretical distribution P(v) evaluated from Eq. (15) for
+γ = 4.9 is marked by red solid line.
+25
+
+
+--- PDF PAGE 26 ---
+FIG. 7: (a) The numerical nearest-neighbor spacing distribution P(s) (green histogram) and (b)
+the spectral rigidity ∆3(L) (green open circles) calculated for the undirected graph Γ. The results
+in panels (a) and (b) are compared with the Poisson (red dotted-dashed line), GOE (black dotted
+line), and GUE (blue dashed line) predictions, respectively. The inset in the panel (a) shows an
+example of the spectrum of the graph Γ (coupled unidirectional graphs Γ+ and Γ−) calculated in
+the frequency range 3.0 −3.3 GHz. The size of the doublets are specified in MHz.
+26
+
+
+--- PDF PAGE 27 ---
+FIG. 8: (a) The numerical nearest-neighbor spacing distribution P(s) evaluated from the spectra
+of the graph Γ (see Fig. 1) under the assumption that the doublets are not resolved and are treated
+as singlet states (green histogram). The distribution P(s) evaluated for the simplified closed graph
+Γ′ which was composed of 10 edges and 5 couplers (red histogram). The graph Γ′ is characterized
+by the spectrum of exactly doubly degenerate states. (b) The spectral rigidity ∆3(L) evaluated
+from the spectra of the graph Γ (green circles) is compared with the one evaluated for the graph
+Γ′ (red circles). The results presented in panels (a) and (b) are compared with the Poisson (red
+dotted-dashed line), GOE (black dotted line), and GUE (blue dashed line) predictions, respectively.
+27
+
+
+--- PDF PAGE 28 ---
+FIG. 9: The doublet size distribution P(∆) of the graph Γ (blue histogram) consisting of the
+coupled unidirectional graphs Γ+ and Γ−.
+The distribution P(∆) is compared to the Poisson
+distribution PPoisson = exp(−∆) (red solid line).
+28

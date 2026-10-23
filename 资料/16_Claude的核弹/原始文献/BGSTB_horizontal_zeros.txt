@@ -1,0 +1,1583 @@
+=== PAGE 1 ===
+PAIR CORRELATION OF ZEROS OF THE RIEMANN ZETA FUNCTION I:
+PROPORTIONS OF SIMPLE ZEROS AND CRITICAL ZEROS
+SIEGFRED ALAN C. BALUYOT, DANIEL ALAN GOLDSTON, ADE IRMA SURIAJAYA,
+AND CAROLINE L. TURNAGE-BUTTERBAUGH
+Dedicated to Hugh Montgomery, whose insight continues to enlighten and surprise.
+Abstract. Assuming the Riemann Hypothesis (RH), Montgomery proved a theorem in 1973 con-
+cerning the pair correlation of zeros of the Riemann zeta-function and applied this to prove that
+at least 2/3 of the zeros are simple. In this paper, we investigate the versatility of the pair corre-
+lation method and show, for the first time, that it can be used to prove results on the horizontal
+distribution of zeros of the Riemann zeta-function.
+In earlier work we showed how to remove RH from Montgomery’s theorem and, in turn, obtain
+results on simple zeros assuming conditions on the zeros that are weaker than RH. Here we assume
+a more general condition, namely that all the zeros ρ = β + iγ with T < γ ≤2T are in a narrow
+vertical box centered on the critical line with width b/ log T. We prove that under this assumption
+with b = 0.3185 that at least 2/3 of zeros are simple and on the critical line.
+1. Introduction and Statement of the Main Results
+Let s = σ + it with σ, t ∈R. A central problem in analytic number theory is to quantify the
+proportion of nontrivial zeros of the Riemann zeta-function ζ(s) that are simple and on the critical
+line ℜ(s) = 1/2. In this paper, we only discuss nontrivial zeros of ζ(s) and we denote them by
+ρ = β +iγ, where β, γ ∈R with γ̸ = 0, and the multiplicity of this zero is denoted mρ. Throughout
+we refer to these zeros simply as “zeros.”
+In his now famous paper on the pair correlation of the zeros of the Riemann zeta-function,
+Montgomery [Mon73] introduced a method, conditional on RH, designed to study the vertical dis-
+tribution of the zeros of ζ(s). Under RH, Montgomery [Mon73] showed asymptotically at least 2/3
+of the zeros are simple, and soon after, Montgomery and Taylor [Mon75] improved the proportion
+to 67.25%. In 2020, Chirre, Gon¸calves, and de Laat [CdL20] used Montgomery’s method to show
+that, under RH, more than 67.92% of the zeros are simple.
+In 1974, Levinson [Lev74] introduced an unconditional method designed to study critical zeros,
+and he proved that more than 1/3 of the zeros are on the critical line, which he improved soon there-
+after [Lev75] to more than 0.3474. Heath-Brown [HB79] and Selberg (unpublished) subsequently
+showed that more than 34.74% of the zeros are on the critical line and simple. As in the case of
+Montgomery’s method, Levinson’s method is still actively used. Indeed, in 2020 Pratt, Robles,
+Zaharescu, and Zeindler [PRZD20] proved that more than 41.72% of the zeros are on the critical
+line and that more than 40.75% of the zeros are on the critical line and simple. For a detailed
+discussion of the rich history of Levinson’s method and its modifications, we refer the reader to the
+introduction of [PRZD20].
+In 1998, Conrey, Ghosh, and Gonek introduced a method which uses the discrete, mollified
+moments of ζ′(ρ) to study simple zeros. They showed on RH and an additional hypothesis that at
+Date: June 8, 2026.
+2010 Mathematics Subject Classification. 11M06, 11M26.
+Key words and phrases. Riemann zeta-function, zeros, pair correlation, simple zeros.
+1
+arXiv:2501.14545v3  [math.NT]  1 Sep 2026
+
+
+=== PAGE 2 ===
+least 19/27 = .703 of the zeros are simple. Later Bui and Heath-Brown [BHB13] showed that this
+result holds on RH alone.
+1.1. Montgomery’s method and critical zeros. In the recent paper [BGSTB24], we returned
+to Montgomery’s pair correlation method and under an assumption weaker than the Riemann
+Hypothesis, showed that at least 61.7% of the zeros are simple. There, we wrote “The method of
+proof neither requires nor provides any information on whether any of these zeros are or are not on
+the critical line where β = 1/2.” In this paper, however, we show that this statement is incorrect.
+In particular, assuming that the zeros of ζ(s) are contained in a narrow vertical box centered on
+the critical line, we prove the new result that the pair correlation method yields at least 67.25% of
+the zeros are both simple and on the critical line.
+Remark 1. Comparing numerical results, we see that the pair correlation method obtains a stronger
+proportion of critical zeros than does Levinson’s method, with the obvious caveat that the pair cor-
+relation method requires an assumption on the zeros of ζ(s) and Levinson’s method is unconditional.
+On the other hand, the arguments presented here reveal a novel observation: the pair correlation
+method, which was developed to study vertical distribution of zeros of ζ(s) can be used to prove
+results on the horizontal distribution of zeros of ζ(s) as well.
+1.2. Statements of results. For b > 0, let Bb be the thin vertical box centered on the critical
+line defined by
+(1.1)
+Bb :=
+
+s = σ + it
+ 1
+2 −
+b
+2 log T < σ < 1
+2 +
+b
+2 log T , T < t ≤2T
+
+,
+and let N(Bb) denote the number of zeros of ζ(s) in Bb. Let Ns(Bb) count the number of zeros in
+Bb that are simple, and let N0(Bb) count the number of zeros in Bb that are on the critical line.
+Finally, let Ns
+0(Bb) denote the number of zeros in Bb that are simple and on the critical line. Note
+that in each of these settings, we count zeros with multiplicity.
+Theorem 1. Assume that, for all sufficiently large T, all the zeros ρ = β + iγ of ζ(s) with
+T < γ ≤2T are in Bb. Then we have, if b →0 as T →∞,
+(1.2)
+Ns
+0(Bb) =
+X
+ρ
+T<γ≤2T
+β= 1
+2 and ρ simple
+1 ≥
+2
+3 + o(1)
+
+X
+ρ
+T<γ≤2T
+1 =
+2
+3 + o(1)
+
+N(Bb),
+where the summation over the zeros ρ = β + iγ of ζ(s) counts with multiplicity.
+Remark 2. Using Theorem 3 below, we also have
+(1.3)
+max(N0(Bb), Ns(Bb)) ≥1
+2(N0(Bb) + Ns(Bb)) ≥
+5
+6 + o(1)
+
+N(Bb).
+Note that the inequality (1.2) implies min(N0(Bb), Ns(Bb)) ≥Ns
+0(Bb) ≥(2
+3 + o(1))N(Bb), so that
+(1.3) shows that at least one of N0(Bb) or Ns(Bb) is ≥(5
+6 + o(1))N(Bb). Furthermore, if S is the
+set of simple zeros, C the set of critical zeros, and NS∪C(Bb) the number of zeros that are simple
+or critical or both in Bb, Soundararajan pointed out to us that our method allows us to get
+NS∪C(Bb) ≥
+8
+9 + o(1)
+
+N(Bb).
+The results in Theorem 1 also hold for small fixed values of b.
+This requires the use of a
+special complex kernel we call a Tsang kernel, together with some easy numerical calculations
+using Mathematica. In stating our results here, we utilize the asymptotic formula for the number
+of zeros ρ with T < γ ≤2T given in (2.3).
+2
+
+
+=== PAGE 3 ===
+Theorem 2. Assume that, for all sufficiently large T, all the zeros ρ = β + iγ of ζ(s) with
+T < γ ≤2T are in Bb. Then as T →∞, we have
+Ns
+0(B0.3185) ≥
+
+0.66666908 + o(1)
+ T
+2π log T,
+which recovers the 2/3 proportion obtained in Theorem 1, and
+Ns
+0(B0.001) ≥
+
+0.67250064 + o(1)
+ T
+2π log T,
+which recovers Montgomery and Taylor’s 67.25% proportion.
+In the last section of the paper we include Table 1 which gives additional results obtained for
+various values of b using two different Tsang kernels. The table exhibits the fact that the results
+deteriorate as b increases, and the method ultimately fails when b ≥4.2.
+We use the simpler Tsang kernel in the proof of Theorem 1 here, however in [GS26] it is shown
+that an ordinary Fej´er kernel extended to complex values can be used to prove Theorem 1 when
+b →0 as T →∞.
+Remark 3. Concerning our assumption on Bb in Theorems 1 and 2, we can replace the requirement
+there are no zeros outside Bb for T < γ ≤2T with a suitably strong Zero Density Hypothesis, as
+was done in [BGSTB24, Theorem 3]. Also in this region of the critical strip, Brian Conrey2 has
+proved unconditionally the striking result that more than 99.9% of the zeros with T < γ ≤2T are
+in Bb with b = 16, or equivalently within a horizontal distance 8/ log T of the critical line.
+1.3. Horizontal Multiplicity. Soundararajan suggested to us a simplification in our original
+proofs by introducing a quantity we call the “Horizontal Multiplicity.” For g a fixed real number,
+the horizontal multiplicity H(g) is the number of zeros on the horizontal line s = σ +ig, 0 < σ < 1,
+counted with multiplicity. Assuming RH, then H(g) is either zero or the multiplicity of the zero
+ρ = 1/2+ig. If there are zeros off the critical line, then they come in pairs symmetric to the critical
+line, and H(g) is the sum of the multiplicities of all the zeros on the horizontal line. Moreover,
+since H(g) does not depend on the position of the zeros on the horizontal line, H(g) returns the
+same value whether there are multiple zeros on and off the critical line or a just single zero on the
+critical line (of multiplicity H(g)).
+We now let
+(1.4)
+N⊛(T) :=
+X
+ρ,ρ′
+T<γ,γ′≤2T
+γ=γ′
+1 =
+X
+ρ
+T<γ≤2T
+H(γ).
+Here we count zeros with multiplicity. The first sum is a double sum over ρ and ρ′ and is the
+mechanism by which the pair correlation method detects multiple zeros.
+Using an elementary
+argument, we prove in the next section how a strong enough upper bound on N⊛(T) gives lower
+bounds for the number of both simple and critical zeros.
+Theorem 3. Suppose there exists a constant C ≥1 and that, as T →∞,
+(1.5)
+N⊛(T) ≤
+
+C + o(1)
+ T
+2π log T.
+Then asymptotically,
+(i) the proportion of zeros of ζ(s) which are simple and on the critical line is ≥2 −C,
+(ii) the average of the proportions of simple zeros and of critical zeros of ζ(s) is ≥(3 −C)/2,
+(iii) the proportion of zeros of ζ(s) which are either simple or critical or both is ≥(4 −C)/3.
+2Zeros Near the Critical Line, unpublished 2024 note.
+3
+
+
+=== PAGE 4 ===
+In order to obtain positive proportions of the zeros, note that (i) requires 1 ≤C < 2, (ii) requires
+1 ≤C < 3, and (iii) requires 1 ≤C < 4.
+1.4. Outline for the paper. In Section 2 we prove the elementary Theorem 3 and further discuss
+horizontal multiplicity. In Section 3 we state and prove an unconditional form of Montgomery’s
+Theorem for his F function. In Section 4 we define the Tsang kernel and obtain a formula for
+evaluating the double sum over zeros of the Tsang kernel evaluated at differences of zeros.
+In
+Section 5 we prove the main properties of the Tsang kernel. Finally, in Section 6 we obtain the
+constant needed in Theorem 3 to bound the average horizontal multiplicity, and then Theorems 1
+and 2 follow immediately from Theorem 3.
+2. Horizontal Multiplicity and Proof of Theorem 3
+2.1. Counting zeros with multiplicity vs weighting zeros by multiplicity. Let mρ denote
+the multiplicity of the zero ρ of ζ(s). Consider the set of zeros of ζ(s) given by
+Z := {ρ : ζ(ρ) = 0}.
+Since Z is a set, each zero is counted only once, and thus both simple zeros and multiple zeros are
+each counted once. We say Z is the set of distinct zeros.
+On the other hand, zeros of analytic functions are counted by the argument principle with their
+multiplicity. Thus, it is natural to consider the multiset Z of zeros, where ρ ∈Z if and only if
+ζ(ρ) = 0, and Z contains mρ copies of ρ. With this notation, we define N(T) by
+N(T) :=
+{ρ ∈Z : 0 < γ ≤T}
+.
+Thus in what follows, the phrase counting with multiplicity indicates that the underlying set of
+zeros in each expression is actually the multiset of zeros. On the other hand, since
+N(T) =
+X
+ρ∈Z
+0<γ≤T
+1 =
+X
+ρ∈Z
+0<γ≤T
+mρ,
+one can also count zeros in Z weighted by multiplicity to recover N(T). For clarity we always indicate
+which of the sets Z or Z are being used. We will see that N⊛(T) defined in (1.4) distinguishes
+the multiplicities and horizontal positions of the zeros by using the property that double sums over
+zeros both count and weight by multiplicity at the same time.
+2.2. Sums over zeros. The Riemann-von Mangoldt formula for N(T) states that
+N(T) :=
+X
+ρ∈Z
+0<γ≤T
+1 = T
+2π log T
+2π −T
+2π + O(log T),
+from which it immediately follows that
+(2.1)
+N(T) = T
+2π log T + O(T)
+and
+N(T + 1) −N(T) ≪log T.
+Using the second estimate in (2.1), or directly as in [Dav00, Lemma, Ch. 15], we have
+(2.2)
+X
+ρ∈Z
+1
+1 + (t −γ)2 ≪log(|t| + 2).
+Let Z(T) denote the multiset of those ρ ∈Z for which T < γ ≤2T. Then (2.1) also implies
+4
+
+
+=== PAGE 5 ===
+(2.3)
+X
+ρ∈Z(T)
+1 :=
+X
+ρ∈Z
+T<γ≤2T
+1 = N(2T) −N(T) = T
+2π log T + O(T).
+Recalling the first zero γ1 > 14.134 . . ., we see that (2.2) implies
+(2.4)
+X
+ρ,ρ′∈Z(T)
+1
+1 + (γ −γ′)2 ≪
+X
+ρ∈Z
+0<γ≤2T
+X
+ρ′∈Z
+1
+1 + (γ −γ′)2 ≪
+X
+ρ∈Z
+0<γ≤2T
+log γ ≤N(2T) log(2T)
+≪T log2 T.
+2.3. Observations concerning horizontal multiplicity. We may rewrite (1.4) as
+N⊛(T) :=
+X
+ρ,ρ′∈Z(T)
+γ=γ′
+1 =
+X
+ρ∈Z(T)
+H(γ),
+where
+H(γ) :=
+X
+ρ′∈Z(T)
+γ′=γ
+1.
+If we assume RH, then the condition γ = γ′ is equivalent to ρ = ρ′, and it follows that H(γ) = mρ,
+the usual multiplicity of the zero ρ. Without RH, H(γ) counts with multiplicity the number of
+zeros on the horizontal line t = γ. Thus we may make the following observations, which will be
+helpful in the proof of Theorem 3.
+• If H(γ) = 1, then on the line t = γ, there is one simple zero on the critical line.
+• If H(γ) = 2, then on the line t = γ, there is either a double zero on the critical line or a
+pair of two symmetric simple zeros equal distant from the critical line.
+• If H(γ) = 3, then on the line t = γ, there is either a triple zero on the critical line, or a
+simple zero on the critical line and a pair of two symmetric simple zeros.
+We remark that if there is a double zero off the critical line with t = γ, then it is necessary that
+H(γ) ≥4.
+In the proof of Theorem 3, we consider the multiset S of simple zeros in Z(T) and the multiset C
+of critical zeros in Z(T). We also consider unions, intersections, and complements of these multisets
+contained in the universe Z(T). Note that Z(T) is partitioned into disjoint multisets of zeros by
+H(k) := {ρ ∈Z(T) : H(γ) = k},
+k ∈N.
+We also see from the classification above for 1 ≤k ≤3 that
+H(1) ⊂S ∩C,
+H(2) ⊂(S′ ∩C) ∪(S ∩C′),
+H(3) ⊂(S ∩C) ∪(S′ ∩C) ∪(S ∩C′) = S ∪C.
+The above relations will be important in the proof. We further notice the following set relations:
+(2.5) N(S ∪C) = N(S) + N(C) −N(S ∩C)
+and
+N(S ∪C) = N(S ∩C′) + N(S ∩C) + N(S′ ∩C),
+which on combining gives
+(2.6)
+N(S) + N(C) = 2N(S ∩C) + N(S′ ∩C) + N(S ∩C′).
+Finally, we remark that the condition C ≥1 in Theorem 3 comes from the trivial relation
+X
+ρ,ρ′∈Z(T)
+γ=γ′
+1 ≥
+X
+ρ,ρ′∈Z(T)
+ρ=ρ′
+1 =
+X
+ρ∈Z(T)
+mρ ≥
+X
+ρ∈Z(T)
+1 ∼
+T
+2π log T
+as T →∞, from the asymptotic formula (2.3).
+5
+
+
+=== PAGE 6 ===
+2.4. Proof of Theorem 3. We now assume (1.5). If H(γ) = 1, using an argument analogous to
+Montgomery’s proof of simple zeros in [Mon73], we have
+N(S ∩C) ≥
+X
+ρ∈Z(T)
+H(γ)=1
+1 ≥
+X
+ρ∈Z(T)
+(2 −H(γ)) ≥(2 −C + o(1))N(T),
+which proves (i) of Theorem 3. Next,
+(3 −C + o(1))N(T) ≤
+X
+ρ∈Z(T)
+(3 −H(γ)) ≤2
+X
+ρ∈Z(T)
+H(γ)=1
+1 +
+X
+ρ∈Z(T)
+H(γ)=2
+1
+≤2N(S ∩C) + N(S′ ∩C) + N(S ∩C′) = N(S) + N(C)
+by (2.6), which proves (ii) of Theorem 3. For (iii) of Theorem 3, we have, since H(3) is disjoint
+from H(1) and H(2) and contained in S ∪C,
+(4 −C + o(1))N(T) ≤
+X
+ρ∈Z(T)
+(4 −H(γ)) ≤3
+X
+ρ∈Z(T)
+H(γ)=1
+1 + 2
+X
+ρ∈Z(T)
+H(γ)=2
+1 +
+X
+ρ∈Z(T)
+H(γ)=3
+1
+≤3N(S ∩C) + 2N(S′ ∩C) + 2N(S ∩C′) = 2N(S ∪C) + N(S ∩C)
+≤3N(S ∪C),
+by the second equality in (2.5).
+Remark 4. The above discussion is included in Sections 6 and 7 of the expository paper [GS25]
+written by the second and third authors. In [GS25, Section 6], they also give a different proof
+of Theorem 3 which is elementary and completely set theoretical, without using the notion of
+horizontal multiplicity.
+Remark 5. For the interested reader, we briefly describe our original approach for proving Theo-
+rem 3, which involved a different initial classification for the solutions of γ = γ′ in N⊛(T). The
+condition γ = γ′ can occur in three ways: 1) when ρ = ρ′, which gives what we call diagonal terms,
+2) when β̸ = 1/2, where we get ρ′ = 1 −ρ from two symmetric zeros on a horizontal line on either
+side of the critical line, which we call symmetric diagonal terms, and 3) when there are 3 or more
+zeros on a horizontal line from non-symmetric pairs of zeros on that line. Hence we obtain
+N⊛(T) =
+X
+ρ∈Z(T)
+mρ +
+X
+ρ∈Z(T)
+β̸= 1
+2
+mρ +
+X
+ρ,ρ′∈Z(T)
+β+β′̸=1, γ=γ′
+1,
+where the first sum on the right side comes from the diagonal terms, the second is given by
+the symmetric diagonal terms, and the third is from non-symmetric horizontal terms. Proving
+Theorem 3 using this initial decomposition is not difficult but is much more tedious than using
+horizontal multiplicity. For further details, see [GS25, Section 6].
+3. Unconditional Montgomery Theorem
+In [Mon73], Montgomery introduced the subject of pair correlation of zeros of the zeta-function.
+He studied, for x > 0 and T ≥3,
+F(x, T) :=
+X
+ρ,ρ′∈Z
+0<γ,γ′≤T
+xi(γ−γ′)w(γ −γ′),
+where
+w(u) :=
+4
+4 + u2 .
+While the definition of F(x, T) does not depend on RH, the asymptotic formula Montgomery
+obtained for F(x, T) when 1 ≤x ≤T does depend on RH. This dependence, however, is only
+6
+
+
+=== PAGE 7 ===
+because RH allowed the real part of the zeros β to be removed out of F(x, T). In [BGSTB24] we
+retained this dependence to obtain an unconditional form of Montgomery’s theorem. To state our
+result, let
+(3.1)
+F(x, T) :=
+X
+ρ,ρ′∈Z(T)
+xρ−ρ′W(ρ −ρ′),
+where
+W(u) :=
+4
+4 −u2 .
+Montgomery Theorem (MT). For x ≥1 and T ≥3, we have F(x, T) ≥0, F(x, T) =
+F(1/x, T), and
+(3.2)
+F(x, T) =
+T
+2πx2
+ log2 T
+ 
+1 + O
+
+1
+√log T
+
++ T
+2π log x + O
+
+T
+p
+log T
+
+,
+uniformly for 1 ≤x ≤T.
+The statement above has been modified from its original formulation in [BGSTB24], with two
+changes. First, note that the sum F(x, T) above is taken over zeros satisfying T < γ, γ′ ≤2T,
+whereas in [BGSTB24] the sums are taken over zeros satisfying 0 < γ, γ′ ≤T. Secondly, and
+more importantly, the error terms appearing above have been corrected from those in the original
+statement of the theorem.2 The result stated in [BGSTB24], in contrast to (3.2) above, was
+F(x, T) =
+
+T
+2πx2 log2 T + T
+2π log x
+ 
+1 + O
+
+1
+√log T
+
+.
+Note that if, for example, x = c log T, then
+F(x, T) = T
+2π log log T + T
+2π
+ 1
+c2 + log c
+
++ O
+
+T log log T
+√log T
+
+,
+and the factor of c on the T term is incorrect.
+In the corrected version above the error term
+O(T√log T) which now holds over the whole range 1 ≤x ≤T absorbs all these terms in this
+range. We thank Ram¯unas Garunkˇstis and Julija Paliulionyt˙e for pointing out the mistake and
+for suggesting an argument to correct the issue. Below, before we prove MT for F(x, T) when
+0 < γ, γ′ ≤T, we explain how to correct the proof of [BGSTB24, Theorem 1].
+We now correct the proof of [BGSTB24, Theorem 1] to obtain MT for F(x, T) when 0 < γ, γ′ ≤
+T. Next, using this result, we prove MT for F(x, T) when T < γ, γ′ ≤2T. (This could also be
+done by modifying each step in the first proof.)
+Proof of Theorem 1 in [BGSTB24]. Let I be an interval and
+(3.3)
+FI(x) :=
+X
+ρ,ρ′∈Z
+γ,γ′∈I
+xρ−ρ′W(ρ −ρ′).
+Thus we see from (3.1) that F(x, T) = F(T,2T](x). Then by (2.17) and (2.18) of [BGSTB24] we
+have, for 1 ≤x ≤T,
+(3.4)
+F(0,T](x) + O(T 1/2) + O(x) = 1
+2πR(x, T),
+2All the applications of Theorem 1 in [BGSTB24], such as Lemma 5 and Lemma 7, remain correct and analogous
+to those applications obtained using (3.2). The source of the error came from applying Lemma 8 of [GM87], which
+has the same issue but likewise no effect on any consequential results in that paper. We note that Montgomery and
+Vaughan (to appear) have obtained on RH a more refined version of Theorem 1 which deals correctly with the lower
+order terms which we absorb into a larger error term here.
+7
+
+
+=== PAGE 8 ===
+where by [BGSTB24, Lemma 1] and following the argument in [Mon73],
+R(x, T) =
+Z T
+0
+|A1(x, t) + A2(x, t) + A3(x, t)|2 dt,
+where
+A1(x, t) = log(|t| + 2)
+x
+,
+A2(x, t) = −
+∞
+X
+n=1
+Λ(n)
+n
+1
+2 +it min
+nn
+x, x
+n
+o
+,
+A3(x, t) ≪1
+x +
+x
+1
+2
+(1 + t2) + x−5
+2
+|t| + 2.
+Now, for 1 ≤x ≤T,
+M1 :=
+Z T
+0
+|A1(x, t)|2 dt = T
+x2
+ (log2 T + O(log T)
+
+,
+and by [GM87, Lemma 7] or [Gol81, Lemma B],
+M2 :=
+Z T
+0
+|A2(x, t)|2 dt = T log x + O
+
+T
+p
+log T
+
+,
+and
+M3 :=
+Z T
+0
+|A3(x, t)|2 dt ≪T
+x2 + x.
+Using Cauchy-Schwarz inequality, and an argument of Ram¯unas Garunkˇstis and Julija Paliulionyt˙e [GP24],
+we get
+R(x, T) =
+Z T
+0
+|A1(x, t) + A2(x, t)|2 dt + O
+p
+M1M3
+
++ O
+p
+M2M3
+
++ O(M3)
+= M1 + M2 + O
+
+Z T
+0
+A1(x, t)A2(x, t) dt
+
+
++ O
+
+T
+p
+log T
+
++ O
+ T
+x2 log T
+
+.
+Since for n ≥2
+Z T
+0
+nit log(t + 2) dt ≪log T
+log n ,
+we have
+Z T
+0
+A1(x, t)A2(x, t) dt ≪log T
+x
+∞
+X
+n=2
+Λ(n)
+n
+1
+2 log n
+min
+nn
+x, x
+n
+o
+≪
+log T
+√x log 2x ≪log T.
+Thus, by (3.4), we have for 1 ≤x ≤T,
+F(0,T](x) =
+T
+2πx2 (log2 T + O(log T)) + T
+2π log x + O
+
+T
+p
+log T
+
+= T log2 T
+2πx2
+
+1 + O
+
+1
+√log T
+
++ T
+2π log x + O
+
+T
+p
+log T
+
+,
+(3.5)
+where we have degraded the first error term insignificantly to simplify applications to sums over
+differences of zeros. Thus we have obtained MT for F(0,T](x).
+□
+We now turn to proving MT for F(T,2T](x). As FI(x) in (3.3), we define FI(x) for F(x, T) with
+imaginary part of the zeros in an interval I, in similar fashion.
+8
+
+
+=== PAGE 9 ===
+Lemma 1. We have, for x > 0 and T ≥3,
+(3.6)
+F(T,2T](x) = 2
+π
+Z ∞
+−∞
+
+X
+ρ∈Z(T)
+xρ−1/2
+1 −(ρ −(1/2 + it))2
+
+2
+dt
+and
+(3.7)
+F(T,2T](x) = 2
+π
+Z ∞
+−∞
+
+X
+ρ∈Z(T)
+xiγ
+1 + (t −γ)2
+
+2
+dt.
+This was proved unconditionally as Lemma 3 in [BGSTB24] with the sum over terms with
+0 < γ ≤T. That proof works line by line for both (3.6) and (3.7).
+Proof of (3.2). From (3.6) of Lemma 1 we see immediately that F(T,2T](x, T) is real and non-
+negative, and since we can interchange ρ and ρ′ in (3.1), we have F(T,2T](1/x, T) = F(T,2T](x, T).
+Thus, F(T α, T) is real, non-negative, and even. From (3.1) we have
+F(T,2T](x, T) =
+X
+ρ,ρ′∈Z(T)
+xρ−ρ′W(ρ −ρ′)
+= F(0,2T](x) −F(0,T](x) + O
+ 
+X
+ρ,ρ′∈Z
+0<γ≤T
+T<γ′≤2T
+x|β−β′||W(ρ −ρ′)|
+!
+= T log2 T
+2πx2
+
+1 + O
+
+1
+√log T
+
++ T
+2π log x
++ O(T
+p
+log T) + O
+ 
+X
+ρ,ρ′∈Z
+0<γ≤T
+T<γ′≤2T
+x|β−β′||W(ρ −ρ′)|
+!
+,
+where we have applied (3.5) for both F(0,2T](x) and F(0,T](x). Note that zeros off the critical line
+in the upper half plane occur in pairs ρ = β +iγ and 1−¯ρ = 1−β +iγ with β̸ = 1/2. Thus, letting
+Θ(t) := max{β : ρ = β + iγ, 0 < γ ≤t},
+we have
+max
+0<γ,γ′≤T |β −β′| = 2( max
+0<γ≤T β) −1 = 2Θ(T) −1.
+Hence
+E1 :=
+X
+ρ,ρ′∈Z
+0<γ≤T
+T<γ′≤2T
+x|β−β′||W(ρ −ρ′)| ≪x2Θ(2T)−1
+X
+ρ,ρ′∈Z
+0<γ≤T
+T<γ′≤2T
+|W(ρ −ρ′)|.
+Using (2.1) and the bound
+(3.8)
+|W(ρ −ρ′)| ≪w(γ −γ′),
+9
+
+
+=== PAGE 10 ===
+which is (5.5) of [BGSTB24], we see that
+E1 ≪x2Θ(2T)−1 X
+ρ∈Z
+0<γ≤T
+
+
+
+
+X
+ρ′∈Z
+T<γ′≤2T
+w(γ −γ′)
+
+
+
+
+≪x2Θ(2T)−1 X
+ρ∈Z
+0<γ≤T
+log T
+(T −γ) + 1
+≪x2Θ(2T)−1 log3 T.
+Korobov [Kor58b, Kor58a] and Vinogradov [Vin58] (independently) proved that there is a zero-
+free region for points σ + it in the region in the complex plane determined by σ > 1 −η(t) ≥Θ(t)
+with
+η(t) =
+c
+(log t)2/3(log log t)1/3 ,
+for t ≥3,
+and some constant c > 0.
+(It is well-known that there are no zeros in the region σ ≥0 and
+0 ≤t ≤3.) Hence E1 ≪x1−2η(2T) log3 T. Thus, for T 1/2 ≤x ≤T,
+E1 ≪x1−2η(2T) log3 T ≪x exp
+
+−c
+log x
+(log x)2/3(log log x)1/3
+
+log3 x ≪x,
+while, for 1 ≤x ≤T 1/2,
+E1 ≪x1−2η(2T) log3 T ≪T 1/2
+since this error term is increasing in x and thus we may take x = T 1/2 in the previous bound. Since
+for 1 ≤x ≤T, we have E1 ≪T 1/2 + x ≪T ≪T√log T, we conclude
+F(T,2T](x, T) = T log2 T
+2πx2
+
+1 + O
+
+1
+√log T
+
++ T
+2π log x + O
+
+T
+p
+log T
+
+.
+□
+4. Evaluation of a Sum over differences of zeros by Montgomery’s Theorem
+We can use Montgomery’s theorem to evaluate many sums over the differences ρ −ρ′. If RH is
+assumed then ρ −ρ′ = i(γ −γ′) and we can use the usual real Fourier transform. Thus letting r be
+in L1, then br, the Fourier transform of r, is well defined and if br is also in L1 we have
+r(α) =
+Z ∞
+−∞
+br(t)e(αt) dt,
+br(t) :=
+Z ∞
+−∞
+r(α)e(−tα) dα,
+where
+e(u) := e2πiu.
+For his results on simple zeros assuming RH, Montgomery [Mon73] used the Fej´er kernel
+(4.1)
+jF (α) = max{1 −|α|, 0},
+bjF (t) =
+sin πt
+πt
+2
+.
+For improved results, he used the Montgomery-Taylor kernel [Mon75, CG93]
+jM(α) =
+1
+1 −cos
+√
+2
+ 1
+2
+√
+2 sin
+√
+2jF (α)
+
++ 1
+2jF (α) cos
+√
+2α
+
+,
+with jF (α) from (4.1), and
+(4.2)
+bjM(w) =
+1
+1 −cos
+√
+2
+ 
+sin
+  1
+2(
+√
+2 −2πw)
+
+√
+2 −2πw
++ sin
+  1
+2(
+√
+2 + 2πw)
+
+√
+2 + 2πw
+!2
+.
+In the formulas that follow we will take the kernel j(α) to be either j = jF or j = jM.
+10
+
+
+=== PAGE 11 ===
+When not assuming RH, we use the complex Fourier transform. Define, for 0 ≤b ≪1,
+(4.3)
+c
+Kb(t) :=
+j(2πt)
+cosh(2πbt).
+Then we have, for z ∈C,
+(4.4)
+Kb(z) =
+Z ∞
+−∞
+c
+Kb(t)e(zt) dt =
+Z
+1
+2π
+−1
+2π
+j(2πt)
+cosh(2πbt)e2πizt dt = 1
+2π
+Z 1
+−1
+j(α)
+cosh(bα)eizα dα.
+Note that Kb(z) is an analytic function for all z since the integral defining it is over a finite interval
+[Tit39, 2.83]. Also, note that if b = 0 then bK0(t) = j(2πt). We call Kb(z) a Tsang kernel [Tsa93].
+We now take z = −i(ρ −ρ′) log T in (4.4) and have
+Kb(−i(ρ −ρ′) log T) = 1
+2π
+Z 1
+−1
+j(α)
+cosh(bα)T α(ρ−ρ′) dα.
+Multiplying by W(ρ −ρ′) and summing over pairs of zeros ρ, ρ′ with T < γ, γ′ ≤2T, we obtain by
+the definition (3.1) that
+(4.5)
+X
+ρ,ρ′∈Z(T)
+Kb(−i(ρ −ρ′) log T)W(ρ −ρ′) = 1
+2π
+Z 1
+−1
+j(α)
+cosh(bα)F(T α, T) dα.
+By Montgomery’s Theorem (3.2) we see that F(T α, T) is an even function of α, and the right
+side of (4.5) is equal to
+ 1
+π
+Z 1
+0
+
+j(α)
+cosh(bα)T −2α log T
+
+1 + O
+
+1
+√log T
+
++
+αj(α)
+cosh(bα)
+
+dα
+ T
+2π log T + O
+
+T
+p
+log T
+
+.
+Since
+1
+π
+Z 1
+0
+j(α)
+cosh(bα)T −2α log T dα = 1
+π
+ Z
+log log T
+log T
+0
++
+Z 1
+log log T
+log T
+!
+j(α)
+cosh(bα)T −2α log T dα
+=
+
+j(0) + O
+log log T
+log T
+ 1
+π
+Z
+log log T
+log T
+0
+T −2α log T dα + O
+
+1
+log T
+
+= 1
+2πj(0) + O
+log log T
+log T
+
+,
+we conclude that
+(4.6)
+X
+ρ,ρ′∈Z(T)
+Kb(−i(ρ −ρ′) log T)W(ρ −ρ′) = 1
+2π
+
+j(0) + 2
+Z 1
+0
+αj(α)
+cosh(bα) dα + O
+
+1
+√log T
+ T
+2π log T.
+5. The Tsang Kernel
+To obtain the main properties of the Tsang kernel, we need the following Fourier Transform pair.
+Lemma 2. Let t, x be real variables, and take real numbers y and b with |y| < b. Then we have
+the Fourier Transform pair
+(5.1)
+hy,b(t) = cosh(2πyt)
+cosh(2πbt)
+and
+bhy,b(x) = 1
+b
+ cos πy
+2b cosh πx
+2b
+cos πy
+b + cosh πx
+b
+
+> 0.
+Proof of Lemma 2. By [SS03, Example 3, p. 81], a residue calculation gives
+Z ∞
+−∞
+e(−xw)
+cosh πx dx =
+1
+cosh πw,
+11
+
+
+=== PAGE 12 ===
+so that 1/ cosh πx is its own Fourier transform. Letting x = 2bt and w = z/2b, where z is real,
+then we have xw = zt, and taking the real part of both sides of the above equation, we have
+Z ∞
+−∞
+cos(2πzt)
+cosh(2πbt) dt =
+1
+2b cosh πz
+2b
+.
+While this was derived with z real, if we now take z = x + iy with |y| < b we see the integral is
+absolutely convergent, and therefore each side of this equation is well defined and equals the same
+analytic function in the horizontal strip |y| < b in the complex plane.
+Recalling the formulas
+cos z = cos(x+iy) = cos x cosh y−i sin x sinh y,
+cosh z = cosh(x+iy) = cosh x cos y+i sinh x sin y,
+we have Re(cos z) = cos x cosh y, Re(cosh z) = cosh x cos y, and
+Re
+
+1
+cosh z
+
+= Re(cosh ¯z)
+| cosh z|2
+=
+cosh x cos y
+cos2 y + sinh2 x =
+cos y cosh x
+1+cos 2y
+2
++ cosh 2x−1
+2
+=
+2 cos y cosh x
+cos 2y + cosh 2x.
+Then, by the above formulas and using that hy,b(t) is even in the second line below, we have
+bhy,b(x) =
+Z ∞
+−∞
+e(−xt)hy,b(t) dt
+=
+Z ∞
+−∞
+cos(2πxt) cosh(2πyt)
+cosh(2πbt)
+dt
+= Re
+Z ∞
+−∞
+cos(2πzt)
+cosh(2πbt) dt
+= Re
+1
+2b cosh πz
+2b
+= 1
+b
+ cos πy
+2b cosh πx
+2b
+cos πy
+b + cosh πx
+b
+
+> 0.
+□
+Remark 6. Tsang [Tsa93] uses hy(t) which is the case b = 1 of the formula above and obtains bhy(x)
+from [EMOT54, p. 31, (12)], but this is for half of the Fourier transform formula above after a
+change of variable. Thus Tsang’s bhy(x) needs to be doubled, but this has no effect on anything in
+his paper since only the property bhy(x) > 0 is used there.
+We next use this lemma to obtain the following lemma, which Tsang [Tsa93, Lemma 1] proved
+with b = 1.
+Lemma 3 (K.-M. Tsang). For 0 < b ≪1, the kernel Kb(z) defined by (4.3) and (4.4) is an even
+entire function for z = x + iy, x, y ∈R, and we have
+(5.2)
+Re Kb(x + iy) > 0
+for all x and |y| < b.
+Also, for z ∈C, we have
+(5.3)
+Kb(z) ≪e|Im(z)|
+1 + |z|2 .
+Proof of Lemma 3. By (4.4), we have
+(5.4)
+Kb(z) =
+Z
+1
+2π
+−1
+2π
+j(2πt)
+cosh(2πbt)e2πizt dt = 2
+Z
+1
+2π
+0
+j(2πt)
+cosh(2πbt) cos(2πzt) dt.
+12
+
+
+=== PAGE 13 ===
+Letting z = x + iy and using Re(cos(u + iv)) = cos u cosh v for real u and v, we have
+Re Kb(x + iy) = 2
+Z
+1
+2π
+0
+j(2πt) cosh(2πyt)
+cosh(2πbt)
+cos(2πxt) dt = 2
+Z
+1
+2π
+0
+j(2πt)hy,b(t) cos(2πxt) dt.
+Hence, by Lemma 2, for |y| < b,
+Re Kb(x + iy) =
+ j(2πt) hy,b(t)
+b (x) = \
+j(2πt) ∗\
+hy,b(t)(x).
+Since bj ≥0 by (4.1) and (4.2) and bhy,b > 0 by (5.1), we see the convolution is positive and (5.2)
+follows. We now prove (5.3). By (5.4) with the change of variable α = 2πt, we have
+(5.5)
+Kb(z) = 1
+π
+Z 1
+0
+Jb(α) cos(zα) dα,
+Jb(α) :=
+j(α)
+cosh(bα).
+If |z| ≤1, then |Kb(z)| ≪
+R 1
+0 j(α) dα ≪1, which proves the estimate in this range. If |z| > 1, then
+by integration by parts
+Kb(z) = sin zα
+πz
+Jb(α)
+
+1
+0
+−
+Z 1
+0
+sin zα
+πz
+J′
+b(α) dα
+= cos zα
+πz2 J′
+b(α)
+
+1
+0 −
+Z 1
+0
+cos zα
+πz2 J′′
+b (α) dα ≪e|Im(z)|
+|z|2
+.
+□
+Returning to Kb in (4.6), we see from (5.2) of Lemma 3 that
+(5.6) Re Kb(−i(ρ−ρ′) log T) = Re Kb((γ −γ′) log T −i(β −β′) log T) > 0
+if
+|β −β′| <
+b
+log T .
+We want the real part of every term of the sum in (4.6) to be positive (or at least non-negative).
+This is achieved by assuming in Theorem 1 that all the zeros in the sum are in Bb, since then
+|β −1
+2| <
+b
+2 log T for all zeros with T < γ ≤2T, and ρ ∈Bb and ρ′ ∈Bb implies |β −β′| <
+b
+log T and
+(5.6) is satisfied.
+Lemma 4. Assume that, for all sufficiently large T, all zeros ρ of the Riemann zeta-function with
+T < γ ≤2T are in the region Bb from (1.1) for some 0 < b ≪1. Then
+(5.7)
+X
+ρ,ρ′∈Z(T)
+|β−β′|<b/ log T
+Re Kb(−i(ρ −ρ′) log T) = 1
+2π
+
+j(0) + 2
+Z 1
+0
+αj(α)
+cosh(bα) dα + O
+
+1
+√log T
+ T
+2π log T,
+where every term in the sum above is positive.
+Proof of Lemma 4. Since W(ρ−ρ′) is complex-valued we need to remove this weight when |β−β′| <
+b
+log T in (4.6) before applying (5.6). Since W(0) = 1 and W(z) −1 =
+z2
+4−z2 , we have by (5.3),
+X
+ρ,ρ′∈Z(T)
+ρ∈Bb, ρ′∈Bb
+Kb(−i(ρ −ρ′) log T)(W(ρ −ρ′) −1) ≪
+X
+ρ,ρ′∈Z(T)
+|β−β′|<
+b
+log T
+T |β−β′|
+1 + |ρ −ρ′|2 log2 T
+|ρ −ρ′|2
+|4 −(ρ −ρ′)2|
+≤
+1
+log2 T
+X
+ρ,ρ′∈Z(T)
+T b/ log T
+|4 −(ρ −ρ′)2| ≪
+eb
+log2 T
+X
+ρ,ρ′∈Z(T)
+w(γ −γ′) ≪ebT ≪T,
+13
+
+
+=== PAGE 14 ===
+where we used (2.4) and (3.8) in the last line. Hence (4.6) becomes
+X
+ρ,ρ′∈Z(T)
+|β−β′|<b/ log T
+Kb(−i(ρ −ρ′) log T) = 1
+2π
+
+j(0) + 2
+Z 1
+0
+αj(α)
+cosh(bα) dα + O
+
+1
+√log T
+ T
+2π log T,
+since the assumption ρ, ρ′ ∈Bb for all zeros in Z(T) allows us to insert the weaker condition
+|β −β′| <
+b
+log T into the sum in (4.6) without adding any new terms to the sum, and then this
+allows us to remove W(ρ −ρ′) with an error ≪T ≪T√log T. Taking the real parts proves (5.7),
+and by (5.6) all the terms in the sum are positive.
+□
+6. Proof of Theorems 1 and 2
+Lemma 5. Assume that, for all sufficiently large T, all the zeros of the Riemann zeta-function
+with T < γ ≤2T are in the region Bb for some 0 < b ≪1. Then, for j(α) = jF (α) or jM(α), we
+have as T →∞
+(6.1)
+N⊛(T) ≤(Cb(j) + o(1)) T
+2π log T,
+where
+Cb(j) :=
+j(0) + 2
+R 1
+0
+αj(α)
+cosh(bα) dα
+2
+R 1
+0
+j(α)
+cosh(bα) dα
+.
+Proof of Lemma 5. Since all the terms in the sum in (5.7) are positive, we have
+X
+ρ,ρ′∈Z(T)
+γ=γ′
+Re Kb(−i(β −β′) log T) ≤
+X
+ρ,ρ′∈Z(T)
+|β−β′|<b/ log T
+Re Kb(−i(ρ −ρ′) log T).
+By (5.5), we have, since cosh(x) ≥1 for all real x,
+Re Kb(−i(β −β′) log T) = 1
+π
+Z 1
+0
+j(α)
+cosh(bα) cosh((β −β′) log T)α) dα ≥1
+π
+Z 1
+0
+j(α)
+cosh(bα) dα,
+and have shown
+ 1
+π
+Z 1
+0
+j(α)
+cosh(bα) dα
+
+N⊛(T) ≤
+X
+ρ,ρ′∈Z(T)
+|β−β′|<b/ log T
+Re Kb(−i(ρ −ρ′) log T)
+Hence from Lemma 4 we obtain the result in (6.1).
+□
+Proof of Theorem 1. Letting b →0 as T →∞and using the Fej´er kernel j(α) = jF (α) = 1 −α for
+0 ≤α ≤1, we have
+lim
+b→0 Cb(j) = j(0) + 2
+R 1
+0 αj(α) dα
+2
+R 1
+0 j(α) dα
+= 1 + 2
+R 1
+0 α(1 −α) dα
+2
+R 1
+0 (1 −α) dα
+= 4
+3,
+and thus
+N⊛(T) ≤(4
+3 + o(1)) T
+2π log T.
+Theorem 1 now follows immediately from Theorem 3.
+□
+Proof of Theorem 2. We compute Cb(jF ) and Cb(jM) using the formulas above and Mathematica
+to obtain Table 1, as well as the values in Theorem 2. The values given are truncations of the
+computed values.
+□
+14
+
+
+=== PAGE 15 ===
+b
+Ns
+0(Bb)|jF
+Ns
+0(Bb)|jM
+0.001
+.66666
+.67250
+0.2
+.66422
+.67019
+0.4
+.65697
+.66333
+0.6
+.64509
+.65208
+0.8
+.62886
+.63670
+1
+.60861
+.61748
+1.2
+.58468
+.59475
+1.4
+.55743
+.56884
+1.6
+.52719
+.54003
+1.8
+.49424
+.50862
+2
+.45887
+.47485
+2.2
+.42130
+.43894
+2.4
+.38176
+.40109
+2.6
+.34043
+.36149
+2.8
+.29747
+.32027
+3
+.25304
+.27760
+3.2
+.20727
+.23357
+3.4
+.16026
+.18832
+3.6
+.11214
+.14194
+3.8
+.06298
+.09451
+4
+.01288
+.04612
+4.0508
+.00022
+.03368
+4.187
+0
+.00007
+Table 1. Comparison of using jF and jM for Ns
+0(Bb).
+Acknowledgments and Funding
+The authors thank the American Institute of Mathematics for its hospitality and for providing
+a pleasant research environment where the authors met and started this research. S. A. C. B. was
+supported by NSF DMS-1854398 FRG. A. I. S. was supported by Inamori Research Grant 2024,
+JSPS KAKENHI Grant Number 22K13895, and Kyushu University International Research Leader
+Training Program (EBXU0101). C. T.-B. is partially supported by NSF CAREER DMS-2239681.
+References
+[BGSTB24] S. A. C. Baluyot, D. A. Goldston, A. S. Suriajaya, and C. L. Turnage-Butterbaugh. An unconditional
+Montgomery theorem for pair correlation of zeros of the Riemann zeta-function. Acta Arith., 214:357–376,
+2024.
+[BHB13]
+H. M. Bui and D. R. Heath-Brown. On simple zeros of the Riemann zeta-function. Bull. Lond. Math.
+Soc., 45(5):953–961, 2013.
+[CdL20]
+F. Chirre, A.and Gon¸calves and D. de Laat. Pair correlation estimates for the zeros of the zeta function
+via semidefinite programming. Adv. Math., 361:106926, 22, 2020.
+[CG93]
+A. Y. Cheer and D. A. Goldston. Simple zeros of the Riemann zeta-function. Proc. Amer. Math. Soc.,
+118(2):365–372, 1993.
+[Dav00]
+H. Davenport. Multiplicative number theory, volume 74 of Graduate Texts in Mathematics. Springer-
+Verlag, New York, third edition, 2000. Revised and with a preface by Hugh L. Montgomery.
+[EMOT54]
+A. Erd´elyi, W. Magnus, F. Oberhettinger, and F. G. Tricomi. Tables of integral transforms. Vol. I.
+McGraw-Hill Book Co., Inc., New York-Toronto-London, 1954. Based, in part, on notes left by Harry
+Bateman.
+15
+
+
+=== PAGE 16 ===
+[GM87]
+D. A. Goldston and H. L. Montgomery. Pair correlation of zeros and primes in short intervals. In Analytic
+number theory and Diophantine problems (Stillwater, OK, 1984), volume 70 of Progr. Math., pages 183–
+203. Birkh¨auser Boston, Boston, MA, 1987.
+[Gol81]
+Daniel Alan Goldston. LARGE DIFFERENCES BETWEEN CONSECUTIVE PRIME NUMBERS.
+ProQuest LLC, Ann Arbor, MI, 1981. Thesis (Ph.D.)–University of California, Berkeley.
+[GP24]
+R. Garunkˇstis and J. Paliulionyt˙e, 2024. personal communication.
+[GS25]
+D. A. Goldston and A. I. Suriajaya. Zeta zeros on the critical line. arXiv:2511.20059, 2025.
+[GS26]
+D. A. Goldston and A. I. Suriajaya. Zeta zeros in a narrow vertical box. in preparation, 2026.
+[HB79]
+D. R. Heath-Brown. Simple zeros of the Riemann zeta-function on the critical line. Bull. London Math.
+Soc., 11:17–18, 1979.
+[Kor58a]
+N. M. Korobov. Estimates of trigonometric sums and their applications. Uspehi Mat. Nauk,
+13(4(82)):185–192, 1958.
+[Kor58b]
+N. M. Korobov. Weyl’s estimates of sums and the distribution of primes. Dokl. Akad. Nauk SSSR,
+123:28–31, 1958.
+[Lev74]
+N. Levinson. More than one third of zeros of Riemann’s zeta-function are on σ = 1/2. Advances in Math.,
+13:383–436, 1974.
+[Lev75]
+N. Levinson. Deduction of semi-optimal mollifier for obtaining lower bound for N0(T) for Riemann’s
+zeta-function. Proc. Nat. Acad. Sci. U.S.A., 72:294–297, 1975.
+[Mon73]
+H. L. Montgomery. The pair correlation of zeros of the zeta function. In Analytic number theory (Proc.
+Sympos. Pure Math., Vol. XXIV, St. Louis Univ., St. Louis, Mo., 1972), volume Vol. XXIV of Proc.
+Sympos. Pure Math., pages 181–193. Amer. Math. Soc., Providence, RI, 1973.
+[Mon75]
+H. L. Montgomery. Distribution of the zeros of the Riemann zeta function. In Proceedings of the Inter-
+national Congress of Mathematicians (Vancouver, B.C., 1974), Vol. 1, pages 379–381. Canad. Math.
+Congr., Montreal, QC, 1975.
+[PRZD20]
+K. Pratt, N. Robles, A. Zaharescu, and Dirk D. More than five-twelfths of the zeros of ζ are on the
+critical line. Res. Math. Sci., 7(2):Paper No. 2, 74, 2020.
+[SS03]
+E. M. Stein and R. Shakarchi. Complex analysis, volume 2 of Princeton Lectures in Analysis. Princeton
+University Press, Princeton, NJ, 2003.
+[Tit39]
+E. C. Titchmarsh. The theory of functions. Oxford University Press, Oxford, second edition, 1939.
+[Tsa93]
+K. M. Tsang. The large values of the Riemann zeta-function. Mathematika, 40(2):203–214, 1993.
+[Vin58]
+I. M. Vinogradov. A new estimate of the function ζ(1+it). Izv. Akad. Nauk SSSR Ser. Mat., 22:161–164,
+1958.
+Mathematics Department, East Carolina University, Greenville, NC 27858
+Email address: baluyots24@ecu.edu
+Department of Mathematics and Statistics, San Jose State University, San Jos´e, CA 95192
+Email address: daniel.goldston@sjsu.edu
+Department of Mathematics and Statistics, San Jose State University, San Jos´e, CA 95192
+Faculty of Mathematics, Kyushu University, Fukuoka 819-0395, Japan
+Email address: adeirmasuriajaya@math.kyushu-u.ac.jp
+Carleton College, Northfield, MN 55057
+Email address: cturnageb@carleton.edu
+16

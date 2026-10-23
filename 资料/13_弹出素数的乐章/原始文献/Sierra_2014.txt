@@ -1,0 +1,2900 @@
+
+--- PDF PAGE 1 ---
+The Riemann zeros as energy levels of a Dirac fermion
+in a potential built from the prime numbers in Rindler spacetime
+Germ´an Sierra
+Instituto de F´ısica Te´orica, UAM-CSIC, Madrid, Spain
+(Dated: June 18, 2018)
+We construct a Hamiltonian HR whose discrete spectrum contains, in a certain limit, the Riemann
+zeros. HR is derived from the action of a massless Dirac fermion living in a domain of Rindler space-
+time, in 1+1 dimensions, that has a boundary given by the world line of a uniformly accelerated
+observer. The action contains a sum of delta function potentials that can be viewed as partially
+reﬂecting moving mirrors. An appropriate choice of the accelerations of the mirrors, provide primi-
+tive periodic orbits associated to the prime numbers p, whose periods, measured by the observer’s
+clock, are log p. Acting on the chiral components of the fermion χ∓, HR becomes the Berry-Keating
+Hamiltonian ±(xˆp + ˆpx)/2, where x is identiﬁed with the Rindler spatial coordinate and ˆp with the
+conjugate momentum. The delta function potentials give the matching conditions of the fermion
+wave functions on both sides of the mirrors. There is also a phase shift eiϑ for the reﬂection of
+the fermions at the boundary where the observer sits. The eigenvalue problem is solved by transfer
+matrix methods in the limit where the reﬂection amplitudes become inﬁnitesimally small. We ﬁnd
+that for generic values of ϑ the spectrum is a continuum, where the Riemann zeros are missing, as
+in the adelic Connes model. However, for some values of ϑ, related to the phase of the zeta function,
+the Riemann zeros appear as discrete eigenvalues immersed in the continuum. We generalize this
+result to the zeros of Dirichlet L-functions, associated to primitive characters, that are encoded in
+the reﬂection coeﬃcients of the mirrors. Finally, we show that the Hamiltonian associated to the
+Riemann zeros belongs to class AIII, or chiral GUE, of Random Matrix Theory.
+I.
+INTRODUCTION
+A century ago, P´olya and Hilbert suggested that the imaginary part of the non trivial zeros of the Riemann zeta
+function, would be the oscillation frequencies of a physical system. The reality of these frequencies will provide a
+proof of the celebrated Riemann hypothesis (RH) [1] which has deep consequences for the distribution of the prime
+numbers [2]-[7]. There are evidences that the Riemann zeros are the eigenvalues of a quantum Hamiltonian: i) the
+Montgomery-Odlykzo law according to which the statistical distribution of the zeros is given, locally, by the Gaussian
+Unitary Ensemble (GUE) of Random Matrix Theory (RMT) [8]-[12]; ii) analogies between trace formulas relating
+periods of classical trajectories and spectra in Quantum Chaos Theory and explicit formulas relating prime numbers
+and Riemann zeros [13]-[18], and iii) Selberg’s trace formula relating the lengths of the geodesics on a compact Riemann
+surface with negative curvature and the eigenvalues of the Laplace-Beltrami operator [19, 20]. The picture proposed
+by Berry in 1986, is that the binomium primes/zeros is similar to the binomium classical/quantum for a dynamical
+chaotic system [13]. Furthermore, it was conjectured that the classical Hamiltonian underlying the Riemann zeros
+should be quasi-one dimensional, breaking time reversal symmetry and with isolated periodic orbits whose periods
+are the logarithm of the prime numbers (see [16, 18] for reviews of this approach, [21, 22] for general references and
+[23]-[26] for introductions and historical background).
+In 1999 Berry and Keating (BK) [27, 28], and Connes [29], suggested that a spectral realization of the Riemann
+zeros could be achieved from the quantization of the simple classical Hamiltonian Hcl = xp, where x and p are
+the position and momentum of a particle moving in the real line. The xp Hamiltonian is one dimensional, breaks
+the time reversal symmetry, is integrable, not chaotic, with unbounded classical trajectories and its quantization
+yields a continuum spectrum [32, 33]. The connection found by Berry, Keating and Connes between xp and the
+Riemann zeros, was semiclassical, and relied on two diﬀerent regularizations schemes. Berry and Keating introduced
+a Planck cell regularization of the phase space imposing the constraints |x| ≥ℓx and |p| ≥ℓp with ℓxℓp = 2πℏ,
+obtaining semiclassical energies that agree asymptotically with the average location of the Riemann zeros [27]. In
+Connes’s work, there is a cutoﬀΛ, and the constraints |x| ≤Λ and |p| ≤Λ, such that in the limit Λ →∞, the
+semiclassical spectrum becomes a continuum with missing spectral lines associated to the average Riemann zeros
+[29]. The interpretation of the zeros as missing spectral lines, would also explain a mysterious sign problem in the
+ﬂuctuation term of the number of zeros [29]. The possible connection between xp and the Riemann zeros motivated
+several works in the past two decades, some of them will be discussed in more detail below [30]-[53].
+The previous semiclassical versions of xp were formulated as consistent quantum mechanical models in references
+[38, 43, 44, 47]. Connes’s version was realized in terms of a charge particle moving in a box of size Λ × Λ, and subject
+to the action of a uniform perpendicular magnetic ﬁeld and an electrostatic potential xy [38]. For strong magnetic
+ﬁelds the dynamics is restricted to the lowest Landau level, where the xy potential acts eﬀectively as the quantum xp
+arXiv:1404.4252v3  [math-ph]  1 Aug 2014
+
+
+--- PDF PAGE 2 ---
+2
+Hamiltonian. In this realization, the smooth part of the counting formula of the Riemann zeros appears as a shift of
+the energy levels (that become a continuum in the limit Λ →∞) and not as an indication of missing spectral lines.
+The Landau model with xy potential, has been used in an analogue model of Hawking radiation in a quantum Hall
+ﬂuid [54].
+On the other hand, the Berry-Keating version of xp was revisited recently using the classical Hamiltonian Hx/p =
+x(p + ℓ2
+p/p) deﬁned in the half line x ≥ℓx [43, 44] (hereafter denoted as the x/p model). The role of the term
+ℓ2
+px/p is to bound the classical trajectories which become periodic, unlike the trajectories of xp that are unbounded.
+The x/p Hamiltonian can be quantized in terms of the operator ˆHx/p = √x(ˆp + ℓ2
+pˆp−1)√x, where ˆp = −iℏd/dx
+and (ˆp−1ψ)(x) = −i/ℏ
+R ∞
+x dy ψ(y), and its spectrum agrees asymptotically with the average Riemann zeros provided
+ℓxℓp = 2πℏ. A similar result was obtained by Berry and Keating using the Hamiltonian HBK = (x + ℓ2
+x/x)(p + ℓ2
+p/p)
+that is invariant under the exchange x ↔p [47]. These two works provided an spectral realization of the average
+Riemann zeros, but not of the actual zeros. From the Quantum Chaos perspective, the reason of this failure lies in the
+fact that these variants of xp are non chaotic and does not contain periodic orbits related to the prime numbers [47].
+More generally, any one dimensional classical and conservative Hamiltonian is integrable and therefore non chaotic,
+which seems to lead to nowhere.
+In this work we propose a solution of the puzzle that leads to a spectral realization of the Riemann zeros. The main
+ideas can be explained as follows. Let us consider a chaotic billiard in two spatial dimensions, such as the Sinai’s
+billiard [55]-[58]. A ball thrown with some energy follows chaotic trajectories that in most cases cover the entire table,
+except for a discrete set of periodic trajectories, whose periods, that are independent of the energy, dominate the path
+sum that gives rise to the Gutzwiller formula for the ﬂuctuations of the energy levels. Unlike this, a one dimensional
+billiard, made of two walls, will be boring since the ball will go back and forth periodically between the walls.
+Let us now take semitransparent walls, so that with a certain probability the ball passes through or bounces oﬀ. In
+such a billiard the particle may follow several trajectories depending on the outcome at each wall. One may say this
+is a quasi-one dimensional billiard. In Sinai’s billiard, or in the motion on compact Riemann surfaces, the particle
+follows geodesics, which implies that the periods of the closed orbits are independent of the energy. In the quasi-1D
+billiard, one can achieved the same property by choosing massless particles, say photons or massless fermions, whose
+trajectories lie on the light cone in Minkowsky space-time. The soft walls should then be viewed as semitransparent
+mirrors, or beam splitters.
+The last ingredient one has to incorporate into the quasi-1D billiard, or rather the array of mirrors, is chaos. In table
+billiards, chaos is generated by a border that defocuses the trajectories, and in compact billiards, chaos is produced
+by the negative curvature of the space that separates nearby trajectories exponentially fast. If the 1D mirrors stay
+at ﬁx positions, nearby light-ray trajectories will stay close in space-time. However, if the mirrors are accelerated,
+then slightly delayed light rays, will generally have their reﬂected rays departing exponentially fast from one another
+after several reﬂections. Hence in this model, the source of chaos is acceleration. The simplest situation is when the
+mirrors are uniformly accelerated, in which case they are called moving mirrors in the literature of Quantum Field
+Theory in curved spacetimes [59]. We shall then consider an inﬁnite array of moving mirrors whose accelerations,
+and reﬂection properties, will be used to encode number theoretical information. In particular, we shall choose the
+accelerations inversely proportional to a power of integers, that leads to the appearance of primitive periodic orbits
+whose periods are the logarithms of the prime numbers. These periods are measured by a moving observer whose
+acceleration sets the units of this magnitude.
+This model realizes in a relativistic framework, Berry’s suggestion of associating primitive periodic orbits to prime
+numbers [13]. Quantum mechanically, the waves propagating in the array generate an interference pattern that encodes
+the accelerations and reﬂection coeﬃcients of the mirrors. Here we ﬁnd several situations: destructive interference
+where the Riemann zeros are missing spectral lines as in the adelic Connes’s model and constructive interference where
+the Riemann zeros are point like spectrum embedded in a continuum. In both cases, the connection between the
+spectrum of the model and the Riemann zeros involves a limit where the reﬂection amplitudes vanish asymptotically.
+This limit is analogue to the semiclassical limit ℏ→0, that leads to the Gutzwiller formula, that was the starting
+point of the analogies between Quantum Chaos and Number Theory.
+The paper is organized as follows. In section II we review the basic deﬁnitions of Rindler spacetime that describes
+the geometry of the model. We formulate the massive Dirac fermion in a domain of the Rindler space-time, we ﬁnd
+the Hamiltonian, study its relation with xp and recover the spectrum of the x/p model, obtaining the interpretation
+of the parameters ℓx and ℓp as inverse acceleration and fermion mass. In section III we construct an ideal array
+of moving mirrors with accelerations c2/ℓn and study the reﬂections of the light rays emitted and absorbed by an
+observer with acceleration c2/ℓ1. Using special relativity, we show that the proper time of the observer’s clock is
+proportional to log ℓn, and that the choice ℓn ∝√n singularizes the trajectories associated to the prime numbers. We
+also propose an array where ℓn ∝en/2, which has regular trajectories, and whose discrete spectrum is proportional
+to the integers (this model will be denoted harmonic). In section IV we construct the Hamiltonian of a massless
+
+
+--- PDF PAGE 3 ---
+3
+S
+{x
+x1
+x0
+{x
+Sc
+x1
+x0
+FIG. 1:
+Regions S and Sc deﬁned in eq. (8). The union of S and Sc is the right Rindler wedge (4).
+Dirac fermion with delta function potentials associated to the moving mirrors of section III. We derive the matching
+conditions for the wave functions and show that the corresponding Hamiltonian is self-adjoint for generic values of
+the accelerations and the reﬂection coeﬃcients. The eigenvalue problem for the Hamiltonian is formulated using
+transfer matrix methods, and in a semiclassical limit we ﬁnd the conditions for the existence of discrete eigenvalues.
+In so far the construction is general, but then we analyze several examples and make contact with the Riemann zeta
+function and the Dirichlet L−functions. In section V, the identify the symmetry class of the Hamiltonian under time
+reversal (T), charge conjugation (C) and parity (P). In the conclusions we summarize our results and discuss future
+developments. In Appendix A we derive the spectrum of the harmonic model.
+II.
+THE MASSIVE DIRAC FERMION IN RINDLER SPACETIME
+A.
+Rindler spacetime
+We start with some basic deﬁnitions and set up our conventions. The 1+1 dimensional Minkowski space-time is
+deﬁned by a pair of coordinates (x0, x1) ∈IR
+2, a ﬂat metric ηµν, with signature (−1, 1), and line element
+ds2 = ηµνdxµdxν,
+−η00 = η11 = 1,
+η01 = η10 = 0,
+(1)
+that is invariant under translations and Lorentz transformations (we set the units of the speed of light c = 1). The
+change of coordinates,
+x0 = ρ sinh φ,
+x1 = ρ cosh φ,
+(2)
+brings (1) to the form
+ds2 = dρ2 −ρ2 dφ2.
+(3)
+ρ and φ are the Rindler space and time coordinates respectively [60, 61]. The Rindler metric (3) is invariant under
+shifts of φ, generated by the Killing vector ∂/∂φ. Restricting ρ to positive values, deﬁnes the region called right
+Rindler wedge [60]-[62],
+R+ = {(ρ, φ) | ρ > 0, −∞< φ < ∞} ,
+(4)
+that in Minkowski coordinates is described by the quadrant x1 > |x0|. The value ρ = 0 represents a horizon of the
+metric (3), that is similar to the horizon of a black hole, the reason being that the Schwarzschild metric, near the
+black hole horizon, is approximately the Rindler metric [61].
+Rindler spacetime is the natural arena to study the physical phenomena associated to accelerated observers [60],
+such as the Unruh eﬀect [62, 63]. Let us consider an observer whose world line is given by (2), with ρ = ℓ> 0 a
+
+
+--- PDF PAGE 4 ---
+4
+constant value. The proper time, τ, measured by the observer is deﬁned by ds2 = −dτ 2, and its relation to φ follows
+from (3)
+τ = ℓφ.
+(5)
+plus an additive constant that is set to 0 in (5). The observer’s trajectory (2), written in terms of its proper time,
+reads
+x0 = ℓsinh(τ/ℓ),
+x1 = ℓcosh(τ/ℓ),
+(6)
+and has a constant proper acceleration, a, deﬁned as the Minkowski norm of the vector aµ
+aµ = d2xµ
+dτ 2 ,
+aµaµ = −a2 →a = 1
+ℓ.
+(7)
+Restating the speed of light, a = c2/ℓ. This quantity plays an central role in the Unruh eﬀect according to which an
+observer, with proper acceleration a, detects a thermal bath with temperature TU = a/(2π) (in units c = ℏ= TB = 1)
+[63].
+Replacing a by the surface gravity κ of an observer near the horizon of a black hole, yields the Hawking
+temperature TH = κ/(2π) [64, 65]. The similarity between the Hawking and Unruh formulas lies in the equivalence
+principle of General Relativity.
+In our approach to a spectral realization of the Riemann zeros, we shall introduce an observer with acceleration,
+a1 = 1/ℓ1. The observer’s world line, ρ = ℓ1, divides R+ into the regions S and Sc located to her right and left,
+S = {(ρ, φ) | ρ ≥ℓ1,
+−∞< φ < ∞, } ,
+(8)
+Sc = {(ρ, φ) | 0 < ρ ≤ℓ1,
+−∞< φ < ∞, } ,
+such that R+ = S ∪Sc. Let us next study the dynamics of a Dirac fermion in S.
+B.
+Dirac fermion
+A representation of the Dirac’s gamma matrices in 1+1 dimensions is given by [66]
+γ0 = σx,
+γ1 = −iσy,
+γ5 ≡γ0γ1 = σz,
+(9)
+where σa (a = x, y, z) are the Pauli matrices. γµ satisfy the Cliﬀord algebra
+{γµ, γν} = −2ηµν,
+
+γµ, γ5	
+= 0,
+(µ = 0, 1).
+(10)
+In an abuse of notation, γ5 denotes the 1+1 analogue of the 1+3 gamma matrix γ5 = γ0γ1γ2γ3, and it deﬁnes the
+chirality of the fermions. A Dirac fermion ψ is a two component spinor
+ψ =
+
+ψ−
+ψ+
+
+,
+¯ψ = ψ†γ0 = (ψ†
++, ψ†
+−),
+(11)
+where ψ†
+± are the conjugate of ψ±. The ﬁelds ψ∓are the chiral components of ψ, namely γ5ψ∓= ±ψ∓. Let us
+introduce the light cone coordinates x±, and the derivatives ∂± = ∂/∂x±
+x± = x0 ± x1 = ±ρ e±φ,
+(12)
+∂± = 1
+2(∂0 ± ∂1) = ±1
+2e∓φ(∂ρ ± ρ−1∂φ),
+where the Minkowski metric (1) becomes ds2 = −dx+dx−. Under a Lorentz transformation with boost parameter λ,
+that is velocity v = tanh λ, the light cone coordinates and the Dirac spinors transform as
+x± →e∓λ x±,
+∂± →e±λ ∂±,
+ψ± →e±λ/2 ψ±,
+(13)
+and the Rindler coordinates as
+φ →φ −λ,
+ρ →ρ.
+(14)
+Hence the spinors χ±
+χ± = e±φ/2 ψ±,
+(15)
+remain invariant under (14). The spaces S, Sc and R+ are mapped into themselves under Lorenzt transformations.
+
+
+--- PDF PAGE 5 ---
+5
+C.
+Dirac action of a massive fermion
+The Dirac action of a fermion with mass m in the space-time domain S is (units ℏ= c = 1)
+S = i
+2
+Z
+S
+d2x ¯ψ(/∂+ im)ψ,
+(16)
+= i
+2
+Z
+S
+dx+dx−
+
+ψ†
+−∂+ψ−+ ψ†
++∂−ψ+ + im
+2
+
+ψ†
+−ψ+ + ψ†
++ψ−
+
+= i
+2
+Z ∞
+−∞
+dφ
+Z ∞
+ℓ1
+d ρ
+
+χ†
+−(∂φ + ρ∂ρ + 1
+2)χ−+ χ†
++(∂φ −ρ∂ρ −1
+2)χ+
++ imρ
+
+χ†
+−χ+ + χ†
++χ−
+i
+.
+S has a boundary ∂S corresponding to the worldline ρ = ℓ1 > 0. The variational principle applied to (16) gives the
+Dirac equation
+(/∂+ im)ψ(x) = 0,
+x ∈S,
+(17)
+and the boundary condition
+εµν ˙xµ ¯ψ(x)γνδψ(x) = 0,
+x ∈∂S,
+(18)
+where δψ is an inﬁnitesimal variation of ψ, εµν is the Levi-Civita tensor (ε01 = −ε10 = 1, εµµ = 0), and ˙xµ =
+dxµ(ℓ1, φ)/dφ is the tangent to ∂S in the Rindler coordinates (2). The Dirac equation (17) reads in components
+(∂0 ∓∂1)ψ± + imψ∓= 0
+−→
+∂∓ψ± + im
+2 ψ∓= 0.
+(19)
+In the massless case, the ﬁelds ψ± decouple and describe a right moving fermion, ψ+(x+), and a left moving fermion,
+ψ−(x−), in terms of which one can construct a Conformal Field Theory with central charge c = 1 [66]. The mass term
+couples the two modes and therefore conformal invariance is lost. The action principle applied to the last expression
+of eq.(16) gives
+(∂φ ± ρ∂ρ ± 1
+2)χ∓+ imρχ± = 0,
+(20)
+and the boundary condition
+χ†
+−(ℓ1, φ) δχ−(ℓ1, φ) = χ†
++(ℓ1, φ) δχ+(ℓ1, φ),
+∀φ.
+(21)
+Eqs.(20) and (21) are of course equivalent to (19) and (18) respectively. The inﬁnitesimal generator of translations of
+the Rindler time φ, acting on the fermion wave functions, is the Rindler Hamiltonian HR, that can be read oﬀfrom
+(20)
+i∂φχ = HR χ,
+χ =
+
+χ−
+χ+
+
+,
+(22)
+HR =
+
+−i(ρ ∂ρ + 1
+2)
+mρ
+mρ
+i(ρ ∂ρ + 1
+2)
+
+= √ρ ˆpρ
+√ρ σz + mρ σx,
+(23)
+where ˆpρ = −i∂/∂ρ, is the momentum operator associated to the radial coordinate ρ. The operator
+Hxp = −i(ρ ∂ρ + 1
+2) = 1
+2(ρ ˆpρ + ˆpρρ) = √ρ ˆpρ
+√ρ,
+(24)
+coincides with the quantization of the classical xp Hamiltonian proposed by Berry and Keating [27], where x is the
+radial Rindler coordinate. The eigenfunctions of (24) are
+Hxp ψE = E ψE,
+ψE =
+1
+√
+2π ρ−1/2+iE,
+(25)
+with eigenvalues E in the real numbers IR if ρ > 0 [32, 33]. Thus HR consists of two copies of xp, with diﬀerent
+signs corresponding to opposite chiralities that are coupled by the mass term. In CFT the operator HR, with m = 0,
+corresponds to the sum of Virasoro operators L0 + ¯L0 that generate the dilation transformations.
+
+
+--- PDF PAGE 6 ---
+6
+D.
+Self-adjointess of HR
+The action (16) is invariant under the U(1) transformation ψ →eiαψ.
+The corresponding Noether current is
+Jµ = ¯ψγµψ, and is conserved, i.e. ∂µJµ = 0. The charge associated to Jµ can be integrated along the space-like line
+(2) with constant φ. Using (15) one ﬁnds
+Z
+φ=cte
+dxµϵνµ ¯ψγνψ =
+Z
+dρ
+ χ∗
+−χ−+ χ∗
++χ+
+
+,
+(26)
+where χ∗
+± are the complex conjugate of χ±. Hence the scalar product of two wave functions, in the domain S, can be
+deﬁned as
+⟨χ1|χ2⟩=
+Z ∞
+ℓ1
+dρ
+ χ∗
+1,−χ2,−+ χ∗
+1,+χ2,+
+
+.
+(27)
+The Hamiltonian HR is hermitean (or symmetric) respect to this scalar product if
+⟨χ1|HRχ2⟩= ⟨HRχ1|χ2⟩,
+(28)
+when acting on a subspace of the total Hilbert space. Partial integration gives
+⟨χ1|HRχ2⟩−⟨HRχ1|χ2⟩=
+Z ∞
+ℓ1
+dρ∂ρ
+
+ρ
+ χ∗
+1,+χ2,−−χ∗
+1,−χ2,+
+
+.
+(29)
+Hence HR is hermitean provided
+lim
+ρ→∞ρ1/2χ±(ρ) = 0,
+χ∗
+1,−χ2,−−χ∗
+1,+χ2,+ = 0,
+at ρ = ℓ1.
+(30)
+The latter condition is equivalent to eq.(21). The solution of (30) is
+−ieiϑ χ−= χ+
+at ρ = ℓ1,
+(31)
+where ϑ ∈[0, 2π). The quantity −ieiϑ has the physical meaning of the phase shift produced by the reﬂection of the
+fermion with the boundary. It will play a very important role in what follows.
+HR is not only hermitean but also self-adjoint. According to a theorem due to von Neumann, an operator H
+is self-adjoint if the deﬁciency indices n± are equal [67, 68]. These indices are the number of linearly independent
+eigenfunctions of H with positive and negative imaginary eigenvalues,
+n± = dim {ψ±| H ψ± = ±zψ±, Im z > 0}.
+(32)
+If n+ = n−= 0, the operator H is essentially self-adjoint, while if n+ = n−> 0, then H admits self-adjoint extensions.
+In the case of HR, one ﬁnds n+ = n−= 1, and the self-adjoint extensions are parameterized by the phase eiϑ in
+eq.(31).
+E.
+Spectrum of HR
+The eigenvalues and eigenvectors of the Hamiltonian (23), are given by the solutions of the Schroedinger equation
+HR χ = E χ,
+χ±(ρ, φ) = e−iEφf±(ρ),
+ρ ≥ℓ1,
+(33)
+that satisfy the boundary condition (31). E is the Rindler energy. The equations for f±(ρ) that follows from (23) are
+
+ρ∂ρ + 1
+2 ± iE
+
+f± ∓imρf∓= 0,
+(34)
+that lead to the second order diﬀerential eqs.
+"
+ρ2 ∂2
+∂ρ2 + ρ ∂
+∂ρ −
+1
+2 ± iE
+2
+−m2ρ2
+#
+f± = 0,
+(35)
+
+
+--- PDF PAGE 7 ---
+7
+whose general solution is a linear combination of the modiﬁed Bessel functions [69]
+f±(ρ) = C1 e∓iπ/4 K 1
+2 ±iE(mρ) ± C2 e∓iπ/4 I 1
+2 ±iE(mρ).
+(36)
+The phases e±iπ/4 follows from (34). Let us compute the deﬁciency indices of HR, for which it is enough to take
+E = ±i/2,
+E = i
+2 →
+
+f+(ρ) = C1 e−iπ/4 K0(mρ) + C2 e−iπ/4 I0(mρ),
+f−(ρ) = C1 eiπ/4 K1(mρ) −C2 eiπ/4 I1(mρ),
+(37)
+E = −i
+2 →
+
+f+(ρ) = C1 e−iπ/4 K1(mρ) + C2 e−iπ/4 I1(mρ),
+f−(ρ) = C1 eiπ/4 K0(mρ) −C2 eiπ/4 I0(mρ).
+(38)
+The functions I0,1(mρ) diverge exponentially as ρ →∞, that forces C2 = 0, while K0,1(mρ) decreases exponentially
+and are normalizable provided ℓ1 > 0. The deﬁciency indices are therefore equal, n+ = n−= 1 and the eigenfunctions
+are (setting C1 = 1)
+f±(ρ) = e∓iπ/4K 1
+2 ±iE(mρ),
+ρ ≥ℓ1,
+(39)
+which yields
+χ±(ρ, φ) = e−iEφ ∓iπ/4K 1
+2 ±iE(mρ),
+(40)
+up to a common normalization constant. Plugging (40) into (31) yields the equation for the eigenenergies
+eiϑ K 1
+2 −iE(mℓ1) −K 1
+2 +iE(mℓ1) = 0.
+(41)
+This equation has positive and negative solutions, but only if ϑ = 0 or π, they come in pairs {En, −En}. Moreover,
+if ϑ = 0, then E0 = 0 is also an eigenvalue. The imaginary part of the Riemann zeros also form pairs {tn, −tn} (i.e.
+ζ(1/2 ± itn) = 0), and t = 0 is not a zero since ζ(1/2)̸ = 0. This situation corresponds to the choice ϑ = π.
+The number of eigenvalues, n(E), in the interval [0, E] (with E > 0) is given in the asymptotic limit E ≫mℓ1 by
+n(E) ≃E
+π
+
+log 2E
+mℓ1
+−1
+
+−ϑ
+2π + O(E−1),
+E ≫mℓ1.
+(42)
+For E < 0 there is a similar formula with ϑ →−ϑ. Let us compare this expression with the Riemann-Mangoldt formula
+that counts the number of zeros, N(t), of the zeta function ζ(s) that lie in the rectangle 0 < Re s < 1, 0 < Im s < t
+[2]
+N(t) = ⟨N(t)⟩+ Nﬂ(t)
+(43)
+⟨N(t)⟩= θ(t)
+π
++ 1
+t→∞
+−→
+t
+2π
+
+log t
+2π −1
+
++ 7
+8
+Nﬂ(t) = 1
+π Im log ζ
+1
+2 + it
+
+= O(log t)
+where ⟨N(t)⟩is the average term and Nﬂ(t) the oscillation term. This expression agrees with (42), to order t log t and
+t, with the identiﬁcations
+E = t
+2,
+mℓ1 = 2π.
+(44)
+However, the constant term 7/8 is not reproduced by eq.(42) for ϑ = π, which is the choice for the absence of the
+zero mode E0 = 0 (note that neither ϑ = 0 gives the 7/8).
+Comments:
+• In the limit mℓ1 →0, the spectrum (42) becomes a continuum. This situation arises in three cases: 1) if m > 0
+is kept constant and ℓ1 →0, the domain S becomes R+, and one recovers the spectrum of a massive Dirac
+equation in R+; 2) if ℓ1 > 0 is kept constant, and m →0, the particles become massless and the eﬀect of the
+boundary ∂S, is to exchange left and right moving fermions, that constitutes a boundary CFT [66], and 3) m
+and ℓ1 →0 that corresponds to a massless fermion in R+.
+
+
+--- PDF PAGE 8 ---
+8
+• Equation (41) coincides with the spectrum of the quantum x/p Hamiltonian [43, 44]
+Hx/p = √x
+ ˆp + ℓ2
+p ˆp−1 √x,
+x ≥ℓx,
+(45)
+with the identiﬁcations
+E = Ex/p
+2
+,
+m = ℓp,
+ℓ1 = ℓx.
+(46)
+The origin of this coincidence lies in the fact that a classical Hamiltonian of the form H = U(x)p + V (x)/p [44]
+can be formulated as a massive Dirac model in a space-time metric built from the potentials U(x) and V (x)
+[49]. In the case of the x/p model this metric is ﬂat, which allows us to formulate this model in terms of the
+Dirac equation in the domain S.
+• Gupta et al. proposed recently the Hamiltonian (x/p + /px)/2 as a Dirac variant of the xp Hamiltonian [48]. The
+former Hamiltonian is deﬁned in 2 spatial dimensions and after compactiﬁcation of one coordinate becomes 1D,
+with an spectrum that depends on a regularization parameter and which is similar to the one found from the
+Landau theory with electrostatic potential xy [38].
+• Burnol has studied the causal propagation of a massive boson and a massive Dirac fermion in the Rindler right
+edge R+ relating the scattering from the past light cone to the future light cone to the Hankel transform of zero
+order and suggesting a possible relation to the zeta function [70].
+F.
+General Dirac action
+For later purposes we shall introduce the general relativistic invariant Dirac action in 1+1 dimensions
+S = i
+2
+Z
+S
+d2x ¯ψ(/∂+ i /A + im −m′γ5)ψ,
+(47)
+where, in addition to the mass term, there is a chiral interaction ¯ψγ5ψ and a minimal coupling ¯ψ /Aψ to a vector
+potential Aµ ( /A = γµ Aµ). Moreover m, m′ can be functions of the space-time position, in which case m becomes a
+scalar potential and m′ a pseudo scalar potential. We saw above that for a constant mass m the action (16) can be
+restricted to the domain S, preserving the invariance under shifts of the Rindler time φ. It is clear that if m depends
+in ρ, but not in φ, the action remains invariant under translations of φ, and that the Hamiltonian is equal to (23),
+with m replaced by m(ρ). The same happens with the term ¯ψγ5ψ if m′ = m′(ρ). Concerning the vector potential,
+the action (47) is invariant provided
+A0 ± A1 = a±(ρ) e∓φ,
+(48)
+in which case (47) becomes
+S = i
+2
+Z ∞
+−∞
+dφ
+Z ∞
+ℓ1
+d ρ
+
+χ†
+−(∂φ + ρ∂ρ + 1
+2 + ia+ρ)χ−
+(49)
++ χ†
++(∂φ −ρ∂ρ −1
+2 + ia−ρ)χ+ +(im + m′)ρχ†
+−χ+ + (im −m′)ρχ†
++χ−
+i
+.
+Using gauge transformations one can reduce the number of ﬁelds in (49). This issue will be consider below in a
+discrete realization of this model. The equations of motion derived from (49) are
+(∂φ ± ρ∂ρ ± 1
+2 + ia±ρ)χ∓+ (im ± m′)ρχ± = 0,
+(50)
+and can be written as the Schroedinger equation (22) with Hamiltonian
+HR =
+
+−i(ρ ∂ρ + 1
+2) + a+ρ
+(m −im′)ρ
+(m + im′)ρ
+i(ρ ∂ρ + 1
+2) + a−ρ)
+
+(51)
+= √ρ ˆpρ
+√ρ σz + a+ + a−
+2
+ρ 1 + a+ −a−
+2
+ρ σz + mρ σx + m′ρ σy,
+
+
+--- PDF PAGE 9 ---
+9
+1
+2
+3
+4
+x1
+x0
+x1
+x0
+FIG. 2: Left: worldlines of the mirrors with accelerations an = 1/n that corresponds to the choice ℓn = n (n = 1, 2, . . . ). The
+case of eq.(52), is a simple rescaling of lengths. S is the grey region. Right: A light ray (dotted line) is sent at x0 = 0 by
+the observer at x1 = ℓ1. The ray either passes through the 2nd mirror or is reﬂected back to the 1st mirror, where is reﬂected
+totally.
+that acts on the wave functions that satisfy the boundary condition (31).
+In summary, we have shown in this section, that the spectrum of the Rindler Hamiltonian, in the domain S agrees
+asymptotically with the average Riemann zeros, under the identiﬁcations (44). However, there is no trace of their
+ﬂuctuations that depend on the zeta function on the critical line. This observation is no surprising since the prime
+numbers should be included into the model. In the next section we shall take a ﬁrst step in that direction.
+III.
+MOVING MIRRORS AND PRIME NUMBERS
+Here we construct an ideal optical system, in Rindler space-time, that allows to distinguish prime numbers from
+composite. In the next section we shall give a concrete realization of this optical system in the Dirac model. The
+system consists of an inﬁnite array of mirrors, labelled by the integers n = 1, 2, . . . , ∞, that have the following
+properties:
+• The ﬁrst mirror, n = 1, is perfect, while the remaining ones, n > 1, are one-way mirrors (beam splitters) that
+reﬂect and transmit the light rays partially. The light rays can be replaced by massless fermions.
+• The mirrors move in Minkowski space-time with uniform accelerations an, with a1 > a2 > . . . , such that
+limn→∞an = 0.
+• At time x0 = 0, the mirrors are placed at the positions ℓn = 1/an (units c = 1).
+• The worldlines of the mirrors are contained in the domain S, whose boundary corresponds to the ﬁrst mirror,
+n = 1, such that ρ = ℓ1.
+• An observer carries the ﬁrst mirror, and sends and receives light rays whose departure and arrival times she
+measures with a clock.
+• The lengths ℓn are given by
+ℓn = ℓ1 n1/2,
+n = 1, 2, . . . , ∞.
+(52)
+This ansatz can be replaced by nα (α > 0), but the parameter α can be set to 1/2 by scaling the clock’s ticks.
+Figure 2 depicts the mirror’s worldlines satisfying these conditions with α = 1.
+
+
+--- PDF PAGE 10 ---
+10
+We shall next study the propagation of light rays in this optical array using the laws of special relativity. Let us
+consider a light ray emanating from the point (ρ1, φ1) and reaching the point (ρ2, φ2), where (ρi, φi) are the Rindler
+coordinates. Along this trajectory the line element (3) vanishes,
+dρ = ±ρ dφ →ρ2 = ρ1e±(φ2−φ1) →φ2 −φ1 = | log ρ2
+ρ1
+|,
+(53)
+corresponding to right moving (ρ2 > ρ1) or left moving (ρ1 > ρ2) rays. Suppose that the ray is emitted at the ﬁrst
+mirror at time φin = 0, i.e. (ρin, φin) = (ℓ1, 0), moves rightwards, reﬂects on the nth mirror and returns to the ﬁrst
+mirror, (ρend, φend) = (ℓ1, φn). The value of φn follows from eq.(53) and (52)
+φn = 2 log ℓn
+ℓ1
+= log n,
+n > 1.
+(54)
+which is twice the change in φ from ρ = ℓ1 to ρ = ℓn. φn can be measured by the observer’s clock traveling with the
+perfect mirror where the ray was emitted and received. The change in the clock’s proper time is given by τ (1)
+n
+= ℓ1φn
+(see eq.(5)), which in units of ℓ1 = 1, reads
+τn = log n,
+n > 1.
+(55)
+Hence, measuring τn, the observer can ﬁnd the value of n. If n = 2, the ray travels forth and back between the mirrors
+n = 1 and n = 2. However if n > 2, the ray must pass through the intermediate mirrors 2, . . . , n −1. Let us next
+analyze the case of two reﬂections. Now the ray is emitted at (ρin, φin) = (ℓ1, 0), reaches the mirror n1, returns to
+the perfect mirror, reﬂects again, reaches the mirror n2 and comes back ﬁnally to the perfect mirror where the clock
+records the proper time, τn1,n2 that is given by the sum of the intermediate times (55)
+τn1,n2 = τn1 + τn2 = log(n1n2),
+n1,2 > 1.
+(56)
+Hence the measurement of τn1,n2 allows the observer to compute the product n1n2. There are more complicated cases
+as the one illustrated by the following sequence
+1 →n1 →n2 →n3 →1,
+(57)
+1 < n1 > n2 < n3 > 1,
+where the ray emitted by the observer is reﬂected by the mirror n1, back to the mirror n2 < n1, that reﬂects the ray
+forwards to the mirror n3 > n2, that reﬂects the ray back to the ﬁrst mirror. The proper time recorded by the clock
+is
+τn1,n2,n3 = τn1 −τn2 + τn3 = log n1n3
+n2
+.
+(58)
+Notice that the case n2 = 1 reproduces eq.(56). It is easy to derive a general formula for the proper time elapsed for
+a trajectory involving 2k intervals, that starts and ends at the ﬁrst mirror,
+1 →n1 →n2 →. . . →n2k−1 →n2k = 1,
+(59)
+1 < n1 > n2 < . . . < n2k−1 > n2k = 1,
+and is given by
+τ{ni} = log n1n3 . . . n2k−1
+n2n4 . . . n2k
+.
+(60)
+The numerator of (60) corresponds to reﬂections: right mover →left mover, while the denominator corresponds to
+reﬂections: left mover →right mover. The argument of log in (60) will be in general a rational number. Let us
+suppose it is the prime p. It is clear, from (55), that after one reﬂection, i.e. k = 1, the observer will detect one ray
+arriving at τp = log p. Suppose now that the argument of the log is a composite number n, say 4. At time τ4 = log 4,
+the observer will detect the ray reﬂected from the forth mirror, but also one ray from two reﬂections on the second
+mirror τ2,2 = 2τ2, which is of course the same as τ4. In a real experiment the two rays arriving at the observer will
+interfere. The study of this interference is left to the next section.
+The previous example suggests that prime numbers correspond to unique paths characterized by observer proper
+times equal to log p. Let us prove this statement in the case k = 2. Equation (58) becomes
+n1n3
+n2
+= p,
+(61)
+
+
+--- PDF PAGE 11 ---
+11
+where n1,2,3 satisfy the constraints (57). According to (61), p divides the product n1n3, so it is a prime factor of n1
+or n3. In the former case one has
+n1 = p n′
+1 (n′
+1 ≥1) →n′
+1n3
+n2
+= 1,
+(62)
+which is a contradiction because n2 < n3 by eq.(57). The same result holds if p divides n3. The generalization to any
+k ≥2 goes as follows. Suppose that τ{ni} = log p, then from eq.(60)
+n1n3 . . . n2k−1
+n2n4 . . . n2k−2
+= p.
+(63)
+If p divides, say n1, one gets
+n1 = p n′
+1 (n′
+1 ≥1) →n′
+1n3 . . . n2k−1
+n2n4 . . . n2k−2
+= 1,
+(64)
+which cannot be satisﬁed because n2 < n3, . . . , n2k−2 < n2k−1 by the conditions (59). This proves that the observer
+detects a single ray only when it comes from the reﬂection on a prime mirror, while it detects more than one ray
+when the rays comes from composite mirrors. This interpretation is purely classical because it presuposes that the
+rays can be distinguished, and disregards the interference eﬀects. Both eﬀects have of course to be taken into account
+in a realistic implementation using identical particles, such as photons or masless fermions. The interference pattern
+emerging for fermions in this array will be purpose of the next section. In any case, one can easily show that this
+classical model can be used to implement the classical Eratosthenes’s sieve to construct prime numbers.
+Comments:
+• We mentioned in the introduction, that similarities between counting formulas in Number Theory and Quantum
+Chaos led Berry to conjecture the existence of a classical chaotic Hamiltonian whose primitive periodic orbits
+are labelled by the primes p, with periods log p, and whose quantization will give the Riemann zeros as energy
+levels. A classical Hamiltonian with this property has not yet been constructed, but the mirror system presented
+above, displays some of its properties. In particular, the rays associated to prime numbers behave as primitive
+orbits with a period log p. Moreover, the trajectories and periods of these primitive rays are independent of
+their energy, that is the frequency of the light.
+• One can construct an array of moving mirrors in the domain Sc (recall (8)) with the same properties as the
+array in S. The parameters ℓn that characterize the array can be labeled with the negative integers,
+ℓn = ℓ1|n|−1/2,
+n = −1, −2, · · · −∞,
+(65)
+where n = −1 is the perfect mirror located at the boundary ∂Sc = ∂S. The proper time elapsed is now given by
+τn = log |n|, and is identical to (55) . The relation between the arrays in S and Sc corresponds to the inversion
+transformation ρ →ℓ2
+1/ρ.
+• The array of mirrors deﬁned in S is an analogue computer for the multiplication operation or rather the addition
+of log’s. To implement the addition operation we shall deﬁne an array of mirror with positions, i.e. inverse
+accelerations,
+ℓn = ℓ0 en/2,
+n = 0, 1, 2, . . . ∞.
+(66)
+Where n = 0 labels the perfect mirror. The analogue of eqs.(55) and (56) is (with ℓ0 = 1)
+τn = n,
+(67)
+τn1,n2 = n1 + n2.
+This is an harmonic array in the sense that the proper times (67), as well as the discrete spectrum (see Appendix
+A) are given by integer numbers. The harmonic array shows that it is not enough to have accelerated mirrors
+to generate chaos. The location/accelerations of the mirrors is essential. In the harmonic case, the exponential
+separation of the mirrors (66) compensates the exponential time dependence of the ray trajectories (53), that
+give rise to a tessellation of Rindler space-time. In the case of (52), the whole set of ray trajectories does not
+tessellate the Rindler spacetime which is a manifestation of the arithmetic chaos.
+
+
+--- PDF PAGE 12 ---
+12
+IV.
+MASSLESS DIRAC FERMION WITH DELTA FUNCTION POTENTIALS
+In this section we present a mathematical realization of the moving mirrors in the Dirac theory. We start from
+the massless Dirac action and represent the mirrors by delta function potentials that are obtained discretizing the
+interacting terms in the general action (49). The mass term becomes a contact interaction that turns left moving
+fermions into right moving ones, and viceversa. The new action remains invariant under translations in Rindler time,
+so that the Rindler Hamiltonian is a conserved quantity and we look for its spectrum using transfer matrix methods.
+The Dirac equation with delta function potentials requires a special treatment that we describe in detail (see [71]-[76]
+for the Dirac equation with delta interactions in Minkowski coordinates).
+A.
+Discretization in Rindler variables
+Let us consider the integral
+Z ∞
+ℓ1
+dρ ρ f(ρ) = 1
+2
+Z ∞
+u1
+du f(u),
+u = ρ2, u1 = ℓ2
+1,
+(68)
+where f(ρ) is a generic function, and dρ ρ is the radial part of the measure d2x = dφ dρ ρ. The Rindler time φ can be
+easily incorporated into the equations. We shall discretize (68), using the positions ℓn of the mirrors given in eq.(52),
+which amounts to a partition of the half-line u ≥u1 into segments of equal width ℓ2
+1, separated by the points
+uk = ℓ2
+k = ℓ2
+1 k,
+k = 1, 2, . . . .
+(69)
+Let us discretize (68) as
+1
+2
+Z ∞
+u1
+du f(u) →ℓ2
+1
+2
+∞
+X
+k=2
+f(uk) →ℓ2
+1
+2
+Z ∞
+u1
+du f(u)
+X
+k≥2
+δ(u −uk).
+(70)
+If f is a continuous function the last expression of (70) coincides with the middle one, but if f is discontinuous one
+gets
+1
+2
+Z ∞
+u1
+du f(u) →ℓ2
+1
+2
+∞
+X
+k=2
+f(u+
+k ) + f(u−
+k )
+2
+,
+(71)
+where we used
+Z v+ϵ
+v−ϵ
+du f(u)δ(u −v) = 1
+2(f(v+) + f(v−)),
+(72)
+f(v±) =
+lim
+ϵ>0→0 f(v ± ϵ).
+In the limit ℓ1 →0, the last expression in eq.(70) converges towards the integral (68) for well behaved functions.
+Replacing (69) into (70) yields
+Z ∞
+ℓ1
+dρ ρ f(ρ)
+X
+k≥2
+ℓ2
+1
+2ℓk
+δ(ρ −ℓk).
+(73)
+One could use this formula to discretize the mass term in the Dirac action (16). Taking f = m ¯ψψ this would yield
+i
+2
+Z
+S
+dφ dρ ρ ¯ψψ
+X
+k≥2
+mℓ2
+1
+2ℓk
+δ(ρ −ℓk).
+(74)
+However, the corresponding Dirac equation is problematic, because the matching conditions are not consistent with the
+equations of motion, as shown in references [71]-[76]. This problem is solved by replacing the local delta interactions
+by separable delta function potentials, that amounts to a point splitting. More concretely, the integral
+
+
+--- PDF PAGE 13 ---
+13
+Z ∞
+ℓ1
+dρ ρ f(ρ)g(ρ) = 1
+2
+Z ∞
+u1
+du f(u) g(u),
+(75)
+should be replaced by
+ℓ2
+1
+2
+R ∞
+u1 du
+R ∞
+u1 du′ f(u)g(u′) P
+k≥2 δ(u −uk)δ(u′ −uk),
+(76)
+=
+R ∞
+ℓ1 dρρ
+R ∞
+ℓ1 dρ′ρ′f(ρ)g(ρ′) P
+k≥2
+ℓ2
+1
+2ℓ2
+k δ(ρ −ℓk)δ(ρ′ −ℓk).
+If f and g are continuous functions at ℓk, this expression is equivalent to (73).
+B.
+The Dirac action with delta function potentials
+Applying the discretization formula (76) to the general action (49) one obtains
+SDM = S0 + Sint
+(77)
+where S0 is the massless action
+S0 = i
+2
+Z ∞
+−∞
+dφ
+Z ∞
+ℓ1
+d ρ
+
+χ†
+−(∂φ + ρ∂ρ + 1
+2)χ−+ χ†
++(∂φ −ρ∂ρ −1
+2)χ+
+
+,
+(78)
+and Sint is the discretization of the mass terms and vector potential of (49) in the gauge a+ = a−
+Sint = i
+2
+Z
+S
+dφ dρ ρ dρ′ρ′ X
+k≥2
+2
+ℓk
+δ(ρ −ℓk)δ(ρ′ −ℓk)
+(79)
+×
+h
+ir′′
+k χ†
+−(ρ, φ) χ−(ρ′, φ) + ir′′
+k χ†
++(ρ, φ) χ+(ρ′, φ)
++(irk + r′
+k)χ†
+−(ρ, φ) χ+(ρ′, φ) + (irk −r′
+k)χ†
++(ρ, φ) χ−(ρ′, φ)
+i
+,
+where
+rk = m(ℓk)ℓ2
+1
+4ℓk
+,
+r′
+k = m′(ℓk)ℓ2
+1
+4ℓk
+,
+r′′
+k = a±(ℓk)ℓ2
+1
+4ℓk
+,
+k ≥2,
+(80)
+are dimensionless parameters that are equal to the values taken by the functions m, m′, a± in (49) multiplied by
+ℓ2
+1/(4ℓk). One can verify that the (77) is invariant under the scale transformation
+ρ →λρ,
+χ± →λ−1/2 χ±,
+ℓk →λℓk,
+(81)
+so that the physical observables only depend on the parameters rk, r′
+k, r′′
+k. In the Dirac model considered in the
+previous section, the mass is constant, which after discretization implies that rn = mℓ1/(4n1/2). Later on we shall
+generalize this eq. to rn ∝n−σ, and make contact with the Riemann zeta function ζ(σ + it).
+C.
+The Hamiltonian
+The equations of motion that follows from (77) are
+(∂φ ± ρ∂ρ ± 1
+2)χ∓+
+X
+k≥2
+ℓkδ(ρ −ℓk)
+
+ir′′
+k(χ∓(ℓ+
+k ) + χ∓(ℓ−
+k )) + (irk ± r′
+k) (χ±(ℓ+
+k ) + χ±(ℓ−
+k ))
+
+= 0,
+(82)
+
+
+--- PDF PAGE 14 ---
+14
+where (72) has been used to integrate around ρ = ℓk (to simplify the notation the variable φ has been suppressed).
+This equation implies that the left and right moving modes propagate freely and independently between the positions
+ℓn,
+(∂φ ± ρ∂ρ ± 1
+2)χ∓= 0,
+ρ̸ = ℓk.
+(83)
+Hence the Hamiltonian is (recall (23)),
+HR =
+ √ρ ˆpρ√ρ
+0
+0
+−√ρ ˆp√ρ
+
+,
+ˆpρ = −i∂ρ,
+ρ̸ = ℓn , ∀n.
+(84)
+The delta function terms yield the matching conditions between the wave functions on both sides of ℓk,
+(±1 + ir′′
+k)(χ∓(ℓ+
+k ) −χ∓(ℓ−
+k )) + (irk ± r′
+k)(χ±(ℓ+
+k ) + χ±(ℓ−
+k )) = 0,
+k ≥2,
+(85)
+that can be written in matrix form as
+Nk,+ χ(ℓ+
+k ) = Nk,−χ(ℓ−
+k ),
+k ≥2,
+(86)
+where χ is the two component vector (22) and
+Nk,± =
+
+1 ± ir′′
+k
+±(irk + r′
+k)
+±(−irk + r′
+k)
+1 ∓ir′′
+k
+
+.
+(87)
+These matrices are invertible provided
+det Nk,± = 1 −r2
+k −r′2
+k + r′′2
+k̸ = 0.
+(88)
+Otherwise, eqs.(85) become a decoupled set of equations, hence from hereafter we shall assume that condition (88) is
+satisﬁed and leads to
+χ(ℓ−
+k ) = Lk χ(ℓ+
+k ),
+k ≥2,
+(89)
+where
+Lk = N −1
+k,−Nk,+
+(90)
+=
+1
+1 −r2
+k −r′2
+k + r′′2
+k
+
+1 + r2
+k + r′2
+k −r′′2
+k + 2ir′′
+k
+2(irk + r′
+k)
+2(−irk + r′
+k)
+1 + r2
+k + r′2
+k −r′′2
+k −2ir′′
+k
+
+.
+Finally, the variation of the action at the boundary ρ = ℓ1 gives the condition (31)
+−ieiϑ χ−(ℓ1) = χ+(ℓ1) −→χ(ℓ1) ∝
+
+1
+−ieiϑ
+
+,
+ϑ ∈[0, 2π).
+(91)
+D.
+Self-adjointness of the Hamiltonian
+One should expect the Hamiltonian (84), acting on wave functions subject to the BC’s (89) and (91), to be self-
+adjoint. We shall next show that this is indeed the case. The scalar product, given by eq. (27), will be written
+as
+⟨χ1|χ2⟩=
+∞
+X
+n=1
+Z ℓn+1
+ℓn
+dρ
+ χ∗
+1,−χ2,−+ χ∗
+1,+χ2,+
+
+.
+(92)
+To show that HR is a self-adjoint operator we follow the approach of Asorey et al. based on the consideration of the
+boundary conditions that turns out to be equivalent to the von Neumann theorem [77]. The starting point is the
+bilinear
+⟨χ1|HRχ2⟩−⟨HRχ1|χ2⟩≡iΣ(χ1, χ2),
+(93)
+
+
+--- PDF PAGE 15 ---
+15
+where |χ1,2⟩are two wave functions. This quantity measures the net ﬂux or probability ﬂowing across the boundary
+of the system, which for a unitary time evolution generated by e−iφHR must vanish. The self-adjoint extensions of
+HR select subspaces of the total Hilbert space where Σ(χ1, χ2) = 0. In the case of the Hamiltonian (84) one ﬁnds
+Σ(χ1, χ2) = ℓ1
+ χ∗
+1,−(ℓ1) χ2,−(ℓ1) −χ∗
+1,+(ℓ1) χ2,+(ℓ1)
+
+(94)
++
+X
+n≥2
+ℓn
+
+χ∗
+1,−(ℓ+
+n ) χ2,−(ℓ+
+n ) −χ∗
+1,+(ℓ+
+n ) χ2,+(ℓ+
+n )
+−χ∗
+1,−(ℓ−
+n ) χ2,−(ℓ−
+n ) + χ∗
+1,+(ℓ−
+n ) χ2,+(ℓ−
+n )
+
+.
+The term proportional to ℓ1 already cancels out by eq.(91). Imposing the independent cancellation of the terms
+proportional to ℓn (n ≥2) yields
+χ∗
+1,−(ℓ+
+n ) χ2,−(ℓ+
+n ) −χ∗
+1,+(ℓ+
+n ) χ2,+(ℓ+
+n ) = χ∗
+1,−(ℓ−
+n ) χ2,−(ℓ−
+n ) −χ∗
+1,+(ℓ−
+n ) χ2,+(ℓ−
+n )
+(95)
+which we write as
+ χ1(ℓ+
+n )|σz|χ2(ℓ+
+n )
+
+=
+ χ1(ℓ−
+n )|σz|χ2(ℓ−
+n )
+
+,
+(96)
+where |χ) = (χ−, χ+)t and (χ| = (χ∗
+−, χ∗
++). The general solution of (96) is obtained if χ1,2(ℓ−
+n ) and χ1,2(ℓ+
+n ) are
+related by a transformation
+χ(ℓ−
+n , φ) = Un χ(ℓ+
+n , φ),
+(97)
+where Un satisﬁes
+U †
+n σz Un = σz,
+(98)
+which implies that Un belongs to the Lie group U(1)⊗SU(1, 1). The non compact character of SU(1, 1) arises in this
+problem from to the relative minus sign of the xp terms in the Hamiltonian (84). The U(1) factor can be eliminated
+by a phase transformation of the ﬁeld χ(ρ) in the interval ρ ∈(ℓn, ℓn+1), which reduces the group to SU(1, 1), that is
+SU(1, 1) =
+
+a
+b
+b∗a∗
+
+, a, b ∈C, |a|2 −|b|2 = 1
+
+.
+(99)
+The matrices Ln (90) are of this form, that ensures that HR is self-adjoint acting on the wave functions satisfy-
+ing the conditions (89) and (91). One can further reduce the number of parameters in Ln applying another U(1)
+transformation. Let us label the wave functions with an integer n
+χn(ρ) = χ(ρ),
+ρ ∈(ℓn, ℓn+1),
+n = 1, 2, . . . , ∞
+(100)
+and make the transformation
+χn(ρ) →eiαnσz χn(ρ),
+(101)
+that induces the following changes in the boundary values
+χ(ℓ+
+n ) →eiαnσz χ(ℓ+
+n ),
+χ(ℓ−
+n ) →eiαn−1σz χ(ℓ−
+n ),
+(102)
+and in the Ln matrices (recall (89))
+Ln →eiαn−1σz Ln e−iαnσz.
+(103)
+The parameters αn can then be used to bring (90) into the form
+Ln =
+1
+1 −r2n −r′2
+n
+
+1 + r2
+n + r′2
+n
+2(irn + r′
+n)
+2(−irn + r′
+n) 1 + r2
+n + r′2
+n
+
+,
+n ≥2,
+(104)
+corresponding to an element in the coset SU(1, 1)/U(1). We use the same notation for the transformed parameters
+rn, r′
+n as in (90).
+In summary, we have shown that the Hamiltonian HR, deﬁned in the domain S, is self-adjoint acting on wave
+functions that satisfy the BC’s (89) and (91); and is characterized by the set {ℓn, rn, r′
+n}∞
+n=2 and ϑ (by scale invariance
+(81) we set ℓ1 = 1).
+
+
+--- PDF PAGE 16 ---
+16
+E.
+Eigenvalue problem
+We shall now consider the eigenvalue problem of the Hamiltonian (84), acting on normalizable wave functions
+subject to the boundary conditions (89) and (91) The eigenfunctions of HR are given by
+HR χ = E χ →−i
+
+ρ ∂ρ + 1
+2
+
+χ∓= ±E χ∓→χ∓∝ρ−1/2±iE.
+(105)
+so for the nth interval (recall (100))
+χ∓,n(ρ) = e±iπ/4 A∓,n
+ρ1/2∓iE ,
+ρ ∈(ℓn, ℓn+1),
+(106)
+where A∓,n will depend, in general, on the eigenenergy E and ρ is measured in units of ℓ1 (in what follows we take
+ℓ1 = 1). The phases e±iπ/4 have been introduced by analogy with the eigenfunctions (40). The values of χ on both
+sides of ρ = ℓn are given by
+χ∓(ℓ+
+n ) =
+lim
+ϵ→0+ χ∓(ℓn + ϵ) = χ∓,n(ℓn) = e± iπ
+4
+A∓,n
+ℓ1/2∓iE
+n
+,
+(107)
+χ∓(ℓ−
+n ) =
+lim
+ϵ→0+ χ∓(ℓn −ϵ) = χ∓,n−1(ℓn) = e± iπ
+4 A∓,n−1
+ℓ1/2∓iE
+n
+.
+Let us write these equations in matrix form in terms of the vector
+|An⟩=
+
+A−,n
+A+,n
+
+,
+(108)
+and the matrix
+Kn,± =
+
+eiπ/4 ℓiE
+n
+0
+0
+e−iπ/4 ℓ−iE
+n
+
+,
+(109)
+such that (107) read
+|χ(ℓ+
+n )⟩= ℓ−1/2
+n
+Kn |An⟩,
+(110)
+|χ(ℓ−
+n )⟩= ℓ−1/2
+n
+Kn |An−1⟩.
+Plugging these eqs. into the matching condition (89) yields
+Kn |An−1⟩= Ln Kn |An⟩,
+(111)
+so
+|An−1⟩= Tn |An⟩,
+Tn = K−1
+n
+Ln Kn,
+(112)
+and substituting (104)
+Tn =
+1
+1 −r2n −r′2
+n
+
+1 + r2
+n + r′2
+n
+2(rn −ir′
+n) ℓ−2iE
+n
+2(rn + ir′
+n)ℓ2iE
+n
+1 + r2
+n + r′2
+n
+
+.
+(113)
+To simplify the notations let us deﬁne
+ϱn = rn −ir′
+n,
+(114)
+so that
+Tn = T(E, ϱn, ℓn) =
+1
+1 −|ϱn|2
+
+1 + |ϱn|2 2ϱn ℓ−2iE
+n
+2ϱ∗
+nℓ2iE
+n
+1 + |ϱn|2
+
+.
+(115)
+
+
+--- PDF PAGE 17 ---
+17
+The parameters ϱn have the meaning of reﬂections amplitudes associated to the nth mirror. The absence of a mirror
+at the position ℓn is expressed by the condition ϱn = 0, so that An−1 = An. Concerning the condition (91), equation
+(106) implies
+eiϑ A−,1 = A+,1.
+(116)
+that can be written as
+|A1⟩= |A1(ϑ)⟩=
+ 1
+eiϑ
+
+.
+(117)
+Therefore, the eigenvalue problem has been reduced to ﬁnd the energies E for which the amplitudes An, satisfying
+(112) and (117), yield wave functions (106) that are normalized in the discrete sense (Kronecker delta function) or in
+the continuous sense (Dirac delta function), corresponding to the discrete or continuum spectrum of the Hamiltonian.
+To this aim, we shall also need the norm and scalar product of the wave functions written in terms of the amplitudes.
+Using eq.(92), the norm of (106) is given by
+⟨χ|χ⟩=
+∞
+X
+n=1
+log ℓn+1
+ℓn
+⟨An|An⟩,
+⟨An|An⟩= |A−,n|2 + |A+,n|2,
+(118)
+and the scalar product of two eigenfunctions with energies E1 and E2 by
+⟨χ1|χ2⟩=
+1
+iE12
+∞
+X
+n=1
+nh
+ℓiE12
+n+1 −ℓiE12
+n
+i
+A(1)
+−,n
+∗A(2)
+−,n −
+h
+ℓ−iE12
+n+1
+−ℓ−iE12
+n
+i
+A(1)
++,n
+∗A(2)
++,n
+o
+(119)
+where E12 = E1 −E2̸ = 0 and A±,n
+∗is the complex conjugate of A±,n. Since the Hamiltonian is self-adjoint this
+product will vanish.
+F.
+Semiclassical approximation
+The recursion relation (112), together with the initial condition (117), gives all the vectors Ak in terms of A1(ϑ)
+|Ak⟩= T −1
+k T −1
+k−1 · · · T −1
+2
+|A1(ϑ)⟩,
+k ≥2.
+(120)
+Except for some simple cases, as the harmonic model (see Appendix A), it will impossible to ﬁnd close analytic
+expressions of the product of matrices appearing in (120). The only hope to made progress is to evaluate (120) in the
+limit where the coeﬃcients ϱn are inﬁnitesimally small. We shall then assume that ϱn are proportional to a parameter
+ε that will be taken to zero at the end of the computation. This parameter plays the role of Planck’s constant, so the
+limit ε →0, will be interpreted as semiclassical. This interpretation is supported by the discretization of the massive
+Dirac equation, that led to eq.(80), according to which ρn = mℓ1/(4n1/2). The connection with the average Riemann
+zeros was achieved for mℓ1 = 2π, that corresponds in the semiclassical xp Berry-Keating model to the Planck constant
+ℓxℓp = 2πℏ.
+Taking ϱn = O(ε), the matrix Tn given in eq.(115) can be replaced in the limit ε →0, by
+Tn ≈1 + τn ≈eτn + O(ε2),
+τn =
+
+0
+2ϱn ℓ−2iE
+n
+2ϱ∗
+nℓ2iE
+n
+0
+
+.
+(121)
+Tn can be expressed exactly as the exponential of a matrix of the form of τn, but in the limit ε →0, it will converge
+towards the expression given in (121) up to order ε2. Plugging (121) into (120) yields
+|Ak⟩= e−τke−τk−1 . . . e−τ2|A1(ϑ)⟩+ O(ε2).
+(122)
+It is convenient to deﬁne a matrix τ1, of order ε, corresponding to the choice n = 1 of τn, which does not depend on
+E because ℓ1 = 1. The vector |A1(ϑ)⟩can be replaced by e−τ1|A1(ϑ′)⟩, where ϑ′ is equal to ϑ up to terms of order
+ε. Eq.(122) can then be written as
+|Ak⟩= e−τke−τk−1 . . . e−τ1|A1(ϑ)⟩+ O(ε2).
+(123)
+
+
+--- PDF PAGE 18 ---
+18
+where ϑ′ has been replaced by ϑ since they become the same quantity in the limit ε →0. The product of exponentials
+of matrices can be approximated by the Baker-Campbell-Haussdorf formula [68]
+eεAeεB = eε(A+B) + O(ε2),
+(124)
+that yields
+|Ak⟩= |AT
+k ⟩+ O(ε2),
+|AT
+k ⟩≡e−Pk
+n=1 τk|A1(ϑ)⟩.
+(125)
+Let us next deﬁne
+e−iΦk Rk =
+k
+X
+n=1
+ϱn ℓ−2iE
+n
+,
+eiΦk Rk =
+k
+X
+n=1
+ϱ∗
+n ℓ2iE
+n
+,
+(126)
+where Rk and Φk are real for real values of E. The factor 2 multiplying ϱn in eq.(121) can be absorbed into the
+parameter ε, so without loss of generality we can write
+|AT
+k ⟩= e−Rk(cos Φkσx+sin Φkσy)|A1(ϑ)⟩,
+(127)
+whose norm is
+⟨AT
+k |AT
+k ⟩= e2Rk(1 −cos(Φk −ϑ)) + e−2Rk(1 + cos(Φk −ϑ)).
+(128)
+The discrete eigenvalues of the Hamiltonian are those for which the norm (118) is ﬁnite, which is ensured if (128)
+vanishes suﬃciently fast when k →∞. The approximation we have performed above is a sort of inverse Trotter-Suzuki
+decomposition, e.g. limn→∞(eA/neB/n)n = eA+B, where a product of exponentials of non commuting operators is
+replaced by the exponential of their sum [78, 79]. Let us consider some examples.
+1.
+Harmonic model
+This model is deﬁned by the parameters (see eq.(66) with ℓ0 = 1)
+ℓn = en/2,
+ϱn = ε,
+n = 0, . . . , ∞.
+(129)
+Let us remind that in this case the mirrors (delta functions) are labelled by n = 1, 2, . . . , while the boundary is located
+at ℓ0 = 1. ε can be positive or negative and is the semiclassical parameter. This model has an exact solution given
+in Appendix A, that allow us to verify the semiclassical approximation done below. From (126) one ﬁnds
+e−iΦk Rk = ε
+k
+X
+n=0
+e−inE =
+(
+ε(k + 1)
+E ∈2πZZ
+ε sin((k+1)E/2)
+sin(E/2)
+e−ikE/2 E /∈2πZZ
+.
+(130)
+In the case E ∈2πZZ, one can choose Rk = ε(k + 1) and Φk = 0. This identiﬁcation is not unique but simpliﬁes the
+calculation. The norm (128) is given by
+E ∈2πZZ →⟨AT
+k |AT
+k ⟩= e2ε(k+1)(1 −cos ϑ) + e−2ε(k+1)(1 + cos ϑ),
+(131)
+while the norm of the wave function χT , whose amplitudes are AT
+k , reads (see eq. (118))
+⟨χT |χT ⟩= 1
+2
+∞
+X
+n=0
+⟨AT
+n|AT
+n⟩= 1
+2
+∞
+X
+n=0
+h
+e2ε(n+1)(1 −cos ϑ) + e−2ε(n+1)(1 + cos ϑ)
+i
+.
+(132)
+This series diverges for all values of ϑ diﬀerent from 0 and π. This means that the energies E = 2πn, do not belong
+to the spectrum. On the other hand, if
+ϑ = 0 for ε > 0,
+or
+ϑ = π for ε < 0
+(133)
+the state has the norm
+⟨χT |χT ⟩=
+1
+e2|ε| −1 →
+1
+2|ε|,
+ε →0,
+(134)
+
+
+--- PDF PAGE 19 ---
+19
+The parameter ε can be absorbed into the normalization constant of the state. Hence, in the two cases (133) there is
+an inﬁnite number of normalized states with energies Em = 2πm (m ∈ZZ).
+In the case E /∈2πZZ, one can choose
+Rk = ε sin((k + 1)E/2)
+sin(E/2)
+,
+Φk = kE
+2 .
+(135)
+The limit E →2πm, yields Rk →ε(−1)mk(k + 1), eiΦk →(−1)mk and one recovers the previous result. If E /∈2πZZ,
+eq.(135) shows that |Rk| < |ε/ sin(E/2)| ∀k, hence the norm of AT
+k will be bounded and the corresponding states will
+be normalizable in terms of Dirac delta functions, e.g. they belong to the continuum spectrum.
+In summary, the spectrum of Hamiltonian of the harmonic model, in the limit ε →0, is given by the union of a
+continuum part, Specc, and a discrete part, Specd, where
+ϑ = 0, ε →0+ or ϑ = π, ε →0−: Specc →IR −2πZZ, Specd = 2πZZ
+(136)
+ϑ̸ = 0 and π, ε →0±
+: Specc →IR −2πZZ, Specd = ∅
+(137)
+Note that in the case ϑ̸ = 0, π, the energies E = 2πn are missing in the continuum. For ﬁnite values of ε the spectrum
+is given by (see Appendix A)
+ϑ = 0, ε > 0 or ϑ = π, ε < 0 : Specc = ∪∞
+n=−∞2π[n + δ, n + 1 −δ], Specd = 2πZZ,
+(138)
+where sin(πδ) = 2ε/(1 + ε2) (see eq.(A16)), so if ε →0 the gap between the intervals 2π[n + δ, n + 1 −δ] closes and
+the continuum spectrum becomes IR −2πZZ, and the discrete spectrum 2πZZ as in (136). When ϑ̸ = 0, π, one also
+recovers the spectrum in (137).
+Let us consider another example with the same values of ℓn but exponential decaying reﬂection amplitudes
+ℓn = en/2,
+ϱn = ε e−λn (λ > 0),
+n = 0, . . . , ∞,
+(139)
+that yields
+e−iΦkRk = ε e−(λ+iE)k/2 sinh((λ + iE)(k + 1)/2)
+sinh((λ + iE)/2)
+.
+(140)
+If λ = 0, one recovers eq.(130). Let us see if the discrete spectrum of the previous model survives when λ > 0. Taking
+E ∈2πZZ yields
+E ∈2πZZ →e−iΦkRk = ε 1 −e−λ(k+1)
+1 −e−λ
+.
+(141)
+Hence for any ﬁnite value of λ, the quantities Rk are bounded, and therefore the state belongs to the continuum, e.g.
+the discrete spectrum disappears, but it can be recovered in the limit λ →0, where Rk →ε(k + 1).
+2.
+Polylogarithm model
+This model is deﬁned by the parameters (see eq.(52) with ℓ1 = 1 )
+ℓn = n1/2,
+ϱn = εe−λn
+nσ
+(σ > 0, λ > 0),
+n = 1, . . . , ∞.
+(142)
+The positivity conditions on σ and λ ensures that ϱn →0 as n →∞, including the case where λ = 0. The norm of
+the wave function χT is given by (see eq.(118))
+⟨χT |χT ⟩= 1
+2
+∞
+X
+n=1
+log
+
+1 + 1
+n
+
+⟨AT
+n|AT
+n⟩,
+(143)
+so its convergence depends on the asymptotic behavior of ⟨AT
+n|AT
+n⟩/n. The ansatz (142) yields
+e−iΦk Rk = ε
+k
+X
+n=1
+e−λn
+nσ+iE ,
+(144)
+
+
+--- PDF PAGE 20 ---
+20
+that in limit k →∞becomes
+e−iΦ∞R∞=
+lim
+k→∞e−iΦk Rk = εLiσ+iE(e−λ),
+(145)
+where Lis(z) is the polylogarithm function [80]. In the limit λ →0+ there is the expansion
+e−iΦ∞R∞= ε
+
+λσ−1+iE Γ(1 −σ −iE) + ζ(σ + iE) + O(λ)
+
+.
+(146)
+If σ > 1, the term proportional to λσ−1+iE drops out and one is left with
+σ > 1, λ →0 →e−iΦ∞R∞= εζ(σ + iE),
+(147)
+which implies that the norm of AT
+k converges towards a constant, for any value of ϑ, and therefore the series (143)
+diverges logarithmically signaling a continuum of states normalizable in the Dirac delta sense. If σ < 1, the term
+proportional to λσ−1+iE dominates hence
+σ < 1, λ →0 →e−iΦ∞R∞≃ελσ−1+iE Γ(1 −σ −iE),
+(148)
+leading to
+R∞≃|ελσ−1Γ(1 −σ −iE)|,
+e−iΦ∞≃sign (ε)λiE
+Γ(1 −σ −iE)
+Γ(1 −σ + iE)
+1/2
+,
+(149)
+If λ is kept ﬁxed, the norm of AT
+k is bounded and one gets again a continuum spectrum. Let us see what happens in
+the limit λ →0. Here R∞→+∞, and therefore the norm of AT
+k does not blow up, and actually converges to zero,
+if and only if
+cos(Φ∞−ϑ) = 1 =⇒sign (ε)λ−iE
+Γ(1 −σ + iE)
+Γ(1 −σ −iE)
+1/2
+= eiϑ,
+(150)
+This result suggests that a regularized version of this model, involving the limit λ →0+, should contain eigenstates
+satisfying (150). For E >> 1, the Stirling formula provides the asymptotic behavior
+n(E) ≃
+E
+2π log 1
+λ + E
+2π log E
+2πe + 1
+4
+3
+2 −σ −sign ε
+
+−ϑ
+2π , E ≫1,
+(151)
+that in the limit λ →0, becomes a continuum. The parameter λ regularizes the model and in some respects is
+analogue to the cutoﬀΛ in Connes’s xp model, with Λ ∝1/λ. However, in eq.(151) the term E/(2π) log E/(2πe),
+appears with an opposite sign as compared with Connes model, and it does not have the meaning of missing spectral
+lines, but rather of a ﬁnite energy correction. Notice also that if σ = 1/2, the spectrum has the symmetry E ↔−E,
+provided ϑ = 0 if ε > 0 or ϑ = π if ε < 0, like in the harmonic model analyzed above.
+In summary, for σ > 1 the spectrum is a continuum related to the Riemann zeta function ζ(σ + iE). This result is
+consistent with the studies carried by several authors in the past where the zeta function appears in connection to the
+scattering states of some physical system [81]-[89]. However, for 0 < σ < 1 the connection with the zeta function is lost
+and only the smoothed zeros appear as a ﬁnite size correction to the level counting formula, in analogy with Connes’s
+version on the xp model, but with opposite sign. We are then forced to look for another ansatz for the reﬂection
+coeﬃcients ϱn, if the zeros are to be realized as discrete eigenvalues of the Hamiltonian HR in the semiclassical limit.
+A hint is provided by the harmonic model, where the eigenvalues En = 2πn, arises from the blow up of Rk(En) as
+k →∞. This property leads us to the next example.
+3.
+Riemann model
+The model is deﬁned by the parameters
+ℓn = n1/2,
+ϱn = ε µ(n)
+nσ
+(σ > 0),
+n = 1, . . . , ∞,
+(152)
+where µ(n) is the Moebius function that vanishes if n contains as divisor the square of a prime, and it is equal to 1
+(−1) if n is the product of an even (odd) number of distinct primes, that is [90]
+µ(n) =
+
+(−1)r If n = p1 . . . pr
+0
+If ∃p, p2|n
+.
+(153)
+
+
+--- PDF PAGE 21 ---
+21
+In this expression p1, . . . , pr are diﬀerent prime numbers. Integer numbers for which µ(n)̸ = 0 are called square free.
+The Moebius function has been used to construct an ideal gas of primons with fermionic statistics [91, 92]. In our
+model, µ(n) appears in order to amplify the interference between waves so that the Riemann zeros are not swept out
+in the semiclassical limit and become visible. In the limit k →∞one ﬁnds
+e−iΦ∞R∞= ε
+∞
+X
+n=1
+µ(n)
+nσ+iE =
+ε
+ζ(σ + iE),
+if
+ σ ≥1
+1
+2 < σ < 1, RH : True .
+(154)
+The case σ = 1 is equivalent to the Prime Number Theory, that was proved by Hadamard and de la Vall´ee-Poussin
+by showing that ζ(1 + it)̸ = 0, ∀t ∈IR [2]. Repeating the analysis performed in the previous models, we ﬁnd that
+for σ ≥1, the spectrum is given by IR. Indeed, for all values of E, the norm of Ak approaches a constant value in
+the limit k →∞, and consequently the norm (143) diverges logarithmically. The same thing occurs for 1/2 < σ < 1,
+under the RH according to which this region will be free of zeros.
+We are then left with the model with σ = 1/2 to provide a spectral realization of the zeros. Let us ﬁrst approach
+this case in the limit σ →1/2 when E = En is a zero, that is ζ(1/2 + iEn) = 0. Expressing the zeta function on the
+critical line as ζ(1/2 + iE) = Z(E)e−iθ(E), where Z(E) and θ(E) are the Riemann Siegel functions [2] one ﬁnds
+ζ(σ + iEn) = −i(σ −1/2)Z′(En)e−iθ(En) + O((σ −1/2)2),
+σ →1
+2
++
+,
+(155)
+where Z′(E) = dZ(E)/dE. For the sake of the argument we have assumed that En is a simple zero of Z(E), a fact
+that is unknown to hold for all zeros. If that is the case, the sign of the derivative of Z(E) at the zeros satisfy the
+rule
+sign Z′(En) = (−1)n+ 1
+2 (1+sign(n))
+(156)
+where the positive zeros are labelled as n = 1, 2, . . . , and the negative zeros as n = −1, −2, . . . . Equation (156) can
+be derived from the continuity of Z(E) and the fact that Z(1/2) < 0. Plugging (155) and (156) into (154) gives
+e−iΦ∞R∞≃
+εei(θ(En)+ π
+2 )
+(σ −1/2)Z′(En) = εei(θ(En)−π(n+ 1
+2 sign(n)))
+(σ −1/2)|Z′(En)|
+,
+σ →1
+2
++
+,
+(157)
+that leads to the choice
+R∞∼
+ε
+(σ −1/2)|Z′(En)| > 0,
+e−iΦ∞∼ei(θ(En)−π(n+ 1
+2 sign(n))).
+(158)
+Hence the limit σ →1/2, implies R∞→+∞, whereby the amplitude AT
+∞blows up unless the parameter ϑ satisﬁes
+cos(Φ∞−ϑ) = 1 →cos(θ(En) −π(n + 1
+2sign(n)) + ϑ) = 1,
+(159)
+in which case AT
+∞= 0, corresponding to a normalizable state. This is an important result that we shall derive more
+rigorously a bit later, but now let us discuss its implications.
+• The value of ϑ(En) satisfying eq.(159) can be written as (with En > 0)
+ϑ(En)
+π
+= n + 1
+2 −θ(En)
+π
+= n −⟨N(En)⟩+ 3
+2,
+(160)
+where ⟨N(E)⟩is the average number of zeros in the range [0, E] (see eq.(43)). In the absence of ﬂuctuations the
+average would be exact, that is ⟨N(En)⟩= n, whereby ϑ(En) = 3π/2, ∀n > 0. Hence a single value of ϑ would
+work for all the zeros. But the existence of ﬂuctuations make things more interesting. To hear a given zero [87]
+one has to ﬁne tune ϑ according to eq.(160), which pass to depend on the phase of the zeta function, θ(En).
+One thus obtains that the Riemann zeros and the phase of the zeta function both acquire a physical meaning
+in the model.
+• Berry [13], and Badhuri et al. [88] have argued that a better approximation to the average zeros is obtained if
+cos θ(En) ≃0 →θ(En)
+π
+≃n + 1
+2,
+n = 1, 2, . . . .
+(161)
+
+
+--- PDF PAGE 22 ---
+22
+200
+400
+600
+800
+1000
+n
+-2
+-1
+1
+2
+JHEnL
+-2
+-1
+0
+1
+2
+JHEL
+0.02
+0.04
+0.06
+0.08
+0.10
+0.12
+Frequency
+FIG. 3: Left: plot of ϑ(En) ∈(−π, π] given in eq.(160) for the 103 ﬁrst positive Riemann zeros. Right: histogram of ϑ(En).
+This result can be visualized by plotting the real and imaginary parts of ζ(1/2 + it) in the complex plane for a
+large interval of t. One obtains a collection of loops that cut the real axis at the Gram points where sin θ(t) = 0,
+and that just before crossing the origin at t = En, the loop cuts the imaginary axis, where cos θ(t) = 0. Badhuri
+et al. also show that θ(t) gives roughly the scattering phase shift of a non relativistic particle in an inverted
+harmonic potential (V (x) ∝−x2) with a hard wall at the origin. Now, replacing (161) into (160) gives that
+in average ϑ(En) ≃0 mod(2π). This result is conﬁrmed in Fig. 3 which shows ϑ(En) for the ﬁrst 103 zeros
+together with an histogram.
+So far we have considered the value of e−iΦ∞R∞, using eq.(154). To show the existence of discrete states for
+σ = 1/2, we need the ﬁnite sum giving e−iΦkRk, that can be computed using the Perron’s formula [90, 93]
+X
+1≤n≤x
+∗µ(n)
+nz
+= lim
+T →∞
+Z c+iT
+c−iT
+ds
+2πi
+1
+ζ(s + z)
+xs
+s ,
+c > 0,
+c > 1 −σ,
+σ = Re z
+(162)
+where P∗means that the last term in the sum must be multiplied by 1/2 when x is an integer. The integral (162)
+can be done by residue calculus [93]
+lim
+T →∞
+Z c+iT
+c−iT
+ds
+2πiF(s) =
+X
+Re sj<c
+Ressj F(s),
+F(s) =
+1
+ζ(s + z)
+xs
+s ,
+(163)
+where the sum runs over the poles sj of F(s) located to the left of the line of integration, that is Re sj < c. For
+z = 0, the sum (162) is basically the Mertens functions M(x) = Px
+n=1 µ(n) that plays an important role in Number
+Theory [2]-[4]. Here we are interested in the values z = 1
+2 +iE, with E a real number. Eq.(162) imposes the condition
+c > 1 −Re z = 1/2. Hence the poles of F(s) that contribute to (163) have their real part smaller than c, that is
+Re sj ≤1/2. The origin s = 0 is a simple pole if ζ(z)̸ = 0 and a multiple pole if ζ(z) = 0. In the latter case we shall
+assume that z is a simple zero so that the pole is double. The corresponding residues are given by
+Ress=0 F(s) =
+
+1/ζ(z)
+if ζ(z)̸ = 0,
+log(x)/ζ′(z) if ζ(z) = 0, ζ′(z) = 0.
+(164)
+The remaining poles of F(s) come from the zeros of ζ(s + z), except the case s = 0, that is included in (164). The
+trivial zeros of ζ contribute with the poles sn = −2n −z (n = 1, 2, . . . ), with residue
+Ress=−2n−z F(s) =
+x−2n−z
+−(2n + z)ζ′(−2n),
+n = 1, 2, . . . , ∞.
+(165)
+The non trivial zeros of ζ, denoted as ρm, contribute with the poles sm = ρm −z (note that Re sm < 1/2), with
+residue
+Ress=ρm−z F(s) =
+xρm−z
+(ρm −z)ζ′(ρm),
+ρm̸ = z
+(166)
+
+
+--- PDF PAGE 23 ---
+23
+Collecting results we ﬁnd
+X
+1≤n≤x
+∗µ(n)
+nz
+=
+1
+ζ(z) +
+X
+ρm
+xρm−z
+(ρm −z)ζ′(ρm) +
+∞
+X
+n=1
+x−2n−z
+−(2n + z)ζ′(−2n),
+if ζ(z)̸ = 0,
+(167)
+X
+1≤n≤x
+∗µ(n)
+nz
+= log x
+ζ′(z) +
+X
+ρm̸=z
+xρm−z
+(ρm −z)ζ′(ρm) +
+∞
+X
+n=1
+x−2n−z
+−(2n + z)ζ′(−2n),
+if ζ(z) = 0, ζ′(z)̸ = 0,
+These equations are formally exact, so it would be interesting to prove them and ﬁnd their range of validity. In what
+follows, we shall derive their consequences. Let us recall that the LHS of (167) gives essentially e−iΦkRk, where k is
+to be identiﬁed with x. Neglecting for a while the summands in these expressions one ﬁnds
+e−iΦk(E)Rk(E) ∼ε eiθ(E)
+Z(E) ,
+Z(E)̸ = 0,
+(168)
+e−iΦk(En)Rk(En) ∼ε log k ei(θ(En)+ π
+2 )
+Z′(En)
+,
+Z(En) = 0,
+Z′(En)̸ = 0.
+In the ﬁrst case Rk(E) remains bounded in the limit k →∞, that would yield a state in the continuum. In the second
+case we choose
+Rk(En) ∼
+ε log k
+|Z′(En)| > 0,
+e−iΦk(En) ∼ei(θ(En)−π(n+ 1
+2 sign(n))),
+k →∞
+(169)
+that can be compared with (158). Then imposing eq.(159), yields the asymptotic behavior of the norm of AT
+k (see
+eq.(128))
+⟨AT
+k |AT
+k ⟩→2e−2Rk = k−2ε/|Z′(En)|,
+k →∞,
+(170)
+and a wave function χT whose norm given by (143)
+⟨χT |χT ⟩∼1
+2
+∞
+X
+n=1
+1
+n⟨AT
+n|AT
+n⟩∼
+∞
+X
+n=1
+1
+n1+2ε/|Z′(En)| = ζ
+
+1 +
+2ε
+|Z′(En)|
+
+,
+(171)
+which is ﬁnite for any ε > 0 corresponding to a discrete eigenstate with energy En.
+Fig. 4 shows |Ak|2 in the case where E corresponds to a state in the continuum, and for the ﬁrst zero E1 = 14.13..,
+corresponding to a discrete state. In the latter case we took ϑ = ϑ(E1), that guarantees that the norm converges to
+zero except for some jumps. For other values like ϑ = π the norm increases with k. The same pattern is observed for
+other zeros. The values of ϑ(En) are mostly concentrated around 0 (see Fig. 3). Finally, we have computed the norm
+of the vector χT , using eq.(143) observing that, for the zeros, it converges to a ﬁnite value with the choice (160), and
+diverges in the remaining cases. These results are in agreement with eq.(171).
+Let us now return to the summands in eq.(167) that we neglected in the previous computation. The last term
+corresponding to the trivial zeros quickly converges to 0 as x = k →∞. The term associated to non trivial zeros
+on the critical line, ρm = 1/2 + iEm, Em ∈IR, oscillates as xρm−z = ei(Em−En) log x, and we expect that it gives
+subleading contributions to the main term that goes with log x.
+Finally, a zero oﬀthe critical line, say ρm =
+1/2 + E′
+m + iEm, Em, E′
+m > 0 ∈IR, would give a contribution xρm−z = xE′
+mei(Em−E) log x, that dominates over the
+remaining terms, for all values of E, leading to
+Rk(En) ∼εC(ρm, E) kE′
+m > 0,
+e−iΦk(En) ∼ei(Em−E) log k+α(ρm,E)),
+k →∞
+(172)
+where C(ρm, E) and α(ρm, E) do not depend on k. The expression of Rk(E) diverges when k →∞, but unlike the
+case of (169), the phase Φk(E) cannot be ﬁxed to a value that cancels the divergent term e2Rk in the norm (128).
+Hence |AT
+k |, would grow typically as exp(εCkE′
+m), so that the wave function χT will not be normalizable even in the
+continuum sense. This occurs for any value of E, so we arrive at the paradoxical conclusion that a zero oﬀthe critical
+line implies that the Hamiltonian HR does not have eigenstates !! That’s not certainly the case because HR is a well
+deﬁned self-adjoint operator, so we must conclude that oﬀcritical zeros do not exist. This result seems to provide a
+proof of the Riemann hypothesis, but one must be very cautious since it relies on several unproven assumptions.
+Comments:
+
+
+--- PDF PAGE 24 ---
+24
+500
+1000
+1500
+2000
+k
+1
+2
+3
+4
+5
+6
+ÈAk
+2
+500
+1000
+1500
+2000
+k
+0.02
+0.04
+0.06
+0.08
+0.10
+0.12
+0.14
+ÈAk
+2
+FIG. 4: Left: Plot of |Ak|2 given in eq.(128) for E = 24, with k = 10, . . . , 2000, ε = 0.5, ϑ = π.
+Right: E1 = 14.13..,
+k = 10, . . . , 2000, ε = 0.25, ϑ = ϑ(En)
+• In the spectral realization proposed above there cannot exist zeros outside the critical line in the form of
+resonances. As explained above, their presence leads to the non existence of eigenvectors of the Hamiltonian
+HR.
+• von Neumann and Wigner showed that in ordinary Quantum Mechanics it is possible to have a bound state
+immersed in the continuum [68, 94]. They used a potential that decays as 1/r with oscillations that trap the
+particle thanks to interference eﬀects. There is a general class of models with this property [95]-[97], and they
+all require a ﬁne tuning of couplings. That this phenomena may happen for the Riemann zeros was suggested
+in [32] using a xp model with non local interactions.
+• The delta function potential needed to reproduce the zeros depends on the Moebius function µ(n) that exhibits
+an almost random behavior.
+This result is reminiscent of the fractal structure of the quantum mechanical
+potentials built to reproduce the lowest values of prime numbers and the Riemann zeros. The latter potentials
+were built from the smooth ones obtained by Mussardo, for the primes [98], and Wu and Sprung, for the zeros
+[99], and have a fractal dimension around 2 and 1.5 respectively [100]-[102].
+4.
+Dirichlet model
+We shall brieﬂy describe how the previous results can be generalized to Dirichlet Lχ−functions. These are analytic
+functions constructed from a Dirichlet character χ as [4]
+Lχ(s) =
+∞
+X
+n=1
+χ(n)
+ns
+=
+Y
+p
+1
+1 −χ(p)p−s
+ℜs > 1,
+(173)
+where the product runs over the prime numbers (Euler formula). A character χ of modulus q, is an arithmetic function
+satisfying χ(mn) = χ(m)χ(n), χ(1) = 1, χ(m + qn) = χ(m), χ(n) = 0 if q divides n [4]. One has that |χ(n)| = 1 or
+0, and if χ(n) = ±1, 0, the character is called real. The number of characters with modulus q is given by the Euler
+totient function φ(q), that counts the number of coprime divisors of q. For q = 1, the character is χ1(n) = 1, ∀n, that
+corresponds to the Riemann zeta function ζ(s). Primitive characters are those that cannot be written as products of
+characters of smaller modulus q, and can be classiﬁed into even or odd if χ(−1) = 1, −1 respectively.
+The L-functions associated to primitive characters satisfy the functional relation
+Λχ(s) ≡
+π
+q
+−(s+aχ)/2
+Γ
+s + aχ
+2
+
+Lχ(s) = eiϵχ Λ¯χ(1 −s),
+eiϵχ = i−aχ Gχ
+√q ,
+(174)
+where aχ = 0 (1) for an even (odd) character, ¯χ is the character conjugate to χ, e.g. ¯χ(n) = χ∗(n), and Gχ is the
+Gauss sum
+Gχ =
+q
+X
+n=1
+χ(n)e2πin/q,
+|Gχ| = √q.
+(175)
+
+
+--- PDF PAGE 25 ---
+25
+On the critical line s = 1/2 + it, eq.(174) reads
+π
+q
+−it/2
+Γ
+1 + 2aχ
+4
++ it
+2
+
+Lχ
+1
+2 + it
+
+= eiϵχ
+π
+q
+it/2
+Γ
+1 + 2aχ
+4
+−it
+2
+
+L¯χ
+1
+2 −it
+
+.
+(176)
+For t real it is useful to parameterize the L functions as
+t ∈IR →L∗
+¯χ
+1
+2 −it
+
+= Lχ
+1
+2 + it
+
+= Zχ(t) e−iθχ(t),
+(177)
+where Zχ(t) is real and eiθχ(t) is a phase that can be found from eq.(176)
+e2iθχ(t) = e−iϵχ
+π
+q
+−it Γ
+
+1+2aχ
+4
++ it
+2
+
+Γ
+
+1+2aχ
+4
+−it
+2
+,
+e2i(θχ(t)+θχ(−t)) = e−iϵχ.
+(178)
+θχ(t) coincides with θ(t) when χ is the identity character. For real characters, the zeros of Lχ, appear symmetrically,
+Lχ(1/2 + itn) = Lχ(1/2 −itn) = 0, that is reﬂected in the properties, Zχ(−t) = Z(t) and θχ(−t) = −θχ(t). However
+for complex characters this symmetry is broken.
+The Dirac model associated to Lχ will be deﬁned by the parameters
+ℓn = n1/2,
+ϱn = ε µ(n)χ(n)
+nσ
+(σ > 0),
+n = 1, . . . , ∞.
+(179)
+Note that one can deal with complex characters thanks to the existence of two types of mass terms, ¯ψψ and ¯ψγ5ψ.
+The characters χ(n) acquire a physical meaning related to the reﬂection coeﬃcient of the nth mirror. This provides
+a uniﬁed framework to deal with the whole family of Dirichlet L-functions.
+We can repeat the analysis done for the zeta function to ﬁnd the discrete eigenenergies in the spectrum.
+For
+example, the asymptotic limit of e−iΦk Rk is given by
+e−iΦ∞R∞= ε
+∞
+X
+n=1
+µ(n)χ(n)
+nσ+iE
+=
+ε
+Lχ(σ + iE),
+(180)
+which shows that the zeros of Lχ(1/2 + iE) appear as poles of R∞, that lead eventually to discrete states, provided
+ϑ is ﬁne tuned appropriately. Assuming that the zeros of Lχ(1/2 + iE) are simple, the value of ϑ(En) for which En
+is a discrete state is given by
+ϑ(En)
+π
+= n + 1
+2 (1 + bχ + sign(n)) −θ(En)
+π
+,
+bχ = sign Zχ(1/2).
+(181)
+For the zeta function, bχ = −1, eq.(160) is recovered from (181). We expect the zeros of the Dirichlet L functions,
+associated to primitive characters, to form the discrete spectrum of the corresponding Hamiltonians. That would
+amount to a proof of the Generalized Riemann hypothesis.
+V.
+CPT SYMMETRIES AND AZ CLASSES
+The statistical properties of the Riemann zeros, conjectured by Montgomery and conﬁrmed numerically by Odlyzko,
+have been one of the main motivations to search for a spectral origin of these numbers. The conjecture is that the
+zeros satisfy, locally, the GUE law, which implies that the Riemann dynamics breaks the time reversal symmetry.
+Deviations from the GUE law were later on identiﬁed by Berry and collaborators, as a trace of the semiclassical origin
+of the zeros and a breakdown of universality. It is thus of great interest to study the discrete CPT symmetries and
+RMT universality classes of the Hamiltonians discussed in previous sections.
+The action of the time reversal symmetry (T ), charge conjugation or particle-hole symmetry (C), and parity or
+chirality (P) on a vector ψ are deﬁned as [103, 104]
+ψT = T ψ∗,
+ψC = C ψ∗,
+ψP = P ψ,
+(182)
+
+
+--- PDF PAGE 26 ---
+26
+where T, C, P are unitary matrices, i.e. TT † = CC† = PP † = 1 and ψ∗is the complex conjugate of ψ. Here ψ is
+the column vector formed by the coeﬃcients of a pure state of a Hilbert space in an orthonormal basis. T and C are
+antiunitary transformations and P is unitary. A Hamiltonian H has T , C or P symmetry if it satisﬁes the conditions
+HT = T H∗T † = H,
+HC = C Ht C† = −H,
+HP = P H P † = −H.
+(183)
+Since H is hermitean, H∗= Ht, then the T symmetry becomes T Ht T † = H. Notice that P is the product of T and
+C, and one can choose P = CT †. There is a basis where T and C are real, and symmetric or antisymmetric matrices,
+i.e. T t = ±T and Ct = ±C, in which case unitarity implies T 2 = ±1 and C2 = ±1. If a symmetry is broken, say
+T , one writes T 2 = 0. Counting all the possibilities one arrives to ten symmetry classes, as found by Altland and
+Zirnbauer (AZ), that include the classical Wigner-Dyson gaussian ensembles: GOE, GUE, and GSE as well as their
+chiral versions chGOE, chGUE, chGSE [105]. Among the 10 AZ classes there are 4 that break time reversal symmetry,
+which are the candidates to describe the zeros of ζ and other L-functions (see Table 1).
+AZ T 2 C2 P 2 Top
+A
+0
+0
+0
+0
+AIII 0
+0
+1
+ZZ
+D
+0
+1
+0 ZZ2
+C
+0
+-1
+0
+0
+Table 1.- The AZ classes where the time reversal symmetry is broken. Column ”Top” denotes the topological
+invariants of the class in one spatial dimension.
+Let us review brieﬂy the main properties of the classes of Table 1 and their relations with the problem at hand.
+Class A characterizes Hamiltonians of the form H = A, where A is an hermitean matrix, with no further conditions
+placed on it. The statistical properties of random matrices of this form are described by GUE. As shown in Table 1,
+all the CPT symmetries are broken and there is no topological invariant in 1D.
+Class D characterizes Hamiltonians of the form H = A, where A is imaginary and antisymmetric. The eigenvalues
+of A appear in pairs {En, −En}, and if the dimension of the matrix A is odd there is a zero eigenvalue. The Berry-
+Keating Hamiltonian H = (xˆp+ˆpx)/2 belongs to this class, since here T = C = 1 and Ht = −H [46]. The Hamiltonian
+H = √x(ˆp+ℓ2
+pˆp−1)√x also belongs to class D provided the parameter ϑ, that characterizes its self-adjoint extensions,
+is 0 or π. The latter choices ensure that the eigenvalues of H come in pairs {En, −En}, and that if ϑ = 0, then E0 = 0
+is eigenvalue [43, 44]. We can thus identify ϑ/π = 0, 1 as the ZZ2 = {0, 1} topological invariant of class D in 1D.
+Class C characterizes Hamiltonians of the form H = A +⃗σ ·⃗S, where At = A∗= −A,⃗St =⃗S∗=⃗S and⃗σ are
+the Pauli matrices that act in an additional 2 dimensional Hilbert space, that can be seen as a spin 1/2 [46]. Here
+C = iσy, so T 2 = −1. The eigenvalues of H come in pairs {En, −En}, as in class D. Srednicki proposed recently
+that class C is associated to the zeros of the Dirichlet L-functions whose characters are real and even, that includes
+the zeta function [46]. He was led to this proposal by a conjecture due to Katz and Sarnak [106] according to which
+these L-functions form a family related by a sort of symplectic symmetry, and by the fact that the spacings of their
+zeros agree asymptotically with the GUE distribution.
+Class AIII, is a chiral version of GUE (chGUE) and characterizes Hamiltonians with the block structure
+H =
+ 
+0
+A
+A† 0
+!
+,
+P =
+ 
+1
+0
+0 −1
+!
+,
+PHP † = −H,
+(184)
+where A is a complex matrix and P the chiral operator. The eigenvalues of H come in pairs {En, −En}. If A is a
+matrix of dimension N+ × N−, then the number of zeros eigenvalues is |N+ −N−| that explains the ZZ topological
+invariant of this class. Class chGUE, together with its relatives chGOE and chGSE, describe massless Dirac fermions
+and have been applied to study the QCD Dirac operator, partition functions, etc [107]-[110].
+Let us next study the symmetry classes of the Rindler Hamiltonians constructed in previous sections. First of all,
+the massless Hamiltonian
+HR = √ρ ˆpρ
+√ρ σz,
+(185)
+admits diﬀerent representations of the CPT symmetries [104]. Indeed, T and P can be realized as σx or iσy, and C
+as σz or 1. Adding a mass term to (185) selects a particular realization, e.g.
+HR = √ρ ˆpρ
+√ρσz + mρσx →T = σx,
+C = σz,
+P = iσy.
+(186)
+
+
+--- PDF PAGE 27 ---
+27
+This Hamiltonian acts on the wave functions satisfying the BC (31). One can verify that this BC preserves T , for
+all values of ϑ, however the symmetry C is preserved only if ϑ = 0, π. Hence in these two cases, the Hamiltonian
+(186) belongs to class BDI (chGOE) since T 2 = C2 = 1.
+We mentioned in section II.E that the Hamiltonian
+H = √x(ˆp + ℓ2
+pˆp−1)√x( see eq. (45)) has the same spectrum as (186) with the identiﬁcations (46). We show above
+that the former Hamiltonian belongs to class D, while we have found now that (186) belongs to class chGOE. There
+is no contradiction between these results. In both cases the C symmetry explains the pairing of energies {En, −En},
+while the T symmetry appears from the doubling of degrees of freedom in the Dirac model.
+Finally, let us show that the Dirac model associated to the Riemann zeros belongs to class AIII, with chiral operator
+P = iσy. First of all notice that the matching conditions (89) are preserved by the action of P, because in this model
+r′
+n = r′′
+n = 0, and then
+χ(ℓ−
+n ) = Ln χ(ℓ+
+n ) →χP (ℓ−
+n ) = Ln χP (ℓ+
+n ),
+Ln = PLnP †.
+(187)
+On the other hand, if χ is the eigenfunction with energy En it satisﬁes the BC (91)
+−ieiϑ(En)χ−(ℓ1) = χ+(ℓ1) →−ie−iϑ(En)χP
+−(ℓ1) = χP
++(ℓ1),
+(188)
+where χP
+∓= ±χ±. The function ϑ(En), given in eq.(160) for n > 0, satisﬁes that −ϑ(En) = ϑ(−En) which, together
+with the equation PHRP † = −HR, implies that if χ is an eigenstate with energy En, then χP is an eigenstate with
+energy −En. Hence the pairing of energies is explained by the chiral symmetry and not by the charge conjugation
+symmetry as the Hamiltonian (186).
+One can perform a change of basis that brings the chiral operator P and
+the Hamiltonian (185) into the form (184), with A = i√ρ ˆpρ √ρ that is a real and antisymmetric matrix in some
+orthonormal basis. The Hamiltonian we are dealing with is therefore a subclass within the class chGUE.
+VI.
+CONCLUSIONS
+We have proposed in this paper that a combination of Quantum Mechanics and Relativity Theory is the key to the
+spectral realization of the Riemann zeros. The old message of P´olya and Hilbert was that Quantum Mechanics should
+play a central role in this realization, an idea that is behind the successful applications of RMT, and Quantum Chaos,
+to Number Theory. What is new is that Einstein’s theory of Relativity must also be present. The reason is that the
+properties of accelerated objects, in Minkowski space-time, can be used to encode and process arithmetic information.
+In some sense, spacetime becomes an analogue computer, or simulator, that allows an accelerated observer to multiply
+numbers, and distinguish primes from composite, by measuring the proper times of events involving massless particles.
+In this way the prime numbers acquire a classical relativistic meaning associated to primitive trajectories of particles,
+along the lines suggested by the periodic orbit theory in Quantum Chaos.
+The combination of Quantum Mechanics and Relativity is of course a Relativistic Quantum Field Theory, that in
+our case is the Dirac theory of fermions in Rindler space-time, the latter being the geometry associated to moving
+observers. The time evolution in this space is generated by the Rindler Hamiltonian that coincides with the Berry-
+Keating Hamiltonian ±(xˆp + ˆpx)/2, each sign corresponding to the chirality of the fermion. This operator is also the
+generator of dilations of the Rindler radial coordinate x, but in the presence of delta function potentials, associated
+to the prime numbers, scale invariance is broken. This has the dramatic eﬀect that the spectrum is a continuum,
+where the Riemann zeros are missing, in analogy with the result found by Connes in the adelic approach to the RH.
+However, the moving observer can ﬁne tune the phase factor of the reﬂection of the fermion at the boundary, in such
+a way that a bound state appears with an energy given by a Riemann zero. The phase factor at the boundary is
+given essentially by the phase of the zeta function at the corresponding zero. This result is obtained in a limit where
+the perturbation of the massless Dirac action by the delta potential is inﬁnitesimally small, so that the bound state
+is immersed in a continuum of states. This weak coupling limit is reminiscent to the semiclassical limit that leads to
+the Gutzwiller formula for the ﬂuctuations of the energy levels in chaotic systems. The previous scenario leads to a
+proof of the Riemann hypothesis but more work is required to fully support this claim.
+The present work suggests the possibility of an experimental observation of the Riemann zeros as energy levels.
+The system proposed here does not look realistic at the moment, but there are theoretical proposals to realize the
+Rindler geometry using cold atoms and optical lattices [111, 112]. Another possible route is to use the Quantum Hall
+eﬀect where xp arises as an eﬀective low-energy Hamiltonian [38, 54]. On a more theoretical perspective, this work
+points towards a relation between Riemann zeros and black holes, whose near horizon geometry is in fact Rindler
+[113]. The role played by the privileged observer in our construction reminds the brick wall model introduced by ’t
+Hooft to regularize the horizon of a black hole [114]. Throughout this paper the prime numbers have been treated as
+classical objects. However, they turn into quantum objects in the Prime state formed by the superposition of primes
+
+
+--- PDF PAGE 28 ---
+28
+in the computational basis of a quantum computer [115, 116]. This poses the question whether the Prime state could
+be created with the same tools as the Riemann zeros become energy levels.
+Acknowledgements.- I am very grateful for suggestions, and conversations to Jos´e Ignacio Latorre, Bel´en Paredes,
+Paul Townsend, Michael Berry, Jon Keating, Javier Rodr´ıguez-Laguna, Manuel Asorey, Jose Luis Fern´andez Barb´on,
+Giuseppe Mussardo, Andr´e LeClair, Mark Srednicki, Javier Molina, Luis Joaqu´ın Boya and Miguel Angel Mart´ın-
+Delgado. This work has been ﬁnanced by the Ministerio de Ciencia e Innovaci´on, Spain (grant FIS2012- 33642),
+Comunidad de Madrid (grant QUITEMAD) and the Severo Ochoa Program.
+Appendix A: The harmonic model
+We ﬁrst discuss some general properties of the transfer matrix Tk that will be used later on to derive the exact
+spectrum of the harmonic model. Let us consider the transfer matrix (115), with r′
+k = 0, and the condition |rk| < 1.
+It is easy to see that Tk can be written as
+Tk =
+1
+1 −r2
+k
+ 
+r2
+k + 1
+2rk ℓ−2iE
+k
+2rkℓ2iE
+k
+r2
+k + 1
+!
+= e−iϕkσz egkσx eiϕkσz,
+(A1)
+where e±gk are the eigenvalues of Tk (positive from the condition |rk| < 1)
+egk = 1 + rk
+1 −rk
+,
+e−gk = 1 −rk
+1 + rk
+,
+(A2)
+sign gk = sign rk,
+|rk| < 1,
+and
+ϕk = E log ℓk,
+k = 1, . . . , ∞.
+(A3)
+Replacing (A1) into (112) gives the recursion relation
+|Ak−1⟩= e−iϕkσz egkσx eiϕkσz |Ak⟩,
+k ≥2.
+(A4)
+We now deﬁne the vector
+|ˆAk⟩= eiϕkσz |Ak⟩,
+k ≥1,
+(A5)
+that satisﬁes
+|ˆAk−1⟩= e−i∆kσz egkσx |ˆAk⟩,
+k ≥2,
+(A6)
+where
+∆k = ϕk −ϕk−1 = E log
+ℓk
+ℓk−1
+,
+k ≥2.
+(A7)
+Notice that
+|ˆA1⟩= |A1(ϑ)⟩.
+(A8)
+Eq.(A6), gives an alternative way to solve the eigenvalue problem that admits an interesting physical interpretation
+as the evolution of a kicked rotator with spin 1/2 [58]. In this interpretation the term e−i∆kσz represents the rotation
+of the spin around the z-axis, with an energy E during a time elapse log(ℓk/ℓk−1), after which the spin is kicked
+with an imaginary magnetic ﬁeld with strength gk along the x-direction. Kicked rotators of this sort are currently
+employed to analyze quantum chaos in simple situations [58].
+Let us next consider the harmonic model deﬁned by eq.(129), that according to eqs.(A2, A7) correspond to constant
+values of gk = g and ∆k = ∆
+ℓn = en/2,
+ϱn = rn = ε −→eg = 1 + ε
+1 −ε,
+∆= E
+2 .
+(A9)
+
+
+--- PDF PAGE 29 ---
+29
+4 Π ∆
+2
+4
+6
+8
+10
+12
+E
+-3
+-2
+-1
+1
+2
+3
+g
+FIG. 5:
+The region in shadow represents the values of E and g where the matrix S is elliptic, that corresponds to states in the
+continuum (see eq.(A15)). In the white region the matrix S is hyperbolic, and contains the discrete spectrum whose location
+depend on g and ϑ by eq.(A14). For ϑ = 0, π, the eigenstates are at En = 2πn for all values of g (see eq.(A13)). The horizontal
+line corresponds to a value of the coupling constant g. Its intersection with the shadow regions give the continuum spectrum
+that form the bands (A16) separated by a gap 4πδ.
+In this case the recursion relation (A6) can be iterated yielding
+|ˆAk+1⟩= Sk |A1(ϑ)⟩,
+k ≥0,
+(A10)
+where the matrix S is given by
+S = e−gσxeiEσz/2 =
+ 
+cosh g eiE/2
+−sinh g e−iE/2
+−sinh g eiE/2
+cosh g e−iE/2
+!
+.
+(A11)
+Making the replacement E →E+2π, the matrix S changes by an overall sign, which in turn implies that the spectrum
+has a 2π periodicity. Let us consider the case where E = 2πn, that yields
+S = (−1)n e−gσx −→|ˆAk+1⟩= (−1)nk e−gkσx
+ 
+1
+eiϑ
+!
+,
+(A12)
+which is convergent only in the following two cases
+ϑ = 0, g > 0 −→|ˆAk+1⟩= (−1)nk e−gk
+ 
+1
+1
+!
+,
+(A13)
+ϑ = π, g < 0 −→|ˆAk+1⟩= (−1)nk e−|g|k
+ 
+1
+−1
+!
+.
+These are normalizable eigenstates for all values of the coupling constant g, even in the limit g ≃2ε →0. Normalizable
+states for ϑ̸ = 0, π are also possible. The relation between the energy, E, g and ϑ is given by
+tan(E/2) =
+sin ϑ
+cos ϑ + coth g ,
+1 + cos ϑ coth g > 0,
+(A14)
+that in the limit g →0 gives the discrete eigenvalues E →2πn. Plugging ϑ = 0, π in (A14) we recover the cases
+(A13). The continuum spectrum of the model can be derived from the condition that S is an elliptic matrix (note
+that det S = 1)
+|Tr S = 2 cosh g cos E/2| < 2 ←→| sin E/2| > tanh g,
+(A15)
+
+
+--- PDF PAGE 30 ---
+30
+and consists of energy bands separated by a gap 4πδ that are shown in Fig. 5
+Specc = ∪∞
+n=−∞2π[n + δ, n + 1 −δ],
+sin(πδ) = tanh g =
+2ε
+1 + ε2 .
+(A16)
+In the limit g →0, the gap closes, and the discrete energy states En = 2πn become immersed in the continuum IR.
+[1] B. Riemann, ”On the number of primes less than a given magnitude”, translated by H. M. Edwards from ”Ueber die
+Anzahl der Primzahlen unter einer gegebenen Gr¨osse” (1859) in [2].
+[2] H.M. Edwards, Riemann’s Zeta Function, Academic Press, New York, 1974.
+[3] E.C. Titchmarsh, The Theory of the Riemann Zeta Function, Oxford Univ. Press, Oxford, 1986.
+[4] H. Davenport, Multiplicative Number Theory, Grad. Texts in Math., vol. 74, Springer-Verlag, New York, 2000.
+[5] E. Bombieri, Problems of the Millennium: The Riemann Hypothesis, Clay Mathematics Institute, (2000).
+[6] P. Sarnak, Problems of the Millennium: The Riemann Hypothesis, Clay Mathematics Institute, (2004).
+[7] B. Conrey, ”The Riemann Hypothesis, Notices of AMS, March, 341 (2003).
+[8] H.L. Montgomery, ”Distribution of the zeros of the Riemann zeta function”, in Proceedings Int. Cong. Math. Vancouver
+1974, Vol. I, Canad. Math. Congress, Montreal, 379 (1975).
+[9] A.M. Odlyzko, ”Supercomputers and the Riemann zeta function”, in Supercomputing 89: Su- percomputing Structures
+& Computations, Proc. 4-th Intern. Conf. on Supercomputing, In- ternational Supercomputing Institute, St. Petersburg,
+FL, 348 (1989).
+[10] A.
+M.
+Odlyzko,
+The
+1020-th
+zero
+of
+the
+Riemann
+Zeta
+Function
+and
+70
+Million
+of
+its
+Neighbors,
+www.dtc.umn.edu/?odlyzko/unpublished.
+[11] Bohigas and M. J. Gianonni, in Mathematical and Computational Methods in Nuclear Physics, edited H. Araki, J. Ehlers,
+K. Hepp, R. Kippenhahn, H. Weidenmuller and J. Zittart (Springer Verlag, Berlin, 1984).
+[12] M. L. Mehta, Random Matrices, Elsevier Ltd. The Netherlands, 2004.
+[13] M. V. Berry, “Riemann’s zeta function: a model for quantum chaos?”, in Quantum Chaos and Statistical Nuclear Physics,
+edited by T. H. Seligman and H. Nishioka, Springer Lecture Notes in Physics Vol. 263 , p. 1, Springer, New York (1986).
+[14] E. Bombieri, “Prime territory: exploring the inﬁnite landscape at the base of the number system”, The Sciences 32, 30
+(1992).
+[15] M. C. Gutzwiller, Chaos in Classical and Quantum Mechanics, SpringerVerlag, New York, 1990.
+[16] J. P. Keating, ”Periodic orbits, spectral statistics and the Riemann zeros”, in Supersymmetry and Trace Formulae: Chaos
+and Disorder, eds. I.V. Lerner, J.P. Keating & D.E Khmelnitskii (Plenum Press), 1-15 (1999).
+[17] P. Leboeuf, A. G. Monastra, O. Bohigas, ”The Riemannium”, Reg. Chaot. Dyn. 6, 205 (2001); arXiv:nlin/0101014.
+[18] E. Bogomolny, ”Quantum and Arithmetical Chaos”, in Frontiers in Number Theory, Physics and Geometry, Les Houches,
+2003; arXiv:nlin/0312061
+[19] A. Selberg, ”Harmonic analysis and discontinuous groups in weakly symmetric Riemannian spaces with applications to
+Dirichlet series”, Journal of the Indian Mathematical Society 20, 47 (1956).
+[20] D. A. Hejhal, ”The Selberg trace formula for PSL(2, R)”., vol. 548 of Lecture Notes in Mathematics, Springer- Verlag
+(1976).
+[21] D. Schumayer, D. A. W. Hutchinson, ”Physics of the Riemann Hypothesis”, Rev. Mod. Phys. 83, 307 (2011);
+arXiv:1101.3116.
+[22] M. Watkins, Number Theory and Physics arxiv: http://empslocal.ex.ac.uk/people/staﬀ/mrwatkin//zeta/physics.htm
+[23] M. du Satoy, The Music of the Primes, Harper Collins, NewYork (2003).
+[24] K. Sabbagh, Dr. Riemann’s zeros, Atlantic books, London (2003).
+[25] J. Derbyshire, Prime obsession, A plume book, New York (2003).
+[26] D. Rockmore, Stalking the Riemann hypothesis, Jonathan Cape, London (2005).
+[27] M.V. Berry, J.P. Keating, “H = xp and the Riemann zeros”, in Supersymmetry and Trace Formulae: Chaos and Disorder,
+ed. J.P. Keating, D.E. Khmelnitskii and I. V. Lerner, Kluwer, 1999.
+[28] M. V. Berry, J. P. Keating, “The Riemann zeros and eigenvalue asymptotics”, SIAM Review 41, 236, 1999.
+[29] A. Connes, “Trace formula in noncommutative geometry and the zeros of the Riemann zeta function”, Selecta Mathe-
+matica New Series 5 29, (1999); math.NT/9811068.
+[30] B. Aneva, ”Symmetry of the Riemann operator”, Phys. Lett. B 450, 388 (1999).
+[31] G. Sierra, ”The Riemann zeros and the cyclic renormalization group”, J. Stat. Mech.: Theor. Exp. (2005) P12006;
+math.NT/0510572.
+[32] G. Sierra, ”H = xp with interaction and the Riemann zeros”, Nucl. Phys. B 776, 327 (2007); math-ph/0702034.
+[33] J. Twamley and G. J. Milburn, ”The quantum Mellin transform”, New J. Phys. 8, 328 (2006); quant-ph/0702107.
+[34] G. Sierra, ”Quantum reconstruction of the Riemann zeta function”, J. Phys. A: Math. Theor. 40 (2007) 1; math-
+ph/0711.1063.
+[35] G. Sierra, ”A quantum mechanical model of the Riemann zeros”, New J. Phys. 10, 033016 (2008); arXiv:0712.0705.
+[36] J. C. Lagarias, ”The Schro¨edinger operator with Morse potential on the right half line”, Communications in Number
+Theory and Physics 3 (2009), 323; arXiv:0712.3238.
+
+
+--- PDF PAGE 31 ---
+31
+[37] J-F. Burnol, ”On some bound and scattering states associated with the cosine kernel”, arXiv:0801.0530.
+[38] G. Sierra and P.K. Townsend, ”The Landau model and the Riemann zeros”, Phys. Rev. Lett. 101, 110201 (2008);
+arXiv:0805.4079.
+[39] S. Endres and F. Steiner, ”The Berry-Keating operator on L2(R>, dx) and on compact quantum graphs with general
+self-adjoint realizations”, J. Phys. A: Math. Theor. 43, 095204 (2010); arXiv:0912.3183.
+[40] G. Regniers and J. Van der Jeugt, ”The Hamiltonian H = xp and classiﬁcation of osp(1|2) representations”, Workshop
+Lie Theory and Its Applications in Physics VIII (Varna, 2009); arXiv:1001.1285.
+[41] G. Sierra, ”A Physics pathway to the Riemann hypothesis”, Eds M. Asorey, et al. J. Vicente Garc´ıa Esteve, M. F. Ra˜nada,
+J. Sesma, Prensas Univ. Zaragoza, Spain (2009); arXiv:1012.4264.
+[42] E. de Rafael, “Large-Nc QCD, Harmonic Sums and the Riemann Zeros”, Nucl. Phys. Proc. Suppl. 207, 290 (2010);
+arXiv:1010.4657.
+[43] G. Sierra and J. Rodr´ıguez-Laguna, ”The H = xp model revisited and the Riemann zeros”. Phys. Rev. Lett. 106, 200201
+(2011); arXiv:1102.5356
+[44] G. Sierra, ”General covariant xp models and the Riemann zeros”, J. Phys. A: Math. Theor. 45 055209 (2012);
+arXiv:1110.3203.
+[45] M. Srednicki, ”The Berry-Keating Hamiltonian and the Local Riemann Hypothesis”, J. Phys. A: Math. Theor. 44 305202
+(2011); arXiv:1104.1850.
+[46] M. Srednicki, ”Nonclasssical Degrees of Freedom in the Riemann Hamiltonian”, Phys. Rev. Lett. 107, 100201 (2011);
+arXiv:1105.2342.
+[47] M. V. Berry and J. P. Keating, ”A compact hamiltonian with the same asymptotic mean spectral density as the Riemann
+zeros”, J. Phys. A: Math. Theor. 44, 285203 (2011).
+[48] K. S. Gupta, E. Harikumar and A. R. de Queiroz, ”A Dirac type xp-Model and the Riemann Zeros”, Eur. Phys. Lett.
+102 10006 (2013); arXiv:1205.6755.
+[49] J. Molina-Vilaplana and G. Sierra, ”An xp model on AdS2 spacetime”, Nucl. Phys. B 877, 107 (2013); arXiv:1212.2436.
+[50] R. V. Ramos and F. V. Mendes, “Riemannian Quantum Circuit”, Phys. Lett. A 378, 1346 (2013) arXiv:1305.3759.
+[51] J. C. Andrade, “Hilbert-P´olya conjecture, zeta-functions and bosonic quantum ﬁeld theories”, Int. J. Mod.Phys. A28,
+1350072 (2013); arXiv:1305.3342.
+[52] J. Kuipers, Q. Hummel and K. Richter, ”Quantum graphs whose spectra mimic the zeros of the Riemann zeta function”,
+Phys. Rev. Lett 112, 070406 (2014); arXiv:1307.6055.
+[53] M. C. Nucci, ”Spectral realization of the Riemann zeros by quantizing H = w(x)(p + ℓ2
+p/p): the Lie-Noether symmetry
+approach”, Journal of Physics: Conference Series 482, 012032 (2014).
+[54] M. Stone, ”An analogue of Hawking radiation in the quantum Hall eﬀect”, Class. Quantum Grav. 30, 085003 (2013);
+arXiv:1209.2317.
+[55] Ya. G. Sinai, ”Dynamical systems with elastic reﬂections”, Russ. Math. Surv. 25, 137, (1970).
+[56] M. V. Berry, ”Quantizing a Clasically Ergodic system: Sinai’s billiard and the KKR method”, Annals of Physics, 131,
+163 (1981).
+[57] O. Bohigas, M. J. Giannoni and C. Schmit, ”Characterization of Chaotic Quantum Spectra and Universality of Level
+Fluctuation Laws”, Phys. Rev. Lett. 52, 1 (1984).
+[58] H.J. St¨ockmann, Quantum Chaos: an introduction, Cambridge University Press, Cambridge, 1999.
+[59] C. Holzhey, F. Larsen and F. Wilczek, ”Geometric and Renormalized Entropy in Conformal Field Theory”, Nucl. Phys.
+B 424 , 443 (1994); arXiv:hep-th/9403108.
+[60] W. Rindler, ”Kruskal space and the uniformly accelerated frame”, Am. J. Phys. 34, 1174 (1966).
+[61] C. W. Misner, K. S. Thorne, and J. A. Wheeler, Gravitation, Ed. W. H. Freeman, (1973).
+[62] L. C. B. Crispino, A. Higuchi, G. E. A. Matsas, ”The Unruh eﬀect and its applications”, Rev. Mod. Phys. 80 787 (2008);
+arXiv:0710.5373.
+[63] W. G. Unruh, ”Notes on black-hole evaporation”, Phys. Rev. D 14, 870 (1976).
+[64] S. W. Hawking, ”Black-hole explosions”, Nature (London) 248, 30 (1974).
+[65] S. W. Hawking, ”Particle creation by black-holes”, Comm. Math. Phys. 43, 199 (1975).
+[66] P. Di Francesco, P. Mathieu and D. S´en´echal, Conformal Field Theory, Springer-Verlag, London, 1996.
+[67] J. von Neumann. Math. Ann., 102, 49 (1929).
+[68] A. Galindo and P. Pascual, ”Quantum Mechanics I”, Springer-Verlag, Berlin, 1991.
+[69] M. Abramowitz and I. A. Stegun, Handbook of mathematical functions, Dover, New York 1974. (1972).
+[70] J-F. Burnol, ”Spacetime causality in the study of the Hankel transform”, Ann. Henri Poincar 7, 1013 (2006);
+arXiv:math/0509619.
+[71] B. Sutherland and D. C. Mattis, ”Ambiguities with the relativistic delta-function potential”, Phys. Rev. A 24, 1194
+(1981).
+[72] B.H.J. McKellar and G.J.. Stephenson Jr., ”Relativistic quarks in one- dimensional periodic structures”, Phys. Rev. C
+35, 2262 (1987).
+[73] M. G. Calkin, D. Kiang and Y. Nogami, ”Nonlocal separable potential in the one-dimensional Dirac equation”, Phys.
+Rev. B 38, 1076 (1988).
+[74] C. L. Roy, ”Boundary conditions across a d-function potential in the one-dimensional Dirac equation”, Phys. Rev. A 47,
+3417 (1993).
+[75] F. Dom´ınguez-Adame, ”The Dirac equation with surface delta interactions”, J. Phys. A 23, 1993 (1990).
+[76] F. A. B. Coutinho, Y. Nogami, and J. F. Perez, ”Generalized point interactions in one-dimensional quantum mechanics”,
+
+
+--- PDF PAGE 32 ---
+32
+J. Phys. A 30, 3937 (1997).
+[77] M. Asorey, A. Ibort, G. Marmo, ”Global Theory of Quantum Boundary Conditions and Topology Change”, Int. J. Mod.
+Phys. A20, 1001 (2005);hep-th/0403048.
+[78] H. F. Trotter, ”On the product of semi-groups of operators”, Proc. Amer. Math. Soc. 10, 545 (1959).
+[79] M. Suzuki, ”Generalized Trotter’s Formula and Systematic Approximants of Exponential Operators and Inner Derivations
+with Applications to Many-Body Problems”, Commun. Math. Phys. 51, 183 (1976).
+[80] http://en.wikipedia.org/wiki/Polylogarithm
+[81] B. S. Pavlov and L. D. Fadeev, ”Scattering theory and authomorphic functions”, Sov. Math. 3, 522 (1975). Plenum
+Publishing Corp. translation, N.Y.
+[82] P. D. Lax and R.S. Phillips, Scattering Theory for Automorphic Functions, Princeton University Press (1976).
+[83] M. C. Gutzwiller, ”Classical Quantization of a Hamiltonian with Ergodic Behavior”, Phys. Rev. Lett. 45, 150 (1980).
+[84] M. C. Gutzwiller, ”Stochastic behaviour in quantum scattering”, Physica D 7, 341 (1983).
+[85] N. L. Balazs, and A. Voros, ”Chaos on the pseudo sphere”, Phys. Rep. 143, 109 (1986).
+[86] M. V. Berry, ”Quantum chaology” (The Bakerian lecture), R. Soc. London, Ser. A 413, 183 (1987).
+[87] M. V. Berry, “Hearing the music of the primes: auditory complementarity and the siren song of zeta”, J. Phys. A: Math.
+Theor. 45 382001 (2012).
+[88] R.K. Bhaduri, A. Khare, and J. Law, ”Phase of the Riemann zeta function and the inverted harmonic oscillator”, Phys.
+Rev. E 52, 486 (1995); chao-dyn/9406006.
+[89] S. Joﬃly, ”Jost function, prime numbers and Riemann zeta function”, math-ph/0303014
+[90] T. M. Apostol, Introduction to Analytic Number Theory, Springer, New-York, 1976.
+[91] B. Julia, “Statistical theory of numbers, in Number Theory and Physics”, eds. J. M. Luck, P. Moussa, and M. Waldschmidt,
+Springer Proceedings in Physics, Vol. 47, 276, Springer-Verlag, Berlin, 1990.
+[92] D. Spector, “Supersymmetry and the Moebius Inversion Function”, Commun. Math. Phys. 127 , 239 (1990).
+[93] R. Baillie, ”Experiments with Zeta zeros and Perron’s formula”, arXiv:1103.6226.
+[94] J. von Neumann and E. P. Wigner, ”¨Uber Merkw¨urdige Diskrete Eigenwerte”, Z. Phys. 30, 465 (1929).
+[95] B. Simon, ”On positive eigenvalues of one body Schr¨odinger operators”, Comm. Pure. Appl. Math. 12, 531 (1969).
+[96] M. Arai and J. Uchiyama, ”On the von Neumann and Wigner Potentials”, J. Diﬀ. Eq. 157, 348 (1999).
+[97] J. Cruz-Sampedro, I. Herbst, R. Mart´ınez-Avenda˜no, ”Perturbations of the Wigner-Von Neumann potential leaving the
+embedded eigenvalue ﬁxed”, Annales Henri Poincar´e 3, 331 (2002).
+[98] G. Mussardo, “The quantum mechanical potential for the prime numbers”; cond-mat.9712010.
+[99] H. Wu and D. W. L. Sprung, “Riemann zeros and a fractal potential”, Phys. Rev. E 48, 2595 (1993).
+[100] A. Ramani, B. Grammaticos, and E. Caurier, “Fractal potentials from energy levels”, Phys, Rev. E 51, 6323 (1995).
+[101] B. P. van Zyl and D. A. W. Hutchinson, “Riemann zeros, prime numbers, and fractal potentials”, Physical Review E, 67,
+066211 (2003).
+[102] D. Schumayer, B. P. van Zyl, P. Brandon and D. A. W. Hutchinson, “Quantum mechanical potentials related to the
+prime numbers and Riemann zeros”, Phys. Rev. E 78, 056215 (2008).
+[103] D. Bernard and A. LeClair, ”A Classiﬁcation of random Dirac fermions”, J. Phys A 35, 2555 (2002); arXiv:cond-
+mat/0109552
+[104] D. Bernard, E.A. Kim, and A. LeClair, ”Edge states for topological insulators in two dimensions and their Luttinger-like
+liquids”, Phys. Rev. B86 205116 (2012); arXiv:1202.5040.
+[105] A. Altland and M. Zirnbauer, ”Nonstandard symmetry classes in mesoscopic normal-superconducting hybrid structures”,
+Phys. Rev. B55, 1142 (1997).
+[106] N.M. Katz and P. Sarnak, ”Random matrices, Frobenius eigenvalues and monodromy”, Bull. Am. Math. Soc. 36, 1 (1999)
+(Am. Math. Soc., Providence, 1999).
+[107] J. J. Verbaarschot and T. Wettig, ”Random Matrix Theory and Chiral Symmetry in QCD”, Annu. Rev. Nucl. Part. Sci.
+50, 343 (2000); arXiv:hep-ph/0003017.
+[108] M.A. Stephanov, J.J.M. Verbaarschot and T. Wettig, ”Random Matrices”, Iin the Wiley Encyclopedia of Electrical and
+Electronics Engineering, Supplement 1 (2001); arXiv:hep-ph/0509286
+[109] J.J.M. Verbaarschot, ”Handbook Article on Applications of Random Matrix Theory to QCD”, Oxford Handbook of
+Random Matrix Theory, arXiv:0910.4134.
+[110] Y. V. Fyodorov, E. Strahov, ”On correlation functions of characteristic polynomials for chiral Gaussian Unitary Ensem-
+ble”, Nucl. Phys. B 647, 581 (2002); arXiv:hep-th/0205215.
+[111] O. Boada, A. Celi, J. I. Latorre and M. Lewenstein, ”Dirac Equation For Cold Atoms In Artiﬁcial Curved Spacetimes”,
+New J.Phys.13:035002 (2011); arXiv:1010.1716.
+[112] J. Rodr´ıguez-Laguna, A. Celi, L. Tarruell and M. Lewenstein, ”Synthetic Unruh eﬀect in cold atoms”. In preparation.
+[113] P. R. Giri, ”Physical realization for Riemann zeros from black hole physics”, arXiv:0905.4939.
+[114] G. t Hooft, ”On the quantum structure of a black hole”, Nucl. Phys. B 256, 727 (1985).
+[115] J. I. Latorre and G. Sierra, “Quantum Computation of Prime Number Functions”, Quant. Inf. and Comp., 14, 0577
+(2014); arXiv:1302.6245.
+[116] J. I. Latorre and G. Sierra, ”There is entanglement in the primes”, arXiv:1403.4765.

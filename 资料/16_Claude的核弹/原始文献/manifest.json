@@ -1,0 +1,72 @@
+[
+  {
+    "file": "Alpoge_Furman_2026_v2.pdf",
+    "url": "https://arxiv.org/pdf/2608.13637v2",
+    "pages": 21,
+    "bytes": 478663,
+    "sha256": "6de3b156342e7b4a802c34f8ef40432567e9dabe006938da04233f19fc4ef444"
+  },
+  {
+    "file": "Lamzouri_2026_v2.pdf",
+    "url": "https://arxiv.org/pdf/2609.02882v2",
+    "pages": 17,
+    "bytes": 535564,
+    "sha256": "305df7fcbbf96e61ccca2cbae13dcb2b7f9251b054d02dd0c78551982621046b"
+  },
+  {
+    "file": "Claude_Anthropic_2026.pdf",
+    "url": "https://www-cdn.anthropic.com/95c246936988e43127bc6b2ceb7077c1dad2d68e.pdf",
+    "pages": 17,
+    "bytes": 458932,
+    "sha256": "19f827bee5834d61aa6dd756cdaea582492703ddbfd6bdc2058de10b93f7e814"
+  },
+  {
+    "file": "Alpoge_Furman_informal_note.pdf",
+    "url": "https://www-cdn.anthropic.com/23455459f8832d06bb175cc0f88d019aed962ef8.pdf",
+    "pages": 5,
+    "bytes": 191249,
+    "sha256": "45e0330ad37965e5531fa1f4f11e5bebcae147a5237a3e5b3d029efa7ddf759d"
+  },
+  {
+    "file": "Claude_discovery_appendix.pdf",
+    "url": "https://www-cdn.anthropic.com/d7f3ecf1d01392d887f8bc974ca187e2a121b1ed.pdf",
+    "pages": 95,
+    "bytes": 1058230,
+    "sha256": "271aba2d2083ffa778a53c2994f2061fad7fdda450bc296ec49c7cc41e91dd2d"
+  },
+  {
+    "file": "Claude_E2_transcripts.pdf",
+    "url": "https://www-cdn.anthropic.com/8a0d1add3c637b858a9a181e98c40e9548c3f44f.pdf",
+    "pages": 116,
+    "bytes": 1952068,
+    "sha256": "ebb34c5ed65b1dc96a72bdf76068814a34da9ceb1675624f68a2088180123ada"
+  },
+  {
+    "file": "BGSTB_pair_correlation.pdf",
+    "url": "https://arxiv.org/pdf/2306.04799",
+    "pages": 13,
+    "bytes": 210602,
+    "sha256": "133071c4d85c875fe9b1a7d4001f22d7174270ab8f1fa8e6cee6178d20276ee9"
+  },
+  {
+    "file": "BGSTB_horizontal_zeros.pdf",
+    "url": "https://arxiv.org/pdf/2501.14545",
+    "pages": 16,
+    "bytes": 376884,
+    "sha256": "0a16b0b0f19b06490111e048a6841f4fe68717c546fae4cb7a44555dc0f96cb3"
+  },
+  {
+    "file": "Wang_short_intervals_2026_v2.pdf",
+    "url": "https://arxiv.org/pdf/2609.07918v2",
+    "pages": 17,
+    "bytes": 449124,
+    "sha256": "4866ccc54fc02582b32043b18f5b769666d407c355d492706e15dae0f517647b"
+  },
+  {
+    "file": "Aryan_Landau_Gonek.pdf",
+    "url": "https://arxiv.org/pdf/1902.05473",
+    "pages": 17,
+    "bytes": 213912,
+    "sha256": "659c0815b068a1b2f4e88700da007bfc9ce9a29b6b1868a2167c7f1b965cbce5"
+  }
+]

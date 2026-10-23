@@ -1,0 +1,650 @@
+
+--- PDF PAGE 1 ---
+The H = xp model revisited and the Riemann zeros
+Germ´an Sierra∗and Javier Rodr´ıguez-Laguna†
+∗Instituto de F´ısica Te´orica, CSIC-UAM, Madrid, Spain
+†Universidad Carlos III, Madrid, Spain
+Berry and Keating conjectured that the classical Hamiltonian H = xp is related to the Riemann
+zeros. A regularization of this model yields semiclassical energies that behave, in average, as the
+non trivial zeros of the Riemann zeta function. However, the classical trajectories are not closed,
+rendering the model incomplete. In this paper, we show that the Hamiltonian H = x(p + ℓ2
+p/p)
+contains closed periodic orbits, and that its spectrum coincides with the average Riemann zeros.
+This result is generalized to Dirichlet L-functions using diﬀerent self-adjoint extensions of H. We
+discuss the relation of our work to Polya’s fake zeta function and suggest an experimental realization
+in terms of the Landau model.
+One of the most promising avenues to prove the Rie-
+mann hypothesis (RH) is to ﬁnd a self-adjoint operator
+H whose spectrum contains the imaginary part of the
+non trivial Riemann zeros [1, 2]. This idea was suggested
+by Polya and Hilbert in the dawn of the XX century and
+still, one hundred years later, it remains unproved, as
+well as the RH itself (see [3] for a recent review on phys-
+ical approaches to the RH). There are signiﬁcant hints
+of the validity of the Polya-Hilbert conjecture. Two of
+them are: the Montgomery-Odlyzko law which states,
+that the local statistics of the Riemann zeros is given by
+the Gaussian Unitary Ensemble (GUE) of Random Ma-
+trix Theory, and the formal similarities between counting
+formulas of zeros in Number Theory and energy levels
+in Quantum Chaotic systems. In this web of relation-
+ships, Michael Berry suggested the existence of a classi-
+cal Hamiltonian whose quantum version would realize the
+Polya-Hilbert conjecture [4]. This conjectured Hamilto-
+nian must satisfy the following conditions: i) be chaotic,
+with isolated periodic orbits related to the prime num-
+bers, ii) break time reversal symmetry, to agree with the
+GUE statistics and iii) be quasi-one dimensional. These
+conditions were derived from a formal analogy between
+the ﬂuctuation part of the Riemann-Mangoldt formula of
+the zeros of the zeta function and the Gutzwiller formula
+for the ﬂuctuation term of the counting of energy levels
+in a chaotic quantum system.
+In 1999 Berry and Keating showed that the classical
+Hamiltonian Hcl = xp fullﬁlls conditions ii) and iii) but
+not condition i) [5].
+The failure of i) is dramatic be-
+cause this Hamiltonian is integrable, and therefore not
+chaotic, and moreover the classical trajectories are not
+closed, which leads naturally to a continuum spectrum.
+Indeed, the Hamiltonian Hcl = xp can be quantized in
+terms of the self-adjoint operator bH = (xbp + bpx)/2, with
+bp = −iℏd/dx, and its spectrum is given by the real line
+[6, 7].
+In order to obtain a discrete spectrum, out of
+the xp model, Berry and Keating imposed the conditions
+|x| ≥ℓx and |p| ≥ℓp, where the minimal length ℓx, and
+minimal momentum ℓp span the Planck area ℓxℓp = 2πℏ
+in phase space. Subject to these conditions, a particle
+with energy E > 0 describes a truncated hyperbola in
+phase space,
+x(t) = ℓxet,
+p(t) = E
+ℓx
+e−t,
+0 ≤t ≤TE = log E
+h . (1)
+The area bounded by this trajectory, and the x = ℓx
+and p = ℓp axes, measured in Planck units, gives the
+semiclassical number of states
+N(E) =
+E
+2πℏ
+
+log E
+2πℏ−1
+
++ 7
+8 + . . .
+(2)
+where the constant 7/8 comes from a Maslov phase.
+Rather remarkably, this formula coincides with the
+asymptotic
+behaviour
+of
+the
+average
+term
+in
+the
+Riemann-Mangoldt formula [1], where E/ℏis interpreted
+as the height of a non trivial zero. Incidentally, Connes
+also studied the xp Hamiltonian imposing the constraints
+|x| ≤Λ, |p| ≤Λ, where Λ is a cutoﬀ[8]. In the limit
+Λ →∞, one obtains semiclassically a continuum spec-
+trum, where the smooth Riemann zeros appear as miss-
+ing spectral lines. However, a more appropiate interpre-
+tation of Connes’s result is that Riemann’s formula gives
+a ﬁnite size correction to the energy levels.
+Connes’s
+regularization were later derived from the Landau model
+of a particle moving in 2D under the action of external
+magnetic and electric ﬁelds [9].
+A fundamental problem of the Berry-Keating model is
+that the classical trajectories are not closed. The particle
+starts at the phase space point (ℓx, E/ℓx), and stops at
+the point (E/ℓp, ℓp) in a time TE (see eq.(1)). The xp
+hamiltonian breaks time reversal, so the particle cannot
+return to its initial position along the time reversed path.
+Berry and Keating suggested diﬀerent ways to close the
+trajectories, such as the identiﬁcation of x and −x , and
+p and −p, or the use of symmetries, but no deﬁnite con-
+clusion was reached, and consequently, the connection of
+(2) with the Riemann formula could not be put on more
+solid grounds.
+The aim of this letter is to show that the closure prob-
+lem can be solved by a modiﬁcation of the xp model that
+preserves several of its features, but makes it into a con-
+sistent quantum model. First of all, we shall constrain
+the motion of the particle to the half line ℓx ≤x ≤∞
+arXiv:1102.5356v1  [math-ph]  25 Feb 2011
+
+
+--- PDF PAGE 2 ---
+2
+A
+B
+C
+FIG. 1:
+Classical trajectories given in eqs. (5) (continuous
+line) and (1) (dotted line)
+.
+while the momentum is allowed to take any real value.
+The classical Hamiltonian is deﬁned as
+Hcl = x
+ 
+p + ℓ2
+p
+p
+!
+,
+x ≥ℓx,
+p ∈IR
+(3)
+where ℓp is a coupling constant with dimensions of mo-
+mentum. If |p| >> ℓp, the extra term added to the xp
+Hamiltonian is negligible, but it becomes dominant if
+|p| << ℓp, forbidding the particle to escape to inﬁnity,
+since that would cost an inﬁnite energy. This result is
+made clear by the solution of the Hamilton equations
+˙x = x
+ 
+1 −ℓ2
+p
+p2
+!
+,
+˙p = p + ℓ2
+p
+p
+(4)
+given by
+x(t) =
+ℓx
+|p0|e2tq
+(p2
+0 + ℓ2p)e−2t −ℓ2p
+(5)
+p(t) = ±
+q
+(p2
+0 + ℓ2p)e−2t −ℓ2p.
+A complete cycle of a classical trajectory can be de-
+scribed as follows (see ﬁg 1). The particle starts at the
+point A = (ℓx, p0) (with |p0| ≥ℓp). Then, x increases
+and p decreases monotonically reaching the turning point
+B = (xm(E), ℓp), where xm(E) = E/2ℓp is the maximal
+elongation. After that, the particle moves backwards to
+the point C = (ℓx, ℓ2
+p/p0), which is attained in a time
+TE = cosh−1 E
+2h →log E
+h
+(E >> h)
+(6)
+where h ≡ℓxℓp should not still be identiﬁed with Planck’s
+constant 2πℏ. At the point C, the particle bounces oﬀ,
+meaning that its momentum ℓ2
+p/p0 becomes p0, and the
+cycle repeats itself, with TE being the period. The lat-
+ter process preserves the total energy, and it is analogue
+of the change in the momentum, p →−p of a particle
+hitting a wall. The classical energies are bounded from
+below by the condition |E| ≥Ecl
+0 = 2h. The minimum
+energy correspond to the static solutions x = ℓx and
+p = ±ℓp.
+An extra condition on the Riemann dynamics is the
+existence of complex periodic orbits (instantons) with pe-
+riods Tinst,m = πim (with m an integer) [5]. The orbits
+(1) of the xp model are periodic in imaginary time, but
+with a wrong period 2πi. After a complex time ∆t = iπ,
+the position and momenta change sign, which led Berry
+and Keating to suggest the aforementioned identiﬁcation
+between x and −x, and p and −p, which in any case does
+not close the orbits. This problem does not arise for the
+Hamiltonian (3), which contains complex periodic orbits
+with a period πi, as can be seen from eq.(5).
+The semiclassical number of states is given by the
+phase space area swept by the particle measured in units
+of 2πℏ, and it is given by
+N(E) =
+E
+2πℏ
+
+cosh−1 E
+2h −
+p
+1 −(2h/E)2
+
+(7)
+≃
+E
+2πℏ
+
+log E
+h −1
+
++ O(E−1),
+E
+2h >> 1.
+This formula agrees with eq.(2) if h = 2πℏ, up to the con-
+stant term, which has not been considered in (7). Let us
+now proceed to the quantization of the classical Hamil-
+tonian (3). We choose the normal ordering prescription,
+bH = x
+1
+2
+ 
+bp + ℓ2
+p
+bp
+!
+x
+1
+2 ,
+(8)
+where 1/bp is the 1D Green function satisfying bp bp−1 =
+bp−1bp = 1, and whose matrix elements are
+⟨x| 1
+bp |y⟩= −i
+ℏθ(y −x)
+(9)
+with θ(x) the Heaviside step function. bH acts on a wave
+function ψ as
+bHψ(x) = −ix
+1
+2
+
+ℏd
+dx
+n
+x
+1
+2 ψ(x)
+o
++ ℓ2
+p
+Z ∞
+ℓx
+dy
+ℏθ(y −x)y
+1
+2 ψ(y)
+
+.
+(10)
+This operator is hermitean, i.e. ⟨ψ1| bHψ2⟩= ⟨bHψ1|ψ2⟩,
+if both wave functions satisfy the non local boundary
+condition
+ℏℓ
+1
+2x eiϑ ψ(ℓx) + ℓp
+Z ∞
+ℓx
+dx x
+1
+2 ψ(x) = 0.
+(11)
+where ϑ ∈[0, 2π).
+To derive (11), we have assumed
+that ψ(x) decays asymptotically faster that x−1/2. Using
+eq.(10), the Schroedinger equation bHψE = EψE becomes
+an integro-diﬀerential equation which can be converted
+into a second order diﬀerential equation and a boundary
+condition. The solution of both equations yields a unique
+square integrable eigenfunction given by
+ψE(x) = x
+iE
+2ℏK 1
+2 −iE
+2ℏ
+ℓpx
+ℏ
+
+,
+(12)
+
+
+--- PDF PAGE 3 ---
+3
+x
+ÈΨEÈ
+FIG. 2: Absolute value wave functions ψE(x), given in eq.(12)
+(continuous line), and x−1
+2 + iE
+ℏ(dotted line).
+where Kν(x) is the modiﬁed K-Bessel function (the nor-
+malization factor is not included). The asymptotic be-
+haviour of (12) is given by
+ψE(x) ∼
+(
+x−1
+2 + iE
+ℏ
+x << xm(E)
+x−1
+2 + iE
+2ℏe−ℓpx/ℏx >> xm(E)
+(13)
+where xm(E) is the maximal length of the classical tra-
+jectory. If x << xm the wave function ψE(x) behaves, up
+to oscilations, as the eigenfunction x−1
+2 + iE
+ℏof the quan-
+tum Hamiltonian x
+1
+2 bpx
+1
+2 . However, ψE(x) drops expo-
+nentially in the classical forbidden region (see ﬁg 2). The
+hermiticity of bH, requires the eigenfunctions (12) to sat-
+isfy the boundary condition (11), which in turn provides
+the equation for the eigenenergies, En,
+ΞbH(E) ≡e−i ϑ
+2 K 1
+2 + iE
+2ℏ
+h
+ℏ
+
++ ei ϑ
+2 K 1
+2 −iE
+2ℏ
+h
+ℏ
+
+= 0.
+(14)
+All the solutions of this equation will be real, if the Hamil-
+tonian bH is, not only hermitean, but also self-adjoint. To
+verify this property we use the von Neumann theorem: bH
+is a self-adjoint operator if the deﬁciency indices n+ and
+n−coincide [10, 11]. These indices are the number of lin-
+early independent solutions of the equations bH†ψ = ±iψ.
+Then if n = n+ = n−, the operator bH admits inﬁnitely
+many self-adjoint extensions parameterized by matrices
+of the unitary group U(n).
+In our case we ﬁnd that
+n+ = n−= 1, therefore the self-adjoint extensions corre-
+spond to a phase, that can be identiﬁed with the factor
+eiϑ appearing in equations (11) and (14). This ends the
+proof of the reality of all the eigenenergies En.
+If ϑ̸ = π, all the eigenenergies are non vanishing and
+form time conjugate pairs {En, −En} with their asso-
+ciated eigenfunctions being related by the time reversal
+transformation ψ−En(x) = ψ∗
+En(x). If ϑ = π, there is a
+unique state of zero energy E0 = 0, and eigenfunction
+ψE0(x) ∝x−1
+2 e−lpx/ℏ, while the non zero energy states
+form again time conjugate pairs. The ground state en-
+ergies ±E0 depend strongly on ϑ and can be lower or
+higher than the classical value Ecl
+0 .
+To ﬁx the value of ϑ, corresponding to the average Rie-
+5
+10
+15
+20
+25
+30 E
+1000
+1001
+1002
+1003
+1004
+1005 E
+FIG. 3:
+From bottom to top: plot of −log |Ξ(E)| (Riemann
+zeros), average Riemann zeros, −log |Ξ b
+H(E)| (eigenenergies
+of b
+H for h = 2πℏ, ϑ = π/4, and −log |Ξ∗(E)| (Polya zeros).
+The cusp represents the zeros of the corresponding equations.
+mann zeros, we use the asymptotic behaviour of eq.(14),
+Ξ b
+H(E) ≃
+4πℏ
+h
+ 1
+2
+e−πE
+4ℏcos
+ E
+2ℏlog E
+2he −ϑ
+2
+
+,
+(15)
+which vanishes at
+E
+2πℏlog E
+2he −ϑ
+2π = n + 1
+2,
+n ∈ZZ.
+(16)
+If h = 2πℏand ϑ = 5π/4, one recovers the semiclassical
+estimates for N(E) given in eqs. (2) and (7). In refer-
+ences [4, 12], it is shown that a better estimate of the
+average position of the Riemann zeros is obtained equat-
+ing N(E) to a half integer n + 1
+2, rather than an integer,
+which in view of eq.(16) yields ϑ = π/4 (see ﬁg 3).
+A conﬁrmation of these results comes from a compar-
+ison with Polya’s work on the Riemann Ξ-function [13]
+(see also [1, 2]),
+Ξ(t) = 1
+2s(s −1)π−s/2Γ(s/2)ζ(s), s = 1
+2 + it,(17)
+which is an entire and even function in t, whose zeros co-
+incides with the non trivial zeros of ζ( 1
+2 +it). Polya made
+a Fourier expansion of (17) and truncated it, obtaining
+Ξ∗(t) = 4π2(K 9
+4 + it
+2 (2π) + K 9
+4 −it
+2 (2π)),
+(18)
+which is called Polya’s fake zeta function. since it shares
+several properties with Ξ(t).
+First of all, the zeros of
+Ξ∗(t) and Ξ(t), agree in average, as can be seen using
+the asymptotic expansion [2].
+Ξ∗(t) ∼π
+1
+4 2−5
+4 t
+7
+4 e−πt
+4 cos
+ t
+2 log
+t
+2πe + 7π
+8
+
+. (19)
+This expression vanishes when the argument of the co-
+sine is n + 1
+2, which conﬁrms the aforementioned rule for
+the average location of the Riemann zeros, and in turn
+the choice ϑ = π/4.
+A more remarkable fact is that
+all the zeros of Ξ∗(t) are real, as was proved by Polya
+using a general theorem on entire functions [13]. This
+theorem can also be applied to prove the reality of all
+the zeros of Ξ b
+H(E), a result that we obtained using the
+self-adjointness of the operator bH.
+
+
+--- PDF PAGE 4 ---
+4
+The RH is a particular case of the generalized Riemann
+hypothesis (GRH), which asserts that all the non trivial
+zeros of the Dirichlet L(χ, s)-functions, associated to the
+Dirichlet character χ, lie on the critical line Re s =
+1
+2.
+These functions are deﬁned by a series and associated
+Euler product (Re s > 1)
+L(s, χ) =
+∞
+X
+n=1
+χ(n)
+ns
+=
+Y
+p:prime
+1
+1 −χ(p)p−s ,
+(20)
+and their analytic extension to the complex plane. χ(n)
+are multiplicative arithmetic functions, i.e.
+χ(nm) =
+χ(n)χ(m), χ(n + qm) = χ(n), χ(1) = 1, where q is the
+modulus of χ. L-functions associated to primitive char-
+acters satisfy the functional relation [14],
+ξ(s, χ) =
+π
+q
+−
+s+aχ
+2
+Γ
+s + aχ
+2
+
+L(s, χ) = ϵχ ξ(1 −s, χ)
+(21)
+where aχ is the parity and ϵχ is the sign of a Gaussian
+sum,
+aχ = 1 −χ(−1)
+2
+, ϵχ =
+τχ
+iaχ q1/2 , τχ =
+q
+X
+n=1
+χ(n) e
+2πin
+q
+(22)
+A L-function is even (odd) if aχ = 0 (1). The Riemann
+zeta function corresponds to the trivial character χ(n) =
+1, ∀n, with aχ = 0, ϵχ = 1.
+Equation (21) yields the
+average location of the zeros of L(χ, s)
+t
+2π log q t
+2πe −1
+8 + aχ + ϵχ −1
+4
+= n + 1
+2
+(23)
+which leads us to the following identiﬁcation of parame-
+ters in the bH model (see eq.(16)),
+E
+ℏ= t,
+h = 2πℏ
+q ,
+ϑ = π
+4 (3 −2aχ −2ϵχ).
+(24)
+The Riemann zeta function corresponds to the case q = 1,
+for which h = 2πℏ, ϑ = π/4. The correspondence (24)
+implies that the constant h is quantized as a function of
+the modulus of the L-functions, attaining the classical
+limit, h →0, when q →∞.
+A physical realization of the Hamiltonian (3) is sug-
+gested by the work of reference [9], which showed that
+Hcl = xp emerges as the eﬀective Hamiltonian of an elec-
+tron moving in the x −y plane, subject to the action of
+a uniform magnetic ﬁeld B, perpendicular to the plane,
+and an electrostatic potential V (x, y) = V0 xy. If V = 0,
+the electron occupies the lowest Landau level which is
+completely degenerate. This degeneracy is broken by the
+potential V (x, y), which in perturbation theory becomes
+the 1D Hamiltonian Heﬀ= ω0 xp, where ω0 = V0ℓ2/ℏ(
+ℓ=
+p
+ℏc/eB is the magnetic length). The latter Hamil-
+tonian is obtained replacing y →ℓ2p/ℏin V (x, y). Con-
+sider now that the particle moves in the half-plane x ≥ℓ
+and that the electrostatic potential is
+V (x, y) = V0x
+
+y + (2πℓ/q)2
+y
+
+.
+(25)
+Then, the eﬀective Hamiltonian, in the lowest Landau
+level, in units of ω0, becomes (3), with the identiﬁcations
+ℓx = ℓ, ℓp = 2πℏ/qℓand h = 2πℏ/q.
+We expect the
+parameter ϑ to arise from an electric ﬁeld applied at the
+boundary x = ℓof the system.
+In summary, we have reformulated the Berry-Keating
+xp model in terms of the classical Hamiltonian Hcl =
+x(p+ℓ2
+p/p) deﬁned on the half-line x ≥ℓx, which posseses
+closed orbits and whose semiclassical spectrum agrees
+with the average Riemann zeros.
+The quantization of
+this Hamiltonian, yields a self-adjoint operator bH, and a
+non local boundary condition parameterized by an angle
+ϑ. The spectrum of bH agrees asymptotically with the
+semiclassical result and the eigenenergy equation is sim-
+ilar to Polya’s fake zeta function that approximates the
+Riemann’s Ξ function. The construction is generalized to
+the Dirichlet L−functions, supporting the idea that the
+GRH could have a proof based on a common quantum
+mechanical model. To achieve this goal one has of course
+to ﬁnd the quantum origin of the ﬂuctuations of the Rie-
+mann zeros. This work suggest two possible scenarios.
+One is to discretize the dynamics as in the Arnold’s cat
+map. The other is to modify the Hamiltonian in a non
+trivial way. Further research is required to clarify which
+path is the best.
+Acknowledgements.-
+We are grateful to Paul
+Townsend, Michael Berry and Jon Keating for conver-
+sations. This work has been ﬁnanced by Ministerio de
+Educaci´on y Ciencia, Spain (grant FIS2009-11654) and
+Comunidad de Madrid (grant QUITEMAD).
+[1] H.M. Edwards, “Riemann’s Zeta Function”, Academic
+Press, New York, 1974.
+[2] E. C. Titchmarsh, ”The Theory of the Riemann Zeta-
+Function”, Oxford University Press, New York, 2003.
+[3] D. Schumayer, D. A. W. Hutchinson arXiv:1101.3116.
+[4] M.V. Berry, in Quantum chaos and statistical nuclear
+physics, eds. T. H. Seligman and H. Nishioka, Springer
+Lecture Notes in Physics No. 263, 1 (1986).
+[5] M. V. Berry, J. P. Keating, Siam Review 41, 236, 1999.
+[6] G. Sierra, Nucl. Phys. B 776, 327 (2007).
+[7] J. Twamley, G. J. Milburn, N. J. Phys. 8, 328 (2006).
+[8] A. Connes, Selecta Mathematica 5 29, (1999).
+[9] G. Sierra, P.K. Townsend, Phys. Rev. Lett. 101, 110201
+(2008)
+[10] A. Galindo and P. Pascual, ”Quantum Mechanics I”,
+Springer-Verlag, Berlin, 1991.
+[11] M. Asorey, A. Ibort, G. Marmo, Int. J. Mod. Phys. A20,
+1001 (2005).
+[12] R.K. Bhaduri, Avinash Khare, and J. Law, Phys. Rev.
+E 52, 486 (1995)
+
+
+--- PDF PAGE 5 ---
+5
+[13] George P´olya, Acta Math. 48, 305 (1926).
+[14] H. Davenport, ”Multiplicative number theory”, Springer-
+Verlag, New-York, 1980.

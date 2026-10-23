@@ -1,0 +1,50 @@
+[
+  {
+    "file": "Das_Simmons_2025.pdf",
+    "url": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/24C96F3024C7C67CADEEC26B03348331/S0143385724000579a.pdf/exact_dimension_functions_of_the_prime_continued_fraction_cantor_set.pdf",
+    "pages": 20,
+    "bytes": 287978,
+    "sha256": "b4a39fe676394d5b22d93a7137198860e965633d05934aa1e175d268817bd4b2",
+    "note": "正式发表版本，CC BY 4.0"
+  },
+  {
+    "file": "Prime_factors_2502.15743.pdf",
+    "url": "https://arxiv.org/pdf/2502.15743v1",
+    "pages": 34,
+    "bytes": 2794422,
+    "sha256": "f08537be76abdb02af92f57ea29598a4ea2917276874d6cbfaeccb117f759d60",
+    "note": "2025预印本v1"
+  },
+  {
+    "file": "Prime_fractal_2603.00658.pdf",
+    "url": "https://arxiv.org/pdf/2603.00658v1",
+    "pages": 6,
+    "bytes": 301037,
+    "sha256": "901c62a6bf449b48105e3256d7e6c605781b97dc13b89cef1646c127a22d22f0",
+    "note": "2026预印本v1，未用于正文"
+  },
+  {
+    "file": "Lapidus_1505.01548.pdf",
+    "url": "https://arxiv.org/pdf/1505.01548",
+    "pages": 55,
+    "bytes": 541276,
+    "sha256": "85e2e1282c79c10db0895b8f3a4a5370d46908ec52c64c75e31ba5fa3fd92ebc",
+    "note": "作者2015综述，下载页面PDF为55页"
+  },
+  {
+    "file": "EMS_2025_Art_Ulam.pdf",
+    "url": "https://ems.press/content/serial-article-files/50624",
+    "pages": 12,
+    "bytes": 3159150,
+    "sha256": "fb4b90bd7a6660a29218514c4d5452da45f325b3f279e6dccd66baa7c0359a27",
+    "note": "EMS Magazine 135 (2025)，CC BY 4.0；PDF共12页含末尾附带内容"
+  },
+  {
+    "file": "Lapidus_Pomerance_1993.pdf",
+    "url": "https://www.math.dartmouth.edu/~carlp/fractal.pdf",
+    "pages": 29,
+    "bytes": 1696431,
+    "sha256": "fe1e8c645a3ef211de4f86f9c85f4474963a495d2c559d9d1eb916736367987e",
+    "note": "作者网站提供的1993期刊论文扫描"
+  }
+]

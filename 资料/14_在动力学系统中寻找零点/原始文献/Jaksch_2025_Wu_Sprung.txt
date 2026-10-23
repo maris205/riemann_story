@@ -1,0 +1,393 @@
+Successive generation of nontrivial Riemann zeros from a Wu-Sprung type potential
+Peter Jaksch∗
+(Dated: October 21, 2025)
+A series of numerical experiments are performed, where a symmetric potential is generated for
+the 1D time-independent Schr¨odinger equation, with an eigenspectrum that matches the imaginary
+part of the first nontrivial zeros of the Riemann Zeta Function. The potential is generated as a series
+of correction functions, where the starting point is a potential that matches the smooth Riemann
+– von Mangoldt approximation. It is found that the correction functions display a clear pattern
+that can be explained in simple terms, almost entirely dependent on the approximation error in the
+Riemann – von Mangoldt formula. This also provides an explanation for the fractal pattern in the
+potential that was observed in [3].
+INTRODUCTION
+According to the Hilbert - P´olya conjecture; if H is a self-adjoint operator and the eigenvalues of 1/2+iH correspond
+to the nontrivial zeros of the Riemann zeta function, then the Riemann hypothesis [1] follows. Important efforts to
+find such an operator have been done by e.g. [2] – the so-called Berry-Keating conjecture, and later by [4] (see [5] for
+an excellent introduction). In the latter case, the proposed operator is of the form
+ˆH =
+1
+1 −e−iˆp (ˆxˆp + ˆpˆx)(1 −e−iˆp),
+(1)
+where ˆp and ˆx are the quantum mechanical momentum and position operators, respectively. Although the eigenvalues
+of the operator match the nontrivial eigenvalues, it has not yet been possible to rigorously prove that the operator is
+self-adjoint.
+An alternative approach is to instead work with a self-adjoint operator on a specified domain and try to modify
+it’s eigenvalues to match the Riemann zeros. This approach has been taken in [3]. A similar approach is taken in
+the present paper. The operator is the Hamiltonian of the 1D time-independent Schr¨odinger on R, which, in suitable
+units, can be written as an eigenvalue problem
+
+−∂2
+∂x2 + V (x)
+
+Ψ(x) = EΨ(x)
+(2)
+The potential V (x) is assumed to be mirror symmetric around x = 0. If the kinetic term is denoted T, equation (2)
+can be written more compactly as (T + V )Ψ = EΨ.
+Instead of directly trying to match the Riemann zeros with the eigenvalue spectrum, it is easier to first match a
+smooth approximation to the zeros. Various such approximations have been derived (see e.g. [6]). In the present
+paper the earliest such approximation is used, referred to as the Riemann – von Mangoldt formula [1]. It states that
+the number N(T) of zeros of the zeta function with imaginary part greater than 0 and less than T satisfies
+N(T) = T
+2π log T
+2π −T
+2π + O(log T)
+(3)
+This function has to be inverted if, instead, the approximate location of each zero is of interest.
+Zn =
+2n
+πW(n/e),
+(4)
+where W is the Lambert W-function. FIG. 1 shows the approximation for the first 50 zeros. For brevity, the imaginary
+part of the nontrivial Riemann zeros in the upper half-plane will henceforth be referred to as simply; Riemann zeros.
+For later use it should be noted that the only zero that is larger than the approximation in FIG. 1 is Z34.
+arXiv:2510.16759v1  [quant-ph]  19 Oct 2025
+
+2
+FIG. 1: The imaginary part of the first 50 nontrivial Riemann zeros and the Riemann - von Mangoldt smooth approximation.
+A POTENTIAL FOR THE SMOOTH SPECTRUM
+It is possible to derive a potential V (x) in (2) whose eigenvalue spectrum matches (4). In [3] this is done analyt-
+ically for a slightly different smooth approximation, by assuming a semiclassical approximation, leading to an Abel
+integral equation. The present paper takes a similar approach but instead solves the problem numerically. Using the
+semiclassical WKB approximation (see [7]) the eigenvalue problem (2) gives the following relation
+Z x0
+−x0
+p
+E −V (x)dx =
+
+n + 1
+2
+
+π,
+(5)
+where E is the energy level, x0 is the classical turning point where V (x0) = E, and n = 0, 1, 2, . . . is a quantum
+number. Combining (5) with (3) gives
+Z x0
+−x0
+p
+E −V (x)dx = E
+2
+
+log
+ E
+2π
+
+−1
+
++ π
+2 .
+(6)
+An increase ∆E in energy gives a corresponding increase in the turning point ∆x0, such that V (x0 +∆x0) = E +∆E.
+From this relation, the shape of the potential can be calculated numerically if the starting value V (0) is known. By
+letting f(E) denote the right hand side of (6), and utilizing the assumption of mirror symmetry, an equation for the
+differences can be formulated
+2
+Z x0+∆x0
+0
+p
+E + ∆E −V (x)dx ≈f(E + ∆E).
+(7)
+Due to the smoothness of the problem it can be assumed that V (x) can be linearized on the interval [x0, x0 + ∆x0].
+Then ∆x0 can be calculated as
+∆x0 ≈
+3
+4
+√
+∆E
+
+f(E + ∆E) −2
+Z x0
+0
+p
+E + ∆E −V (x)dx
+
+.
+(8)
+
+3
+If the starting point V (0) is known, the above procedure can be repeated, with a chosen step-size ∆E, in order to
+generate the entire potential V (x) for an arbitrary value of x. From (6) it is clear that the left hand side of the
+equation is 0 if E = V (0). The right hand side of (6) can be solved numerically for finding the value of E such that
+f(E) = 0. With a suitable solution method this value can be calculated to be E ≈13.544, which is also the value
+of V (0). FIG. 2 (green line) shows the shape of the potential, generated by this method. It is relatively similar to a
+harmonic oscillator. This is not too surprising given that the spacing between the eigenvalues is relatively constant –
+a hallmark of the quantum harmonic oscillator.
+FIG. 2: Smooth potential with eigenvalues matching the approximate location of the nontrivial Riemann zeros, calculated from
+the Riemann - von Mangoldt formula. The figure on the right provides a zoomed-in view.
+It is possible to improve the accuracy of the matching of the eigenvalue spectrum by utilizing a clever variational
+method, devised in [3]. The method is repeated here for clarity. Let en be the actual eigenvalues of (2) and En the
+target eigenvalues. The least squares function to minimize is
+F =
+X
+n
+(en −En)2.
+(9)
+The functional derivative of en with respect to V (x) is
+δen
+δV (x) =
+δ
+δV (x) ⟨Ψn| T + V |Ψn⟩= Ψn(x)2,
+(10)
+where Ψn(x) is the normalized eigenfunction corresponding to eigenvalue n. For the least squares expression, this
+gives:
+δF
+δV (x) = 2
+X
+n
+(en −En)Ψn(x)2.
+(11)
+Normally, the problem is discretized on a set of grid points, in which case (11) becomes a gradient vector. A finite
+difference scheme is used to discretize the operator T:
+T = −1
+∆x2
+
+
+
+
+
+
+
+−2
+1
+· · ·
+1
+−2
+1
+· · ·
+...
+...
+...
+· · ·
+1
+−2
+1
+· · ·
+1 −2
+
+
+
+
+
+
+
+(12)
+
+4
+Note that Dirichlet boundary conditions at the endpoints have been implemented implicitly here. This will not cause
+any problems since, for the lower eigenfunctions that are of interest here, decay to 0 is rapid near the endpoints.
+In this case a regular grid with 20 000 points has been used. By also discretizing the potential on the same grid,
+the eigenproblem (2) can be turned into a standard eigenproblem for (sparse) matrices, for which there are efficient
+software implementations. The actual minimization of (9) can be performed by utilizing the gradient vector in an
+optimization algorithm. In this case, a conjugate gradient minimizer, together with a line search method, has been
+implemented in a MATLAB script. The adjustment of the potential, calculated by (8), can be seen in FIG. 2 (red
+line).
+SUCCESSIVE MATCHING OF RIEMANN ZEROS
+The tools and methods developed so far can be used to match the actual Riemann zeros; not just the smooth
+approximation. In the present paper this has been performed with a step-wise approach where one extra Riemann
+zero is matched in every new iteration, hoping that some identifiable pattern will emerge.
+This differs from the
+approach taken in [3] where a few sets with a large number of eigenvalues were matched at once. The results for the
+first four Riemann zeros is illustrated in FIG. 3 – FIG. 5. The terminology is chosen such that
+Vn(x) = V0(x) +
+i=n
+X
+i=1
+Ci(x),
+(13)
+where V0 is the corrected potential, derived in the previous section; Vn is the potential with an eigenspectrum
+that matches the first n Riemann zeros, and the Riemann – von Mangoldt approximation for higher eigenvalues. The
+potentials V1−V50 are calculated numerically, using the approach in the previous section, with Cn being postprocessed
+as Cn = Vn+1 −Vn.
+FIG. 3: Eigenvalue spectrum of the potentials in FIG. 5.
+
+5
+FIG. 4: Successive corrections to the smooth potential V0 in FIG. 2 for matching the first four nontrivial Riemann zeros.
+FIG. 5: Successive corrected potentials for matching the first four nontrivial Riemann zeros.
+
+6
+It can be seen in FIG. 4 that the corrections follow a surprisingly regular pattern. It seems to consist of a sine wave,
+symmetric around both axes, with constant amplitude, followed by exponentially decaying tails on either side. C1(x)
+consists of two tails, joined at x = 0; C2(x) has a single period of a sine wave between the tails; C3(x) has two periods,
+etc. It also seems like the wavelength increases farther away from the origin. Overall, the correction functions look
+remarkably similar to the (symmetric) eigenfunctions of the quantum harmonic oscillator (see FIG. 6), albeit with a
+constant amplitude instead of an increasing amplitude towards the classical turning points (dashed lines).
+FIG. 6: A symmetric eigenfunction for the quantum harmonic oscillator.
+Only one of the first 50 correction stands out by the fact that it seems to have a different sign. This is C34 (see FIG.
+7). It was previously noted that this number was also the only Riemann zero where the Riemann - von Mangoldt
+approximation was below the actual value. This leads to the suspicion that the amplitudes of the oscillating part of
+the correction functions is related to the smooth approximation error of a given Riemann zero.
+FIG. 7: The only correction, out of the first 50, with a different sign.
+C34 also displays quite large variations in amplitude. This could be a real effect but it may also be due to numeric
+noise, or the fact that inverse eigenproblems are notorious for the fact that they often lack a unique solution. In order
+to investigate if the variation in amplitude increases for higher corrections, C50 is shown below. Again, the amplitude
+is almost constant. Manual inspection shows that most correction functions seem to have only small variations in
+amplitude. In fact, this was the main reason for using the Riemann – von Mangoldt approximation, which is generally
+less accurate than more modern alternatives, such as the one used in [3].
+
+7
+FIG. 8: Correction number 50. Note the almost constant amplitude.
+FIG. 9: The amplitude of corrections C1 to C50 shows a strong correlation with the Riemann - van Mangoldt approximation
+error.
+
+8
+Based on the observation in the previous section, that the amplitude of the oscillating part of the correction
+functions seems correlated with the smooth approximation error, these two properties are plotted together in FIG.
+9. The amplitude is calculated numerically as the average peak value of the oscillating part of the correction. Indeed
+there is an obvious strong correlation. By doubling the approximation error, the numerically calculated amplitudes
+are recovered almost perfectly (see FIG. 10). In summary
+An = 2(Zn,a −Zn),
+(14)
+where, An is the amplitude of the oscillating part of Cn, Zn is Riemann zero n, and Zn,a is the Riemann – von
+Mangoldt approximation to Riemann zero n. This seems to hold, even for functions with a relatively large variation
+in amplitude, such as C34. It was also found to hold if the smooth approximation from [3] was used. The fact that
+the amplitude can be explained so well is rather unexpected.
+FIG. 10: The correction amplitudes can be accurately recreated by doubling the Riemann - von Mangoldt approximation error.
+The similarities with the quantum harmonic oscillator provides some hint on how to explain the local frequency of
+the periodic part of the correction. The semiclassical WKB approximation [7] is known to provide exact solutions for
+the quantum harmonic oscillator, on which the smooth potential in FIG. 2 is reminiscent. The local angular frequency
+from the WKB approximation is proportional to the semiclassical momentum p =
+p
+E −V (x), for a particle with
+a given energy E. The local wavelength for the correction functions is calculated by first finding the local max and
+min points, and then locating the two closest points where the function crosses 0. The local wavelength is twice the
+distance between the zero crossings. This procedure works best for the functions with higher wave numbers. FIG. 11
+shows numerical results for C20, C30, C40, and C50. In the same figure it can be seen that excellent agreement with
+the numerical method can be obtained by doubling the WKB frequency. The local wavelength is then defined as
+λn(x) =
+π
+p
+Zn −V (x)
+,
+(15)
+where Zn is the corresponding Riemann zero. With the results, obtained to far, it is now possible to reconstruct the
+oscillating part of the correction functions:
+C+
+n (x) = 2(−1)n(Zn,a −Zn) cos
+Z x
+0
+p
+Zn −Vndx
+
+.
+(16)
+To generate C−
+n (x) for negative values of x, the mirror symmetry condition can be used.
+
+9
+FIG. 11: The local wavelengths of corrections C20, C30, C40, C50, calculated numerically and with the WKB approximation.
+For lower wavenumbers, the fact that
+d2
+dx2 sin (ωx) = −ω2 sin (ωx) can be used to calculate the wavelength:
+λn(x) =
+2π
+p
+|C′′n(x)/C(x)|
+(17)
+This method is not numerically stable around the points where C(x) = 0. In FIG. 12 λn(x), calculated using (17), is
+plotted against the WKB approximation (15). Also in this case the agreement is good, except in the vicinity of the
+singularities.
+
+10
+FIG. 12: The local wavelengths of corrections C4, calculated numerically using the second derivative operator (blue line) , and
+with the WKB approximation (red line).
+In order to construct the functions Cn(x) on the entire domain of x-values, a reconstruction of the tail section is
+needed. From the graphs of various C-functions shown so far, it seems like the tail section can be described as a
+skewed exponential function. At first, this seems, again, similar to what happens in the classically forbidden region
+in the WKB approximation (see FIG. 6). However, a plot with the classical turning points marked (FIG. 13) shows
+that they are in a different location, compared to FIG. 6. After passing the classical turning points, the function
+should decay exponentially to 0. This is not the case in FIG. 13. Without a significant modification of the potential
+it does not seem possible to use the WKB approximation for the tail section. This problem has caused considerable
+difficulty. Fortunately, it may be possible to work around the problem without finding a simple explanation for how
+to generate the tails.
+FIG. 13: Potential V3 plotted together with correction C3 and the semiclassical turning points .
+
+11
+FIG. 14: Plume of all tails, normalized with amplitude, of C1 −C50 and shifted to x = 0 .
+FIG. 14 shows the tails of all 50 functions, normalized with the amplitude of the oscillating part, and shifted to
+x = 0. It seems like the tails are rather similar. There is some noticeable spread, but by plotting the tails one-by-one,
+no clear pattern can be discerned. It seems like the spread is caused mainly by random noise. From this observation,
+the tail is defined as the average of the 50 functions in FIG. 14, and rescaled slightly in order to start at -1 (see FIG.
+15). It is interesting to note that the average value of the tail function is very close to 0.
+FIG. 15: Average of all tails in FIG. 14 and rescaled to start at -1.
+
+12
+The function, defined through FIG. 15, can now be attached to the endpoints of the oscillating part of the C-
+functions, after rescaling with the amplitude of the oscillating part.
+FIG. 16 shows the result for the first four
+C-functions, where equation (16) has been used for the oscillating part of the functions. Overall, the agreement seems
+good.
+FIG. 16: Reconstruction of the successive corrections to the smooth potential in FIG. 2 for matching the first four nontrivial
+Riemann zeros.
+It is interesting to continue the reconstruction to higher functions. For C50 a small but noticeable drift can be seen
+(see FIG. 17). It is investigated if this shift can be compensated for by modifying equation (16) slightly by adding a
+small constant shift sn:
+C+
+n (x) = 2(−1)n(Zn,a −Zn) cos
+Z x
+0
+p
+Zn −(Vn + sn)dx
+
+.
+(18)
+The shift can be estimated by minimizing the least squares difference between the oscillating part of the original
+and reconstructed functions. Since the shift is a constant parameter, any simple 1D optimization algorithm will work.
+FIG. 18 shows the correlation between amplitude and the optimized shift from equation (18). It should be noted
+that this is a correction to a correction of an inverse eigenproblem, so too much cannot be expected in terms of
+numerical accuracy. Despite this, it seems to be possible to model the calculated shifts quite accurately, using only
+the amplitude, as can be seen in FIG. 19. Manual trial-and-error led to the relation
+sn = An −1
+3
+(19)
+
+13
+FIG. 17: The reconstructed function from equation (16) experiences some amount of drift in the frequency.
+FIG. 18: Shift for minimizing the drift in the reconstructed functions C1 −C50 versus amplitude.
+
+14
+FIG. 19: The shift sn for minimizing the drift in the reconstructed functions can be modeled relatively accurately.
+CONCLUSIONS
+Summarizing the observations in the previous sections leads to the following properties of Cn(x):
+1. Mirror symmetry around the y-axis: Cn(−x) = Cn(x).
+2. A periodic section (sine-wave) with constant amplitude An with n −1 periods.
+3. Amplitude An depends only on the approximation error in the Riemann – von Mangoldt formula.
+4. The local frequency is proportional to that in the semiclassical WKB approximation, with a small shift that can
+be modeled in terms of An.
+5. The oscillating part can be described by equations (18) and (19).
+6. A tail section, with an average value of 0, described by FIG. 15, which has to be scaled with the amplitude An.
+Finally, equation (13) is used to calculate V50, with the Cn-functions defined according to the above. This result
+can be compared to the direct numerical calculation of V50 in FIG. 20. The agreement is excellent! The same holds
+for the eigenvalue spectrum in FIG. 21. I can also be observed that the fractal pattern in the potential, identified in
+[3] starts to appear.
+Apart from the constant tail, the only parameter needed to define the correction function is the approximation error
+in the Riemann – von Mangoldt formula. This is indeed quite remarkable! It also leads to the intriguing possibility of
+formalizing the numerical experiments in this paper and hopefully gaining some new insights into the famous Riemann
+hypothesis itself.
+
+15
+FIG. 20: Potential with eigenvalues matching the first 50 nontrivial Riemann zeros.
+FIG. 21: The imaginary part of the first 50 nontrivial Riemann zeros and the eigenvalues calculated from the potential in FIG.
+20 . Notice the very good agreement.
+
+16
+∗Electronic address: peter.jaksch@gmail.com
+[1] Bernhard Riemann (1859), ¨Uber die Anzahl der Primzahlen unter einer gegebenen Gr¨osse, Monatsberichte der Berliner
+Akademie. In Gesammelte Werke, Teubner, Leipzig (1892).
+[2] Michael V. Berry, Jonathan P. Keating (1999a), Supersymmetry and Trace Formulae: Chaos and Disorder, New York:
+Plenum, pp. 355–367, ISBN 978-0-306-45933-7.
+[3] Hua Wu, D. W. L. Sprung. Riemann zeros and a fractal potential. Physical Review E. 48 (4): 2595–2598.
+[4] Carl M.Bender, Dorje C. Brody, Markus P. M¨uller (2017), Hamiltonian for the Zeros of the Riemann Zeta Function ,
+Physical Review Letters, 118 (13) 130201
+[5] https://www.quantamagazine.org/quantum-physicists-attack-the-riemann-hypothesis-20170404/
+[6] Timothy S. Trudgian (2014). An improved upper bound for the argument of the Riemann zeta function on the critical line
+II, J. Number Theory. 134: 280–292
+[7] Hall, Brian C. (2013), Quantum Theory for Mathematicians, Graduate Texts in Mathematics, vol. 267, Springer.

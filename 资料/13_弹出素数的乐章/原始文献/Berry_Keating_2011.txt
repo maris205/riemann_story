@@ -1,0 +1,1265 @@
+
+--- PDF PAGE 1 ---
+IOP PUBLISHING
+JOURNAL OF PHYSICS A: MATHEMATICAL AND THEORETICAL
+J. Phys. A: Math. Theor. 44 (2011) 285203 (14pp)
+doi:10.1088/1751-8113/44/28/285203
+A compact hamiltonian with the same asymptotic
+mean spectral density as the Riemann zeros
+M V Berry1 and J P Keating2
+1 H H Wills Physics Laboratory, Tyndall Avenue, Bristol BS8 1TL, UK
+2 School of Mathematics, University of Bristol, Bristol BS8 1TW, UK
+Received 4 May 2011, in ﬁnal form 25 May 2011
+Published 10 June 2011
+Online at stacks.iop.org/JPhysA/44/285203
+Abstract
+For the classical hamiltonian (x + 1/x)(p + 1/p), with position x and conjugate
+momentum p, all orbits are bounded. After a symmetrization, the corresponding
+quantum integral equation possesses a family of self-adjoint extensions:
+compact operators on the entire positive x axis, labelled by an angle α specifying
+the boundary condition at the origin, with a discrete spectrum of real energies
+E. On the cylinder {−∞< E < ∞, 0 ⩽α < 2π}, there is a single eigencurve in
+the form of a helix winding clockwise. The rise between successive windings
+gets sharper as the scaled Planck’s constant decreases. This behaviour can be
+understood semiclassically. The ﬁrst two terms of the asymptotic eigenvalue
+density are the same as those for the density of heights of the Riemann zeros.
+PACS numbers: 02.30.Mv, 02.30.Tb, 03.65.Ge, 03.65.Sq
+(Some ﬁgures in this article are in colour only in the electronic version)
+1. Introduction: classical hamiltonian
+The Riemann hypothesis [1, 2] states that all complex zeros of the Riemann zeta functions
+have real part 1/2, that is ζ(1/2 + itn) = 0 with tn real. One way to prove it [1] would be to ﬁnd
+a hermitian operator H with eigenvalues tn. Although no such operator has been found, it has
+been conjectured [3, 4], by analogy with the Selberg [5, 6] and Gutzwiller [7] trace formulas,
+that H has a classical counterpart in the form of a hamiltonian dynamical system with some
+known properties. We showed [8] that the classical hamiltonian H = xp has several features
+suggesting a relation to ζ(s). But the analogy is defective in a number of ways, one of which
+is that xp is not compact so there seems no natural way in which it can be quantized to yield
+discrete eigenvalues. See [9] for a connection between xp and the lowest Landau level of a
+charged particle on a planar surface in a certain electromagnetic ﬁeld.
+In a recent study [10] it was shown that H = x(p + 1/p) can be consistently quantized and
+has a discrete spectrum. However, this not only spoils the symmetry in x and p but has the
+deﬁciency, shared with H = xp, that quantization requires regularization by an ad hoc cutoff
+1751-8113/11/285203+14$33.00
+© 2011 IOP Publishing Ltd
+Printed in the UK & the USA
+1
+
+
+--- PDF PAGE 2 ---
+J. Phys. A: Math. Theor. 44 (2011) 285203
+M V Berry and J P Keating
+Q3
+Q2
+Q1
+Q4
+0
+0
+-3
+-3
+3
+3
+1
+2
+-1
+-2
+1
+2
+-1
+-2
+p
+x
+H
+-20
+10
+0
+20
+-10
+(a)
+0
+1
+2
+3
+0
+1
+2
+3
+x
+p
+(b)
+Figure 1. (a) 3D plot of hamiltonian H(x, p) (1.3), with quadrants labelled Q. (b) Shaded contour
+plot of H(x, p) in ﬁrst quadrant, with light representing high and dark low.
+of the x axis, involving Planck’s constant. Here we explore a variant that is symmetric in x
+and p and for which quantization follows naturally, without cutoff. This is
+H ′ = 1
+T
+
+x′ + l2
+x
+x′
+ 
+p′ +
+l2
+p
+p′
+
+,
+(1.1)
+which, by the natural scaling
+x′ = lxx,
+p′ = lpp,
+H ′ = lxlp
+T H,
+(1.2)
+can immediately be written in the canonical form
+H (x, p) =
+
+x + 1
+x
+ 
+p + 1
+p
+
+.
+(1.3)
+In this classical system with one degree of freedom, orbits in the phase space x, p are
+contour lines of H(x, p). As can be seen from ﬁgure 1, these are closed curves (unlike the
+hyperbolic contours of xp), so orbits are bounded. The surface has extrema (minima in the
+quadrants Q1, Q3, and maxima in Q2, Q4) at |x| = |p| = 1, with energy |E| = 4. A short
+calculation gives the area enclosed by the orbit with energy H = E as
+A(E) =
+ 
+x⩾0,p⩾0
+dx dp(E −H(x, p)) = E
+
+K
+
+1 −16
+E2
+
+−E
+
+1 −16
+E2
+
+(1.4)
+→
+E≫0 E(log E −1) −4 log E
+E
++ · · · ,
+2
+
+
+--- PDF PAGE 3 ---
+J. Phys. A: Math. Theor. 44 (2011) 285203
+M V Berry and J P Keating
+where E and K denote elliptic integrals (in the notation of Mathematica [11]). On the simplest
+semiclassical theory, eigenvalues correspond to energies whose areas, in unscaled variables,
+are quantized in half-odd multiples of Planck’s constant.
+With the natural dimensionless
+semiclassical parameter
+η =
+¯h
+lxlp
+,
+(1.5)
+the quantization condition based on (1.4), giving approximate energy levels En, is
+A (En) ≈En (log En −1) = 2π
+
+n + 1
+2
+
+η.
+(1.6)
+Up to these ﬁrst two terms (En and log En), this has the same form as the asymptotic
+formula for the heights of the Riemann zeros [1]. We will examine this connection further
+in section 5, after a detailed study of the quantum counterpart of (1.3) (section 2), some
+numerical explorations (section 3), and a semiclassical calculation (section 4) showing how
+(1.6) emerges as an approximation.
+2. Quantum hamiltonian
+With x and p now denoting operators, we seek a hermitian hamiltonian operator H, whose
+classical counterpart is (1.3), acting on states |ψ⟩.
+As in [10], we choose the ordering
+corresponding to the Schr¨odinger equation
+H |ψ⟩=
+	
+x + 1
+x
+
+p + 1
+p
+ 	
+x + 1
+x |ψ⟩= E |ψ⟩.
+(2.1)
+This seems unsymmetrical in x and p, but it is easy to show that if x and p are interchanged the
+argument to follow gives the same eigenvalues. (We do not consider more general orderings,
+such as
+H =
+
+x + 1
+x
+1/2N 
+p + 1
+p
+1/N 
+x + 1
+x
+1/2NN
+,
+(2.2)
+in which the special case N = 1 corresponds to (2.1) and the limit N→∞(suggested by J H
+Hannay) seems especially interesting.)
+To obtain well-deﬁned hermitian operators corresponding to (2.1), we proceed in several
+stages. First, we deﬁne new states
+|φ⟩=
+	
+x + 1
+x |ψ⟩,
+(2.3)
+so that (2.1) becomes, after multiplying by p,
+(p2 + 1)|φ⟩= Ep
+x
+1 + x2 |φ⟩.
+(2.4)
+In position representation, and with the customary interpretation
+p = −iη ∂x,
+(2.5)
+this becomes the differential equation
+∂2
+xφ (x) −
+iEx
+η(1 + x2)∂xφ (x) +
+
+−1
+η2 −iE
+η
+(1 −x2)
+(1 + x2)2
+
+φ (x) = 0.
+(2.6)
+The further rescaling
+χ(x) = φ(x)(1 + x2)−iE/4η,
+(2.7)
+3
+
+
+--- PDF PAGE 4 ---
+J. Phys. A: Math. Theor. 44 (2011) 285203
+M V Berry and J P Keating
+eliminates the ﬁrst derivative, leading to
+∂2
+xχ (x) =
+h (x)
+η2
++ ig (x)
+η
+
+χ(x),
+(2.8)
+where
+h(x) = 1 −
+E2x2
+4(1 + x2)2 ,
+g(x) = E(1 −x2)
+2(1 + x2)2 .
+(2.9)
+This can be transformed into the Heun equation (equation (31.2.3)) of [12]), but we have not
+found this identiﬁcation helpful, because in published work we could not ﬁnd the self-adjoint
+extensions and asymptotics that we need and that we describe later.
+The equation (2.8) is of Schr¨odinger type but with the eigenvalue E and the semiclassical
+parameter η unconventionally placed and where the analogue of the potential is complex. Since
+h(x) and g(x) are even functions, it is tempting to seek square-integrable solutions of (2.8) on the
+full x axis, that is wavefunctions decaying at x = ±∞that are even (χ(0)̸ = 0, ∂xχ(0) = 0)
+or odd (χ(0) = 0, ∂xχ(0)̸ = 0). But although such solutions can be found, they correspond to
+complex eigenvalues E and therefore to a nonhermitian H, because the ‘potential’ is complex.
+Numerical exploration and the analysis at the end of section 4 show that these energies are
+semiclassically exponentially close to the real E axis with Im E > 0 for the even states and
+Im E < 0 for the odd states.
+Therefore we restrict attention to the half-line x ⩾0, and seek a relation between ψ(0)
+and ∂xψ(0) for which H is hermitian so the eigenvalues are automatically real. We use the
+fundamental condition for hermiticity, namely, for any two states in the space spanned by
+eigenvectors of H,
+⟨ψ1| H |ψ2⟩= ⟨ψ2| H |ψ1⟩∗.
+(2.10)
+In position representation, this can be written
+⟨ψ1|H|ψ2⟩=
+ ∞
+0
+dx
+ ∞
+0
+dx′ψ∗
+1 (x)⟨x|H|x′⟩ψ2(x′)
+=
+ ∞
+0
+dx
+ ∞
+0
+dx′φ∗
+1(x)⟨x|p + 1
+p |x′⟩φ2(x′),
+(2.11)
+in which the states φ are deﬁned by (2.3).
+We need to interpret the matrix element of p + 1/p, and the integral equation for φ in
+which it appears, corresponding to (2.4) without the multiplication by p, namely
+ ∞
+0
+dx′⟨x|p + 1
+p |x′⟩φ(x′) = E
+x
+1 + x2 φ(x).
+(2.12)
+For p the interpretation is straightforward:
+⟨x|p|x′⟩= iη∂x′δ(x′ −x).
+(2.13)
+For 1/p, the only interpretation incorporating the fact that x and x′ are non-negative is
+⟨x| 1
+p |x′⟩= −i
+η(x′ −x),
+(2.14)
+where here and hereafter  denotes the unit step. Thus (2.12) has the explicit form
+η∂xφ(x) + 1
+η
+ ∞
+x
+dx′φ(x′) = iE
+x
+1 + x2 φ(x).
+(2.15)
+We will need the special case x = 0, that is
+∂xφ (0) = −1
+η2
+ ∞
+0
+dxφ (x).
+(2.16)
+4
+
+
+--- PDF PAGE 5 ---
+J. Phys. A: Math. Theor. 44 (2011) 285203
+M V Berry and J P Keating
+Now we can evaluate the matrix element (2.11):
+⟨ψ1| H |ψ2⟩= −iη
+ ∞
+0
+dxφ∗
+1 (x) ∂xφ2 (x) −i
+η
+ ∞
+0
+dxφ∗
+1 (x)
+ ∞
+x
+dx′φ2(x′).
+(2.17)
+For the ﬁrst term, integration by parts gives
+i
+ ∞
+0
+dxφ∗
+1 (x) ∂xφ2 (x) = −iφ∗
+1 (0) φ2 (0) −i
+ ∞
+0
+dx∂xφ∗
+1 (x) φ2 (x) .
+(2.18)
+In the second term, exchanging the order of integration and interchanging x and x′ give
+i
+ ∞
+0
+dxφ∗
+1(x)
+ ∞
+x
+dx′φ2(x′) = i
+ ∞
+0
+dx′φ2(x′)
+ x′
+0
+dxφ∗
+1(x)
+= i
+ ∞
+0
+dx′φ2(x′)
+ ∞
+0
+dxφ∗
+1(x)
+−i
+ ∞
+0
+dx′φ2(x′)
+ ∞
+x′
+dxφ∗
+1(x).
+(2.19)
+Thus
+⟨ψ1| H |ψ2⟩= ⟨ψ2| H |ψ1⟩∗+ i
+
+ηφ∗
+1 (0) φ2 (0) −1
+η
+ ∞
+0
+dxφ∗
+1 (x)
+ ∞
+0
+dx′φ2(x′)
+
+.
+(2.20)
+The hermiticity condition (2.10) requires that the terms in brackets cancel, and so, after
+using the integral identity (2.16),
+∂xφ∗
+1 (0) ∂xφ2 (0) = 1
+η2 φ∗
+1 (0) φ2 (0) .
+(2.21)
+Realising that this must satisﬁed for all states, we ﬁnally arrive at the boundary condition
+relating the wavefunction to its derivative at the origin:
+∂xφ (0)
+φ (0)
+= ∂xχ (0)
+χ (0)
+= 1
+η exp (iα) ,
+α real.
+(2.22)
+(The ﬁrst equality follows from the fact that (2.7), relating φ to χ, involves only x2, so the
+boundary condition is the same for φ as for χ.)
+This boundary condition, here derived as the condition for hermiticity and involving
+the entire positive x axis without any cutoff, was ﬁrst guessed from numerical explorations.
+For each ﬁxed E, we solved the differential equation (2.8) for different initial conditions
+χ′ (0) /χ (0) = a, and found that for the solutions that decay as x→∞the ratio a always lay
+on a circle with radius 1/η in the complex plane.
+Our complex boundary condition is the counterpart of the Robin condition [13, 14] for
+states bound in a real potential, where the condition for hermiticity is that the ratio a is any
+real number. Corresponding to real a is the hermiticity angle α in (2.22). Each choice of
+α corresponds to a different self-adjoint extension of the formal operator represented by the
+differential equation (2.8). The special case α = 0 resembles the Dirichlet condition for a
+potential, and α = π resembles the Neumann condition. Although (2.22) appears to be a
+local boundary condition, like the Robin condition, in fact it is nonlocal, because its derivation
+involves (2.16) which is a special case of the integral equation (2.15): alternatively stated,
+the condition (2.22) at x = 0 holds only for states decaying as x →∞. A different analogy
+is with the Aharonov-Bohm effect [15, 16], where the magnetic ﬂux in quantum units also
+plays the role of a hermiticity parameter, in the form of an angle completing the Helmholtz
+equation in the plane with one point excised (physically, the location of the inaccessible ﬂux),
+by specifying continuation around it.
+5
+
+
+--- PDF PAGE 6 ---
+J. Phys. A: Math. Theor. 44 (2011) 285203
+M V Berry and J P Keating
+3. Numerics
+The argument of the preceding section shows that real eigenvalues of H are determined by the
+solutions of (2.8) and (2.9) with the boundary condition (2.22) for ﬁxed hermiticity angle α.
+As we will see, the totality of spectra for all α correspond to a curve on the cylinder {−∞<
+E < ∞, 0 ⩽α < 2π}. The eigenvalues satisfy the symmetry relation
+{En (α)} = {−En (−α)}
+(n = 0, 1, 2, . . .) .
+(3.1)
+It is not difﬁcult to solve (2.8) numerically for ﬁxed E and increasing x, starting from the
+boundary condition (2.22) with χ(0) = 1, and searching real E to ﬁnd the solutions that decay
+as x →∞. We note from (2.9) that the solution for large x is
+χ(x) →C+ (E) exp
+x
+η
+
++ C−(E) exp
+
+−x
+η
+
+,
+(3.2)
+so the eigenenergies can be determined from
+C+ (E) = lim
+x→∞exp
+
+−x
+η
+
+χ(x) = 0.
+(3.3)
+The convergence is rapid, and for the spectra to be displayed it was sufﬁcient to take x ⩽30.
+Figure 2 illustrates the spectra for three values of the semiclassical parameter η. The
+pictures show
+(i) There is a single eigencurve, spiralling up the cylinder.
+(ii) The halves E < 0 and E > 0 of the cylinder are connected by a zero eigenvalue at α = π.
+This is easily explained by noting that for E = 0 the exact decaying solution of (2.8) is
+χE=0 (x) = exp
+
+−x
+η
+
+⇒
+∂xχ (0)
+χ (0)
+
+E=0
+= −1
+η.
+(3.4)
+An analogous phenomenon is the zero eigenvalue for a particle in a box or a quantum
+billiard with Neumann boundary conditions.
+(iii) As η gets smaller, the eigenvalues for ﬁxed α crowd closer together for classically allowed
+energies |E| > 4, while a single eigencurve threads the classically forbidden region |E| <
+4.
+(iv) For small η, the risings between successive windings, although smooth, become
+increasingly rapid and are concentrated near α = π.
+In light of the symmetry (3.1), we will henceforth consider only E ⩾0.
+4. Semiclassical theory
+To get a clear understanding of the numerically computed eigencurves, we solve (2.8)
+asymptotically for small η, using a variant of the WKB method that accommodates the
+different η dependences of the terms involving h and g. This is based on the ansatz
+χ (x) = exp
+
+−1
+η
+ x
+0
+dx1f (x1)
+
+.
+(4.1)
+Thus (2.8) is equivalent to the nonlinear equation
+f 2 −η∂xf = h + iηg.
+(4.2)
+Expanding in powers of η, that is
+f (x) =
+∞
+
+0
+ηnfn (x) ,
+(4.3)
+6
+
+
+--- PDF PAGE 7 ---
+J. Phys. A: Math. Theor. 44 (2011) 285203
+M V Berry and J P Keating
+-10
+-5
+0
+5
+10
+0
+E
+0
+-10
+-5
+0
+5
+10
+-10
+-5
+0
+5
+10
+0
+α
+0.5π
+0.5π
+0.5π
+1.5π
+1.5π
+1.5π
+2π
+2π
+2π
+π
+π
+π
+(a)
+(b)
+(c)
+Figure 2. Eigenspirals E(α) on the cylinder {E, α}, generated by solving equation (2.8) with the
+boundary condition (2.22), for semiclassical parameters (a) η = 1, (b) η = 0.5, (c) η = 0.2.
+it is easy to ﬁnd the ﬁrst two terms:
+f0 (x) =
+
+h (x),
+f1 (x) = 1
+4∂x log h (x) +
+ig (x)
+2√h (x).
+(4.4)
+7
+
+
+--- PDF PAGE 8 ---
+J. Phys. A: Math. Theor. 44 (2011) 285203
+M V Berry and J P Keating
+Substituting into (4.1) gives the leading-order asymptotics, incorporating the terms that
+do not vanish as η →0:
+χ (x) ≈
+1
+h (x)1/4 exp
+
+−1
+η
+ x
+0
+dx1
+
+h (x1)
+
+exp
+
+−i
+ x
+0
+dx1
+g (x1)
+2√h (x1)
+
+.
+(4.5)
+The two fundamental solutions of (2.8) correspond to the two signs of the square roots: to
+exponentially decreasing or increasing wavefunctions in the classically forbidden regions of
+the real axis, where h(x) is positive, and oscillatory functions in the classically allowed regions,
+where h(x) is negative.
+4.1. Eigenvalue with 0 ⩽E < 4
+In this case, the entire positive x axis is classically forbidden and the solution involves (4.5)
+with the positive square root. From (4.1) the required ratio at the origin is
+∂xχ (0)
+χ (0)
+= −f (0)
+η
+.
+(4.6)
+The boundary condition (2.22) requires that f (0) has modulus unity, and indeed that is what
+the asymptotic series solution generates; to the ﬁrst few orders,
+f (0) = exp
+ 1
+4iEη
+
+1 + 1
+6η2(E2 −9) + 1
+10η4(2E4 −30E2 + 75) + · · ·
+
+.
+(4.7)
+Thus the eigencurve for classically forbidden energies is, to lowest order, the straight line
+1
+4Eη ≈α −π
+(0 ⩽E < 4) .
+(4.8)
+As ﬁgure 3 illustrates, this gets more accurate as η decreases.
+4.2. Eigenvalues with E ⩾4
+For classically allowed energies, the positive x axis consists of three regions, separated by the
+transition points xp(E), xm(E) where (cf. (2.9)) h(x) = 0:
+xp(E) = 1
+4
+
+E +
+
+E2 −16
+
+,
+xm(E) = 1
+4
+
+E −
+
+E2 −16
+
+=
+1
+xp(E).
+(4.9)
+The classically allowed region xm(E) < x < xp(E) separates the forbidden regions x > xp(E)
+and 0 ⩽x < xm(E).
+To simplify the writing of the semiclassical solution (4.5), we deﬁne
+φ (x1, x2) = 1
+η
+ x2
+x1
+dx
+
+h (x),
+γ (x1, x2) =
+ x2
+x1
+dx
+g (x)
+2√h (x).
+(4.10)
+We will need the values of these functions involving transition points. From (2.9), we ﬁnd,
+for the classically allowed region,
+φ(xm, xp) = i E
+2η
+
+K
+
+1 −16
+E2
+
+−E
+
+1 −16
+E2
+
+= iA (E)
+2η
+,
+γ (xm, xp) = 0,
+(4.11)
+in which A(E) is the phase-space area (1.4) enclosed by the loop H = E. For the forbidden
+region including the origin,
+φ (0, xm) = E
+8η
+
+π −2E
+ 16
+E2
+
+≡B (E)
+η
+,
+γ (0, xm) = 1
+4π,
+(4.12)
+8
+
+
+--- PDF PAGE 9 ---
+J. Phys. A: Math. Theor. 44 (2011) 285203
+M V Berry and J P Keating
+(a)
+(b)
+(c)
+0
+1
+2
+3
+4
+0
+1
+2
+3
+4
+0
+1
+2
+3
+4
+1.05
+1.10
+1.15
+1.02
+1.04
+1.06
+1.01
+1.02
+1.03
+E
+α
+π
+π
+π
+π
+π
+π
+π
+π
+π
+π
+π
+π
+Figure 3.
+Lowest eigenenergy (full curves) and semiclassical approximations (4.8) (dashed
+curves), for (a) η = 0.5, (b) η = 0.2, (c) η = 0.1.
+where B(E) is the exponent governing tunnelling from the allowed region to x = 0:
+B (E) = Im
+ xm(E)
+0
+dxp (x, E),
+(4.13)
+in which p(x) is the complex momentum, that is, the solution of H(x, p(x)) = E.
+In the forbidden region x > xp(E), the solution of (2.8) must decay, so
+χ(x) ≈
+1
+h(x)1/4 exp(−φ(xp, x)) exp(−iγ (xp, x))
+(x > xp).
+(4.14)
+To apply the boundary condition (2.22), we must follow this solution through the classically
+allowed region and to x = 0.
+To reach the classically allowed region, we use standard
+connection formulas [17–19], adapted to accommodate the additional factor involving γ ,
+9
+
+
+--- PDF PAGE 10 ---
+J. Phys. A: Math. Theor. 44 (2011) 285203
+M V Berry and J P Keating
+χ(x) ≈
+2
+|h(x)|1/4 cos
+
+−iφ(x, xp) −1
+4π −iγ (x, xp)
+
+=
+2
+|h(x)|1/4 cos
+
+−iφ (xm, x) −1
+4π + iφ
+
+xm, xp
+
+−iγ (xm, x) + 1
+2π
+
+(xm < x < xp).
+(4.15)
+In the second equality, we have translated the phase reference level from xp to xm. In the
+forbidden region 0 ⩽x < xm(E), the solution involves exponentially increasing as well as
+exponentially decreasing terms. Its determination requires a more sophisticated (and once
+controversial (section 13.4 of [17])) connection formula (equation (13.3.25) of [17]). But its
+application is straightforward, and leads to
+χ(x) ≈
+1
+h(x)1/4 cos
+ A
+2η
+
+exp (φ (x, xm)) exp (+iγ (x, xm))
++
+1
+h(x)1/4 sin
+ A
+2η
+
+exp (−φ (x, xm)) exp (−iγ (x, xm))
+(x < xm) .
+(4.16)
+Now we can apply (2.22). From (4.15), (4.11) and (4.12),
+χ(0) ≈cos
+ A
+2η
+
+exp
+B
+η
+
+exp
+
++1
+4iπ
+
++ sin
+ A
+2η
+
+exp
+
+−B
+η
+
+exp
+
+−1
+4iπ
+
+,
+∂xχ(0) ≈−1
+η exp
+1
+4iEη
+ 
+cos
+ A
+2η
+
+exp
+B
+η
+
+exp
+
++1
+4iπ
+
+−sin
+ A
+2η
+
+exp
+
+−B
+η
+
+exp
+
+−1
+4iπ
+
+.
+(4.17)
+Thus the boundary condition gives the quantization rule determining the spectrum of
+eigenvalues E for each value of the self-adjointness parameter α:
+exp (iα) = −exp
+ 1
+4iEη
+
+
+1 + 1
+2i exp
+
+−2 B(E)
+η
+
+tan A(E)
+2η
+
+
+1 −1
+2i exp
+
+−2 B(E)
+η
+
+tan A(E)
+2η
+.
+(4.18)
+As ﬁgure 4 illustrates, this reproduces the structure of the spectrum in the classically
+allowed region (ﬁgure 2) with increasing accuracy as η gets smaller. Two values of α are key
+to understanding: near α = 0 and near α = π. Then (4.18) gives the quantum conditions
+A (En) = 2π
+
+n + 1
+2
+
+η
+when
+α = 1
+4Enη,
+A (En) = 2πnη
+when
+α = π + 1
+4Enη.
+(4.19)
+For most values of α, the approximation (4.18) gives eigenvalues exponentially close (and
+controlled by the tunnelling exponent 2B(E)/η) to those given by the ﬁrst of these quantum
+conditions, that is by the elementary semiclassical quantization rule (1.6). The rapid transition
+between this and the second quantum condition occurs in an interval of width O(η) near
+α = π,
+4.3. Complex eigenvalues for the even and odd states
+We can choose to regard (2.8) as a differential equation on the entire x axis. Since the functions
+h(x) and g(x) in (2.9) are even, we do not impose the hermitian boundary condition (2.22).
+Instead, we seek the square-integrable eigenstates are even or odd functions of x. Then the
+operator is nonhermitian and its eigenvalues E are complex.
+10
+
+
+--- PDF PAGE 11 ---
+J. Phys. A: Math. Theor. 44 (2011) 285203
+M V Berry and J P Keating
+6.0
+7.0
+8.0
+5.0
+5.5
+6.0
+6.5
+4.4
+4.6
+4.8
+5.0
+E
+α
+(a)
+(b)
+(c)
+0
+2
+0
+2
+0
+2
+π
+π
+π
+π
+π
+π
+Figure 4. First excited eigenenergy (full curves) and semiclassical approximations (4.18) (dashed
+curves), for (a) η = 1, (b) η = 0.5, (c) η = 0.2.
+For E > 4, we can obtain semiclassical approximations to the energies from the formulas
+(4.17): for the even states, we require ∂xχ (0) = 0, and for the odd states χ (0) = 0. Thus
+(cf. (4.18))
+cos A (E)
+2η
+= ∓1
+2i exp
+
+−2B (E)
+η
+
+sin A (E)
+2η
+−even
++odd
+
+.
+(4.20)
+The small exponential implies that the energies are exponentially close to the real eigenvalues
+En0 of the hermitian operator for α = 0, given by (1.6). Thus elementary expansion gives
+En = En0 + En1,
+(4.21)
+where
+En1 ≈±i
+η
+∂EA (En0) exp
+
+−2B (En0)
+η
+
+.
+(4.21)
+Numerical calculation of some of the resonances for decreasing η indicates that this
+semiclassical formula is a good approximation.
+The fact that equation (2.8) does not generate a hermitian operator when considered on
+the full x axis motivated the restriction to the half-line x > 0. It might appear that this spoils
+11
+
+
+--- PDF PAGE 12 ---
+J. Phys. A: Math. Theor. 44 (2011) 285203
+M V Berry and J P Keating
+the symmetry between x and p. However, we point out that our whole analysis is essentially
+unchanged if we start from the momentum, rather than the coordinate, representation, that is
+exchanging x and p and changing the sign in (2.5); in this sense, the symmetry is preserved.
+5. Comparison with Riemann zeta function
+To compare the spectrum of the operator representing (1.3) with the set of Riemann zeros, we
+start by noting that the heights of the zeros are symmetric about t = 0, that is, there are zeros
+at ±tn. For the operator we have been studying, it follows from the symmetry (3.1) and the
+2π periodicity in α that only α = 0 and α = π give spectra that are symmetric about E = 0,
+so these are the only values we need to consider. We can exclude α = π because this gives an
+eigenvalue at E = 0 and there is no Riemann zero with t = 0. Therefore we need to compare
+the Riemann zeros with the eigenvalues for α = 0, with asymptotics given by (1.6).
+For the Riemann zeros, the mean density of the heights is [1, 4]
+dRsm (t) = 1
+π ∂t
+
+arg 
+1
+2 + it
+
+−t
+2 log π
+
+= 1
+2π log t
+2π −
+1
+48πt2 + · · ·
+(5.1)
+For our eigenvalues with α = 0, (1.4) and (1.6) give the density
+dE,α=0 (E) =
+1
+2πη∂EA (E) =
+1
+2πηK
+
+1 −16
+E2
+
+=
+1
+2πη
+
+log E + 4
+E2 (log E −1) + · · ·
+
+.
+(5.2)
+For the leading term to agree with (5.1), we must make the identiﬁcations
+E =
+t
+2π ,
+η = 1
+2π ,
+i.e. lxlp = 2π¯h = h.
+(5.3)
+In the variable t, the eigenvalue density is
+dt,α=0(t) = 1
+2π dE,α=0
+
+E =
+t
+2π
+
+= ∂tA
+ t
+2π
+
+= K
+
+1 −64π2
+t2
+
+2π
+= 1
+2π log
+ t
+2π
+
++ 8π
+t2
+
+log
+ t
+2π
+
+−1
+
++ · · ·
+(5.4)
+Figure 5 illustrates how the gamma-function formula (5.1) for the Riemann zeros
+approaches the elliptic-integral formula (5.4) as t increases. For large t, the ﬁrst correction
+terms are discrepant and indeed have opposite signs. For the counting functions
+N (t) =
+ t
+0
+dt′d
+
+t′
+,
+(5.5)
+the ﬁrst two terms agree, because the Riemann zero formula is
+NRsm (t) =
+t
+2π
+
+log t
+2π −1
+
++ 7
+8 + · · · ,
+(5.6)
+12
+
+
+--- PDF PAGE 13 ---
+J. Phys. A: Math. Theor. 44 (2011) 285203
+M V Berry and J P Keating
+0
+50
+100
+150
+200
+0.0
+0.1
+0.2
+0.3
+0.4
+0.5
+t
+d
+Figure 5. Full curve: exact smoothed density of Riemann zeros (ﬁrst equality in (5.1)); dashed
+curve: exact smoothed densityof eigenvalues E = t/2π with α = 0 (third equality in (5.4)).
+while the eigenvalue formula is
+Nt,α=0 (t) =
+t
+2π
+
+log
+ t
+2π
+
+−1
+
+−8π
+t log
+ t
+2π
+
++ · · ·
+(5.7)
+6. Concluding remarks
+As should be clear from the preceding section, we are not claiming that our hamiltonian (1.3)
+has an immediate connection with the Riemann zeta function. This is ruled out not only by the
+fact that the mean eigenvalue density differs from the density of Riemann zeros after the ﬁrst
+terms, but by a more fundamental difference in the periodic orbits. For (1.3), there is a single
+primitive periodic orbit for each energy E; and for the conjectured dynamics underlying the
+zeta function [4, 8], there is a family of primitive orbits for each ‘energy’ t, labelled by primes
+p, with periods log p. This absence of connection with the primes is shared by all variants of
+xp, and our analysis gives no hint of a resolution of this difﬁculty.
+Our aim is different: to complement existing studies of xp [8, 20] and x(p + 1/p) [10]
+by displaying a hermitian operator on the whole positive x axis, obtained by unproblematic
+quantization of a classical hamiltonian symmetric in x and p, that possesses a discrete spectrum
+reproducing the leading-order density of the Riemann zeros.
+Our hamiltonian is interesting in its own right. The square-integrable wavefunctions
+associated with discrete eigenvalues are solutions of the Schr¨odinger-like equation (2.8) and
+(2.9). But the derivation of the boundary condition that guarantees hermiticity requires the
+integral equation (2.15), whose structure is a consequence of the occurrence of 1/p in the
+classical hamiltonian. The different hermitian operators with the same classical counterpart
+(1.3)—the different self-adjoint extensions—are parameterised by the angle α. The spiralling
+of the single eigencurve around the E, α cylinder is reminiscent of the index theorem [21, 22]
+for the Dirac equation.
+Acknowledgments
+We thank Professor German Sierra for sending us the prepublication version of the paper [10]
+and thereby stimulating our study reported here. JPK is grateful to the Mathematical Sciences
+Research Institute (MSRI), Berkeley, for hospitality. His contribution is sponsored by the Air
+Force Ofﬁce of Scientiﬁc Research, Air Force Material Command, USAF, under grant number
+13
+
+
+--- PDF PAGE 14 ---
+J. Phys. A: Math. Theor. 44 (2011) 285203
+M V Berry and J P Keating
+FA8655-10-1-3088. The U.S. Government is authorized to reproduce and distribute reprints
+for Governmental purpose notwithstanding any copyright notation thereon.
+References
+[1] Edwards H M 1974 Riemann’s Zeta Function (New York and London: Academic)
+[2] Titchmarsh E C 1986 The Theory of the Riemann Zeta-Function (Oxford: Clarendon Press)
+[3] Berry M V 1986 Riemann’s Zeta function: A model for quantum chaos? Quantum Chaos and Statistical
+Nuclear Physics: Proc. 2nd Int. Conf. on Quantum Chaos and 4th Int. Colloquium on Statistical Nuclear
+Physics (Cuernavaca, M´exico, 6–10 January 1986) (Lecture Notes in Physics vol 263) ed T H Seligman and
+H Nishioka (Berlin: Springer) pp 1–17
+[4] Berry M V and Keating J P 1999 The Riemann zeros and eigenvalue asymptotics SIAM Rev. 41 236–66
+[5] Selberg A 1956 Harmonic analysis and discontinuous groups in weakly Riemannian spaces with applications
+to Dirichlet series J. Indian Math. Soc. 20 47–87
+[6] McKean H P 1972 Selberg’s trace formula as applied to a compact Riemann surface Commun. Pure. Appl.
+Math. 25 225–46
+[7] Gutzwiller M C 1971 Periodic orbits and classical quantization conditions J. Math. Phys. 12 343–58
+[8] Berry M V and Keating J P 1999 H = xp and the Riemann Zeros Supersymmetry and Trace Formulae: Chaos
+and Disorder (NATO Science Series B: Physics vol 370) ed I V Lerner, J P Keating and D E Khmelnitskii
+(New York: Plenum) pp 355–67
+[9] Sierra G and Townsend P 2008 Landau levels and Riemann zeros Phys. Rev. Lett. 101 110201
+[10] Sierra G and Rodiguez-Laguna J 2011 The H = xp model revisited and the Riemann zeros (arXiv:1102.5356v1
+[math-ph])
+[11] Wolfram S 1996 The Mathematica Book (Cambridge: Cambridge University Press)
+[12] DLMF
+2010 NIST Handbook of Mathematical Functions (Cambridge:
+Cambridge University Press)
+http://dlmf.nist.gov
+[13] Gustavson K and Abe T 1998 The third boundary condition—was it Robin’s? Math. Intell. 20 63–70
+[14] Baltes H-P and Hilf E R 1976 Spectra of Finite Systems (Mannheim: B-I Wissenschaftsverlag)
+[15] Aharonov Y and Bohm D 1959 Signiﬁcance of electromagnetic potentials in the quantum theory Phys.
+Rev. 115 485–91
+[16] Olariu S and Popescu I I 1985 The quantum effects of electromagnetic ﬂuxes Rev. Mod. Phys. 57 339–436
+[17] Dingle R B 1973 Asymptotic Expansions: Their Derivation and Interpretation (New York: Academic)
+[18] Heading J 1962 An Introduction to Phase-Integral Methods (London: Methuen)
+[19] Berry M V and Mount K E 1972 Semiclassical approximations in wave mechanics Rep. Prog. Phys. 35 315–97
+[20] Srednicki M 2011 The Berry–Keating hamiltonian and the local Riemann hypothesis (arXiv:1104.1850v1
+[math-ph])
+[21] Shanahan P 1978 The Atiyah–Singer Index Theorem: An Introduction (Springer Lecture Notes in Mathematics
+vol 638) ed A Dold and B Eckmann (Berlin: Springer)
+[22] Getzler E 1983 Pseudodifferential operators on supermanifolds and the Atiyah-Singer index theorem Commun.
+Math. Phys. 92 163–78
+14

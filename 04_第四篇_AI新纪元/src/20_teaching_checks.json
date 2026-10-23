@@ -1,0 +1,38 @@
+{
+  "cubes": [
+    0,
+    1,
+    8,
+    27,
+    64,
+    125
+  ],
+  "successive_differences": [
+    [
+      1,
+      7,
+      19,
+      37,
+      61
+    ],
+    [
+      6,
+      12,
+      18,
+      24
+    ],
+    [
+      6,
+      6,
+      6
+    ]
+  ],
+  "coefficient_identity": "x^3-x^2-x+1 = (x+1)(x-1)^2",
+  "wrong_expansion": "(x-1)(x+1)^2 = x^3+x^2-x-1",
+  "values_at_zero": {
+    "original": 1,
+    "correct": 1,
+    "wrong": -1
+  },
+  "lean_execution": false
+}

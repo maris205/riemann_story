@@ -1,0 +1,524 @@
+
+--- PDF PAGE 1 ---
+arXiv:cond-mat/0702041v1  [cond-mat.other]  2 Feb 2007
+Induced Time-Reversal Symmetry Breaking Observed in Microwave Billiards
+B. Dietz,1 T. Friedrich,1 H. L. Harney,2 M. Miski-Oglu,1 A. Richter,1, ∗F. Sch¨afer,1 and H. A. Weidenm¨uller2
+1Institut f¨ur Kernphysik, Technische Universit¨at Darmstadt, D-64289 Darmstadt, Germany
+2Max-Planck-Institut f¨ur Kernphysik, D-69029 Heidelberg, Germany
+(Dated: July 13, 2018)
+Using reciprocity, we investigate the breaking of time-reversal (T ) symmetry due to a ferrite
+embedded in a ﬂat microwave billiard. Transmission spectra of isolated single resonances are not
+sensitive to T -violation whereas those of pairs of nearly degenerate resonances do depend on the
+direction of time. For their theoretical description a scattering matrix model from nuclear physics is
+used. The T -violating matrix elements of the eﬀective Hamiltonian for the microwave billiard with
+the embedded ferrite are determined experimentally as functions of the magnetization of the ferrite.
+PACS numbers: 05.45.Mt, 11.30.Er, 85.70.Ge
+We
+investigate
+time-reversal
+symmetry
+breaking
+(TRSB) in resonant scattering through a ﬂat microwave
+cavity.
+Such cavities, also known as ”microwave bil-
+liards,” have long been used to simulate quantum bil-
+liards [1, 2, 3], and interest has mainly been focused
+on statistical properties of the eigenvalues [4, 5], which
+have also been studied in microwave networks [6], and
+eigenfunctions [7], and on dissipative transport [8]. We
+report on experiments where time-reversal (T ) symme-
+try is broken by the magnetic and absorptive properties
+of a piece of ferrite. Here, the two-state system is the
+simplest one to show eﬀects of TRSB. Thus, our inves-
+tigations focus on pairs of nearly degenerate resonances
+(doublets) and, as a test, also on isolated resonances (sin-
+glets). We determine all relevant parameters of the sys-
+tem as functions of the magnetization of the ferrite and
+thereby the properties of both, the two-state system and
+the ferrite. Needless to say, our work is not related di-
+rectly to studies of TRSB in fundamental interactions.
+Indeed, we recall that in the absence of dissipation all
+classical physics is T invariant, and that among the four
+fundamental interactions, only the weak force is known
+to cause TRSB [9]. Rather, the microwave billiard with
+the ferrite inside serves as a paradigmatic example of how
+to study and analyze TRSB in resonance scattering ex-
+periments.
+The experiments were performed with a ﬂat, cylindri-
+cal microwave resonator made of copper. The resonator
+has a circular shape with a diameter of 250 mm and a
+height of 5 mm (see Fig. 1). An HP 8510C vector net-
+work analyzer (VNA) coupled power into and out of the
+system through two antennas, metal pins of 0.5 mm in
+diameter reaching about 2.5 mm into the resonator. The
+microwave resonator with the antennas as entrance and
+exit channels deﬁnes a scattering system [10]. The VNA
+measures the relative phase and amplitude of the input
+and the output signals, thereby providing the complex el-
+ements of the scattering matrix. Eﬀects of the connecting
+coaxial cables have been eliminated by a careful calibra-
+tion of the VNA. The TRSB is caused by a ferrite inside
+the resonator [4, 5, 7, 8]. The ferrite is a calcium vana-
+dium garnet and has the shape of a cylinder, 5 mm high
+and 4 mm in diameter [11]. The material has a resonance
+line width of ∆H = 17.5 Oe and a saturation magnetiza-
+tion of 4πMS = 1859 Oe. At the position of the ferrite a
+static magnetic ﬁeld was created with a NdFeB magnet,
+which was placed outside the resonator and connected to
+a screw thread. Thus, magnetic ﬁeld strengths of up to
+90 mT (with an uncertainty below 0.5 mT) were obtained
+at the ferrite.
+The spins within the ferrite precess with their Lar-
+mor frequency about the static magnetic ﬁeld; this intro-
+duces a chirality into the system. A circularly polarized
+rf magnetic ﬁeld interacts with the precessing spins if it
+has the same rotational direction and frequency.
+The
+magnetic ﬁeld component of the rf ﬁeld of the resonator
+can be split into two circularly polarized ﬁelds rotating
+in opposite directions. Only one of these is attenuated
+by the ferrite, this causes TRSB. In contradistinction to
+Ref. [12], T invariance is experimentally tested by inter-
+changing input and output at the resonator. Thereby,
+the attenuated direction of polarization is interchanged
+with the unaﬀected one. The TRSB eﬀect is strongest at
+the ferromagnetic resonance where the Larmor frequency
+of the ferrite matches the eigenfrequency of the cavity.
+VNA
+ferrite
+a
+b
+Amplitude
+Frequency
+x
+y
+0
+r = 125 mm
+FIG. 1: Scheme of the experimental setup (not to scale). The
+antennas connected to the vector network analyzer (VNA)
+were located at the positions a and b. The inner circle is the
+copper disk introduced into the resonator to transform the
+circular into an annular billiard.
+
+
+--- PDF PAGE 2 ---
+2
+To interpret our experiments, we use the scattering for-
+malism for microwave billiards of Ref. [10]. The element
+Sab of the scattering matrix S is the amplitude for the
+transition from an initial state (in the connecting coax-
+ial cables) |b⟩to a ﬁnal state |a⟩. For a resonator with
+two attached, pointlike antennas S has dimension two.
+T invariance implies that S is symmetric [13], i. e.
+Sab = Sba .
+(1)
+Property (1) is referred to as reciprocity. Experiments
+in nuclear physics [14] have tested the weaker principle
+of detailed balance [13] which implies |Sab|2 = |Sba|2. In
+the present experiment we test the stronger statement of
+reciprocity.
+How does the absorption of the circularly polarized rf
+ﬁeld lead to a violation of Eq. (1)? We write S in the
+form
+Sab(ω) = δab −2π i ⟨a|W † (ω −Heﬀ)−1 W|b⟩,
+(2)
+originally derived in the context of nuclear physics in
+Refs. [15, 16].
+Here ω/(2π) is the frequency of the rf
+ﬁeld. The matrix W describes the coupling of the waves
+in the coaxial cables (|a⟩, |b⟩) with the resonator state(s).
+Since that coupling is T invariant, W can be chosen real.
+For a single resonance with resonator state |1⟩, we deal
+with the two matrix elements ⟨1|W|a⟩and ⟨1|W|b⟩. For
+a doublet with the two resonator states |1⟩and |2⟩, W
+can be written as
+W|a⟩= Na
+ cos α
+sin α
+
+,
+W|b⟩= Nb
+ cos β
+sin β
+
+.
+(3)
+The resonator with the ferrite is represented by the eﬀec-
+tive Hamiltonian Heﬀ. For a doublet of resonances, Heﬀ
+has dimension two. The frequencies ωµ with µ = 1, 2
+of the resonances appear in the diagonal elements. In
+addition, Heﬀcontains the matrix (see Eq. (4.2.20b) of
+Ref. [16])
+Fµν(¯ω) =
+X
+i=a,b,f
+Z ∞
+−∞
+dω′ Wµi(ω′)W ∗
+νi(ω′)
+¯ω+ −ω′
+,
+(4)
+where ¯ω+ = ¯ω + i ε is the angular frequency ¯ω shifted
+inﬁnitesimally to complex values with ε > 0.
+In the
+sum on the right-hand side of Eq. (4), the terms with
+i = a, b stand for the couplings to the antennas with
+matrix elements Wµi as in Eq. (3). As these are real,
+the integration over Wµi(ω′)W ∗
+νi(ω′) yields for i = a, b a
+complex symmetric matrix. However, because of TRSB
+the matrix elements Wµf that couple the resonator states
+|ν⟩, ν = 1, 2, to the ferromagnetic resonance in the fer-
+rite, cannot be chosen real. Hence the integration over
+Wµf(ω′)W ∗
+νf(ω′) leads to both, a complex symmetric ma-
+trix and a complex antisymmetric matrix Ha with
+Ha =
+
+0
+Ha
+12
+−Ha
+12
+0
+
+.
+(5)
+The matrix Ha is the hallmark of TRSB in Heﬀ. Since
+Ha is antisymmetric, TRSB cannot be observed for a
+single isolated resonance. In the case of a pair of reso-
+nances, it is useful to choose the doublet spacing as small
+as possible to enhance TRSB. We observe that Ha does
+not depend on the choice of the resonator basis (it is
+invariant under orthogonal transformations).
+As a test of these arguments we ﬁrst discuss isolated
+resonances (singlets). It is well known that in circular
+billiards resonances with vanishing angular momentum
+are already singlets [2]. However, our billiard provides
+only two truly isolated singlets. Therefore, we suppressed
+the existing degeneracies by breaking the rotational sym-
+metry.
+We have introduced a copper disk (187.5 mm
+diameter, 5 mm height) into the resonator, see Fig. 1.
+The resulting ”annular billiard” is fully chaotic [17]. In
+the presence of the ferrite, its spectrum contains several
+well isolated resonances (widths ≈14 MHz, spacings ≈
+300 MHz). We have studied eight singlets. For the sin-
+glet at frequency f = 2.84 GHz, we show in Fig. 2 both
+Sab and Sba. Within the errors due to noise the com-
+plex function Sab agrees with Sba; i. e. reciprocity holds
+despite the presence of the ferrite. The same statement
+applies to the other seven singlets. This shows that the
+coupling to the leads (see Eq. (2)) is indeed T invariant.
+We used the circular billiard (see Fig. 1) with its nu-
+merous degeneracies to study isolated doublets of res-
+onances. The ferrite destroys the rotational symmetry
+and, thus, partly lifts the degeneracies. We found four
+isolated doublets at 2.43 GHz, 2.67 GHz, 2.89 GHz and
+3.2 GHz. The inﬂuence of the magnetized ferrite on the
+resonance shape of the second doublet is illustrated in
+Fig. 3. In contrast to the case of singlets, the direction
+of transmission is now important; reciprocity is violated.
+This was also observed for the ﬁrst and the third doublet,
+but not for the fourth. A simulation of the electromag-
+netic ﬁeld patterns inside the resonator [18] showed that
+for one of the two states of the fourth doublet, the mag-
+ 0.2
+ 0.4
+|Sab| (%)
+0
+-π
+2.80
+2.85
+2.90
+Frequency (GHz)
+Arg(Sab)
+b
+a
+FIG. 2: A singlet in the annular billiard.
+For an external
+ﬁeld of 119.3 mT we show Sab (open circles) and Sba (ﬁlled
+circles). Both amplitudes and phases coincide and reciprocity
+holds. The statistical errors of the data are smaller than the
+symbols.
+
+
+--- PDF PAGE 3 ---
+3
+0.98
+0.99
+1.00
+|Saa|, |Sbb|
+0.00
+0.01
+2.65
+2.67
+2.70
+|Sab|, |Sba|
+Frequency (GHz)
+b
+a
+FIG. 3: The doublet at 2.67 GHz in the circular billiard with
+an external magnetic ﬁeld of 36.0 mT. The upper part shows
+the absolute values of Saa (solid) and Sbb (dashed), the lower
+one those of Sab (solid) and Sba (dashed). The uncertainties
+of Sab and Sba are about 5 × 10−4.
+Reciprocity is clearly
+violated.
+netic ﬁeld vanished at the location of the ferrite, so that
+the ferrite interacted with just one state and Ha = 0.
+Moving the ferrite to a position where it interacted with
+both states, resulted in a violation of reciprocity. This
+conﬁrms the importance of coupling a pair of states for
+observing TRSB.
+We measured all four S-matrix elements (Saa, Sab, Sba,
+Sbb) of the system, each at 15 settings of the external
+magnetic ﬁeld. From these data, it is possible to deter-
+mine Ha
+12. Indeed, Eq. (2) has twelve real parameters:
+α, β, Na, Nb and the four complex matrix elements of
+Heﬀ. We assume that α, β, Na, Nb, Wµa, Wµb are in-
+dependent of the external magnetic ﬁeld and, within the
+range of frequencies of the doublet, of ω.
+For the second and third doublet, the values deduced
+for Ha
+12 are shown as dots in Fig. 4.
+Care was taken
+to rule out any TRSB eﬀects feigned by the VNA. The
+data points show a clear resonancelike structure: As a
+function of the external magnetic ﬁeld, Ha
+12 goes through
+a maximum; at the same time the phase of Ha
+12 decreases
+by about π. We now show that this behavior is intimately
+connected with the ferromagnetic resonance.
+We use Eq. (4) to express Ha
+12 in terms of the matrix
+elements Wνf(ω′). As explained above, the ferrite is cou-
+pled to only one of the two circular polarizations of the
+rf magnetic ﬁeld in the resonator. The unitary matrix
+U =
+1
+√
+2
+ 1 −i
+1
+i
+
+(6)
+induces a transformation from the real resonator basis
+states {|1⟩, |2⟩} with matrix elements W to circular ba-
+sis states with matrix elements ˜
+W so that Wνf(ω′) =
+P2
+ξ=1 U ∗
+ξν ˜Wξf(ω′). By deﬁnition, one of the ˜Wξf ( ˜
+W2f,
+say) vanishes so that W1f(ω)W ∗
+2f(ω) = | ˜W1f(ω)|2/(2i).
+Moreover, ˜W1f is proportional [19] to the magnetic sus-
+ 1
+ 2
+ 3
+2nd doublet
+(a)
+f = 2.67 GHz
+|H a
+12| (MHz)
++π
+0
+-π
+Arg(H a
+12)
+ 10
+ 20
+3rd doublet
+(b)
+f = 2.89 GHz
+|H a
+12| (MHz)
+2π
+π
+0
+0
+20
+40
+60
+80
+Magnetic field (mT)
+Arg(H a
+12)
+FIG. 4: The T violating matrix element Ha
+12 for (a) the sec-
+ond doublet at 2.67 GHz (upper panel) and (b) the third
+doublet at 2.9 GHz (lower panel). The error bars include the
+systematic, statistical, and numerical errors. The line shape
+of the ferromagnetic resonance for the second doublet (upper
+panel) has been convoluted with a Gaussian distribution of
+magnetization with width 15.5 Oe, see Eq. (10).
+ceptibility
+˜W1f(ω′) ∝χ(ω′) =
+ωM
+ω0(B) −ω′ −i/T ,
+(7)
+where T (∆H) = (π γ ∆H)−1 is the relaxation time,
+ωM = 2 π γ 4πMS with the gyromagnetic ratio γ =
+2.8 MHz/Oe and
+ω0(B) = 2π (1.7 GHz + 0.0237 GHz/mT B) .
+(8)
+The relation between the strength of the external mag-
+netic ﬁeld B and the frequency of the ferromagnetic reso-
+nance ω0(B) has been established by prior measurements
+with the ferrite in a waveguide.
+Collecting Eqs. (4)–(8), we ﬁnd
+Ha
+12(B) = iπ
+2 λ B T
+ω2
+M
+ω0(B) −¯ω −i/T .
+(9)
+The proportionality stated in Eq. (7) has here been ex-
+pressed in terms of a linear dependence on B and on a
+coupling strength parameter λ. Equation (9) depends on
+two free parameters, ¯ω and λ. The parameter ¯ω aver-
+ages the TRSB eﬀect of the ferrite over a doublet and is
+expected to be close to the resonance frequencies of the
+doublet. Equations (8) and (9) imply that the phase of
+Ha
+12 decreases with increasing B, independently of the
+choice of the phase of the matrix element (7). This is in
+agreement with the data.
+
+
+--- PDF PAGE 4 ---
+4
+TABLE I: Parameters of Eq. (10) for the ﬁrst three doublets.
+Doublet No. 3 is not convoluted; hence σ and α are not deﬁned
+in this case.
+#
+σ (Oe)
+¯ω/2π (GHz)
+λ (mT−1)
+α (deg)
+1
+42.1 ± 9.3
+2.427 ± 0.037
+35.7 ± 4.6
+−5 ± 8
+2
+15.5 ± 3.3
+2.696 ± 0.011
+10.8 ± 1.0
+168 ± 7
+3
+· · ·
+2.914 ± 0.003
+37.3 ± 1.6
+· · ·
+In Fig. 4b, we show for the third doublet the mea-
+sured values of Ha
+12 and the function (9).
+The agree-
+ment is very good. We cannot obtain data points at the
+maximum of the ferromagnetic resonance since there the
+susceptibility (7) varies appreciably over the frequency
+range of the doublet. The theory of Eqs. (4)–(9) is not
+valid in that regime. For the second doublet shown in
+Fig. 4a, the resonance is too broad to be explicable by a
+ferromagnetic resonance width of ∆H = 17.5 Oe. This
+is because Eqs. (7) to (8) apply to a completely satu-
+rated ferrite only. Saturation is achievable only with a
+strong magnetic ﬁeld, however. To account for the incom-
+plete saturation we assume that the magnetization has a
+Gaussian distribution with r.m.s. value σ and phase α,
+Ψ(ω) = eiαe−(1/2)(ω/σ)2/(σ
+√
+2π). The convolution with
+Ha
+12 of Eq. (9),
+˜Ha
+12(B) =
+Z ∞
+−∞
+dω′ Ha
+12(ω′) Ψ[ω0(B) −ω′] ,
+(10)
+yields agreement with the experimental data [see Fig. 4a].
+The numerical values of the parameters in Eq. (9) are
+given in Table I. We note that λ depends on the prop-
+erties of the ferrite as well as on the values of the wave
+functions of the doublet states at the position of the fer-
+rite.
+In summary, we have investigated TRSB in singlets
+and doublets in ferrite-loaded cavities.
+To the best of
+our knowledge this is the ﬁrst time that the principle of
+reciprocity has been investigated in microwave resonators
+with broken time-reversal symmetry. While TRSB can-
+not be detected at isolated resonances, we have shown
+that reciprocity is violated for resonance doublets. We
+extracted the T violating matrix element of the eﬀective
+Hamiltonian which describes the resonator plus the fer-
+rite. That matrix element can be modelled in terms of
+a ferromagnetic resonance due to the coupling of the rf
+magnetic ﬁeld with the ferrite. We plan to use these in-
+sights to study intensity ﬂuctuations at high excitation
+energies (”Ericson ﬂuctuations” [14]) as well as excep-
+tional points [20, 21] in a TRSB regime.
+We thank H. Benner and U. Hoeppe for discussions
+on the ferromagnetic resonance. F. S. is grateful for the
+ﬁnancial support from GRK 410. This work was sup-
+ported by the DFG within SFB 634.
+∗Electronic address: richter@ikp.tu-darmstadt.de
+[1] H.-J. St¨ockmann and J. Stein, Phys. Rev. Lett. 64, 2215
+(1990); S. Sridhar, Phys. Rev. Lett. 67, 785 (1991); H.-
+D. Gr¨af et al., Phys. Rev. Lett. 69, 1296 (1992).
+[2] H.-D. Gr¨af et al., Phys. Rev. Lett. 69, 1296 (1992);
+C. Dembowski et al., Phys. Rev. Lett. 84, 867 (2000);
+C. Dembowski et al., Phys. Rev. Lett. 93, 134102 (2004);
+R. Hoﬀerbert et al., Phys. Rev. E 71, 046201 (2005);
+C. Dembowski et al., Phys. Rev. E 71, 046202 (2005).
+[3] A. Richter, in Emerging Applications of Number The-
+ory, The IMA Volumes in Mathematics and its Ap-
+plications, Vol. 109, edited by D.A. Hejhal, J. Fried-
+mann, M.C. Gutzwiller, and A.M. Odlyzko (Springer,
+New York, 1999), p. 479.
+[4] P. So et al., Phys. Rev. Lett. 74, 2662 (1995).
+[5] U. Stoﬀregen et al., Phys. Rev. Lett. 74, 2666 (1995).
+[6] O. Hul et al., Phys. Rev. E 69, 056205 (2004).
+[7] D.-H. Wu et al., Phys. Rev. Lett. 81, 2890 (1998).
+[8] H. Schanze et al., Phys. Rev. E 71, 016223 (2005).
+[9] J. H. Christenson et al., Phys. Rev. Lett. 13, 138 (1964).
+[10] S. Albeverio et al., J. Math. Phys. 37, 4888 (1996);
+F. Haake et al., J. Phys. A 29, 5745 (1996);
+H.-
+J. St¨ockmann and P. ˘Seba, J. Phys. A 31, 3439 (1998);
+X. Zheng, T. M. Antonsen, and E. Ott, Electromagnetics
+26(1), 3 (2006); B. Dietz et al. Phys. Rev. E 73 (2006),
+035201R.
+[11] AFT MATERIALS GmbH, Spinnerei 44, D-71522 Back-
+nang, Germany.
+[12] G. Lerosey et al., Phys. Rev. Lett. 92, 193904 (2004).
+[13] E. M. Henley and B. A. Jacobsohn, Phys. Rev. 113, 225
+(1959).
+[14] W. von Witsch, A. Richter, and P. von Brentano, Phys.
+Lett. 22, 631 (1966); T. E. O. Ericson, Phys. Lett. 23, 97
+(1966); W. von Witsch, A. Richter, and P. von Brentano,
+Phys. Rev. Lett. 19, 524 (1967); H. Driller et al., Nucl.
+Phys. A 317, 300 (1979); E. Blanke et al., Phys. Rev.
+Lett. 51, 355 (1983).
+[15] C. Mahaux and H. A. Weidenm¨uller, Phys. Lett. 23, 100
+(1966).
+[16] C. Mahaux and H. A. Weidenm¨uller, Shell Model Ap-
+proach to Nuclear Reactions (North Holland, Amster-
+dam, 1969).
+[17] C. Dembowski et al., Phys. Rev. Lett. 84, 867 (2000).
+[18] CST Microwave Studio, CST GmbH, Bad Nauheimer Str.
+19, D-64289 Darmstadt, Germany.
+[19] B. Lax and K. J. Button, Microwave Ferrites and Ferri-
+magnetics (McGraw-Hill, New York, 1962).
+[20] C. Dembowski et al., Phys. Rev. E 69, 056216 (2004).
+[21] H. L. Harney and W. D. Heiss, Eur. Phys. J. D 29, 429
+(2004).

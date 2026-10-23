@@ -1,0 +1,1693 @@
+=== PAGE 1 ===
+A NEW PROOF THAT MORE THAN 2/3 OF THE ZEROS OF THE
+RIEMANN ZETA FUNCTION ARE SIMPLE AND ON THE CRITICAL
+LINE
+YOUNESS LAMZOURI
+Abstract. We obtain a new, conceptually simpler, unconditional proof that more than
+67.25% of the non-trivial zeros of the Riemann zeta function are simple and on the
+critical line, and that at least 83.62% of the non-trivial zeros are distinct. Our approach
+also yields two new unconditional estimates on simple zeros and zeros on the critical
+line. More precisely, we prove that the proportion of zeros that are simple or lie on the
+critical line (or both) is at least 88.76%, and that the average of the proportions of
+simple zeros and of zeros on the critical line is at least 83.62%. A proof of the bounds
+for simple zeros on the critical line and for distinct zeros was very recently produced
+by an internal research version of Claude developed by Anthropic and subsequently
+verified by two mathematicians at Anthropic, Levent Alpöge and Ralph Furman, whereas
+our two additional estimates are neither stated nor proved in the Claude paper. The
+argument produced by Claude is technically intricate, and its main mechanism is not
+immediately transparent. It combines several ingredients from linear algebra, including
+a finite-dimensional matrix representation of Weil’s Hermitian form and a rank–trace
+inequality for Hermitian matrices, with a second moment calculation over the zeros
+using the explicit formula. Our new approach proceeds by replacing the entire finite-
+dimensional matrix framework by a single Hilbert space inequality, which allows for
+a direct application of Montgomery’s theorem on the pair correlation of zeros of the
+zeta function, in the unconditional form obtained by Baluyot, Goldston, Suriajaya and
+Turnage-Butterbaugh.
+1. Introduction
+The Riemann hypothesis (RH) is one of the central open problems in mathematics and
+one of the seven Millennium Prize problems. This conjecture, which was formulated by
+Riemann in 1859, asserts that all the non-trivial zeros1 of the Riemann zeta function lie
+on the critical line Re(s) = 1/2. Its truth would have tremendous applications in number
+theory, most notably for our understanding of the distribution of prime numbers.
+Let ρ = β + iγ denote a non-trivial zero of the Riemann zeta function, and let mρ be
+its multiplicity. We write
+N(T) :=
+X
+ρ
+0<γ⩽T
+1,
+where the zeros are counted with multiplicity. The classical Riemann–von Mangoldt for-
+mula gives N(T) ∼
+T
+2π log T, as T →∞. In the absence of a proof of the Riemann
+hypothesis, a fundamental problem has been to determine what proportion of the zeros
+can be shown to lie on the critical line. The first progress in this direction goes back to
+Date: September 9, 2026.
+2020 Mathematics Subject Classification. Primary 11M06, 11M26.
+1That is, the zeros lying in the critical strip 0 ⩽Re(s) ⩽1.
+1
+arXiv:2609.02882v2  [math.NT]  8 Sep 2026
+
+
+=== PAGE 2 ===
+2
+YOUNESS LAMZOURI
+Hardy [15], who proved in 1914 that infinitely many zeros lie on the line Re(s) = 1/2.
+Hardy and Littlewood [16] subsequently showed that the number of such zeros up to height
+T is ≫T. A fundamental breakthrough was made by Selberg [22], who pioneered the use
+of mollification in this problem and proved in 1942 that a positive proportion of the zeros
+lie on the critical line. In 1974, Levinson [18] introduced a new mollifier method and used
+it to prove that more than one third of the zeros lie on the line Re(s) = 1/2. Conrey [8]
+later developed Levinson’s method further and proved in 1989 that more than 2/5 of the
+zeros are simple and lie on the critical line. More recently, Pratt, Robles, Zaharescu and
+Zeindler [21] obtained the slightly better bounds
+lim inf
+T→∞
+N0(T)
+N(T) ⩾0.417293
+and
+lim inf
+T→∞
+N s
+0(T)
+N(T) ⩾0.407511,
+where
+N0(T) :=
+X
+ρ
+0<γ⩽T
+β=1/2
+1
+and
+N s
+0(T) :=
+
+
+ρ : 0 < γ ⩽T, β = 1
+2, and mρ = 1
+ ,
+and where the zeros in the definition of N0(T) are counted with multiplicity. We also let
+Ns(T) :=
+X
+ρ
+0<γ⩽T
+mρ=1
+1,
+Ns∪0(T) :=
+X
+ρ
+0<γ⩽T
+mρ=1 or β=1/2
+1,
+and
+Nd(T) := |{ρ : 0 < γ ⩽T}| .
+Thus Ns(T) denotes the number of simple zeros, Nd(T) the number of distinct zeros,
+and Ns∪0(T) the number of zeros that are simple or lie on the critical line, counted with
+multiplicity, all up to height T.
+In 1973, Montgomery [19] established his pair correlation theorem for the zeros of the
+zeta function and used it to prove, assuming RH, that at least 2/3 of the zeros are simple.
+Montgomery and Taylor (see [20]) subsequently obtained the larger proportion
+(1.1)
+C0 := 3
+2 −1
+√
+2 cot
+ 1
+√
+2
+
+= 0.6725007 . . . ,
+and this was improved to 0.6792 by Chirre, Gonçalves, and de Laat [7]. By a different
+method, Conrey, Ghosh and Gonek [9] proved, assuming RH and the Generalized Lindelöf
+Hypothesis (GLH), that at least 19
+27 = 0.7037 . . . of the zeta zeros are simple, and that at
+least 0.8456 of the zeros are distinct. Bui and Heath-Brown [5] subsequently removed GLH
+from this result and obtained the proportion 19/27 assuming only RH. Unconditionally,
+Farmer [10] proved that more than 63.95% of the zeros are distinct. This was improved
+by Ki and Lee [17, Theorem 5], who proved that more than 70% of the zeros are distinct.
+More recently, substantial progress has been made towards removing the Riemann
+hypothesis from Montgomery’s pair correlation argument. Aryan [2] obtained an uncon-
+ditional form of the pair correlation formula for the Fejér kernel and showed that Mont-
+gomery’s 2/3 bound for simple zeros follows from a zero-density hypothesis. Baluyot,
+Goldston, Suriajaya and Turnage-Butterbaugh [3] subsequently established an uncondi-
+tional version of Montgomery’s pair correlation theorem and, under hypotheses weaker
+
+
+=== PAGE 3 ===
+2/3 OF THE ZEROS OF THE ZETA FUNCTION ARE SIMPLE AND ON THE CRITICAL LINE
+3
+than RH, proved that at least 61.7% of the zeros are simple. In further work [4], they
+showed for the first time that the pair correlation method can also give information on
+the horizontal distribution of the zeros. More precisely, they proved that if for all large
+T, all the zeros with T < γ ⩽2T satisfy |β −1
+2| <
+b
+2 log T , then at least 2/3 of the zeros
+are simple and on the critical line when b = 0.3185, while for b = 0.001 the correspond-
+ing proportion is at least 0.6725. Goldston and Suriajaya [12, 13] subsequently clarified
+the mechanism behind these results. Moreover, extending earlier work of Gallagher and
+Mueller [11], Goldston, Lee, Schettler and Suriajaya [14] showed that Montgomery’s full
+Pair Correlation Conjecture, without assuming RH, implies that asymptotically 100% of
+the zeros are simple and on the critical line.
+The main purpose of this paper is to give a new and conceptually simpler approach
+to the breakthrough result recently announced by an internal research version of Claude,
+developed by Anthropic, and subsequently verified by Alpöge and Furman [1]. In addi-
+tion to recovering their bounds, our approach yields two further unconditional estimates
+concerning simple zeros and zeros on the critical line.
+Theorem 1.1. We have
+lim inf
+T→∞
+N s
+0(T)
+N(T) ⩾C0 = 0.67250 . . . ,
+and
+lim inf
+T→∞
+Nd(T)
+N(T) ⩾C1 := C0 + 1
+2
+= 0.83625 . . . .
+Moreover, we have
+lim inf
+T→∞
+Ns∪0(T)
+N(T)
+⩾C2 = 0.88762 . . .
+and
+lim inf
+T→∞
+Ns(T) + N0(T)
+2N(T)
+⩾C1 = 0.83625 . . . .
+Here C0 is defined in (1.1) and C2 := (1+2
+√
+2+2C0)/(3+2
+√
+2). Thus, more than 67.25%
+of the non-trivial zeros of the zeta function are simple and on the critical line, and more
+than 88.76% of the zeros are either simple or lie on the critical line (or both). In addition,
+more than 83.62% of the zeros are distinct, and the average of the proportions of simple
+zeros and of zeros on the critical line is at least 83.62%.
+Remark 1.2. The two additional estimates express a form of “rigidity” between the
+simplicity and the horizontal location of zeros. The first shows that, asymptotically, the
+proportion of zeros that are simultaneously off the critical line and of multiplicity at least
+two is at most 1−C2 < 0.1124. The second shows in particular that if either Ns(T)/N(T)
+or N0(T)/N(T) tends to the lower bound C0, then the other must tend to 1. Note that
+the last estimate implies that max(N0(T), Ns(T)) ⩾(C1 +o(1))N(T). Thus, although our
+argument does not determine which of the two quantities is larger, it shows that the larger
+of the proportions of zeros on the critical line and of simple zeros is asymptotically at least
+83.62%. Related estimates are obtained in Theorem 3(ii) and (iii) of Baluyot, Goldston,
+Suriajaya and Turnage-Butterbaugh [4] through their notion of horizontal multiplicity,
+under the hypothesis that, for all large T, all zeros with T < γ ⩽2T lie in a narrow box
+of width b/ log T centered on the critical line. In the case b →0, their Theorem 3(ii) yields
+the same lower bound C0+1
+2
+= C1 = 0.83625 . . . for the average of the proportions of simple
+
+
+=== PAGE 4 ===
+4
+YOUNESS LAMZOURI
+zeros and of zeros on the critical line. Their Theorem 3(iii), following an observation of
+Soundararajan, gives under the same assumptions the lower bound 2+C0
+3
+= 0.89083 . . . for
+the proportion of zeros that are simple or lie on the critical line (or both), whereas our
+approach yields the slightly smaller unconditional proportion 0.88762 . . ..
+We briefly compare our proof with the argument discovered by Claude and verified by
+Alpöge and Furman [1]. Their proof starts from Weil’s Hermitian form and restricts it to a
+finite family of test functions, producing a real symmetric matrix of dimension asymptotic
+to N(T). They then evaluate its trace and the sum of the squares of its entries (that is,
+the square of its Hilbert–Schmidt norm) and combine these estimates with a rank–trace
+inequality. To this end, they separate the part of the matrix coming from simple zeros
+on the critical line from the remaining part. The rank–trace inequality then gives a lower
+bound for the number of simple zeros on the critical line in terms of N(T), the trace of
+the matrix, and the square of its Hilbert–Schmidt norm.
+Our proof takes a different and more direct route. We avoid the finite-dimensional
+matrix construction altogether, and replace the linear algebra part of the argument by
+a single Hilbert space inequality. This reduces the problem directly to an estimate for
+a pair correlation sum over the zeros, to which we apply Montgomery’s pair correlation
+theorem in the unconditional form obtained by Baluyot, Goldston, Suriajaya and Turnage-
+Butterbaugh (see Lemma 5 of [3]). The Hilbert space formulation makes the underlying
+structure more transparent and allows additional inequalities to be extracted directly.
+Although the two proofs are quite different, they both ultimately reduce the relevant
+information to the estimation of a certain quadratic form over the zeros. In this sense,
+both may be viewed as variants of a second-moment argument, and the optimization leads
+in both cases to the same Montgomery–Taylor extremal problem (see Remark 3.4 below),
+which explains why the same constants appear in the two proofs.
+Acknowledgments. The author is especially grateful to Brian Conrey, Daniel Goldston,
+Steve Gonek, Andrew Granville, Micah Milinovich and Gérald Tenenbaum for carefully
+reading an earlier draft of the manuscript and for their valuable comments. He also thanks
+Kannan Soundararajan for helpful suggestions, and Ade Irma Suriajaya for helpful com-
+ments and discussions. The author is supported by a junior chair of the Institut Univer-
+sitaire de France. The author is also grateful to Ken Ono and the Axiom Math team for
+their enthusiasm and for producing, on very short notice and following the completion of
+this work, the Lean formal certificates described in Appendix A.
+2. The key proposition
+Since non-trivial zeros of the Riemann zeta function are counted with multiplicity, we
+will be working with multisets instead of sets of zeros. Montgomery’s classical argument
+in [19], which shows that at least 2/3 of the zeros of the zeta function are simple assuming
+
+
+=== PAGE 5 ===
+2/3 OF THE ZEROS OF THE ZETA FUNCTION ARE SIMPLE AND ON THE CRITICAL LINE
+5
+RH, relies on the following basic inequality
+(2.1)
+X
+ρ
+0<γ⩽T
+mρ=1
+1 ⩾
+X
+ρ
+0<γ⩽T
+(2 −mρ) = 2
+X
+ρ
+0<γ⩽T
+1 −
+X
+ρ,ρ′
+0<γ,γ′⩽T
+ρ=ρ′
+1,
+which is true unconditionally. Therefore, one reduces the problem to obtaining an upper
+bound for the diagonal contribution on the right hand side of (2.1). If RH is assumed
+then one has
+(2.2)
+X
+ρ,ρ′
+0<γ,γ′⩽T
+ρ=ρ′
+1 ⩽
+X
+ρ,ρ′
+0<γ,γ′⩽T
+K
+
+i(ρ −ρ′)log T
+2π
+
+4
+4 −(ρ −ρ′)2,
+for any kernel2 K such that K(0) = 1 and K(u) ⩾0 for all u ∈R. Assuming RH,
+Montgomery then computes this pair correlation sum with K being the Fejér kernel
+K(u) =
+
+sin(πu)
+πu
+2
+. Recent attempts to use this approach unconditionally relied on some
+form of positivity for K when evaluated at differences of non-trivial zeros that may lie off
+the critical line. In [4], Baluyot, Goldston, Suriajaya and Turnage-Butterbaugh achieved
+this using a kernel of Tsang whose real part is positive in a fixed horizontal strip. After
+rescaling by log T/(2π), this positivity applies only if one assumes that all the non-trivial
+zeros with imaginary part in [T, 2T] lie in a very narrow strip of the form |β −1/2| ⩽
+c/ log T. This restriction cannot be removed merely by searching for a better kernel.
+Indeed, for the above method to work without any information on the real parts of the
+zeros, one would require that the kernel K satisfies ReK(z) ⩾0 for all z ∈C. However,
+no such nonconstant entire kernel exists.
+Our key idea is that one can bypass the inequality (2.1) and directly prove, for a large
+class of kernels K, that the number of simple real elements of a finite multiset Z which
+is invariant under complex conjugation is
+⩾2
+X
+z∈Z
+1 −
+X
+z,s∈Z
+K(z −s)2,
+without requiring that the individual off-diagonal terms K(z −s)2 be non-negative.
+For a compactly supported function f ∈L1(R) we define its Fourier transform bf :
+C →C by
+(2.3)
+bf(ξ) =
+Z ∞
+−∞
+f(u)e−2πiξu du,
+for all ξ ∈C.
+Note that this is an entire function since f is compactly supported. For an element z
+of a finite multiset Z, we denote by mz its multiplicity. We say that a finite multiset Z
+is invariant under complex conjugation if for all z ∈Z we have z ∈Z and mz = mz.
+Throughout, sums over a multiset are understood to count elements with their multiplic-
+ities. We prove the following key proposition.
+2Since in this case i(ρ −ρ′) = γ′ −γ ∈R.
+
+
+=== PAGE 6 ===
+6
+YOUNESS LAMZOURI
+Proposition 2.1. Let λ > 0 be a real number and η ∈L2(R) be a real valued even function
+with supp(η) ⊂(−λ, λ), such that bη2(0) = 1. Let Z be a non-empty finite multiset of
+complex numbers which is invariant under complex conjugation. For z ∈Z we let mz be
+its multiplicity in Z. Then we have
+(2.4)
+X
+z∈Z∩R
+mz=1
+1 ⩾2
+X
+z∈Z
+1 −
+X
+z,s∈Z
+K(z −s)2,
+where K is the kernel K(ξ) := bη2(ξ). Moreover, the number of distinct elements of Z is
+(2.5)
+⩾3
+2
+X
+z∈Z
+1 −1
+2
+X
+z,s∈Z
+K(z −s)2.
+In addition, we have
+(2.6)
+X
+z∈Z
+mz=1
+1 +
+X
+z∈Z∩R
+1 ⩾3
+X
+z∈Z
+1 −
+X
+z,s∈Z
+K(z −s)2.
+Finally, if we assume that P
+z,s∈Z K(z −s)2 ⩽A P
+z∈Z 1, for some 1 ⩽A < 2, then we
+have
+(2.7)
+X
+z∈Z
+mz=1 or z∈R
+1 ⩾5 + 2
+√
+2 −2A
+3 + 2
+√
+2
+X
+z∈Z
+1.
+We observe that the unconditional version of the pair correlation formula (see Lemma
+3.1 below) produces the weighted sum containing an extra factor 4/(4 −(ρ −ρ′)2), rather
+than the unweighted quadratic form which appears in Proposition 2.1. An additional
+modification of the test function will be used in Section 3 to remove this weight.
+Remark 2.2. There are two reasons for working with K2, instead of K, in Proposition
+2.1. Indeed, since the number of simple real elements of Z is at most P
+z∈Z 1, the inequality
+(2.4) implies that P
+z,s∈Z K(z −s)2 ⩾P
+z∈Z 1. This is substantially stronger than positive
+definiteness alone. The square is also naturally adapted to the Hilbert space argument in
+the proof and to the use of Bessel’s inequality.
+Proof of Proposition 2.1. For all z ∈C we define the functions fz, gz, hz : R →C by
+(2.8)
+fz(u) := η(u)e−2πiuz,
+gz(u) := fz(u) + fz(u)
+2
+,
+and
+hz(u) = fz(u) −fz(u)
+2i
+.
+Then gz = gz, hz = −hz and fz = gz + ihz. Moreover, we observe that
+(2.9)
+K(z −s) = bη2(z −s) =
+Z λ
+−λ
+η(u)e−2πizuη(u)e2πisu du =
+Z λ
+−λ
+fz(u)fs(u) du.
+Hence for all x ∈R and z ∈C we have
+(2.10)
+Z λ
+−λ
+|fx(u)|2du = K(0) = 1,
+
+
+=== PAGE 7 ===
+2/3 OF THE ZEROS OF THE ZETA FUNCTION ARE SIMPLE AND ON THE CRITICAL LINE
+7
+and
+1 =
+Z λ
+−λ
+fz(u)fz(u)du = Re
+Z λ
+−λ
+(gz(u) + ihz(u))(gz(u) + ihz(u))du
+=
+Z λ
+−λ
+|gz(u)|2du −
+Z λ
+−λ
+|hz(u)|2du.
+(2.11)
+Now for all (u, v) ∈R2 we define
+F(u, v) :=
+X
+z∈Z
+fz(u)fz(v).
+Since Z is invariant under complex conjugation we have
+X
+z,s∈Z
+K2(z −s) =
+X
+z,s∈Z
+K2(z −s) =
+X
+z,s∈Z
+Z λ
+−λ
+fz(u)fs(u) du
+2
+=
+X
+z,s∈Z
+Z λ
+−λ
+Z λ
+−λ
+fz(u)fz(v)fs(u)fs(v) du dv =
+Z λ
+−λ
+Z λ
+−λ
+|F(u, v)|2 du dv.
+(2.12)
+Let R be the set of distinct real elements of Z, and let S be the set of its distinct
+non-real elements. We further split the set R into two disjoint subsets R1 and R2, where
+R1 is the set of simple real elements of Z, and R2 is the set of those elements which are
+real and have multiplicity ⩾2. Since Z is invariant under complex conjugation we can
+list the elements of these sets as
+R1 = {x1, . . . , xn},
+R2 = {xn+1, . . . , xn+r},
+and S = {z1, z1, . . . , zk, zk}.
+Grouping the non-real elements by pairs of complex conjugates we deduce that
+F(u, v) =
+n+r
+X
+ℓ=1
+mxℓfxℓ(u)fxℓ(v) +
+k
+X
+ℓ=1
+mzℓ(fzℓ(u)fzℓ(v) + fzℓ(u)fzℓ(v))
+=
+n+r
+X
+ℓ=1
+mxℓfxℓ(u)fxℓ(v) + 2
+k
+X
+ℓ=1
+mzℓ(gzℓ(u)gzℓ(v) −hzℓ(u)hzℓ(v)) .
+(2.13)
+We now consider the following nested finite dimensional subspaces of the Hilbert space
+L2((−λ, λ), C), endowed with its usual inner product ⟨f, g⟩=
+R λ
+−λ f(u)g(u)du:
+U = Span
+ fxn+1, . . . , fxn+r, gz1, . . . , gzk
+
+,
+V = Span
+ fx1, . . . , fxn+r, gz1, . . . , gzk
+
+,
+and
+W = Span
+ fx1, . . . , fxn+r, gz1, . . . , gzk, hz1, . . . , hzk
+
+.
+We also put
+DU := dim U,
+DV := dim V
+and DW := dim W.
+Note that for distinct complex numbers z1, . . . , zℓ, the functions ez1u, ez2u, . . . , ezℓu are
+linearly independent over C. Therefore, since the set on which η is non-zero has positive
+measure (because bη2(0) = 1), it follows that fx1, . . . , fxn+r, gz1, . . . , gzk, hz1, . . . , hzk are
+linearly independent over C. Hence, we get DU = r+k, DV = n+r+k and DW = n+r+2k.
+One can also observe that all of the functions fxℓ, gzℓand hzℓsatisfy the following property
+(2.14)
+Φ(u) = Φ(−u).
+
+
+=== PAGE 8 ===
+8
+YOUNESS LAMZOURI
+Moreover, if Φ1 and Φ2 satisfy (2.14) then
+⟨Φ1, Φ2⟩=
+Z λ
+−λ
+Φ1(u)Φ2(u) du =
+Z λ
+−λ
+Φ1(−u)Φ2(−u) du,
+=
+Z λ
+−λ
+Φ1(u)Φ2(u) du = ⟨Φ1, Φ2⟩
+(2.15)
+by a simple change of variables. We now apply the standard Gram-Schmidt process to
+construct an orthonormal basis (ψ1, . . . , ψDW ) of W, such that (ψ1, . . . , ψDU) is a basis for
+U and (ψ1, . . . , ψDV ) is a basis for V . Since the original spanning family satisfies (2.14), the
+identity (2.15) shows inductively that all the Gram–Schmidt coefficients are real. Hence
+every ψj also satisfies (2.14), and so all the inner product coefficients appearing below
+are real. Furthermore, the functions Ψj : R2 →C, defined by Ψj(u, v) = ψj(u)ψj(v), are
+orthonormal in L2 (−λ, λ)2, C
+
+. Indeed, for 1 ⩽j, ℓ⩽DW we have
+Z λ
+−λ
+Z λ
+−λ
+ψj(u)ψj(v)ψℓ(u)ψℓ(v)dudv =
+ Z λ
+−λ
+ψj(u)ψℓ(u)du
+2
+.
+Hence by Bessel’s inequality we get
+(2.16)
+Z λ
+−λ
+Z λ
+−λ
+|F(u, v)|2dudv ⩾
+DW
+X
+j=1
+|αj|2,
+where
+αj :=
+Z λ
+−λ
+Z λ
+−λ
+F(u, v)ψj(u)ψj(v) du dv
+=
+n+r
+X
+ℓ=1
+mxℓ
+Z λ
+−λ
+fxℓ(u)ψj(u)du
+2
++ 2
+k
+X
+ℓ=1
+mzℓ
+ Z λ
+−λ
+gzℓ(u)ψj(u)du
+2
+−
+Z λ
+−λ
+hzℓ(u)ψj(u)du
+2!
+,
+(2.17)
+and where the last identity follows from (2.13). Note that αj is real by (2.15).
+To prove the inequalities (2.4), (2.5), (2.6) and (2.7) we shall establish the correspond-
+ing lower bounds for the sum P
+1⩽j⩽DW α2
+j. To this end we split this sum into three parts
+1 ⩽j ⩽DU, DU + 1 ⩽j ⩽DV and DV + 1 ⩽j ⩽DW. We assume that these three
+ranges are all non-empty, otherwise the corresponding sum will just be 0.
+We shall first record several important estimates concerning sums of the αj in these
+three ranges. Since fxℓ∈U for all n + 1 ⩽ℓ⩽n + r and gzd ∈U for all 1 ⩽d ⩽k then
+by Parseval’s theorem and (2.10) we obtain
+DU
+X
+j=1
+Z λ
+−λ
+fxℓ(u)ψj(u)du
+2
+=
+Z λ
+−λ
+|fxℓ(u)|2du = 1,
+and
+DU
+X
+j=1
+Z λ
+−λ
+gzd(u)ψj(u)du
+2
+=
+Z λ
+−λ
+|gzd(u)|2du.
+
+
+=== PAGE 9 ===
+2/3 OF THE ZEROS OF THE ZETA FUNCTION ARE SIMPLE AND ON THE CRITICAL LINE
+9
+Furthermore, by Bessel’s inequality we have
+DU
+X
+j=1
+Z λ
+−λ
+hzℓ(u)ψj(u)du
+2
+⩽
+Z λ
+−λ
+|hzℓ(u)|2du,
+for all 1 ⩽ℓ⩽k. Combining the above three estimates with the definition of αj in (2.17)
+together with the identities (2.10) and (2.11) we get
+DU
+X
+j=1
+αj =
+n+r
+X
+ℓ=1
+mxℓ
+DU
+X
+j=1
+Z λ
+−λ
+fxℓ(u)ψj(u)du
+2
++ 2
+k
+X
+ℓ=1
+mzℓ
+ DU
+X
+j=1
+ Z λ
+−λ
+gzℓ(u)ψj(u)du
+2
+−
+DU
+X
+j=1
+ Z λ
+−λ
+hzℓ(u)ψj(u)du
+2
+(2.18)
+⩾
+n+r
+X
+ℓ=n+1
+mxℓ+ 2
+k
+X
+ℓ=1
+mzℓ⩾2(r + k),
+since mxℓ⩾2 for all n + 1 ⩽ℓ⩽n + r. For the second range DU + 1 ⩽j ⩽DV we note
+that ψj is orthogonal to U and hence by (2.17) we obtain
+DV
+X
+j=DU+1
+αj =
+n
+X
+ℓ=1
+DV
+X
+j=DU+1
+Z λ
+−λ
+fxℓ(u)ψj(u)du
+2
+−2
+k
+X
+ℓ=1
+mzℓ
+DV
+X
+j=DU+1
+ Z λ
+−λ
+hzℓ(u)ψj(u)du
+2
+⩽
+n
+X
+ℓ=1
+Z λ
+−λ
+|fxℓ(u)|2du = n,
+(2.19)
+by Bessel’s inequality and (2.10). Now, in the last range DV + 1 ⩽j ⩽DW, the functions
+ψj are orthogonal to V and hence to all of the fxℓand the gzℓ. Therefore we obtain from
+(2.17) that
+(2.20)
+αj = −2
+k
+X
+ℓ=1
+mzℓ
+Z λ
+−λ
+hzℓ(u)ψj(u)du
+2
+⩽0.
+Finally, we estimate the total sum P
+1⩽j⩽DW αj. Using the definition of αj in (2.17) to-
+gether with Parseval’s theorem and the identities (2.10) and (2.11) we find that
+(2.21)
+DW
+X
+j=1
+αj =
+n+r
+X
+ℓ=1
+mxℓ+ 2
+k
+X
+ℓ=1
+mzℓ=
+X
+z∈Z
+1.
+We start by proving (2.4). In the first range we use the basic inequality a2 + 4 ⩾4a,
+valid for all real numbers a, together with (2.18). This gives
+(2.22)
+DU
+X
+j=1
+α2
+j ⩾4
+DU
+X
+j=1
+αj −4(k + r) ⩾2
+DU
+X
+j=1
+αj,
+since DU = k + r. In the second range we only use the basic inequality a2 + 1 ⩾2a, valid
+for all real numbers a, to obtain
+(2.23)
+DV
+X
+j=DU+1
+α2
+j ⩾2
+DV
+X
+j=DU+1
+αj −n = 2
+DV
+X
+j=DU+1
+αj −
+X
+z∈Z∩R
+mz=1
+1.
+
+
+=== PAGE 10 ===
+10
+YOUNESS LAMZOURI
+Finally, in the third range we use (2.20) which trivially gives
+(2.24)
+DW
+X
+j=DV +1
+α2
+j ⩾2
+DW
+X
+j=DV +1
+αj.
+Summing the inequalities (2.22), (2.23) and (2.24) and using (2.16) we derive
+(2.25)
+Z λ
+−λ
+Z λ
+−λ
+|F(u, v)|2dudv ⩾
+DW
+X
+j=1
+α2
+j ⩾2
+DW
+X
+j=1
+αj −
+X
+z∈Z∩R
+mz=1
+1.
+Inserting (2.21) in (2.25) and combining it with (2.12) completes the proof of (2.4).
+We now establish (2.5). Using our notation above, the number of distinct elements of
+Z is n + r + 2k. We will proceed similarly to the proof of (2.4), but we shall change our
+treatment for the first and second ranges 1 ⩽j ⩽DU and DU + 1 ⩽j ⩽DV . In the first
+range we only use the first inequality of (2.22). In the second range we use (2.19) and
+(2.23) which imply
+(2.26)
+DV
+X
+j=DU+1
+α2
+j ⩾2
+DV
+X
+j=DU+1
+αj −n ⩾4
+DV
+X
+j=DU+1
+αj −3n.
+Finally, in the last range DV + 1 ⩽j ⩽DW we use (2.20) which implies the trivial
+inequality
+(2.27)
+DW
+X
+j=DV +1
+α2
+j ⩾4
+DW
+X
+j=DV +1
+αj.
+Summing the first inequality of (2.22) together with the inequalities (2.26) and (2.27)
+gives
+DW
+X
+j=1
+α2
+j ⩾4
+DW
+X
+j=1
+αj −3n −4(k + r).
+On the other hand by (2.21) we have PDW
+j=1 αj = P
+z∈Z 1 ⩾n + 2r + 2k. Thus we deduce
+that
+DW
+X
+j=1
+α2
+j ⩾4
+X
+z∈Z
+1 −3n −4(k + r) ⩾3
+X
+z∈Z
+1 −2(n + r + k).
+Combining this with (2.12) and (2.16) yields
+n + r + 2k ⩾3
+2
+X
+z∈Z
+1 −1
+2
+X
+z,s∈Z
+K(z −s)2,
+as desired.
+We now prove (2.6). To this end we split the set S of the distinct non-real elements
+of Z into two disjoint subsets S1 and S2, where S1 is the set of simple non-real elements
+of Z, and S2 is the set of those elements which are non-real and have multiplicity ⩾2.
+Put |S1| = 2p and |S2| = 2q, so that p + q = k. Since the number of simple elements of Z
+
+
+=== PAGE 11 ===
+2/3 OF THE ZEROS OF THE ZETA FUNCTION ARE SIMPLE AND ON THE CRITICAL LINE
+11
+is n + 2p, and the number of real elements of Z counted with multiplicity is ⩾n + 2r, it
+suffices to prove the desired lower bound for 2n + 2r + 2p. By (2.18) we have
+(2.28)
+DU
+X
+j=1
+αj ⩾
+n+r
+X
+ℓ=n+1
+mxℓ+ 2
+k
+X
+ℓ=1
+mzℓ⩾2r + 2p + 4q.
+Combining this bound with the first inequality of (2.22), together with the inequalities
+(2.19), (2.20), and (2.23) we deduce that
+DW
+X
+j=1
+α2
+j ⩾
+ 
+4
+DU
+X
+j=1
+αj −4(r + p + q)
+!
++
+ 
+2
+DV
+X
+j=DU+1
+αj −n
+!
++ 3
+DW
+X
+j=DV +1
+αj
+⩾3
+DW
+X
+j=1
+αj −(2r + 2p + 2n).
+(2.29)
+Therefore, (2.6) follows upon combining this inequality with (2.12), (2.16) and (2.21).
+Finally, we prove (2.7). Here the number of elements of Z which are real or simple (or
+both) is ⩾n + 2r + 2p, so we are going to seek a lower bound for this quantity. Let t > 2
+be a parameter to be chosen. In the first range we use the basic inequality a2 ⩾2at −t2,
+valid for all a ∈R to get
+(2.30)
+DU
+X
+j=1
+α2
+j ⩾2t
+DU
+X
+j=1
+αj −t2(r + p + q).
+In the second and third ranges we use the exact same ingredients as before, namely (2.20)
+and (2.23). Then similarly to (2.29) we get
+DW
+X
+j=1
+α2
+j ⩾
+ 
+2t
+DU
+X
+j=1
+αj −t2(r + p + q)
+!
++
+ 
+2
+DV
+X
+j=DU+1
+αj −n
+!
++ A
+DW
+X
+j=DV +1
+αj.
+By our assumption together with (2.12), (2.16) and (2.21) we have PDW
+j=1 α2
+j ⩽A PDW
+j=1 αj.
+Therefore we deduce that
+(2t −A)
+DU
+X
+j=1
+αj −t2(r + p + q) + (2 −A)
+DV
+X
+j=DU+1
+αj −n ⩽0.
+Our goal now is to choose the parameter t in such a way as to balance the weights of
+the first and second sums of αj in order to cancel the contribution of q and obtain a
+multiple of n + 2r + 2p. To this end let b1, b2 and b3 be positive real numbers such that
+b1 + b2 = 2t −A and b1 −b3 = 2 −A. Then, using (2.19) and (2.28) we deduce that
+(2.31)
+b1
+DV
+X
+j=1
+αj + b2(2r + 2p + 4q) −t2(r + p + q) −(b3 + 1)n ⩽0.
+We now choose b1, b2 and b3 such that 4b2 = t2 and t2/2−b2 = b3+1 and hence b3 = t2/4−1.
+On the other hand we have b1 +b2 = 2t−A and b1 −b3 = 2−A and hence b2 +b3 = 2t−2.
+This shows that our parameter t satisfies the equation t2−4t+2 = 0 and hence t = 2+
+√
+2
+
+
+=== PAGE 12 ===
+12
+YOUNESS LAMZOURI
+since t > 2. With this choice we have b1 = 5/2+
+√
+2−A, b2 = 3/2+
+√
+2 and b3 = 1/2+
+√
+2.
+Inserting these in (2.31) and using (2.20) and (2.21) we get
+5
+2 +
+√
+2 −A
+ X
+z∈Z
+1 ⩽
+5
+2 +
+√
+2 −A
+ DV
+X
+j=1
+αj ⩽
+3
+2 +
+√
+2
+
+(n + 2r + 2p).
+This completes the proof.
+□
+3. Proof of Theorem 1.1
+For complex numbers z with |Re(z)| < 2 we define
+w(z) :=
+4
+4 −z2.
+We shall use the following unconditional pair correlation formula established by Baluyot,
+Goldston, Suriajaya and Turnage-Butterbaugh in [3]. Its proof follows the same argument
+as Montgomery’s original proof under RH [19], while an unconditional form of the special
+case corresponding to the Fejér kernel was previously obtained by Aryan [2].
+Lemma 3.1 (Lemma 5 of [3]). Let f ∈L1(R) be a real-valued even function with support
+in [−1, 1], and suppose that f is Lipschitz continuous at x = 0 (that is, f(x) −f(0) =
+O(|x|) as x →0). Then we have
+X
+ρ,ρ′
+0<γ,γ′⩽T
+bf
+
+i(ρ −ρ′)log T
+2π
+
+w(ρ −ρ′) = T
+2π log T
+
+f(0) + 2
+Z 1
+0
+αf(α) dα + Of
+
+1
+√log T
+
+.
+To combine Proposition 2.1 with the pair correlation formula in Lemma 3.1, we must
+remove the weight w(ρ−ρ′). Indeed, let η ∈C∞
+c ((−1/2, 1/2)) be a real valued even function
+such that bη2(0) = 1. Define K := bη2 and Q := η2 ∗η2, where here and throughout we
+define
+(f ∗g)(x) :=
+Z ∞
+−∞
+f(u)g(x −u) du
+for all f, g ∈L2(R). Then bQ = K2 and Q is supported in [−1, 1]. Hence a direct application
+of Lemma 3.1 gives an asymptotic formula for the weighted sum
+X
+ρ,ρ′
+0<γ,γ′⩽T
+K
+
+i(ρ −ρ′)log T
+2π
+2
+w(ρ −ρ′).
+On the other hand, in order to use Proposition 2.1 we need to estimate the corresponding
+sum without the factor w(ρ −ρ′). This factor cannot be removed by directly applying
+Lemma 3.1 to a different test function. Indeed, writing z = i(ρ −ρ′)log T
+2π , we have
+w(ρ −ρ′) =
+
+1 +
+π2z2
+(log T)2
+−1
+.
+Thus, the identity
+K(z)2 = bf(z)w(ρ −ρ′)
+
+
+=== PAGE 13 ===
+2/3 OF THE ZEROS OF THE ZETA FUNCTION ARE SIMPLE AND ON THE CRITICAL LINE
+13
+would require
+bf(z) =
+
+1 +
+π2z2
+(log T)2
+
+K(z)2,
+which depends on T. Hence, Lemma 3.1 cannot be applied directly to such a test function
+without an additional uniformity argument. To overcome this we express the desired kernel
+as a linear combination of two fixed test functions to which Lemma 3.1 can be applied
+separately.
+Lemma 3.2. Put
+(3.1)
+CMT := 1
+2 + 1
+√
+2 cot
+ 1
+√
+2
+
+= 1.3274992963205 . . . .
+Then for every ε > 0, there exists a real valued even function ηε ∈C∞
+c ((−1/2, 1/2)) such
+that, for the kernel Kε(z) := bη2
+ε(z), we have Kε(0) = 1, and
+X
+ρ,ρ′
+0<γ,γ′⩽T
+Kε
+
+i(ρ −ρ′)log T
+2π
+2
+=
+
+Cηε + Oε
+
+1
+√log T
+ T
+2π log T,
+where |Cηε −CMT| < ε.
+Remark 3.3. Before proving the lemma, we briefly compare it with the corresponding
+formulation in the Claude proof [1]. Put L = log(T/(2π)), γρ = −i(ρ −1
+2), and ψ(u) =
+cos(
+√
+2u). Choose a smooth cutoff χ such that χ(u) = 0 for u ⩽0 and χ(u) = 1 for u ⩾1.
+Define ϕ(u) = χ
+  L
+2 + u
+
+χ
+  L
+2 −u
+
+ψ(u/L)1/2, and αk = T + 2πk/L, for 0 ⩽k < d :=
+⌊LT/(2π)⌋. Then the second-moment formula used in [1] takes the form (see Theorem
+5.7 of [1])
+1
+a2L4
+X
+0⩽k,k′<d
+ 
+X
+ρ
+Re(γρ)∈[T−
+√
+T,2T+
+√
+T)
+bϕ
+γρ −αk
+2π
+
+bϕ
+γρ −αk′
+2π
+ !2
+= (CMT + o(1)) T
+2π log T,
+where a = 1
+L
+R
+R ϕ(u)2 du.
+Proof of Lemma 3.2. Let I = [−1/2, 1/2] and define
+f0(x) :=
+(
+cos(
+√
+2x)
+√
+2 sin(1/
+√
+2)
+if x ∈I,
+0
+otherwise.
+Since |
+√
+2x| ⩽
+1
+√
+2 < π
+2 for all x ∈I, the function f0 is strictly positive on I. Moreover, f0
+is real valued and even, and we have
+Z ∞
+−∞
+f0(x) dx =
+1
+√
+2 sin(1/
+√
+2)
+Z 1/2
+−1/2
+cos(
+√
+2x) dx = 1.
+For 0 < δ < 1/4, let ψδ ∈C∞
+c ((−1/2, 1/2)) be an even function such that 0 ⩽ψδ ⩽1 and
+ψδ(x) = 1 for |x| ⩽1
+2 −δ. Put
+Aδ :=
+Z ∞
+−∞
+ψδ(x)2f0(x) dx.
+
+
+=== PAGE 14 ===
+14
+YOUNESS LAMZOURI
+We now define
+ηδ(x) := ψδ(x)
+p
+f0(x)
+√Aδ
+and
+fδ(x) := ηδ(x)2 = ψδ(x)2f0(x)
+Aδ
+.
+Since f0 is smooth and strictly positive on (−1
+2, 1
+2) it follows that ηδ, fδ ∈C∞
+c
+ (−1/2, 1/2)
+
+.
+Moreover, ηδ and fδ are real valued and even, fδ ⩾0, and
+Z ∞
+−∞
+fδ(x) dx = 1.
+Hence, if Kδ(z) := bfδ(z) = bη2
+δ(z), then Kδ(0) = 1. We now define Qδ := fδ ∗fδ. Since
+fδ ∈C∞
+c ((−1/2, 1/2)), we have Qδ ∈C∞
+c ((−1, 1)). In particular, Qδ and Q′′
+δ are real-valued
+even functions supported in [−1, 1], and both are Lipschitz continuous at 0. Thus, both
+functions satisfy the hypotheses of Lemma 3.1. Moreover we have bQδ(z) = bfδ(z)2 = Kδ(z)2
+for all z ∈C. We now define
+(3.2)
+rδ,T := Qδ −
+Q′′
+δ
+4(log T)2.
+Since Qδ is smooth and compactly supported, integration by parts twice gives
+c
+Q′′
+δ(z) = (2πiz)2 bQδ(z) = −4π2z2Kδ(z)2.
+Therefore we derive
+brδ,T(z) =
+
+1 +
+π2z2
+(log T)2
+
+Kδ(z)2,
+and hence
+brδ,T
+
+i(ρ −ρ′)log T
+2π
+
+=
+
+1 −(ρ −ρ′)2
+4
+
+Kδ
+
+i(ρ −ρ′)log T
+2π
+2
+.
+Thus we deduce that
+Kδ
+
+i(ρ −ρ′)log T
+2π
+2
+= brδ,T
+
+i(ρ −ρ′)log T
+2π
+
+w(ρ −ρ′)
+= c
+Qδ
+
+i(ρ −ρ′)log T
+2π
+
+w(ρ −ρ′) −
+1
+4(log T)2 c
+Q′′
+δ
+
+i(ρ −ρ′)log T
+2π
+
+w(ρ −ρ′),
+(3.3)
+by (3.2) and the linearity of the Fourier transform. Moreover, by Lemma 3.1 we obtain
+X
+ρ,ρ′
+0<γ,γ′⩽T
+c
+Qδ
+
+i(ρ −ρ′)log T
+2π
+
+w(ρ −ρ′)
+= T
+2π log T
+
+Qδ(0) + 2
+Z 1
+0
+αQδ(α) dα + Oδ
+
+1
+√log T
+
+,
+and similarly
+X
+ρ,ρ′
+0<γ,γ′⩽T
+c
+Q′′
+δ
+
+i(ρ −ρ′)log T
+2π
+
+w(ρ −ρ′)
+= T
+2π log T
+
+Q′′
+δ(0) + 2
+Z 1
+0
+αQ′′
+δ(α) dα + Oδ
+
+1
+√log T
+
+.
+
+
+=== PAGE 15 ===
+2/3 OF THE ZEROS OF THE ZETA FUNCTION ARE SIMPLE AND ON THE CRITICAL LINE
+15
+Combining these estimates with (3.3) we derive
+X
+ρ,ρ′
+0<γ,γ′⩽T
+Kδ
+
+i(ρ −ρ′)log T
+2π
+2
+= T
+2π log T
+
+Qδ(0) + 2
+Z 1
+0
+αQδ(α) dα + Oδ
+
+1
+√log T
+
+.
+We now write
+Cδ := Qδ(0) + 2
+Z 1
+0
+αQδ(α) dα,
+and Q0 := f0 ∗f0. Since fδ →f0 in L1(R) ∩L2(R) we have
+lim
+δ→0 Cδ = Q0(0) + 2
+Z 1
+0
+αQ0(α) dα = CMT,
+where the last calculation was performed by Montgomery and Taylor (see [20]). Thus we
+may choose δ > 0 so small such that |Cδ −CMT| < ε. We fix such a δ, and put ηε := ηδ,
+Kε := Kδ and Cηε := Cδ. This completes the proof.
+□
+Remark 3.4. It follows from Corollary 14 of Carneiro, Chandee, Littmann and Milinovich
+[6] that Cηε ⩾CMT. The corresponding extremal function was originally identified by
+Montgomery and Taylor [20]. Together with the preceding construction, this shows that
+CMT is the optimal constant that one can obtain using our method.
+Proof of Theorem 1.1. Fix 0 < ε < 1/2, and let ηε, Kε and Cηε be given by Lemma 3.2.
+For T ⩾20, let ZT be the finite multiset
+ZT :=
+
+i
+
+ρ −1
+2
+ log T
+2π
+: 0 < γ ⩽T
+
+,
+where every zero ρ occurs with its multiplicity. The functional equation of the zeta function
+implies that 1 −ρ is a zero with the same multiplicity as ρ. Moreover,
+i
+
+ρ −1
+2
+ log T
+2π
+= i
+
+1 −ρ −1
+2
+ log T
+2π .
+Thus, ZT is invariant under complex conjugation. Furthermore, an element of ZT is real
+if and only if the corresponding zero satisfies β = 1/2, and it is simple if and only if that
+zero is simple. Therefore, Proposition 2.1 gives
+N s
+0(T) ⩾2N(T) −
+X
+ρ,ρ′
+0<γ,γ′⩽T
+Kε
+
+i(ρ −ρ′)log T
+2π
+2
+,
+Nd(T) ⩾3
+2N(T) −1
+2
+X
+ρ,ρ′
+0<γ,γ′⩽T
+Kε
+
+i(ρ −ρ′)log T
+2π
+2
+,
+and
+Ns(T) + N0(T) ⩾3N(T) −
+X
+ρ,ρ′
+0<γ,γ′⩽T
+Kε
+
+i(ρ −ρ′)log T
+2π
+2
+.
+
+
+=== PAGE 16 ===
+16
+YOUNESS LAMZOURI
+By Lemma 3.2, we have
+(3.4)
+X
+ρ,ρ′
+0<γ,γ′⩽T
+Kε
+
+i(ρ −ρ′)log T
+2π
+2
+=
+
+Cηε + Oε
+
+1
+√log T
+ T
+2π log T.
+Hence, we deduce that
+N s
+0(T)
+N(T) ⩾2 −Cηε + oε(1),
+Nd(T)
+N(T) ⩾3
+2 −Cηε
+2 + oε(1),
+and
+Ns(T) + N0(T)
+N(T)
+⩾3 −Cηε + oε(1).
+Moreover, by (3.4) and (2.7) we get
+Ns∪0(T)
+N(T)
+⩾5 + 2
+√
+2 −2Cηε
+3 + 2
+√
+2
++ oε(1).
+Since |Cηε −CMT| < ε, C0 = 2−CMT, C1 = 3/2−CMT/2 and C2 = (5+2
+√
+2−2CMT)/(3+
+2
+√
+2), we obtain
+lim inf
+T→∞
+N s
+0(T)
+N(T) ⩾C0 −ε,
+lim inf
+T→∞
+Nd(T)
+N(T) ⩾C1 −ε,
+and
+lim inf
+T→∞
+Ns(T) + N0(T)
+2N(T)
+⩾C1 −ε,
+and
+lim inf
+T→∞
+Ns∪0(T)
+N(T)
+⩾C2 −ε.
+Finally, letting ε →0 completes the proof.
+□
+Appendix A. Formal Certificate by AxiomProver
+AxiomProver, an AI system currently under development by Axiom Math, autonomously
+generated (from natural language) an unconditional formal certificate for Proposition 2.1.
+Using Proposition 2.1, a formal certificate was also autonomously generated for Theo-
+rem 1.1 under the assumptions of [3, Lemma 5] (see Lemma 3.1 above) and the standard
+Riemann–von Mangoldt asymptotic N(T) ∼
+1
+2πT log T (see [23, Theorem 9.4]). The cer-
+tificates can be found in
+https://github.com/AxiomMath/ZetaZerosV2
+This repository contains a formal challenge file containing the statements of the three
+main results, which can be mechanically verified using the Comparator tool in Lean.
+References
+[1] L. Alpöge and R. Furman. More than two thirds of the zeta zeros are simple and on the critical
+line, arXiv:2608.13637 (2026).
+[2] F. Aryan. On an extension of the Landau–Gonek formula, J. Number Theory 233 (2022), 389–
+404.
+[3] S. A. C. Baluyot, D. A. Goldston, A. I. Suriajaya and C. L. Turnage-Butterbaugh. An uncon-
+ditional Montgomery theorem for pair correlation of zeros of the Riemann zeta-function, Acta
+Arith. 214 (2024), 357–376.
+[4] S. A. C. Baluyot, D. A. Goldston, A. I. Suriajaya and C. L. Turnage-Butterbaugh. Pair corre-
+lation of zeros of the Riemann zeta function I: Proportions of simple zeros and critical zeros,
+arXiv:2501.14545 (2025).
+
+
+=== PAGE 17 ===
+2/3 OF THE ZEROS OF THE ZETA FUNCTION ARE SIMPLE AND ON THE CRITICAL LINE
+17
+[5] H. M. Bui and D. R. Heath-Brown. On simple zeros of the Riemann zeta-function, Bull. Lond.
+Math. Soc. 45 (2013), no. 5, 953–961.
+[6] E. Carneiro, V. Chandee, F. Littmann and M. B. Milinovich. Hilbert spaces and the pair corre-
+lation of zeros of the Riemann zeta-function, J. Reine Angew. Math. 725 (2017), 143–182.
+[7] A. Chirre, F. Gonçalves and D. de Laat. Pair correlation estimates for the zeros of the zeta
+function via semidefinite programming, Adv. Math. 361 (2020), 106926, 22 pp.
+[8] J. B. Conrey. More than two fifths of the zeros of the Riemann zeta function are on the critical
+line, J. Reine Angew. Math. 399 (1989), 1–26.
+[9] J. B. Conrey, A. Ghosh and S. M. Gonek. Simple zeros of the Riemann zeta-function, Proc.
+London Math. Soc. (3) 76 (1998), no. 3, 497–522.
+[10] D. W. Farmer. Counting distinct zeros of the Riemann zeta-function, Electron. J. Combin. 2
+(1995), Research Paper 1, 5 pp.
+[11] P. X. Gallagher and J. H. Mueller. Primes and zeros in short intervals, J. Reine Angew. Math.
+303/304 (1978), 205–220.
+[12] D. A. Goldston and A. I. Suriajaya. Zeta zeros on the critical line, to appear in Anal. Math. 52
+(2026), no. 3; arXiv:2511.20059 (2025).
+[13] D. A. Goldston and A. I. Suriajaya. Zeta zeros in a narrow vertical box, to appear in Anal.
+Math. 52 (2026), no. 3; arXiv:2603.28104 (2026).
+[14] D. A. Goldston, J. Lee, J. Schettler and A. I. Suriajaya. Pair Correlation Conjecture for the
+Zeros of the Riemann Zeta-function I: Simple and Critical Zeros, to appear in Mathematika;
+arXiv:2503.15449 (2025).
+[15] G. H. Hardy. Sur les zéros de la fonction ζ(s) de Riemann, C. R. Acad. Sci. Paris 158 (1914),
+1012–1014.
+[16] G. H. Hardy and J. E. Littlewood. The zeros of Riemann’s zeta-function on the critical line,
+Math. Z. 10 (1921), 283–317.
+[17] H. Ki and Y. Lee. Zeros of the derivatives of the Riemann zeta-function, Funct. Approx. Com-
+ment. Math. 47 (2012), no. 1, 79–87.
+[18] N. Levinson. More than one third of zeros of Riemann’s zeta-function are on σ = 1/2, Adv.
+Math. 13 (1974), 383–436.
+[19] H. L. Montgomery. The pair correlation of zeros of the zeta function, in: Analytic Number
+Theory (St. Louis, 1972), Proc. Sympos. Pure Math. 24, Amer. Math. Soc., Providence, RI,
+1973, 181–193.
+[20] H. L. Montgomery. Distribution of the zeros of the Riemann zeta function, in: Proceedings of the
+International Congress of Mathematicians (Vancouver, 1974), Vol. 1, Canad. Math. Congress,
+1975, 379–381.
+[21] K. Pratt, N. Robles, A. Zaharescu and D. Zeindler. More than five-twelfths of the zeros of ζ are
+on the critical line, Res. Math. Sci. 7 (2020), Paper No. 2, 74 pp.
+[22] A. Selberg. On the zeros of Riemann’s zeta-function, Skr. Norske Vid. Akad. Oslo I 10 (1942),
+1–59.
+[23] E. C. Titchmarsh. The theory of the Riemann zeta-function, second edition, revised by D. R.
+Heath-Brown, Clarendon Press, Oxford, 1986.
+Université de Lorraine, CNRS, IECL, F-54000 Nancy, France
+Email address: youness.lamzouri@univ-lorraine.fr

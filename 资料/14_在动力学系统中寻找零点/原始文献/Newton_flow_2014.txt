@@ -1,0 +1,3253 @@
+Newton ﬂow of the Riemann zeta function:
+separatrices control the appearance of zeros
+J W Neuberger1, C Feiler2, H Maier3 and W P Schleich2,4
+1 Department of Mathematics, University of North Texas, Denton, TX 76203-5017, USA
+2 Institute for Quantum Physics and Center for Integrated Quantum Science and Technology
+(IQST ), Universität Ulm, D-89081 Ulm, Germany
+3 Institute for Number Theory and Probability Theory, Universität Ulm, D-89081 Ulm, Germany
+4 Texas A & M University Institute for Advanced Study (TIAS), Texas A & M University,
+Institute for Quantum Science and Engineering (IQSE), Texas A & M University, Department of
+Physics and Astronomy, Texas A & M University, College Station, TX 77843-4242, USA
+E-mail: jwn@unt.edu, cornelia.feiler@uni-ulm.de, helmut.maier@uni-ulm.de and wolfgang.
+schleich@uni-ulm.de
+Received 23 June 2014
+Accepted for publication 31 July 2014
+Published 14 October 2014
+New Journal of Physics 16 (2014) 103023
+doi:10.1088/1367-2630/16/10/103023
+Abstract
+A great many phenomena in physics can be traced back to the zeros of a function
+or a functional. Eigenvalue or variational problems prevalent in classical as well
+as quantum mechanics are examples illustrating this statement. Continuous
+descent methods taken with respect to the proper metric are efﬁcient ways to
+attack such problems. In particular, the continuous Newton method brings out
+the lines of constant phase of a complex-valued function. Although the patterns
+created by the Newton ﬂow are reminiscent of the ﬁeld lines of electrostatics and
+magnetostatics they cannot be realized in this way since in general they are not
+curl-free. We apply the continuous Newton method to the Riemann zeta function
+and discuss the emerging patterns emphasizing especially the structuring of the
+non-trivial zeros by the separatrices. This approach might open a new road
+toward the Riemann hypothesis.
+S Online supplementary data available from stacks.iop.org/njp/16/103023/
+mmedia
+Content from this work may be used under the terms of the Creative Commons Attribution 3.0 licence.
+Any further distribution of this work must maintain attribution to the author(s) and the title of the work, journal
+citation and DOI.
+New Journal of Physics 16 (2014) 103023
+1367-2630/14/103023+30$33.00
+© 2014 IOP Publishing Ltd and Deutsche Physikalische Gesellschaft
+
+Keywords: Riemann zeta function, continuous Newton method, Newton ﬂow
+1. Introduction
+In ocean navigation, it has long been known [1] that traveling on a sphere with a constant
+oblique angle, relative to meridians, one is led eventually to one of the two poles. The resulting
+course of the ship is a spherical spiral which has been called a loxodromic curve (loxos+dromos
+from Greek, oblique+running). In complex analysis [2], following a line of constant phase of an
+analytic function one is led eventually to a zero or a pole of this function where several of these
+lines intersect. The continuous Newton method [3] takes advantage of this feature and
+represents an efﬁcient algorithm to ﬁnd the zeros of the function. In this article we apply this
+technique to the Riemann zeta function [5] and gain new insight into the overall structure of its
+zeros.
+1.1. The Riemann zeta function in number theory and physics
+The Riemann zeta function ζ is central to number theory [4], and in particular, in the
+distribution of the prime numbers p in the sea of natural numbers n. It is intimately connected to
+the function π = π (n) which counts the number π of primes p below an integer n, and therefore
+increases by unity at p and is constant for a non-prime integer. Indeed, the analytical properties
+[5, 39] of ζ determine π. For example, the pole at z = 0 is responsible for the overall trend of π,
+and the non-trivial zeros provide us with the stair-case behavior of π and thereby distinguish the
+primes from the non-primes. However, even today, more than a hundred years after the
+discovery of this connection between the functions ζ and π expressed by the prime number
+theorem [6], the location of these zeros has not been proven mathematically. Notwithstanding
+the fact that by numerical techniques it has been shown to hold true for the ﬁrst 10 billion of
+zeros [8, 9], the Riemann hypothesis [7] that all non-trivial zeros lie on an axis in the complex
+plane parallel to the imaginary axis with real part 1/2 is still an open mathematical question.
+Nevertheless, the Riemann zeta function also plays an important role in physics. Indeed, it
+appears in many physical phenomena ranging from quantum chaos [10] via nuclear physics [11]
+to Bose–Einstein condensates [12]. From the wealth of articles we only highlight three
+prominent examples of the appearance of ζ in physics. For a comprehensive review of this topic
+we refer to [13].
+The statistics of the non-trivial zeros of ζ is identical to the one of energy levels of a
+nucleus, or of the eigenvalues of an appropriate classically chaotic system [14]. Moreover, it has
+also been shown that the Riemann zeta function emerges in quantum mechanics when one
+considers an appropriately prepared wave packet moving in a potential with a logarithmic
+energy spectrum [15]. Finally the Mellin transformation which is at the basis of the Riemann
+zeta function can be generalized [16] to a quantum Mellin transformation using the inverted
+harmonic oscillator.
+Indeed, the last two connections have given rise to suggestions for the experimental
+implementation of the Riemann zeta function. With the help of a logarithmic analogue of the
+Jaynes–Cummings model and appropriate joint measurements we [17, 18] can obtain ζ in the
+critical strip. In this scheme the entanglement of the quantum systems plays a crucial role. On
+the other hand, the Mellin transform allows a representation of ζ in the far ﬁeld of a radiation
+2
+New J. Phys. 16 (2014) 103023
+J W Neuberger et al
+
+ﬁeld described by classical electrodynamics. This technique has already been realized by van
+der Pol [19] in 1947 and has been reﬁned recently in [20].
+1.2. Lines of constant phase and steepest descent
+Contour plots are a popular and efﬁcient technique to visualize complex functions. However,
+such diagrams reﬂect only part of the information since they bring out only lines where the
+amplitude, that is the absolute value, of the function remains constant; plots of lines along
+which the phase remains constant, which constitutes the complementary information, are
+extremely rare. It is the continuous Newton method [3] which provides us with these lines.
+The continuous Newton method is a steepest descent method [21] to locate the zeros of a
+complex function. It has found wide applications in many different physical situations due to
+the fact that many phenomena in physics are governed by partial differential equations the
+solutions of which can be found by casting the problem into one seeking the minimum of a
+function. The Tricomi partial differential equation [22] which is a simple model for transonic
+ﬂow, or the Gross–Pitaevskii equation which governs superconductivity [23], describes the
+phase transition of a laser [24], and rules the macroscopic wave function of a Bose–Einstein
+condensate [25, 26] are only two of many such examples from the class of problems converted
+into a search of zeros.
+The efﬁciency of the continuous Newton method results from the gradient being taken
+with respect to a well-chosen metric. Such generalized gradients, so-called Sobolev gradients
+[27] lead not only to substantial advantages, both numerically and conceptually, but also
+provide us with more insight into the underlying physics of the considered phenomena.
+Moreover, these techniques are useful in simplifying rather complex and lengthy proofs of
+mathematical theorems such as the Nash–Moser theorem [28].
+1.3. Relation to other work
+Besides the contour reliefs of many special functions, the classic book by Jahnke and Emde [29]
+displays already in its ﬁrst edition of 1933 several curves in the complex plane where the
+Riemann zeta function is real and thus its phase vanishes.
+Curves where ζ assumes real values have been studied in more detail in the Doktorarbeit
+by Utzinger [30] in 1934 and are at the very heart of an equivalent formulation of the Riemann
+hypothesis put forward by Speiser [31] in the same year. Based on the topology of the lines of
+vanishing imaginary part of ζ he claims that all non-trivial zeros of the ﬁrst derivative ζ′ of ζ are
+located to the right of the critical line. Needless to say, there are also zeros of ζ′ along the
+negative real axis situated between each pair of trivial zeros of ζ. Since they can be understood
+analytically Speiser refers to them as the trivial zeros of ζ′.
+The work closest to ours is [32] which analyzes the curves in the complex plane where ζ is
+purely real or purely imaginary. The crossing of these lines deﬁnes the zeros of ζ. Since the
+emerging picture resembles the skeleton of a body under an x-ray this work carries the
+suggestive title ‘x-ray of Riemann zeta function’. Motivated by this analogy we refer to the lines
+with
+ζ =
+Im
+0 as ‘bones’.
+It is interesting to compare and contrast our approach to the above mentioned ones.
+Throughout our article we focus exclusively on the lines of constant phase of ζ brought to light
+by the corresponding Newton ﬂow. The resulting ﬂow pattern shows that there are special lines,
+3
+New J. Phys. 16 (2014) 103023
+J W Neuberger et al
+
+the separatrices, which deﬁne the basins of attraction given by the zeros of ζ. The separatrices
+act like ‘continental divides’ for the ﬂow.
+Separatrices are lines of constant phase that pass through the zeros of the derivative ζ′ of ζ.
+Since the phase of the separatrix is determined by the phase of ζ at the point where ζ′ vanishes,
+the separatrices are in general not the bones shown in the x-ray [32].
+We conclude by mentioning that [33] investigates the phase of the Riemann zeta function
+with the help of an Argand diagram. In contrast, we show the full lines of constant phase in the
+complex plane. Moreover, in [34] the ﬂow of ζ is analyzed in great detail. However, we
+calculate the ﬂow of the reciprocal of the logarithmic derivative, that is, the Newton quotient
+of ζ.
+1.4. Outline of our article
+Our article is organized as follows: in section 2 we ﬁrst brieﬂy review the continuous Newton
+method and show that the Newton quotient is the gradient with respect to the Riemannian
+metric given by the ﬁrst derivative of the function. We then dedicate section 3 to a discussion of
+several examples of complex-valued functions visualizing the continuous Newton method. Here
+we illustrate especially the role of separatrices and emphasize their importance for the location
+of the zeros. We devote section 4 to an application of the continuous Newton method to the
+Riemann zeta function. In the conclusions of section 5 we summarize our main results.
+In appendix A we identify the Newton quotient as the gradient with respect to the
+Riemannian geometry imposed by the complex function F. We then show in appendix B that in
+general there is no direct connection between electric and magnetic ﬁeld lines. Finally,
+appendix C examines the origin of separatrices in the Newton ﬂow and appendix D gives a
+short description how to generate the pictures of the Newton ﬂow.
+2. Continuous Newton method: essentials
+In this section we brieﬂy describe the continuous Newton method of ﬁnding zeros of a function
+by following the lines of constant phase. Moreover, we make contact with continuous descent
+methods.
+2.1. Lines of constant phase terminate in a zero
+We consider a function
+
+
+→
+F:
+which has a continuous derivative in an open set G
+containing a point z0 such that
+′
+≠
+F z( )
+0 for all
+∈
+z
+G. We deﬁne a ﬂow by the solution z of the
+differential equation
+= −
+′
+z t
+F z t
+F z t
+˙( )
+( ( ))
+( ( ))
+(1)
+for all t in the interval
+b
+[0,
+) with
+>
+b
+0 and subjected to the initial condition
+≡
+z
+z
+(0)
+0.
+This equation which involves on the right-hand side the inverse of the logarithmic
+derivative of F, that is, the Newton quotient, implies
+′
+= −
+F z t
+z t
+F z t
+( ( )) ˙( )
+( ( )).
+4
+New J. Phys. 16 (2014) 103023
+J W Neuberger et al
+
+Hence, for
+∈
+t
+b
+[0,
+] the derivative of the composition reads
+= −
+F z
+t
+F z t
+( ( ))
+˙
+( )
+( ( ))
+which upon integration yields
+=
+−
+F z t
+F z
+( ( ))
+(
+) e .
+(2)
+t
+0
+This solution shows that for
+= ∞
+b
+, F z t
+( ( )) decays exponentially to zero, that is,
+=
+→∞F z t
+lim
+( ( ))
+0
+t
+provided that
+→∞z t
+lim
+( )
+t
+exists.
+Granted that
+′
+≠
+F z(
+)
+0
+0
+, F is invertible in some neighborhood of z0, the trajectory is given
+there by
+=
+−
+−
+(
+)
+z t
+F
+F z
+( )
+(
+) e
+.
+(3)
+t
+1
+0
+A key observation from (2) is that the phase of F z t
+( ( )) is ﬁxed by F z(
+)
+0 for the whole
+trajectory. These Newton trajectories are such that the phase remains constant on a trajectory.
+Hence, the trajectories are lines of constant phase. A consequence of this property is that on a
+Newton trajectory, the real part of F z t
+( ( )) is a constant times the imaginary part.
+The totality of Newton trajectories forms the Newton ﬂow and (2) gives it a sense of
+direction. Indeed, the trajectories always go from the initial condition to a zero of the function.
+This feature is built into the differential equation (1). Here the minus sign is a mere convention.
+If we would have chosen the plus instead of the minus sign the ﬁeld lines would have still been
+the same but the direction would have been inverted.
+2.2. Newton flow is steepest descent in a special metric
+Along its contour lines a function is constant and the gradient which is orthogonal to them
+points at the steepest descent. We now motivate using heuristic arguments that the continuous
+Newton method is a steepest descent method, however with respect to a different metric.
+Throughout this section we restrict ourselves to real-valued functions F r( ) in three
+dimensions with arguments r in two space dimensions. For a more rigorous treatment including
+complex functions we refer to appendix A.
+We consider the function
+ϕ
+≡
+r
+F r
+( )
+1
+2
+( ) 2
+and determine the largest directional derivative, that is, we ﬁnd the direction in which the
+gradient of ϕ is largest. The familiar approach evaluates the derivative of ϕ at r in the direction
+of h as
+ϕ
+=
+
+
+h
+r
+h
+F r
+F r
+[(
+·
+) ]( )
+[(
+·
+) ]( ) ·
+( ),
+(4)
+where the dots indicate the familiar scalar product in two and three dimensions.
+According to the Riesz representation theorem [35] a linear real-valued function can
+always be represented by any scalar product of two elements of the domain of this function.
+Hence, we can replace the scalar product in the directional derivative of ϕ given by (4) by the
+scalar product h
+g
+(
+·
+)S, where g will be chosen in a way that is convenient for the problem at
+hand. This additional freedom is made possible by the fact that we have introduced a new scalar
+5
+New J. Phys. 16 (2014) 103023
+J W Neuberger et al
+
+product indicated by the subscript S which is different from the one in two and three dimensions
+denoted solely by a dot.
+Many different choices of a scalar product offer themselves. However, one is well-suited
+for the problem of ﬁnding a gradient with fastest descent. It is deﬁned in terms of derivatives of
+F and reads
+≡
+
+
+h
+g
+h
+F r
+g
+F r
+(
+·
+)
+[(
+·
+) ]( ) · [(
+·
+) ]( ).
+(5)
+S
+When we compare (4) and (5) and assume that the inverse
+′−
+F
+1 of the ﬁrst derivative
+′
+F of F
+exists we immediately obtain the identity
+=
+
+g
+F r
+F r
+[(
+·
+) ]( )
+( ),
+which implies the Newton quotient
+=
+′−
+g
+F
+F.
+1
+Hence, the continuous Newton method uses a Riemannian geometry whereas the gradient for
+ordinary continuous steepest descent is taken with respect to the ordinary Euclidean metric.
+From the theory of Sobolev gradients [21], there are many possible gradients in between, and
+issues such as numerical efﬁciency ﬁnally make the decisive choice.
+3. Building blocks of continuous Newton method
+We now illustrate the continuous Newton method for several examples of complex functions F.
+These cases form the building blocks for more complicated functions and will reemerge in
+section 4 when we apply this technique to the Riemann zeta function.
+3.1. Sinks and sources
+We start the discussion by considering a simple zero, a simple pole and the Möbius
+transformation to illustrate the origin of the sinks and sources of the Newton ﬂow. The resulting
+patterns are reminiscent of electric or magnetic ﬁeld lines. It is therefore intriguing to think of
+the lines of constant phase of a complex function as being generated by an appropriate
+arrangement of electric charges or magnetic dipoles, or more generally, complex functions
+being visualized by electro- or magnetostatics.
+This analogy might not even be that far-fetched since properties of complex analysis [2]
+and, in particular, the Cauchy–Riemann differential equations are frequently used to solve
+boundary value problems in electrostatics [36]. However, the example of the Möbius function
+shows that there is no one-to-one correspondence between the ﬁeld lines in electricity and the
+ones in the Newton ﬂow of complex functions.
+3.1.1. Simple zero.
+We start our discussion with the linear function
+≡
+F z
+z
+( )
+(6)
+l
+which according to (2) leads to the trajectories
+=
+−
+z t
+z
+( )
+(0)e
+.
+(7)
+t
+6
+New J. Phys. 16 (2014) 103023
+J W Neuberger et al
+
+Needless to say, we could have also integrated the equation
+= −
+z
+z
+˙
+(8)
+deﬁning the Newton ﬂow for Fl given by (6) directly to ﬁnd the trajectory (7).
+Each trajectory approaches the origin z = 0 of the complex plane which is the zero of Fl.
+Hence, a simple zero attracts the Newton ﬂow and serves for it as a sink.
+It is interesting to analyze this approach toward the origin in more detail. Indeed, the
+trajectories tend toward z = 0 in the radial direction with an angle ﬁxed by the phase of the
+initial position z (0). Therefore, the radial lines are the lines of constant phase of Fl. All lines,
+independent of the values of their phases meet and thereby terminate at the origin. In other
+words, a straight line through the origin really consists of two parts: the one with a positive real
+part corresponds to the phase β whereas the one with a negative real part has the phase β
+π
++
+.
+This feature is a consequence of the sense of direction introduced by (1).
+The trajectories of the Newton ﬂow of Fl are reminiscent of the electric ﬁeld lines of a
+negative charge. We recall that in electrostatics the electric ﬁeld
+=
+E
+E
+E
+(
+,
+)
+x
+y is always curl-
+free, that is,
+≡
+∂
+∂
+−∂
+∂
+≡
+−
+=
+E
+E
+x
+E
+y
+E
+E
+curl
+0.
+y
+x
+y x
+x y
+,
+,
+Here we have introduced a comma between the two subscripts to separate the components from
+the variables of differentiation.
+The Newton ﬁeld in the complex plane
+≡
++
+z
+x
+yi
+deﬁned by
+⎛
+⎝⎜
+⎞
+⎠⎟
+⎛
+⎝⎜
+⎞
+⎠⎟
+≡−
+′
+= −
+≡−
+′
+= −
+N
+F
+F
+x
+N
+F
+F
+y
+Re
+and
+Im
+x
+l
+l
+y
+l
+l
+of the linear function Fl is curl-free, that is
+=
+−
+=
+N
+N
+N
+curl
+0.
+y x
+x y
+,
+,
+3.1.2. Simple pole.
+Next we analyze a simple pole at the origin of the complex plane given by
+≡
+F z
+z
+( )
+1 .
+p
+Since
+′
+= −
+F
+z
+z
+( )
+1
+p
+2 the Newton ﬂow equation (1) reads
+=
+z
+z
+˙
+and differs from (8) representing a simple zero just by a sign. As a result, the Newton ﬂow
+given by the trajectories
+=
+z t
+z
+( )
+(0)et
+points radially away from the pole at z = 0. We can therefore consider the pole as a source of the
+trajectories, very much in the spirit of a positive charge in electrostatics. Again, the Newton
+ﬁeld is curl-free.
+3.1.3. Simple zero plus simple pole.
+So far the patterns formed by the Newton ﬂow have been
+curl-free. However, this feature is not true for an arbitrary function F as we show in appendix B.
+This fact stands out most clearly for the Möbius transformation
+7
+New J. Phys. 16 (2014) 103023
+J W Neuberger et al
+
+≡
++
+−
+F
+z
+z
+z
+( )
+1
+1
+(9)
+M
+which displays a simple zero at
+= −
+z
+1
+0
+and a simple pole at
+= +
+z
+1
+p
+. These points serve as the
+sink and the source of the Newton ﬂow of FM represented in the complex plane
+≡
++
+z
+x
+yi in
+ﬁgure 1.
+Throughout the article red and black dots denote zeros and poles, respectively. Blue lines
+represent the Newton ﬂow, that is, lines of constant phase of the function at hand. By virtue of
+(1) the ﬂow lines have a sense of direction as indicated by the arrows.
+Moreover, we have marked in violet the only line where the Möbius function is real. The
+dashing indicates negative values of FM.
+The pattern in ﬁgure 1 is reminiscent of the ﬁeld lines of an electric dipole. However, in
+contrast to the electric ﬁeld the Newton ﬂow is not curl-free. Indeed, the ﬁrst derivative
+′
+= −
+−
+F
+z
+z
+( )
+2
+(
+1)
+M
+2
+of FM (9) and the Newton ﬂow deﬁned by
+= −
+′
+=
+−
+(
+)
+z
+F
+z
+F
+z
+z
+˙
+( )
+( )
+1
+2
+1
+(10)
+M
+M
+2
+Figure 1. The Newton ﬂow (10) for the Möbius transformation FM deﬁned by (9) and
+represented in the complex plane
+≡
++
+z
+x
+yi
+is reminiscent of the ﬁeld lines of an
+electric dipole. The simple pole at z = 1 (black dot) serves as a source of the Newton
+trajectories. The simple zero at
+= −
+z
+1 (red dot) is the sink. Despite this close analogy,
+the Newton ﬂow is not curl-free as shown in (11). Moreover, FM is real only along the
+real axis with negative values on the dashed, and positive values on the solid violet
+curves, respectively.
+8
+New J. Phys. 16 (2014) 103023
+J W Neuberger et al
+
+leads us to the components
+⎛
+⎝⎜
+⎞
+⎠⎟
+⎛
+⎝⎜
+⎞
+⎠⎟
+≡−
+′
+=
+−
+−
+≡−
+′
+=
+(
+)
+N
+F
+F
+x
+y
+N
+F
+F
+xy
+Re
+1
+2
+1
+and
+Im
+x
+y
+M
+M
+2
+2
+M
+M
+and we ﬁnd
+=
+−
+=
+N
+N
+N
+y
+curl
+2 .
+(11)
+y x
+x y
+,
+,
+Hence, the curl is vanishing only along the real axis. It is only there that the Newton ﬁeld is
+curl-free.
+3.2. Separatrices as continental divides of the flows
+Next we show that a vanishing ﬁrst derivative of F gives rise to lines in the complex plane
+which control the Newton ﬂow. In four examples we illustrate these separatrices, and compare
+and contrast them with the lines where the functions are real. By studying the Newton ﬂows of
+the asymptotic expansions of the Riemann zeta function ζ for arguments with large positive, or
+large negative real parts we lay the groundwork for our corresponding analysis of ζ presented in
+section 4.
+3.2.1. Vanishing derivative as origin of separatrices.
+An additional ingredient of the Newton
+ﬂow emerges from the functions
+≡
+−
+≡
+−
+F z
+z
+F z
+z
+( )
+1
+and
+( )
+1
+(12)
+d
+2
+t
+3
+Figure 2. Newton ﬂow lines in the complex plane
+≡
++
+z
+x
+yi for the functions Fd (left)
+or Ft (right) deﬁned by (12) identify the simple zeros (red dots) at
+= ±
+z
+1 or at
+=
+π
+z
+e
+k
+2 i
+3 with k = 1, 2 and 3, respectively. We emphasize the special role of the origin
+(green dot), where two or three incoming ﬂow lines (green dashed) meet. When one of
+these trajectories hits the origin, there is a choice in how to reach the zeros, illustrating
+the loss of forward uniqueness for (1). Along these separatrices the values of Fd and Ft
+are negative, whereas the positive values lie on the solid violet lines.
+9
+New J. Phys. 16 (2014) 103023
+J W Neuberger et al
+
+which in contrast to the other examples either contain two or three zeros located at
+= ±
+z
+1 or at
+=
+π
+z
+e2 ik 3 with k = 1, 2 and 3, respectively.
+In ﬁgure 2 we show the Newton ﬂow of both functions. We note three characteristic
+features: (i) the zeros represent basins of attractions for the trajectories, (ii) lines in the complex
+plane separate these domains, and (iii) the origin seems to repel the trajectories.
+In order to analyze each of these properties in more detail we now have a closer look at the
+Newton ﬂow
+= −
+−
+z
+z
+z
+˙
+2
+1
+2
+(13)
+of Fd and note that the Newton trajectories
+⎡⎣
+⎤⎦
+= ±
+−
++
+−
+z t
+z
+( )
+(0)
+1 e
+1
+(14)
+t
+2
+following from (3) approach the zeros for
+→∞
+t
+as expected.
+However, we also draw attention to the different signs in (14) in front of the square root.
+They result from inverting the function Fd and the trajectories are the mirror images of each
+other with respect to the real and imaginary axis.
+This example also points out another important feature of Newton trajectories. At least for
+polynomials, but from computational evidence much more generally, when the function F has
+two or more zeros the complex plane is divided in such a way that each point in an individual
+domain leads to the same zero. The domains are separated from each other by lines in the
+complex plane. In the case of Fd these separatrices are the imaginary axis and parts of the real
+axis as we shall show now.
+For this purpose we consider as an initial condition a position z (0) on the imaginary axis,
+that is,
+=
+z
+y
+(0)
+i
+0. In this case the trajectory following from (14) reads
+= ±
+−
++
+−
+(
+)
+z t
+y
+( )
+1
+1
+e
+.
+(15)
+t
+0
+2
+Since for
+⩽
+<
+≡
++
+t
+t
+y
+0
+ln (1
+)
+0
+0
+2 the argument of the square root is negative, we ﬁrst follow
+the imaginary axis and approach the origin which we reach at t0. For
+<
+t
+t
+0
+the argument of the
+square root is positive and we now move along the real axis toward one of the two zeros.
+Indeed, due to the plus and minus signs in (15) we have two choices: we can either go to the
+right and follow the positive real axis toward the zero
+= +
+z
+1, or we can move on the negative
+real axis toward
+= −
+z
+1. In both cases the Newton trajectories terminate at the respective zero.
+The bifurcation of the trajectory is a consequence of the vanishing of the ﬁrst derivative
+′ =
+F
+z
+2
+d
+of Fd at the origin which manifests itself in a non-uniqueness of the forward solution as shown
+in appendix C. In ﬁgure 2 and throughout this article we indicate the points where the ﬁrst
+derivative of a function vanishes by green dots and the resulting separatrices by green lines.
+In this context it is interesting to note that [37] contains a chapter on semigroups for which
+the underlying trajectories do not have forward uniqueness. These include the semigroups
+generated by Newton ﬂows for complex polynomials and likely the one corresponding to the
+Newton ﬂow for the Riemann zeta function ζ. However, this question of the semigroup of ζ
+goes beyond the scope of the present paper.
+10
+New J. Phys. 16 (2014) 103023
+J W Neuberger et al
+
+We now turn to the function Ft for which not only the ﬁrst derivative
+′
+Ft but also the second
+derivative
+″
+Ft vanishes at the origin. This feature produces three incoming and three outgoing
+separatrices as shown on the right of ﬁgure 2. Hence, the number of incoming and outgoing
+separatrices depends on the order of the ﬁrst non-vanishing derivative at this point as
+demonstrated in appendix C.
+Due to the fact that
+= −
+F (0)
+1
+d
+and
+= −
+F (0)
+1
+t
+the separatrices in these examples are the
+lines where the functions are negative indicated in ﬁgure 2 by the dashed green curves. Along
+the solid violet lines the functions are positive.
+3.2.2. Complex phases.
+The function
+χ
+π
+Γ
+Γ
+≡
+−
+−
+z
+z
+z
+( )
+((1
+) 2)
+( 2)
+(16)
+z
+1
+2
+with the gamma function Γ
+Γ
+=
+z( ) plays an important role in the functional equation of the
+Riemann zeta function and is therefore central to our analysis in section 4.
+Due to the poles of Γ z( /2) in the denominator χ has zeros at the origin, and at the negative
+even integers, whereas the poles determined by the numerator are located at the positive odd
+integers as shown by the Newton ﬂow in ﬁgure 3. Apart from the ‘trivial’ zeros of the derivative
+Figure 3. Newton ﬂow lines of the function χ deﬁned by (16) in the complex plane with
+positive imaginary part. On the separatrices (dot–dashed green lines) through the ‘non-
+trivial’ zero of χ′ at
+≅
++
+z
+0.5
+i 6.23 the phase of χ is approximately π 4. These non-
+trivial separatrices divide the Newton ﬂow into four domains: the ﬂow lines which (i)
+come from −∞and end in a zero at
+= −
+−
+z
+k
+2
+4
+0
+with
+=
+k
+0, 1, 2 ,..., (ii) start at a pole
+=
++
+z
+k
+2
+5
+p
+and approach +∞, (iii) go from the pole zp = 1 into the zero at
+=
+z
+0
+0
+,
+from zp = 3 into
+= −
+z
+2
+0
+, or from zp = 5 into
+= −
+z
+4
+0
+, and (iv) reach from minus to plus
+inﬁnity. In the domains (i), (ii) and (iii) the values of χ on the separatrices are negative
+(dashed green lines) or positive (solid green lines) in an alternating sequence. In region
+(iv) we ﬁnd lines where χ is positive (solid violet) or negative (dashed violet), but these
+lines are not separatrices. The orange line marks the critical axis
+=
+x
+1 2.
+11
+New J. Phys. 16 (2014) 103023
+J W Neuberger et al
+
+χ′ which are located on the real axis between two adjacent zeros and between two poles, there
+are two ‘non-trivial’ zeros of χ′ on the critical line
+=
+x
+1 2 (orange) with imaginary part
+≅±
+y
+6.23. In each of them two separatrices cross.
+The dot–dashed green lines in ﬁgure 3 indicate the ‘non-trivial’ separatrices in the part of
+the complex plane with positive imaginary part where the phase of χ is approximately π 4. They
+divide the Newton ﬂow into four domains: (i) On the left of the non-trivial zero, the ﬂow lines
+come from −∞and terminate in the trivial zeros of χ with
+⩽−
+z
+4, whereas (ii) on the right the
+ﬂow lines start at the poles with
+⩾
+z
+5 and end at +∞. (iii) Below the non-trivial zero of χ′ we
+ﬁnd ﬂow lines emerging from the poles at zp = 1, zp = 3 or zp = 5 and terminating in the zeros
+=
+z
+0
+0
+,
+= −
+z
+2
+0
+or
+= −
+z
+4
+0
+, respectively. (iv) Above the two separatrices the ﬂow lines cross
+the complex plane from −∞to +∞.
+Since the values of χ are real on the real axis but with alternating signs for neighboring
+trivial zeros of χ′, the function χ is real with alternating signs on the separatrices in the regions
+(i), (ii) and (iii). The separatrices in the third domain connect the trivial zero of χ′ at ′ ≅
+z
+3.75
+with ′ ≅−
+z
+2.75, as well as ′ ≅
+z
+1.45 with ′ ≅−
+z
+0.45 and enclose the Newton ﬂow between
+the poles and zeros. In the fourth region, we ﬁnd of course ﬂow lines where χ is positive (solid
+violet) or negative (dashed violet) but which do not represent separatrices.
+It remains to be mentioned that we have neglected on purpose to draw the non-trivial
+separatrices in the complex plane with negative imaginary part since there the phase of χ is
+approximately
+π
+−
+4 due to the property
+χ
+χ
+−
+= −
++
+x
+y
+x
+y
+arg[ (
+i )]
+arg[ (
+i )].
+3.2.3. Influence of infinity.
+We now show that separatrices may also occur if the zeros of the
+derivative of the function are located at inﬁnity. Indeed, the function
+Figure 4. The Newton ﬂow of the function Fe deﬁned by (17) originates from −∞and
+either goes directly into the zeros (red dots) located at
+π
+= ±
++
+z
+k
+i
+(2
+1) ln 2 with
+
+∈
+k
+, or passes them and turns around to ﬁnally get back to them. However, the
+separatrices between the zeros are straight lines which extend from −∞to +∞and the
+zeros of the derivative
+′
+Fe, indicated by the green circles, are located at +∞with the
+imaginary parts
+π
+= ±
+y
+k
+2
+ln 2. Since at these points
+=
+F
+1
+e
+, the function Fe is positive
+along these curves (solid green lines). The separatrices which tend toward the zeros of
+Fe, marked by green arrows, are the only ones starting at +∞. The fact that Fe is also
+positive along these lines indicates that they are connected to the zeros of
+′
+Fe although
+their imaginary part is the same as the one of the zeros of Fe. The dashed violet lines
+mark the curves where Fe is negative.
+12
+New J. Phys. 16 (2014) 103023
+J W Neuberger et al
+
+≡
++
+−
+F z( )
+1
+e
+(17)
+z
+e
+ln 2
+possesses besides the zeros at
+π
+±
++
+k
+i
+(2
+1) ln 2 with
+
+∈
+k
+, zeros of
+′
+Fe for
+→∞
+x
+and
+π
+= ±
+y
+k
+i
+2
+ln 2, depicted in ﬁgure 4 by the green circles.
+For the function Fe the lines separating the ﬂows are parallel to the real axis and we can
+identify two different types: (i) The ones coming from −∞go straight into the corresponding
+zero of
+′
+Fe at +∞. (ii) The others start at +∞but with an imaginary part which is identical to the
+one of the zero of Fe they are ending in.
+The fact that Fe is positive on both types of these lines shows that the ones emerging from
++∞are actually the continuations of the ones from −∞which approach the zeros of
+′
+Fe,
+where
+=
+F
+1
+e
+.
+We emphasize that this feature stands out most clearly when we represent the complex
+plane by the Riemann sphere and consider the Newton ﬂow of the Riemann zeta function in this
+representation. The separatrices which correspond to the ones of Fe emerge from the north pole
+to the left, circumvent a non-trivial zero of ζ and return to the north pole from the right only to
+reappear again to the right. For a more detailed discussion we refer to [38].
+To stress that the lines of type (ii) are the only ones which really come from +∞we mark
+them by green arrows. All other ﬂow lines start at −∞.
+3.2.4. Forward uniqueness exists at a double zero.
+In the preceding subsection we have
+shown that the points z where the ﬁrst derivative of F vanishes play a crucial role for the
+Newton ﬂow since here the separatrices split up. However, such a bifurcation does not occur
+when also F vanishes at this point.
+In order to bring out this fact most clearly, we consider the function
+≡
+F z
+z
+( )
+2
+2
+which gives rise to the Newton ﬂow
+= −
+z
+z
+˙
+1
+2
+and the trajectory
+=
+−
+z t
+z
+( )
+(0) e
+.
+t 2
+As a result, a double zero is also a sink despite the fact that
+′
+F vanishes. However, we approach
+it with a speed which is half of that of a simple zero.
+4. Newton ﬂow of Riemann zeta function
+In the present section we apply the continuous Newton method to the Riemann zeta function ζ.
+For the sake of completeness we ﬁrst summarize important features of ζ and then discuss the
+emerging patterns using the elementary building blocks outlined in the preceding section. In
+particular, we focus on the grouping of the non-trivial zeros within their individual basins of
+attraction, and the appearance of separatrices fencing off the individual groups of zeros from
+each other. Moreover, we make contact with the ‘bones’ of the x-ray of ζ discussed in [32].
+13
+New J. Phys. 16 (2014) 103023
+J W Neuberger et al
+
+4.1. Riemann zeta function in a nutshell
+For a complex argument
+≡
++
+z
+x
+yi
+with
+< x
+1
+the Riemann zeta function ζ follows from the
+Dirichlet sum
+∑
+ζ
+=
+=
+∞
+z
+n
+( )
+1 ,
+(18)
+n
+z
+1
+which in this part of the real axis is convergent.
+Since for z = 1 the Dirichlet sum reduces to the harmonic sum which is divergent, we ﬁnd a
+simple pole of ζ at z = 1.
+In his seminal article [7] Riemann was able to provide an analytical extension of ζ onto the
+domain of the complex plane left of z = 1 and today many such expressions exist [39]. In
+particular, the representation
+ζ
+χ
+ζ
+=
+−
+z
+z
+z
+( )
+( )
+(1
+)
+(19)
+shows that at the negative even integers simple zeros of ζ appear due to the negative zeros of the
+function χ deﬁned by (16) and shown in ﬁgure 3. At z = 0 the zero of χ is canceled by the pole
+of ζ at z = 1. Since the location of these zeros are known they are called ‘trivial zeros’.
+Moreover, it was shown [40] that the only real zeros of the derivative ζ′ lie on the negative
+real axis, one between two adjacent trivial zeros of ζ. Hence, we call them ‘trivial zeros of the
+derivative’.
+More interesting are the so-called ‘non-trivial’ zeros of the zeta function. According to the
+Riemann hypothesis they all have real part 1 2 which is in complete analogy to the statement
+that ζ′ has no non-real zeros for
+<
+x
+1 2 [31, 40].
+However, so far this conjecture has not been veriﬁed yet and is one of the one-million
+dollar questions of the Clay Mathematics Institute [41]. Needless to say, in the present paper we
+are not going to solve the Riemann hypothesis either but apply the continuous Newton method
+to study the lines of constant phase of ζ which bring out structures in the grouping of the non-
+trivial zeros.
+4.2. Flow lines
+In section 3 we have introduced the building blocks of the continuous Newton method. We now
+apply this technique to the Riemann zeta function. We start with the behavior of ζ for
+→±∞
+x
+,
+then analyze the neighborhood of the real axis and ﬁnally work our way up the critical axis
+where the non-trivial zeros are located.
+4.2.1. Approximations for large real parts of the argument.
+For large positive real parts x the
+Riemann zeta function can be approximated by the function Fe deﬁned by (17) which consists of
+the ﬁrst two terms of the Dirichlet series (18), that is
+ζ
+≅
++
+=
+−
+z
+F z
+( )
+1
+e
+( ).
+z ln 2
+e
+As a result, in the right picture of ﬁgure 5 the separatrices of ζ come from
+→−∞
+x
+and end in
+the zeros of the derivative ζ′, that is at
+π
+= ±
+y
+k
+2
+ln 2 and positive inﬁnite x, marked by green
+circles. The green arrows indicate the only lines coming from +∞with imaginary
+parts
+π
+±
++
+k
+(2
+1) ln 2.
+14
+New J. Phys. 16 (2014) 103023
+J W Neuberger et al
+
+The left picture of ﬁgure 5 shows the Newton ﬂow of ζ for
+→−∞
+x
+. In this domain we get
+from the functional equation (19) the expression
+ζ
+χ
+≅
++
+−
+−
+(
+)
+z
+z
+( )
+1
+e
+( ),
+(20)
+z
+(1
+) ln 2
+where we have approximated ζ on the right-hand side of (19) by the ﬁrst two terms of the
+Dirichlet series.
+Hence, the behavior there is mainly given by the function χ which produces the trivial
+zeros of ζ. Moreover, the trivial zeros of the derivative of ζ′ located between two trivial zeros of
+Figure 5. Newton ﬂow of the Riemann zeta function in three different regions of the
+complex plane. Since for
+→−∞
+x
+we can approximate ζ by χ, and for
+→+ ∞
+x
+by Fe,
+the ﬂow lines in the left and right pictures are similar to the ones of χ and Fe shown in
+ﬁgures 3 and 4. Hence, in the right picture the separatrices (green lines) run parallel to
+the real axis from left to right into the vanishing derivative ζ′ at
+→+ ∞
+x
+with
+imaginary part
+π
+= ±
+y
+k
+2
+ln 2 (green circles) and continue from right to left at
+imaginary parts
+π
+= ±
++
+y
+k
+(2
+1) ln 2 (green arrows). In contrast, we ﬁnd in the
+domain of the complex plane with large negative real parts separatrices along which ζ is
+real but with alternating signs. They divide the complex plane such that the Newton
+ﬂow reaches the trivial zeros at
+= −
+x
+k
+2 . The middle picture shows ζ for intermediate
+negative values and in the critical strip which illuminates the connection between the
+outside regions and is discussed in detail in the remainder of this subsection.
+15
+New J. Phys. 16 (2014) 103023
+J W Neuberger et al
+
+ζ are not identical to the trivial zeros of χ′. Indeed, they are slightly shifted to the right due to
+the inﬂuence of the remnant
+−
+−z
+exp[ (1
+) ln 2] of the Dirichlet sum in (20).
+Nevertheless, along the separatrices through these points ζ is real with alternating signs.
+These separatrices are displayed by solid or dashed lines for positive or negative values,
+respectively.
+In the middle of ﬁgure 5 we depict the Newton ﬂow of ζ for −
+⩽
+⩽
+x
+10
+1 which illustrates
+the connection between the asymptotic behaviors on the left and on the right. A detailed
+description of the structures in this intermediate domain follows in the remainder of this
+subsection. However, it is interesting to note that the zeros of the approximation of ζ given by
+(20) are located on the line x = 1, which deﬁnes the right border of the critical strip, whereas Fe
+has zeros on the left border x = 0. According to the Riemann hypothesis the non-trivial zeros of
+ζ are at
+=
+x
+1 2.
+4.2.2. Neighborhood of simple pole and trivial zeros.
+In ﬁgure 6 we show the Newton ﬂow in
+the neighborhood of the real axis around the origin of the complex plane. Here we display the
+behavior for positive imaginary parts up to y = 9 and focus on a small domain along the
+negative imaginary axis. However, we emphasize that the structure of the Newton ﬂow of ζ is
+symmetric with respect to the real axis but the phase of ζ for negative imaginary parts has the
+complementary sign due to
+ζ
+ζ
+−
+= −
++
+x
+y
+x
+y
+arg[ (
+i )]
+arg[ (
+i )].
+In this excerpt of the complex plane we include the simple pole of ζ at z = 1 and the ﬁrst
+two trivial zeros at
+= −
+z
+2 and
+= −
+z
+4. The ﬁeld lines emerge from the pole and converge
+Figure 6. Newton ﬂow lines for ζ in the neighborhood of the real axis show the source
+point at the simple pole z = 1 (black dot) and two sinks represented by the trivial zeros at
+= −
+z
+2 and
+= −
+z
+4 (red dots). The zeros of ζ′ at ′ ≅−
+z
+2.72 and ′ ≅−
+z
+4.938 (green
+dots) are unstable equilibria for the Newton ﬂow. Like χ in ﬁgure 3, ζ is real on the
+separatrices (green lines) in this region and negative (dashed green line) on the one left
+to the zero at
+= −
+z
+4 which starts at −∞. Although, ζ is positive on the separatrix
+between −4 and −2 this separatrix now emerges from
+π
++∞+ i 3
+ln 2 due to the
+Dirichlet series. This inﬂuence also causes a tiny shift of the trivial zeros of ζ′ to the
+right compared to the zeros of χ′ at ′ ≅−
+z
+2.75 and ′ ≅−
+z
+4.943.
+16
+New J. Phys. 16 (2014) 103023
+J W Neuberger et al
+
+toward the ﬁrst trivial zero in a way reminiscent of the Newton ﬂow of the Möbius
+transformation shown in ﬁgure 1. However, in the case of ζ there is a slight asymmetry with
+respect to the center at −0.5 with more weight toward the source. This effect is caused by the
+inﬂuence of the Dirichlet series in the functional equation (19).
+In the right half of the complex plane we have a separatrix starting at the pole which ends
+at the zero of ζ′ at +∞indicated by the green circle. Here ζ is positive. Likewise on the
+separatrix into the zero of ζ′ at ′ ≅−
+z
+2.72 which starts at
+π
++∞+ i 3
+ln 2 we ﬁnd positive
+values for ζ.
+In contrast, on the separatrix to the left of the trivial zero
+= −
+z
+4 through the trivial zero of
+ζ′ at ′ ≅−
+z
+2.72 the values of ζ are negative. This separatrix is the one of χ which runs through
+′ ≅−
+z
+2.75 but is shifted to the right due to the Dirichlet series in the functional equation (19).
+4.2.3. Neighborhood of critical line.
+We now turn to analyze the Newton ﬂow in the
+neighborhood of the critical line and the non-trivial zeros. In ﬁgure 7 we show the Newton ﬂow
+around the ﬁrst non-trivial zero at
+≅
++
+z
+1 2
+i 14.135.
+The upper green solid line partitions the ﬂow going down to the ﬁrst non-trivial zero from
+the one going up to the second one. Likewise, the lower green solid line separates the ﬂow
+going up to the ﬁrst non-trivial zero from the one going down to the real axis shown on the top
+of ﬁgure 6. Both come from the left and aim for the zeros of ζ′ at
+π
++∞+ i 4
+ln 2 and
+π
++∞+ i 2
+ln 2, respectively. Hence, the values of ζ on these lines are positive.
+Figure 7. Newton ﬂow lines for ζ in the neighborhood of the critical line (orange) and
+the ﬁrst non-trivial zero at
+≅
++
+z
+1 2
+i 14.135 (red dot). The green lines represent the
+separatrices of ζ. The upper and lower one cross the critical line from the left to the right
+ending at the zeros of the derivative ζ′ with
+→∞
+x
+at imaginary parts
+π
+=
+y
+(2
+ln 2)
+and
+π
+=
+y
+(4
+ln 2), respectively, indicated by the green circles. Hence, the values of ζ on
+these lines are real and positive. Along the middle separatrix which starts at
+π
++∞+ i (3
+ln 2) and approaches the zero from the right ζ is also positive. This
+separatrix is connected by the zero to a line coming from the left, marked by the dashed
+violet line, where ζ is negative. In the domain of the complex plane displayed here the
+derivative of ζ does not vanish.
+17
+New J. Phys. 16 (2014) 103023
+J W Neuberger et al
+
+These two separatrices are reminiscent of the ﬁrst two solid violet lines above the
+separatrix through the non-trivial zero of χ′ shown in ﬁgure 3. However, we emphasize that not
+all positive real lines of χ which start at −∞are separatrices for the Riemann zeta function.
+Nevertheless, we recognize that almost all ﬁeld lines approach from the left and either
+converge directly toward the zero, or ﬁrst pass it by going far to the right and then turn around
+to eventually also arrive at the zero. The only exception is the separatrix starting at
+π
++∞+ i 3
+ln 2, indicated by the middle solid green line. It reaches the zero from the right.
+We have to note here that the ‘x-ray’ [32] already studies the ‘bones’ of ζ, that is the lines
+where ζ is real and interprets all which reach from minus to plus inﬁnity as a single entity. Yet,
+we emphasize that those which go through a non-trivial zero of ζ really consist of two parts: (i)
+the one approaching the zero from the right on which ζ is positive and (ii) the one coming from
+the left on which ζ is negative. In ﬁgure 7 we have indicated by the dashed violet curve the part
+(ii) of the ‘bone’ through the ﬁrst non-trivial zero.
+It would be interesting to see which consequences arise from this new interpretation of
+lines of this kind brought to light by the Newton ﬂow when applied to the argumentation in
+[32]. However, we have to postpone a more detailed discussion of this question to a future
+publication.
+In the domain of the complex plane shown in ﬁgure 7 there is no point, where ζ′ vanishes.
+In contrast, the Newton ﬂow depicted in ﬁgure 8 in the neighborhood of the next two non-trivial
+zeros clearly experiences the consequences of ζ′ vanishing at ′ ≅
++
+z
+2.46
+i 23.4. The ﬂows
+coming from the right approach the two zeros above or below of this point of non-equilibrium.
+Likewise, the ﬂow from the left splits up into two parts. The resulting separatrix on which the
+Figure 8. Newton ﬂow lines for ζ in the neighborhood of the critical line (orange) and
+the second and third non-trivial zero (red dots). There is a zero of ζ′ (green dot) between
+them which determines the dot–dashed green separatrix dividing the ﬂow between the
+two zeros. On this line the argument of ζ is approximately
+π
+0.01
+whereas on the other
+two separatrices (solid green lines) ζ is positive. The upper one divides the complex
+plane and ends at the zero of ζ′ at
+π
++∞+ i 6
+ln 2 while the lower one comes from
+π
++∞+ i 5
+ln 2 and approaches the second non-trivial zero of ζ from the right. The
+violet curves indicate the other lines where ζ is positive (solid) or negative (dashed).
+18
+New J. Phys. 16 (2014) 103023
+J W Neuberger et al
+
+phase of ζ is approximately
+π
+0.01
+is indicated by the dot-dashed green line. It explains the
+attraction of the lines where ζ is real (violet and green solid curve) to the zero of the derivative
+of ζ mentioned in [32].
+In ﬁgure 9 we present an overview of the Newton ﬂow of ζ for the domain
+−
+× −
+[ 5, 9]
+[ 1, 30] of the complex plane which summarizes the details contained in the
+previous pictures.
+Figure 9. Newton ﬂow lines for ζ along the real axis and the critical line (orange) on a
+larger scale combining ﬁgures 6–8. We recognize the pole at z = 1 (black dot), the ﬁrst
+two trivial zeros and the ﬁrst three non-trivial zeros (red dots), together with the trivial
+and the non-trivial zeros (green dots) of ζ′. The separatrices (green lines) cross the zeros
+of ζ′ at plus inﬁnity (green circles) and return as ﬂow lines (green arrows) starting at
++∞. The phase of ζ along the separatrices is determined by the value of ζ at the zero of
+the derivative ζ′ which they cross. Along the solid and dashed green lines, as well as
+along the violet curves ζ is real.
+19
+New J. Phys. 16 (2014) 103023
+J W Neuberger et al
+
+Figure 10. Newton ﬂow of ζ along the critical axis in the domain of −⩽
+⩽
+y
+1
+300
+represented in three consecutive panels with increasing imaginary part. For an
+interactive and much expanded version of these ﬁgures see the supplementary data.
+20
+New J. Phys. 16 (2014) 103023
+J W Neuberger et al
+
+So far we have only shown small excerpts of the rich structure contained in the Newton
+ﬂow of ζ. In the supplementary data we show a ﬁgure with a much larger domain of the
+complex plane accessible by scrolling up and down the imaginary axis. In order to give a ﬂavor
+of this picture we display in ﬁgure 10 the ﬁrst three consecutive parts of this scroll which bring
+out a structure of the grouping of the non-trivial zeros along the critical line. Indeed, it arises
+from the separatrices which pass the complex plane from minus to plus inﬁnity along which ζ is
+positive. The non-trivial zeros of ζ in one of these groups are separated by separatrices through
+the zeros of ζ′ where ζ is not real. There is always one zero of the derivative less than zeros of ζ.
+The pictures also show that the real lines starting at minus inﬁnity have alternating signs
+for increasing imaginary part and all negative lines (dashed violet) end directly at a zero of ζ
+without ever crossing the critical line.
+4.3. More insights into ζ from the Newton flow
+The present article is meant to be an appetizer for a more detailed application of the Newton
+ﬂow to unravel the unique properties of the Riemann zeta function which is so prominent in
+physics. Many further developments come to mind. Here we only brieﬂy mention three since a
+more elaborate discussion would go beyond the scope of our article.
+4.3.1. Universality theorem.
+In 1975 Mikhailovitch Voronin [42] showed that any non-
+vanishing holomorphic function in a circle with radius less than1 4 can be approximated by the
+Riemann zeta function somewhere in the strip deﬁned by
+⩽
+⩽
+x
+1 2
+1. Indeed, ﬁgure 10 and
+especially the scroll version of it demonstrates that this domain of the complex plane is
+continuously changing as the imaginary part increases. It is therefore reasonable that there ζ can
+approximate every non-vanishing holomorphic function. However, a more detailed study of this
+visualization of the universality theorem is needed.
+4.3.2. Appearance and disappearance of zeros.
+Another interesting application of the
+Newton ﬂow emerges from the representation
+∑
+ζ
+≡
+−
+−
+−
+=
+∞
+z
+n
+( )
+1
+2
+1
+( 1)
+z
+n
+n
+z
+1
+1
+of ζ in the critical strip
+<
+<
+y
+0
+1 in terms of an alternating sum [39].
+Here one might investigate how the locations of the zeros depend on the truncation
+parameter when we realize ζ by a ﬁnite rather than an inﬁnite sum. The motion of the zeros in
+the complex plane as we take more terms and their appearance and disappearance might shine
+some light onto the Riemann hypothesis and the results of Turán [43] and Montgomery [44].
+4.3.3. Riemann hypothesis.
+Newton ﬂows may also offer a possible new approach to the
+Riemann hypothesis. Our ﬁgures indicate that in the critical strip the zeros are grouped in a
+natural way by roughly horizontal separatrices on which ζ is positive. The ﬁrst group contains
+just one zero. The next two groups have two zeros each, and the later ones have three or more
+zeros, all separated by separatrices on which ζ assumes complex values.
+Hence, the denial of the Riemann hypothesis would lead to a pair of zeros situated
+symmetrically about the critical line with an additional zero of the derivative separating the
+Newton ﬂow into these zeros. The pattern of groups of zeros would likely be severely disturbed.
+21
+New J. Phys. 16 (2014) 103023
+J W Neuberger et al
+
+If the supposition of such a disturbance were to lead to a contradiction, the Riemann hypothesis
+might be established.
+We do not express any particular expectation that such a program might be successfully
+completed, but the present work suggests a qualitative, topological approach to the Riemann
+hypothesis.
+5. Conclusion
+A wide class of partial differential equations arising in physics can be posed as zero-ﬁnding
+problems. Gradient continuous descent methods [21, 27] present a means for dealing with many
+of them, but it is becoming increasingly clear that in a given situation, a gradient taken with
+respect to a well-chosen metric provides substantial advantages, both numerically and
+theoretically. An understanding of the paths followed by the continuous descent often yields
+important information. An extensive discussion of Sobolev gradients reveals [21] how gradient
+choices impact issues in the study of partial differential equations.
+In the present article we have applied a special example of a gradient continuous descent
+method, that is the continuous Newton method to several complex functions. Four results stand
+out most clearly: (i) The continuous Newton method is an effective tool to ﬁnd the lines of
+constant phase of a complex-valued function F since the Newton quotient represents a gradient
+taken with respect to a natural Riemannian metric which naturally produces these lines. (ii) The
+sinks and sources of the Newton ﬂow identify the zeros and poles of F, respectively. (iii) The
+ﬂow lines from or into the individual poles or zeros are separated by separatrices which cross
+each other in the point where the derivative
+′
+F
+vanishes. (iv) The number of crossing
+separatrices is determined by the order of the ﬁrst non-vanishing derivative.
+The Newton ﬂow of the Riemann zeta function formed by the lines of constant phase puts
+‘ﬂesh’ on the ‘bones’ visible in Arias-de-Reynas x-ray [32] which are the lines where ζ is real.
+However, throughout the article we have emphasized the importance of the separatrices rather
+than of the bones for the distribution of the zeros of ζ. Indeed, separatrices which are lines of
+constant phase that go through the zeros of the derivative ζ′ represent ‘continental divides’ for
+the Newton ﬂow and control in this way the appearance of the zeros.
+We have identiﬁed two kinds of separatrices: (i) On the ones which run from minus to plus
+inﬁnity where they cross a zero of ζ′ and then continue from plus inﬁnity to a non-trivial zero, ζ
+is positive. (ii) In contrast, on the separatrices through a non-trivial zero of ζ′ in the
+neighborhood of the critical line, ζ is complex.
+Indeed, the topology of the separatrices might open a new approach toward the
+longstanding question of the Riemann hypothesis. If there were to be a counter-example to the
+Riemann hypothesis, there would have to be a separatrix running between two very close zeros,
+on opposite sides of the critical line. Such a separatrix might have no legitimate way to go to the
+Edge of Inﬁnity, thus providing a negation of a supposition that there are two such zeros.
+Acknowledgements
+We thank W Arendt and W H Zurek for many fruitful discussions. WPS gratefully
+acknowledges the support by a Texas A&M University Institute for Advanced Study (TIAS)
+Faculty Fellowship.
+22
+New J. Phys. 16 (2014) 103023
+J W Neuberger et al
+
+Appendix A. Riemann–Sobolev–Newton (RSN)
+In section 2.2 we have used heuristic arguments to motivate the fact that the Sobolev gradient
+associated with F and taken with respect to the natural Riemannian metric is the Newton
+quotient. In the present appendix we provide the mathematical foundation for this statement. In
+particular, we now deal with a complex-valued function F.
+We begin with some comments on Riemannian geometry which is partially rooted in
+thoughts of Gauss. We suppose that n is a positive integer and F is a function from 
+
+→
+n
+n
+which in an open subset G of n is such that the Jacobian derivative
+′
+F z( ) exists and has an
+inverse for all
+∈
+z
+G. Moreover, we denote the image of G under F by M.
+For each
+∈
+z
+G and
+
+∈
+g h
+,
+n there is a metric
+≡
+′
+′
+g h
+F z g F z h
+,
+( ) ,
+( )
+(A.1)
+z
+on n induced by the tangent space to M. Here
+′
+F z g
+( )
+denotes the derivative of F in the
+direction of g at the point z and 〈
+〉
+· , ·
+is the standard inner product (dot product) on the
+complex n-dimensional space.
+Given
+∈
+z
+G, the norm associated with the inner product in (A.1) is denoted by || · || z
+whereas the standard norm in n is abbreviated simply by || · ||. For ﬁxed
+
+∈
+z
+n, the norm of a
+linear transformation
+
+
+→
+T:
+n
+indicated by | · | is deﬁned by
+
+≡
+∈
+=
+T
+Tw
+sup
+.
+w
+w
+,
+1
+n
+z
+Next, we provide a geometric interpretation of this second inner product of the two elements
+
+∈
+g h
+,
+n which according to (A.1) is the standard inner product of the directional derivatives
+′
+F z g
+( )
+and
+′
+F z h
+( ) . Due to the explicit appearance of
+′
+F we get a variable metric, one which
+changes from point to point in M, as is common in Riemannian geometry.
+We now turn to the second character S in the title RSN of this appendix and illustrate the
+notion [21] of a Sobolev gradient, that is, the gradient of a function with respect to a varying
+metric. There is no need to invoke the concept of Sobolev spaces here to which Sobolev gradients
+are usually applied but rather we use the following fact: The derivative ϕ′ z h
+( )
+of the function
+ϕ
+≡
+z
+F z
+( )
+1
+2
+( ) 2
+in the direction of
+
+∈
+h
+n at
+∈
+z
+G is given by
+⎜
+⎟
+⎛
+⎝
+⎞
+⎠
+ϕ′
+=
+′
++
+′
+z h
+F z h F z
+F z
+F z h
+( )
+1
+2
+( ) ,
+( )
+( ),
+( )
+.
+(A.2)
+Now, ﬁxing
+∈
+z
+G, we seek a gradient of ϕ at z, that is we seek a vector
+
+∈
+h
+n which
+maximizes the function
+Φ
+ϕ
+≡
+′
+h
+z h
+h
+( )
+( )
+(A.3)
+z
+over all
+
+∈
+h
+n different from zero. We emphasize that this is only one of several equivalent
+deﬁnitions, but note that it gives the standard gradient for ϕ only when the norm || · || z is the
+standard norm || · ||. In this case we get the usual list of partial derivatives for a gradient.
+In order to solve this maximum problem we ﬁrst provide an upper bound for Φ and then
+present the speciﬁc choice of h for which this bound is assumed. For this purpose we apply the
+23
+New J. Phys. 16 (2014) 103023
+J W Neuberger et al
+
+Cauchy–Schwartz inequality to the scalar products on the right-hand side of (A.2) which yields
+ϕ′
+⩽
+′
+z h
+F z
+F z h
+( )
+( )
+( )
+.
+(A.4)
+Moreover, we ﬁnd from the deﬁnition (A.1) of the second scalar product the identity
+∥
+∥= ∥′
+∥
+h
+F z h
+( )
+.
+(A.5)
+z
+When we combine (A.4) and (A.5) we obtain from the deﬁnition (A.3) of Φ the inequality
+Φ
+⩽
+h
+F z
+( )
+( ) .
+Next we choose hS such that
+′
+≡
+F z h
+F z
+( )
+( )
+(A.6)
+S
+which yields from (A.2) the relation
+ϕ′
+=
+z h
+F z
+( )
+( )
+.
+S
+2
+Moreover, due to the special choice (A.6) of hS we obtain with (A.5)
+=
+h
+F
+S z
+which provides with the deﬁnition (A.3) the expression
+Φ
+=
+(
+)
+h
+F z( ) .
+S
+Consequently the choice of hS gives the maximizing element for (A.2) and the Newton quotient
+=
+′
+−
+h
+F z
+F z
+(
+( ))
+( )
+S
+1
+following from (A.6) is the required gradient. Thus we realize that the Sobolev gradient of ϕ
+relative to the natural Riemannian metric is the Newton quotient, thus leading to N in RSN. For
+complex numbers with n = 1 the continuous Newton method gives a ﬂow with respect to the
+natural Riemannian metric.
+With a pedigree like RSN, it should not be a wonder that ﬂows from the continuous
+Newton method have remarkable properties.
+Appendix B. Curl of Newton ﬂow does not vanish in general
+In this appendix we calculate with the help of the Cauchy–Riemann differential equations [2]
+the curl of the Newton ﬂow N of the function F. We present an explicit expression for the curl
+of N and compare and contrast it to the corresponding equation of electrostatics and
+magnetostatics.
+B.1. Definition of Newton field
+We start by deﬁning the components of the Newton ﬂow of a function
+=
++
+=
++
+F z
+F x
+y
+u x y
+v x y
+( )
+(
+i )
+( , )
+i ( , )
+(B.1)
+of complex argument
+≡
++
+z
+x
+yi
+and represented by its real and imaginary parts u and v.
+From (B.1) and the identity
+= ∂
+∂
+=
++
+F
+z
+F
+x
+u
+v
+d
+d
+i ,
+x
+x
+24
+New J. Phys. 16 (2014) 103023
+J W Neuberger et al
+
+where the subscript x now indicates the partial derivative with respect to x, we ﬁnd the ratio
+′ =
++
++
+=
++
+−
++
+(
+)
+F
+F
+u
+v
+u
+v
+u
+v u
+v
+u
+v
+i
+i
+(
+i )
+i
+x
+x
+x
+x
+x
+x
+2
+2
+or
+′ =
++
++
+−
+−
++
+F
+F
+uu
+vv
+u
+v
+uv
+u v
+u
+v
+i
+.
+(B.2)
+x
+x
+x
+x
+x
+x
+x
+x
+2
+2
+2
+2
+With the help of the Cauchy–Riemann differential equations
+=
+= −
+u
+v
+u
+v
+and
+(B.3)
+x
+y
+y
+x
+we establish the identity
+−
+= −
++
+= −
++
+= −
+(
+)
+(
+)
+(
+)
+uv
+u v
+uu
+vv
+u
+v
+F
+1
+2
+1
+2
+x
+x
+y
+y
+y
+y
+2
+2
+2
+which together with the relation
++
+=
++
+=
+(
+)
+(
+)
+uu
+vv
+u
+v
+F
+1
+2
+1
+2
+x
+x
+x
+x
+2
+2
+2
+reduces (B.2) to
+′ =
++
+(
+)
+(
+)
+F
+F
+D
+F
+D
+F
+1
+2
+i 1
+2
+,
+x
+y
+2
+2
+where we have introduced the abbreviation
+≡
++
+D
+u
+v
+.
+(B.4)
+x
+x
+2
+2
+As a result we can identify the individual components
+⎜
+⎟
+⎛
+⎝
+⎞
+⎠
+≡−
+′
+= −
+(
+)
+N
+F
+F
+D
+F
+Re
+1
+2
+,
+(B.5)
+x
+x
+2
+and
+⎜
+⎟
+⎛
+⎝
+⎞
+⎠
+≡−
+′
+= −
+(
+)
+N
+F
+F
+D
+F
+Im
+1
+2
+(B.6)
+y
+y
+2
+of the Newton ﬁeld N.
+B.2. Partial derivatives
+We are now in the position to determine the curl
+≡
+−
+N
+N
+N
+curl
+y x
+x y
+,
+,
+of N. Here we have introduced a comma between the two subscripts to separate the components
+from the variables of differentiation.
+From (B.5) and (B.6) we ﬁnd
+⎜
+⎟
+⎜
+⎟
+⎡
+⎣
+⎢
+⎢
+⎛
+⎝
+⎞
+⎠
+⎛
+⎝
+⎞
+⎠
+⎤
+⎦
+⎥
+⎥
+= −
+−
+(
+)
+(
+)
+N
+D
+F
+D
+F
+curl
+1
+2
+1
+1
+x
+y
+y
+x
+2
+2
+25
+New J. Phys. 16 (2014) 103023
+J W Neuberger et al
+
+and when we recall the deﬁnition (B.4) of D we obtain
+⎜
+⎟
+⎛
+⎝
+⎞
+⎠= −
++
+D
+D
+u u
+v v
+1
+2 (
+)
+x
+x
+xx
+x xx
+2
+and similarly
+⎜
+⎟
+⎛
+⎝
+⎞
+⎠= −
++
+(
+)
+D
+D
+u u
+v v
+1
+2
+.
+y
+x
+xy
+x xy
+2
+In the last step we have applied the Cauchy–Riemann differential equations (B.3) and the
+resulting Laplace equation for u and v.
+With the help of the relations
+=
++
+F
+uu
+vv
+(
+)
+2(
+)
+x
+x
+x
+2
+and
+=
++
+(
+)
+(
+)
+F
+uu
+vv
+2
+y
+y
+y
+2
+we arrive at
+⎡⎣
+⎤⎦
+⎡⎣
+⎤⎦
+= −
++
+−
++ −
++
+−
+{
+}
+(
+)
+(
+)
+N
+D
+u u v
+v v
+u
+u
+v u v
+u v
+u
+v
+curl
+2
+2
+2
+.
+(B.7)
+x x
+x
+x
+xx
+x x
+x
+x
+xx
+2
+2
+2
+2
+2
+It is interesting to note, that the curl of N vanishes at points where F or
+′
+F vanishes. Moreover,
+if F is real on the whole real axis, or purely imaginary on the imaginary axis the curl vanishes
+there [18].
+B.3. Summary and comparison to Maxwell field
+In the preceding section we have established by a direct calculation for all points z of the
+complex plane the identity (B.7) which in general is non-vanishing. The deeper reason for this
+fact can be traced back to the Cauchy–Riemann differential equations discussed above and valid
+for a holomorphic function
+
+
+
+=
++
+=
++
+U
+V
+Re
+i Im
+i
+.
+When we recall that the ratio of two holomorphic functions such as F and
+′
+F is also a
+holomorphic function which implies the Cauchy–Riemann differential equations
+=
+= −
+U
+V
+U
+V
+and
+x
+y
+y
+x
+for
+= −
+′ =
++
+N
+F
+F
+U
+V
+i ,
+the curl of the Newton ﬁeld reads
+= −
+N
+V
+curl
+2
+.
+(B.8)
+x
+A feature common to electrostatics and magnetostatics is the fact that the electric ﬁeld
+=
+E
+E
+E
+(
+,
+)
+x
+y and the magnetic induction
+=
+B
+B
+B
+(
+,
+)
+x
+y have a vanishing curl, that is
+=
+−
+=
+E
+E
+E
+curl
+0
+y x
+x y
+,
+,
+26
+New J. Phys. 16 (2014) 103023
+J W Neuberger et al
+
+and
+=
+−
+=
+B
+B
+B
+curl
+0.
+y x
+x y
+,
+,
+Due to (B.8) in general there is no analogy between the Newton ﬂow and electricity since the
+curl-free property of the E- or B-ﬁeld is violated.
+Appendix C. Separatrices
+In section 3.2.1 we have used two elementary examples to illustrate the loss of forward
+uniqueness at a point
+′
+z0 where the ﬁrst derivative
+′
+F of F vanishes. We now discuss in more
+detail the Newton trajectories entering and leaving a simple zero of
+′
+F . We conclude by brieﬂy
+providing an outlook for higher order zeros of
+′
+F , in particular, we apply our results to the case
+of a cubic polynomial.
+C.1. Simple zero
+We start by analyzing the Newton trajectories entering
+′
+z0, where
+′
+′ =
+F z(
+)
+0
+0
+but
+″
+′ ≠
+F
+z(
+)
+0
+0
+.
+The Taylor expansion
+≅
+′ +
+″
+′
+−
+′
+[
+]
+( )
+( )
+F z t
+F z
+F
+z
+z t
+z
+( ( ))
+1
+2
+( )
+(C.1)
+0
+0
+0
+2
+of F around
+′
+z0 yields
+⎧
+⎨
+⎩
+⎡⎣
+⎤⎦
+⎫
+⎬
+⎭
+≅
+′ ±
+″
+′
+−
+′
+( )
+(
+z t
+z
+F
+z
+F z t
+F z
+( )
+2
+( ( ))
+)
+.
+0
+0
+0
+1 2
+When we recall the solution
+=
+′
+−
+(
+F z t
+F z
+( ( ))
+) e t
+0
+of the differential equation (1) deﬁning the Newton ﬂow, we ﬁnd
+⎡
+⎣
+⎢⎢
+⎤
+⎦
+⎥⎥
+≅
+′ ±
+′
+″
+′
+−
+−
+(
+)
+( )
+( )
+z t
+z
+F z
+F
+z
+( )
+2
+e
+1
+,
+t
+0
+0
+0
+1 2
+which reduces for
+≪
+t
+1 to
+⎡
+⎣
+⎢⎢
+⎤
+⎦
+⎥⎥
+≅
+′ ±
+−
+′
+″
+′
+( )
+( )
+z t
+z
+F z
+F
+z
+t
+( )
+2
+.
+(C.2)
+0
+0
+0
+1 2
+Since
+′ ≡
+=
+z
+z t(
+0)
+0
+, there are two trajectories crossing at t = 0, that is at the zero of the
+derivative F′. Hence, negative times close to zero lead to trajectories entering
+′
+z0, whereas small
+positive times correspond to trajectories leaving it.
+Moreover, for
+= −
+t
+t| | the trajectories
+⎡
+⎣
+⎢⎢
+⎤
+⎦
+⎥⎥
+⎡
+⎣
+⎢
+⎢
+⎤
+⎦
+⎥
+⎥
+−
+≅
+′ ±
+′
+″
+′
+=
+′ ±
+′
+″
+′
+φ
+( )
+( )
+( )
+( )
+z
+t
+z
+F z
+F
+z
+t
+z
+F z
+F
+z
+t
+(
+)
+(2
+)
+e
+2
+0
+0
+0
+1 2
+1 2
+0
+i
+0
+0
+1 2
+27
+New J. Phys. 16 (2014) 103023
+J W Neuberger et al
+
+where
+⎪
+⎪
+⎪
+⎪
+⎧
+⎨
+⎩
+⎡⎣
+⎤⎦
+⎡⎣
+⎤⎦
+⎫
+⎬
+⎭
+φ ≡
+′
+″
+′
+′
+″
+′
+( )
+(
+( )
+(
+F z
+F
+z
+F z
+F
+z
+1
+2 arctan
+Im
+)
+Re
+)
+0
+0
+0
+0
+enter
+′
+z0 under the angles φ and φ
+π
++
+. Here we have used the fact that the square root of unity
+is
+π
+π
+=
+l
+l
+exp (i 2
+2)
+exp (i
+) with l = 1 and l = 2, that is −1 and 1.
+For
+<
+=
+t
+t
+0
+| | we obtain from (C.2) with the help of the relation
+−
+=
+π
+( 1)
+e
+1 2
+i
+2
+the trajectories
+⎡
+⎣
+⎢
+⎢
+⎤
+⎦
+⎥
+⎥
+≅
+′ ±
+′
+″
+′
+φ
+π
++
+( )
+( )
+z t
+z
+F z
+F
+z
+t
+( )
+e
+2
+.
+0
+i(
+2)
+0
+0
+1 2
+As a consequence, the trajectories leaving
+′
+z0 are orthogonal to the incoming ones.
+C.2. Higher order zero
+We now turn to a zero of
+′
+F of mth order. In this case the Taylor expansion corresponding to
+(C.1) reads
+≅
+′ +
+′
+−
+′
+[
+]
+( )
+( )
+F z t
+F z
+m F
+z
+z
+t
+z
+( ( ))
+1
+!
+( )
+m
+m
+0
+( )
+0
+0
+0
+where F m
+( ) denotes the mth derivative of F with respect to the argument z of the function F.
+Thus, we arrive at
+⎡
+⎣
+⎢
+⎢
+⎤
+⎦
+⎥
+⎥
+≅
+′ +
+′
+′
+( )
+( )
+z t
+z
+m
+F z
+F
+z
+t
+( )
+!
+.
+(C.3)
+m
+m
+0
+0
+( )
+0
+1
+Since there are m solutions
+π
+l
+m
+exp (i 2
+) with
+⩽
+⩽
+l
+m
+1
+for the mth root of unity we obtain m
+trajectories entering
+′
+z0 and m trajectories that are leaving.
+We conclude by illustrating this behavior for the function
+≡
+−
+F z
+z
+( )
+1
+(C.4)
+t
+3
+which has the three zeros
+π
+l
+exp (i 2
+3) for l = 1, 2 and 3. The origin is a double zero of
+′
+Ft , and
+(C.3) predicts the three incoming trajectories
+⎜
+⎟
+⎛
+⎝
+⎞
+⎠
+π
+=
+′ +
+z
+t
+z
+l
+t
+( )
+exp i 2
+3
+,
+l
+(in)
+0
+1 3
+and the three outgoing trajectories
+⎜
+⎟
+⎛
+⎝
+⎞
+⎠
+π
+π
+=
+′ +
++
+z
+t
+z
+l
+t
+( )
+exp i 2
+3
+i 2
+.
+l
+(out)
+0
+1 3
+The Newton ﬂow of Ft shown in ﬁgure 2 conﬁrms these predictions.
+28
+New J. Phys. 16 (2014) 103023
+J W Neuberger et al
+
+Appendix D. Generation of pictures with Mathematica
+The pictures of the Newton ﬂow are generated with Wolfram Mathematica 8 and the commands
+[3]
+⎡⎣
+⎡⎣
+⎤⎦
+⎡⎣
+⎤⎦
+⎤⎦
+=
+= −
++
+′
++
+= −
++
+′
++
+−
+−
+−
+−
+{
+} {
+} {
+}
+F z
+N
+x
+y
+F x
+Iy F x
+Iy
+N
+x
+y
+F x
+Iy F x
+Iy
+N
+x y
+N
+x y
+x x
+x
+y y
+y
+[ _] :
+...
+1[
+,
+] :
+Re[ [
+]
+[
+]]
+2[
+,
+] :
+Im[ [
+]
+[
+]]
+StreamPlot
+1
+,
+,
+2
+,
+,
+,
+,
+,
+,
+,
+0
+1
+0
+1
+The ﬁrst lines deﬁne the function F(s) and the individual components (B.5) and (B.6) of the
+Newton ﬁeld N, respectively, whereas the last command produces the Newton ﬂow of F in the
+intervals x ∈[xo, xl] and y ∈[yo, yl]. Here, I is the Mathematica code for the imaginary unit i.
+The zeros, poles and hyperbolic points as well as the separatrices and ﬂow lines on which the
+function is real are ﬁrst computed and then indicated by the appropriate symbols.
+References
+[1] Nunes P 1537 Treatise in Defense of the Marine Chart
+[2] Whittaker E T and Watson G N 1969 A Course of Modern Analysis (Cambridge: Cambridge University
+Press)
+[3] Neuberger J W 1999 Continuous Newtonʼs method for polynomials Math. Intelligencer 21 18
+[4] Landau E 1947 Handbuch der Lehre von der verteilung der Primzahlen (New York: Chelsea Publishing)
+[5] Maier H and Schleich W P Prime Numbers 101—A Primer on Number Theory (New York: Wiley) to be
+published
+[6] du Sautoy M 2003 The Music of the Primes (New York: Harper Collins)
+[7] Riemann B 1859 Ueber die Anzahl der Primzahlen unter einer gegebenen Grösse Monatsberichte der
+Berliner Akadie Nov. (Translated by D. R. Wilkins, 1998) http://www.claymath.org/publications/
+riemanns-1859-manuscript
+[8] Gourdon X and Demichel P 2004 The First 1013 Zeros of the Riemann Zeta Function, and Zeros
+Computation
+at
+Very
+Large
+Height
+(http://numbers.computation.free.fr/Constants/Miscellaneous/
+zetazeros1e13-1e24.pdf)
+[9] Odlyzko A M 2001 The 1022-nd zero of the Riemann zeta function Contemp. Math. 290 139
+[10] Gutzwiller M C 1991 Chaos in Classical and Quantum Mechanics (New York: Springer)
+[11] Weidenmüller H A and Mitchell G E 2009 Random matrices and chaos in nuclear physics: nuclear structure
+Rev. Mod. Phys. 81 539
+[12] Weiss C, Page S and Holthaus M 2004 Factorising numbers with a Bose–Einstein condensate Physica A
+341 586
+[13] Schumayer D and Hutchinson D A W 2011 Physics of the Riemann hypothesis Rev. Mod. Phys. 83 307
+[14] Berry M V and Keating J P 1999 The Riemann zeros and eigenvalue asymptotics SIAM Rev. 41 236
+[15] Mack R, Dahl J P, Moya-Cessa H, Strunz W T, Walser R and Schleich W P 2010 Riemann ζ function from
+wave-packet dynamics Phys. Rev. A 82 032119
+[16] Twamley J and Milburn G J 2006 The quantum Mellin transform New J. Phys. 8 328
+[17] Feiler C and Schleich W P 2013 Entanglement and analytical continuation: an intimate relation told by the
+Riemann zeta function New J. Phys. 15 063009
+[18] Feiler C 2014 Quantum physics and number theory connected by the Riemann zeta function PhD Thesis
+Universität Ulm http:vts.uni-ulm.de/doc.asp?id=8920
+29
+New J. Phys. 16 (2014) 103023
+J W Neuberger et al
+
+[19] van der Pol B 1947 An electro-mechanical investigation of the Riemann zeta function in the critical strip Bull.
+Am. Math. Soc. 53 976
+[20] Berry M V 2012 Riemann zeros in radiation patterns J. Phys. A: Math. Theor. 45 302001
+[21] Neuberger J W 2010 Sobolev Gradients and Differential Equations 2nd edn (Lecture Notes in Mathematics
+vol 1670) (Heidelberg: Springer)
+[22] Lupo D and Payne K R 2000 On the maximum principle for generalized solutions to the Tricomi problem
+Commun. Contemp. Math. 2 535
+[23] van Duzer T and Turner C W 1981 Principles of Superconductive Devices and Circuits (New York: Elsevier)
+[24] DeGiorgio V and Scully M O 1970 Analogy between the laser threshold region and a second-order phase
+transition Phys. Rev. A 2 1170
+[25] Pitaevskii L and Stringari S 2003 Bose–Einstein Condensation (Oxford: Clarendon)
+[26] García-Ripoll J J, Konotop V V, Malomed B and Pérez-García V M 2003 A quasi-local Gross–Pitaevskii
+equation for attractive Bose–Einstein condensates Math. Comput. Simul. 62 21
+[27] Neuberger J W 1985 Steepest descent and differential equations J. Math. Soc. Japan 37 187
+[28] Neuberger J W 2003 A near minimal hypothesis Nash–Moser Theorem Int. J. Pure Appl. Math. 4 269
+[29] Jahnke E and Emde F 1944 Tables of Higher-Functions with Formulae and Curves (New York: Dove)
+[30] Utzinger A A 1934 Die reellen Züge der Riemannʼschen Zetafunktion Dissertation Universität Zürich
+[31] Speiser A 1935 Geometrisches zur Riemannschen Zetafunktion Math. Ann. 110 514
+[32] Arias-de-Reyna J 2003 X-ray of Riemann zeta function (arXiv:math/0309433)
+[33] Bhaduri R K, Khare A and Law J 1995 Phase of the Riemann ζ function and the inverted harmonic oscillator
+Phys. Rev. E 52 486
+[34] Broughan K A and Barnett A R 2004 The holomorphic ﬂow of the Riemann zeta function Math. Comput. 73
+987
+Broughan K A and Barnett A R 2007 The holomorphic ﬂow of the Riemann zeta function Math. Comput. 76
+2249 (Corrigendum)
+[35] Nevanlinna F and Nevanlinna R H 1959 Absolute Analysis (Berlin: Springer) (English version 1973)
+[36] Sommerfeld A 1988 Elektrodynamik (Thun-Frankfurt: Verlag Harri Deutsch)
+[37] Neuberger J W 2011 A Sequence of Problems on Semigroups (Problem Books in Mathematics) (Heidelberg:
+Springer)
+[38] Neuberger J W, Feiler C, Maier H and Schleich W P Newton ﬂow of the Riemann zeta function submitted
+[39] Titchmarsh E C 1967 The Theory of the Riemann Zeta-Function (Oxford: Clarendon)
+[40] Levinson N and Montgomery H L 1974 Zeros of the derivatives of the Riemann zeta-function Acta Math.
+133 49
+[41] Clay Mathematics Institute Millenium Prize Problems: Riemann Hypothesis http://www.claymath.org/
+millenium-problems/riemann-hypothesis
+[42] Karatsuba A A and Voronin S M 1992 The Riemann Zeta-Function (Berlin: De Gruyter & Co)
+[43] Turán P 1948 On some approximative Dirichlet-polynomials in the theory of the Zeta-function of Riemann
+Danske Vid. Selsk. Math.-Fys. Medd. 24 36
+[44] Montgomery H L 1983 Studies in Pure Mathematics to the Memory of Pál Turán ed P Erdös (Basel:
+Birkhäuser)
+30
+New J. Phys. 16 (2014) 103023
+J W Neuberger et al

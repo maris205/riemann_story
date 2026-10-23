@@ -176,7 +176,7 @@
 
 - 第13章“最简单的候选，只有位置乘动量”内，半经典计数与对数密度段落之后。
 - 图注：H=xp的轨道是双曲线，位置指数增长、动量指数衰减。教学性截断下的面积积分给出E log E−E+1，展示平均计数中对数项的来源；如何定义边界和完整量子谱，仍须另行处理。
-- 数学：Hamilton方程xdot=x、pdot=−p，解为x=x0 exp(t)、p=p0 exp(−t)。采用x≥1、p≥1、xp≤E的教学区域（E≥1），A(E)=∫[1,E](E/x−1)dx=E log E−E+1。半经典计数的首项约A/(2πℏ)。采用无量纲单位；图示不是实际Berry–Keating全部边界条件，也未精确复现黎曼零点计数的常数与振荡项。
+- 数学：Hamilton方程xdot=x、pdot=−p，解为x=x0 exp(t)、p=p0 exp(−t)。采用x≥1、p≥1、xp≤E的教学区域（E≥1），`A(E)=∫[1,E](E/x−1)dx=E log E−E+1`。半经典计数的首项约A/(2πℏ)。采用无量纲单位；图示不是实际Berry–Keating全部边界条件，也未精确复现黎曼零点计数的常数与振荡项。
 - 独立校验：E=8时解析面积9.6355323334，数值积分9.6355323367；误差约3.2×10^-9。
 - 依据：Berry–Keating, The Riemann zeros and eigenvalue asymptotics，书稿已有作者全文 https://michaelberryphysics.wordpress.com/wp-content/uploads/2013/06/berry307.pdf 。
 
@@ -297,3 +297,35 @@ SHA-256：`6489116c3b1edfcc0d0ac777627a48b749c83f1aa0962e15f17cc8e6648080b0`。
 ## 第10节主图修订：素数的光谱
 
 `10_prime_diffraction.png`由5221颗真实素数按论文的结构因子定义计算，原创中文绘图；代替正文的Lorenz蝴蝶主图。参数、来源与尺度限制见[图片底稿](../../资料/10_素数分布是混沌的吗/04_图片与视频素材.md)。旧蝴蝶文件保留。
+
+## 第11节新增素材（2026-10-22）
+
+- `11_ulam_starfield.png`：801×801方螺旋，1至641601，52192颗真实素数。
+- `11_ulam_diagonals.png`：中心1的平方数暗线与中心41的40素数亮线，对照解释二次多项式。
+- `11_prime_factor_dragon.png`：按v₂(n)转弯的有限折线，256、4096、65536步，各自缩放。
+- `11_prime_continued_fraction.png`：三层柱区间与局部放大，每层只显示前12个素数分支。
+- `11_ulam_daughter_maniac_1955.jpg`：美国哲学学会馆藏的1955年乌拉姆与女儿实验室开放日照片；未改动。不是1963年会议／螺旋计算现场。
+
+前四幅原创计算图，参数、程序、图注限制与各文件SHA-256见[图片底稿](../../资料/11_素数与分形/04_图片与视频素材.md)。历史照片来源与权利状态也记录于该处。原康托弦泛音图继续使用，其他旧第11节图保留。
+
+## 第12节：孔涅与合作者（2026-10-22）
+
+新增三张真实场景照：`12_consani_connes.jpg`（Danye Chéreau）、`12_connes_moscovici_kreimer.jpg`（Jean-François Dars）、`12_connes_walking.jpg`（Connes本人提供）。均来自[Jackson访谈](https://celebratio.org/connes_a/article/842/)，未标拍摄年月，未见通用开放许可；保留原始文件与署名。
+
+新增原创图：`12_absorption_spectrum.png`、`12_toeplitz_circle.png`、`12_prolate_signal.png`。分别说明吸收谱比喻、矩阵实根机制和通信浓缩；均明确区分示意与黎曼谱计算。详细来源、原图地址、参数与视频建议见[第12节图片底稿](../../资料/12_Connes和他的学徒们/04_图片与视频素材.md)。旧人物图与误差图继续保留。
+
+## 第13节补充：乐器、琴键与回声（2026-10-23）
+
+新增13_berry_osaka_2025.jpg、13_keating_lms.jpeg、13_sierra_cafe.jpg三张有背景的原始人物照片，及13_zero_spacing、13_xp_closed两幅原创图（PNG/SVG）。照片场合、原图链接、未确认开放许可的记录及图像计算范围，见[素材底稿](../../资料/13_弹出素数的乐章/04_图片与视频素材.md)。旧图继续保留，正文采用新版双栏解释图。
+
+## 第14节：动力学零点图（2026-10-23）
+
+四图均保存PNG与SVG：[离子内态](14_ion_silence.png)、[光散射](14_light_scattering.png)、[NMR实验源数据](14_nmr_source_data.png)、[Newton流](14_newton_flow.png)。前三幅采用纸色，流场采用深色；均由[生成程序](../src/render_zero_dynamics.py)输出。NMR图来自Wei2026公开仓库的处理后数据，保留误差，MIT许可原件在资料目录；其余三图依原论文公式独立实现。[来源、参数与许可](../../资料/14_在动力学系统中寻找零点/04_图片与视频素材.md)。旧正文素材保留，未删除。
+
+### 第14节作者指定notebook增补
+
+- [14_wang_gap_spectrum.png](14_wang_gap_spectrum.png)及SVG：原参数五亿规模重新统计，固定参数映射与素数间隔并列，保留不同尺度。
+- [14_wang_spectral_fit.png](14_wang_spectral_fit.png)及SVG：原notebook已保存的85项残差重绘，标出校准和选优参与项。
+- [14_ustc_measured_zeros.png](14_ustc_measured_zeros.png)及SVG：He2021补充表前20行、三种Ω共60点，原表误差全部保留。替换正文原离子教学示意，旧文件不删。
+
+生成程序为[render_wang_examples.py](../src/render_wang_examples.py)；[完整来源、许可与复现说明](../../资料/14_在动力学系统中寻找零点/05_映射图与算力转场.md)。

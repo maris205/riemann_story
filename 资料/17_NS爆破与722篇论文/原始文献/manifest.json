@@ -1,0 +1,72 @@
+[
+  {
+    "file": "OpenAI_NS_2026.pdf",
+    "url": "https://cdn.openai.com/pdf/32d9f210-8b73-45e0-91bc-82a30aef8a9a/navier-stokes.pdf",
+    "pages": 166,
+    "bytes": 2959204,
+    "sha256": "0e779481c4da40bd28d1e642e1d8ca57447d129610df28dfa5a11e9af8ae228f"
+  },
+  {
+    "file": "OpenAI_Euler_2026.pdf",
+    "url": "https://cdn.openai.com/pdf/315b36cd-ec98-4023-8342-93345194ece1/euler.pdf",
+    "pages": 57,
+    "bytes": 535142,
+    "sha256": "a0c234518e6c489e16996805023eb2e75c00b7c03455f7a3a5be2c124954bfdd"
+  },
+  {
+    "file": "Buckmaster_statement.pdf",
+    "url": "https://cims.nyu.edu/~tristanb/statement.pdf",
+    "pages": 4,
+    "bytes": 53497,
+    "sha256": "8d7723941bcda2fa55c1e74faa6298e04c706d17ff8abd2ad01878039c621f9d"
+  },
+  {
+    "file": "Clay_NS_problem.pdf",
+    "url": "https://www.claymath.org/wp-content/uploads/2022/06/navierstokes.pdf",
+    "pages": 6,
+    "bytes": 203736,
+    "sha256": "c1b5f27b1a64705cfaf1afceea513db5deedca8a18ca56ab32e7f86445a06d0c"
+  },
+  {
+    "file": "Tao_Math_2_0.pdf",
+    "url": "https://teorth.github.io/tao-web/slides/math-2-0-caltech-2026.pdf",
+    "pages": 30,
+    "bytes": 695398,
+    "sha256": "7e3b6ec69751f5d108b517aebed0f223537e1f4638fc59c7f9f1bd7d5027eb9f"
+  },
+  {
+    "file": "AGMAI_recommendations.pdf",
+    "url": "https://agmai.org/wp-content/uploads/2026/09/recommendations.pdf",
+    "pages": 3,
+    "bytes": 119758,
+    "sha256": "25c621e9a4609dc43538db3bcd493c9208e541d267998e9983017274ed03f130"
+  },
+  {
+    "file": "OpenAI_overview.pdf",
+    "url": "https://raw.githubusercontent.com/openai/math/main/overview.pdf",
+    "pages": 41,
+    "bytes": 324227,
+    "sha256": "22e174f66a102a13c615697d751e20a25796738edc04c10736b30f932fae3018"
+  },
+  {
+    "file": "BCH_translation_audit.pdf",
+    "url": "https://arxiv.org/pdf/2610.08144",
+    "pages": 25,
+    "bytes": 1710171,
+    "sha256": "3282e2c4103b955d635173749e7bf887fef7af7dd39e1abdb750b951030c538b"
+  },
+  {
+    "file": "CIV_analytic_forcing.pdf",
+    "url": "https://arxiv.org/pdf/2609.20803v2",
+    "pages": 34,
+    "bytes": 589027,
+    "sha256": "5454d7c0f82afff5d5b9cddb267f12e50f64d084cc220be0f9c6565be33c8dda"
+  },
+  {
+    "file": "Density_of_forces.pdf",
+    "url": "https://arxiv.org/pdf/2609.10262v4",
+    "pages": 20,
+    "bytes": 494138,
+    "sha256": "cb745f56b14d28843587f29f8c3e7e98519c1ccf1efd735e91c050fad11c8ed0"
+  }
+]

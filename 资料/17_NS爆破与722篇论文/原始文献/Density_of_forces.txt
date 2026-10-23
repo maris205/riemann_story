@@ -1,0 +1,1351 @@
+=== PAGE 1 ===
+Density of Forces Producing
+Navier–Stokes Blowup
+Shaozhen Cao
+shaozhencao@zju.edu.cn
+Zhuoni Chi
+znchi@zju.edu.cn
+Ping Nie
+ping.nie@pku.edu.cn
+Abstract
+We study the density of smooth external forces for which the three-dimensional Navier–
+Stokes equations lose classical regularity by a prescribed time T > 0. Starting from the
+compact forced blowup solution of OpenAI, we construct a blowup solution near every
+given smooth solution while preserving its initial velocity. A smooth cutoff of a local vector
+potential makes the given velocity vanish near the support of a rescaled blowup solution.
+The two velocities then have no nonlinear interaction, and the resulting force remains smooth
+through the blowup time. For fixed viscosity and zero initial velocity, such forces are dense
+in the relative L1
+tHs
+x topology on both T3 and R3 exactly when s < 1/2.
+Keywords: forced Navier–Stokes equations; finite-time blowup; force-space density; Sobolev
+spaces; compact support.
+1
+Introduction
+The three-dimensional incompressible Navier–Stokes equations with viscosity ν > 0 and external
+force f are
+∂tu + (u · ∇)u −ν∆u + ∇p = f,
+∇· u = 0,
+u(·, 0) = a.
+(1)
+We work on R3 and on the unit torus T3 = R3/Z3. For fixed a and T > 0, we ask in which
+force norms the smooth forces producing classical breakdown by T are dense.
+The geometric argument is a divergence-free version of the smooth Urysohn construction:
+make a given smooth velocity vanish near a small compact set, leave it unchanged outside
+a slightly larger set, and place a compact blowup solution in the resulting region. Smooth
+cutoffs are supplied by the classical smooth Urysohn lemma [9, Corollary 1.3.4]. To preserve
+incompressibility, apply the cutoff to a local vector potential rather than to the velocity itself.
+The remaining equation error is absorbed into the external force. Our blowup building block is
+the following result of OpenAI [7, Theorem 1.1].
+Theorem 1.1. For every ν > 0 there exist a force f ∈C∞
+c (R3 × (0, ∞); R3), a compact set
+K ⊂R3, and smooth velocity and pressure fields u, p on R3 × [0, 1) satisfying
+∂tu + (u · ∇)u −ν∆u + ∇p = f,
+∇· u = 0,
+u(·, 0) = 0,
+(2)
+such that supp u(·, t) ∪supp p(·, t) ⊂K for every 0 ≤t < 1,
+sup
+0≤t<1
+∥u(t)∥L2(R3) < ∞,
+lim sup
+t↑1
+∥u(t)∥L∞(R3) = ∞.
+(3)
+Consequently, there is no smooth solution (u, P) on R3 × [0, ∞) with the same force and initial
+datum whose kinetic energy is uniformly bounded supt≥0
+1
+2
+R
+R3 |u(x, t)|2 dx < ∞.
+Fix one such building block (U, P, F) [7, 8]. The local gluing strategy parallels Enciso,
+Peñafiel-Tomás and Peralta-Salas [2, Theorem 1.5, Lemma 2.11, Sections 11.1 and 11.3]: first
+1
+arXiv:2609.10262v4  [math.AP]  22 Sep 2026
+
+=== PAGE 2 ===
+modify a given smooth solution locally, then glue in a blowup building block. Their construction
+produces weak unforced Euler solutions by removing Reynolds stress with convex integration.
+Here the force is allowed to change, and the glued solution is classical before its blowup time.
+More explicitly, for a given smooth velocity v = ∇× A locally, choose smooth cutoffs and set
+wε = −∇× (ηεθεA),
+uε = v + wε + Uε.
+The corrected velocity v +wε vanishes near the support of the rescaled building block Uε. Hence
+both mixed nonlinear terms vanish. The force is the sum of the given force, the rescaled force,
+and a smooth cutoff correction. Plancherel’s theorem and the Fourier dilation formula, followed
+by the time change t = tε + ε2τ, give the force factor ε2/q−3/2−s in Lq
+t ˙Hs
+x, wherever finite.
+For 0 ≤s ≤1, the corresponding fractional estimate also follows from the classical Sobolev
+interpolation inequality
+∥z∥˙Hs ≤∥z∥1−s
+2
+∥∇z∥s
+2 ,
+which is Hölder’s inequality on the Fourier side; see [13, Chapter 4, Sections 1–2]. The cutoff
+correction has one additional power of ε. Negative orders require the separate low-frequency
+estimate in Section 4.
+The resulting sharp thresholds for zero initial velocity are
+Domain
+Force topology
+Density holds exactly when
+T3
+L1
+t Hs
+x
+s < 1/2
+R3
+L1
+t Hs
+x
+s < 1/2
+R3
+L2
+t Hs
+x
+s < −1/2
+Below threshold, density holds for every fixed admissible smooth initial velocity. Near a solution
+smooth through T, the approximation preserves its initial velocity and earlier history, blows up
+exactly at T, and converges in energy and dissipation. For a general given force the conclusion
+is breakdown by T, since a solution that already breaks down earlier needs no modification.
+Non-density at and above threshold follows from the forced critical regularity estimates, not
+from scaling alone.
+For comparison, Hofmanová, Zhu and Zhu [5, Theorem 1.4, Corollary 4.6, Theorem 5.1]
+obtain force-density results for nonunique Leray–Hopf solutions. Our property is classical
+breakdown under a smooth force. Classical local theory and the critical velocity framework are
+supplied by Tao [11, 12]. Section 2 fixes conventions and collects the standard estimates used
+below; Sections 3 and 4 give the periodic and whole-space arguments.
+2
+Definitions and preliminary results
+2.1
+Norm conventions
+We use the unitary angular Fourier transform on R3 and Fourier series bz(k) =
+R
+T3 z(x)e−2πik·x dx
+on the unit torus. Thus
+∥z∥2
+Hs(R3) =
+Z
+(1 + |ξ|2)s|bz(ξ)|2 dξ,
+∥z∥2
+Hs(T3) =
+X
+k
+(1 + 4π2|k|2)s|bz(k)|2.
+These are the distributional Sobolev spaces of Taylor [13, Chapters 3–4]; vector and tensor
+norms sum the squared component norms. The homogeneous norms replace these weights
+by |ξ|2s and (2π|k|)2s, respectively, with zero mean on the torus. Tao’s unnormalized Fourier
+convention gives the same Euclidean norms after its Plancherel factor [10, Appendix A].
+2
+
+=== PAGE 3 ===
+Time norms are Bochner norms of strongly measurable paths, with equality almost every-
+where understood [6, Definitions 6.14, 6.27]:
+∥z∥Lq(I;X) =
+Z
+I
+∥z(t)∥q
+X dt
+1/q
+,
+∥z∥L∞(I;X) = ess sup
+t∈I
+∥z(t)∥X .
+(4)
+Force norms use (0, ∞) unless stated otherwise, and give each smooth force class its relative
+norm topology. On (0, T) we write
+∥z∥ET = ∥z∥L∞
+t L2x + ∥∇z∥L2
+t L2x .
+(5)
+This is equivalent to the sum norm on L∞
+t L2
+x ∩L2
+t H1
+x; it assigns no value at the terminal time.
+2.2
+Smooth data and solution classes
+All fields are real, and forces need not be divergence free. We write L2
+σ(D) for the divergence-free
+subspace of L2(D; R3). The allowed initial velocities and forces are
+X = XT3 = C∞
+div(T3; R3),
+F = FT3 = C∞
+c (T3 × (0, ∞); R3),
+(6)
+XR = H∞(R3; R3) ∩L2
+σ(R3),
+(7)
+where H∞= T∞
+m=0 Hm has its usual Fréchet topology. On the whole space set
+FR =
+n
+f ∈C∞([0, ∞); H∞) : ∥f∥L1
+t Hm
+x + ∥f∥L2
+t Hm
+x < ∞for every integer m ≥0
+o
+.
+(8)
+Smoothness into H∞means smoothness into each Hm, with one-sided time derivatives at zero.
+Thus periodic forces vanish near zero and outside a compact time interval; whole-space forces
+may be nonzero at zero and need not have compact support. Both classes consist of forces
+defined through any possible blowup time of the velocity.
+On the torus, velocity and pressure are periodic and
+R
+T3 p = 0. On R3, a classical velocity
+belongs to C([0, S]; Hm) for every integer m ≥0 on each compact interval of its lifespan. Its
+pressure gradient is specified below, and the scalar pressure is determined up to a function of
+time. In either case local uniqueness defines a maximal classical lifespan, denoted by T ν
+max(a, f)
+on the torus and T ν
+max,R(a, f) on the whole space. A given smooth solution is smooth through T
+if it extends smoothly to [0, T + δ] for some δ > 0 in the relevant class.
+For fixed ν, T > 0, define
+Bν,a,T = {f ∈F : T ν
+max(a, f) ≤T},
+B0
+ν,T = Bν,0,T ,
+(9)
+BR
+ν,a,T = {f ∈FR : T ν
+max,R(a, f) ≤T}.
+(10)
+We call these the forces producing classical breakdown by T, using “breakdown for failure of
+classical continuation, as in the Clay problem statement [3, alternatives (C) and (D)]. The glued
+solutions satisfy the more specific condition of unbounded speed at their terminal time.
+2.3
+Homogeneous spaces and Fourier multipliers
+Write Λ = (−∆)1/2 and J = (I −∆)1/2, with the Fourier conventions of Section 1. On mean-zero
+periodic fields, the homogeneous and inhomogeneous Sobolev norms are equivalent at each fixed
+order. For 0 < a < 3/2, the homogeneous completion is represented by bz = |ξ|−aG, G ∈L2,
+with its unique L6/(3−2a) representative supplied by Sobolev embedding. The distributional
+pairing is well defined since |ξ|−a is locally square integrable and Schwartz tests decay rapidly.
+For the completed energy-force space we fix
+˙H−1(R3) = {h ∈S′ : bh = F is a measurable function and |ξ|−1F ∈L2}.
+(11)
+3
+
+=== PAGE 4 ===
+Functions representing distributions are identified almost everywhere. The maps h 7→|ξ|−1bh and
+h 7→⟨ξ⟩sbh identify these spaces with L2; the inverse Fourier data define tempered distributions.
+Thus they are separable Hilbert spaces, with no polynomial ambiguity. Real vector fields
+correspond to the conjugate-symmetric Fourier data.
+2.4
+Standard Sobolev estimates
+We use the tame product estimate and H2 ,→L∞:
+∥vw∥Hm ≤Cm(∥v∥H2 ∥w∥Hm + ∥w∥H2 ∥v∥Hm),
+∥v∥∞≤C ∥v∥H2 ,
+m ≥2.
+(12)
+See Tao [10, Appendix A, (A.13), Lemma A.8]; the periodic version follows by the same Fourier
+convolution estimate, with ∥bv∥ℓ1 ≤C∥v∥H2. The critical embeddings used below are
+∥v∥3 ≤C ∥v∥˙H1/2 ,
+∥∇v∥3 + ∥Λv∥3 ≤C ∥v∥˙H3/2 ,
+∥∇v∥6 ≤C ∥∆v∥2 .
+(13)
+They follow from the homogeneous Sobolev inequality [10, Appendix A, (A.11)], applied also to
+derivatives. On the torus use the compact-manifold embedding [14, Chapter 13, Proposition 6.4
+and preceding discussion] and the spectral gap for mean-zero fields. These statements use the
+homogeneous representatives fixed above; no embedding of ˙H3/2 into L∞is used.
+2.5
+Projection, pressure, and local existence
+The Leray projection P has Fourier symbol I −ξ ⊗ξ/|ξ|2 on R3 \ {0} and the same symbol at
+k̸ = 0 on the torus. At the periodic zero mode it is the identity. It is bounded on every Hs and
+commutes with derivatives and the heat semigroup. The projected equation is
+∂tu −ν∆u = −P∇· (u ⊗u) + Pf.
+(14)
+On the torus, pressure is recovered from
+∆p = ∇· f −
+X
+i,j
+∂i∂j(uiuj),
+Z
+T3 p = 0.
+The right side has zero mean. On R3 we require
+∇p = (I −P)(f −∇· (u ⊗u)) =: G.
+(15)
+The field G is curl free. The radial potential p(x, t) =
+R 1
+0 G(rx, t) · x dr therefore recovers the
+pressure, up to a function of time. We impose no L2 condition on p itself; ∇p ∈L2 excludes
+nonzero constant pressure gradients.
+Proposition 2.1. For each initial velocity in the stated class and each force smooth into every
+Hm on compact time intervals, equation (1) has a unique maximal smooth velocity, with pressure
+determined as above. If a solution is defined on [0, S), S < ∞, and
+Z S
+0
+∥u(t)∥2
+H2(D) dt < ∞,
+(16)
+then it extends smoothly beyond S.
+Proof. Apply Tao [11, Theorems 5.1(ii)–(iv), 5.4(ii)–(iv)] to Pf. The proof of Theorem 5.4(iv),
+p. 53, explicitly permits a ∈Hk and f ∈Cj
+t Hk
+x for all j, k; the resulting smoothness is on one
+common interval. Reduce viscosity to one by τ = νt, eu = ν−1u, and (ep, ef) = ν−2(p, f) with
+the corresponding time change. For nonzero periodic mean, use Tao’s mean reduction [11,
+Section 3, (36)–(38)]: set m(t) =
+R
+T3 a +
+R t
+0
+R
+T3 f and translate by X(t) =
+R t
+0 m, subtracting
+4
+
+=== PAGE 5 ===
+m from the velocity and m′ from the force. Pressure is recovered as above. Uniqueness and
+maximal development follow from the same theorems and the overlap argument of Corollary 5.2.
+For continuation, the standard Hm energy estimate, Young’s inequality and (12) give, for
+m ≥3,
+(∥u∥Hm)′ ≤Cm,ν ∥u∥2
+H2 ∥u∥Hm + ∥f∥Hm .
+(17)
+Regularize the norm at zero. Grönwall and (16) bound every Hm norm uniformly up to S.
+Tao’s quantitative local existence then gives a uniform positive time when restarting at t0 ↑S;
+the fixed force is smooth on [0, S + 1]. Uniqueness glues one such solution past S.
+2.6
+Energy and initial vanishing of the compact solution
+We use the fixed solution (U, P, F) chosen after Theorem 1.1. Its energy estimate supplies the
+time-integrated dissipation bound and the initial vanishing needed for rescaling.
+Lemma 2.2. The building block satisfies
+M := sup
+0≤t<1
+∥U(t)∥2 < ∞,
+D := ∥∇U∥L2((0,1)×R3) < ∞.
+Both U and P vanish on an initial time interval and therefore extend smoothly by zero to
+negative times.
+Proof. The classical energy identity and U(0) = 0 give, with N(t) =
+R t
+0 ∥F(s)∥2 ds, the bounds
+∥U(t)∥2 ≤N(t) and
+∥U(t)∥2
+2 + 2ν
+Z t
+0
+∥∇U(s)∥2
+2 ds ≤2
+Z t
+0
+∥F(s)∥2 N(s) ds = N(t)2.
+(18)
+Compact support justifies the identity; regularizing ∥U∥2 justifies the first bound at zero. Since
+F is time compact, monotone convergence gives finite dissipation up to time one. Before the
+support of F, the same estimate gives U = 0; the equation and compact support then give
+P = 0. Both fields therefore extend smoothly by zero to negative times.
+3
+The torus
+All spatial norms in this section are on T3, unless another domain is shown. The spaces X, F,
+and Bν,a,T are those defined in Section 2.
+3.1
+Statement of the density theorem
+Theorem 3.1 (Sobolev density threshold). Equip F with its relative L1(0, ∞; Hs(T3)) norm
+topology.
+(i) For every fixed a ∈X, the set Bν,a,T is dense if s < 1/2.
+(ii) For zero initial velocity,
+B0
+ν,T is dense in F
+⇐⇒
+s < 1
+2.
+We first construct a blowup solution close to a given smooth solution. The force estimates
+yield density below the stated threshold. A separate small-force estimate then proves non-density
+at and above it.
+5
+
+=== PAGE 6 ===
+3.2
+Localization and scaling
+Lemma 3.2. Let B be a fixed coordinate ball whose closure lies inside a torus fundamental
+cube. If z is smooth and supported in B, let zR be its zero extension in that cube to R3, and let
+zT3 be its periodization. For 0 < s < 1,
+∥zT3∥Hs(T3) ≤Cs,B
+ ∥zR∥2 + ∥zR∥˙Hs(R3)
+.
+(19)
+The constant is uniform as the support shrinks inside B. At s = 0 the L2 norms are equal; at
+s = 1 the corresponding equality holds for the L2 gradient norms.
+Proof. Sobolev norms on a compact manifold are equivalent to the norms obtained by a fixed
+coordinate cover and partition of unity [13, Chapter 4, Sections 2–3]. Choose one fixed cutoff
+equal to one near B and supported in the coordinate chart. The resulting local-to-global map
+is bounded from Hs(R3) to Hs(T3). Since ∥z∥Hs(R3) ≤Cs(∥z∥2 + ∥z∥˙Hs), this gives (19). The
+chart and cutoff are fixed, so the constant is independent of a smaller support of z. At orders
+zero and one, integration over the single copy of the support gives the stated identities.
+Choose a compact set K∗containing K and the spatial projection of supp F. Fix x0 ∈B,
+where B is the ball in Lemma 3.2. For sufficiently small ε > 0, require
+2ε2 < T,
+x0 + εK∗⊂B,
+tε = T −ε2.
+We extend F by zero to nonpositive source times; this extension is smooth because its temporal
+support is compact in (0, ∞). Using this extension and the negative-time zero extensions of
+U, P from Lemma 2.2, define
+Uε(x, t) = ε−1U
+x −x0
+ε
+, t −tε
+ε2
+
+,
+Pε(x, t) = ε−2P
+x −x0
+ε
+, t −tε
+ε2
+
+,
+(20)
+Fε(x, t) = ε−3F
+x −x0
+ε
+, t −tε
+ε2
+
+.
+The first two fields are used for t < T; the force is defined for all positive times. Place the
+rescaled whole-space solution in B and then periodize it. The torus contains a single copy of its
+support.
+Proposition 3.3. The fields in (20) solve the periodic momentum equation at viscosity ν, start
+from zero, and have unbounded speed at T. A spatially constant pressure adjustment enforces
+the mean-zero normalization. Their norms satisfy
+∥Uε∥L∞(0,T;L2) = ε1/2M,
+∥∇Uε∥L2(0,T;L2) = ε1/2D,
+(21)
+∥Fε∥Lq(0,∞;Lp) = εα(p,q) ∥F∥Lq(0,∞;Lp) ,
+α(p, q) = −3 + 3
+p + 2
+q ,
+(22)
+for 1 ≤p, q ≤∞. For 0 ≤s ≤1,
+∥Fε∥L1(0,∞;Hs(T3)) ≤Cs
+ ε1/2 + ε1/2−s.
+(23)
+In particular the force tends to zero in L1
+t Hs
+x for every s < 1/2, including negative s.
+Proof. Writing y = (x −x0)/ε and σ = (t −tε)/ε2, every term of the momentum equation gains
+the common factor ε−3. Incompressibility is preserved and no viscosity rescaling occurs. The
+temporal extension is smooth by initial vanishing. The speed identity ∥Uε(t)∥∞= ε−1 ∥U(σ)∥∞
+proves unboundedness as t ↑T.
+6
+
+=== PAGE 7 ===
+At a fixed time the velocity has amplitude factor ε−1 and spatial volume factor ε3, giving
+the first identity in (21). Its gradient has amplitude factor ε−2. Squaring and integrating in
+both space and time gives ε−4ε3ε2 = ε times the original dissipation integral, proving the second
+identity.
+For finite p, q, the force’s spatial norm gains ε−3+3/p and its time norm gains ε2/q. The
+positive-time domain includes the whole transformed support because tε > 0 and the original
+force vanishes at negative times. This proves (22); the essential-supremum cases follow by the
+same change of variables with zero reciprocal exponents.
+Euclidean homogeneous Sobolev scaling gives, for 0 < s < 1,
+ε−3F(( · −x0)/ε, σ)
+ ˙Hs(R3) = ε−3/2−s ∥F(·, σ)∥˙Hs(R3) .
+The Fourier transform gives the squared homogeneous scaling factor ε−6ε6ε−3−2s = ε−3−2s.
+Time integration contributes ε2. The inhomogeneous L2 term has order ε1/2. Lemma 3.2
+therefore proves (23). At s = 0 use the mixed-norm identity, and at s = 1 use the gradient
+scaling. For s < 0, the Fourier definition gives ∥z∥Hs ≤∥z∥2, so the s = 0 estimate proves
+convergence without any homogeneous negative-order claim.
+The force amplitude is ε−3 ∥F∥∞, even though its integrated norm tends to zero below
+the critical order. The homogeneous L1
+t ˙H1/2
+x
+norm is scale invariant. Section 3.5 supplies the
+regularity estimate needed at that order.
+3.3
+Gluing to a given smooth solution
+Fix a given smooth solution (v, π, g) smooth on [0, T +δ], where δ > 0, g ∈F, and v(0) = a ∈X.
+We first make the given velocity vanish near the support of Uε.
+This prevents nonlinear
+interaction terms from introducing a singularity into the new force.
+Choose R > 0 with K∗⊂B(0, R). The smooth Urysohn lemma [9, Corollary 1.3.4] gives an
+open neighborhood V of K∗and smooth cutoff functions satisfying
+θ ∈C∞
+c (R3),
+0 ≤θ ≤1,
+θ|V = 1,
+supp θ ⊂B(0, R),
+η ∈C∞
+c (R),
+0 ≤η ≤1,
+η|[−1,1] = 1,
+supp η ⊂(−2, 2).
+These choices are fixed independently of ε; their rescalings below localize the modification near
+x0 in space and near T in time.
+Lemma 3.4. Let v be smooth and divergence free in a spatial ball centered at x0. In that ball,
+with y = x −x0, define
+A(x, t) =
+Z 1
+0
+r v(x0 + ry, t) × y dr.
+(24)
+Then ∇× A = v. With the fixed cutoffs θ and η above, put
+θε(x) = θ((x −x0)/ε),
+ηε(t) = η((t −T)/ε2),
+wε = −∇× (ηεθεA).
+(25)
+For sufficiently small ε, wε is a smooth, divergence-free field supported inside the coordinate
+ball and in (T −2ε2, T + 2ε2). During the active interval before blowup of Uε,
+v + wε = 0
+on an open neighborhood of supp Uε(t).
+(26)
+Proof. Differentiating the radial formula and using ∇· v = 0 gives ∇× A = v. Hence wε
+is divergence free, and on the common plateau of the cutoffs it equals −v. For sufficiently
+small ε the spatial support lies strictly inside the coordinate ball and the temporal support lies
+in (0, T + δ), so extension by zero is smooth. The rescaled building block is active only for
+T −ε2 ≤t < T, where ηε = 1; its support lies in the spatial plateau. This proves (26) and the
+support assertions.
+7
+
+=== PAGE 8 ===
+Lemma 3.5. For wε in Lemma 3.4, define
+Hε = ∂twε −ν∆wε + (v · ∇)wε + (wε · ∇)v + (wε · ∇)wε.
+(27)
+The force Hε is smooth across T and extends by zero to all times outside its cutoff support. Its
+spatial support has volume O(ε3), and its temporal support has length O(ε2). For every spatial
+multi-index β and integer j ≥0,
+|∂j
+t ∂β
+xwε| ≤Cβ,jε−2j−|β|,
+|∂β
+xHε| ≤Cβε−2−|β|.
+(28)
+In particular,
+∥wε∥ET ≤Cε3/2,
+(29)
+∥Hε∥Lq(0,∞;Lp) ≤Cp,qε−2+3/p+2/q = Cp,qεα(p,q)+1,
+(30)
+∥Hε∥L1(0,∞;Hs) ≤Cs
+ ε3/2 + ε3/2−s
+(0 ≤s ≤1).
+(31)
+All constants are independent of sufficiently small ε.
+Proof. Set x = x0 + εz, t = T + ε2σ. The radial potential has A(x, t) = εAε(z, σ), where Aε
+and all its derivatives are uniformly bounded on the fixed cutoff support. Thus
+wε(x, t) = Wε(z, σ),
+Wε = −∇z × (η(σ)θ(z)Aε).
+Substitution in (27) gives Hε(x, t) = ε−2Qε(z, σ), where Qε is uniformly smooth and supported
+in the same fixed cylinder: its terms are ∂σWε, −ν∆zWε and transport terms with nonnegative
+powers of ε and bounded coefficients. This proves (28). Changing variables gives (29)–(30);
+applying Sobolev scaling to Qε and then Lemma 3.2 gives (31). The smooth cutoffs give the
+asserted zero extensions in time and space.
+Theorem 3.6. Let (v, π, g) be a periodic solution smooth on [0, T + δ], with δ > 0, g ∈F and
+v(0) = a ∈X. Fix any nonempty coordinate ball. For all sufficiently small ε > 0, there are
+gε ∈F and a solution uε with
+(i) T ν
+max(a, gε) = T and lim supt↑T ∥uε(t)∥∞= ∞;
+(ii) uε = v for 0 ≤t ≤T −2ε2;
+(iii) uε −v divergence free and supported, for every t < T, in a ball of diameter O(ε) inside
+the chosen ball;
+(iv) the simultaneous bounds
+∥uε −v∥ET ≤(M + D)ε1/2 + Cε3/2,
+(32)
+∥gε −g∥Lq
+t Lp
+x ≤Cp,q
+ εα(p,q) + εα(p,q)+1,
+(33)
+∥gε −g∥L1
+t Hsx ≤Cs
+ ε1/2−s + ε3/2−s
+(0 ≤s < 1/2).
+(34)
+Here force norms are taken over (0, ∞), and α(p, q) = −3 + 3/p + 2/q for 1 ≤p, q ≤∞. For
+s < 0, the force difference also tends to zero in L1
+t Hs
+x.
+Proof. Choose the rescaled blowup solution and the correction from Lemmas 3.4–3.5, with all
+supports inside the prescribed ball, and set
+uε = v + wε + Uε,
+pε = π + Pε,
+gε = g + Hε + Fε.
+(35)
+Initially use the compact representative Pε; subtract its spatial mean to normalize pε.
+Let bε = v + wε. Expanding the equation for the given smooth solution and (27) gives
+∂tbε + (bε · ∇)bε −ν∆bε + ∇π = g + Hε.
+8
+
+=== PAGE 9 ===
+Adding the building block equation produces the equation for uε except for
+(bε · ∇)Uε + (Uε · ∇)bε.
+Both terms are identically zero. On a neighborhood of supp Uε this follows from bε = 0, including
+its derivatives, by (26). Outside that support Uε and its derivatives vanish, including at the
+support boundary by smoothness. Before its starting time it vanishes everywhere. Thus (1)
+holds exactly for (35) on [0, T).
+Each summand of the velocity is divergence free. The correction is zero for t ≤T −2ε2, and
+the building block is zero before T −ε2, so the initial datum and the stated earlier history are
+unchanged. On the active building block support, uε = Uε. Hence
+∥uε(t)∥∞≥∥Uε(t)∥∞
+and the maximum norm is unbounded as t ↑T.
+The velocity is smooth on every closed interval before blowup. The force Fε is globally
+smooth by its original definition, and Hε is globally smooth by Lemma 3.5. Their time supports
+remain compact subsets of (0, ∞) when ε is sufficiently small. Therefore gε ∈F, independently
+of the absence of a classical extension of uε at T. Uniqueness in Proposition 2.1 identifies the
+constructed velocity with the maximal solution for (a, gε) up to every T ′ < T. Its lifespan is at
+least T, and the unbounded maximum norm excludes extension beyond T. Thus the lifespan is
+exactly T.
+Finally, the triangle inequality, Proposition 3.3 and Lemma 3.5 give (32)–(34). In (34), the
+lower-order inhomogeneous terms are absorbed because 0 < ε ≤1 and s ≥0. For negative s,
+use ∥z∥Hs ≤∥z∥2 and the s = 0 estimate.
+3.4
+Density below the critical order
+Proposition 3.7. For a ∈X, ν > 0, T > 0 and s < 1/2,
+∀g ∈F ∀ρ > 0 ∃f ∈F :
+∥f −g∥L1
+t Hsx < ρ,
+T ν
+max(a, f) ≤T.
+Proof. Fix g and ρ. There are two exhaustive cases.
+If T ν
+max(a, g) ≤T, choose f = g. It already belongs to Bν,a,T and the norm difference is zero.
+If T ν
+max(a, g) > T, choose δ > 0 so that T + δ < T ν
+max(a, g), and use its smooth solution as
+the given smooth solution in Theorem 3.6. For every sufficiently small ε, that theorem supplies
+gε ∈Bν,a,T with lifespan exactly T. For 0 ≤s < 1/2, (34) tends to zero. For s < 0, its s = 0
+case and the embedding L2 ,→Hs do so. Choose ε so that the force difference is less than ρ
+and set f = gε.
+Both choices preserve a, ν, and T, and give the required approximation.
+3.5
+Critical regularity and completion of the proof
+Non-density at and above the threshold is a consequence of classical stability of the zero
+solution in the critical topology. For a direct periodic robustness theorem with L2
+t H−1/2
+x
+force
+perturbations, see Marín-Rubio, Robinson and Sadowski [16, Theorem 3, author manuscript
+pp. 6–7]. The L1
+t H1/2
+x
+small-force result needed here follows from the forced Fujita–Kato theory
+in Danchin [15, Theorem 2.3.1, pp. 47–49]; we record only the adaptation of its hypotheses.
+Proposition 3.8. There is c > 0, depending only on the unit torus and the stated norm
+conventions, such that
+g ∈F,
+ρ := ∥g∥L1(0,∞;H1/2) < cν
+(36)
+imply T ν
+max(0, g) = ∞.
+9
+
+=== PAGE 10 ===
+Proof. First remove the mean as in Tao [11, Section 3, (36)–(38)]. Set m(t) =
+R t
+0 g(τ) dτ and
+b(t) =
+R t
+0 m(τ) dτ. In the translated coordinates, v(t, x) = u(t, x + b(t)) −m(t) solves the
+mean-zero periodic equation with force h(t, x) = g(t, x + b(t)) −g(t). Translation is an isometry
+and removal of the zero mode decreases the norm, so ∥h∥L1
+t H1/2
+x
+≤ρ and |m(t)| ≤ρ.
+Apply the critical small-data fixed-point theorem [15, Theorem 2.3.1 and its proof] with
+p = r = 2. Here ˙B1/2
+2,2 =
+˙H1/2, and Minkowski’s inequality gives ∥h∥eL1 ˙H1/2 ≤∥h∥L1 ˙H1/2.
+The same proof applies to mean-zero periodic fields using the periodic heat estimates in [15,
+Section 2.2.4, p. 44]; the zero mode has already been removed.
+It gives a global critical
+solution when ρ < cν. Smooth data retain their higher regularity by the local theory cited
+in Proposition 2.1. Restoring the translation and bounded mean therefore gives the required
+global classical solution.
+Corollary 3.9. For every s ≥1/2 and T > 0, B0
+ν,T is not dense in F with the relative L1
+t Hs
+x
+topology.
+Proof. At s = 1/2, the set
+{g ∈F : ∥g∥L1
+t H1/2
+x
+< cν}
+is a nonempty relative open ball, containing zero, and is disjoint from B0
+ν,T by Proposition 3.8.
+For s ≥1/2, the Fourier weights imply ∥g(t)∥H1/2 ≤∥g(t)∥Hs. The ball ∥g∥L1
+t Hsx < cν is
+therefore also disjoint from the set of forces producing breakdown. A dense subset cannot miss
+a nonempty open set.
+Proof of Theorem 3.1. Proposition 3.7 gives density for every fixed smooth initial velocity when
+s < 1/2. Corollary 3.9 gives non-density for zero initial velocity when s ≥1/2. These are the
+two assertions of the theorem.
+The converse has been proved for zero initial velocity. The behavior for general nonzero
+initial velocities at or above the critical order remains outside this classification.
+3.6
+Other force norms, trajectory approximation, and data pairs
+Corollary 3.10. For every fixed a ∈X, the set Bν,a,T is dense in F with its relative Lq(0, ∞; Lp)
+topology whenever
+1 ≤p, q ≤∞,
+3
+p + 2
+q > 3.
+(37)
+Proof. Use the same two cases as in Proposition 3.7. In the case of a solution smooth through
+the prescribed time, (33) tends to zero because α(p, q) > 0 and hence α(p, q) + 1 > 0.
+The sufficient region includes L1
+t L2
+x and L2
+t L4/3
+x . The other mixed Lebesgue topologies
+require further analysis.
+Corollary 3.11. Fix a ∈X. Let Ra,T be the trajectories with initial velocity a and forces in F
+that are smooth through T. Let Sa,T be the trajectories with the same initial velocity and forces
+in F that are smooth on [0, T), have finite ET norm, and have unbounded maximum velocity at
+T. Then
+Ra,T ⊆Sa,T
+ET .
+(38)
+For each given pair (v, g) and every fixed s < 1/2, the approximating pairs can be chosen with
+(uε, gε) −→(v, g)
+in ET × L1(0, ∞; Hs).
+10
+
+=== PAGE 11 ===
+Proof. A given solution smooth through T is smooth through T + δ for some δ > 0, by local
+continuation; equivalently one may take this as the meaning of smoothness through the endpoint.
+Apply Theorem 3.6. Its energy estimate gives convergence in ET , and its force estimates give
+simultaneous convergence. The given smooth solution has finite ET norm and the building
+block and correction do also, so uε belongs to the specified ambient energy space.
+To verify the claimed interpretation of the norm, note that
+∥z∥L2(0,T;L2) ≤T 1/2 ∥z∥L∞(0,T;L2) .
+Thus ET controls both terms of L2
+t H1
+x, while the usual sum norm controls ET directly. This
+proves the equivalence used in (38). No endpoint value or classical continuation of uε is implied
+by convergence in this norm.
+Proposition 3.12. Define
+Bν,T = {(a, f) ∈X × F : T ν
+max(a, f) ≤T}.
+If s < 1/2, this set is dense in the product of any topology on X and the relative L1
+t Hs
+x topology
+on F. Its projection onto X is all of X. The family obtained while requiring a = 0 projects
+instead to the singleton {0}.
+Proof. For every fixed a, Proposition 3.7 makes the force fiber dense and nonempty. Every
+product neighborhood of (a, g) therefore meets Bν,T with its first coordinate still equal to a.
+This proves both density and surjectivity of the projection. Restricting to a = 0 gives the last
+assertion.
+The projection statement has the quantifier order ∀a ∃f, not ∃f ∀a. For a fixed prescribed
+force f∗, the set
+{a ∈X : T ν
+max(a, f∗) ≤T}
+is a different object and is not classified by these force-changing constructions. There is also
+a distinction between the two terminal-time assertions. Theorem 3.6 gives singularity exactly
+at T around every given solution smooth through T. Proposition 3.7 uses breakdown by T,
+because a given solution may already break down earlier and is then left unchanged. It does not
+prove that forces producing velocity blowup exactly at T are dense near a force whose solution
+breaks down earlier.
+Remark 3.13. The force convergence in Theorem 3.6 is compatible with diverging pointwise
+amplitudes. Since the original force is nonzero,
+∥gε −g∥L∞
+t,x ≥ε−3 ∥F∥∞−Cε−2 −→∞.
+Here the first term is the amplitude of Fε and the second bounds Hε. The force F is nonzero
+by (18), since U blows up. Hence the approximating smooth forces have unbounded amplitudes
+and cannot obey uniform bounds on all derivatives.
+3.7
+Gluing in a bounded domain
+For the following bounded-domain statement, Hs(Ω) is the space of restrictions of Hs(R3)
+distributions, with quotient norm
+∥z∥Hs(Ω) =
+inf
+Z|Ω=z ∥Z∥Hs(R3) .
+(39)
+This convention applies also to negative orders. At order zero it is the usual L2(Ω) norm. For
+every fixed compact K ⋐Ωand s ∈R, smooth fields supported in K obey
+∥z∥Hs(Ω) ≤∥E0z∥Hs(R3) ≤Cs,K,Ω∥z∥Hs(Ω) ,
+supp z ⊂K,
+(40)
+11
+
+=== PAGE 12 ===
+Here E0z denotes extension by zero. Choose χ ∈C∞
+c (Ω) equal to one near K by the smooth
+Urysohn lemma [9]. Multiplication by a fixed smooth cutoff is bounded on Hs(R3) for every real
+s [13, Chapter 4, Section 2, (2.19)]. For every extension v of z, χv = E0z; taking the infimum
+over extensions proves the second inequality in (40). The first follows from the quotient norm.
+The constant depends on the fixed cutoff and s, not on a smaller support or a shrinking scale ε.
+Applying the pointwise bounds in time gives the same comparison for all the mixed norms in
+(4), provided K is fixed for all times. No bounded zero-extension operator on arbitrary Hs(Ω)
+is asserted. All vector and tensor norms in these definitions are the square root of the sum of
+the squared component norms.
+The next corollary extends the local gluing construction to a bounded container. Placing
+the modification strictly inside an interior ball leaves the velocity unchanged near the boundary,
+so the no-slip condition is preserved. The starting point is a given compatible smooth solution;
+the construction changes its interior evolution while retaining its boundary values.
+Corollary 3.14. Let Ω⊂R3 be a bounded box or a bounded smooth domain. Suppose that,
+for some δ > 0, (v, π, g) is a smooth no-slip solution on [0, T + δ], and that g is smooth on
+Ω× [0, ∞) with temporal support compact in (0, ∞). Here smoothness on a closed spacetime
+slab means restriction of a C∞field from an open neighborhood of that slab; this convention also
+specifies smoothness at the edges and corners of a box. We assume v, π have this regularity on
+Ω×[0, T +δ], and g on each finite closed slab. The equation and incompressibility hold in Ω, and
+v|∂Ω= 0. Pressure may be normalized by zero spatial mean. Existence of this compatible smooth
+solution is an assumption of the corollary. The construction in Theorem 3.6 applies inside any
+prescribed interior ball, preserving the initial velocity and no-slip boundary values. The energy
+estimates use L2(Ω) and the force estimates use L1(0, ∞; Hs(Ω)), with the restriction norm
+(39). For every real s, the domain and zero-extended force-difference norms are comparable by
+(40), with a constant independent of ε; the convergence assertion remains s < 1/2.
+Proof. The vector potential and all cutoff estimates are local. Choose the correction and building
+block supports in a smaller closed ball strictly inside Ω. The computation of the momentum
+equation in Theorem 3.6 is unchanged. The new velocity equals the given smooth solution in a
+fixed boundary collar for all times before blowup, so the no-slip boundary values are preserved.
+The force correction is supported in the same interior region and has the same globally smooth
+time extension.
+For 0 ≤s < 1/2, the Euclidean scaling proof directly bounds the zero extensions of the
+force differences in L1(0, ∞; Hs(R3)). For s < 0, use ∥E0(gε −g)∥Hs(R3) ≤∥E0(gε −g)∥L2(R3)
+at each time. All these force-difference supports, including those after T, lie in one fixed
+compact interior ball K for every sufficiently small ε. Consequently (40) gives the asserted
+domain estimates and the scale-independent comparison after time integration. The energy
+estimates follow by integrating over that ball. Finally, the classical difference-energy estimate
+and Grönwall give uniqueness on the no-slip domain; the boundary terms vanish. Thus the
+constructed solution is singular exactly at T.
+12
+
+=== PAGE 13 ===
+3.8
+Further constructions
+Proposition 3.15. Fix the building block (U, P, F) of Theorem 1.1, and fix a spacetime cylinder
+Q = B0 × (τ0, τ1) with 0 < τ0 < τ1 < 1 and B0 ⋐R3 an open ball. For any b ∈C∞
+c (Q; R3) with
+∇· b = 0, define
+eU = U + b,
+eP = P,
+eF = F + ∂tb −ν∆b + (U · ∇)b + (b · ∇)U + (b · ∇)b.
+(41)
+These fields give an infinite-dimensional affine family of distinct velocities with zero initial data,
+finite energy and dissipation, and the same late singular behavior as U. For each fixed nonzero
+b, the family obtained by replacing b with λb is non-isolated as λ →0 in every fixed smooth
+seminorm of the velocity and force differences on their compact support.
+Proof. Expanding the momentum equation for U +b gives exactly the force in (41); its divergence
+remains zero. Every correction term is supported in supp b, a compact subset of Q. The original
+blowup solution is smooth with bounded derivatives of every fixed order on a neighborhood of
+that set. Thus the force correction extends smoothly by zero to the whole positive time axis,
+including time one, despite the singularity of U there.
+Since b = 0 near time zero and near time one, eU(0) = 0 and eU = U on a fixed late interval.
+The same unbounded-speed limit holds. The energy and dissipation norms of b are finite by
+compact smooth support, so the triangle inequality gives the corresponding bounds for eU.
+To verify infinite dimensionality explicitly, choose countably many disjoint small balls inside
+B0. In each ball choose a smooth compactly supported vector potential with nonzero curl, and
+multiply that curl by a fixed nonzero time bump in (τ0, τ1). These divergence-free fields are
+linearly independent because their spatial supports are disjoint. Their finite linear combinations
+belong to the allowed class. The map b 7→U + b is injective and affine, so its image is infinite
+dimensional.
+For the non-isolation statement, the velocity difference is λb, while the force difference has
+the form
+λLUb + λ2(b · ∇)b,
+LUb = ∂tb −ν∆b + (U · ∇)b + (b · ∇)U.
+On the fixed compact support, all coefficients and their derivatives are bounded. Hence for
+each integer m ≥0 the Cm norm of the force difference is at most Cm|λ| + C′
+mλ2, and the
+velocity difference is at most C′′
+m|λ|. Both tend to zero. The forces vary in this family; no open
+singularity basin for one fixed force follows.
+Proposition 3.16. Fix finitely many disjoint interior balls B1, . . . , BN in the torus or in a
+bounded three-dimensional domain. At fixed ν > 0 and T > 0, there is a smooth forced solution
+with zero initial velocity, smooth on [0, T), with finite energy and dissipation, such that
+lim sup
+t↑T
+∥u(t)∥L∞(Bj) = ∞
+(1 ≤j ≤N).
+In a bounded domain its boundary condition is homogeneous no-slip.
+Proof. Choose xj ∈Bj and scales εj > 0 sufficiently small that the complete scaled compact
+set xj + εjK∗lies strictly inside Bj and ε2
+j < T. Apply (20) to each building block with start
+time T −ε2
+j, and denote the resulting fields by Uj, Pj, Fj. Set
+u =
+N
+X
+j=1
+Uj,
+p =
+N
+X
+j=1
+Pj,
+f =
+N
+X
+j=1
+Fj.
+For i̸ = j, the supports of Ui and Uj are separated, so (Ui · ∇)Uj = 0. The sum therefore
+satisfies the momentum equation exactly. All force supports are compact in positive time and
+all forces are smooth. Initial vanishing gives u(0) = 0.
+13
+
+=== PAGE 14 ===
+On Bj the velocity equals Uj, proving the stated separate limsup for each ball. Disjoint
+supports also give
+sup
+t<T
+∥u(t)∥2
+2 ≤M2
+N
+X
+j=1
+εj,
+Z T
+0
+∥∇u(t)∥2
+2 dt = D2
+N
+X
+j=1
+εj.
+These sums are finite. In a bounded domain, all fields vanish in a boundary collar; hence
+u = 0 on the boundary. On the torus a spatially constant pressure adjustment gives the chosen
+gauge.
+Only finitely many solutions are superposed, all with terminal time T. The sequences along
+which their maxima diverge may differ; the conclusion is a separate limsup statement in each
+ball.
+Proposition 3.17. On the torus, let f = −∇ϕ for a globally defined periodic scalar ϕ. On a
+bounded domain, let f = −∇ϕ and impose homogeneous no-slip velocity. In either case, any
+smooth solution with zero initial velocity is identically zero on its classical lifespan.
+Proof. Incompressibility and periodicity or the zero normal boundary trace give
+Z
+f · u = −
+Z
+∇ϕ · u = 0.
+The classical energy identity, integrated from zero, becomes
+1
+2 ∥u(t)∥2
+2 + ν
+Z t
+0
+∥∇u(s)∥2
+2 ds = 0.
+Both terms are nonnegative, so u(t) = 0 at every time before blowup. The periodic-potential
+condition excludes affine potentials, whose gradients need not be removable by the allowed
+periodic pressure gauge.
+Thus a nontrivial solution with zero initial velocity requires a nonconservative force.
+4
+The whole space
+We now work on R3, with the data classes XR and FR from Section 2. The construction is again
+spatially local. The new issues are the behavior of negative Sobolev norms near frequency zero
+and the absence of a spectral gap.
+4.1
+Statement of the density theorem
+Theorem 4.1 (Two whole-space Sobolev thresholds). Fix ν, T > 0, let q ∈{1, 2}, and set
+sq = 2/q −3/2. In the relative Lq(0, ∞; Hs(R3)) topology on FR:
+(i) For every fixed a ∈XR, BR
+ν,a,T is dense if s < sq.
+(ii) For zero initial velocity, BR
+ν,0,T is dense if and only if s < sq.
+Thus the thresholds are 1/2 for L1
+t Hs
+x and −1/2 for L2
+t Hs
+x. Around every given solution smooth
+through T, the approximating solution can have the same initial velocity, the same earlier history,
+singularity exactly at T, and a velocity difference tending to zero in ET .
+The force classes remain smooth, equipped with the relative norm topology. For q = 2, the
+converse uses a regular neighborhood whose radius depends on T.
+14
+
+=== PAGE 15 ===
+4.2
+Local construction and negative Sobolev estimates
+The compact solution of Theorem 1.1 is already defined on R3. Use the scaling (20) directly,
+without periodization. The energy identities (21) and mixed force identity (22) follow from the
+same changes of variables. The vector potential in Lemma 3.4 is local, so its proof applies in
+any Euclidean ball. In Lemma 3.5, the support, derivative, energy, and mixed Lebesgue bounds
+are also local; only the final transfer of fractional norms to the torus is unnecessary. Thus the
+same wε and Hε are available on R3, with the same uniform bounds. We record the result and
+prove the additional negative-order estimates.
+Theorem 4.2. Let (v, π, g) be the solution for a ∈XR and g ∈FR, smooth through T + δ for
+some δ > 0. Fix any nonempty open ball B ⊂R3. For all sufficiently small ε > 0, there are
+gε ∈FR and a solution uε such that
+T ν
+max,R(a, gε) = T,
+lim sup
+t↑T
+∥uε(t)∥∞= ∞,
+uε = v (0 ≤t ≤T −2ε2).
+The velocity difference is supported inside B at every t < T, and gε −g ∈C∞
+c (B × (0, ∞)).
+Moreover,
+∥uε −v∥ET ≤(M + D)ε1/2 + Cε3/2.
+(42)
+For q ∈{1, 2} the force difference tends to zero in Lq
+tHs
+x whenever s < 2/q −3/2. All of these
+conclusions hold for the same family of glued solutions.
+Proof. Place the fields in (20) inside B, and choose the compact cutoffs of Lemma 3.4. Define
+A, wε, Hε by (24), (25) and (27). These formulas only use v on a fixed compact neighborhood
+of B and of time T, so the preceding lemmas apply. In particular v + wε = 0 on a neighborhood
+of the active building block support. Put
+uε = v + wε + Uε,
+pε = π + Pε,
+gε = g + Hε + Fε.
+Writing bε = v + wε, expansion of the equation leaves only the cross-advection terms (bε ·
+∇)Uε + (Uε · ∇)bε. They vanish on a neighborhood of the building block support because
+bε = 0 there. Outside that support, the building block and its derivatives vanish; smoothness
+gives the same conclusion at the support boundary. When the building block is inactive it is
+identically zero. Thus the two terms vanish pointwise everywhere, and the equation is exact.
+The pressure difference may be chosen to be the compact scalar Pε: the equation gives an L2
+pressure gradient, and applying I −P recovers (15). Both force corrections are globally smooth
+and spacetime compact, including across T, so their sum preserves membership in FR.
+The initial value and earlier history are unchanged. At each t < T the compact blowup
+solution and cutoff correction lie in H∞, and the maximum norm of Uε is unbounded at
+T. Proposition 2.1 identifies the solution with the unique maximal solution. An extension
+through T would be bounded in CtH2 on a neighborhood of T, hence bounded in L∞
+x by (12),
+contradicting the blowup of Uε. Thus its maximal lifespan is exactly T. Equation (21) and the
+correction estimate in Lemma 3.5 give (42) by the triangle inequality.
+It remains to justify every asserted force topology, including negative orders. Let
+β(q, s) = 2
+q −3
+2 −s.
+For 0 ≤s ≤1, Euclidean scaling and ∥z∥Hs ≤Cs(∥z∥2 + ∥z∥˙Hs) give
+∥Fε∥Lq
+t Hsx ≤Cq,s
+ ε2/q−3/2 + εβ(q,s),
+∥Hε∥Lq
+t Hsx ≤Cq,s
+ ε2/q−1/2 + εβ(q,s)+1.
+(43)
+15
+
+=== PAGE 16 ===
+The second line uses the uniformly smooth compact rescaled profile of Lemma 3.5, whose
+amplitude is ε−2.
+For −3/2 < s < 0, every smooth compact profile has finite ˙Hs norm. Indeed, on |ξ| < 1 its
+Fourier transform is bounded by its L1 norm and
+R
+|ξ|<1 |ξ|2s dξ < ∞; on |ξ| ≥1 its L2 norm
+suffices. These bounds are uniform for the rescaled correction profiles, which have common
+compact support and uniform derivatives. Since (1 + |ξ|2)s ≤|ξ|2s, scaling gives
+∥Fε∥Lq
+t Hsx ≤Cq,sεβ(q,s),
+∥Hε∥Lq
+t Hsx ≤Cq,sεβ(q,s)+1.
+(44)
+The time norms run over the entire positive axis. Each rescaled force has time support of length
+O(ε2), including any part after T.
+For q = 1, (43) proves convergence for 0 ≤s < 1/2; all s < 0 follow from ∥z∥Hs ≤∥z∥2. For
+q = 2, (44) proves convergence for −3/2 < s < −1/2. If s ≤−3/2, choose r ∈(−3/2, −1/2)
+with r > s and use ∥z∥Hs ≤∥z∥Hr. This last step avoids making any false homogeneous scaling
+assertion at indices where a generic compact profile can have an infinite homogeneous norm.
+4.3
+The critical estimate for time-integrable forcing
+Proposition 4.3. There is a universal c > 0 such that, for a ∈XR and f ∈FR,
+∥a∥˙H1/2 + ∥f∥L1
+t ˙H1/2
+x
+< cν
+=⇒
+T ν
+max,R(a, f) = ∞.
+In particular, for a = 0, the ball ∥f∥L1
+t H1/2
+x
+< cν consists of globally regular inputs.
+Proof. This is the p = r = 2 case of Danchin’s forced critical small-data theorem [15, Theo-
+rem 2.3.1, pp. 47–49]. Indeed, ˙B1/2
+2,2 = ˙H1/2 and ∥f∥eL1 ˙H1/2 ≤∥f∥L1 ˙H1/2; the Leray projection
+is bounded on these spaces. The theorem gives a global critical solution, and persistence of
+regularity for the smooth data in our classes identifies it with the maximal classical solution of
+Proposition 2.1. Finally ∥f∥˙H1/2 ≤∥f∥H1/2 gives the stated open ball.
+4.4
+The critical estimate for square-integrable forcing
+Proposition 4.4. For each ν, S > 0 there is rν,S > 0 such that
+f ∈FR,
+∥f∥L2(0,∞;H−1/2) < rν,S
+=⇒
+T ν
+max,R(0, f) > S.
+One can take rν,S = cν3/2e−CνS for suitable universal positive constants c, C.
+Proof. Use the inhomogeneous heat estimate [15, Theorem 2.2.5, p. 44] and the critical bilinear
+fixed-point argument [15, Lemma 2.3.2 and the proof of Theorem 2.3.1, pp. 48–49]. We spell
+out the low-frequency and viscosity adjustments. Normalize viscosity by u(t, x) = νv(νt, x) and
+F(τ, x) = ν−2f(τ/ν, x). On 0 ≤τ ≤L := νS, set
+XL = C([0, L]; H1/2) ∩L2(0, L; H3/2),
+HF(t) =
+Z t
+0
+e(t−r)∆PF(r) dr.
+The cited heat estimate and the Sobolev product law give, with the sum norm on XL,
+∥HF∥XL ≤CeCL∥F∥L2H−1/2,
+∥B(v, w)∥XL ≤CeCL∥v∥XL∥w∥XL,
+where B(v, w) = −H div(v ⊗w). For the second bound use XL ,→L4
+t H1
+x and H1 · H1 ,→H1/2;
+the exponential is a convenient upper bound for the finite-time constants in the inhomogeneous
+heat estimate. Thus the cited contraction lemma applies if ∥F∥L2H−1/2 < ce−CL, after changing
+universal constants. Since ∥F∥L2(0,L;H−1/2) = ν−3/2∥f∥L2(0,S;H−1/2), the stated radius suffices.
+Persistence of smoothness and local existence at the final time give lifespan strictly greater than
+S. The finite-time inhomogeneous estimate is essential: small H−1/2 norm does not bound the
+homogeneous negative norm at low frequencies.
+16
+
+=== PAGE 17 ===
+Proof of Theorem 4.1. Fix a, g and a positive radius in the indicated force norm. There are
+two cases. If T ν
+max,R(a, g) ≤T, take f = g. Otherwise choose δ > 0 so that the given smooth
+solution exists through T + δ, and apply Theorem 4.2. For s < sq, its force difference is smaller
+than the prescribed radius when ε is sufficiently small, its initial velocity is exactly a, and its
+lifespan is exactly T. This proves density for each fixed smooth initial velocity.
+For zero initial velocity and q = 1, Proposition 4.3 provides an open ball about zero disjoint
+from BR
+ν,0,T in L1
+t H1/2
+x
+. The inclusion Hs ,→H1/2 with norm at most one for s ≥1/2 gives the
+same obstruction in each stronger metric. For q = 2, use Proposition 4.4 with S = T and then
+Hs ,→H−1/2 for s ≥−1/2. These nonempty relative open balls prove non-density. The energy
+and earlier-history assertions are part of the gluing theorem.
+4.5
+Compact support, rapid decay, and completed force spaces
+Define the following two subclasses of FR:
+Fc = C∞
+c (R3 × (0, ∞); R3),
+Frd =
+(
+f ∈C∞(R3 × [0, ∞)) :
+sup
+x∈R3, t≥0
+(1 + |x| + t)N|∂α
+x ∂j
+t f(x, t)| < ∞for all N, α, j
+)
+.
+Vector values are understood in the second line. The initial class corresponding to the rapid-
+decay formulation is Sσ = S(R3; R3) ∩L2
+σ. These are exactly the decay requirements relevant
+to [3, equations (4)–(5)]; a common numerical bound on their seminorms is not imposed.
+Corollary 4.5. Theorem 4.1 remains valid with FR replaced by Fc or Frd. In particular it holds
+for every fixed a ∈Sσ in the rapid-decay class, with the complete if-and-only-if classification at
+a = 0.
+Proof. The initial value is preserved exactly, and the force correction in Theorem 4.2 is spacetime
+compact. Addition of that correction preserves each stated force class, including all rapid-decay
+bounds. The two-case density proof therefore stays within the chosen subclass. Each critical
+regular ball contains zero and remains a nonempty relative open ball in that subclass. The local
+framework only requires a ∈XR, so it applies in particular to Schwartz initial data. Nothing
+here requires the nonzero given velocity or its pressure to be spatially compact.
+The force spaces in the next proposition are natural for the energy class.
+With V =
+H1(R3; R3) ∩L2
+σ, a finite-energy velocity belongs to L∞
+t L2
+σ ∩L2
+t V . A full distribution in H−1
+restricts to an element of V ′; the latter records only its action on divergence-free tests. This
+distinction is discussed in [1, Definition 1 and Remark 4]. Our realization of ˙H−1 gives the
+pairing
+| ⟨h, z⟩| ≤∥h∥˙H−1 ∥∇z∥2 ,
+
+Z T
+0
+⟨f, u⟩dt
+ ≤∥f∥L2
+t ˙H−1
+x ∥∇u∥L2
+t,x .
+These inequalities follow by Fourier Cauchy–Schwarz, first for Schwartz functions and then
+by completion. The inhomogeneous H−1 norm instead pairs with H1, while L1
+t L2
+x pairs with
+L∞
+t L2
+x.
+Proposition 4.6. Fix a ∈XR and ν, T > 0. Smooth compact forces with T ν
+max,R(a, f) ≤T are
+dense in each full Bochner space Lq(0, ∞; Hs(R3)) for q ∈{1, 2} and s < sq. They are also
+dense in L2(0, ∞; ˙H−1(R3)).
+For every given smooth solution in Theorem 4.2, one may simultaneously arrange
+∥uε −v∥ET −→0,
+∥gε −g∥L1
+t L2x + ∥gε −g∥L2
+t H−1
+x
++ ∥gε −g∥L2
+t ˙H−1
+x
+−→0.
+The homogeneous norm here is a norm of the compact difference; the given force itself need not
+belong to that homogeneous force space.
+17
+
+=== PAGE 18 ===
+Proof. The standard density of Schwartz functions in Hs [13, Chapter 4, Section 1, Exercise 1],
+followed by smooth spatial cutoffs, gives density of C∞
+c
+for every real s. For the homogeneous
+space, approximate |ξ|−1bh by smooth annular Fourier data and then use the same cutoffs. The
+only additional low-frequency estimate is
+∥k∥2
+˙H−1 ≤C ∥k∥2
+1
+Z
+|ξ|<1
+|ξ|−2 dξ + ∥k∥2
+2 ≤C′ ∥k∥2
+1 + ∥k∥2
+2 .
+(45)
+Applied to the Schwartz cutoff tails, this proves spatial compact-smooth density in ˙H−1. The
+constructions preserve real vector fields. For time dependence, Hunter [6, Proposition 6.29]
+gives density of finite sums P
+j φj(t)bj with φj ∈C∞
+c
+in Lq(I; X), q < ∞. Truncate (0, ∞) to
+[1/N, N] and approximate each bj by a spatially compact smooth field. The resulting finite
+sums are jointly smooth and compactly supported in space and positive time.
+For the inhomogeneous density of forces producing breakdown, first choose such a smooth
+compact force within half the prescribed radius of the target. Corollary 4.5 supplies a smooth
+compact force producing breakdown within the other half. This is density of a smooth subset
+in the completion, not a definition of classical breakdown for every rough force.
+For the homogeneous gluing estimate, apply the Fourier scaling calculation of (44) at s = −1.
+Explicitly, an amplitude ε−a has spatial ˙H−1 factor ε5/2−a, because
+\
+ε−ah( ·/ε)(ξ) = ε3−abh(εξ).
+The time L2 factor is ε. The source force has a = 3, while the correction has a = 2 and uniformly
+bounded compact rescaled profiles; their ˙H−1 norms are uniformly finite by (45). Hence
+∥Fε∥L2
+t ˙H−1
+x
+≤Cε1/2,
+∥Hε∥L2
+t ˙H−1
+x
+≤Cε3/2.
+Given a compact smooth force, if its lifespan is at most T it already belongs to the required
+breakdown set. Otherwise glue the building block and use these estimates. Combining this
+relative approximation with the proved compact-smooth Bochner density establishes density
+in L2
+t ˙H−1
+x . Finally these estimates, (42), and the q = 1, s = 0 and q = 2, s = −1 cases of the
+gluing estimates prove the simultaneous convergence for the same family.
+As on the torus, every a ∈XR occurs as the initial velocity of a solution producing breakdown
+for some smooth force. Thus the projection of the initial data and forces producing breakdown
+onto XR is the whole space, with quantifier order ∀a ∃f. The preceding approximation concerns
+finite-energy whole-space solutions and uses one rescaled copy of U in each perturbation.
+4.6
+Cell averages on prescribed grids
+The spaces used for energy estimates should be distinguished from the additional regularity
+assumed in numerical error estimates. For example, on a bounded no-slip computational
+domain one uses the solenoidal energy space H with zero normal trace and V = H1
+0 ∩H;
+finite-dimensional velocity and pressure spaces discretize this setting. Guermond, Minev and
+Shen [4, Section 2 and Theorem 3.2] state these spaces and the additional smoothness required
+for their error estimate. The initial pressure is constrained by the equation and boundary
+conditions. These bounded-domain conventions do not impose boundary conditions at infinity
+in the whole-space result below.
+To relate the continuous norms to a concrete numerical observation, let Th be a complete
+uniform Cartesian grid of R3 with positive mesh widths. For a locally integrable vector field,
+define the cell-observation map with sequence codomain
+Ah : L1
+loc(R3; R3) −→(R3)Th,
+(Ahz)C =
+1
+|C|
+Z
+C
+z(x) dx.
+Only coordinatewise equality in this codomain is needed. If a sequence norm is desired for z ∈L2,
+the natural volume-weighted norm obeys P
+C∈Th |C| |(Ahz)C|2 ≤∥z∥2
+2 by Cauchy–Schwarz in
+18
+
+=== PAGE 19 ===
+each cell and summation. Each grid has infinitely many cells. The next result concerns a finite
+number of such grids and equality on every cell of each grid, at every time before blowup.
+Theorem 4.7. Under the hypotheses on the given smooth solution of Theorem 4.2, fix a finite
+family of complete uniform Cartesian grids. The glued solutions may be chosen so that, for
+every grid in that family,
+Ahuε(t) = Ahv(t),
+Ahgε(t) = Ahg(t)
+(0 ≤t < T),
+while T ν
+max,R(a, gε) = T and the energy and force convergences in Proposition 4.6 hold. All
+differences are supported inside a ball contained in one cell of every grid, except for an optional
+spatially constant pressure gauge.
+Proof. The union of faces in one grid is a closed, locally finite union of planes. For the fixed
+finite family their union is closed and has measure zero. Choose a point outside that union and
+a ball with closure inside one cell of each grid. Apply Theorem 4.2 inside that ball, using the
+compact pressure representative. Put δu = uε −v, δp = pε −π = Pε, and δg = gε −g.
+Fix one containing cell C. For every t < T, δu is smooth, divergence free and compactly
+supported in its interior. For component j,
+δuj = ∇· (xjδu),
+Z
+C
+δuj dx =
+Z
+∂C
+xjδu · n dS = 0.
+Subtract the two momentum equations and integrate to obtain
+Z
+C
+δg dx = d
+dt
+Z
+C
+δu dx +
+Z
+∂C
+ uε ⊗uε −v ⊗v + δp I −ν∇δu
+n dS.
+(46)
+The time derivative is zero by the preceding identity. All differences vanish in a neighborhood
+of the cell boundary, so the surface term is zero. A spatially constant pressure gauge adds a
+multiple of
+R
+∂C n dS = 0. The averages therefore agree in C; in every other cell they agree
+by support. The same construction fits the containing cell of each grid, and the convergence
+estimates are unaffected by this fixed upper bound on ε.
+A deterministic procedure using only the initial velocity cell averages and the force cell
+averages for 0 ≤t < T receives identical data in the two cases. Other observations, such as point
+values or pressure, may distinguish them. The perturbation depends on the fixed grid family
+and develops larger amplitudes and derivatives as its support shrinks. The result therefore
+concerns the information in the prescribed averages, rather than convergence under refinement
+for one fixed smooth problem.
+Declaration of generative AI use
+GPT Astra (OpenAI) assisted with literature review, development and checking of mathematical
+arguments, drafting, and LaTeX preparation. Codex assisted with manuscript consolidation
+and revision. Responsibility for the final content remains with the authors.
+References
+[1] L. C. Berselli and S. Spirito. On the existence of Leray–Hopf weak solutions to the Navier–Stokes
+equations. Fluids 6(1) (2021), 42. doi:10.3390/fluids6010042.
+[2] A. Enciso, J. Peñafiel-Tomás and D. Peralta-Salas. An extension theorem for weak solutions of the
+3d incompressible Euler equations and applications to singular flows. Forum of Mathematics, Pi 13
+(2025), e21. doi:10.1017/fmp.2025.10012.
+19
+
+=== PAGE 20 ===
+[3] C. L. Fefferman. Existence and smoothness of the Navier–Stokes equation. In J. Carlson, A. Jaffe
+and A. Wiles (eds.), The Millennium Prize Problems. Clay Mathematics Institute and American
+Mathematical Society, 2006, pp. 57–67.
+[4] J. L. Guermond, P. Minev and J. Shen. An overview of projection methods for incompressible flows.
+Computer Methods in Applied Mechanics and Engineering 195(44–47) (2006), 6011–6045.
+doi:10.1016/j.cma.2005.10.010.
+[5] M. Hofmanová, R. Zhu and X. Zhu. Non-uniqueness of Leray–Hopf solutions for stochastic forced
+Navier–Stokes equations. arXiv:2309.03668v2, 2024.
+[6] J. K. Hunter. Notes on Partial Differential Equations. University of California, Davis, 2014.
+https://www.math.ucdavis.edu/~hunter/pdes/pde_notes.pdf.
+[7] OpenAI. Finite Time Blowup for Navier–Stokes. 2026. https:
+//cdn.openai.com/pdf/32d9f210-8b73-45e0-91bc-82a30aef8a9a/navier-stokes.pdf.
+[8] OpenAI. NavierStokesAndEuler. Software, 2026.
+https://github.com/openai/NavierStokesAndEuler.
+[9] P. Petersen. Manifolds, Transversality, and de Rham Cohomology. University of California, Los
+Angeles, lecture notes. https://www.math.ucla.edu/~petersen/manifolds.pdf.
+[10] T. Tao. Nonlinear Dispersive Equations: Local and Global Analysis. CBMS Regional Conference
+Series in Mathematics, vol. 106. American Mathematical Society, 2006. doi:10.1090/cbms/106.
+[11] T. Tao. Localisation and compactness properties of the Navier–Stokes global regularity problem.
+Analysis & PDE 6(1) (2013), 25–107. doi:10.2140/apde.2013.6.25.
+[12] T. Tao. 254A, Notes 1: Local well-posedness of the Navier–Stokes equations. What’s New, 16
+September 2018. https://terrytao.wordpress.com/2018/09/16/
+254a-notes-1-local-well-posedness-of-the-navier-stokes-equations/.
+[13] M. E. Taylor. Partial Differential Equations I: Basic Theory. 2nd ed., Applied Mathematical
+Sciences, vol. 115. Springer, 2011. doi:10.1007/978-1-4419-7055-8.
+[14] M. E. Taylor. Partial Differential Equations III: Nonlinear Equations. 2nd ed., Applied
+Mathematical Sciences, vol. 117. Springer, 2011. doi:10.1007/978-1-4419-7049-7.
+[15] R. Danchin. Fourier Analysis Methods for PDE’s. Lecture notes, 2005.
+https://perso.math.u-pem.fr/danchin.raphael/cours/courschine.pdf.
+[16] P. Marín-Rubio, J. C. Robinson and W. Sadowski. Solutions of the 3D Navier–Stokes equations for
+initial data in ˙H1/2: Robustness of regularity and numerical verification of regularity for bounded
+sets of initial data in ˙H1. Journal of Mathematical Analysis and Applications 400(1) (2013), 76–85.
+doi:10.1016/j.jmaa.2012.10.064.
+20

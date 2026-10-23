@@ -1,0 +1,1696 @@
+
+--- PDF PAGE 1 ---
+Experimental study of closed and open microwave waveguide graphs with preserved
+and partially violated time-reversal invariance
+Weihua Zhang,1, 2, ∗Xiaodong Zhang,1 Jiongning Che,1 Junjie Lu,3 M. Miski-Oglu,4 and Barbara Dietz1, 2, †
+1Lanzhou Center for Theoretical Physics and the Gansu Provincial Key Laboratory of Theoretical Physics,
+Lanzhou University, Lanzhou, Gansu 730000, China
+2Center for Theoretical Physics of Complex Systems,
+Institute for Basic Science (IBS), Daejeon 34126, Korea
+3Institut de Physique de Nice, CNRS UMR 7010, Universit´e Cˆote d’Azur, 06108 Nice, France
+4GSI Helmholtzzentrum f¨ur Schwerionenforschung GmbH D-64291 Darmstadt, Germany
+(Dated: August 2, 2022)
+We report on experiments that were performed with microwave waveguide systems and demon-
+strate that in the frequency range of a single transversal mode they may serve as a model for closed
+and open quantum graphs. These consist of bonds that are connected at vertices. On the bonds,
+they are governed by the one-dimensional Schr¨odinger equation with boundary conditions imposed
+at the vertices. The resulting transport properties through the vertices may be expressed in terms of
+a vertex scattering matrix. Quantum graphs with incommensurate bond lengths attracted interest
+within the ﬁeld of quantum chaos because, depending on the characteristics of the vertex scattering
+matrix, its wave dynamic may exhibit features of a typical quantum system with chaotic coun-
+terpart. In distinction to microwave networks, which serve as an experimental model of quantum
+graphs with Neumann boundary conditions, the vertex scattering matrices associated with a waveg-
+uide system depend on the wavenumber and the wave functions can be determined experimentally.
+We analyze the spectral properties of microwave waveguide systems with preserved and partially
+violated time-reversal invariance, and the properties of the associated wave functions. Furthermore,
+we study properties of the scattering matrix describing the measurement process within the frame
+work of random matrix theory for quantum chaotic scattering systems.
+I.
+INTRODUCTION
+Quantum graphs [1, 2] have served for three decades
+as a suitable system for the study of features of quan-
+tum systems, whose corresponding classical dynamic is
+fully chaotic.
+Linus Pauling introduced them for the
+modeling of organic molecules [3] and they are also em-
+ployed to simulate a large variety of other physical sys-
+tems like, e.g.
+quantum wires [4, 5], optical waveg-
+uides [6] and mesoscopic quantum systems [7, 8]. They
+are constructed from bonds that are connected at ver-
+tices [1, 2, 9–13]. Wave propagation in a quantum graph
+is governed by the one-dimensional Schr¨odinger equation
+along the bonds with boundary conditions at their ends,
+that is, at the vertices, that ensure continuity of the wave
+functions and current conservation. It has been proven
+rigorously in Ref. [14] that, depending on the bound-
+ary conditions, closed quantum graphs with incommen-
+surate bond lengths exhibit in their eigenvalue spectra
+the ﬂuctuation properties of typical quantum systems
+with chaotic classical dynamic [15–18].
+According to
+the Bohigas-Gianonni-Schmit conjecture (BGS) [15–18]
+these are described by the Gaussian ensembles of ran-
+dom matrix theory (RMT) [19]. The boundary condi-
+tions can be expressed in terms of unitary vertex matri-
+ces [2, 5, 12, 20, 21], that characterize the transport or
+scattering properties of the waves through the vertices.
+∗zhangwh18@lzu.edu.cn
+† corr. author: dietz@lzu.edu.cn
+It was shown based on an exact trace formula [2, 22, 23]
+that ergodicity of the wave dynamic results from the scat-
+tering characteristics of the waves entering and exiting a
+vertex through the bonds connected to it [12]. Also the
+two-point correlation functions of the scattering matrix
+associated with the scattering dynamic of open graphs
+that are coupled to their environment through leads, i.e.,
+bonds that extend to inﬁnity, were shown to coincide with
+those of random matrices applicable to typical quantum-
+chaotic scattering systems [24–28]. Thus, even though
+closed and open quantum graphs are basically described
+by the one-dimensional Schr¨odinger equation, their wave
+dynamic may exhibit a rich variety of features observed in
+quantum systems with a chaotic classical dynamic. Fur-
+thermore, they are mathematically simple in the sense,
+that a secular equation can be written down explicitly
+for their eigenstates [2], so that these can be determined
+numerically with much less eﬀorts than is required, e.g.,
+for quantum billiards [10, 17, 29, 30], which are also ac-
+cessible experimentally [31–37].
+Another advantage of quantum graphs is, that all
+three universality classes associated with Dyson’s three-
+fold way [38] can be simulated experimentally for Neu-
+mann boundary conditions or, generally, δ-type bound-
+ary conditions at the vertices [1, 2, 9, 11] with microwave
+networks [39], which are composed of coaxial cables cor-
+responding to the bonds that are coupled by joints at
+the vertices.
+Note that these are wave-dynamical sys-
+tems, however, the BGS conjecture also applies to sys-
+tems exhibiting wave chaos [30, 40]. Experiments with
+microwave networks with preserved time-reversal (T ) in-
+arXiv:2206.07873v2  [quant-ph]  31 Jul 2022
+
+
+--- PDF PAGE 2 ---
+2
+variance, which belong to the orthogonal universality
+class, that is, with an antiunitary symmetry ˆT with
+ˆT 2 = 1, and with violated T invariance, i.e., unitary
+universality class, revealed [39, 41, 42] that, indeed, the
+ﬂuctuation properties in their spectra agree well with
+those of random matrices from the Gaussian orthogo-
+nal ensemble (GOE) and the Gaussian unitary ensem-
+ble (GUE), respectively. Above all, microwave networks
+can be employed to model experimentally quantum sys-
+tems with an antiunitary symmetry with ˆT 2 = −1 [43–
+47], whose spectral ﬂuctuations coincide with those of
+random matrices from the Gaussian symplectic ensemble
+(GSE) [17, 48]. Only recently, the universality classes of
+microwave-network realizations [49] could be extended to
+the ten-fold way [50]. The properties of open quantum
+graphs with wave chaotic dynamic have been investigated
+experimentally in [51–56].
+A drawback of microwave networks and quantum
+graphs with Neumann boundary conditions is the pres-
+ence of backscattering at their vertices that leads to
+eigenstates that are localized on single bonds or on loops
+formed by a fraction of the bonds. These do not exhibit
+the complexity required to achieve agreement with RMT
+predictions for typical quantum systems with chaotic
+classical counterpart and they are non-universal because
+they depend on the lengths of the bonds they are conﬁned
+to. They can be prevented by an appropriate choice of
+the boundary conditions. This was one of the motivations
+for designing quantum waveguide systems as a model of
+quantum graphs.
+They consist of straight waveguides
+with Dirichlet boundary conditions at the walls, that are
+connected at junctions [57–59]. In the frequency range
+of a single transversal mode the associated Schr¨odinger
+equation is one-dimensional along the bonds. Further-
+more, in distinction to microwave networks and Neumann
+quantum graphs, the vertex scattering matrices describ-
+ing the transport of the waves through the junctions de-
+pends on the wavenumber.
+We simulate such systems experimentally with ﬂat,
+metallic microwave waveguides, also referred to as waveg-
+uide graphs in the sequel. Here, we exploit the analogy of
+the associated Helmholtz equation with the Schr¨odinger
+equation of the quantum waveguide system for microwave
+frequencies below a maximum frequency which is in-
+versely proportional to the height of the waveguides [31–
+36]. Actually, in 2015 experiments were performed with
+superconducting waveguide graphs in the quantum chaos
+group of Achim Richter and BD and completed just be-
+fore the laboratory was closed.
+They have been pre-
+sented in various presentations, however, a publication is
+in preparation since then due to various incidents that led
+to delays. The manuscript will be submitted soon [60].
+In these experiments the eigenvalues of the correspond-
+ing quantum waveguide graph could be determined with
+high accuracy and also properties of the scattering matrix
+describing the measurement process, which is directly re-
+lated to that of the corresponding open quantum graph.
+The waveguide system was designed such that the k-
+dependence of the vertex scattering matrix and backscat-
+tering in the junctions is minimized, yielding a relative
+angle of 120◦, and thus vertex valency three for planar
+waveguide systems. The lengths of the waveguide graphs
+are incommensurate.
+An advantage of the microwave waveguide systems
+used in the present paper with respect to superconduct-
+ing ones and to microwave networks is that the wave-
+function intensities are experimentally accessible.
+We
+analyze the spectral properties and ﬂuctuation proper-
+ties of the scattering matrix of closed and open waveg-
+uide graphs with preserved and partially violated time-
+reversal (T ) invariance, and perform an in-depth study
+of the properties of the wave functions for the case of
+preserved T invariance. Furthermore, we investigate the
+spectral properties in a frequency range where single and
+double transversal modes exist. Here, the analogy to a
+conventional quantum graph is lost [59]. We would like
+to mention that, recently, photonic-crystal graphs where
+proposed as another model for quantum graphs and stud-
+ied numerically with COMSOL Multiphysics [61].
+In
+such a system the metal walls are replaced by an ar-
+rangement of rods on a certain lattice structure, and the
+waves simulating the quantum graph are conﬁned to a
+band gap, which occurs depending on the structure and
+defects introduced to realize the waveguide system.
+The paper is organized as follows. In Sec. II we in-
+troduce waveguide graphs, their experimental realization
+and the procedures that are used to determine wave
+functions and to induce T -invariance violation.
+Then,
+in Sec. III we present our experimental results on the
+spectral properties of waveguide graphs in the regions
+of a single transversal mode and where single and two
+transversal modes coexist, and we review our results
+on statistical properties of the electric ﬁeld intensity.
+Furthermore, we followed Refs. [62, 63] to analyze fur-
+ther statistical measures for the wave function properties
+of quantum graphs, e.g., in terms of inverse participa-
+tion ratios. In Sec. IV we investigate spectral properties
+for the case of partial T -invariance violation.
+Finally,
+in Sec. V we summarize the results on the properties of
+the scattering matrix associated with the measurement
+process which is employed to obtain resonance spectra.
+In Sec. VI we summarize our ﬁndings and discuss them.
+II.
+THE MICROWAVE WAVEGUIDE
+NETWORK
+The bonds of the microwave waveguide network are
+constructed from metallic rectangular waveguides of
+width w, height h < w and incommensurate lengths
+lb ≫w, as illustrated schematically in Fig. 1 (a) and
+in the left lower part.
+Respectively three of them are
+connected at a relative angle of 120◦at the vertices of
+the network. Below the cutoﬀfrequency fmax = c/2h
+for the second mode in the vertical (z) direction, only
+transverse-magnetic modes TMn,0, n = 0, 1, . . . are ex-
+
+
+--- PDF PAGE 3 ---
+3
+cited and the electric ﬁeld strength⃗E = Ez⃗ez, is per-
+pendicular to the top and bottom of the waveguides. In
+that frequency range the microwaves are governed by the
+two-dimensional Helmholtz equation for a perfect electric
+conductor, that is, with Dirichlet boundary conditions at
+the side walls,
+ ∂2
+∂x2 + ∂2
+∂y2 + k2
+
+Ez = 0, (x, y) ∈Ω, Ez|x,y∈∂Ω= 0,
+(1)
+with x in the transversal direction and y in the longitudi-
+nal one. Here, Ez is the electric ﬁeld strength in z direc-
+tion, k = 2πf
+c
+denotes the wave number and c the speed
+of light in vacuum.
+The wavenumbers in longitudinal
+direction corresponding to the ordered eigenfrequencies
+fm, f1 ≤f2 ≤. . . are given as
+ky,m =
+s2πfm
+c
+2
+−
+nπ
+w
+2
+(2)
+where the index n counts the number of modes excited
+in transversal direction. For the width and height of the
+waveguides chosen in the experiment, w = 22.86 mm,
+h = 10.16 mm the cutoﬀfrequencies of the ﬁrst and sec-
+ond transversal mode and for the ﬁrst excited transverse-
+magnetic mode, TM01, are given as
+fTM10 =
+c
+2w= 6.56 GHz,
+(3)
+fTM20 = c
+w = 13.12 GHz,
+(4)
+fTM01 =
+c
+2h = 14.76 GHz,
+(5)
+respectively. In the frequency range fTM10 ≤f ≤fTM20
+of single transversal modes the waveguide network sim-
+ulates a quantum graph constructed from vertices with
+valency two at its bents and valency three at its junc-
+tions.
+The vertex scattering matrices associated with
+the boundary conditions at the vertices [2, 11–13] are
+obtained from the wave-function properties of the waveg-
+uide graph at the junctions. They depend strongly on k
+and on the bending angle and were designed such that
+back scattering is minimized [64].
+This is in contrast
+to the vertex scattering matrix in the quantum graphs
+considered in [2] and realized in the experiments with
+microwave networks [39], where it corresponds to Neu-
+mann boundary conditions and thus is k-independent.
+In Fig. 2 we show transmission (black dashed and red
+solid line) and reﬂection spectra (cyan line) that were
+computed with COMSOL Multiphysics for a waveguide
+graph consisting of three waveguides of incommensurate
+lengths, that are joined at a 120◦angle, as illustrated
+schematically in the lower left part of Fig. 2. They are
+shown in the frequency range, where only TM10 modes
+exist, that is, where wave propagation takes place in the
+(x, y) plane and is essentially one-dimensional. The pe-
+riod of the oscillations depends on the lengths of the
+waveguides and on the frequency f. They result from
+the superposition of waves of incommensurate periods
+entering the vertex. The waveguide graph is constructed
+FIG. 1. (a) Schematic view of the waveguide graph used in
+the experiment. Red numbers indicate the positions of the an-
+tennas, black ones those of the waveguide-to-coaxial adapters.
+The black disks are at the positions of the ferrites that are
+inserted into the waveguides and magnetized with exterior
+magnets to induce T -invariance violation. (b) Bottom plate
+of the waveguide graph, exhibiting the channel system, the
+screw holes and the four cutouts, where the waveguide-to-
+coaxial adapters are attached. The lower part shows a sketch
+of the waveguides constructed by closing the channels with a
+plate. Both plates are manufactured from aviation aluminium
+and coated with a copper cover to attain higher quality fac-
+tors. (c) Top view of the waveguide graph. The lower part
+shows a photograph of a waveguide-to-coaxial adapter.
+from such subgraphs and the wave chaotic features re-
+vealed in their spectral properties and in the ﬂuctuation
+properties of the scattering matrix are attributed to this
+multi-connectivity yielding ergodicity of the microwave
+phases. For comparison we also show the measured trans-
+mission and reﬂection spectra of a microwave network
+consisting of three coaxial cables of the same geometric
+lengths as the waveguides that are joined by a conven-
+tional T joint [44], shown schematically in the upper left
+part of Fig. 2, which is characterized by a constant scat-
+tering matrix, Sab = 2/3 −δab [2, 39]. For this case the
+oscillations are much less pronounced.
+Note, that the
+lengths of the waveguide graph correspond to the opti-
+cal lengths of the coaxial cables, which are ﬁlled with a
+dielectric medium.
+The waveguide network comprising 48 waveguides with
+total length L ≈5.814 m along its central line, is con-
+structed from a top (934 × 868 × 17 mm3) and a bottom
+(1200 × 1000 × 17 mm3) aviation aluminium plate. For
+the realization of the waveguides, channels of height h
+and width w are milled out of the bottom plate. A pho-
+tograph is shown in Fig. 1 (b). A good electrical con-
+tact between the top and bottom plates is attained by
+screwing them tightly together through holes at distances
+13 mm along the channels as recognizable in Fig. 1 (b)
+and (c). Furthermore, lead wire was inserted into grooves
+with width 1.3 mm and depth 1 mm that were milled out
+of the bottom plate along the channels.
+Resonance spectra of the waveguide network were mea-
+sured with two procedures.
+For the ﬁrst one eight
+wire antennas were attached to the top plate at the
+
+
+--- PDF PAGE 4 ---
+4
+FIG. 2. Computed transmission and reﬂection spectra (right
+part) of a waveguide graph consisting of three waveguides of
+incommensurate lengths as shown schematically in the left
+part. Shown are the reﬂection spectra (a = b = 1, cyan lines)
+and transmission spectra (a = 1, b = 2, black dashed lines)
+and (a = 1, b = 3, red lines). The pink, dashed blue and green
+lines show the correponding measured transmission and reﬂec-
+tion spectra, respectively, of a microwave network consisting
+of three coaxial cables that are connected by a conventional T
+joints. The spectra are shown in the frequency range, where
+only TM10 modes exist, that is, where wave propagation takes
+place in the (x, y) plane and is essentially one-dimensional.
+positions marked by red numbers in Fig. 1 (a).
+They
+are positioned at a distance of 1 mm from the cen-
+tral line.
+For the second procedure the waveguide
+graph was opened at two of the four bents, marked
+by black numbers, and waveguide-to-coaxial adapters
+(Model HD-100WCASKPA from HengDa MicroWave)
+were attached [64], referred to as ports in the sequel.
+The width w and height h of the waveguides are, ac-
+tually, dictated by the impedance-matching condition
+with the adapters to ensure a reﬂectionless escape of
+microwaves through the ports. For the measurements,
+the antennas or the ports were connected to an Agi-
+lent N5227A vector network analyzer (VNA) via SU-
+COFLEX126EA/11PC35/1PC35 coaxial-cables sending
+microwaves into the resonator via one antenna a or port
+and receiving it at the same or the other one, b. The
+VNA measures the relative phases φba and ratios of the
+microwave power of the outcoming and ingoing rf signal,
+Pout,b
+Pin,a = |Sba|2. Thereby, the complex scattering matrix
+element Sba = |Sba|eiφba describing the scattering pro-
+cess from antenna a to antenna b through the waveguide
+graph is obtained.
+It has been shown in [65] that the scattering matrix of
+a resonator coupled to a measuring apparatus, which in
+our case is the VNA, via M leads supporting one open
+channel each, is given by
+ˆS(f) = 1 −i ˆW †
+
+f1 −ˆHRes + i
+2
+ˆW ˆW †
+−1
+ˆW.
+(6)
+Here,
+ˆHRes denotes the Hamiltonian describing the
+closed resonator and ˆW accounts for the coupling of the
+resonator modes to the M open channels. In the vicin-
+ity of an isolated or weakly overlapping resonance at
+eigenfrequency fm, |Sba| is well described by the com-
+plex Breit-Wigner form,
+Sba(f) = δba −i
+√γmaγmb
+f −fm + i
+2Γm
+,
+(7)
+where γna and γnb are the partial widths associated with
+antennas a and b and Γn denotes the total width, which is
+given by the sum of the partial widths and the width Γabs
+due to absorption in the walls of the waveguide. The par-
+tial widths are proportional to the modulus of the wave
+functions at the positions of the antennas. The resonance
+parameters, that is, the resonance strengths γnaγnb, reso-
+nance widths Γn and eigenfrequencies fn are determined
+by ﬁtting the complex Breit-Wigner form Eq. (7) to the
+measured scattering matrix elements [66]. This is feasi-
+ble, if the widths of the resonances are small compared to
+the average spacing between adjacent resonances. Conse-
+quently, a cavity with a high-quality factor Q is a prereq-
+uisite. It depends on the absorption of microwave power
+in the walls, that is, the material, and it is proportional
+to the ratio of the volume to the surface of the resonator,
+that is, essentially to its height h which is ﬁxed by the size
+of the waveguide-to-coaxial adapters. To reduce absorp-
+tion, both plates were coated with a copper cover of high
+conductivity, whose thickness 0.008 mm is much larger
+than the skin depth δ ≈0.001 mm. Thereby we attained
+quality factors of up to Q ≃6500, which was suﬃcient
+to identify complete sequences of eigenfrequencies in the
+relevant frequency regions.
+Figure 3 shows parts of the transmission spectra mea-
+sured from antenna 1 to antenna 2 (black line, top), and
+from port 1 to port 2 (red line, bottom), respectively.
+The latter was multiplied with (-1) to facilitate com-
+parison of the spectra. Both spectra comprise isolated
+and weakly overlapping resonances, as illustrated to their
+right and left, respectively. The amplitudes are generally
+higher and a stronger resonance overlap is observed for
+the measurements with ports, which may be attributed
+to a larger opening of the waveguide system than in the
+measurements with antennas. Therefore, we used anten-
+nas for the determination of the eigenfrequencies.
+FIG. 3. Transmission spectra of the waveguide graph. The
+upper part shows the spectrum measured from antenna 1 to
+antenna 2 (black line), the lower one the spectrum measured
+from port 1 to port 2 (red line). The latter has been multiplied
+with (-1) in order to facilitate the comparison of the spectra.
+To the left and right are exhibited examples of weakly over-
+lapping and isolated resonances, respectively.
+
+
+--- PDF PAGE 5 ---
+5
+As
+compared
+to
+microwave
+networks,
+waveguide
+graphs have the advantage that the wave function inten-
+sity distribution can not only be measured at the vertices
+but also along the waveguide parts. It is obtained from
+the electric ﬁeld intensity distribution E2
+z(x, y) which is
+determined based on Slater’s theorem [67] by employ-
+ing the perturbation body method [31, 68–70]. Namely,
+when introducing a metallic perturbation body into a
+microwave resonator a frequency shift is induced which
+depends on the squared electric and magnetic ﬁeld at the
+position of the perturbation body,
+∆f(x, y) = f(x, y) −fm = fm
+h
+c1⃗E2(x, y) −c2⃗B2(x, y)
+i
+.
+(8)
+The constants c1 and c2 depend on the geometry and
+material of the perturbation body and fm denotes the
+resonance frequency of the resonator before introducing
+the perturbation body. The contribution of⃗B(x, y) is re-
+moved by choosing a cylindrical perturbation body which
+is made from magnetic rubber (NdFeB) [71]. It has a di-
+ameter of 8 mm and a height of 6 mm and is moved
+with an external magnet, which is ﬁxed to a positioning
+unit which is described in [72], in steps of 3 mm par-
+allel to the waveguide walls through the whole waveg-
+uide network. In order to determine the frequency shift
+∆f(x, y) we determine at the eigenfrequency f = fm
+the diﬀerence ∆φ of the relative phases between the re-
+ceived and emitted rf signal for the cases without and
+with perturbation body, which is proportional to ∆f, so
+that ∆φ ∝∆f ∝E2
+z(x, y) [69].
+To induce violation of T invariance in a microwave net-
+work, vertices are partly replaced by circulators [39, 41],
+microwave devices with three ports which introduce a di-
+rectionality in the sense that microwaves entering it at
+one port may only exit at one of the two other ports,
+respectively. Thereby, complete violation of T invariance
+is induced. In the experiments with the waveguides we
+used the procedure of [34, 73, 74], that is, we inserted in
+total 12 19G3 cylinder-shaped ferrites made from Fe2O3
+with diameter 5 mm and height 10 mm at the positions
+marked by black dots in Fig. 1 (a). Their saturation mag-
+netization is Ms = 0.1941 T. Each ferrite is magnetized
+by two external cylindrical NdFeB magnets of diameter
+15 mm and height 20 mm, that are positioned above and
+below it to generate a uniform magnetic ﬁeld in z di-
+rection of strength B ≃0.1264 T. The magnetic ﬁeld B
+induces a macroscopic magnetization in the ferrites, thus
+causing a precession of the spins in the ferrite around it
+with the Larmor frequency. Violation of the principle of
+reciprocity [75–79], Sab(f) = Sba(f), is induced through
+the coupling of the spins to the rf magnetic-ﬁeld compo-
+nents of the resonator modes, whose size depends on the
+rotational direction of polarization of the latter. Since
+the modes are circularly polarized with unequal magni-
+tudes of the two rotational components [73], this implies
+a deterioration of reciprocity between modes emitted at
+one antenna and received at another one and the reversed
+modes. Figure 4 demonstrates that violation of the prin-
+ciples of detailed balance and reciprocity are attained
+when inserting the ferrites and magnetizing them. On
+the other hand, the principles hold for the waveguide
+graph without ferrites, since for that case the scattering
+matrix is symmetric.
+FIG. 4. Transmission spectra obtained in measurements with
+ports for the waveguide graph containing the magnetized fer-
+rites.
+Shown are the amplitudes |Sba| (upper panel) and
+phases φba (lower panel), respectively, for a = 1, b = 2 (red
+dashed lines) and a = 2, b = 1 (blue lines).
+III.
+PROPERTIES OF THE EIGENVALUES
+AND WAVE FUNCTIONS OF QUANTUM
+WAVEGUIDE GRAPHS WITH PRESERVED
+T INVARIANCE
+We use the analogy between quantum waveguide
+graphs [57, 58] and microwave waveguide networks of
+corresponding geometry to investigate their properties
+experimentally.
+In the experiments with antennas the
+transmission and reﬂection spectra were measured in a
+frequency range fTM10 ≤f ≤fTM01 in steps of 500 kHz,
+whereas the waveguide-to-coaxial converters operate in
+the frequency range 8.2 ≤f ≤12.4 GHz and spectra
+were measured in steps of 400 kHz. The eigenfrequencies
+were determined by ﬁtting the squared modulus of the
+Breit-Wigner form Eq. (7) to the resonances in the spec-
+tra |Sba(f)|2. For this their precise experimental deter-
+mination is indispensable, that is, all systematic negative
+eﬀects need to be removed. Dominant contributions to
+them come from the coaxial cables connecting the VNA
+with the cavity, which attenuate the rf signal and ad-
+ditional reﬂections occur at their interconnections with
+the VNA and resonator that complicate the extraction
+of the resonance parameters. These eﬀects are removed
+
+
+--- PDF PAGE 6 ---
+6
+by a proper calibration of the VNA before a measure-
+ment [66]. Furthermore, despite the coating with cop-
+per, there is absorption in the cavity walls, which leads
+to weakly overlapping resonances. The ﬁtting procedure
+might fail in cases, where it is too strong or where two
+eigenfrequencies are lying too close to each other. An-
+other cause for missing resonances are situations where
+the electric ﬁeld strength is zero at the position of an
+antenna so that they cannot be excited. To avoid this,
+we performed measurements for various positions of the
+antennas.
+In distinction to the experiments with microwave net-
+works the spectral density, and thus the mean spacing
+depends on the eigenfrequency fm, i.e., eigenwavenumber
+km. In the relevant frequeny ranges, the smooth part of
+the integrated spectral density is obtained from Eq. (2)
+as
+N smooth(km) = L
+π
+r
+k2m −
+ π
+w
+2
+(9)
+for fTM10 ≤f ≤fTM20, and
+N smooth(km) = L
+π
+
+
+s
+k2m −
+2π
+w
+2
++
+r
+k2m −
+ π
+w
+2
+
+
+(10)
+for fTM20 ≤f ≤fTM01.
+For frequencies much larger
+than the associated cutoﬀfrequency N smooth(k) ap-
+proaches that for the corresponding microwave network,
+N smooth(k) ≃
+L
+π k.
+In order to locate missing eigen-
+frequencies we looked at the diﬀerence of the number
+of identiﬁed eigenwavenumbers below km and the ex-
+pected number, N(km). Missing levels manifest them-
+selves as jumps in the locally averaged ﬂuctuating part
+of the integrated spectral density N(k), N fluc(k) =
+N(k) −N smooth(k). We identiﬁed them and then care-
+fully inspected all reﬂection and transmission spectra to
+check whether we oversaw a resonance because of the
+overlap with neighboring ones which would be visible as a
+bump in a resonance curve. In total 261 eigenfrequencies
+could be identiﬁed in the range 7.33-12.04 GHz for the
+antenna measurement, which coincides to the expected
+number within the range of error bars for the value of
+L. We conﬁrmed that we found all eigenfrequencies with
+simulations using COMSOL Multiphysics. In Fig. 5 we
+compare the analytical results Eqs. (9) and (10) (black
+line) to the smooth part of the experimentally obtained
+integrated spectral density (red circles). The curves agree
+very well, thus corroborating correctness of the unfolding
+procedure.
+A.
+Fluctuation properties in the eigenfrequency
+spectrum for the single-mode case
+The eigenwavenumbers ky,m, obtained from the eigen-
+frequencies by employing Eq. (2), were unfolded to mean
+spacing unity, that is, system speciﬁc properties were
+FIG. 5.
+Integrated spectral density deduced from the ex-
+perimental data (red circles) in comparison to the analytical
+results Eqs. (9) and (10) (black solid line).
+The red, blue
+and orange vertical lines indicate the locations of the cutoﬀ
+frequencies fTM10, fTM20, fTM01, respectively.
+removed, by replacing them by N smooth(km) given in
+Eqs. (9) and (10). Furthermore, we computed 4500 eigen-
+values for the corresponding quantum graph by proceed-
+ing as in [2, 80] and those of the waveguide graph by em-
+ploying COMSOL Multiphysics. Results for the spectral
+statistics are exhibited in Fig. 6. Shown are the distribu-
+tion of the spacings between nearest-neighbor eigenvalues
+P(s) and the associated cumulative distribution I(s) as
+measures for short-range correlations, the number vari-
+ance Σ2(L) and the Dyson-Mehta statistics ∆3(L), which
+gives the spectral rigidity of a spectrum [19, 81], as mea-
+sures for long-range correlations. Agreement between the
+curves for GOE statistics and those of the quantum graph
+are good. For the experimental data (red curves) small
+deviations are observed for P(s) and I(s) which may be
+attributed to experimental inaccuracies. For Σ2(L) the
+agreement with GOE is similar to that for the simula-
+tions and for ∆3(L) the curve lies below the GOE curve
+for L ≳5. A similar, but more pronounced, behavior has
+been observed for quantum graphs and microwave net-
+works and has been attributed to the contributions from
+waves experiencing backscattering at vertices which leads
+to their conﬁnement to individual bonds or a fraction of
+them [80]. These are nonuniversal, as they depend on the
+lengths of the bonds and they do not exhibit the complex-
+ity of the dynamic which leads to the GOE like spectral
+properties. In the waveguides backscattering may result
+from reﬂections at the inner corners formed by the waveg-
+uides at the vertices [64]. The distribution of the ratios
+of consecutive spacings of nearest-neighbor non-unfolded
+eigenfrequencies [82–84], and the cumulative ratio distri-
+bution, plotted in Fig. 7 (a) and (c), respectively, are also
+quite well described by the RMT results for the GOE.
+Agreement of the spectral properties of the waveguide
+network with those of random matrices from the GOE
+indicates that they exhibit similar wave chaotic features
+as quantum graphs. In both cases the wave propagation
+
+
+--- PDF PAGE 7 ---
+7
+FIG. 6.
+Spectral Properties of the unfolded eigenfrequen-
+cies.
+Shown are the nearest-neighbor spacing distribution
+P(s), the cumulative nearest-neighbor spacing distribution
+I(s), the number variance Σ2(L) and spectral rigidity ∆3(L).
+The red histogram and dashed lines, blue line and squares,
+and green lines and dots show the results deduced from the
+experimental data, COMSOL Multiphysics simulations and
+the quantum graph of corresponding geometry, respectively.
+The black full and dashed lines show the results for the GOE
+and GUE, respectively.
+is one dimensional along the bonds, so that the com-
+plexity is induced by the transport characteristics at the
+common junctions of the bonds. To further explore these
+features we investigated length spectra and measured the
+wave functions.
+The occurrence of backscattering can be seen, e.g., in
+a length spectrum [39, 80], which is obtained from the
+modulus of the Fourier transform of the ﬂuctuating part
+of the spectral density from wavenumber to length and
+has the property that it exhibits peaks at the lengths of
+the periodic orbits of the corresponding classical system.
+In a quantum graph orbits are composed of itineraries
+along successive bonds that are uniquely deﬁned by the
+sequence of the vertices connecting them. Similarly, in
+the waveguide graph the orbits correspond to the paths
+of the waves through the waveguide network. In Fig. 8
+we compare length spectra deduced from the eigenfre-
+quencies which were determined from the antenna mea-
+surements (black solid lines) with those of the eigenvalues
+of the quantum graph of corresponding geometry taking
+into account a similar number of eigenvalues (red dashed
+lines) and also for all computed eigenvalues (turquoise
+line) where the trace formula provides a very good ap-
+proximation of the spectral density. The length spectra of
+the quantum graph and waveguide graph diﬀer in ampli-
+tude because of the distinct features of the vertex scatter-
+ing matrices deﬁning the wave transport through the ver-
+tices. Furthermore, in distinction to quantum graphs, the
+bents connecting two waveguides correspond to vertices
+in the waveguide networks, leading to additional peaks
+in their length spectra. The violet diamonds mark twice
+FIG. 7. Comparison of the ratio distributions (upper panels)
+and the cumulative ratio distributions (lower panels) of the
+experimentally (green histograms and dots) obtained results
+for the waveguide graph without [(a) and (c)] and with [(b)
+and (d)] partial violation of T invariance, for the frequency
+range 8.7-14.5 GHz, where the T -invariance violation parame-
+ter equals ξ = 0.3. The corresponding RMT curves are shown
+as red lines. The black solid and dashed lines exhibit the re-
+sults for random matrices from the GOE and GUE, respec-
+tively.
+the lengths of the bonds in the quantum graph, orange
+dots twice the lengths of bonds connected to bents in the
+waveguide graph corresponding to these additional closed
+loops. Both length spectra exhibit peaks at lengths corre-
+sponding to twice the length of the bonds, thus indicating
+that backscattering is present.
+FIG. 8. Comparison of the length spectra deduced from the
+measurements with antennas (black line) with those obtained
+from the lowest 250 eigenvalues of the quantum graph of cor-
+responding geometry (red line) and all computed eigenvalues
+(turquoise line). The violet diamonds mark twice the lengths
+of the bonds of the quantum graph and orange dots those of
+bonds connected to bents in the waveguide graph that lead
+to orbits not present in the corresponding quantum graph.
+
+
+--- PDF PAGE 8 ---
+8
+B.
+Properties of the wave functions in the
+frequency range for the single-mode case
+We measured the electric ﬁeld intensity distributions,
+i.e., wave-function intensities, for 154 well isolated res-
+onances in the frequency range fTM10 ≤f ≤fTM20
+where only one mode is excited in transversal direc-
+tion of the waveguide, using the ports to couple in mi-
+crowaves. We tuned their frequency to one of the cor-
+responding eigenfrequencies and employed the method
+explained in Sec. II. In order to avoid frequency shifts
+due to temperature drifts the room temperature was kept
+constant with an air conditioner. The perturbation body
+was moved along three diﬀerent loops, shown in Fig. 9
+(1)-(3) along seven straight lines parallel to the waveg-
+uide walls, shown schematically in Fig. 9 (4). Thus, some
+FIG. 9. (1)-(3): Schematic view of the loops along which the
+perturbation body was guided. (4): Schematic view of the
+paths of the perturbation body which was moved along seven
+lines parallel to the waveguide walls.
+of the waveguides were visited more than once.
+Then
+we averaged over the intensities resulting from the dif-
+ferent loop measurements. Four examples of measured
+wave functions are shown in Fig. 10. Along the straight
+waveguide parts, i.e., the bonds, the wave function pat-
+terns exhibit sinusoidal oscillations with a constant am-
+plitude. Their transport properties at the junctions are
+as illustrated in Fig. 2. They lead to the complex struc-
+ture of the intensity which can be vanishingly small in
+some of the waveguides.
+To further explore this structure, we analyzed the dis-
+tribution of their intensities. For this we employed the ex-
+perimental data obtained from a measurement along the
+loop C of total length L1 shown in Fig. 9 (2), which com-
+prises in total NB = 33 out of the 48 waveguides, in the
+frequency range of a single transversal mode, f ≤fTM20.
+The top panel in Fig. 11 exhibits the distribution of the
+FIG. 10.
+Measured electric ﬁeld intensities.
+For the mea-
+surement, the microwave frequency was tuned to the eigen-
+frequencies (1) 8.2202 GHz, (2) 9.0736 GHz, (3) 10.0031 GHz
+and (4) 11.9859 GHz. The color scale is indicated in the bar
+to the right.
+normalized electric ﬁeld intensity |Ez(l)|2, with l giving
+the distance covered by the perturbation body along the
+loop at each point of measurement,
+v = N −1|Ez(l)|2, N =
+I
+C
+|Ez(l′)|2 dl′
+L1
+.
+(11)
+According to the random-plane wave hypothesis [85, 86]
+the distribution P(v) of the thus normalized squared
+wave function components is expected to coincide with
+a Porter-Thomas distribution P(v) =
+1
+√
+2πve−v/2 with
+mean value unity for quantum systems with a fully
+chaotic classical dynamics. It has a singularity at v = 0.
+Therefore, we transformed v to the logarithmic variable
+z = log10(v). The result is exhibited in the top panel
+of Fig. 11 (red histogram). Deviations from the Porter-
+Thomas distribution (black solid line) result from wave
+functions exhibiting above-average intensities with values
+beyond z ≃1. These are localized on a few waveguides.
+One example is depicted in the inset.
+As illustrated in Fig. 10 the wave-function components
+on the bonds j = 1, . . . , NB are well described for each
+eigenwavenumber km by an ansatz of the form ψj(y) =
+aj(x; km)eikmy +a∗
+j(x; km)e−ikmy with −w/2 ≤x ≤w/2,
+0 ≤y ≤Lj and Lj denoting the lengths of the bonds.
+Accordingly, we proceeded as in [62] and analyzed wave-
+function intensities in terms of the distribution of the
+squared modulus of the amplitudes aj(x; km), which are
+complex numbers with the star denoting complex con-
+
+
+--- PDF PAGE 9 ---
+9
+jugation. We determined the amplitudes by identifying
+the maxima in the electric-ﬁeld intensity along the cen-
+tral line x = 0 of the waveguides. Similar to Eq. (11) we
+introduce normalized amplitudes ˜aj(km),
+NB
+X
+j=1
+Lj
+L1
+|˜aj(km)|2 = 1,
+(12)
+for the computation of the wave-function intensity dis-
+tribution. Here, we suppress the argument x = 0. Es-
+sentially, in distinction to the procedure Eq. (11), this
+one neglects the y-dependence of the electric-ﬁeld inten-
+sity, assuming that it takes its maximal value along the
+whole bond.
+For quantum systems with fully chaotic
+counterpart the squared amplitudes |˜aj|2 are expected
+to be Porter-Thomas distributed. In the middle panel
+of Fig. 11 we compare the experimental result (red his-
+togram ) with the Porter-Thomas distribution (black
+solid line). Like in the distribution of v the deviations
+may be attributed to wave functions that are strongly
+localized on a few waveguides, thus yielding the excep-
+tionally high peak. These results for the distributions of
+the squared wave-function components v and their am-
+plitudes |˜a|2 suggest that for a nonnegligible part of the
+waveguide modes the complexity introduced at the junc-
+tions of the waveguide network is not suﬃcient to gener-
+ate the random-plane wave behavior expected for quan-
+tum systems with a fully chaotic classical counterpart.
+These are localized on part of the waveguide network
+and thus do not comply with the random-plane wave hy-
+pothesis.
+Another possibility to extract information on statis-
+tical properties of the wave function components is to
+exploit the proportionality of the partial widths associ-
+ated with antennas a and b to the electric ﬁeld intensi-
+ties at the positions of the antennas [30, 87]. The partial
+widths cannot be determined separately [66]. Therefore,
+we determined the strengths y = γµaγµb by ﬁtting Eq. (7)
+to the transmission spectra and analyzed their distribu-
+tions. We rescaled them to average value unity, ⟨˜y⟩= 1.
+In the bottom panel of Fig. 11 we compare the distribu-
+tion of the transformed strength, z = log10 ey, with that
+expected for quantum systems with a fully chaotic clas-
+sical counterpart, which is given as [66]
+p(z) = ln(10)
+π
+10z/2K0(10z/2).
+(13)
+Here, K0(x) denotes the modiﬁed Bessel function of or-
+der zero [88]. The experimental results were obtained by
+averaging over the distributions for three antenna com-
+binations. Agreement with the RMT prediction is good.
+In distinction to the wave function measurements, only
+the wave-function components at 8 positions are taken
+into account at all eigenfrequencies.
+There, the wave-
+function intensities are not necessarily maximal, however
+they are non-zero, because otherwise the resonance would
+be missing in the transmission spectra.
+FIG. 11. Top: Distribution of the wave-function intensities af-
+ter normalization as in Eq. (11). Middle: Distribution of the
+wave-function amplitudes in the individual waveguides after
+normalization as in Eq. (12). Bottom: Strength distribution.
+The red histograms show the results deduced from the ex-
+perimental data and the black solid line the Porter-Thomas
+distribution.
+The inverse participation ratio (IPR),
+Im = ⟨|˜aj(km)|4⟩
+(14)
+provides an additional statistical measure for the wave-
+function intensity distribution applied in Ref. [62] to
+quantum graphs, assuming that the amplitudes aj(km)
+are normalized as in Eq. (12), which corresponds to the
+ﬁrst non-trivial moment of the distribution P(|˜a|2) intro-
+duced above. The IPR gives information on the degree of
+localization of a wave function [62, 63], i.e., the degree of
+
+
+--- PDF PAGE 10 ---
+10
+FIG. 12.
+Inverse participation ratio of the eigenmodes of the waveguide network computed according to Eq. (14) (top)
+and Eq. (15) (bottom). The right part shows two further examples for measured electric-ﬁeld intensities. The color scales
+are indicated in the bars to the right. The IPR values corresponding to these examples and to those exhibited Fig. 10 are
+marked by the red, black and yellow circles, respectively.
+deviation of it from a random plane wave. In the limit of
+maximal ergodicity in conﬁguration space, where all in-
+tensities |aj| are equal, I = 1. The other extremal situa-
+tion corresponds to localization on individual bonds (b),
+where it equals their number, I = NB. This situation
+occurs in quantum graphs with Dirichlet boundary con-
+ditions at the vertices [2]. Since the coeﬃcients entering
+the random plane-wave ansatz are complex, RMT pre-
+dicts I = 2 for time-reversal invariant quantum systems
+with a fully chaotic classical dynamics. As shown in the
+top panel in Fig. 12, the IPR values vary erratically with
+the eigenfrequency. Values of NB > I ≥2 indicate local-
+ization in parts of the waveguide network. In the right
+part of the ﬁgure are shown two examples of measured
+electric-ﬁeld intensities, one which exhibits a complex in-
+tensity patter on a fraction of the whole waveguide graph
+(a), and one for which the intensities are similar on all
+bonds. The corresponding values are larger than two and
+close to one respectively, as expected. The orange circles
+indicate the IPR values for the wave functions shown
+in Fig. 10. The wave function marked by (1) has a value
+close to the RMT prediction I ≃2 and the others a value
+I ≃1.5 between the ergodic and RMT cases. The av-
+erage over all IPR values equals ⟨I⟩= 1.9724 which is
+close to the RMT value. In [63] the IPR is deﬁned as
+˜Im =
+PNB
+j=1 |aj(km)|4
+hPNB
+j=1 |aj(km)|2
+i2 ,
+(15)
+which corresponds to a normalization of |aj(km)|2 to
+mean value unity. It equals ˜I =
+1
+NB for the ergodic case,
+˜I =
+2
+NB for the random-plane wave case and ˜I =
+1
+NL ,
+if the wave function is localized on NL individual bonds.
+The resulting IPR values are shown in the bottom panel.
+They reﬂect the features of the wave functions as demon-
+strated for the wave function shown in Figs. 10 and 12.
+The average value ⟨˜I⟩= 0.0645 is closer to that for the
+RMT case, ˜I = 2/33 = 0.0606, than to that for the
+ergodic case and well below that for localized wave func-
+tions.
+C.
+Fluctuation properties in the eigenfrequency
+spectrum above the cutoﬀfrequency for two
+transversal modes
+We measured transmission and reﬂection spectra up
+to the cutoﬀfrequency fTM01 for the ﬁrst excited trans-
+verse magnetic mode which also comprises eigenfrequen-
+cies fm ≥fTM20 corresponding to the second transver-
+sal mode. For these eigenmodes wave propagation is no
+longer one-dimensional and the analogy to the quantum
+graph of corresponding geometry is lost. We identiﬁed
+a complete sequence of 176 eigenfrequencies in the range
+from 13.5 to 14.7 GHz. Furthermore, we computed the
+eigenfrequencies in that range employing COMSOL Mul-
+tiphysics. The spectral statistics deduced from the exper-
+
+
+--- PDF PAGE 11 ---
+11
+imental and numerical data are shown in Fig. 13. Their
+FIG. 13. Same as Fig. 6 for the frequency range above the cut-
+oﬀfrequency of the second transversal TM20 modes. Shown
+are the results deduced from the experimental data (red his-
+togram and dashed lines) and the COMSOL Multiphysics
+simulations (green line and dots)
+agreement with those of random matrices from the GOE
+is similar to that for the frequency range of one transver-
+sal mode shown in Fig. 6.
+IV.
+FLUCTUATION PROPERTIES IN THE
+EIGENFREQUENCY SPECTRUM WITH A
+SINGLE TRANSVERSAL MODE IN THE
+PRESENCE OF PARTIAL T -INVARIANCE
+VIOLATION
+Quantum systems with partially violated time-reversal
+invariance and a classically chaotic counterpart are de-
+scribed within RMT by random matrices interpolating
+between GOE and GUE [89, 90],
+Hµν = H(S)
+µν + i πξ
+√
+N
+H(A)
+µν .
+(16)
+Here,
+ˆH(S) is a real-symmetric random matrix drawn
+from the GOE and ˆH(A) is a real-antisymmetric matrix
+with Gaussian-distributed matrix elements. The param-
+eter ξ determines the magnitude of T violation. For ξ = 0
+ˆH describes chaotic systems with preserved T invariance,
+whereas for πξ/
+√
+N = 1 ˆH is a random matrix from the
+GUE, however, the transition from GOE to GUE already
+takes place for ξ ≃1 [91]. Analytical expressions exist
+for the nearest-neighbor spacing distribution P(s; ξ) and
+the two-point cluster function Y2(L; ξ). They are given
+by [92]
+P(s; λ) =
+r
+2 + λ2
+2
+sc2(λ)erf
+sc(λ)
+λ
+
+e−s2c(λ)2
+2
+(17)
+with λ =
+π
+√
+2ξ,
+c(λ) =
+r
+π 2 + λ2
+4
+"
+1 −2
+π
+ 
+tan−1
+ λ
+√
+2
+
+−
+√
+2λ
+2 + λ2
+!#
+(18)
+and erf(x) denoting the error function, and [19, 93, 94]
+Y2(L; ξ) = det
+
+s(L)
+−D(L; ξ)
+−J(L; ξ)
+s(L)
+
+,
+(19)
+with s(L) =
+sin πL
+πL , D(L; ξ) =
+1
+π
+R π
+0 dxe2ξ2x2x sin(Lx)
+and J(L; ξ) = 1
+π
+R ∞
+π dxe−2ξ2x2 sin(Lx)
+x
+. The number vari-
+ance Σ2(L; ξ) and spectral rigidity ∆3(L; ξ) are obtained
+from the two-point cluster function [19, 95].
+The red
+curves in Fig. 14 are deduced from these analytical ex-
+pressions for the values of the parameter ξ indicated in
+the panels. To determine it we proceeded as in [74, 91]
+using the scattering matrix formalism for microwave res-
+onators as outlined in the next section, Sec. V.
+For the measurement of the transmission and reﬂec-
+tion spectra of the waveguide graph containing the fer-
+rites, that are magnetized with external magnets as de-
+scribed in Sec. II, only antennas at the positions marked
+by 1,2,7 and 8 were used which are located outside the
+region of the ferrites. Strongest T -invariance violation is
+observed for the single-mode case in the frequency range
+10-12 GHz, and above the cutoﬀfrequency for the second
+transversal mode in the range 13-14 GHz. The spectral
+properties are presented in Fig. 14, where we combined
+the results for these frequency ranges. We show results
+for the ranges from 7.1-9.6 GHz and 8.7-14.5 GHz. Pan-
+els (b) and (d) of Fig. 7 show the ratio distribution and
+cumulative ratio distribution of the non-unfolded eigen-
+frequencies in the frequency range 8.7-14.5 GHz. For the
+nearest-neighbor spacing distribution and its cumulative
+distribution diﬀerences between this model and the GOE
+and GUE curves are clearly visible for ξ = 0.15, whereas
+they are close to those of the GUE for ξ = 0.3. The ratio
+distribution is close to that for the GUE for both values
+of ξ. They are shown for ξ = 0.3 in Fig. 7. The spectral
+properties agree quite well with those of the random-
+matrix model Eq. (16).
+V.
+FLUCTUATION PROPERTIES OF THE
+SCATTERING MATRIX
+We also analyzed to what extent waveguide graphs
+exhibit features typical for quantum-chaotic scattering
+systems.
+Since the reﬂection and transmission spec-
+tra are measured by emitting microwave power into
+the resonator via one antenna or port – where, accord-
+ing to the results obtained for the wave functions (see,
+e.g. Fig. 10) the microwaves experience mainly in the re-
+gions of the junctions scattering from the resonator walls
+– and then receiving them at the same or another an-
+tenna or port, the waveguide graph can be viewed as a
+
+
+--- PDF PAGE 12 ---
+12
+FIG. 14. Spectral properties of the waveguide graph in the
+frequency ranges 7.1-9.6 GHz (top) and 8.7-14.5 GHz (bot-
+tom), respectively, deduced from the experimental data (green
+dashed lines and dots). The red lines show the curves obtained
+from the corresponding analytical results Eqs. (17) and (19).
+The strength of T -invariance violation ξ is indicated in the
+inset.
+scattering system [65].
+The associated scattering ma-
+trix is given in Eq. (6).
+The scattering formalism is
+identical with that introduced in [96] for the descrip-
+tion of compound-nucleus reactions.
+This analogy has
+been employed in numerous experiments [74, 91, 97–104]
+to investigate universal properties of the scattering ma-
+trix for compound-nucleus reactions and, generally, for
+quantum scattering processes with classically chaotic dy-
+namics and preserved or partially violated T invariance.
+Analytical results [24, 105] were derived on the basis of
+the supersymmetry and RMT approach and veriﬁed in
+Refs. [74, 91, 102] for scattering-matrix correlation func-
+tions and in Refs. [28, 106, 107] for distributions of the
+scattering-matrix elements.
+Within this RMT approach for quantum-chaotic scat-
+tering systems with partially violated T invariance, the
+scattering matrix is obtained by replacing in Eq. (6)
+the resonator Hamiltonian by a random matrix of the
+form Eq. (16).
+Furthermore, the matrix
+ˆW accounts
+for the coupling of the N internal modes to their en-
+vironment through M open channels modeling the an-
+tennas or ports and Λ ﬁctitious channels [108, 109] that
+mimick the absorption into the walls of the resonator.
+Thus it is a (M + Λ) × N dimensional matrix with real
+and Gaussian distributed entries Wcµ of which the sum
+PN
+µ=1 WcµWcµ = Nv2
+c, c = 1, . . . , M +Λ yields the trans-
+mission coeﬃcients
+Tc = 1 −|⟨Scc⟩|2,
+(20)
+through the relation Tc
+=
+4π2v2
+c/d
+(1+π2v2c/d)2 ,
+with d
+=
+q
+2
+N ⟨H2µµ⟩π
+N denoting the mean resonance spacing [91].
+They provide a measure for the unitarity deﬁcit of the
+average scattering matrix ⟨Scc⟩. The frequency-averaged
+scattering matrix obtained from the transmission and re-
+ﬂection measurements is diagonal, ⟨Scc′⟩= 0, implying
+that direct processes are negligible. This property is ac-
+counted for in the RMT model through the orthogonal-
+ity property PN
+µ=1 WcµWc′µ = Nv2
+cδcc′.
+For indices c
+denoting an antenna or port channel the parameter v2
+c
+corresponds to the average size of the electric ﬁeld at the
+position of the antenna or port [30]. For the RMT sim-
+ulations we chose an ensemble of 200 random matrices
+with M = 2, Λ = 30, N = 300.
+The input parameters of the RMT model for the scat-
+tering matrix are the transmission coeﬃcients T = Ta ≃
+Tb associated with antennas or ports a and b, the trans-
+mission coeﬃcients Tf ≃T, f = 3, . . . , M +Λ accounting
+for the absorption τabs = ΛTf and the T -violation pa-
+rameter ξ. The transmission coeﬃcients Ta and Tb asso-
+ciated with antennas a and b are obtained with Eq. (20)
+from the measured reﬂection spectra, whereas prelimi-
+nary values for the absorption parameter τabs are ob-
+tained by ﬁtting the complex Breit-Wigner form Eq. (7)
+to the measured resonances and employing the Weisskopf
+formula [110],
+2π Γ
+d =
+X
+c
+Tc = T1 + T2 + τabs.
+(21)
+This value for τabs is further reﬁned by proceeding as
+in [91] and comparing distributions of the experimental
+scattering-matrix elements Sab, a, b = 1, 2, and the auto-
+correlation function
+Cab(ε) = ⟨Sﬂ
+ab(f)S∗ﬂ
+ab (f + ε)⟩
+(22)
+with Sﬂ
+ab(f) = Sab(f) −⟨Sab(f)⟩and ⟨·⟩denoting the
+spectral average over a measured resonance spectrum
+and an ensemble average over the diﬀerent antenna or
+port measurements, to the analytical results [28, 74, 91,
+106, 107]. The size of ξ is determined from the cross-
+correlation coeﬃcients Ccross
+12
+(0) = Ccross
+12
+(ε = 0; τabs, ξ),
+Ccross
+12
+(0) =
+Re[⟨Sﬂ
+12(ν) S∗ﬂ
+21 (ν)⟩]
+p
+⟨|(Sﬂ
+12(ν)|2⟩⟨|(Sﬂ
+21(ν)|2⟩
+,
+(23)
+
+
+--- PDF PAGE 13 ---
+13
+and the corresponding analytical result [74].
+It equals
+unity for T -invariant systems, and approaches zero with
+increasing size of T -invariance violation.
+In the RMT model obtained from Eq. (6) the cou-
+pling matrix ˆW is assumed to be frequency independent.
+Therefore, in order to attain approximately frequency-
+independent resonance parameters, we divided the fre-
+quency range into windows of 1 GHz in the analysis of
+the experimental data [91, 111]. The results for the trans-
+mission coeﬃcients, τabs and ξ are shown in Fig. 15. For
+the port measurements the transmission coeﬃcients are
+of the same size as in the experiments with microwave
+networks and they are considerably larger than for the
+antenna measurements and barely vary with frequency.
+A similar behavior is observed for τabs, thus conﬁrm-
+ing our assumption that in the measurements with ports
+the microwave waveguide system is more opened than in
+those with antennas.
+Nevertheless, the strength of T -
+invariance violation is similar for both measurement pro-
+cedures. This is expected because the experimental se-
+tups are identical except of the procedure of opening the
+resonator, that is, the number of ferrites, their positions
+and the size of the external magnetic ﬁelds are the same.
+We ﬁnd good agreement between the experimental curves
+FIG. 15. Left: Variation of transmission coeﬃcients T1 (black
+[cyan]), T2 (red [violet]) and τabs (green [magenta]) deduced
+from the antenna [port] measurements without (dots [trian-
+gles down and left]) and with magnetized ferrites (squares
+[triangles up and right]), obtained from averaging over 1 GHz
+windows. Right: Cross-correlation coeﬃcients (red) and cor-
+responding values of ξ (black) deduced from the antenna (dots
+connected by dashed lines) and port (squares connected by
+dashed-dotted lines) measurements.
+for the autocorrelation functions and distributions of the
+experimentally measured scattering-matrix elements and
+the RMT prediction, both for the antenna and the port
+measurements. Therefore, we show in Fig. 16 only re-
+sults obtained from the port measurements. The values
+of the input parameters, T1, T2, τabs and ξ, are indicated
+in the panels showing distributions of the scattering ma-
+trix elements. The same values were used in the analy-
+sis of the RMT results for the autocorrelation functions,
+shown in Fig. 17. We may conclude, that the waveguide
+graph, when considered as an open system exhibits the
+properties of a typical quantum-chaotic scattering system
+without or with violated T invariance.
+FIG. 16.
+Distribution of scattering-matrix elements obtained
+from the port measurements without (left) and with (right)
+magnetized ferrites (black). They are compared to the corre-
+sponding RMT results (red histograms). The corresponding
+values of T1, T2, τabs and ξ are given in the panels.
+FIG. 17.
+Scattering-matrix autocorrelation functions ob-
+tained from the port measurements in the frequency intervals
+9-10 GHz, 10-11 GHz and 11-12 GHz without (left) and with
+magnetized ferrites (right) (black dots and lines). They are
+compared to the RMT results (red histograms) for the values
+of T1, T2, τabs and ξ given in the panels of Fig. 16. The fre-
+quency diﬀerence ϵ is plotted in units of the local mean level
+spacing d. All curves are normalized to unity at ϵ = 0.
+VI.
+CONCLUSION
+We present experimental results for a waveguide net-
+work constructed from waveguides of incommensurate
+lengths, that are joined at junctions with a relative angle
+of 120◦. In part of the experiments partial T -invariance
+violation was induced. We analyzed spectral properties
+in the frequency range where the analogy to the corre-
+sponding quantum waveguide graph holds.
+In distinc-
+tion to quantum graphs with Neumann boundary condi-
+tions at the vertices and to their experimental realization,
+namely microwave networks, the vertex scattering ma-
+trix describing the transport properties through the ver-
+tices or junctions from one bond or waveguide to another
+one depends on the microwave frequency. It needs to be
+derived from the wave-function properties at the junc-
+tions. A drawback of microwave networks and quantum
+graphs with Neumann boundary conditions is the occur-
+rence of backscattering at the vertices which also takes
+place at the waveguide walls in the junctions. The design
+of waveguide graph, that is, the relative angle of 120◦was
+developed in 2014-2015 [60] such that the backscatter-
+ing and frequency dependence are minimized [64]. The
+waveguide graph is constructed from metal plates with an
+extension of about 1 m2 and the surface was covered with
+high-quality copper, so that high quality factors of up to
+Q ≃6500 were achieved, such that complete sequences
+
+
+--- PDF PAGE 14 ---
+14
+of eigenfrequencies could be identiﬁed.
+We come to the conclusion that the spectral properties
+coincide well with those of the corresponding quantum
+graph. Backscattering is also present in them, however
+not as pronounced as in quantum graphs with Neumann
+boundary conditions.
+We also investigated statistical
+properties of the wave functions and conﬁrm the predic-
+tion made in [62] that deviations from RMT predictions
+can be attributed to wave functions that are localized on
+a part of the whole graph. Yet, the strength distribution,
+which only incorporates wave-function components at the
+positions of the antennas, agrees well with the RMT pre-
+diction for quantum systems with a classically chaotic
+counterpart. The ﬂuctuation properties of the scattering
+matrix describing the measurement process of the reso-
+nance spectra are also well described by those predicted
+for typical quantum-chaotic scattering systems, both for
+the cases of preserved and partially violated T -invariance
+violation.
+These ﬁndings suggest, that microwave waveguide
+graphs may serve as a suitable model for the investigation
+of features of quantum chaos. Compared to microwave
+networks, they have the advantage that the boundary
+conditions at the junctions may be varied, by changing
+the relative angle of the waveguides at the junctions or
+by changing material in a controlled way. Furthermore,
+while in a waveguide graph the electric ﬁeld, i.e. wave
+function intensity can be measured in the whole system,
+this is only possible at the vertices for a microwave net-
+work. However, this part of the graph is the most in-
+teresting one, because in the waveguides themselves the
+wave propagation is sinusoidal.
+As mentioned in the introduction, a new waveguide
+system, constructed from a microwave photonic crystal
+with square lattice structure, was studied numerically
+with COMSOL Multiphysics [61].
+A disadvantage of
+such systems is that the number of modes that exist in
+the band gap is limited and smaller than that of single
+transversal modes in a waveguide graph of corresponding
+geometry.
+The range relevant for the simulation of a quantum
+graph coincides with that of a single transversal mode.
+We also performed experiments in the frequency range
+above the cutoﬀfrequency for a second transversal mode.
+This region will be further explored with focus on a recent
+work by S. Gutzmann and U. Smilansky [59].
+VII.
+ACKNOWLEDGEMENT
+This work was supported by the NSF of China under
+Grant Nos. 11775100, 12047501 and 11961131009. WZ
+acknowledges ﬁnancial support from the China Scholar-
+ship Council (No. CSC-202106180044). BD and WZ ac-
+knowledge ﬁnancial support from the Institute for Basic
+Science in Korea through the project IBS-R024-D1.
+[1] T. Kottos and U. Smilansky, Phys. Rev. Lett. 79, 4794
+(1997).
+[2] T. Kottos and U. Smilansky, Ann. Phys. 274, 76 (1999).
+[3] L. Pauling, J. Chem. Phys. 4, 673 (1936).
+[4] J. A. S´anchez-Gil, V. Freilikher, I. Yurkevich, and A. A.
+Maradudin, Phys. Rev. Lett. 80, 948 (1998).
+[5] V. Kostrykin and R. Schrader, J. Phys. A: Math. Gen.
+32, 595 (1999).
+[6] S. W. L. R. Mittra, Analytical Techniques in the Theory
+of Guided Waves (Macmillan, 1971).
+[7] D. Kowal, U. Sivan, O. Entin-Wohlman, and Y. Imry,
+Phys. Rev. B 42, 9009 (1990).
+[8] Y. Imry, Introduction to Mesoscopic Systems (Oxford
+University Press, 1996).
+[9] P. Pakonski, K. ˙Zyczkowski, and M. Kus, J. Phys. A:
+Math. Gen. 34, 9303 (2001).
+[10] C. Texier and G. Montambaux, J. Phys. A 34, 10307
+(2001).
+[11] P. Kuchment, Waves in Random Media 14, S107 (2004).
+[12] S. Gnutzmann and U. Smilansky, Adv. Phys. 55, 527
+(2006).
+[13] G. Berkolaiko and P. Kuchment, Introduction to Quan-
+tum Graphs (American Mathematical Society, 2013).
+[14] S. Gnutzmann and A. Altland, Phys. Rev. Lett. 93,
+194101 (2004).
+[15] O. Bohigas, M. J. Giannoni, and C. Schmit, Phys. Rev.
+Lett. 52, 1 (1984).
+[16] T. Guhr, A. M¨uller-Groeling, and H. A. Weidenm¨uller,
+Phys. Rep. 299, 189 (1998).
+[17] F. Haake, S. Gnutzmann, and M. Ku´s, Quantum Signa-
+tures of Chaos (Springer-Verlag, Heidelberg, 2018).
+[18] S. Heusler, S. M¨uller, A. Altland, P. Braun, and
+F. Haake, Phys. Rev. Lett. 98, 044103 (2007).
+[19] M. L. Mehta, Random Matrices (Academic Press Lon-
+don, 1990).
+[20] J. M. Harrison, U. Smilansky, and B. Winn, J. Phys. A:
+Math. Theor. 40, 14181 (2007).
+[21] M. Lawniczak, J. Lipovsk´y, and L. Sirko, Phys. Rev.
+Lett. 122, 140503 (2019).
+[22] J. Keating, Nonlinearity 4, 309 (1991).
+[23] J.-P. Roth, C. R. Acad. Sci., Paris I 296, 793 (1983).
+[24] J. Verbaarschot, H. Weidenm¨uller, and M. Zirnbauer,
+Phys. Rep. 129, 367 (1985).
+[25] Z. Pluhaˇr and H. A. Weidenm¨uller, Phys. Rev. Lett.
+110, 034101 (2013).
+[26] Z. Pluhaˇr and H. A. Weidenm¨uller, Phys. Rev. E 88,
+022902 (2013).
+[27] Z. Pluhaˇr and H. A. Weidenm¨uller, Phys. Rev. Lett.
+112, 144102 (2014).
+[28] Y. V. Fyodorov, D. V. Savin, and H.-J. Sommers, J.
+Phys. A 38, 10731 (2005).
+[29] M. Giannoni, A. Voros, and J. Zinn-Justin, eds., Chaos
+and Quantum Physics (Elsevier, Amsterdam, 1989).
+[30] H.-J. St¨ockmann, Quantum Chaos:
+An Introduction
+(Cambridge University Press, Cambridge, 2000).
+[31] S. Sridhar, Phys. Rev. Lett. 67, 785 (1991).
+[32] H.-D. Gr¨af, H. L. Harney, H. Lengeler, C. H. Lewenkopf,
+C. Rangacharyulu, A. Richter, P. Schardt, and H. A.
+
+
+--- PDF PAGE 15 ---
+15
+Weidenm¨uller, Phys. Rev. Lett. 69, 1296 (1992).
+[33] J. Stein and H.-J. St¨ockmann, Phys. Rev. Lett. 68, 2867
+(1992).
+[34] P. So, S. M. Anlage, E. Ott, and R. Oerter, Phys. Rev.
+Lett. 74, 2662 (1995).
+[35] S. Deus, P. M. Koch, and L. Sirko, Phys. Rev. E 52,
+1146 (1995).
+[36] H.-J. St¨ockmann, M. Barth, U. D¨orr, U. Kuhl, and
+H. Schanze, Physica A 9, 571 (2001).
+[37] B. Dietz and A. Richter, Chaos 25, 097601 (2015).
+[38] F. J. Dyson, Journal of Mathematical Physics 3, 1199
+(1962).
+[39] O.
+Hul,
+S.
+Bauch,
+P.
+Pako´nski,
+N.
+Savytskyy,
+K. ˙Zyczkowski, and L. Sirko, Phys. Rev. E 69, 056205
+(2004).
+[40] C. Dembowski, B. Dietz, H.-D. Gr¨af, A. Heine, T. Pa-
+penbrock, A. Richter, and C. Richter, Phys. Rev. Lett.
+89, 064101 (2002).
+[41] M. Lawniczak, S. Bauch, O. Hul, and L. Sirko, Phys.
+Rev. E 81, 046204 (2010).
+[42] M. Bia lous, V. Yunko, S. Bauch, M. Lawniczak, B. Di-
+etz, and L. Sirko, Phys. Rev. Lett. 117, 144101 (2016).
+[43] A. Rehemanjiang, M. Allgaier, C. H. Joyner, S. M¨uller,
+M. Sieber, U. Kuhl, and H.-J. St¨ockmann, Phys. Rev.
+Lett. 117, 064101 (2016).
+[44] A.
+M.
+Mart´ınez-Arg¨uello,
+A.
+Rehemanjiang,
+M.
+Mart´ınez-Mares,
+J.
+A.
+M´endez-Berm´udez,
+H.-
+J. St¨ockmann, and U. Kuhl, Phys. Rev. B 98, 075311
+(2018).
+[45] A. M. Mart´ınez-Arg¨uello, J. A. M´endez-Berm´udez, and
+M. Mart´ınez-Mares, Phys. Rev. E 99, 062202 (2019).
+[46] J. Lu, J. Che, X. Zhang, and B. Dietz, Phys. Rev. E
+102, 022309 (2020).
+[47] J. Che, J. Lu, X. Zhang, B. Dietz, and G. Chai, Phys.
+Rev. E 103, 042212 (2021).
+[48] R. Scharf, B. Dietz, M. Ku´s, F. Haake, and M. V. Berry,
+Europhys. Lett. (EPL) 5, 383 (1988).
+[49] A. Rehemanjiang, M. Richter, U. Kuhl, and H.-J.
+St¨ockmann, Phys. Rev. Lett. 124, 116801 (2020).
+[50] A. Altland and M. R. Zirnbauer, Phys. Rev. B 55, 1142
+(1997).
+[51] M. Lawniczak, O. Hul, S. Bauch, P. Seba, and L. Sirko,
+Phys. Rev. E 77, 056210 (2008).
+[52] M. Lawniczak, S. Bauch, O. Hul, and L. Sirko, Physica
+Scripta T143, 014014 (2011).
+[53] O. Hul, M. Lawniczak, S. Bauch, A. Sawicki, M. Ku´s,
+and L. Sirko, Phys. Rev. Lett. 109, 040402 (2012).
+[54] M. Lawniczak, A. Sawicki, S. Bauch, M. Ku´s, and
+L. Sirko, Phys. Rev. E 89, 032911 (2014).
+[55] M. Lawniczak, B. van Tiggelen, and L. Sirko, Phys. Rev.
+E 102, 052214 (2020).
+[56] L. Chen, S. M. Anlage, and Y. V. Fyodorov, Phys.
+Rev. Lett. 127, 204101 (2021), URL https://link.
+aps.org/doi/10.1103/PhysRevLett.127.204101.
+[57] O.
+Post,
+Spectral
+Analysis
+on
+Graph-like
+Spaces
+(Springer, 2012).
+[58] P.
+Exner
+and
+H.
+Kovarik,
+Quantum
+Waveguides
+(Springer, 2015).
+[59] S. Gnutzmann and U. Smilansky, J. Phys. A: Math.
+Theor. 55, 224016 (2022).
+[60] B. Dietz, M. Miski-Oglu, T. Klaus, A. Richter, T. Skipa,
+and M. Wunderle (2022), ”in preparation”.
+[61] S. Ma, T. M. Antonsen, E. Ott, and S. M. Anlage,
+arXiv:2112.05306 (2021).
+[62] L. Kaplan, Phys. Rev. E 64, 036225 (2001).
+[63] O. Hul, P. ˇSeba, and L. Sirko, Phys. Rev. E 79, 066204
+(2009).
+[64] S. Bittner,
+B. Dietz,
+M. Miski-Oglu,
+A. Richter,
+C. Ripp, E. Sadurn´ı, and W. P. Schleich, Phys. Rev.
+E 87, 042912 (2013).
+[65] S. Albeverio, F. Haake, P. Kurasov, M. Ku´s, and
+P. ˇSeba, J. Math. Phys. 37, 4888 (1996).
+[66] C. Dembowski, B. Dietz, T. Friedrich, H.-D. Gr¨af, H. L.
+Harney, A. Heine, M. Miski-Oglu, and A. Richter, Phys.
+Rev. E 71, 046202 (2005).
+[67] L. C. Maier and J. C. Slater, J. Appl. Phys. 23, 78
+(1952).
+[68] U. D¨orr, H.-J. St¨ockmann, M. Barth, and U. Kuhl,
+Phys. Rev. Lett. 80, 1030 (1998).
+[69] C. Dembowski, H.-D. Gr¨af, R. Hoﬀerbert, H. Rehfeld,
+A. Richter, and T. Weiland, Phys. Rev. E 60, 3942
+(1999).
+[70] U. Kuhl, R. H¨ohmann, H.-J. St¨ockmann, and S. Gnutz-
+mann, Phys. Rev. E 75, 036204 (2007).
+[71] E. Bogomolny, B. Dietz, T. Friedrich, M. Miski-Oglu,
+A. Richter, F. Sch¨afer, and C. Schmit, Phys. Rev. Lett.
+97, 254102 (2006).
+[72] R. Zhang, W. Zhang, B. Dietz, G. Chai, and L. Huang,
+Chinese Physics B 28, 100502 (2019).
+[73] B. Dietz, T. Friedrich, H. L. Harney, M. Miski-Oglu,
+A. Richter, F. Sch¨afer, and H. A. Weidenm¨uller, Phys.
+Rev. Lett. 98, 074103 (2007).
+[74] B. Dietz, T. Friedrich, H. L. Harney, M. Miski-Oglu,
+A. Richter, F. Sch¨afer, J. Verbaarschot, and H. A. Wei-
+denm¨uller, Phys. Rev. Lett. 103, 064101 (2009).
+[75] J. B. French, V. K. B. Kota, A. Pandey, and S. Tomso-
+vic, Phys. Rev. Lett. 54, 2313 (1985).
+[76] T. Ericson and T. Mayer-Kuckuk, Ann. Rev. Nucl. Sci.
+16, 183 (1966).
+[77] C. Mahaux and H. A. Weidenm¨uller, Phys.Lett. 23, 100
+(1966).
+[78] W. von Witsch, A. Richter, and P. von Brentano, Phys.
+Rev. Lett. 19, 524 (1967).
+[79] E. Blanke, H. Driller, W. Gl¨ockle, H. Genz, A. Richter,
+and G. Schrieder, Phys. Rev. Lett. 51, 355 (1983).
+[80] B. Dietz, A. Heusler, K. H. Maier, A. Richter, and B. A.
+Brown, Phys. Rev. Lett. 118, 012501 (2017).
+[81] O. Bohigas and M. J. Giannoni, Ann. Phys. 89, 393
+(1974).
+[82] V. Oganesyan and D. A. Huse, Phys. Rev. B 75, 155111
+(2007).
+[83] Y. Y. Atas, E. Bogomolny, O. Giraud, and G. Roux,
+Phys. Rev. Lett. 110, 084101 (2013).
+[84] Y. Atas, E. Bogomolny, O. Giraud, P. Vivo, and E. Vivo,
+J. Phys. A 46, 355204 (2013).
+[85] P. O’Connor, J. Gehlen, and E. J. Heller, Phys. Rev.
+Lett. 58, 1296 (1987).
+[86] M. V. Berry, J. Phys. A 35, 3025 (2002).
+[87] H. Alt, H. D. Gr¨af, H. L. Harney, R. Hoﬀerbert,
+H. Lengeler, A. Richter, P. Schardt, and H. A. Wei-
+denm¨uller, Phys. Rev. Lett. 74, 62 (1995).
+[88] M. Abramowitz and I. A. Stegun, eds., Handbook of
+Mathematical Functions with Formulas, Graphs and
+Mathematical Tables (Dover, New York, 2013).
+[89] A. Pandey, Ann. Phys. 134, 110 (1981).
+
+
+--- PDF PAGE 16 ---
+16
+[90] A. Altland, S. Iida, and K. B. Efetov, Journal of Physics
+A: Mathematical and General 26, 3545 (1993).
+[91] B. Dietz, T. Friedrich, H. L. Harney, M. Miski-Oglu,
+A. Richter, F. Sch¨afer, and H. A. Weidenm¨uller, Phys.
+Rev. E 81, 036205 (2010).
+[92] G. Lenz, Ph.D. thesis, Fachbereich Physik der Univer-
+sit¨at-Gesamthochschule Essen (1992).
+[93] A. Pandey and P. Shukla, J. Phys. A 24, 3907 (1991).
+[94] O. Bohigas, M.-J. Giannoni, A. M. O. de Almeidaz, and
+C. Schmit, Nonlinearity 8, 203 (1995).
+[95] M. Bia lous, B. Dietz, and L. Sirko, Phys. Rev. E 103,
+052204 (2021).
+[96] C. Mahaux and H. A. Weidenm¨uller, Shell Model Ap-
+proach to Nuclear Reactions (North Holland, Amster-
+dam, 1969).
+[97] R. Bl¨umel and U. Smilansky, Phys. Rev. Lett. 64, 241
+(1990).
+[98] R. A. M´endez-S´anchez, U. Kuhl, M. Barth, C. H.
+Lewenkopf, and H.-J. St¨ockmann, Phys. Rev. Lett. 91,
+174102 (2003).
+[99] R. Sch¨afer, M. Barth, F. Leyvraz, M. M¨uller, T. H.
+Seligman, and H.-J. St¨ockmann, Phys. Rev. E 66,
+016202 (2002).
+[100] U. Kuhl, M. Mart´ınez-Mares, R. A. M´endez-S´anchez,
+and H.-J. St¨ockmann, Phys. Rev. Lett. 94, 144101
+(2005).
+[101] O. Hul, N. Savytskyy, O. Tymoshchuk, S. Bauch, and
+L. Sirko, Phys. Rev. E 72, 066212 (2005).
+[102] B. Dietz, T. Friedrich, H. L. Harney, M. Miski-Oglu,
+A. Richter, F. Sch¨afer, and H. A. Weidenm¨uller, Phys.
+Rev. E 78, 055204 (2008).
+[103] B. Dietz, H. Harney, A. Richter, F. Sch¨afer, and H. Wei-
+denm¨uller, Phys. Lett. B 685, 263 (2010).
+[104] B. Dietz, A. Richter, and H. Weidenm¨uller, Phys. Lett.
+B 697, 313 (2011).
+[105] Z. Pluhaˇr, H. A. Weidenm¨uller, J. Zuk, C. Lewenkopf,
+and F. Wegner, Ann. Phys. 243, 1 (1995).
+[106] S. Kumar, A. Nock, H.-J. Sommers, T. Guhr, B. Dietz,
+M. Miski-Oglu, A. Richter, and F. Sch¨afer, Phys. Rev.
+Lett. 111, 030403 (2013).
+[107] S. Kumar, B. Dietz, T. Guhr, and A. Richter, Phys.
+Rev. Lett. 119, 244102 (2017).
+[108] J. Verbaarschot, Ann. Phys. 168, 368 (1986).
+[109] D. Savin, Y. Fyodorov, and H.-J. Sommers, Act Ohys.
+Pol A 109, 53 (2006).
+[110] J. M. Blatt and V. F. Weisskopf, Theoretical Nuclear
+Physics (Wiley, New York, 1952).
+[111] M. Bia lous, B. Dietz, and L. Sirko, Phys. Rev. E 102,
+042206 (2020).

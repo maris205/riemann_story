@@ -1,0 +1,13 @@
+{
+  "limit": 500000000,
+  "u": 1.543689012692076,
+  "warmup": 10000,
+  "initial_x": 0.1,
+  "prime_count": 26355867,
+  "chaos_event_count": 110228772,
+  "prime_mean_gap": 18.97110840524079,
+  "chaos_mean_gap": 4.536020745436779,
+  "runtime_seconds": 32.08522210002411,
+  "validation": "100000-step literal Python histogram and final float matched exactly",
+  "model": "autonomous fixed parameter, not the later non-autonomous spectral map"
+}

@@ -1,0 +1,35 @@
+ 
+ 
+ 
+FIELDS MEDAL 2026 
+HONG WANG 
+ 
+INTERNATIONAL CONGRESS OF MATHEMATICIANS 2026 
+Philadelphia, Pennsylvania, USA 
+ 
+SHORT CITATION 
+ 
+For her work in harmonic analysis and geometric measure theory, including applications of multiscale 
+and decoupling techniques to the local smoothing conjecture for the planar wave equation, and major 
+advances in Fourier restriction, Falconer distance sets, Furstenberg sets in the plane, and the Kakeya 
+problem in three dimensions. 
+ 
+LONG CITATION 
+ 
+Extending and refining modern techniques in harmonic analysis and geometric measure theory, Hong 
+Wang has achieved a series of major breakthroughs on some of the most central problems in analysis, 
+combining multiscale methods with deep geometric and combinatorial insights.  
+Wang has played a decisive role in advancing the theory of local smoothing for wave equations. 
+Together with Larry Guth and Ruixiang Zhang, she introduced powerful decoupling and multiscale 
+arguments to resolve the local smoothing conjecture for the planar wave equation. 
+Her work has also led to fundamental progress in Fourier restriction theory and in geometric 
+problems related to distance sets. In particular, with Guth, Alex Iosevich, and Yumeng Ou, she obtained 
+major results on the Falconer distance set problem, clarifying the relationship between Hausdorff 
+dimension and the structure of distance distributions. In addition, with Kevin Ren, she made 
+breakthrough contributions to the theory of Furstenberg sets in the plane, significantly deepening the 
+understanding of directional phenomena in fractal geometry. 
+In higher dimensions, Wang has achieved major advances on the Kakeya problem in three dimensions. 
+In joint work with Joshua Zahl, she developed new bounds and structural techniques for collections 
+of thin tubes, opening new directions and reshaping current approaches to this central problem. More 
+broadly, her work has introduced methods that are now central to contemporary harmonic analysis 
+and continue to influence a wide range of problems in analysis, geometry, and beyond. 

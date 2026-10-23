@@ -1,0 +1,27 @@
+[
+  {
+    "name": "GPT_2018",
+    "url": "https://cdn.openai.com/research-covers/language-unsupervised/language_understanding_paper.pdf",
+    "pages": 12
+  },
+  {
+    "name": "Transformer_2017",
+    "url": "https://arxiv.org/pdf/1706.03762",
+    "pages": 15
+  },
+  {
+    "name": "Platt_Trudgian_2020",
+    "url": "https://arxiv.org/pdf/2004.09765",
+    "pages": 8
+  },
+  {
+    "name": "Siegel_1932_translation_2018",
+    "url": "https://arxiv.org/pdf/1810.05198",
+    "pages": 37
+  },
+  {
+    "name": "Wiles_Abel_2016",
+    "url": "https://abelprize.no/sites/default/files/2021-04/citation_en_2016_A.Wiles_.pdf",
+    "pages": 2
+  }
+]

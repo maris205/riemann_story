@@ -1,0 +1,30 @@
+[
+  {
+    "file": "OpenAI_Uniform_Landau_Siegel.pdf",
+    "url": "https://raw.githubusercontent.com/openai/math/main/preprints/Uniform-exclusion-of-Landau-Siegel-zeros-October-1-2026/paper.pdf",
+    "pages": 9,
+    "sha256": "fab9f6e84ece2a37d834b2c031d8eb14e81413d9f6270791e7b5468b295214ef",
+    "downloaded": "2026-10-23"
+  },
+  {
+    "file": "Banks_2610.15483.pdf",
+    "url": "https://arxiv.org/pdf/2610.15483",
+    "pages": 19,
+    "sha256": "54891704515ba9d58ae60ce4c16f4b368a377a9732ca98e26172209fa0647d6f",
+    "downloaded": "2026-10-23"
+  },
+  {
+    "file": "Kerr_2610.21099.pdf",
+    "url": "https://arxiv.org/pdf/2610.21099",
+    "pages": 6,
+    "sha256": "30dc40c959735eaaddd3609919695f87258ec2807fb615a9a4386702f3536116",
+    "downloaded": "2026-10-23"
+  },
+  {
+    "file": "Green_2610.00311v2.pdf",
+    "url": "https://hexagonmath.org/pdf/2610.00311v2",
+    "pages": 5,
+    "sha256": "6b948696c9f9c088257d9b98ab0bcee75c71ef8d884cfa23d1685ed04e95238c",
+    "downloaded": "2026-10-23"
+  }
+]

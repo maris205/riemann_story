@@ -1,0 +1,1487 @@
+
+--- PDF page 1 ---
+THE RIEMANN ZETA-FUNCTION AND THE
+ONE-DIMENSIONAL WEYL-BERRY CONJECTURE
+FOR FRACTAL DRUMS
+MICHEL L. LAPIDUS and CARL POMERANCE
+[Received 7 April 1991—Revised 10 December 1991]
+ABSTRACT
+Based on his earlier work on the vibrations of 'drums with fractal boundary', the first author has
+refined M. V. Berry's conjecture that extended from the 'smooth' to the 'fractal' case H. Weyl's
+conjecture for the asymptotics of the eigenvalues of the Laplacian on a bounded open subset of W
+(see [16]). We solve here in the one-dimensional case (that is, when n = 1) this 'modified Weyl-Berry
+conjecture'. We discover, in the process, some unexpected and intriguing connections between
+spectral geometry, fractal geometry and the Riemann zeta-function. We therefore show that one can
+'hear' (that is, recover from the spectrum) not only the Minkowski fractal dimension of the
+boundary—as was established previously by the first author—but also, under the stronger assumptions
+of the conjecture, its Minkowski content (a 'fractal' analogue of its 'length').
+We also prove (still in dimension one) a related conjecture of the first author, as well as its
+converse, which characterizes the situation when the error estimates of the aforementioned paper are
+sharp.
+1. Introduction
+Let Q be an open set in Un (n 5= 1), with boundary T = 3Q. We assume that Q is
+non-empty and bounded (or, more generally, of finite volume), but otherwise
+arbitrary. We consider the following eigenvalue problem:
+-Aw = Au in Q, 
+(1.1)
+M = 0 onT, 
+(1.2)
+where A = E*=i 92/dxl denotes the Dirichlet Laplacian on Q.
+In this general setting, the problem (P) is interpreted in the variational sense.
+More precisely, the scalar A is said to be an eigenvalue of (P) if there exists u =£ 0
+in Hl(Q) (the closure of CQ(Q), the space of smooth functions with compact
+support contained in Q, in the Sobolev space //X(Q)) satisfying equation (1.1) in
+the distributional sense. (See, for example, [23; 28, § II; 16, § 2.2].)
+As is well-known, the spectrum of (P) is discrete and consists of a sequence
+(Ar)"=1 of eigenvalues (with finite multiplicity) written in increasing order
+according to their multiplicity:
+0<A 1^A 2^...^A r^..., 
+with Af->+oo as r-+<*>.
+Let N(X) denote the (eigenvalue) "counting function' of (P); that is, for A>0,
+A/(A) = # { r ^ l : Ar^A} 
+(1.3)
+is the number of eigenvalues of (P) up to A, counted according to multiplicity.
+The research of the first author was partially supported by the National Science Foundation under
+Grants DMS-8703138, DMS-8904389 and DMS-9207098, as well as by the M. G. Michael Award for
+Excellence in Research from the Franklin College of Arts and Sciences of the University of
+Georgia. The research of the second author was partially supported by the National Science
+Foundation under Grant DMS-8803297.
+1991 Mathematics Subject Classification: 11M06, 28A12, 34B24.
+Proc. London Math. Soc. (3) 66 (1993) 41-69.
+
+
+--- PDF page 2 ---
+42 
+MICHEL L. LAPIDUS AND CARL POMERANCE
+Generalizing H. Weyl's classical theorem, G. Metivier [28] showed that
+7V(A) = (l + o(l))<p(A), asA->+oo, 
+(1.4)
+where the 'Weyl term' cp(k) is given by
+(pW = (2ji)-n®n\Q\nXn/2. 
+(1.5)
+Here, \A\n denotes the n-dimensional Lebesgue measure or 'volume' of AczU"
+and $„ is the volume of the unit ball in IR".
+It is natural to wonder whether the asymptotic expansion of N(X) admits a
+second term. In the 'smooth' case, this was conjectured by H. Weyl [35] as
+follows. If F= dQ is 'sufficiently regular', then
+N(k) = <p(k) - <€H |ru_t A(""1)/2 + o(A("-1)/2), as A ^ +oo, 
+(1.6)
+where <€„ is a positive constant depending only on n. Here, \T\n^i denotes the
+(n - l)-dimensional volume of F; for example, the length of F c U2 if n = 2.
+An important step on the way to Weyl's conjecture was made by R. T. Seeley
+[30,31], and then, when n ^ 4 , by Pham The Lai [29]. Extending, in particular,
+earlier work of L. Hormander [11], they showed that if F is 'smooth' (that is, of
+class C00), then the following sharp remainder estimate holds:
+N(X) = <p(A) + O(A("-1)/2), asA^+oo. 
+(1.7)
+Further, V. Ja. Ivrii [13,14] has established (1.6) under an additional
+assumption (roughly, that the set of 'multiply reflected periodic geodesies in Q is
+of measure zero'). Therefore, under these hypotheses, the conclusion of Weyl's
+conjecture is true. (For related results, see also R. B. Melrose's work [26,27]; a
+synthesis of the methods of Ivrii and Melrose is provided in [12].)
+What happens if the boundary is 'non-smooth'? The physicist M. V. Berry
+[1,2]—motivated in part by the study of the scattering of waves from rough
+surfaces and the study of porous media—conjectured that if F is 'fractal', then
+N(X) = <p(A) - <6»,H%{H ; T)kH/2 + o{XH'2), 
+as A-» + oo, 
+(1.8)
+where %nyH is a positive constant depending only on n and H. Here, H denotes
+the Hausdorff dimension of the boundary T and #?(// ; F) the (normalized)
+//-dimensional Hausdorff measure of F. (Of course, if F is 'smooth', say of class
+C1, then H = n — \ and (at least formally) we recover (1.6) from (1.8).) Berry [1,
+Equation 2, p. 51], by analogy with the 'smooth' case, even stated an explicit
+value for <^n<H\ namely,
+««.« = ( 4 ( 4 ^ ^ ( 1 + i//))"1
+f 
+(1.9)
+where T(s) denotes the classical gamma function.
+Unfortunately, Berry's beautiful conjecture has turned out to be false. In an
+important paper [6], J. Brossard and R. Carmona disproved Berry's conjecture
+and suggested that the Minkowski dimension was more appropriate than the
+Hausdorff dimension to measure the 'roughness' of the boundary F. In fact,
+under suitable hypotheses, they obtained one- and two-sided estimates for the
+second term (expressed in terms of the Minkowski dimension) in the asymptotic
+expansion of the 'partition function' Z(t) = E7=i e~krt, a well-known 'smoothing'
+of the 'counting function' N{X). Although it is known how, via Tauberian theory,
+to get the asymptotics for the second term for Z{t) from such a result for N{X),
+no known Tauberian theorem allows us to go in the other direction.
+
+
+--- PDF page 3 ---
+RIEMANN ZETA-FUNCTION AND FRACTAL DRUMS 
+43
+A specific reformulation of Berry's conjecture on N(X), called the 'modified
+Weyl-Berry conjecture', was made by the first author in [16]. In order to state it
+precisely, we first discuss the, perhaps not so well-known, concepts of Minkowski
+dimension and measurability.
+Let D = D(T) denote the Minkowski dimension of F. Recall that D is the
+infimum of the numbers d^O such that the (d-dimensional) upper Minkowski
+content
+^*(rf;r):=limsupe-("-d)|renQU< +00, 
+(1.10)
+e-+0+
+where Fe, the e-neighbourhood of F, is the set of x e Un within a distance less
+than e from F; moreover, M*(d;T), the (d-dimensional) lower Minkowski
+content of F, is defined just as M*(d ; F), but by means of the lower limit rather
+than the upper limit in (1.10). We say that F is Minkowski measurable if
+0<M*(D ;T) = M*(D ;F)<+<» and then call this common number M(D ;F),
+the Minkowski content of F. (Note that these definitions not only involve F, but
+the set Q as well.)
+The larger D is, the more irregular F is. The (easy) fact that D = D(T)e
+[n — 1, n] since F=5Q, with Q open and non-dense in Un, is proved in [16,
+Corollary 3.2]. Following [16], we say that F is "fractal if D e (n - 1, n], and
+'non-fractal otherwise (that is, if D = n — 1, the topological dimension of F). We
+stress that no assumption of self-similarity, in the sense of [24], is made about F.
+The real number D, also called 'entropy' or 'box' dimension in the literature,
+was first extensively studied by G. Bouligand in [4]. For an equivalent definition
+and further properties of D, see, for example, [16, § 3], especially Corollary 3.1,
+and [7,8,9,18,25,34]. We refer to [3,10,15,33] for specific properties and
+alternative definitions of D when n = 1, which is the case of most interest to us in
+this paper.
+We now recall the statement of the 'modified Weyl-Berry (in short, MWB)
+conjecture' [16, Conjecture 5.1, § 5.2, p. 520], for the Dirichlet problem:
+CONJECTURE 1 (modified Weyl-Berry conjecture). IfQ has 'fractal boundary F
+with Minkowski dimension D e (n — 1, n) and if F is 'Minkowski measurable',
+then
+where cn D is a positive constant depending only on n and D.
+In [16, Theorem 2.1, Corollary 2.1, and Theorem 2.3, pp. 479-480 and
+482-483], M. L. Lapidus has partially solved a more general form of this
+conjecture by proving, in particular, that if F is 'fractal' with M*(D ; F) < +<»,
+then Weyl's asymptotic law with error term holds:
+N(X) = <p(A) + O{kD'2), 
+asA^+oo. 
+(1.12)
+(Also see [20].)
+Moreover, the first author has shown by means of examples that the remainder
+estimate in (1.12) is sharp in every possible 'fractal' (that is, Minkowski)
+dimension D e (n — 1, n). (See [16, Example 5.1, pp. 512-514] when n = 1, and
+its generalization to n 2* 1 [16, Example 5.1', pp. 514-515].)
+
+
+--- PDF page 4 ---
+44 
+MICHEL L. LAPIDUS AND CARL POMERANCE
+In this paper, we shall prove Conjecture 1 (the 'MWB conjecture') when n = 1.
+(See Corollary 2.3 below.) In the process, we shall establish some unexpected and
+intriguing connections with the Riemann zeta-f unction. Indeed, we shall show
+that the constant c 1 D occurring in (1.11) is given by
+where £ = £(s) denotes the Riemann zeta-f unction. (Since n = 1, we have
+D e (0, 1) and thus £(D) < 0, so that chD > 0.)
+In proving these results, a key step consists, for a fixed D e (0, 1), in obtaining
+a necessary and sufficient condition for the Minkowski measurability of r = 3Q in
+terms of the sequence of lengths (/,•)£= i of the connected components (open
+intervals) of the open set Q c IR; namely, if (/;)/°=i is chosen to be non-increasing
+(which is always possible since |Q|t = £°°=1 /, < +°°), this condition is given by
+lim ljjVD = L, 
+for some L > 0. 
+(1.14)
+We also examine here the case when T is not (necessarily) Minkowski
+measurable. In particular, in [16], the following conjecture was made (see [16,
+Conjecture 5.1', §5.2, p. 521]):
+CONJECTURE 1' (sharp remainder estimates). IfQ has 'fractal' boundary T with
+Minkowski dimension De(n-l,n) 
+and if 0 < M*(D ; T) ^ M*(D ; T) < +<»,
+then A~D/2(<p(A) — N(X)) is bounded between two positive constants for all large A.
+In this paper, we not only prove Conjecture 1' for n = 1, we show the converse
+as well. (See Theorem 2.4.)
+A good illustration of this result is provided by the Cantor set, studied in
+Example 4.5 below. Let Q be the complement in [0,1] of the triadic Cantor set I\
+Then T = dQ and the sequence (/,)"= i of interval lengths is given by
+1 1 1 _L -L -L JL
+3» 9 ) 9 > 27 > 27 > 27 > 27 > • • • >
+where there are 2k~l copies of 3~k, for k = 1, 2, ... . Then clearly, (1.14) does not
+hold, so that T is not Minkowski measurable. However, the hypothesis of
+Conjecture 1' holds, so that from our result in the one-dimensional case, the
+two-sided estimate of Conjecture 1' holds. In fact, we prove that the asymptotic
+expansion of N(X) does not admit a second term (or, more precisely, that
+A~D/2(<p(A) — Af(A)) does not converge, as A—> +°°).
+It is somewhat a surprise to us that the supposedly 'trivial' case n = 1 contains
+so many non-trivial results. The natural question is how much of this work
+generalizes to the cases where n ^ 2. In a subsequent paper, we shall show in fact
+that Conjecture 1 is not true when n ^ 2. It turns out that, at least for several
+classes of examples, what plays the role of £(s) in the case where n = 1 are
+various Epstein zeta-functions and other Dirichlet series. We still conjecture that
+Minkowski measurability implies the existence of a second term in the expansion
+of N(X) that is proportional to kD/2. However, the constant coefficient of this
+term must depend on Q in a more complex way than is suggested in the
+conjecture. In fact, a revised form of Conjecture 1 will be presented in this
+forthcoming paper that gives the constant in terms of a limit involving the
+spectral zeta-function associated with the boundary value problem (P).
+
+
+--- PDF page 5 ---
+RIEMANN ZETA-FUNCTION AND FRACTAL DRUMS 
+45
+The remainder of this paper is organized as follows. In the next section, we
+present more precisely some of our results. In § 3, we prove, in particular,
+Conjecture 1', as well as its converse, when n = 1. We also give several examples
+that illustrate the pathologies that may occur (see §3.3). In §4, we prove the
+'MWB conjecture' (Conjecture 1) when n = 1 and establish in the process the
+connection with the Riemann zeta-function (see §4.2). We also obtain the
+aforementioned characterization of 'Minkowski measurability' (see §4.1).
+Moreover, in § 4.3, we illustrate our results by two instructive examples.
+Some of the results of this paper were announced earlier in [22].
+2. Statement of the main results
+Let Q be a (non-empty) open subset of U, of finite length |Q|t and with
+boundary T = dQ. We write Q as the union of its connected components:
+where the open intervals /, are pairwise disjoint and of length /,. Since
+|£2|i = Ey°°=i lj<+co, we can assume without loss of generality that
+(The case when Q is a finite union of open intervals is of no interest here.
+Further, the 'lengths' /y are repeated according to their 'multiplicity'.)
+Unless explicitly stated otherwise, (/,)J°=i will always denote the sequence
+associated with Q in this manner.
+Recall that the eigenvalues of the differential operator —d2/dy2 on the
+bounded open interval I:=(a, j8) with Dirichlet boundary conditions at a and
+P (u(a) = u(P) = 0), are fxk = (jt/l)2k2, for k = 1, 2, ..., where / = )S-ar. Let
+N(X ;/) denote the associated eigenvalue counting function. Then if [v] denotes
+the integer part of v, it follows that for A > 0,
+/) = #{k 5* 1: k ^ I(y/X)l7i} = [/(VA)/JT]. 
+(2.1)
+Consequently, we deduce from (2.1) and, for example, [16, Lemma 4.2, p.
+493], that
+N(X) = £ N{X ; Ij) = 2 [/,*], where x := n~lti. 
+(2.2)
+(Recall that N(X) denotes the eigenvalue 'counting function' associated with Q.)
+Let £(s) denote the Riemann zeta-function (see, for example, [32]). Recall that
+£C0 = Ey=i7~5 for Res > 1 and that £(s) has a meromorphic extension to all of C
+with a single, simple pole (with residue 1) located at the point s = 1. In particular,
+the meromorphic continuation of £ to the region Re s > 0 is given by
+i 
+r+o°
+= 
++ 
+([*]-* - t~s) dt, for Re s > 0;
+s — 1 
+j \
+(2.3)
+indeed, this identity is obvious for Re s > 1 and the integral in the right-hand side
+of (2.3) is analytic for Re s > 0.
+
+
+--- PDF page 6 ---
+46 
+MICHEL L. LAPIDUS AND CARL POMERANCE
+2.1. Existence of a second term: resolution of Conjecture 1
+We can now state our first result:
+THEOREM 2.1. (a) Let (/y-)7=i be an arbitrary, positive, non-increasing sequence
+such that
+lj~Lj~VD, 
+as j->«,, for D e (0,1) and L>0. 
+(2.4)
+Then
+[) 
+asx-*+«>. 
+(2.5)
+7 = 1 
+V = l 
+/
+(b) In particular, if the sequence (lj)J=i associated with Q satisfies hypothesis
+(2.4) and if (p(k) := n~x \£\x A*, we deduce from (2.2) and (2.5)
+7V(A) = <p(k) + jr-
+D^(D)L
+Dk
+D/2 
++ o(A°
+/ 2), 
+as A ^ +oo. 
+(2.6)
+Recall that in (2.4), the condition lj~Lj~VD 
+means that ljjl/D—>L, as/—*oo.
+The following theorem provides, in particular, a characterization (of independ-
+ent interest) of the case when T = dQ is Minkowski measurable with D =
+D(T)e (0,1).
+THEOREM 2.2 (characterization of Minkowski measurability). The sequence
+(lj)J=\ associated with Q satisfies hypothesis (2.4) if and only if T=dQ is
+Minkowski measurable and has Minkowski dimension D e (0, 1) (that is, if and
+only if the hypotheses of the 'modified Weyl—Berry conjecture' are satisfied). In
+addition, in this case, we have
+Y) = ^—^LD. 
+(2.7)
+By combining Theorems 2.1(b) and 2.2, we can now establish Conjecture 1 [16,
+Conjecture 5.1, p. 520] in the case when n = 1. We also obtain the exact value of
+the constant c l o which is expressed in terms of £(£>).
+COROLLARY 2.3 (resolution of the modified Weyl-Berry conjecture in the
+one-dimensional case). Let Q be a bounded open subset of U such that T = dQ is
+Minkowski measurable and of Minkowski dimension D e (0, 1). Then
+7V(A) = <p(A) - cl<DM(D ; F)AD/2 + o(kD/2), 
+as A-» +oo, 
+(2.8)
+where <p(A) = JZ~
+1 \£l\x A^ and the positive 
+constant clD is given by
+chD :=2-<1-°>;r-D(l - D)(-£(D)). 
+(2.9)
+2.2. Sharp remainder estimates: resolution of Conjecture V
+Let {v} := v — [v] in [0,1) denote the fractional part of the real number v. If
+f(x),g(x) 
+are real-valued functions defined on a subset of IR, we write
+J(x)~g(x) 
+as JC—»a' if there are positive constants cx,c2 such that 
+cxf(x)^
+g(x)^ c2f(x) for all x in some neighbourhood of a and in the domains of both /
+and g. Here, a e IR U {±°°}.
+The following result not only settles Conjecture 1' in the case where n = 1, but
+the converse and more.
+
+
+--- PDF page 7 ---
+RIEMANN ZETA-FUNCTION AND FRACTAL DRUMS 
+47
+THEOREM 2.4. Let Q be a bounded open subset ofU, let (/y)7=i be the associated
+sequence, and let D e (0, 1). The following assertions are equivalent:
+(ii) r = dQ has Minkowski dimension D and
+0 < M*{D ; T) ^ M*(D ; F) <
+(iii) E,"=i {IJX} ~xD asx^> +oo;
+(iv) <p(A) - N(X) ~ KDa as A ^ +oo.
+Note that (2.2) gives the identity <p(A) - N(X) = EJLi {Ijx} with x = x~lti, 
+so
+that the equivalence (iii)<=>(iv) in Theorem 2.4 is immediate.
+We shall also provide additional results connected with the one-sided estimates
+of [16, Theorem 2.1 and Corollary 2.1, pp. 479-480] (see § 3.3). In particular, we
+shall show that when n = 1 and D e (0, 1), the error estimate (1.12) is equivalent
+to the hypothesis M*(D ; F) < +oo. (See Theorem 3.10.)
+Note that the assumption in our results that Q is bounded may be relaxed to
+|Q|,<+oo.
+Since, when n = \, the Sobolev space Hl{Q)czHl(Q) 
+is composed of con-
+tinuous functions (see, for example, [5, Theorem VIII.7, p. 129]), the Dirichlet
+boundary condition 'w = 0 on F' in equation (1.1) can be understood pointwise
+here.
+We can of course deduce (by an abelian argument) from the results of § 2.2
+two-sided estimates for the asymptotics of the 'partition function'
+Z(0=i>~V= f e-XtdN{X)',
+namely, (iv) of Theorem 2.4 yields
+where %jj(t):=(4jz)~^\Q\1t~^. Similarly, we deduce from the results of §2.1 a
+second term for the asymptotics of Z(t); namely, equation (2.8) yields
+Z(t) = V>(0 - c1>Dr(l + \D)M(D ; Y)rDI2 + o(rD/2), 
+as /-• 0+,
+with cx D given by (2.9). These results extend those of [6] in the case where
+n = \.
+It is natural to wonder whether Theorem 2.1 admits a converse. After this work
+was completed, M. L. Lapidus and H. Maier [21] addressed this question and
+connected it with the Riemann hypothesis. More precisely, they have shown that
+a somewhat weaker form of the converse of Conjecture 1 when n = 1 (equi-
+valently, of Corollary 2.3 or of Theorem 2.1 above) is true for a given value of
+D e (0, 1) if and only if £ = £(s) does not have a zero on the corresponding
+vertical line Res = D. In particular, it is not true when D = \ (the 'midfractaV
+case, in the sense of [16]), and is true everywhere else (that is, for all D e (0, 1),
+D =£ 2) if and only if the Riemann hypothesis is true.
+3. Proof of Conjecture V in the case of dimension one
+3.1. Two-sided estimates
+We shall first derive expressions for M*(D ; F) and M*(D ; F) that depend only
+on the sequence (/;)7=i associated with Q. Since Fe D Q = Uy°°=i ((3/y)e n If), and
+
+
+--- PDF page 8 ---
+48 
+MICHEL L. LAPIDUS AND CARL POMERANCE
+since \(dlj)e n lj\x = min(/y, 2e), we have
+j=\ 
+j>J(2e)
+where, for £>0,
+/(£):= max{y^l: l^e). 
+(3.1)
+(By convention, if /, < e for every j 2s 1, we set J(e) = 0.) Hence, if
+LD(s):=2eDJ(2s) 
++ eD-1 
+£ 
+//, 
+(3.2)
+y>y(2e)
+we have that
+M*(D ; 0 = lim inf LD(e) 
+and M*(D ; V) = lim sup LD(e). 
+(3.3)
+e—0+ 
+e->0+
+In the rest of this section, it will be convenient to adopt the following notation
+and terminology. If D e [0, 1] and (/y)7=i is any non-increasing sequence tending
+to zero, we set
+M* = M*(D ; (/,)) := lim inf LD(e), 
+M* = M*{D ; (/.)) := lim sup LD(e), 
+(3.4)
+e-*0+ 
+e-»0+
+where LD{e) is defined by (3.2), with J{e) given by (3.1). We define the
+'Minkowski dimension' of (/y-)7=i a s t n e mfi m u m of those D with M* =0. This is
+also equal to the supremum of those D with M* = +<». If 0< M* = M* < +<*>, we
+write M = M(D ; (/,)) for this common value. We then say that the sequence
+(//)"= i is 'Minkowski measurable' (with Minkowski dimension D) and has
+'Minkowski content' M. (Of course, if (/,)7=i is the sequence associated with the
+open set Q, then Y=dQ is Minkowski measurable if and only if (/,)7=i is;
+moreover, in this case, by (3.3) and (3.4), the associated values of M coincide.)
+Further, we let
+a =a(D ;(/,)):= lim inf lfD 
+and P = p(D ; (/y)):= limsup/yy1/D. (3.5)
+We can now state the following result that will be used, in particular, in the
+proofs of Theorems 2.4 and 2.2:
+THEOREM 3.1. Given D e (0, 1), let (/y)7=i be any positive non-increasing
+sequence such that 0<a^fi< 
++°° (that is, lj ~j~VD, as j—> <»).
+(a) Then (/y)7=i has Minkowski dimension D and
+) , 
+(3.6)
+where
+f(u, v) :=2'~D(uD + ^ u v D - > ) . 
+(3.7)
+(b) In particular, if <x = f$ = L, for some L > 0 (that is, if lj ~ Lj~VD, as ;'—»«>),
+then (/y)7=i is Minkowski measurable (with Minkowski dimension D) and its
+Minkowski content is given by
+^-^LD. 
+(3.8)
+
+
+--- PDF page 9 ---
+RIEMANN ZETA-FUNCTION AND FRACTAL DRUMS 
+49
+Proof. Part (b) clearly follows from Part (a). We now establish Part (a). Let OCJ
+be defined by /, = (Xjj~VD. Thus, by (3.5), a = lim inf ay and )5 = lim sup a}. From
+the definition (3.1) of J(e), we have
+j
+Thus
+{a + o(l))D(2e)-D ^J(2e)^(P + O(1))D(2E)-D, 
+as e-*0+. 
+(3.9)
+Note that since D e (0,1),
+j>T 
+I — U
+Thus
+2
+~ ,— 1'D
+OCj]
+- L> 
+j>J(2e)
+ase^O +. 
+(3.10)
+Putting (3.9) into (3.10) and noting that 1 - (1/D) <0, we have as
+2 «,r"D= S h
+j>J(2e) 
+j>J(2e)
+1(2£)1-° ^
+. 
+(3.11)
+Multiplying (3.9) by 2e° and (3.11) by eD~l, we deduce upon adding them
+that, as e-»0+,
+— V 
+) 
+j>J(2e)
+D + PaD-l^ 
++ o(l)). 
+(3.12)
+In view of definition (3.4), we now obtain (3.6) by taking the lower and upper
+limits as e—>0+ in (3.12). Further, (3.6) implies that (/,•)£= i has Minkowski
+dimension D. This establishes Part (a) and concludes the proof of Theorem 3.1.
+Here and henceforth, it will be convenient to adopt the following notation. If
+(/,)"=! is any positive non-increasing sequence such that £°°=i /, < +°°, we set, for
+JC>0,
+d(x) : = 2 /,* - £ [Ijx] = £ {Ijx}; 
+(3.13)
+y=i 
+y=i 
+y=i
+moreover, we let
+<5*:=liminfjt-°<5(jt) 
+and 6* := lim sup A : " ^ * ) . 
+(3.14)
+X—»+°o 
+JT—»+oo
+The previous theorem contained the implication (i) => (ii) in Theorem 2.4. The
+next theorem contains the implication (i)=>(iii).
+
+
+--- PDF page 10 ---
+50 
+MICHEL L. LAPIDUS AND CARL POMERANCE
+THEOREM 3.2. Given D e (0, 1), let (/y)J°=i be an arbitrary positive non-
+increasing sequence such that 0< or *s /3<+o° (that is, lj ~j~l/D, as j—> <»). Then
+-aPD~l^d*^d*^pD+- 
+-Pa0'1. 
+(3.15)
+Proof. We have
+1 
+' 
+' 
+'
+so that using 0 «£ {v} < 1 for all v, we obtain
+xl~D
+lj*x-°6(x)^x-DJ(x-1)+xl-D 
+2 h- 
+(3-16)
+«) 
+'
+From (3.9) with 2e = x~l, we have as x-* +00,
+J C - ^ J C - ^ ^ ^ + OCI).
+Similarly, from (3.11) with 2e = x~l, we have as JC—» +<»,
+1-° 2 lJ*PaD-l-£- + o(l).
+>>y(x-') 
+1 — L>
+^ 
++ o(l)
+L — Lf
+Putting these inequalities into (3.16) yields, as x-+ +00,
+from which, in view of definition (3.14), the conclusion (3.15) of Theorem 3.2
+follows at once.
+3.2. Proof of Conjecture V and of its converse
+The following result contains the implication (iii) => (i) in Theorem 2.4.
+THEOREM 3.3. Let / 1 ^ / 2 ^ . . . > 0 be such that E7=i/y<+°° and let 6(x) be
+defined by (3.13). Assume that for some D e (0, 1),
+d(x)~xD, 
+as x^+oo. 
+(3.17)
+Then
+lj*j-VD, 
+asj-^oo. 
+(3.18)
+Proof. By assumption, there exist positive constants, cu c2 and x0 such that
+clxD^6(x)^c2xD, 
+forall;t2s*o. 
+(3.19)
+Let k ^ 2 be a fixed integer with k > {2c2lcx)m~D), so that
+c2kD<\cxk. 
+(3.20)
+Let
+U.= 2 
+{//*} and V:= 2 
+{//*}, 
+(3.21a)
+
+
+--- PDF page 11 ---
+RIEMANN ZETA-FUNCTION AND FRACTAL DRUMS 
+51
+so that
+00
+yZ . 
+(3.21b)
+Thus, since k{v} = {kv} for {v} <k~\ it follows from (3.19) and (3.20) that for
+x^x0 
+(and hence kx^x0),
+Consequently, U <\^{x) and hence, by (3.21b), V>\d(x). 
+We deduce from
+the last inequality that the number of/ with {ljx}^k~l 
+is greater than 2<H*)
+(since each {Ijx} is less than 1); a fortiori, the same is true of the number of;
+with ljX 5= k~l or, equivalently, /; 2s (kx)~x.
+Thus, with J(e) defined as in (3.1), it follows from the above discussion that
+J(l/kx) > ld(x) ^ \cxxD. 
+(3.22)
+Since /,|0, there exists a positive integer j \ such that ljy<(kx0)~l; so that
+xo<(klj)~1, for all j^j\. Fix j^j\ and consider x with xo^x <(klj)~l; so that
+If < (kx)~x. Then, by definition of /(e) and by (3.22),
+\cxxD<J{llkx)<j. 
+(3.23)
+This is true for all xe[x0, 1/klj); so letting x^>(l/klj)~ in (3.23), we obtain
+\cx{\lklj)D ^j, which implies that
+lfjyD ^ k-\\cx)yD 
+for all j ^;,.
+Thus
+a = lim inf/yy1/D ^ k-\hcx)yD 
+> 0. 
+(3.24)
+J 
+»00
+Next, let a denote the number of j e (J(2/x), J(l/x)] with {Ijx} ^ \ and let T
+denote the number of j in this interval with {/,*} < | . Then
+o + r = /(1/x) - /(2/JC). 
+(3.25a)
+But, by definition of o and 6(A:),
+\o^b{x). 
+(3.25b)
+Further, if; is counted by T, then {lj\x)^\. 
+(Indeed, J(l/x)^j>J(2/x) 
+implies
+that \ ^ \ljX < 1 and hence {/,.£*} = 5/^ ^ i ) So
+h^5(W- 
+(3.25c)
+Therefore, (3.25) yields
+2(1 + 2-/>)C2JC° =£ 4c2xD; 
+(3.26)
+this is valid for all x s* 2JC0.
+Now, for any x s* 2A:0, let m = m{x) be that integer such that
+
+
+--- PDF page 12 ---
+52 
+MICHEL L. LAPIDUS AND CARL POMERANCE
+Then, since jc/2m~1^2jc0, we can apply estimate (3.26) with x replaced by x/2k,
+for k = 0,..., m - 1, and since also 1/2JCO<2W/X, we have successively
+%«•&»&
+%
+Let J0: = J(l/2x0) and let j>J0; further, let x := 1//,, so that x >2x0. Then we
+deduce from (3.27) and (3.1) that
+from which we obtain
+Thus
+4 ^ 
+< + . 
+(3.28)
+Together with (3.24), this yields (3.18) and hence proves Theorem 3.3.
+REMARK 3.4. We have used the full hypothesis (3.17) to prove (3.24), but only
+the assumption 6* := \\msupx^,+<xx~Dd(x)< 
++<» to prove (3.28). In other
+words, with the notation of (3.5) and (3.14), 8* < +°° implies that /S < +°°. On
+the other hand, ar>0 seems to require both 6*>0 and <5*<+°°. We shall
+discuss this issue later in this section.
+The next result contains part of the implication (ii) => (i) in Theorem 2.4:
+THEOREM 3.5. Suppose that /j ^ / 2^... >0 and 0<MJt:^M*< 
++oo, for some
+D e (0, 1). Then a > 0.
+We note that in the above statement, a > 0 means that a e (0, +«>]. It should
+be clear from the context when we use such a convention elsewhere in the paper.
+In order to prove Theorem 3.5, we shall use the following lemma.
+LEMMA 3.6. // lim infe_0+ e°J{e) > 0, then a > 0.
+Proof of Lemma 3.6. Let oc, := ljjVD. If /, = lj+u then a, < aJ+x. Thus
+a = lim inf ar, = lim inf aj+,. 
+(3.29)
+y—co 
+y :/,>/>+,
+Suppose liminfe_0
++ eDJ(e)>0. Then there is some C>0 with e°/(e)^ C for all
+£>0. Say lj>lj+x. For any e in (/;+1, /,), we have J(e)=j and hence 
+eDj^C;
+
+
+--- PDF page 13 ---
+RIEMANN ZETA-FUNCTION AND FRACTAL DRUMS 
+53
+that is, e^CVDj~yD. 
+Since this is true for any ee(/,+1, /,), we may let e—flj+y
+and obtain
+Thus aj+l = /,+,(/ + \)VD > CVD and hence
+l i m i n f 
+a
+j
++
+1 ^ C
+V ;
+which in view of (3.29), implies that a>0, as required.
+Proof of Theorem 3.5. Since M* <+<», it follows from definitions (3.2) and
+(3.4) that there is some finite constant M such that
+eD~' 2 h*M, 
+(3-30)
+y>y(2e)
+for all e>0. From Lemma 3.6, in order to prove that a>0, it is sufficient
+to show that lim infe_»0
++ £DJ(£) > 0. Suppose the contrary is true, that, is,
+lim infe_0+ £DJ(e) — 0. Let eA > e2>... be a sequence such that lim^^ {eq)DJ{eq)
+= 0. Let
+0q:={eq)DJ{eq).
+q:={eq)J{eq
+We may assume that each 6q<\. Let
+r,q:=(dqyhq, 
+(3.31b)
+so that 2r)q > 2eq and hence J{2r}q) ^J(2eq)^J(eq). 
+We then have, by (3.2),
+LD(r,g) = (%)D-1 
+S 
+h + 2{r]q)DJ{2r]q)
+j>J(2r\q)
+= (rjq)D-1 
+2 
+lj + (Vq)D-1 
+S 
+lj + 2(r,q)DJ(2Vq)
+J(2Vq)<j*U(2eq) 
+j>J{2eq)
+= :Eq + Fq + Gq, say. 
+(3.32)
+Now, in view of (3.31),
+Gq = 
+2(rjq)DJ(2r,q)^2(r,q)DJ(8q)
+= 2(dqy-iD/2) ^ 2(0qYl-D)n. 
+(3.33)
+Similarly, since lj<2r\q whenever j>J(2rjq), we have as in (3.33),
+i-D)/2. 
+(3.34)
+Finally,
+J>J(2eq) 
+j>J(2eq)
+^M(^) ( 1" D ) / 2, 
+(3.35)
+where we have used (3.30) in the last inequality of (3.35).
+
+
+--- PDF page 14 ---
+54 
+MICHEL L. LAPIDUS AND CARL POMERANCE
+Putting together (3.32)-(3.35), we obtain
+- ^ 
+(3.36)
+But 0q = (£q)DJ(£q)—>0, as ^-»°°; so LD{r]q)^>0, which contradicts the assump-
+tion M* > 0.
+The following result is really a corollary of Remark 3.4 and of the proof of
+Theorem 3.2. It completes our proof of Theorem 2.4.
+THEOREM 3.7. Let lx ^ l2^... > 0 with E°°=1 /, < +<». //M* < +°°, then p < +<».
+Proof. Recalling the definition (3.2) of LD{e), we deduce from the easy
+inequality (3.16) that
+(3.37)
+Hence
+6* = lim sup x~Dd(x) ^ lim sup 2 D " ^ o ( ^ ) = 2°-^*.
+Since by assumption, ^ * < +<», we thus have d* < +°o. The fact that j8 < +<»
+now follows from Remark 3.4.
+REMARK 3.8. From the above proof, we deduce that Ji* < +<» implies
+S* < -l-oo, a (one-dimensional) result contained in [16].
+3.3. Further related results: one-sided estimates and examples
+Recall the definitions of M*, M*, a, P, 6*, d* from (3.4), (3.5) and (3.14).
+These quantities are functions of a number D e [0, 1] and a non-increasing
+sequence (/,-)"= i of positive numbers.
+We establish here further results related either to Conjecture 1' or to its
+converse. We obtain, in particular, an analogue of Theorem 2.4 for one-sided
+estimates; to do so, we shall need the following converse to Theorem 3.7.
+THEOREM 3.9. Let D e (0, 1). Assume that / 1^/ 2^=...>0 and E"=i/, <+°°.
+Then p < +°° implies that M* < +<».
+Proof. Assume that )S< +°°. Then, in view of definitions (3.4) and (3.2), we
+have
+,) 
+(3.38)
+j>J(2e) I
+It follows from (3.9) that
+2eDJ(2e)^2l-°pD 
++ o(l), as e->0+; 
+(3.39)
+thus there is some finite number Q with
+/(E) ss e~DQ, 
+for all e > 0. 
+(3.40)
+
+
+--- PDF page 15 ---
+RIEMANN ZETA-FUNCTION AND FRACTAL DRUMS 
+55
+Now, by (3.40) and since /(2e)^y(e)^/(^e)^... and lj<2'k+le 
+for j>
+J(2~k+1e),
+7(2"*E)
+y>y(2e)
+Thus, since D - 1< 0,
+j>J(2e) 
+k=O 
+1 — Z
+In view of (3.38), our result follows from this inequality and (3.39).
+We can now state the counterpart of Theorem 2.4 for one-sided (upper)
+estimates. It shows, in particular, that (when n = 1 and D e (0, 1)) the conclusion
+of [16, Theorem 2.1, p. 479] (in the case of the Laplacian) is equivalent to its
+hypothesis.
+THEOREM 3.10. Let D e (0, 1) and let (/y);°°=i be an arbitrary non-increasing
+positive sequence such that E7=i'y<+00- Then the following statements are
+equivalent:
+(i) lj = 
+OU-VD),asj^co;
+(ii) ^*<+oo;
+(iii) 6(x) = O(xD), 
+asx^+oo;
+and if, in addition, (/y)7=i is the sequence associated with Q,
+(iv) /V(A) = <p(A) + O(AD/2), as A-* +oo.
+Proof. The fact that (i) implies (ii) follows from Theorem 3.9; (ii) implies (iii)
+is just the one-dimensional case of [16, Theorem 2.1 or Corollary 2.1, pp.
+479-480], and an independent proof of it was given above (see Remark 3.8).
+Finally, the fact that (iii) implies (i) follows from Remark 3.4. (Statements (iii)
+and (iv) are obviously equivalent.)
+We now turn our attention to one-sided lower estimates. It turns out that the
+natural analogue to Theorem 3.10 is not true. First we record two simple
+implications concerning lower estimates.
+THEOREM 3.11. Let De(0,l) 
+and let (/y)y°=i be an arbitrary non-increasing
+positive sequence such that Ey°=i/y<+°°. Then ar>0 implies M*>0 and <5*>0
+implies M*>0.
+Proof. In view of definitions (3.2) and (3.4), the first assertion follows
+immediately from the first inequality in (3.9). The second assertion follows
+immediately from taking JC—» +<» in (3.37).
+It turns out that there are no other relationships between a, M* and 6* than
+those given in Theorem 3.11. That is, it is possible for or>0 with <5*=0, for
+M* > 0 with a = 6* = 0, and for 6* > 0 with a = 0. The following examples
+illustrate these phenomena.
+
+
+--- PDF page 16 ---
+56 
+MICHEL L. LAPIDUS AND CARL POMERANCE
+EXAMPLE 3.12. Consider the multi-set of elements /y where we have 2(*+1)2
+copies of 5~*2 for k = 1, 2, ... . Then D = Iog2/log5, a = 1 >0 and d* = 0. The
+proof is routine and left to the reader (as with the next two examples). The
+authors would be happy to send details upon request.
+EXAMPLE 3.13. Consider the multi-set of /, where we have [22*+1/3] copies of
+4"2*"', for k = 1, 2, .... Then D = \, a = <5* = 0 and Mm = 2^ > 0.
+EXAMPLE 3.14. Consider the set of I, where we have [22*+l/3] numbers in
+arithmetic progression from 4~2*"' to 4~2*+l/3, for k = 1, 2,... . Then D = {, a = 0
+and 0 < 6* < +oo.
+4. Proof of Conjecture 1 in the case of dimension one
+4.1. Characterization of Minkowski measurability
+Let (lj)J=i be a non-increasing sequence of positive numbers such that
+Ey°°=i h < +0° anc* ^et ^o(e) b e given by (3.2), with D e (0, 1). We have shown in
+Theorem 3.1(b) that if /y~Ly"1/D, for some L>0, then the sequence (/y)J°=1 is
+Minkowski measurable (that is, lime_>0+ LD(e) exists in (0, +oo)) with Minkowski
+dimension D and its Minkowski content M is given by
+2l~D
+M:= lim LD{e) = - 
+-L°.
+e-»0+ 
+1 — D
+We establish here the converse of this result and hence characterize the
+situation when (/,)"= i is Minkowski measurable with D e (0, 1). Hence Theorem
+2.2 follows from Theorem 3.1(b) and Theorem 4.1 below.
+THEOREM 4.1. Suppose that (/,•)"= i is a non-increasing sequence of positive
+numbers with £J°=i/; <+ 0 0 and such that for some L>0 and De(0, 1), the
+following limit exists and is given by
+^ 
+(4.1)
+limLD(e) 
+2
+.
+E—o
++ 
+1 — D
+Then we have
+UD 
+(4.2)
+Proof. The proof of Theorem 4.1 is rather long and difficult, although of an
+elementary nature; it is divided into two steps. The heart of the proof, provided
+in Step 1, consists in establishing the theorem under the assumption that the
+sequence (/y)7=i is strictly monotone and lj+xllj—> 1. Then, in Step 2, we show that
+the general case can always be reduced to the special case treated in Step 1.
+Step 1. We assume that (/,)"=i is strictly decreasing and that lj+1/lj—>1, as
+y - * oo.
+For each j , define ocjy )8y by the equations
+/ - n rXID 
+Y / - R 
+D 
+,
+k>j 
+I — LJ
+
+
+--- PDF page 17 ---
+RIEMANN ZETA-FUNCTION AND FRACTAL DRUMS 
+57
+Since (/,•)"= 1 is strictly decreasing, we have, with J(e) defined by (3.1),
+/(/,)=;, 
+for ally 2*1.
+Then, in view of (3.2),
+Since /;—»>0+, it thus follows from (4.1) that
+lim ((.,)"+ (^-ft r^)= T^. 
+(4.3)
+We now show that
+lim sup j3, =£ L. 
+(4.4)
+Define a positive number yy by the equation
+From (4.3), yy—> L, as /—»«>. For fixed b >0 and D e (0, 1), the minimum value
+of aD + (aD~1bD/(l — D)) on the interval (0, +°o) occurs when a = b and is equal
+to bDl{\ - D). Thus (Pj)D/(l -D)^ (y,)°/(l - D) and hence 0, ^ yy for each y,
+which proves (4.4).
+Next we show that
+liminf ary^L and lim sup oy^L. 
+(4.5)
+y ° °
+y
+If the first inequality in (4.5) fails, then there is some 6 > 0 with ary > L + 6, for
+all large y. Then for large y,
+= 2/*-
+\lD
+dt = (L + 6)
+where the last inequality holds since D e (0, 1) and the function t UD is
+decreasing for t > 0. Thus lim inf fi} ^ L + 6, which contradicts (4.4).
+To show the second inequality in (4.5), let
+p := lim sup <Xj.
+j »oo
+Then an argument analogous to the one just completed shows that
+lim sup fa ss lim sup <*, = p.
+j—»«> 
+y-»oo
+
+
+--- PDF page 18 ---
+58 
+MICHEL L. LAPIDUS AND CARL POMERANCE
+Let jx <y2<... be a sequence of natural numbers for which lim*^.*, <xjk = p. Then
+ft* ^ aik + °(1)> as A:^ oo. Thus
+'or.-) 
+), as k —»oo.
+By Theorem 3.5, we have p >0. (Note that p was denoted by fi in § 3.) So that
+o((aJk)D~l) = o{\), as k—»oo. Since yy—»L and ajk^>p, we deduce that
+showing that L^p 
+and establishing (4.5).
+Next, suppose lim sup^o, OCJ > L. Then there are some 6 > 0 and an infinite set
+of subscripts j with (Xj> L + 6. Let
+so that 0< r0 < 1. If jx is large with <*, > L + 6, let ;0 = [re7i] and let h be the
+least subscript greater than jx with ary2 <L + (l//i). By the first inequality in (4.5),
+j2 exists. Since lJ+l/lj-* 1, by assumption, we have aj+jaj^' 
+1, which implies that
+0)2-» L as jx-*oo through those numbers with ay, > L + 6. Thus by (4.3), /3y-2-» L.
+If y0 </ <_/x, then lj > lJt so that
+f)
+Further, if ji<j<J2, then (Xj>L. Hence
+(M 
+*
+7o+1 
+-7o+l
+Therefore,
+-(-)
+W
+1 
+/• N
+
+
+--- PDF page 19 ---
+RIEMANN ZETA-FUNCTION AND FRACTAL DRUMS 
+59
+Since jfy2-> L, we thus have
+This contradicts (4.4) if jx is sufficiently large (which, of course, forces j0 to be
+large). Thus we deduce that
+lim sup oc} ^ L. 
+(4.6)
+y o o
+y-
+To conclude the proof of Step 1, we need to show that lim inf,Woo <x}2* L.
+Suppose not. Then there are some 0 with 0 < 6 < 1 and an infinite set S of
+subscripts / with a) =s L(l — 0) for all / e 5. Let
+Since (1 - 0)1"£>< 1 - (1 - D)0 and (1-O)-°>1, 
+it easily follows that 0<
+e<0.
+For each large j \ e 5, there is a unique j0 = yo(/i) such that
+7o <h> och > L{\ - e), and if jo<j <ju then or, < L(l - e).
+Indeed, the existence of j0 for all large jt e S follows from the second inequality in
+(4.5). For any/2>/i, we have
+7'>7o 
+7=7o+l 
+7=7i + l 
+j>j2
+j.
+£) E J~VD + (J2-Ji)lji + Ph* 
+n(/2)''
+7=7o+l 
+1 — U
+Pi
+Therefore,
+(l/O)-l
++ ft. I — '
+We now choose /2 = [(1 — 0) Dj\\. Using (4.4), we have
+/yo\(
+where the 'o(l)' tends to 0 as;*!—»°o through 5.
+The large parenthetical expression in (4.7) is
+
+
+--- PDF page 20 ---
+60 
+MICHEL L. LAPIDUS AND CARL POMERANCE
+by our choice of e. Thus from (4.7), we deduce that
+Now, from the definition of j0 and the assumption /,+1//y—»1, we have
+ajo = L(l — e) + o(l). Consequently,
+K)
+D (^D-'ft 
+^ 1 ^ " ( 1 )
+contradicting (4.3) as ji—>°°, j \ e S. Hence 5 is not infinite and we conclude that
+lim infy^a, or, s= L. Together with (4.6), this shows, as desired, that (Xj-*L, as
+y-»oo (that is, lj ~ Lj~VD) and concludes the proof of Step 1.
+Step 2. We now show that we may reduce the general case to the situation
+where (/,-)/! i is strictly decreasing and lj+xllj-*\. 
+To this end, let (/y)y°=i be an
+arbitrary sequence satisfying the hypothesis of the theorem.
+If lj > lj+u we have /(/,) =j and
+We conclude from (3.2) and (4.1) that
+If lj = lJ+l = ... = ljo > lj0+1, 
+then a, < aj+ , < . . . < ajo, s o that
+lim sup OCJ ^ L(l - D)-UD. 
+(4.8)
+We now show that the hypothesis of the theorem forces
+lim-i-=l, 
+(4.9)
+y—oo/y+l
+which is one of the two facts we need to complete the proof.
+Suppose (,5= e>/y+i. Then J(e)=j. 
+Writing e = rlj, where 1 5= r >/,+,//,, we
+have
+= r % + rD-1B/, 
+say.
+Then A,: + Bt, = LD(|//)^21"DL°/(1 - D), as y^oo through numbers with /, >
+/y+1. Since each Aj,Bj>0, 
+the set {(y4y, #,•): /y>/y+1} is contained in some
+compact subset KofU2- 
+{(0, 0)}.
+Suppose there is some 6 e (0, 1) such that //+i//y < 1 — 6 for infinitely many j .
+For any fixed A, B, let (o(A, B) denote the difference between the maximum and
+minimum values of the function rDA + rD~lB on the compact interval [1 — 6, 1].
+It is an elementary exercise that co(A, B) is continuous and positive on
+[R2-{(0, 0)}. Hence it assumes a positive minimum rf on the compact set K.
+Thus for each j with /y+i//y <\ — 0, there are ru r2 e [1 — 6, 1] with
+This contradicts (4.1), so we have (4.9).
+
+
+--- PDF page 21 ---
+RIEMANN ZETA-FUNCTION AND FRACTAL DRUMS 
+6 1
+For any real number e > 0 and / e N, define LD(e, j) by
+LD{e,j):=lEDj + 
+eD-^lk.
+k>j
+For example, LD(e, J(2e)) = LD{e), with LD{e) given by (3.2). We now show
+that if je is any integer with lje = /y(2e), then no matter how je is chosen for each
+e > 0, we have
+lim LD(e,je)= 
+lim LD{e). 
+(4.10)
+e-»0+ 
+e—0+
+Given e > 0, write j = je and y0 = J(2e). Then
+Zu 
+lk
+k=j+l
+Thus
+0*= LD(e, j) - LD(e) ^ eD-%(-2e + /,„).
+This last expression is a decreasing function of e for E>{{-^D~l)lh. 
+From
+(4.9), if e is sufficiently small (so thaty0 is large), we have
+e>y^>a-\D-i)ih.
+Thus replacing e with 2^0+i makes the expression larger, so that
+OS LD(e, j) - LD(e) <2'-D(^+,)°-Vo(-',,+ 
+i + '/„)
+Thus (4.8) and (4.9) imply (4.10).
+We now define a sequence (my)°°=1 of non-negative reals with the following
+properties. We let mx = 0. If /, > /y+1, we let mj+x = 0. If
+V == V+l = ••• = V+fc ^ v
+we let 0 < my+1 < my+2 <... < my+A. < lJ+k+x — lJ+k. Further, we choose the
+positive m values so small that, as j'•—*• °°,
+J,mq = o((ljy-D) 
+and my = O(/y). 
+(4.11)
+Then the positive sequence (/y - my)y°°=1 is strictly decreasing and /, ~ Lj~l/D if and
+only if lj — rrij ~ Lj~XID, as /—> <».
+We now show that (/y — my)°°=1 satisfies the same hypothesis (4.1) as (/y)y°°=i, thus
+completing our proof. Let /'( e) ^ e t n e analogue of the function J(e) for the
+sequence (/, — /ny)y°°=1. We need to prove that
+satisfies Lo(e)^2 1" DL°/(l-D), as £^>0+. To this end, it will suffice to show
+that 
+L'D(e)-LD(e)-^0.
+
+
+--- PDF page 22 ---
+62 
+MICHEL L. LAPIDUS AND CARL POMERANCE
+From the above construction, we have lj(e) = lj\e) for any e>0. Indeed, since
+lj - ntj ss ljy we have J'(e)^J{e). 
+If J'(e)<J(s), 
+then since
+for all j>J'{e) and since /y(e) 2* e, we have ray >0 for j = /'(f) + 1, ..., /(e). Thus
+(/'(«0 = h(ey
+We write
+L^(e) - LD(e) = (L^e) - LD(e, J'{2e))) + (LD(e, /'(2e)) - LD(e)). 
+(4.12)
+Now, by (4.10), LD(e, J'{2e)) - L o ( e ) ^ 0 as e-»0+. Further,
+IL^-Lo^/^e))^^-1 2 mq
+q>J\2e)
+=o{eD-\ir{2e)y-D)=o{eD-%{2e)y-D),
+by (4.11). Further, by (4.9), /y(2e)~2e as e-*0+. Thus the above expression is
+o(l). We conclude from (4.12) that L'D{e) -LD(e)->0, 
+as e-^0+, which
+completes our proof of Theorem 4.1.
+4.2. Existence of a second term: the Riemann zeta-function
+We conclude here the proof of Corollary 2.3 (Conjecture 1 in the case where
+n = 1) by proving Theorem 2.1, which we restate as follows:
+THEOREM 4.2. Suppose l1^l2^...>0 
+and
+lj~Lj-VD, 
+asj-*™, for L>0andD 
+€ (0, 1). 
+(4.13)
+Let d(x) = E;°°=i {//*}, as in (3.13). Then
+d(x)~-Z(D)LDxD, 
+as x-+ +oo, 
+(4.14)
+where £ — £(s) denotes the Riemann zeta-function.
+Proof Let J(e) be defined by (3.1). We easily deduce from (4.13) that
+J(e)~LDe~°, 
+ase^0+. 
+(4.15)
+Let k 2= 2 be an arbitrary fixed integer. Using J(l/x)^J(2/x) 
+2=..., the fact that
+J(q/x) <j ^J((q — l)/x) implies [IJX] = q — \, and various elementary rearrange-
+ments of sums, including partial summation, we obtain
+* 
+7(07-1)/*)
+Hx)=x 2 /y+ 2 {W + 2 
+2 (W
+j>J(\lx) 
+j=sj(k/x) 
+q=2j=J(q/x)+l
+k 
+J«q-l)/x)
+=* 2 />+ 2 {//*} + 2 
+2 
+(//x-^-i))
+j>J(\lx) 
+j*kJ(klx) 
+q=2j=J(qlx)+\
+j>J(klx) 
+j*Sj(k/x) 
+q=2
+= x 2 /y+ 2 {W-2^(f) +(^-!)/(;)• 
+(4.16)
+j>J(k/x) 
+^X' 
+\X/
+In the light of (4.16), we can write
+d(x)=A + B + C, 
+(4.17)
+
+
+--- PDF page 23 ---
+RIEMANN ZETA-FUNCTION AND FRACTAL DRUMS 
+6 3
+where
+A: = x 2 lj, 
+(4.18a)
+j>J(klx)
+B:=*/(-)-2/(-) 
+(4.18b)
+and
+C:= 2 
+({//x}-l). 
+(4.18c)
+Note that in (4.17) and (4.18), A, B and C depend on x. We now estimate, for
+fixed k, each of these terms, as JC—» +<».
+We first observe that since - 1 *s {/,*}-l<0, we have -J(k/x) ^ C ^ 0; it
+thus follows from (4.15) that (for fixed k),
+0 ^ -{Lx)~DC *s (Lx)-DJ(k/x)-» fc-°, as A:-* +~ 
+(4.19)
+Next, we deduce from (4.15) and (4.18b) that
+{LxyDB^kl-° - 2 q~°, as x^ +oo. 
+(4.20)
+q = l
+Further, we claim that
+indeed, according to (4.13) and (4.15), for each small e >0, there is some x o>0
+such that for all x^x0, we have /, e ((L - e)y"1/D, (L + e)r1/D) for all j>J(k/x).
+Thus, by (4.18a), we have for all
+A<x 2 (L + e)j-1/D<x(L + e) f 
+CUDdt
+j>J(k/x) 
+h(klx)
+Hence, by (4.15),
+i4 *£ (1 + o(l))*1-0 —— (L + e)^"1:*:0, 
+as JC-^ +oo.
+A similar computation shows that
+A 2* (1 + o(l))fcx-D YZJ) (L - e)^0"1^0, 
+as x^ +oo.
+Since e>0 can be chosen arbitrarily small, we have (4.21).
+Now, we combine (4.20) and (4.21) to obtain that for fixed k,
+A — ^ 
+9 = 1 
+1 — L>
+where
++
+— 5 1 — 5
+
+
+--- PDF page 24 ---
+64 
+MICHEL L. LAPIDUS AND CARL POMERANCE
+The sequence of entire functions {/*($)}*=! converges uniformly as k—• <» on
+every compact subset of Re s > 0 to the function
+f(s):=f (r'-[t]-')dt, 
+(4.23a)
+which is thus analytic in the domain Re 5 >0. Further, as noted in (2.3), we have
+^(s)> 
+for Res >0. 
+(4.23b)
+f(s) 
+7
+l—s
+Hence
+as*->». 
+(4.24)
+From (4.17), (4.19) and (4.22), we deduce that for each fixed k
+^k~D +fk{D) + - i - ^ lim inf (Lx)-Dd(x)
+1 — D 
+*-»+«>
+lim sup (Lx)-D6(x)
+1 — D
+By letting k-*<*> and using (4.24), we obtain (Lx)~Dd(x)-+ -£(£>) as jt->+°°;
+that is, (4.14) holds, as desired.
+4.3. Examples
+We illustrate our main results with two instructive examples. The first is
+actually a family of examples that illustrate Conjecture 1 (equivalent to Corollary
+2.3) for all values of D G (0, 1). Working out the details for this family of
+examples (with expert help on the computer from Mr Vivek Shivpuri) actually
+led us to our main results in this paper. This family was also used to illustrate the
+error estimates (in the case where n = 1) in [16]. The second example is the
+complement in [0,1] of everybody's 'favourite fractal' in dimension one, namely
+the ternary Cantor set. This example illustrates Conjecture 1' and its converse
+(see Theorem 2.4) and, in particular, shows that these results are the best
+possible.
+EXAMPLE 4.3 (cf. [16, Example 5.1, pp. 512-514]). Let a > 0 be fixed, but
+arbitrary. Let Q = Q(a) = (J7=i Ij, where /, = ((/ + l)~a, j ~
+a ) . Thus Q is a dense
+open subset of [0,1]. We have r = 9Q = {y"°: j ^ 1} U {0} and
+as ;'—•<». Thus (2.4) is satisfied with L = a and D-{a-\-\)~x. 
+It follows from
+Theorem 2.2 (or, for the present example, from [16, Theorem C of Appendix C,
+pp. 523-524]) that T is Minkowski measurable and
+In addition, we deduce from Corollary 2.3 that (not only does q)(k) — N(k) - AD/2,
+as A —*• +oo, as was shown for this example in [16, equation (5.8), p. 513], but also
+
+
+--- PDF page 25 ---
+RIEMANN ZETA-FUNCTION AND FRACTAL DRUMS 
+65
+that) the asymptotic expansion of N(X) admits a second term, given by
+N(X) = w" U* - chDM(D ; T)XD/2 + o(XDf2)
+= n-^ 
++ Z(D)(a/n)DXD/2 + o(XDn), 
+(4.25)
+as A—» +00. (Since |Q|a = 1 in this case, we have <p(A) = JT~XX^ here.)
+REMARK 4.4. Recall from [16] that since r is countable, we have H = 0 for
+every a > 0 and thus Berry's original conjecture [1,2] (expressed in terms of the
+Hausdorff dimension H rather than the Minkowski dimension D of T) clearly fails
+for this family of examples. As was pointed out in [16, Remarks 5.2(a), (b), p.
+514], this is due to the fact that the Hausdorff measure is countably additive
+whereas the pre-measure induced by the Minkowski content is only finitely
+sub-additive.
+EXAMPLE 4.5 (the Cantor set). Consider now the set T of x e [0, 1] which have
+a ternary expansion devoid of ones. This is the familiar ternary Cantor set. It is
+uncountable, compact and has (one-dimensional) Lebesgue measure 0. If Q is the
+complement of T in [0,1], we have that Q c U is open and dense in [0,1] with
+dQ = T. The sequence (/,•)"= i of interval lengths of the components of Q is
+I 
+1 I A. J_ i 
+J_
+3> 9? 95 27> 275 27> 27> •••»
+where we have 2k~x copies of 3"* for k = \, 2, ... . We now compute
+D, a, ft, d*, d*, M*, M* for T=3Q (that is, for the sequence (/y)J°=i). In
+particular, we shall see that 0 < a < ft < +oo and the same relationship holds for
+d*, d* and for M*, M*. Thus, in some sense, Theorem 2.4 is the best possible.
+THEOREM 4.6. The sequence {lj)J=\, where we have 2k~l copies of 3~* for
+k = l, 2, ..^satisfies D = \n2/\n3, a = §, 0 = 1, 6* = 1, 6* = 2,
+D I 
+\ D J 
+J 
+lh|
+and
+JJ* _ o2~D = 22~('n2/ln3)
+Proof Let
+j =j{k) = 1 + 2 + ... + 2*"1 = 2k - 1.
+Thus y ~ 2^ as A:^ oo. We have /, = 3~k, lJ+l = 3~k~\ Hence
+ljjn 
+n —1 and /y+i(y + 1) n n —3,
+as k —> 00. It is clear now that D = In 2/ln 3, a = 5 and /? = 1.
+We now compute <5* and 6*. Let x be large and let fc be a positive integer with
+3*^x<3*+1. Then
+/.JC<1
+1=1 
+I=/C + 1
+k
+= x~D 2 2'-1{3-/x} +x1-°(|)*. 
+(4.26)
+1 = 1
+
+
+--- PDF page 26 ---
+66 
+MICHEL L. LAPIDUS AND CARL POMERANCE
+The first term at the end of equation (4.26) is non-negative and the second is
+minimized for x in [3*, 3*+1) at x = 3k. But the first term is 0 at x = 3*, so for
+x € [3k, 3k+l), x~Dd{x) is minimized when x = 3k and the value there is exactly 1
+(using D = In 2/ln 3 and hence 3° = 2). Thus 6* = 1.
+The expression at the end of equation (4.26) is less than
+X-D 2 2'"1 + xl-D{lf 
+= x~D{2k - 1) + xl-D($)k;
+i=i
+that is, we have just replaced each {3~'x} with 1. Thus
+x-D6{x)<x-D2k 
++x1-D(l)k, 
+(4.27)
+for all x in [3*, 3k+l). For x in [3k, 3k+1], the expression on the right-hand side of
+(4.27) is maximized at the end points of this interval and has the value 2 at both
+end points (again using D = In 2/ln 3). Thus 6*^2. 
+Further, by choosing
+jt = 3*+1 - 3~\ we have each {3~'x} in equation (4.26) nearly equal to 1; it is
+1 - 3"*"'. For this value of x, we have xD = 2*+1(l -I- O{3~2k)). Thus we deduce
+from equation (4.26) that
+We conclude that <5* = 2.
+Finally, we compute M* and M*. Suppose e > 0 is small. Let A; be a positive
+integer with 3"* s= 2e > 3~k~l. Then
+J(2e) = 1 + 2 + ... + 2k~l = 2k - 1.
+Further,
+2
+j>J(2e)
+Thus, recalling (3.2), we have
+2 
+lj = 2eD(2k-1) 
++ ED~\
+/>y(2e)
+as e-»0+. The expression eD2k+l + eD~\l)k 
+is minimized for 2e in (3"*"1, 3"
+at e = (1 - D)/(2D . 3k) and has the value (using D = In 2/ln 3)
+there. Further, it is maximized at 3 k/2 (that is, at the right-hand end point) and
+has the value 22~D there. This concludes our computation of M* and M*.
+REMARKS 4.7. (a) According to Theorem 4.6, 0 < M* < M* < +°o and thus the
+Cantor set T = dQ is not Minkowski measurable; further, 0<d*<d* <+<*> and
+hence the asymptotic expansion of N(X) does not admit a monotonic second term
+(that is, X~DI2(N(X) — <p(A)) does not converge). Consequently, the error estim-
+ates of [16] (or of Theorem 3.10) are optimal and cannot be improved in this case;
+further, this example shows that the hypothesis of Minkowski measurability is
+necessary in the statement of Conjecture 1.
+
+
+--- PDF page 27 ---
+RIEMANN ZETA-FUNCTION AND FRACTAL DRUMS 
+67
+(b) Intuitively—and paradoxically in view of the comments made in [1]—the
+fact that N(X) does not admit an asymptotic second term is due to the symmetry
+of the boundary T (here, the self-similarity of the Cantor set). Indeed, this
+symmetry gives rise to high multiplicities in the eigenvalues (equivalently, in the
+interval lengths (/y)J°=i) and thus causes the function X~D/2(N(k) - qp(A)) to
+oscillate.
+(c) Since the Cantor set Y is self-similar and satisfies the 'open set condition',
+its Minkowski and Hausdorff dimensions coincide: D = H = In 2/ln 3, the 'simila-
+rity dimension' of T. (See, for example, [25, Theorem 4.19, p. 20].)
+4.4. Remarks
+We close this section with two related comments. As should be clear to the
+reader, the second one is of a purely speculative nature.
+4.4.a. Let M = M(D ;T) be the normalized Minkowski content of T. (If
+A c U", M(d;A) := M{d\A)l®n-d, 
+with S8m := jtm/2/T(l + \m), even if m is not
+an integer; here, T(s) denotes the classical gamma function. When d is an integer,
+this normalization is standard in geometric measure theory (see [9, p. 273]); in
+this case, when A is 'sufficiently regular' (that is, 'rf-rectifiable' [9, pp. 251, 275]),
+then Jt(d ;A) = \A\d, the (ordinary) rf-dimensional Lebesgue measure of A.)
+Then, in (2.9) (and in (4.25) above), we have
+chDM(D ; T) = A(D)M(D ; T), 
+(4.28)
+where
+The function A = A(s) (discovered in this somewhat surprising manner) is entire
+and satisfies the functional equation (equivalent to that of £ (see, for example, [32,
+§H]))
+&JtYA(s) = (ijz)l~sA(l - s), 
+for all s e C. 
+(4.30)
+Moreover, A has the same zeros as £ in the 'critical strip' 0 < Res < 1.
+Finally, we note that clearly, even when D = H and the Minkowski content is
+normalized as above, the associated normalized constant c1£):=A(£)) does not
+coincide with the corresponding value of % H (with H = D) conjectured by Berry
+in [1]. (Compare equations (1.9) and (4.29) above.)
+4.4.b. Could there exist a notion of 'complex fractal dimension' which would
+enable us to obtain a natural interpretation of £ and A in the 'critical strip'
+0 < R e s < l ? If so, we might extend to the complex domain the following
+observation: the vertical line Re5=0 to the left of the 'critical strip' would
+correspond to the least 'fractal' (that is, 'non-fractal') case. Similarly, the vertical
+line Re s = 1 to the right of the 'critical strip' would correspond to the most
+'fractal' case. Moreover, the symmetries of £ and A with respect to the 'critical
+line' Re s = \ (the 'midfractaV case, in the sense of [16]) could naturally be
+r e i n t e r p r e t e d in t e r m s o f t h e 'conjugate 
+fractional 
+exponents' 
+s a n d 1 — s
+(introduced in [16, Remarks 4.10 and 5.3(a), pp. 507-508, 515] for s e [0, 1]). -
+
+
+--- PDF page 28 ---
+68 
+MICHEL L. LAPIDUS AND CARL POMERANCE
+Acknowledgements
+The first author is grateful to his programmer, Mr Vivek Shivpuri, the
+Advanced Computational Methods Center (ACMC) of the University of Geor-
+gia, as well as to the Department of Applied Mathematics of the University
+Blaise Pascal (Clermont II) in Clermont-Ferrand, France, where he was Professor
+Invite in June 1988 at the beginning of this work, and to the Department of
+Mathematics of Yale University where he was Visiting Professor during the
+completion of the manuscript.
+The second author is grateful to the Institute for Advanced Study in Princeton,
+New Jersey, for its hospitality during the completion of work on this paper.
+Part of this work was presented (by M.L.L.) at the special session on
+'Geometric Spectral and Inverse Spectral Problems' of the Annual Meeting of the
+American Mathematical Society held in Louisville, Kentucky, in January 1990, as
+well as (see [19]) to the 'UAB International Conference on Mathematical Physics
+and Differential Equations' held in Birmingham, Alabama, in March 1990.
+References
+1. M. V. BERRY, 'Distribution of modes in fractal resonators', Structural stability in physics (eds W.
+Giittinger and H. Eikemeier, Springer, Berlin, 1979), pp. 51-53.
+2. M. V. BERRY, 'Some geometric aspects of wave motion: wavefront dislocations, diffraction
+catastrophes, diffractals', Geometry of the Laplace operator (eds R. Osserman and A.
+Weinstein), Proceedings of Symposia in Pure Mathematics 36 (American Mathematical Society,
+Providence, R. I., 1980), pp. 13-38.
+3. A. S. BESICOVITCH and S. J. TAYLOR, 'On the complementary intervals of a linear closed set of
+zero Lebesgue measure', /. London Math. Soc. 29 (1954) 449-459.
+4. G. BOULIGAND, 'Ensembles impropres et nombre dimensionneF, Bull. Sci. Math. (2) 52 (1928)
+320-344, 361-376.
+5. H. BREZIS, Analyse fonctionnelle: theorie et applications (Masson, Paris, 1983).
+6. J. BROSSARD and R. CARMONA, 'Can one hear the dimension of a fractal?', Comm. Math. Phys.
+104 (1986) 103-122.
+7. G. CHERBIT (ed.), Fractals, dimensions non entieres et applications (Masson, Paris, 1987).
+8. Y. DUPAIN, M. MENDES-FRANCE, and C. TRICOT, 'Dimension des spirales', Bull. Soc. Math.
+France 111 (1983) 193-201.
+9. H. FEDERER, Geometric measure theory (Springer, Berlin, 1969).
+10. J. HAWKES, 'Hausdorff measure, entropy, and the independence of small sets', Proc. London
+Math. Soc. (3) 28 (1974) 700-724.
+11. L. H6RMANDER, 'The spectral function of an elliptic operator', Ada Math. 121 (1968) 193-218.
+12. L. HORMANDER, The analysis of linear partial differential operators, vols III, IV (Springer, Berlin,
+1985).
+13. V. JA. IVRII, 'Second term of the spectral asymptotic expansion of the Laplace-Beltrami
+operator on manifolds with boundary', Functional Anal. Appl. 14 (1980) 98-106.
+14. V. JA. IVRII, Precise spectral asymptotics for elliptic operators acting in fiberings over manifolds
+with boundary, Lecture Notes in Mathematics 1100 (Springer, Berlin, 1984).
+15. J.-P. KAHANE and R. SALEM, Ensembles parfaits et series trigonometriques (Hermann, Paris,
+1963).
+16. M. L. LAPIDUS, 'Fractal drum, inverse spectral problems for elliptic operators and a partial
+resolution of the Weyl-Berry conjecture', Trans. Amer. Math. Soc. 325 (1991) 465-529.
+17. M. L. LAPIDUS, 'Can one hear the shape of a fractal drum? Partial resolution of the Weyl-Berry
+conjecture', Geometric analysis and computer graphics, Proceedings, MSRI, Berkeley, May
+1988 (eds P. Concus, R. Finn, and D. A. Hoffman), Mathematical Sciences Research Institute
+Publications 17 (Springer, Berlin, 1991), pp. 119-126.
+18. M. L. LAPIDUS, 'Minkowski dimension and lattice points in homogeneously expanding domains
+with fractal boundary', in preparation.
+19. M. L. LAPIDUS, 'Spectral and fractal geometry: from the Weyl-Berry conjecture for the
+vibrations of fractal drums to the Riemann zeta-function', Differential equations and mathe-
+matical physics, Proceedings of the UAB International Conference on Mathematical Physics
+and Differential Equations, Birmingham, Alabama, March 1990 (ed. C. Bennewitz, Academic
+Press, New York, 1992), pp. 151-182.
+
+
+--- PDF page 29 ---
+RIEMANN ZETA-FUNCTION AND FRACTAL DRUMS 
+69
+20. M. L. LAPIDUS and J. FLECKINGER-PELLE, 'Tambour fractal: vers une resolution de la conjecture
+de Weyl-Berry pour les valeurs propres du laplacien', C. R. Acad. Sci. Paris Sir. I Math. 306
+(1988) 171-175.
+21. M. L. LAPIDUS and H. MAIER, 'The Riemann hypothesis, inverse spectral problem for vibrating
+fractal strings and the modified Weyl-Berry conjecture', J. London Math. Soc. (2) to appear.
+Announced in 'Hypothese de Riemann, cordes fractales vibrantes et conjecture de Weyl-Berry
+modifie'e', C. R. Acad. Sci. Paris Sir. I Math. 313 (1991) 19-24.
+22. M. L. LAPIDUS and C. POMERANCE, 'Fonction zeta de Riemann et conjecture de Weyl-Berry
+pour les tambours fractals', C. R. Acad. Sci. Paris Sir. I Math. 310, No 6 (1990) 343-348.
+23. J. L. LIONS and E. MAGENES, Non-homogeneous boundary value problems and applications, vol.
+I, English translation (Springer, Berlin, 1972).
+24. B. B. MANDELBROT, The fractal geometry of nature, revised and enlarged edition (W. H.
+Freeman, New York, 1983).
+25. O. MARTIO and M. VUORINEN, 'Whitney cubes, p-capacity, and Minkowski content', Exposition.
+Math. 5 (1987) 17-40.
+26. R. B. MELROSE, 'Weyl's conjecture for manifolds with concave boundary', Geometry of the
+Laplace operator (eds R. Osserman and A. Weinstein), Proceedings of Symposia in Pure
+Mathematics 36 (American Mathematical Society, Providence, R. I., 1980), pp. 254-274.
+27. R. B. MELROSE, 'The trace of the wave group', Microlocal analysis (eds M. S. Baouendi, R.
+Beals, and L. P. Rothschild), Contemporary Mathematics 27 (American Mathematical Society,
+Providence, R. I., 1984), pp. 127-167.
+28. G. METIVIER, 'Valeurs propres de problemes aux limites elliptiques irre"guliers\ Bull. Soc. Math.
+France, Mini. 51-52 (1977) 125-219.
+29. THE LAI PHAM, 'Meilleures estimations asymptotiques des restes de la fonction spectrale et des
+valeurs propres relatifs au laplacien', Math. Scand. 48 (1981) 5-38.
+30. R. T. SEELEY, 'A sharp asymptotic remainder estimate for the eigenvalues of the Laplacian in a
+domain of 1R3', Adv. in Math. 29 (1978) 244-269.
+31. R. T. SEELEY, 'An estimate near the boundary for the spectral function of the Laplace operator',
+Amer. J. Math. 102 (1980) 869-902.
+32. E. C. TITCHMARSH, The theory of the Riemann zeta-function, 2nd edn (revised by D. R.
+Heath-Brown, Oxford University Press, 1986).
+33. C. TRICOT JR, 'Douze definitions de la density logarithmique', C. R. Acad. Sci. Paris Sir. I Math.
+293 (1981) 549-552.
+34. C. TRICOT JR, 'TWO definitions of fractal dimension', Math. Proc. Cambridge Philos. Soc. 91
+(1982) 57-74.
+35. H. WEYL, 'Uber die Abhangigkeit der Eigenschwingungen einer Membran von deren Begren-
+zung', J. Angew. Math. 141 (1912) 1-11.
+Department of Mathematics 
+Department of Mathematics
+Sprout Hall 
+Boyd Graduate Studies Research Center
+University of California 
+University of Georgia
+Riverside 
+Athens
+California 92521-0135 
+Georgia 30602
+U.S.A. 
+U.S.A.

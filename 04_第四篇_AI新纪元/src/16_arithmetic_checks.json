@@ -1,0 +1,6 @@
+{
+  "simple_and_on_line": "0.6725007036794116457343797908032951885934",
+  "distinct": "0.8362503518397058228671898954016475942967",
+  "short_interval_theta_three_quarters": "0.4190750129754243337345536106982424661657",
+  "checks": "Arithmetic only; no verification of analytic estimates or Lean build."
+}

@@ -35,7 +35,7 @@ def coverage():
  footer(f,'三项问题彼此相关，但一个覆盖数字不能替另外两项回答。','没有同行评审率或独立难题总数的可靠统计，此图不画这些比例。未在此统计中形式化也不等于错误。')
  save(f,'formalization_coverage_scope')
 def constraints():
- f=base('搜索一件乐器，先约束它能“偷看”什么','第20章 · 面向未来的谱搜索设想；算术输入可以有，目标零点不能被悄悄塞进边界条件')
+ f=base('搜索一件乐器，先约束它能“偷看”什么','第21章 · 面向未来的谱搜索设想；算术输入可以有，目标零点不能被悄悄塞进边界条件')
  a=panel(f,[.06,.22,.88,.57]);
  card(a,.015,.37,.23,.40);txt(a,.13,.68,'独立结构输入',19);txt(a,.13,.52,'素数与轨道规则\n空间、作用与边界',15);txt(a,.13,.20,'不是“禁止输入素数”',13,MUTED)
  arr(a,(.26,.56),(.39,.56));a.add_patch(Circle((.5,.56),.105,facecolor=LIGHT,edgecolor=TEAL,lw=2));txt(a,.5,.56,'候选 H',22)
@@ -47,7 +47,7 @@ def constraints():
  footer(f,'低位谱相似只是候选线索；还须得到无遗漏、无多余的完整解析对应。','虚线表示研究任务，不是已经接通的证明。此图不预测哪条路线成功，也不宣称存在RH自动证明系统。')
  save(f,'spectral_search_constraints')
 def certificates():
- f=base('一次失败，什么时候能成为证书？','第20章 · 将“值得降级的线索”与“严格排除一个模型”分开')
+ f=base('一次失败，什么时候能成为证书？','第21章 · 将“值得降级的线索”与“严格排除一个模型”分开')
  a=panel(f,[.06,.25,.42,.54]);b=panel(f,[.55,.25,.39,.54]);txt(a,.5,.91,'数值失配：调整优先级',21);txt(b,.5,.91,'严格冲突：排除指定对象',21)
  xs=np.linspace(.1,.9,7);a.plot(xs,.3+.15*np.sin(xs*4),color=TEAL,lw=2,marker='o');a.plot(xs,.3+.15*np.sin(xs*4)+np.linspace(0,.25,7),color=GOLD,lw=2,marker='s')
  a.axvline(.49,ymin=.15,ymax=.66,color=MUTED,ls='--');txt(a,.28,.12,'拟合区',14,MUTED);txt(a,.71,.12,'留出区',14,MUTED)
@@ -60,7 +60,7 @@ def certificates():
  footer(f,'先证明被比较的量与必要条件确实对应，再给出严格误差包络。','左右均为教学示意，不是实测数据。右图人为选取区间[−1,−1/2]与[1,2]，没有宣称排除了某条现有谱路线。')
  save(f,'candidate_failure_certificate')
 def epsilon():
- f=base('到达临界线，需要“每一个 ε”','第20章 · 有限次改善边界，不保证能逼近目标；全称量词才完成最后一步')
+ f=base('到达临界线，需要“每一个 ε”','第21章 · 有限次改善边界，不保证能逼近目标；全称量词才完成最后一步')
  a=f.add_axes([.09,.28,.82,.48],facecolor=BG);a.set_xlim(.45,.9);a.set_ylim(0,1);a.spines[['top','right','left']].set_visible(False);a.set_yticks([]);a.set_xticks([.5,.59,.68,.875],['1/2','1/2 + ε','1/2 + δ','7/8']);a.tick_params(axis='x',labelsize=16,colors=NAVY)
  a.axvspan(.59,.9,color=LIGHT);a.axvline(.5,color=TEAL,lw=2);a.axvline(.59,color=GOLD,lw=2,ls='--');a.axvline(.875,color=MUTED,lw=1,ls=':')
  a.scatter([.68],[.55],s=180,facecolor=BG,edgecolor=GOLD,lw=2.5);a.text(.68,.72,'假设的离线零点',ha='center',fontsize=20,color=NAVY)

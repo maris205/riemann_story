@@ -1,0 +1,983 @@
+
+--- PDF PAGE 1 ---
+The Absolute Twistor Line and the Geometry of Spec Z
+Alain Connes and Caterina Consani
+Abstract
+We construct the absolute algebraic geometry of the compactification Spec Z by
+amalgamating the affine absolute curve (Spec Z)F1 with an archimedean component
+defined over the signed extension F12 of F1. By adjoining a formal imaginary unit to
+the absolute projective line, we obtain an equivariant topos endowed with a canonical
+geometric inversion symmetry, which induces the twistor real structure on its com-
+plex points. This archimedean geometry is incorporated into a global absolute curve
+defined as an internal object of the odd arithmetic topos, dual to the multiplica-
+tive monoid of odd positive integers, and governed by the intrinsic Hopf structure of
+spherical F12-algebras. The restriction of the absolute Frobenius action to odd inte-
+gers is forced arithmetically by the extension of scalars to F12. On complex points,
+the resulting dynamics simultaneously generates the Adams operations and complex
+conjugation on real Hodge structures. At the categorical level, the odd arithmetic
+topos originates in the pericyclic category, whose λ-operations provide a conceptual
+interpretation of the local factors of geometric L-functions.
+1
+Introduction
+In this paper we construct the local geometry of the Zariski completion Spec Z at the
+archimedean place as an absolute twistor line. We show that this geometry is governed
+by the intrinsic Hopf structure of spherical F12-algebras.
+We then introduce a global
+absolute curve over F12 by amalgamating the affine absolute structure of Spec Z with
+this new archimedean component. The resulting curve is endowed with the canonical
+Frobenius action x 7−→xn, n ∈N×
+odd, whose restriction to the multiplicative monoid of
+odd integers is intrinsic to the F12-structure.
+The construction of the absolute avatar of Spec Z, i.e. the affine curve (Spec Z)F1 de-
+fined in [1], was guided by the description of the Picard monoid Pic(Spec Z) in terms of
+rank-one torsion-free abelian groups. This guiding principle is embodied in the following
+commutative diagram:
+Spec Z
+d
+N×
+0
+Pic(Spec Z)
+Θ
+θ
+κ
+(1)
+The map κ is the extension of the canonical bijection Pts(d
+N×)
+∼
+−→Pic(Spec Z), by sending
+the base point {0} of the arithmetic topos d
+N×
+0 to the generic point1 Z of Pic(Spec Z).
+1Z is the image via θ of the generic point of Spec Z, and it reflects the density of finite ideles in finite
+rational adeles.
+1
+arXiv:2609.00299v1  [math.AG]  31 Aug 2026
+
+
+--- PDF PAGE 2 ---
+This extension provides the starting point for the archimedean construction considered
+below.
+Moving from the affine curve (Spec Z)F1 to its completion Spec Z requires an extension
+of the diagram (1), both at the level of the underlying topos and of its structure sheaf.
+On the geometric side, the role of Pic(Spec Z) is naturally assumed by the Jacobian
+Jac(Spec Z). Under the extended map
+˜θ : Spec Z −→Jac(Spec Z),
+the archimedean point ∞∈Spec Z is mapped to the point
+˜θ(∞) := (Z, ∥· ∥= 0) ∈Jac(Spec Z).
+The rank-one abelian group Z is here endowed with the trivial archimedean seminorm
+and carries no distinguished choice of ordering. It is precisely this absence of a preferred
+ordering that determines the archimedean construction developed in this paper.
+At the adelic level, passing to the completion introduces exactly one additional parameter.
+More precisely,
+Jac(Spec Z) = Pic(Spec Z) × {∥· ∥= 0, ∥· ∦ = 0},
+(2)
+where the second factor records whether the archimedean seminorm is trivial or nontrivial.
+The genuine geometric content arises only after lifting this adelic description to the level
+of the underlying topos and its structure sheaf.
+To lift the product decomposition (2) to the level of the underlying topos, the essential
+distinction between the points of d
+N×
+0 and those of Pic(Spec Z) must be taken into account.
+Whereas a point of Pic(Spec Z) is represented by a rank-one torsion-free abelian group
+H, a point of the arithmetic topos d
+N×
+0 consists of an ordered group (H, H+). The choice
+of an ordering is an essential constituent of the local geometry, since it determines the
+stalk
+F1[T H+]
+of the structure sheaf of the arithmetic site (d
+N×
+0 , F1[T]) (see [1]). At the archimedean
+place, the absence of a distinguished ordering is resolved by passing to an equivariant
+geometry, which constitutes the main new construction of this paper.
+The archimedean point ˜θ(∞) ∈Jac(Spec Z) carries no distinguished choice of ordering,
+thus passing to the topos level requires resolving this unordered group into two possible
+orderings: Z≥0, and Z≤0. Correspondingly, the local structure of the sheaf is described
+by two affine charts with coordinate spherical algebras
+F1[T Z≥0]
+and
+F1[T Z≤0].
+These charts are glued together along their common intersection, corresponding to the
+canonical embeddings of the two ordered monoids into the underlying group Z. Thus the
+absence of a distinguished ordering at the archimedean place naturally gives rise to the
+absolute projective line P1
+F1 constructed in [10].
+The canonical isomorphism of the two orderings determines the geometric involution
+α : P1
+F1 −→P1
+F1,
+(3)
+which exchanges the two affine charts by reversing the ordering. This leads naturally to
+the definition of the archimedean equivariant topos
+[P1
+F1/⟨α⟩].
+2
+
+
+--- PDF PAGE 3 ---
+The underlying topological space of [P1
+F1/⟨α⟩] is the Sierpiński space {∥· ∥= 0, ∥· ∦ = 0},
+consisting of an orbifold generic point η∞and a closed point γ.
+The product decomposition (2) of the Jacobian has a natural counterpart at the level of
+the underlying topos. This is the extended arithmetic topos:
+S0 := d
+N×
+0 × [P1
+F1/⟨α⟩],
+where the factor [P1
+F1/⟨α⟩] defines the local geometry of the archimedean place.
+The commutative diagram (1) therefore extends to:
+Spec Z
+Spec Z
+d
+N×
+0
+S0 = d
+N×
+0 × [P1
+F1/⟨α⟩]
+Pic(Spec Z)
+Jac(Spec Z) = Pic(Spec Z) × {0, ∥· ∦ = 0}
+Θ
+θ
+˜Θ
+˜θ
+κ
+˜κ=κ×π
+where the extended map eκ = κ × π is the product of κ with the canonical projection
+π : [P1
+F1/⟨α⟩] −→{∥· ∥= 0, ∥· ∦ = 0}.
+The two parallel horizontal arrows in the middle row of the diagram are the canonical
+sections of the product topos. The map ˜Θ extends the original Θ by assigning to every
+prime p ∈Spec Z the point:
+˜Θ(p) = (Θ(p), η∞) ∈S0,
+where the second component records the nontrivial archimedean seminorm.
+The genuinely new feature is the image of the archimedean point. The map ˜Θ sends
+∞∈Spec Z to the point
+˜Θ(∞) = ({0}, γ) ∈S0.
+Here, the first coordinate is the generic point {0} of d
+N×
+0 , expressing that the archimedean
+place is not localized at any finite prime. The the second coordinate is the closed point γ
+of [P1
+F1/⟨α⟩], that records the vanishing of the archimedean seminorm.
+The geometric construction described above captures the topological and combinatorial
+structure of the archimedean place, and defines the projective line expected from the
+archimedean geometry of a genus zero curve (cf. [3, 5] and [12]).
+The next step implements the symmetry α in (3) at the structure sheaf level of the
+archimedean equivariant topos. In place of the naive sheaf symmetry T 7→1
+T , the con-
+ceptual choice, guided by the Weyl symmetry, selects the map:
+T 7→−1
+T .
+This requires an extension of scalars from F1 to the quadratic extension2:
+F12 := F1[{0, 1, ϵ : ϵ2 = 1}].
+(4)
+2F1 is the spherical algebra of the pointed monoid {0, 1}
+3
+
+
+--- PDF PAGE 4 ---
+The extension from F1 to F12 is what allows the absolute theory to retain the minimal
+additive datum—the canonical sign ϵ—while remaining “below” the full additive structure
+of classical rings. The use of F12 has a few precedents in our work, where it plays a central
+role in the development of absolute geometry (see [9, 7]).
+In this construction, we see F12 as the natural absolute base, or spherical algebra, equipped
+with a distinguished central sign element ϵ.
+Every commutative ring R carries a canonical F12-algebra structure, determined by the
+assignment ϵ 7−→−1R, which gives a canonical morphism of F1-algebras
+s : F12 →HR,
+s(ϵ) = −1R ∈HR(1+)
+that retains precisely the canonical sign and the additive involution x 7−→−x.
+Working over F12, we may adjoin a formal imaginary unit—an imaginary generator J—
+subject to the signed relation:
+J2 = ϵ.
+We recall from [10] the definition of the underlying topological space of P1
+F1. It consists
+of two closed points, denoted + and −, and a single generic point η. The non-trivial open
+sets are Ω+ = {+, η}, Ω−= {−, η}, and their intersection is denoted Ω= {η}.
+The structure sheaf of the archimedean equivariant topos is the sheaf O of spherical
+algebras over F12 whose sections on the open sets Ω± are defined by adjoining local
+generators J+ and J−as follows:
+O(Ω+) := F12[T, J+]
+
+(J2
++ = ϵ)
+O(Ω−) := F12[S, J−]
+
+(J2
+−= ϵ)
+On the common intersection Ω= {η}, the transition maps reflect the inversion of the
+ordering and the contravariant twisting of the imaginary generator:
+S = T −1
+and
+J−= ϵJ+.
+(5)
+The automorphism α in (3), topologically swaps the closed points: α(+) = −, and α(−) =
++. The induced action of α on the sheaf O is given (see Definition 4.1) by the F12-algebra
+isomorphisms α∗
+± : O(Ω∓) →O(Ω±):
+α∗
++(S) := ϵT,
+α∗
++(J−) := J+
+α∗
+−(T) := ϵS,
+α∗
+−(J+) := J−
+This definition is compatible with the contravariant transition map on Ω, since applying
+α∗to the equation J−= ϵJ+ yields the equivalent form J+ = ϵJ−, since ϵ2 = 1.
+Next definition introduces the main geometric object of the present paper
+Definition 1.1. We define
+C∞:= ([P1
+F12/⟨α⟩], O)
+as an equivariant topos over F12 with a selected structure sheaf.
+The next result identifies the complex points of this topos with those of the twistor
+projective line eP1 (see e.g. [13], [12]), including its canonical real structure.
+Theorem 1.2 (Theorem 5.1). The following statements hold
+1. The set C∞(C) is in canonical bijection with the classical projective line P1(C).
+4
+
+
+--- PDF PAGE 5 ---
+2. The canonical action of the complex conjugation on C∞(C) induces the fixed-point-
+free involution:
+z 7−→−1
+¯z .
+Thus the twistor line eP1
+R is rooted over F12 and arises canonically from the action of the
+standard complex conjugation on the geometrically folded absolute line.
+Definition 7.1 introduces the global absolute curve:
+¯
+C = (Spec Z)F12
+by amalgamating the finite absolute curve (Spec Z)F1 and the archimedean component
+C∞. This gluing is made possible by the orbifold symmetry at infinity, which collapses
+the generic archimedean stalk to F12, matching the generic stalk of the finite primes.
+To ensure the global rigidity of this space, we define the absolute curve ¯
+C as a dynamical
+geometric object internal to the odd arithmetic topos [
+N×
+odd.
+The F12-enrichment—specifically the twistor relation J2 = −1—arithmetically forces the
+absolute Frobenius endomorphisms Frn(x) = xn to be restricted to odd integers n.
+By evaluating global sections as morphisms from the terminal object in this topos, Propo-
+sition 7.3 shows that global sections are tautologically the simultaneous fixed points of
+the odd Frobenius action. This rigidly reduces the global sections to the base algebra
+F12, providing a purely absolute-algebraic realization of the compactness of Spec Z.
+Proposition 7.5 states that the odd arithmetic monoid induces a highly non-trivial
+branched dynamical system on the complex twistor line C∞(C). The action preserves
+the quaternionic real structure, acting as z 7→zn for n ≡1 (mod 4), and as z 7→−1/zn
+for n ≡3 (mod 4). This result is a geometric instance of the fact that the absolute ge-
+ometry of Spec Z intrinsically encodes the ramification of the prime 2 in the arithmetic
+of the Gaussian integers, seamlessly bridging absolute algebra, topos theory, and complex
+dynamics.
+The dynamical system induced by the odd arithmetic topos on the archimedean twistor
+line suggests a deep connection to real Hodge theory. In Simpson’s twistor construction
+[13], a real Hodge structure is encoded by a C×-equivariant vector bundle on P1(C),
+where the fibers at 0 and ∞encode the Hodge filtration and the conjugate filtration,
+respectively. Evaluating the pullback of such a twistor bundle along the odd Frobenius
+action Frn yields a striking cohomological interpretation. For n ≡1 (mod 4), the map
+z 7→zn fixes the poles, and the pullback geometrically realizes the Adams operation
+ψn, scaling the Hodge weights. For n ≡3 (mod 4), the map z 7→−1/zn applies the
+Adams operation but simultaneously swaps the poles 0 ↔∞. In the language of twistor
+bundles, this corresponds exactly to passing to the conjugate filtration. Thus, the absolute
+geometry of the odd arithmetic topos dynamically generates both the λ-ring structure
+(Adams operations) and the complex conjugation of real Hodge structures.
+Finally, it is worth noting that the emergence of the odd arithmetic topos in this con-
+struction has a natural categorical antecedent: it is already implicit in the pericyclic
+category Π of [4]. Through the associated λ-operations, this structure also underlies the
+cyclic-cohomological interpretation of the local factors of geometric L-functions (see [8]
+and [11]).
+5
+
+
+--- PDF PAGE 6 ---
+2
+Spherical Algebras and Intrinsic Hopf Structures over F12
+In classical algebraic geometry over a field or, more generally, over a ring, a space carries
+no natural group or monoid structure unless such a structure is explicitly specified, as in
+the case of algebraic groups. Absolute geometry over F1 and F12, by contrast, exhibits
+a remarkable rigidity: spaces arising from spherical monoid algebras naturally inherit
+canonical Hopf structures. It is this intrinsic feature that underlies the dynamical systems
+and equivariant bundles on the absolute curve.
+2.1
+The Lydakis-Day Product and Spherical Algebras
+The foundational objects of absolute geometry are commutative monoids M equipped
+with an absorbing zero element 0 and an identity 1. We refer to the associated absolute
+algebra F1[M] (and its signed enrichment F12[M]) as a spherical algebra.
+In the category of F1-algebras, the correct tensor product is the Lydakis-Day convolu-
+tion product. For the spherical algebras associated to pointed monoids M and N, this
+categorical tensor product reduces to the smash product of the underlying monoids:
+F1[M] ⊗F1 F1[N] ∼= F1[M ∧N],
+where the smash product M ∧N := (M × N)/(M × {0} ∪{0} × N) canonically identifies
+the absorbing zeros.
+When passing to the enriched base F12 := F1[{0, 1, ϵ : ϵ2 = 1}, the tensor product ⊗F12
+is similarly governed by the smash product, but with the additional F12-linear relations
+which allow the canonical sign ϵ = −1 to commute with the tensor symbol:
+ϵ ⊗1 = 1 ⊗ϵ = ϵ.
+2.2
+The Coproduct and the Canonical Monoid of Points
+For a space defined by spherical algebras over F1, the set of its rational points over any
+target F1-algebra A is HomF1(F1[M], A). Because A is a multiplicative monoid, these
+points can be multiplied pointwise.
+Over the enriched base F12, a fundamental subtlety arises.
+A rational point over an
+F12-algebra A is a homomorphism ϕ ∈HomF12(F12[M], A), which, by definition, must
+preserve the canonical sign: ϕ(ϵ) = −1A. If one were to take the naive pointwise product
+of two such points, the sign would be destroyed:
+(ϕ1 · ϕ2)(ϵ) = ϕ1(ϵ) · ϕ2(ϵ) = (−1A)(−1A) = 1A̸ = −1A.
+This indicates that the naive pointwise product drops out of the category of F12-algebras.
+The rigorous resolution relies on the Lydakis-Day tensor product and the intrinsic co-
+product of the spherical algebra.
+Definition 2.1. For a spherical F12-algebra F12[M], the diagonal map m 7→m ∧m on
+the spatial monoid defines an F12-linear coproduct:
+∆: F12[M] −→F12[M] ⊗F12 F12[M],
+∆(m) = m ⊗m
+for all m ∈M.
+We input this coproduct to define the correct multiplication of rational points.
+6
+
+
+--- PDF PAGE 7 ---
+Proposition 2.2. Let F12[M] be a spherical algebra and A an F12-algebra. The set of
+points X(A) = HomF12(F12[M], A) canonically forms a monoid under the convolution
+product:
+ϕ1 ∗ϕ2 := (ϕ1 ⊗ϕ2) ◦∆.
+(6)
+If the non-zero elements of M form a group, X(A) canonically forms a group.
+Proof. We need to verify that ϕ1∗ϕ2 is a valid F12-algebra homomorphism, which reduces
+to checking that it preserves the canonical sign ϵ. Because ∆is F12-linear, it absorbs the
+sign via the smash product relations: ∆(ϵ) = ϵ ⊗1. Evaluating the convolution yields:
+(ϕ1 ∗ϕ2)(ϵ) = (ϕ1 ⊗ϕ2)(ϵ ⊗1) = ϕ1(ϵ)ϕ2(1) = (−1A) · 1A = −1A.
+On the spatial elements m ∈M, the convolution yields the expected multiplication:
+(ϕ1 ∗ϕ2)(m) = (ϕ1 ⊗ϕ2)(m ⊗m) = ϕ1(m)ϕ2(m).
+Thus, the Lydakis-Day tensor product natively “protects” the base ring, thus the space
+of rational points inherits a canonical monoid structure.
+3
+The Unfolded Line and the Imaginary Generator
+To describe the local geometry at the archimedean place, we begin with the scheme-
+theoretic construction of the projective line P1
+F1 over the absolute base [10]. Motivated by
+extending the action of the geometric involution α (see (3)) at the sheaf level (as explained
+in the introduction), we first extend scalars from F1 to the quadratic absolute base F12
+as defined in (4).
+The underlying topological space X of P1
+F12 consists of two closed points, denoted + and
+−, together with a unique generic point η. The nontrivial open subsets are
+Ω+ = {+, η},
+Ω−= {−, η},
+Ω+ ∩Ω−= Ω= {η}.
+(7)
+The structure sheaf is given on these affine open subsets as follows:
+OX(Ω+) = F12[T Z≥0],
+OX(Ω−) = F12[T Z≤0],
+OX(Ω) = F12[T Z].
+These local descriptions are entirely consistent with the local structure of the F1-
+arithmetic site (d
+N×
+0 , F1[T]), where the stalk attached to an ordered rank-one abelian
+group (H, H+) is the spherical algebra F1[T H+]. The novelty in the archimedean case
+is that neither of these two orderings is intrinsically preferred. This observation is the
+starting point for the equivariant construction developed in this section.
+The two affine open subsets Ω+ and Ω−correspond to the two possible orderings of
+the rank-one abelian group Z, while their generic intersection Ω= {η} corresponds to
+the unordered group Z itself. The restriction morphisms are induced by the canonical
+inclusions
+ρ+ : F12[T Z≥0] ,→F12[T Z]
+and
+ρ−: F12[T Z≤0] ,→F12[T Z].
+Thus, the projective line P1
+F12 provides the canonical geometric object obtained by gluing
+the two ordered models of Z along their common generic localization.
+The extension of scalars from F1 to F12 preserves the expected geometry after evaluation
+on a field, as shown by the following statement
+7
+
+
+--- PDF PAGE 8 ---
+Proposition 3.1. Let K be a field. The set of K-valued points of the absolute projective
+line P1
+F12 is canonically identified with the classical projective line P1(K).
+Proof. A K-point of P1
+F12 is given by an element of the colimit of the sets
+Hom(OX(U), HK)
+as U varies among the affine open sets. The projective line P1
+F12 is covered by the three
+affine open subsets (7).
+By the universal property of the free F12-algebra F12[T Z≥0], every F12-algebra homomor-
+phism is uniquely determined by the image of T, which may be chosen arbitrarily in K.
+Hence there is a canonical identification
+Hom(OX(Ω+), HK) ∼= K.
+Similarly, Hom(OX(Ω−), HK) ∼= K, and Hom(OX(Ω), HK) ∼= K×. Under these identifi-
+cations the restriction maps ρ± act as follows
+ρ∗
++ : K× →K, ρ∗
++(x) = x,
+ρ∗
+−(x) : K× →K, ρ∗
+−(x) = x−1.
+Hence the set P1
+F12(K) is obtained by gluing two copies of K along K× using the above
+inclusions, yielding precisely the set P1(K) of the classical projective line.
+The crucial new step is now the adjunction of a Bombelli generator, namely a formal
+imaginary element J satisfying
+J2 = ϵ.
+Accordingly, the structure sheaf of P1
+F12 gets enriched by adjoining local generators J+
+and J−to the algebras of the two affine charts, together with a generic generator J on
+their overlap. It is defined as follows:
+O(Ω+) = F12[T Z≥0, J+]/(J2
++ = ϵ),
+O(Ω−) = F12[T Z≤0, J−]/(J2
+−= ϵ),
+O(Ω) = F12[T Z, J]/(J2 = ϵ).
+(8)
+The gluing of sections is determined by the restriction morphisms ρ± to the generic overlap
+Ω. The coordinate T restricts canonically, whereas the Bombelli generators satisfy the
+twisted restriction rules
+J+ 7−→J,
+J−7−→ϵJ.
+(9)
+The factor ϵ that was originally introduced as responsible for the sign inversion is also
+ensuring, in the above formula, that the two choices of √−1 are both available.
+We denote by
+X := (P1
+F12, O)
+(10)
+the F12-projective line endowed with the enriched structure sheaf constructed above.
+The evaluation of X on a field K is governed entirely by the solvability of the equation
+x2 = −1
+over K.
+8
+
+
+--- PDF PAGE 9 ---
+Proposition 3.2. Let K be a field. The set of K-valued points of X reflects the arithmetic
+of the equation x2 = −1 over the field K:
+1. If K contains no square root of −1 (for example K = R), then
+X(K) = ∅.
+2. If char(K)̸ = 2 and K contains the two square roots ±iK of −1 (for example K =
+C), then
+X(K) ∼= P1(K) ⊔P1(K).
+3. If char(K) = 2, then
+X(K) ∼= P1(K).
+Proof. Since X is obtained by gluing the affine charts Ω+ and Ω−along the generic open
+subset Ω, its set of K-valued points is obtained by gluing the corresponding affine sets of
+K-points. Every F12-algebra homomorphism
+ϕ : O(U) −→HK
+satisfies ϕ(ϵ) = −1K. Consequently, the defining relation J2 = ϵ is evaluated in K as
+j2 = −1K. A K-valued point of the affine chart Ω+ is therefore determined by a pair:
+(t, j+) ∈K × K
+satisfying j2
++ = −1K. Similarly, a point of Ω−is determined by a pair
+(s, j−) ∈K × K
+with j2
+−= −1K.
+If K contains no square root of −1, then neither affine chart possesses K-points. Hence
+Ω+(K) = ∅= Ω−(K),
+and therefore X(K) = ∅.
+Assume now that char(K)̸ = 2 and that −1 ∈(K×)2. Then K contains exactly two
+square roots of −1, denoted ±iK. Accordingly,
+Ω+(K) = K × {iK, −iK},
+Ω−(K) = K × {iK, −iK},
+and
+Ω(K) = K× × {iK, −iK}.
+The restriction maps (9) identify the two affine charts through
+T 7−→T −1,
+J+ 7−→J,
+J−7−→ϵJ.
+(11)
+Since ϕ(ϵ) = −1K, the last relation becomes j−= −j+. Hence the gluing identifies
+(t, j) ∼(t−1, −j),
+Consequently, the set of K-valued points decomposes canonically into two disjoint copies
+of P1(K).
+X(K) ∼= P1(K) ⊔P1(K),
+9
+
+
+--- PDF PAGE 10 ---
+where the first copy is obtained by gluing K × {iK}+ with K × {−iK}−, and the second
+by gluing K × {−iK}+ with K × {iK}−.
+Finally, if char(K) = 2, then: −1K = 1K, and the equation j2 = −1K has the unique
+solution: j = 1. The twist by ϵ therefore becomes trivial, and the two affine charts glue
+in the usual way through
+t ←→t−1,
+recovering a single copy of the projective line: X(K) ∼= P1(K).
+Thus the doubled projective line over fields containing √−1, and the absence of real
+points, arise as direct consequences of the signed relation J2 = ϵ.
+4
+The Geometric Symmetry and the Equivariant Topos
+The absolute projective line X = (P1
+F12, O) introduced in (10) carries a canonical involu-
+tive symmetry, reflecting the absence of a distinguished ordering of the rank-one abelian
+group Z. This symmetry exchanges the two affine charts Ω± and simultaneously imple-
+ments the signed inversion underlying the archimedean geometry.
+Definition 4.1. Let α : X −→X be the involutive automorphism defined on the under-
+lying topological space by interchanging the two closed points,
+α(+) = −,
+α(−) = +,
+while fixing the generic point α(η) = η.
+On the generic affine open subset Ω, the induced automorphism of the structure sheaf
+α∗: O(Ω) −→O(Ω)
+is determined by
+α∗(T) = ϵT −1,
+α∗(J) = J−1 = ϵJ.
+The first formula realizes the signed inversion of the spatial coordinate, while the second
+exchanges the two branches determined by the relation J2 = ϵ. (Note that J(ϵJ) = ϵJ2 =
+ϵ2 = 1, so that J−1 = ϵJ.)
+The generic automorphism extends uniquely to isomorphisms of the affine charts
+α∗
+± : O(Ω∓) −→O(Ω±),
+compatible with the restriction maps (9). Explicitly,
+α∗
++(T −1) = ϵT,
+α∗
++(J−) = J+,
+and
+α∗
+−(T) = ϵT −1,
+α∗
+−(J+) = J−.
+The compatibility of the local and generic actions follows immediately from the definitions.
+Indeed, restricting α∗
++(J−) to the generic open subset Ωgives J, while
+α∗(ρ−(J−)) = α∗(ϵJ) = ϵ(ϵJ) = J.
+The remaining compatibility relations are verified in the same way.
+The action of α on the imaginary generator,
+α∗(J) = J−1 = ϵJ,
+(12)
+10
+
+
+--- PDF PAGE 11 ---
+is uniquely determined by the geometry.
+This naturally leads to the main geometric object at the archimedean place, namely the
+equivariant topos endowed with structure sheaf:
+C∞:= [X/⟨α⟩].
+(13)
+If K is a field as in Proposition 3.2, case 2., then X(K) ∼= P1(K)⊔P1(K) and the involution
+α interchanges the two copies of P1(K). Indeed, if a K-valued point ϕ belongs to the first
+copy, then the equalities
+(α · ϕ)(J−) = ϕ(α∗
++(J−)) = ϕ(J+),
+show that α · ϕ belongs to the second copy, and conversely.
+Passing to the quotient
+therefore identifies the two copies canonically:
+C∞(K) = [X(K)/⟨α⟩] ∼= P1(K).
+Arithmetically, (12) ensures that the α-invariant part of the generic stalk is precisely the
+base F12, preventing the additional archimedean structure to appear at the finite primes.
+The underlying topological space of C∞consists of two points. The involution α acts
+freely on the two closed points {+, −}, identifying them with a single closed point γ. The
+generic point η is fixed, but acquires isotropy group Z/2Z, thereby becoming an orbifold
+point. Geometrically, the quotient folds the absolute projective line by identifying the
+two orderings of Z.
+5
+Complex Conjugation and the Twistor Real Structure
+To determine the real structure of the equivariant topos C∞(see (13)) at the archimedean
+place, we first analyze the natural action of the Galois group Gal(C/R) = {1, c} on the
+complex points of X (see (10)). Every automorphism of the ground field acts on the set
+of field-valued points by post-composition.
+Let c : C −→C denote the complex conjugation. If ϕ ∈X(C), its conjugate point is
+defined by
+c · ϕ := c ◦ϕ.
+Recall the canonical decomposition
+X(C) ∼= P1(C)1 ⊔P1(C)2,
+(14)
+where P1(C)1 is obtained by gluing
+C × {i}+
+with
+C × {−i}−,
+while P1(C)2 is obtained by gluing
+C × {−i}+
+with
+C × {i}−.
+Let ϕ ∈C × {i}+ ⊂Ω+(C), so that
+ϕ(T) = z,
+ϕ(J+) = i.
+11
+
+
+--- PDF PAGE 12 ---
+Then
+(c · ϕ)(T) = z,
+(15)
+(c · ϕ)(J+) = −i.
+Hence
+c · ϕ ∈C × {−i}+ ⊂Ω+(C),
+and therefore belongs to the second copy P1(C)2. More generally, complex conjugation
+acts by
+z × {±i}± 7−→¯z × {−± i}±,
+thereby exchanging the two copies of P1(C) appearing in (14). Passing to the quotient
+C∞(C) = [X(C)/⟨α⟩],
+the two copies are identified by the geometric involution α, while complex conjugation
+descends to an anti-holomorphic involution of the resulting projective line. The geometric
+involution α and the arithmetic involution c act independently on X(C) and commute
+with one another.
+Consequently, the Galois action descends to the quotient C∞(C),
+endowing the latter with its canonical real structure.
+Theorem 5.1. The canonical action of the complex conjugation c ∈Gal(C/R) on the
+C-valued points of the equivariant topos C∞induces the twistor real structure.
+More
+precisely, on the resulting complex projective line the induced real structure is the fixed-
+point-free anti-holomorphic involution:
+z 7−→−1
+¯z .
+Proof. Since α interchanges the two copies of P1(C) in the decomposition (14), the orbit
+of the action of the symmetries on the complex points of the unfolded space X(C) are
+parametrized by their intersection with the first copy P1(C)1. The complex conjugation
+replaces z ×{±i}± by ¯z ×{−±i}±. The first copy P1(C)1 is obtained by gluing C×{i}+
+with C × {−i}−, using the canonical map
+C× →(C × {i}+) × (C × {−i}−) ,
+z 7→((z, i), (z−1, −i)).
+corresponding to the restriction maps (11). We can thus parametrize the points of P1(C)1
+by the bijection3
+P : C ∪{∞} →P1(C)1, z 7→z × {i}+, ∞7→0 × {−i}−.
+For z ∈C×, the point P(z) corresponds to the homomorphism
+ϕ : O(Ω) →HC, ϕ(T) = z, ϕ(J) = i.
+For z ∈C×, the orbit of the point P(z) under the geometric symmetry α is (using
+Definition 4.1) the equivalence class:
+[P] =
+
+P, α(P)
+	
+=
+
+(z, i), (−z−1, −i)
+	
+.
+3This bijection extends by continuity to C∪{∞} the parametrization of points belonging to the Zariski
+dense open set Ω(C).
+12
+
+
+--- PDF PAGE 13 ---
+Applying standard complex conjugation c to this orbit yields the conjugate equivalence
+class:
+c([P]) =
+
+(¯z, −i), c(−z−1, −i)
+	
+=
+
+(¯z, −i), (−¯z−1, i)
+	
+.
+To determine the induced action on the quotient space (which we may parameterize by
+the map P), we select the representative of the conjugate orbit that lies on P1(C)1. This
+representative is exactly (−¯z−1, i).
+Thus, the induced action on the spatial coordinate is z 7→−1/¯z, and it swaps the points
+0 and ∞(as can be seen by continuity).
+This demonstrates that the twistor real structure is the automatic, functorial consequence
+of standard complex conjugation acting on the geometrically folded absolute projective
+line. The lack of real points at infinity is guaranteed by the spatial sign twist ϵ inherent
+in the Weyl symmetry α.
+6
+Frobenius and Twistor Equivariance
+The intrinsic Hopf structure of spherical F12-algebras established in Section 2 is the
+mechanism that generates the geometry of the archimedean twistor line.
+First, consider the absolute Frobenius endomorphism Frn(x) = xn acting on a spherical
+algebra.
+Under the intrinsic convolution product (6), the n-th power Frobenius of a
+A-rational point ϕ ∈HomF12(F12[M], A) is:
+ϕn(m) = ϕ(mn) = ϕ(Frn(m)).
+Thus, Frn is the canonical geometric n-th power map in the intrinsic monoid of points.
+This shows why the Frobenius manifests dynamically as z 7→zn on the spatial coordinate
+of the twistor line, and also why it geometrically implements the Adams operations ψn.
+Second, this Hopf structure provides the absolute algebraic origin for non-abelian Hodge
+theory. The generic open set Ωof the absolute curve ((8)) has the spatial core F12[T Z].
+Because the non-zero elements of M = Z form a group, its geometric complex points Ω(C)
+canonically form the multiplicative group C×. This group acts on the entire twistor line
+by scaling the spatial coordinate via the coproduct mechanism.
+In Simpson’s twistor construction [13], a real Hodge structure is encoded as a C×-
+equivariant vector bundle on P1(C), where the real structure σ(z) = −1/¯z must satisfy
+the twisted equivariance:
+σ(λz) = −1
+λz = ¯λ−1σ(z)
+for λ ∈C×.
+In our absolute framework, the required C×-action is not imposed externally; rather it is
+the canonical action of the generic absolute stalk Ω(C) acting via the F12-coproduct as in
+§ 2.2. The compatibility with the geometric symmetry α∗(T) = ϵT −1 perfectly recovers
+this twisted equivariance.
+Consequently, the absolute geometry of F12 dynamically generates the entire architecture
+of real Hodge structures: the intrinsic Lydakis-Day coproduct yields the C×-equivariance,
+the geometric symmetry α yields the conjugate filtration, and finally the odd Frobenius
+Frn implements the Adams operations.
+13
+
+
+--- PDF PAGE 14 ---
+7
+The Global Absolute Curve and the Amalgam
+With the archimedean component C∞rigorously defined, we can now move to the con-
+struction of the global absolute curve
+¯
+C = (Spec Z)F12 by amalgamating the finite and
+archimedean components.
+Let Cfin := (Spec Z)F12 denote the finite absolute curve, after extension of scalars from
+F1 to F12. Topologically, it consists of a countable set of closed points (the finite primes
+P) and a single generic point ηfin. The stalk of the structure sheaf at the generic point is
+exactly the base F12.
+On the other hand, the archimedean component C∞consists topologically of a single
+closed point ∞(the folded points {+, −}) and an orbifold generic point η∞. Crucially,
+the α-invariant stalk at η∞reduces strictly to F12.
+Because the stalks at the generic points of both spaces are canonically isomorphic to F12,
+we can define the global curve as their topological and sheaf-theoretic amalgam.
+Definition 7.1. The global absolute curve
+¯
+C := (Spec Z)F12
+is the pushout (amalgam) of Cfin and C∞along their generic points.
+• The underlying topological space | ¯
+C | is the colimit identifying ηfin with η∞:
+| ¯
+C | = |Cfin|
+a
+ηfin∼η∞
+|C∞|.
+It consists of the closed points P ∪{∞} and a single, unified generic point ηglobal.
+• The structure sheaf O ¯
+C is defined by Artin gluing along the generic point. For any
+Zariski open set U of
+¯
+C , the sections are given by the fiber product of the sections
+on the finite and archimedean components over the generic stalk F12:
+O ¯
+C (U) = Ofin(U ∩Cfin) ×F12 O∞(U ∩C∞).
+This amalgamation is the absolute algebraic realization of the geometry of Spec Z.
+In classical Arakelov theory, the archimedean place is added formally, as it lacks a true
+geometric stalk. Here, C∞provides the required geometric stalk. The twistor real struc-
+ture unifies the complex spheres over the closed point ∞, while the orbifold symmetry
+collapses the generic stalk to F12, matching the finite generic point and allowing the global
+curve to glue together.
+7.1
+The Absolute Curve in the Odd Arithmetic Topos
+To properly define the global structure of the absolute curve, we must specify the ambient
+category in which it lives.
+While in classical algebraic geometry, a curve is a locally
+ringed space, in absolute geometry over F1 or F12, the foundational ambient category is
+the arithmetic topos . The main reason for this is the existence of a canonical, absolute
+geometric operation: the Frobenius endomorphism.
+The objects of the arithmetic topos are sets (sheaves of sets) equipped with an action of
+the multiplicative monoid of integers. When working over F1, the relevant topos is d
+N×,
+and the absolute Frobenius endomorphism Frn(x) = xn acts for all n ∈N×. However,
+14
+
+
+--- PDF PAGE 15 ---
+passing to the enriched base F12 introduces an arithmetic subtlety. For Frn to be a valid
+endomorphism of an F12-algebra, it must fix this base algebra pointwise; in particular,
+it must fix the canonical sign ϵ = −1. This forces a restriction to the submonoid of odd
+integers, N×
+odd.
+We therefore define the absolute curve not merely as a static ringed space, but as a
+dynamical geometric object internal to this odd arithmetic topos.
+Definition 7.2. The global absolute curve
+¯
+C is an object internal to the odd arithmetic
+topos [
+N×
+odd. It is defined by the following data:
+• Topological Space: The underlying space | ¯
+C | is the amalgam of the finite primes
+P and the archimedean closed point ∞, glued over a dense generic point ηglobal. The
+monoid N×
+odd acts trivially on this space.
+• Structure Sheaf: The structure sheaf O ¯
+C is a sheaf of F12-algebras equipped with
+the canonical absolute Frobenius action. For any open set U and any section s ∈
+O ¯
+C (U), the monoid N×
+odd acts via the endomorphisms:
+Frn(s) = sn
+for all n ∈N×
+odd.
+By defining the curve internally to the topos, the notion of a global section is funda-
+mentally upgraded. In any topos, the space of global sections of an object Y is defined
+categorically as the set of morphisms from the terminal object 1 to Y . In this case:
+Γ(Y ) := Hom\
+N×
+odd
+(1, Y ).
+The terminal object 1 is the one-point set endowed with the trivial monoid action. Con-
+sequently, a morphism 1 →Y corresponds exactly to selecting an element of Y that is
+equivariant with respect to the trivial action—that is, an element invariant under the
+monoid.
+Applying this categorical rule to the structure sheaf of the absolute curve, a true global
+section is not merely a compatible family of local sections, but a family of local sections
+that are simultaneous fixed points of the absolute Frobenius action. This topos-theoretic
+requirement provides the exact mechanism for global rigidity.
+Proposition 7.3. The space of global sections of the absolute compactified curve
+¯
+C is
+precisely the base ring F12:
+Γ( ¯
+C , O ¯
+C ) = F12.
+Proof. Let s ∈Γ( ¯
+C , O ¯
+C ) be a global section. Topologically, s defines a local germ sv ∈Ov
+at every closed point v ∈P ∪{∞}, as well as a generic germ sη ∈Oη at the dense generic
+point ηglobal.
+The sheaf compatibility condition requires that for every closed point v, the canonical
+localization map ρv : Ov →Oη must send the local germ to the generic one:
+ρv(sv) = sη.
+(16)
+Because the curve is defined internally to the arithmetic topos, a global section is a
+morphism from the terminal object, which means it must be a fixed point of the odd
+absolute Frobenius action. Thus, at every place v, we have Frn(sv) = sn
+v = sv for all
+n ∈N×
+odd.
+15
+
+
+--- PDF PAGE 16 ---
+As shown previously, at the archimedean place, the local stalk is modeled by
+F12[T Z≥0, J+]/(J2
++ = ϵ).
+The condition sn
+∞= s∞for all odd n ≥3 forces the spatial and imaginary components
+to vanish (since T n̸ = T and J3
++ = −J+̸ = J+). Therefore, the Frobenius fixed points of
+the stalk reduce strictly to the base ring: s∞∈F12. By identical reasoning at the finite
+primes, sp ∈F12 for all p ∈P.
+We now apply the sheaf compatibility condition (16). Because the localization maps ρv
+are F12-algebra homomorphisms, they act as the identity on the base ring F12. Since
+sv ∈F12, we have:
+sv = ρv(sv) = sη
+for all v ∈P ∪{∞}.
+This forces sv to be the exact same constant in F12 at every place, uniquely determined by
+the generic germ sη. Thus, the global sections are exactly the constant sections F12.
+Remark 7.4. While the absolute curve is defined via the internal topos perspective, eval-
+uating this structure on geometric points (e.g., over C) naturally recovers the noncommu-
+tative dynamical perspective. The canonical Frobenius action on the abstract F12-algebra
+induces the branched dynamical system z 7→zn and z 7→−1/zn on the complex twistor
+line. The noncommutative crossed product space ¯
+C (C) ⋊N×
+odd is therefore a derived geo-
+metric consequence of the canonical internal topos structure defined above.
+7.2
+The Odd Monoid Action on Twistor Line and Ramification at 2
+The restriction of the absolute Frobenius to the odd monoid N×
+odd has an important
+geometric manifestation on the archimedean twistor line. Because the F12-enrichment
+adjoins an imaginary generator J satisfying J2 = ϵ = −1, it acts as the absolute geometric
+avatar of the Gaussian integers Z[i].
+The prime 2 is uniquely ramified in Z[i], while the behavior of odd primes is governed
+by the non-trivial Dirichlet character modulo 4. This exact arithmetic structure emerges
+dynamically on the complex points of the absolute curve.
+The exclusion of the even
+integers from the monoid action corresponds precisely to the ramification of the prime 2,
+while the odd monoid induces a branched dynamical system on the unified twistor line.
+Let C∞(C) ∼= P1(C) be the unified complex twistor line, obtained by quotienting the
+F12-scheme X(C) (see (10)) by the geometric symmetry α.
+Proposition 7.5. The odd arithmetic monoid N×
+odd acts on C∞(C) via the dynamical
+system:
+Frn(z) :=
+(
+zn
+if n ≡1
+(mod 4),
+−1
+zn
+if n ≡3
+(mod 4).
+Furthermore, this action strictly commutes with the quaternionic real structure
+σ(z) = −1/¯z.
+Proof. On the unquotiented space X(C) = P1(C)+ ⊔P1(C)−, a complex point is deter-
+mined by a spatial coordinate z ∈C∪{∞} and an imaginary coordinate j ∈{i, −i}. The
+algebraic Frobenius Frn(x) = xn acts on these coordinates as:
+Frn(z, j) = (zn, jn) =
+ zn, (−1)
+n−1
+2 j
+
+.
+16
+
+
+--- PDF PAGE 17 ---
+If n ≡1 (mod 4), the imaginary coordinate is preserved, meaning Frn maps each sphere
+to itself via z 7→zn.
+If n ≡3 (mod 4), the imaginary coordinate is inverted (j 7→−j), meaning the point is
+mapped to the opposite sphere. To evaluate this action on the quotient space C∞(C),
+we must identify the target point with its representative on the original sphere by ap-
+plying the geometric symmetry α. By Definition 4.1, α∗(T) = ϵT −1, which induces the
+geometric map α(w) = −1/w on the complex coordinate. Composing the jump with this
+identification yields the effective action:
+z 7−→zn
+α
+7−→−1
+zn .
+To verify compatibility with the twistor real structure σ(z) = −1/¯z, we check both cases.
+For n ≡1 (mod 4):
+σ(zn) = −1
+zn
+and
+(σ(z))n =
+
+−1
+¯z
+n
+= −1
+zn
+(since n is odd).
+For n ≡3 (mod 4):
+σ
+
+−1
+zn
+
+= −
+1
+(−1/zn)
+= ¯zn
+and
+−
+1
+(σ(z))n = −
+1
+(−1/¯z)n = ¯zn.
+Thus, the branched dynamical system perfectly preserves the quaternionic structure.
+This proposition shows that the absolute Frobenius action on the archimedean component
+is not merely a formal algebraic operation, but a highly structured geometric endomor-
+phism. The fact that the map z 7→−1/zn naturally emerges for n ≡3 (mod 4) shows that
+the F12-twistor sheaf intrinsically "knows" about complex conjugation and the non-trivial
+topology of the archimedean place.
+References
+[1] A. Connes, C. Consani, On the absolute geometry of Spec Z and the Fargues-Fontaine
+curve, Preprint (2026).
+[2] A. Connes, C. Consani, On the Jacobian of Spec Z, to appear in Journal of Noncom-
+mutative Geometry. Preprint (2026),
+[3] A. Connes, C. Consani, Riemann-Roch for the ring Z, C. R. Math. Acad. Sci. Paris
+362 (2024), 229-235.
+[4] A. Connes, C. Consani, Cyclic theory and the pericyclic category, in Cyclic cohomology
+at 40: achievements and future prospects, 103–122, Proc. Sympos. Pure Math., 105,
+Amer. Math. Soc., Providence, RI, (2023).
+[5] A. Connes, C. Consani, Riemann-Roch for Spec Z, Bulletin des Sciences Mathema-
+tiques 187 (2023).
+[6] A. Connes, C. Consani, Geometry of the Scaling Site, Selecta Math. (N.S.) 23 (2017),
+no. 3, 1803–1850.
+[7] A. Connes, C. Consani, Absolute Algebra and Segal’s Γ-Rings: au Dessous de Spec Z,
+J. Number Theory 162 (2016), 518–551.
+17
+
+
+--- PDF PAGE 18 ---
+[8] A. Connes, C. Consani, Cyclic homology, Serre’s local factors and λ-operations, J.
+K-Theory 14 (2014), no. 1, 1–45.
+[9] A. Connes, C. Consani, On the Notion of Geometry over F1, J. Algebraic Geometry
+20 (2011), no. 3, 525-557.
+[10] A. Connes, C. Consani, Schemes over F1 and Zeta Functions, Compositio Math. 146
+(2010), no. 6, 1383–1415.
+[11] L. Hesselholt, Topological Hochschild homology and the Hasse-Weil zeta function, in
+An alpine bouquet of algebraic topology, 157–180, Contemp. Math., 708, Amer. Math.
+Soc., (Providence), RI, (2018).
+[12] P. Scholze, p-adic geometry, Proceedings of the International Congress of Mathe-
+maticians—Rio de Janeiro 2018. Vol. I. Plenary lectures, 899–933, World Sci. Publ.,
+Hackensack, NJ, 2018.
+[13] C. Simpson, The Hodge filtration on nonabelian cohomology, Algebraic Geometry-
+Santa Cruz 1995, Proc. Sympos. Pure Math., vol. 62, Amer. Math. Soc., Providence,
+RI, 1997, pp. 217-281.
+18

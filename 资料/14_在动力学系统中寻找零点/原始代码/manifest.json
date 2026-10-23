@@ -1,0 +1,101 @@
+{
+  "commit": "a8b0b38202d6f330297212f8755c8df04242f9d6",
+  "note": "Source subset plus Fig4.pdf generated locally, not downloaded.",
+  "files": [
+    {
+      "file": "Fig2.py",
+      "bytes": 14094,
+      "sha256": "925af2219e4ba0527abcdc2fda2b3cb8b8e352dec92aa1858f14441085765e34"
+    },
+    {
+      "file": "Fig4.pdf",
+      "bytes": 123934,
+      "sha256": "aac073b51c0797cb84af518ba63c3f00a97e2972c5c5d60e7c5ad63ddc08d8d6"
+    },
+    {
+      "file": "Fig4.py",
+      "bytes": 14354,
+      "sha256": "ed4c31c578c98b96f3437eb097749350efd00198189a3aa9ddc6c3aaa0499253"
+    },
+    {
+      "file": "Fig5.py",
+      "bytes": 30272,
+      "sha256": "7c0d65d21a97d7173b041ead567e61cdcaed690c10b38af5741085d6f0eb8dab"
+    },
+    {
+      "file": "GLA.py",
+      "bytes": 3700,
+      "sha256": "fd909ce3a966114af7e57708e8b4a0931d09c8dd1a81c074aeddd02969bdb62d"
+    },
+    {
+      "file": "LICENSE",
+      "bytes": 1172,
+      "sha256": "c47a40896c188dd14c07f113feb35363aa7957ab5a3a63a57b6f32ad59b7394c"
+    },
+    {
+      "file": "README.md",
+      "bytes": 3910,
+      "sha256": "50da15e116a5ca9d81a9f9c42f0deb85e35b39915b8338d458ccb29b95e4660c"
+    },
+    {
+      "file": "Supplementary_Figure_1.py",
+      "bytes": 5170,
+      "sha256": "86e1bbd1ad2d90d273d7ee656c817337850afa8ddf7fc47c86b688b06d474f7d"
+    },
+    {
+      "file": "data/data.npz",
+      "bytes": 52222,
+      "sha256": "adcc57d00a5de40eff501a8d5a7f64c8e0c943c067c7cca2917017f9d798ac40"
+    },
+    {
+      "file": "data/data.py",
+      "bytes": 1116,
+      "sha256": "a94d3fc297e5eb3acd23a7710b6eb002886a6f1dd3237c18cae77e8ac1d25400"
+    },
+    {
+      "file": "data/data2.npz",
+      "bytes": 65238,
+      "sha256": "e6833167dca86789e4083cda53d154d98c4d3dd326b82237122c5fc91d9b0853"
+    },
+    {
+      "file": "data/data2.py",
+      "bytes": 1280,
+      "sha256": "23757c070cd65296b18c0b21cbd31d85671337a6118f014171a8fb7cd6918885"
+    },
+    {
+      "file": "data/exp/beta_scan_exp.npz",
+      "bytes": 3764,
+      "sha256": "2ff8095f1d012bd60ec0139f76912e1b5b983df19596c41a27a52838ec51d2f9"
+    },
+    {
+      "file": "data/exp/tscan_beta03_exp.npz",
+      "bytes": 7386,
+      "sha256": "7629091b3acb1e4bccb3a15ffaedfacddc31376ba51604e459019dacd6c55acd"
+    },
+    {
+      "file": "data/exp/tscan_beta05_exp.npz",
+      "bytes": 7386,
+      "sha256": "722e4ec7070e361bae8378317275c507ea325bded3b946be50225a09aa361113"
+    },
+    {
+      "file": "data/theory/beta_scan_theory.npz",
+      "bytes": 1834,
+      "sha256": "8d0fe1b2de6b7285ee82019563d9b9ed1f2b72458664481f650dcabd595d0ce0"
+    },
+    {
+      "file": "data/theory/free_energy_axes_theory.npz",
+      "bytes": 45638,
+      "sha256": "642c6791a3d94219f72ad3efeb80f072ee8eeef201da60a30350f20142a48c6e"
+    },
+    {
+      "file": "data/theory/tscan_beta03_theory.npz",
+      "bytes": 146310,
+      "sha256": "3cd29b217e82841d24ba78bacfa388187bf988b48d535b38c0d8a9a4f2e87d92"
+    },
+    {
+      "file": "data/theory/tscan_beta05_theory.npz",
+      "bytes": 146310,
+      "sha256": "43722d95dffd40b6b23b6a1ecc7e4ddc508af0dfe77b4ea45dfd4f93b29aed28"
+    }
+  ]
+}

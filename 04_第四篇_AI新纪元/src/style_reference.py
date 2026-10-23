@@ -9,7 +9,10 @@ matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 from matplotlib.font_manager import FontProperties,fontManager
 from matplotlib.patches import FancyArrowPatch,Rectangle
-FONT='/usr/share/fonts/opentype/noto/NotoSansCJK-Regular.ttc'
+FONT=next((p for p in ['/usr/share/fonts/opentype/noto/NotoSansCJK-Regular.ttc',
+                     'C:/Windows/Fonts/msyh.ttc'] if Path(p).is_file()), None)
+if FONT is None:
+ raise FileNotFoundError('Install Noto Sans CJK or Microsoft YaHei to render Chinese figures.')
 fontManager.addfont(FONT)
 plt.rcParams.update({'font.family':FontProperties(fname=FONT).get_name(),'font.size':15,'axes.unicode_minus':False,'mathtext.fontset':'dejavusans','svg.fonttype':'path'})
 BG='#F7F3E9';NAVY='#173346';TEAL='#178A86';GOLD='#B78734';MUTED='#637782';LIGHT='#D9E6DF'

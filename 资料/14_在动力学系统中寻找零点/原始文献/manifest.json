@@ -1,0 +1,89 @@
+{
+  "download_date": "2026-10-23",
+  "documents": [
+    {
+      "file": "Creffield_Sierra_2015.pdf",
+      "url": "https://arxiv.org/pdf/1411.0459",
+      "pages": 7,
+      "bytes": 446923,
+      "sha256": "0c112bf487fd637b3a330e33de231a3c640024b82fd864fcb14e318d3d2530af"
+    },
+    {
+      "file": "He_2019.pdf",
+      "url": "https://arxiv.org/pdf/1903.07819",
+      "pages": 8,
+      "bytes": 1406043,
+      "sha256": "facd4661609c2d65ff929d892c3d897e4e49cf80e63ec2ff17b767ad833ee028"
+    },
+    {
+      "file": "He_2021.pdf",
+      "url": "https://www.nature.com/articles/s41534-021-00446-7.pdf",
+      "pages": 6,
+      "bytes": 3119337,
+      "sha256": "fc217d1bb9acb42ce482f639905874c96332ab790178c24548e9f7123a999767"
+    },
+    {
+      "file": "Yu_Piao_Park_2024.pdf",
+      "url": "https://arxiv.org/pdf/2408.01095",
+      "pages": 32,
+      "bytes": 2736294,
+      "sha256": "000ebbe87188b5fdf610121169c8d6a41ba2fcc511aae25580c35d78b3037f5b"
+    },
+    {
+      "file": "Wei_2026.pdf",
+      "url": "https://www.nature.com/articles/s41467-026-74935-8.pdf",
+      "pages": 14,
+      "bytes": 2129076,
+      "sha256": "c1b83663636b8cf7097a124d4478e9a2811b72542cc25bd365ce232020593aaa"
+    },
+    {
+      "file": "Wei_2026_supplement.pdf",
+      "url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41467-026-74935-8/MediaObjects/41467_2026_74935_MOESM1_ESM.pdf",
+      "pages": 24,
+      "bytes": 1927528,
+      "sha256": "85afa2ece9b24c8917b40298059ee4c78d3069d07815fee2e1ff20a5ad476567"
+    },
+    {
+      "file": "Newton_flow_2014.pdf",
+      "url": "https://d-nb.info/1275484190/34",
+      "pages": 30,
+      "bytes": 2579749,
+      "sha256": "b5af65699d3793b6466ea47b0c18057df5342cddc8ac867061bbaa34511e4935"
+    },
+    {
+      "file": "Wang_2026_June.pdf",
+      "url": "https://zenodo.org/api/records/20565112/files/prime-Final_Paper.pdf/content",
+      "pages": 34,
+      "bytes": 1657518,
+      "sha256": "66f144b5116fd896b1f814625edf53fb11fbfb689de8ae13ec90b1d52634c778"
+    },
+    {
+      "file": "Wang_2026_MCA.pdf",
+      "url": "https://mdpi-res.com/d_attachment/mca/mca-31-00193/article_deploy/mca-31-00193.pdf",
+      "pages": 35,
+      "bytes": 2949161,
+      "sha256": "57f2fc0f2b87d404a7075aee23bc0993d66ab15f8e9bb1dfd70ec70aa6875fc4"
+    },
+    {
+      "file": "He_2021_supplement.pdf",
+      "url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41534-021-00446-7/MediaObjects/41534_2021_446_MOESM1_ESM.pdf",
+      "pages": 4,
+      "bytes": 210130,
+      "sha256": "e4e6ff97993d6fd756d06a960ecad75a3128b2966cf69a6d19a0d155c7cff382"
+    },
+    {
+      "file": "Jaksch_2025_Wu_Sprung.pdf",
+      "url": "https://arxiv.org/pdf/2510.16759v1",
+      "pages": 16,
+      "bytes": 1123446,
+      "sha256": "204eb151ed9c31e039630450832d7b180e9d46bec8fc961f01434ffd9aed3cbc"
+    },
+    {
+      "file": "FunSearch_2023.pdf",
+      "url": "https://www.nature.com/articles/s41586-023-06924-6.pdf",
+      "pages": 14,
+      "bytes": 2034181,
+      "sha256": "ed64cc4af49a8010ec0313c166b622e75a1c1d548b71d5a582f934d6ed0df635"
+    }
+  ]
+}

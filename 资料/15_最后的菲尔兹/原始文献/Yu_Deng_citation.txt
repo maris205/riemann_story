@@ -1,0 +1,36 @@
+ 
+ 
+ 
+FIELDS MEDAL 2026 
+YU DENG 
+ 
+INTERNATIONAL CONGRESS OF MATHEMATICIANS 2026 
+Philadelphia, Pennsylvania, USA 
+ 
+SHORT CITATION 
+ 
+For his work in partial differential equations, including the rigorous derivation of the Boltzmann 
+equation from hard-sphere dynamics for rarefied gases, the derivation of wave kinetic equations from 
+nonlinear dispersive systems, and probabilistic approaches to nonlinear Schro dinger dynamics. 
+ 
+LONG CITATION 
+ 
+Combining techniques from partial differential equations, probability, and mathematical physics, Yu 
+Deng has made fundamental contributions to the rigorous analysis of complex dynamical systems, 
+clarifying how macroscopic and statistical behavior emerge from microscopic dynamics. 
+Together with Zaher Hani and Xiao Ma, Deng achieved landmark results on the derivation of the 
+Boltzmann equation from deterministic hard-sphere dynamics in the low-density regime. His work 
+provides a rigorous derivation of Boltzmann’s equation for rarefied gases, valid for as long as the 
+corresponding Boltzmann solution exists, overcoming longstanding obstacles in connecting 
+Newtonian particle systems with kinetic theory and addressing a central problem in nonequilibrium 
+statistical mechanics. 
+In joint work with Hani, Deng made major advances in the derivation of wave kinetic equations from 
+nonlinear dispersive systems. These results explain how statistical behavior and energy transfer arise 
+from deterministic nonlinear dynamics, contributing significantly to the mathematical foundations of 
+wave turbulence theory. 
+Beyond kinetic limits, together with Andrea Nahmod and Haitian Yue, Deng developed innovative 
+probabilistic approaches to nonlinear Schro dinger equations (such as random averaging operator and 
+random tensor theories), yielding new insights into long-time behavior, propagation of randomness, 
+and stability for nonlinear dispersive partial differential equations. His work has substantially 
+expanded the scope of rigorous analysis in nonlinear dynamics and has had a deep impact on the study 
+of dispersive equations and mathematical physics. 
