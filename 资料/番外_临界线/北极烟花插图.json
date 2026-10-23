@@ -1,0 +1,10 @@
+{
+  "date": "2026-10-24",
+  "tool": "image_gen (内置)",
+  "input": "05_番外篇_临界线/img/01a_arctic_station_pepsi.png",
+  "output": "05_番外篇_临界线/img/01a_arctic_station_fireworks.png",
+  "generated_file": "C:\\Users\\Administrator.DESKTOP-8U9VBK4\\.codex\\generated_images\\01a1584d-6138-7960-b58a-7e04748ca0dd\\exec-d36a6462-6685-42f7-8e60-c10b10b296d9.png",
+  "prompt": "Use case: precise-object-edit. Edit target: the supplied wide cartoon illustration of a fictional Greenland deep-ice neutrino observatory. Preserve the full wide composition, inked graphic-novel linework, cold blue ice and warm amber buildings, surface station, hanging strings of spherical optical sensors, lower-left control room with the same surprised scientist, and the blue Pepsi can on his desk. Change the visualization of particle events into a spectacular SILENT UNDER-ICE FIREWORKS metaphor: several spatially separated blue-white Cherenkov shower blooms, delicate branching short luminous particle tracks and a few longer tracks at varying depths among the sensor strings, more visually rich and celebratory than the original. These are stylized scientific event visualizations in a transparent cutaway, NOT chemical fireworks, NO rockets, no flames, no smoke, no explosions cracking or melting the ice. The flashes originate in the ice between the modules; the spherical modules are receivers, not lamps emitting beams. Show clusters of small colored detection dots and tracks on the scientist's main monitor like an IceCube reconstructed event display, colored by detection time. Keep sky quiet, no sky fireworks. Preserve recognizable Pepsi can and all other foreground details. Match existing sophisticated satirical comic series style. No added text or captions. 16:9 wide.",
+  "check": "保留漫画构图、站房、人物与百事可乐；冰下烟花是切伦科夫光及粒子事件的艺术可视化，不是肉眼所见的明亮爆炸。彩色光点作为事件时间编码示意。",
+  "science_source": "https://icecube.wisc.edu/science/icecube/"
+}

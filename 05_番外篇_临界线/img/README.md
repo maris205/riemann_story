@@ -16,7 +16,7 @@
 
 | 章节 | 小节 | 图片 |
 |---|---|---|
-| 01_拆迁.md | 北极 | [01a_arctic_station_pepsi.png](01a_arctic_station_pepsi.png) |
+| 01_拆迁.md | 北极 | [01a_arctic_station_fireworks.png](01a_arctic_station_fireworks.png) |
 | 01_拆迁.md | 拆迁 | [01b_demolition_protocol_pepsi.png](01b_demolition_protocol_pepsi.png) |
 | 01_拆迁.md | 警示 | [01c_europa_warning_pepsi.png](01c_europa_warning_pepsi.png) |
 | 02_星门.md | 火星 | [02a_mars_pepsi.png](02a_mars_pepsi.png) |
@@ -38,3 +38,9 @@
 其余九幅含饮料的插图通过内置 image_gen 局部编辑，茶杯、咖啡杯和水壶等饮料道具统一换成蓝色百事可乐罐或瓶；保留人物、食物、构图和漫画风格。新版文件名以 `_pepsi.png` 结尾，正文引用已更新，原图保留。协作图沿用已完成的可乐版本；“沉默”和尾声北极图没有饮料，保持原样。
 
 [完整提示词与生成文件记录](../../资料/番外_临界线/全篇百事饮料插图.json)。九幅输出均已逐张查看，完成后检查了正文图片路径。
+
+## 2026年10月24日：冰下烟花
+
+北极首图更新为 `01a_arctic_station_fireworks.png`，通过内置 image_gen 编辑，保留原漫画风格、站房、研究员和百事可乐。冰下光簇与轨迹是粒子事件的艺术可视化；微光亮度及尺度作夸张，彩色点用于表现事件时间编码，并非冰中有彩色焰火。正文以“烟花表演”替换“演唱会”，尾声同步呼应。
+
+[完整提示词及生成记录](../../资料/番外_临界线/北极烟花插图.json)。原理参考 [IceCube 官方说明](https://icecube.wisc.edu/science/icecube/)：探测器接收中微子相互作用产生的带电次级粒子所发出的切伦科夫光。
