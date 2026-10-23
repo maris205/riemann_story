@@ -24,7 +24,7 @@
 | 02_星门.md | 协作 | [02c_collaboration_cola.png](02c_collaboration_cola.png) |
 | 03_庄园.md | 一天 | [03a_ordinary_day_pepsi.png](03a_ordinary_day_pepsi.png) |
 | 03_庄园.md | 汇总 | [03b_research_summary_pepsi.png](03b_research_summary_pepsi.png) |
-| 03_庄园.md | 沉默 | [03c_silence.png](03c_silence.png) |
+| 03_庄园.md | 沉默 | [03c_silence_moonlight.png](03c_silence_moonlight.png) |
 | 04_尾声.md | 黎明 | [04a_dawn_pepsi.png](04a_dawn_pepsi.png) |
 | 04_尾声.md | 简报 | [04b_briefing_pepsi.png](04b_briefing_pepsi.png) |
 | 04_尾声.md | 北极 | [04c_arctic_quiet.png](04c_arctic_quiet.png) |
@@ -44,3 +44,7 @@
 北极首图更新为 `01a_arctic_station_fireworks.png`，通过内置 image_gen 编辑，保留原漫画风格、站房、研究员和百事可乐。冰下光簇与轨迹是粒子事件的艺术可视化；微光亮度及尺度作夸张，彩色点用于表现事件时间编码，并非冰中有彩色焰火。正文以“烟花表演”替换“演唱会”，尾声同步呼应。
 
 [完整提示词及生成记录](../../资料/番外_临界线/北极烟花插图.json)。原理参考 [IceCube 官方说明](https://icecube.wisc.edu/science/icecube/)：探测器接收中微子相互作用产生的带电次级粒子所发出的切伦科夫光。
+
+## 2026年10月24日：沉默与月光
+
+按作者要求，以内置 image_gen 将“沉默”图窗外的日落改为夜空、月亮与海面银蓝倒影，保留人物、构图及室内暖灯。正文改用 `03c_silence_moonlight.png`，并把“暮色”同步改为“月光”。旧图保留。[完整提示词与生成记录](../../资料/番外_临界线/沉默月光插图.json)。
